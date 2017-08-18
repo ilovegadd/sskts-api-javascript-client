@@ -28,7 +28,7 @@ run the following command:
 $ npm install @motionpicture/sasaki-api
 ```
 
-### Node
+### CommonJS
 
 Include the library in your JavaScript file with
 
