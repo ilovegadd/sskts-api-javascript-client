@@ -28,6 +28,21 @@ run the following command:
 $ npm install @motionpicture/sasaki-api
 ```
 
+### Node
+
+Include the library in your JavaScript file with
+
+``` js
+const sasaki = require("@motionpicture/sasaki-api");
+```
+
+### Browser
+
+Include [lib/browser.js] in your page.
+```html
+<script type="text/javascript" src="./node_modules/@motionpicture/sasaki-api/lib/browser.js"></script>
+```
+
 ## Usage
 
 Example: Creates a URL Shortener client and retrieves the long url of the
