@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Browser test</title>
+    <!-- reading SDK in a script tag... -->
+    <script type="text/javascript" src="./lib/browser.js"></script>
+</head>
+
+<body>
+    <div id="signedIn" style="display:none;">
+        <div class="apis">
+            <a href="javascript:void(0);" onclick="refreshToken();">silent signIn</a><br>
+            <a href="javascript:void(0);" onclick="signOut();">signOut</a><br>
+            <a href="javascript:void(0);" onclick="searchEvents();">search events</a><br>
+        </div>
+        <div>
+            profile:<br>
+            <textarea id="profile" readonly rows="20" cols="80"></textarea>
+        </div>
+    </div>
+
+    <div id="signedOut" style="display:none;">
+        <a href="javascript:void(0);" onclick="authorize();">signIn</a><br>
+    </div>
+
+    <p>
+        results:<br>
+        <textarea id="results" readonly rows="20" cols="80"></textarea>
+    </p>
+    <p>
+        idToken:<br>
+        <textarea id="idToken" readonly rows="20" cols="80"></textarea>
+    </p>
+    <p>
+        accessToken:<br>
+        <textarea id="accessToken" readonly rows="20" cols="80"></textarea>
+    </p>
+
+    <script>
+        // AWS Defining Resource Servers for Your User Pool
+        // http://docs.aws.amazon.com/ja_jp/cognito/latest/developerguide/cognito-user-pools-define-resource-servers.html
+        // https://aws.amazon.com/blogs/mobile/integrating-amazon-cognito-user-pools-with-api-gateway/
+
+        var DOMAIN = 'sskts-development.auth.ap-northeast-1.amazoncognito.com';
+        var CLIENT_ID = '6figun12gcdtlj9e53p2u3oqvl'; // 会員トークンプロバイダーに発行してもらうこと
+        var CALLBACK_URL = 'https://localhost:8080/signIn.html'; // アプリケーション側で適宜ページを用意する
+        var LOGOUT_URL = 'https://localhost:8080/signOut.html'; // アプリケーション側で適宜ページを用意する
+        var ISSUER = 'https://cognito-idp.ap-northeast-1.amazonaws.com/ap-northeast-1_zThi0j1fe';
+        var API_ENDPOINT = 'https://sskts-api-development-preview.azurewebsites.net';
+
+        var credentials = null;
+
+        var scopes = [
+            'phone', 'openid', 'email', 'aws.cognito.signin.user.admin', 'profile',
+            'https://sskts-api-development.azurewebsites.net/events.read-only'
+        ];
+
+        var options = {
+            domain: DOMAIN,
+            clientId: CLIENT_ID,
+            responseType: 'token',
+            redirectUri: CALLBACK_URL,
+            logoutUri: LOGOUT_URL,
+            scope: scopes.join(' '),
+            state: '12345',
+            tokenIssuer: ISSUER
+        };
+        const auth = new sasaki.auth.Implicit(options);
+
+        // check if already signed in
+        // result is credentials
+        auth.isSignedIn().then(function (result) {
+            if (result === null) {
+                onSignOut();
+            } else {
+                credentials = result;
+                onSignIn();
+            }
+        });
+
+        function onSignIn() {
+            toggleUserDisplay(true);
+            setTimeout(displayProfile, 100);
+        }
+
+        function onSignOut() {
+            toggleUserDisplay(false);
+            initTextarea();
+        }
+
+        function format(value) {
+            return JSON.stringify(value, null, 4);
+        }
+
+        function toggleUserDisplay(isSignedIn) {
+            if (isSignedIn) {
+                document.getElementById('signedIn').style.display = 'block';
+                document.getElementById('signedOut').style.display = 'none';
+            } else {
+                document.getElementById('signedIn').style.display = 'none';
+                document.getElementById('signedOut').style.display = 'block';
+            }
+        }
+
+        function displayProfile() {
+            document.getElementById('profile').innerText = format(credentials.idTokenPayload);
+        }
+
+        function initTextarea() {
+            Array.from(document.getElementsByTagName('textarea'), function (element) {
+                element.innerText = '';
+            });
+        }
+
+        function authorize() {
+            // authorize
+            // result is credentials
+            auth.authorize().then(function (result) {
+                console.log('authorize result:', result);
+                document.getElementById('idToken').innerText = result.idToken;
+                document.getElementById('accessToken').innerText = result.accessToken;
+
+                credentials = result;
+                onSignIn();
+            }).catch(function (err) {
+                console.error(err);
+            });
+        }
+
+        function refreshToken() {
+            // authorize in iframe
+            // result is credentials
+            auth.refreshToken().then(function (result) {
+                console.log('tryRenewAuth result:', result);
+                document.getElementById('idToken').innerText = result.idToken;
+                document.getElementById('accessToken').innerText = result.accessToken;
+            }).catch(function (err) {
+                console.error(err);
+            });
+        }
+
+        function signOut() {
+            auth.logout().then(function () {
+                credentials = null;
+                onSignOut();
+            }).catch(function (err) {
+                console.error(err);
+            });
+        }
+
+        function searchEvents() {
+            // search events
+            var event = sasaki.service.event({
+                endpoint: API_ENDPOINT,
+                auth: auth
+            });
+            event.searchIndividualScreeningEvent({
+                searchConditions: {
+                    day: '20170817',
+                    theater: '118'
+                }
+            }).then(function (events) {
+                console.log('events:', events);
+                document.getElementById('results').innerText = format(events);
+            }).catch(function (err) {
+                console.error(err);
+            });
+        }
+    </script>
+
+</body>
+
+</html>

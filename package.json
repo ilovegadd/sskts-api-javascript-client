@@ -1,0 +1,49 @@
+{
+  "name": "@motionpicture/sasaki-api",
+  "version": "1.0.0",
+  "description": "Sasaki API Client Library for JavaScript",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "check": "",
+    "clean": "rimraf lib/**/* types/**/* npm-debug.log* docs/*",
+    "build:watch": "tsc && concurrently \"tsc -w\" \"npm run watchify\"",
+    "watchify": "watchify ./browser.js -o ./lib/browser.js",
+    "build4samples": "tsc -p ./samples",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "samples": "copyfiles ./lib/browser.js ./samples/browser && http-server --ssl --cert ./samples/browser/cert.pem --key ./samples/browser/key.pem ./samples/browser"
+  },
+  "author": "Motionpicture co.,ltd.",
+  "contributors": [
+    "Tetsu Yamazaki <yamazaki@motionpicture.jp>"
+  ],
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "@types/debug": "0.0.30",
+    "@types/http-status": "^0.2.29",
+    "@types/isomorphic-fetch": "0.0.34",
+    "@types/node": "^8.0.24",
+    "@types/qs": "^6.5.0",
+    "browserify": "^14.4.0",
+    "concurrently": "^3.5.0",
+    "copyfiles": "^1.2.0",
+    "fs-extra": "^4.0.1",
+    "http-server": "^0.10.0",
+    "jsonwebtoken": "^7.4.3",
+    "jwk-to-pem": "^1.2.6",
+    "pem": "^1.9.7",
+    "rimraf": "^2.6.1",
+    "typescript": "^2.4.2",
+    "watchify": "^3.9.0"
+  },
+  "dependencies": {
+    "http-status": "^1.0.1",
+    "idtoken-verifier": "^1.1.0",
+    "isomorphic-fetch": "^2.2.1",
+    "qs": "^6.5.0"
+  }
+}
