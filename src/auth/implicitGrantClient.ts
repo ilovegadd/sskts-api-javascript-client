@@ -109,11 +109,11 @@ export default class ImplicitGrantClient {
             });
 
             handler.login(usePostMessage, (err: any, hash: any) => {
-                this.onLogin(err, hash)
-                    .then(resolve)
-                    .catch((err) => {
-                        reject(err)
-                    });
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(this.onLogin(hash));
+                }
             });
         });
     };
@@ -122,7 +122,7 @@ export default class ImplicitGrantClient {
      * Redirects to the hosted login page (`/authorize`) in order to start a new authN/authZ transaction.
      */
     async authorize() {
-        return new Promise<ICredentials>((resolve) => {
+        return new Promise<ICredentials>((resolve, reject) => {
             const usePostMessage = true;
             const params = {
                 clientId: this.baseOptions.clientId,
@@ -141,34 +141,19 @@ export default class ImplicitGrantClient {
 
             // 認可画面を新規タブで開く
             handler.login(usePostMessage, (err: any, hash: any) => {
-                resolve(this.onLogin(err, hash));
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(this.onLogin(hash));
+                }
             });
         });
     };
 
-    private async onLogin(err: any, hash: any): Promise<ICredentials> {
-        console.log('onLogin', err);
-        if (err) {
-            throw err;
-        }
-
-        if (typeof hash === 'object') {
-            // hash was already parsed, so we just return it.
-            this.credentials = hash;
-        } else {
-            const result = await this.parseHash({
-                hash: hash,
-                // nonce: transactionNonce,
-                // state: transactionState
-            });
-
-            if ((<any>result).error !== undefined) {
-                throw new Error((<ErrorFactory.IError>result).error);
-            }
-
-            this.credentials = result;
-        }
-
+    private async onLogin(hash: any): Promise<ICredentials> {
+        console.log('onLogin');
+        // hash was already parsed, so we just return it.
+        this.credentials = (typeof hash === 'object') ? hash : await this.parseHash(hash);
         console.log('credentials:', this.credentials);
 
         return this.credentials;
@@ -197,20 +182,20 @@ export default class ImplicitGrantClient {
         });
     };
 
-    private async parseHash(options: any): Promise<ICredentials | ErrorFactory.IError> {
-        let hashStr = options.hash === undefined ? window.location.hash : options.hash;
+    private async parseHash(hash?: string) {
+        let hashStr = hash === undefined ? window.location.hash : hash;
         hashStr = hashStr.replace(/^#?\/?/, '');
 
         const parsedQs = qs.parse(hashStr);
 
+        // if authorization falied
         if (parsedQs.hasOwnProperty('error')) {
-            const err = ErrorFactory.buildResponse(parsedQs.error, parsedQs.error_description);
+            const err = new ErrorFactory.AuthorizeError(parsedQs.error_description);
+            err.error = parsedQs.error;
+            err.errorDescription = parsedQs.error_description;
+            err.state = parsedQs.state;
 
-            if (parsedQs.state) {
-                err.state = parsedQs.state;
-            }
-
-            return err;
+            throw err;
         }
 
         if (
@@ -218,7 +203,7 @@ export default class ImplicitGrantClient {
             !parsedQs.hasOwnProperty('id_token') &&
             !parsedQs.hasOwnProperty('refresh_token')
         ) {
-            return ErrorFactory.buildResponse('invalid hash', '');
+            throw new Error('invalid hash');
         }
 
         // id_tokenを検証する

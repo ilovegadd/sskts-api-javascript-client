@@ -29,12 +29,12 @@ export default class ImplicitGrantClient {
      * Redirects to the hosted login page (`/authorize`) in order to start a new authN/authZ transaction.
      */
     authorize(): Promise<ICredentials>;
-    private onLogin(err, hash);
+    private onLogin(hash);
     /**
      * Redirects to the auth0 logout endpoint
      */
     logout(): Promise<ICredentials>;
-    private parseHash(options);
+    private parseHash(hash?);
     private buildParseHashResponse(qsParams, __, idTokenPayload);
     /**
      * Decodes the a JWT and verifies its nonce value
