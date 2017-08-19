@@ -10,7 +10,7 @@ import * as  ErrorFactory from './error';
 import PopupAuthenticationHandler from './popupAuthenticationHandler';
 import SilentAuthenticationHandler from './silentAuthenticationHandler';
 import SilentLogoutHandler from './silentLogoutHandler';
-// const IdTokenVerifier = require('idtoken-verifier');
+const IdTokenVerifier = require('idtoken-verifier');
 // const assert = require('../helper/assert');
 
 import ICredentials from './credentials';
@@ -24,6 +24,7 @@ export interface IBaseOption {
     responseMode?: string;
     scope: string;
     state: string;
+    nonce: string | null;
     audience?: string;
     tokenIssuer: string;
 }
@@ -55,6 +56,8 @@ export default class ImplicitGrantClient {
         this.baseOptions = options;
         this.baseOptions.responseMode = 'fragment';
         this.baseOptions.responseType = 'token';
+        // amazon cognitoの認可サーバーはnonce未実装
+        this.baseOptions.nonce = null;
         console.log('baseOptions:', this.baseOptions);
 
         this.credentials = {};
@@ -88,7 +91,7 @@ export default class ImplicitGrantClient {
      * Executes a silent authentication transaction under the hood in order to fetch a new tokens for the current session.
      */
     async refreshToken() {
-        return new Promise<ICredentials>((resolve) => {
+        return new Promise<ICredentials>((resolve, reject) => {
             const usePostMessage = false;
             const params = {
                 clientId: this.baseOptions.clientId,
@@ -97,8 +100,8 @@ export default class ImplicitGrantClient {
                 prompt: 'none',
                 redirectUri: this.baseOptions.redirectUri,
                 scope: this.baseOptions.scope,
-                state: this.baseOptions.state
-                // nonce: options.nonce || ''
+                state: this.baseOptions.state,
+                nonce: this.baseOptions.nonce
             }
 
             const handler = SilentAuthenticationHandler.create({
@@ -106,7 +109,11 @@ export default class ImplicitGrantClient {
             });
 
             handler.login(usePostMessage, (err: any, hash: any) => {
-                resolve(this.onLogin(err, hash));
+                this.onLogin(err, hash)
+                    .then(resolve)
+                    .catch((err) => {
+                        reject(err)
+                    });
             });
         });
     };
@@ -125,7 +132,7 @@ export default class ImplicitGrantClient {
                 redirectUri: this.baseOptions.redirectUri,
                 scope: this.baseOptions.scope,
                 state: this.baseOptions.state,
-                // nonce: options.nonce || ''
+                nonce: this.baseOptions.nonce
             };
 
             const handler = PopupAuthenticationHandler.create({
@@ -140,7 +147,7 @@ export default class ImplicitGrantClient {
     };
 
     private async onLogin(err: any, hash: any): Promise<ICredentials> {
-        console.log('onLogin', err, hash);
+        console.log('onLogin', err);
         if (err) {
             throw err;
         }
@@ -215,26 +222,18 @@ export default class ImplicitGrantClient {
         }
 
         // id_tokenを検証する
-        // if (parsedQs.id_token) {
-        //     return this.validateToken(parsedQs.id_token, '', (
-        //         validationError: any,
-        //         payload: any
-        //     ) => {
-        //         if (validationError) {
-        //             return cb(validationError);
-        //         }
-        //         return cb(null, this.buildParseHashResponse(parsedQs, '', payload));
-        //     });
-        // }
+        if (parsedQs.id_token) {
+            const payload = await this.validateToken(parsedQs.id_token, this.baseOptions.nonce);
+            return this.buildParseHashResponse(parsedQs, '', payload);
+        }
 
         if (parsedQs.id_token) {
-            // const verifier = new IdTokenVerifier({
-            //     issuer: this.baseOptions.tokenIssuer,
-            //     audience: this.baseOptions.clientId,
-            // });
-            // const decodedToken = verifier.decode(parsedQs.id_token);
-            // return this.buildParseHashResponse(parsedQs, '', decodedToken.payload);
-            return this.buildParseHashResponse(parsedQs, '', null);
+            const verifier = new IdTokenVerifier({
+                issuer: this.baseOptions.tokenIssuer,
+                audience: this.baseOptions.clientId,
+            });
+            const decodedToken = verifier.decode(parsedQs.id_token);
+            return this.buildParseHashResponse(parsedQs, '', decodedToken.payload);
         } else {
             return this.buildParseHashResponse(parsedQs, '', null);
         }
@@ -248,38 +247,33 @@ export default class ImplicitGrantClient {
             refreshToken: qsParams.refresh_token || undefined,
             state: qsParams.state || undefined,
             expiresIn: qsParams.expires_in ? parseInt(qsParams.expires_in, 10) : undefined,
-            tokenType: qsParams.token_type || undefined,
-            scope: qsParams.scope || undefined
+            tokenType: qsParams.token_type || undefined
         };
     }
 
     /**
-     * @callback validateTokenCallback
-     * @param {Error} [err] error returned by while validating the token
-     * @param {Object} [payload] claims stored in the token
-     */
-
-    /**
      * Decodes the a JWT and verifies its nonce value
      */
-    // public async validateToken(token: string, nonce: string): Promise<any> {
-    //     return new Promise<any>((resolve, reject) => {
-    //         const verifier = new IdTokenVerifier({
-    //             issuer: this.baseOptions.tokenIssuer,
-    //             audience: this.baseOptions.clientId
-    //         });
+    public async validateToken(token: string, nonce: string | null): Promise<any> {
+        console.log('validating id_token...');
+        return new Promise<any>((resolve, reject) => {
+            const verifier = new IdTokenVerifier({
+                issuer: this.baseOptions.tokenIssuer,
+                audience: this.baseOptions.clientId
+            });
 
-    //         verifier.verify(token, nonce, (err: any, payload: any) => {
-    //             if (err !== null) {
-    //                 reject(Error);
+            verifier.verify(token, nonce, (err: any, payload: any) => {
+                console.log('id_token verified', err, payload);
+                if (err !== null) {
+                    reject(err);
 
-    //                 return;
-    //             }
+                    return;
+                }
 
-    //             resolve(payload);
-    //         });
-    //     });
-    // };
+                resolve(payload);
+            });
+        });
+    };
 
     private buildAuthorizeUrl(options: any) {
         const qString = qs.stringify({

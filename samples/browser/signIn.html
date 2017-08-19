@@ -1,38 +1,14 @@
 <html>
 
 <head>
-    <!-- reading SDK in a script tag... -->
-    <script type="text/javascript" src="./lib/browser.js"></script>
-
     <script>
-        var CLIENT_ID = '6figun12gcdtlj9e53p2u3oqvl'; // 会員トークンプロバイダーに発行してもらうこと
-        var options = {
-            domain: 'sskts-development.auth.ap-northeast-1.amazoncognito.com',
-            clientId: CLIENT_ID,
-            state: '12345'
-        };
-        const auth = new sasaki.auth.Implicit(options);
-
-        auth.parseHash({}).then(function (result) {
-            // 親ウィンドウに認可結果を渡す
-            console.log('silentCallback result:', result);
-            console.log('parent window:', parent.name);
-            if (window.opener !== null) {
-                window.opener.postMessage(result, '*');
-            } else {
-                window.parent.postMessage(result, '*');
-            }
-        });
-        // auth.parseHash({}, function (err, result) {
-        //     // 親ウィンドウに認可結果を渡す
-        //     console.log('silentCallback result:', result);
-        //     console.log('parent window:', parent.name);
-        //     if (window.opener !== null) {
-        //         window.opener.postMessage(err || result, '*');
-        //     } else {
-        //         window.parent.postMessage(err || result, '*');
-        //     }
-        // });
+        if (window.opener !== null) {
+            console.log('posting message to opner window...', window.location.hash);
+            window.opener.postMessage(window.location.hash, '*');
+        } else {
+            console.log('posting message to parent window...', window.location.hash);
+            window.parent.postMessage(window.location.hash, '*');
+        }
     </script>
 </head>
 

@@ -8,6 +8,7 @@ export interface IBaseOption {
     responseMode?: string;
     scope: string;
     state: string;
+    nonce: string | null;
     audience?: string;
     tokenIssuer: string;
 }
@@ -36,13 +37,9 @@ export default class ImplicitGrantClient {
     private parseHash(options);
     private buildParseHashResponse(qsParams, __, idTokenPayload);
     /**
-     * @callback validateTokenCallback
-     * @param {Error} [err] error returned by while validating the token
-     * @param {Object} [payload] claims stored in the token
-     */
-    /**
      * Decodes the a JWT and verifies its nonce value
      */
+    validateToken(token: string, nonce: string | null): Promise<any>;
     private buildAuthorizeUrl(options);
     /**
      * Builds and returns the Logout url in order to initialize a new authN/authZ transaction

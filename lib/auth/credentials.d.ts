@@ -1,27 +1,16 @@
 /**
- * OAuth認証情報
+ * OAuth2 credentilas
+ *
+ * @interface ICredentials
  */
 interface ICredentials {
-    /**
-     * リフレッシュトークン
-     */
     refreshToken?: string;
-    /**
-     * 期限UNIXタイムスタンプ
-     */
     expiryDate?: number;
-    /**
-     * アクセストークン
-     */
+    expiresIn?: number;
     accessToken?: string;
-    /**
-     * トークンタイプ
-     */
     tokenType?: string;
     idToken?: string;
     idTokenPayload?: any;
     state?: string;
-    expiresIn?: number;
-    scope?: string;
 }
 export default ICredentials;
