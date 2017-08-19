@@ -33,7 +33,7 @@ export default class ImplicitGrantClient {
     /**
      * Redirects to the auth0 logout endpoint
      */
-    logout(): Promise<ICredentials>;
+    logout(): Promise<void>;
     private parseHash(hash?);
     private buildParseHashResponse(qsParams, __, idTokenPayload);
     /**

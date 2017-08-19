@@ -91,63 +91,49 @@ export default class ImplicitGrantClient {
      * Executes a silent authentication transaction under the hood in order to fetch a new tokens for the current session.
      */
     async refreshToken() {
-        return new Promise<ICredentials>((resolve, reject) => {
-            const usePostMessage = false;
-            const params = {
-                clientId: this.baseOptions.clientId,
-                responseType: this.baseOptions.responseType,
-                responseMode: this.baseOptions.responseMode,
-                prompt: 'none',
-                redirectUri: this.baseOptions.redirectUri,
-                scope: this.baseOptions.scope,
-                state: this.baseOptions.state,
-                nonce: this.baseOptions.nonce
-            }
+        const usePostMessage = false;
+        const params = {
+            clientId: this.baseOptions.clientId,
+            responseType: this.baseOptions.responseType,
+            responseMode: this.baseOptions.responseMode,
+            prompt: 'none',
+            redirectUri: this.baseOptions.redirectUri,
+            scope: this.baseOptions.scope,
+            state: this.baseOptions.state,
+            nonce: this.baseOptions.nonce
+        }
 
-            const handler = SilentAuthenticationHandler.create({
-                authenticationUrl: this.buildAuthorizeUrl(params)
-            });
-
-            handler.login(usePostMessage, (err: any, hash: any) => {
-                if (err) {
-                    reject(err);
-                } else {
-                    resolve(this.onLogin(hash));
-                }
-            });
+        const handler = SilentAuthenticationHandler.create({
+            authenticationUrl: this.buildAuthorizeUrl(params)
         });
+
+        const hash = await handler.login(usePostMessage);
+        return await this.onLogin(hash);
     };
 
     /**
      * Redirects to the hosted login page (`/authorize`) in order to start a new authN/authZ transaction.
      */
     async authorize() {
-        return new Promise<ICredentials>((resolve, reject) => {
-            const usePostMessage = true;
-            const params = {
-                clientId: this.baseOptions.clientId,
-                responseType: this.baseOptions.responseType,
-                responseMode: this.baseOptions.responseMode,
-                prompt: '',
-                redirectUri: this.baseOptions.redirectUri,
-                scope: this.baseOptions.scope,
-                state: this.baseOptions.state,
-                nonce: this.baseOptions.nonce
-            };
+        const usePostMessage = true;
+        const params = {
+            clientId: this.baseOptions.clientId,
+            responseType: this.baseOptions.responseType,
+            responseMode: this.baseOptions.responseMode,
+            prompt: '',
+            redirectUri: this.baseOptions.redirectUri,
+            scope: this.baseOptions.scope,
+            state: this.baseOptions.state,
+            nonce: this.baseOptions.nonce
+        };
 
-            const handler = PopupAuthenticationHandler.create({
-                authenticationUrl: this.buildAuthorizeUrl(params)
-            });
-
-            // 認可画面を新規タブで開く
-            handler.login(usePostMessage, (err: any, hash: any) => {
-                if (err) {
-                    reject(err);
-                } else {
-                    resolve(this.onLogin(hash));
-                }
-            });
+        const handler = PopupAuthenticationHandler.create({
+            authenticationUrl: this.buildAuthorizeUrl(params)
         });
+
+        // 認可画面を新規タブで開く
+        const hash = await handler.login(usePostMessage);
+        return await this.onLogin(hash);
     };
 
     private async onLogin(hash: any): Promise<ICredentials> {
@@ -163,23 +149,15 @@ export default class ImplicitGrantClient {
      * Redirects to the auth0 logout endpoint
      */
     async logout() {
-        return new Promise<ICredentials>((resolve, reject) => {
-            const usePostMessage = false;
-            const handler = SilentLogoutHandler.create({
-                logoutUrl: this.buildLogoutUrl({
-                    clientId: this.baseOptions.clientId,
-                    logoutUri: this.baseOptions.logoutUri
-                })
-            });
-
-            handler.login(usePostMessage, (err: any) => {
-                if (err) {
-                    reject(err);
-                } else {
-                    resolve();
-                }
-            });
+        const usePostMessage = false;
+        const handler = SilentLogoutHandler.create({
+            logoutUrl: this.buildLogoutUrl({
+                clientId: this.baseOptions.clientId,
+                logoutUri: this.baseOptions.logoutUri
+            })
         });
+
+        await handler.logout(usePostMessage);
     };
 
     private async parseHash(hash?: string) {

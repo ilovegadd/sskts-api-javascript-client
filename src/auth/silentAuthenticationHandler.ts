@@ -5,37 +5,47 @@
  */
 
 import IframeHandler from './iframeHandler';
+import * as ErrorFactory from './error';
+
+export interface IOptions {
+    authenticationUrl: string;
+    timeout?: number;
+}
 
 export default class SilentAuthenticationHandler {
-    public authenticationUrl: any;
-    public timeout: any;
+    public authenticationUrl: string;
+    public timeout: number;
     public handler: any;
 
-    constructor(options: any) {
+    constructor(options: IOptions) {
         this.authenticationUrl = options.authenticationUrl;
         this.timeout = options.timeout || 60 * 1000;
         this.handler = null;
     }
 
-    static create(options: any) {
+    static create(options: IOptions) {
         return new SilentAuthenticationHandler(options);
     };
 
-    login(usePostMessage: boolean, callback: any) {
-        this.handler = new IframeHandler({
-            // auth0: this.auth0,
-            url: this.authenticationUrl,
-            eventListenerType: usePostMessage ? 'message' : 'load',
-            callback: this.getCallbackHandler(callback, usePostMessage),
-            timeout: this.timeout,
-            eventValidator: this.getEventValidator(),
-            timeoutCallback: () => {
-                callback(null, '#error=timeout&error_description=Timeout+during+authentication+renew.');
-            },
-            usePostMessage: usePostMessage || false
-        });
+    login(usePostMessage: boolean) {
+        return new Promise<(hash: any) => void>((resolve, reject) => {
+            this.handler = new IframeHandler({
+                url: this.authenticationUrl,
+                eventListenerType: usePostMessage ? 'message' : 'load',
+                callback: this.getCallbackHandler(resolve, usePostMessage),
+                timeout: this.timeout,
+                eventValidator: this.getEventValidator(),
+                timeoutCallback: () => {
+                    const err = new ErrorFactory.AuthorizeError('Timeout during authentication renew');
+                    err.error = 'timeout';
+                    err.errorDescription = 'Timeout during authentication renew';
+                    reject(err);
+                },
+                usePostMessage: usePostMessage || false
+            });
 
-        this.handler.init();
+            this.handler.init();
+        });
     };
 
     getEventValidator() {
@@ -43,7 +53,7 @@ export default class SilentAuthenticationHandler {
         };
     };
 
-    getCallbackHandler(callback: any, usePostMessage: boolean) {
+    getCallbackHandler(cb: (hash: any) => void, usePostMessage: boolean) {
         return (eventData: any) => {
             let callbackValue;
             if (!usePostMessage) {
@@ -54,7 +64,8 @@ export default class SilentAuthenticationHandler {
             } else {
                 callbackValue = eventData.event.data;
             }
-            callback(null, callbackValue);
+
+            cb(callbackValue);
         };
     };
 }

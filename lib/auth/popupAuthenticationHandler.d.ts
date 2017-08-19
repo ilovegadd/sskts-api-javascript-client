@@ -1,10 +1,14 @@
+export interface IOptions {
+    authenticationUrl: string;
+    timeout?: number;
+}
 export default class PopupAuthenticationHandler {
-    authenticationUrl: any;
-    timeout: any;
+    authenticationUrl: string;
+    timeout: number;
     handler: any;
-    constructor(options: any);
-    static create(options: any): PopupAuthenticationHandler;
-    login(usePostMessage: boolean, callback: any): void;
+    constructor(options: IOptions);
+    static create(options: IOptions): PopupAuthenticationHandler;
+    login(usePostMessage: boolean): Promise<(hash: any) => void>;
     getEventValidator(): {};
-    getCallbackHandler(callback: any, usePostMessage: boolean): (eventData: any) => void;
+    getCallbackHandler(cb: (hash: any) => void, usePostMessage: boolean): (eventData: any) => void;
 }

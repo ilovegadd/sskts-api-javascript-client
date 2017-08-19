@@ -5,36 +5,47 @@
  */
 
 import IframeHandler from './iframeHandler';
+import * as ErrorFactory from './error';
+
+export interface IOptions {
+    logoutUrl: string;
+    timeout?: number;
+}
 
 export default class SilentLogoutHandler {
-    public logoutUrl: any;
-    public timeout: any;
+    public logoutUrl: string;
+    public timeout: number;
     public handler: any;
 
-    constructor(options: any) {
+    constructor(options: IOptions) {
         this.logoutUrl = options.logoutUrl;
         this.timeout = options.timeout || 60 * 1000;
         this.handler = null;
     }
 
-    static create(options: any) {
+    static create(options: IOptions) {
         return new SilentLogoutHandler(options);
     };
 
-    login(usePostMessage: boolean, callback: any) {
-        this.handler = new IframeHandler({
-            url: this.logoutUrl,
-            eventListenerType: usePostMessage ? 'message' : 'load',
-            callback: this.getCallbackHandler(callback, usePostMessage),
-            timeout: this.timeout,
-            eventValidator: this.getEventValidator(),
-            timeoutCallback: () => {
-                callback(null, '#error=timeout&error_description=Timeout+during+authentication+renew.');
-            },
-            usePostMessage: usePostMessage || false
-        });
+    logout(usePostMessage: boolean) {
+        return new Promise<void>((resolve, reject) => {
+            this.handler = new IframeHandler({
+                url: this.logoutUrl,
+                eventListenerType: usePostMessage ? 'message' : 'load',
+                callback: this.getCallbackHandler(resolve, usePostMessage),
+                timeout: this.timeout,
+                eventValidator: this.getEventValidator(),
+                timeoutCallback: () => {
+                    const err = new ErrorFactory.AuthorizeError('Timeout during logout');
+                    err.error = 'timeout';
+                    err.errorDescription = 'Timeout during logout';
+                    reject(err);
+                },
+                usePostMessage: usePostMessage || false
+            });
 
-        this.handler.init();
+            this.handler.init();
+        });
     };
 
     getEventValidator() {
@@ -42,7 +53,7 @@ export default class SilentLogoutHandler {
         };
     };
 
-    getCallbackHandler(callback: any, usePostMessage: boolean) {
+    getCallbackHandler(cb: () => void, usePostMessage: boolean) {
         return (eventData: any) => {
             let callbackValue;
             if (!usePostMessage) {
@@ -53,7 +64,8 @@ export default class SilentLogoutHandler {
             } else {
                 callbackValue = eventData.event.data;
             }
-            callback(null, callbackValue);
+
+            cb();
         };
     };
 }

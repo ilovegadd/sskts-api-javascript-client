@@ -1,10 +1,14 @@
+export interface IOptions {
+    logoutUrl: string;
+    timeout?: number;
+}
 export default class SilentLogoutHandler {
-    logoutUrl: any;
-    timeout: any;
+    logoutUrl: string;
+    timeout: number;
     handler: any;
-    constructor(options: any);
-    static create(options: any): SilentLogoutHandler;
-    login(usePostMessage: boolean, callback: any): void;
+    constructor(options: IOptions);
+    static create(options: IOptions): SilentLogoutHandler;
+    logout(usePostMessage: boolean): Promise<void>;
     getEventValidator(): {};
-    getCallbackHandler(callback: any, usePostMessage: boolean): (eventData: any) => void;
+    getCallbackHandler(cb: () => void, usePostMessage: boolean): (eventData: any) => void;
 }
