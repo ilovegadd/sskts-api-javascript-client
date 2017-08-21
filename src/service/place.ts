@@ -1,9 +1,3 @@
-/**
- * 場所サービス
- *
- * @namespace service.place
- */
-
 import apiFetch from '../apiFetch';
 import { NOT_FOUND, OK } from 'http-status';
 
@@ -12,6 +6,12 @@ import { Service } from '../service';
 export type ISearchMovieTheatersConditions = any;
 export type ISearchMovieTheaterResult = any;
 export type IPlace = any;
+
+/**
+ * place service
+ *
+ * @class PlaceService
+ */
 export default class PlaceService extends Service {
     /**
      * 劇場検索

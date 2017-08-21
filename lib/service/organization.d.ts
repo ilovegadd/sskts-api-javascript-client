@@ -1,5 +1,10 @@
 import { Service } from '../service';
 export declare type IMovieTheater = any;
+/**
+ * organization service
+ *
+ * @class OrganizationService
+ */
 export default class OrganizationService extends Service {
     /**
      * 劇場組織検索

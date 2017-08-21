@@ -1,15 +1,15 @@
-/**
- * 組織サービス
- *
- * @namespace service.organization
- */
-
 import apiFetch from '../apiFetch';
 import { NOT_FOUND, OK } from 'http-status';
 
 import { Service } from '../service';
 
 export type IMovieTheater = any;
+
+/**
+ * organization service
+ *
+ * @class OrganizationService
+ */
 export default class OrganizationService extends Service {
     /**
      * 劇場組織検索

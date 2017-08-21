@@ -1,6 +1,11 @@
 import { Service } from '../service';
 export declare type IOrderInquiryKey = any;
 export declare type IOrder = any;
+/**
+ * order service
+ *
+ * @class OrderService
+ */
 export default class OrderService extends Service {
     /**
      * 照会キーで注文情報を取得する

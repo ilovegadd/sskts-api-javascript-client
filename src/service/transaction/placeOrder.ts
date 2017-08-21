@@ -1,9 +1,3 @@
-/**
- * 注文取引サービス
- *
- * @namespace service.transaction.placeOrder
- */
-
 import apiFetch from '../../apiFetch';
 import { CREATED, NO_CONTENT, NOT_FOUND, OK } from 'http-status';
 
@@ -28,7 +22,12 @@ export type IMvtkAuthorization = any;
 export type IProfile = any;
 export type IOrder = any;
 
-export default class EventService extends Service {
+/**
+ * placeOrder transaction service
+ *
+ * @class transaction/PlaceOrderService
+ */
+export default class PlaceOrderService extends Service {
     /**
      * 取引を開始する
      * 開始できない場合(混雑中など)、nullが返されます。

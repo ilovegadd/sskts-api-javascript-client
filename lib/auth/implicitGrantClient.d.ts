@@ -13,6 +13,11 @@ export interface IOptions {
     audience?: string;
     tokenIssuer: string;
 }
+/**
+ * OAuth2 client using grant type 'implicit grant'
+ *
+ * @class ImplicitGrantClient
+ */
 export declare class ImplicitGrantClient extends OAuth2client {
     options: IOptions;
     static AUTHORIZE_URL: string;

@@ -14,7 +14,12 @@ export declare type IGMOAuthorization = any;
 export declare type IMvtkAuthorization = any;
 export declare type IProfile = any;
 export declare type IOrder = any;
-export default class EventService extends Service {
+/**
+ * placeOrder transaction service
+ *
+ * @class transaction/PlaceOrderService
+ */
+export default class PlaceOrderService extends Service {
     /**
      * 取引を開始する
      * 開始できない場合(混雑中など)、nullが返されます。

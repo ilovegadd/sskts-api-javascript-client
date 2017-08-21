@@ -3,6 +3,11 @@ export interface ISearchIndividualScreeningEventsConditions {
     day: string;
     theater: string;
 }
+/**
+ * event service
+ *
+ * @class EventService
+ */
 export default class EventService extends Service {
     /**
      * 上映イベント検索

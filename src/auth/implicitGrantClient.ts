@@ -1,9 +1,3 @@
-/**
- * auth/implicitGrantClient
- * 
- * @class ImplicitGrantClient
- */
-
 import * as qs from 'qs';
 
 import * as  ErrorFactory from './error';
@@ -30,6 +24,11 @@ export interface IOptions {
     tokenIssuer: string;
 }
 
+/**
+ * OAuth2 client using grant type 'implicit grant'
+ * 
+ * @class ImplicitGrantClient
+ */
 export class ImplicitGrantClient extends OAuth2client {
     public options: IOptions;
 

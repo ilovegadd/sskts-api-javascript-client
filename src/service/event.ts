@@ -1,9 +1,3 @@
-/**
- * イベントサービス
- *
- * @namespace service.event
- */
-
 import apiFetch from '../apiFetch';
 import { NOT_FOUND, OK } from 'http-status';
 
@@ -14,6 +8,11 @@ export interface ISearchIndividualScreeningEventsConditions {
     theater: string;
 }
 
+/**
+ * event service
+ *
+ * @class EventService
+ */
 export default class EventService extends Service {
     /**
      * 上映イベント検索

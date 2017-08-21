@@ -1407,7 +1407,41 @@ var PersonService = (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     /**
-     * クレジットカード検索
+     * retrieve user contacts
+     */
+    PersonService.prototype.getContacts = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, apiFetch_1.default({
+                        auth: this.options.auth,
+                        baseUrl: this.options.endpoint,
+                        uri: "/people/" + params.personId + "/contacts",
+                        method: 'GET',
+                        qs: {},
+                        expectedStatusCodes: [http_status_1.OK]
+                    })];
+            });
+        });
+    };
+    /**
+     * update contacts
+     */
+    PersonService.prototype.updateContacts = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, apiFetch_1.default({
+                        auth: this.options.auth,
+                        baseUrl: this.options.endpoint,
+                        uri: "/people/" + params.personId + "/contacts",
+                        method: 'PUT',
+                        body: params.contacts,
+                        expectedStatusCodes: [http_status_1.NO_CONTENT]
+                    })];
+            });
+        });
+    };
+    /**
+     * find credit cards
      */
     PersonService.prototype.findCreditCards = function (params) {
         return __awaiter(this, void 0, void 0, function () {
@@ -1424,7 +1458,7 @@ var PersonService = (function (_super) {
         });
     };
     /**
-     * クレジットカード追加
+     * add a credit card
      */
     PersonService.prototype.addCreditCard = function (params) {
         return __awaiter(this, void 0, void 0, function () {
