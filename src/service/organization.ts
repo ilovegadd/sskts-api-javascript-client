@@ -14,7 +14,7 @@ export class OrganizationService extends Service {
     /**
      * 劇場組織検索
      */
-    async  searchMovieTheaters(
+    searchMovieTheaters(
         /**
          * 検索条件
          */
@@ -33,7 +33,7 @@ export class OrganizationService extends Service {
     /**
      * 枝番号で劇場組織検索
      */
-    async  findMovieTheaterByBranchCode(params: {
+    async findMovieTheaterByBranchCode(params: {
         /**
          * 枝番号
          */

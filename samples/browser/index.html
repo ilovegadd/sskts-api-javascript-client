@@ -19,6 +19,7 @@
             <a href="javascript:void(0);" onclick="updateContacts();">update contacts</a><br>
             <a href="javascript:void(0);" onclick="findCreditCards();">find credit cards</a><br>
             <a href="javascript:void(0);" onclick="addCreditCard();">add credit cards</a><br>
+            <a href="javascript:void(0);" onclick="searchReservationOwnerships();">search ownerships of reservations</a><br>
         </div>
         <div>
             profile:<br>
@@ -66,7 +67,8 @@
             'https://sskts-api-development.azurewebsites.net/events.read-only',
             'https://sskts-api-development.azurewebsites.net/organizations.read-only',
             'https://sskts-api-development.azurewebsites.net/people.contacts',
-            'https://sskts-api-development.azurewebsites.net/people.creditCards'
+            'https://sskts-api-development.azurewebsites.net/people.creditCards',
+            'https://sskts-api-development.azurewebsites.net/people.ownerships.read-only'
         ];
 
         var options = {
@@ -293,6 +295,22 @@
             }).then(function (createdCreditCard) {
                 console.log('createdCreditCard:', createdCreditCard);
                 document.getElementById('results').innerText = format(createdCreditCard);
+            }).catch(function (err) {
+                console.error(err);
+                document.getElementById('results').innerText = format(err);
+            });
+        }
+
+        function searchReservationOwnerships() {
+            var people = sasaki.service.person({
+                endpoint: API_ENDPOINT,
+                auth: auth
+            });
+            people.searchReservationOwnerships({
+                personId: 'me'
+            }).then(function (ownerships) {
+                console.log('ownerships:', ownerships);
+                document.getElementById('results').innerText = format(ownerships);
             }).catch(function (err) {
                 console.error(err);
                 document.getElementById('results').innerText = format(err);

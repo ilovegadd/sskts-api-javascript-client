@@ -14,6 +14,9 @@ export declare type IContacts = {
     familyName: string;
     telephone: string;
 };
+export declare enum TypeOfGood {
+    Reservation = "Resevation",
+}
 /**
  * person service
  *
@@ -69,4 +72,14 @@ export declare class PersonService extends Service {
          */
         creditCard: IPresavedCreditCardRaw | IPresavedCreditCardTokenized;
     }): Promise<ISearchCardResult>;
+    /**
+     * search ownerships of reservations
+     */
+    searchReservationOwnerships(params: {
+        /**
+         * person id
+         * basically specify 'me' to retrieve contacts of login user
+         */
+        personId: string;
+    }): Promise<ISearchCardResult[]>;
 }

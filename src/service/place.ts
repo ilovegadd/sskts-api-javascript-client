@@ -16,7 +16,7 @@ export class PlaceService extends Service {
     /**
      * 劇場検索
      */
-    async  searchMovieTheaters(
+    async searchMovieTheaters(
         /**
          * 検索条件
          */
@@ -35,7 +35,7 @@ export class PlaceService extends Service {
     /**
      * 劇場情報取得
      */
-    async  findMovieTheater(params: {
+    async findMovieTheater(params: {
         /**
          * 枝番号
          */

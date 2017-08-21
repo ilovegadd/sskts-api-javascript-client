@@ -19,6 +19,9 @@ export type IContacts = {
     familyName: string;
     telephone: string;
 };
+export enum TypeOfGood {
+    Reservation = 'Resevation'
+}
 
 /**
  * person service
@@ -73,7 +76,7 @@ export class PersonService extends Service {
     /**
      * find credit cards
      */
-    async  findCreditCards(params: {
+    async findCreditCards(params: {
         /**
          * person id
          * basically specify 'me' to retrieve contacts of login user
@@ -112,6 +115,26 @@ export class PersonService extends Service {
             method: 'POST',
             body: params.creditCard,
             expectedStatusCodes: [CREATED]
+        });
+    }
+
+    /**
+     * search ownerships of reservations
+     */
+    async searchReservationOwnerships(params: {
+        /**
+         * person id
+         * basically specify 'me' to retrieve contacts of login user
+         */
+        personId: string;
+    }): Promise<ISearchCardResult[]> {
+        return apiFetch({
+            auth: this.options.auth,
+            baseUrl: this.options.endpoint,
+            uri: `/people/${params.personId}/ownerships/reservation`,
+            method: 'GET',
+            qs: {},
+            expectedStatusCodes: [OK]
         });
     }
 }

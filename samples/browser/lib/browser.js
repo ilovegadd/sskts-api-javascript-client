@@ -155,11 +155,6 @@ exports.default = IframeHandler;
 
 },{}],5:[function(require,module,exports){
 "use strict";
-/**
- * auth/implicitGrantClient
- *
- * @class ImplicitGrantClient
- */
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -213,6 +208,11 @@ var silentAuthenticationHandler_1 = require("./silentAuthenticationHandler");
 var silentLogoutHandler_1 = require("./silentLogoutHandler");
 var IdTokenVerifier = require('idtoken-verifier');
 var oAuth2client_1 = require("./oAuth2client");
+/**
+ * OAuth2 client using grant type 'implicit grant'
+ *
+ * @class ImplicitGrantClient
+ */
 var ImplicitGrantClient = (function (_super) {
     __extends(ImplicitGrantClient, _super);
     function ImplicitGrantClient(options) {
@@ -1010,29 +1010,29 @@ exports.createAuthInstance = createAuthInstance;
 var service;
 (function (service) {
     function event(options) {
-        return new event_1.default(options);
+        return new event_1.EventService(options);
     }
     service.event = event;
     function order(options) {
-        return new order_1.default(options);
+        return new order_1.OrderService(options);
     }
     service.order = order;
     function organization(options) {
-        return new organization_1.default(options);
+        return new organization_1.OrganizationService(options);
     }
     service.organization = organization;
     function person(options) {
-        return new person_1.default(options);
+        return new person_1.PersonService(options);
     }
     service.person = person;
     function place(options) {
-        return new place_1.default(options);
+        return new place_1.PlaceService(options);
     }
     service.place = place;
     var transaction;
     (function (transaction) {
         function placeOrder(options) {
-            return new placeOrder_1.default(options);
+            return new placeOrder_1.PlaceOrderService(options);
         }
         transaction.placeOrder = placeOrder;
     })(transaction = service.transaction || (service.transaction = {}));
@@ -1054,11 +1054,6 @@ exports.Service = Service;
 
 },{}],13:[function(require,module,exports){
 "use strict";
-/**
- * イベントサービス
- *
- * @namespace service.event
- */
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -1108,6 +1103,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var apiFetch_1 = require("../apiFetch");
 var http_status_1 = require("http-status");
 var service_1 = require("../service");
+/**
+ * event service
+ *
+ * @class EventService
+ */
 var EventService = (function (_super) {
     __extends(EventService, _super);
     function EventService() {
@@ -1153,15 +1153,10 @@ var EventService = (function (_super) {
     };
     return EventService;
 }(service_1.Service));
-exports.default = EventService;
+exports.EventService = EventService;
 
 },{"../apiFetch":2,"../service":12,"http-status":26}],14:[function(require,module,exports){
 "use strict";
-/**
- * 注文サービス
- *
- * @namespace service.order
- */
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -1211,6 +1206,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var apiFetch_1 = require("../apiFetch");
 var http_status_1 = require("http-status");
 var service_1 = require("../service");
+/**
+ * order service
+ *
+ * @class OrderService
+ */
 var OrderService = (function (_super) {
     __extends(OrderService, _super);
     function OrderService() {
@@ -1240,15 +1240,10 @@ var OrderService = (function (_super) {
     };
     return OrderService;
 }(service_1.Service));
-exports.default = OrderService;
+exports.OrderService = OrderService;
 
 },{"../apiFetch":2,"../service":12,"http-status":26}],15:[function(require,module,exports){
 "use strict";
-/**
- * 組織サービス
- *
- * @namespace service.organization
- */
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -1298,6 +1293,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var apiFetch_1 = require("../apiFetch");
 var http_status_1 = require("http-status");
 var service_1 = require("../service");
+/**
+ * organization service
+ *
+ * @class OrganizationService
+ */
 var OrganizationService = (function (_super) {
     __extends(OrganizationService, _super);
     function OrganizationService() {
@@ -1343,15 +1343,10 @@ var OrganizationService = (function (_super) {
     };
     return OrganizationService;
 }(service_1.Service));
-exports.default = OrganizationService;
+exports.OrganizationService = OrganizationService;
 
 },{"../apiFetch":2,"../service":12,"http-status":26}],16:[function(require,module,exports){
 "use strict";
-/**
- * 人物サービス
- *
- * @namespace service.person
- */
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -1401,6 +1396,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var apiFetch_1 = require("../apiFetch");
 var http_status_1 = require("http-status");
 var service_1 = require("../service");
+var TypeOfGood;
+(function (TypeOfGood) {
+    TypeOfGood["Reservation"] = "Resevation";
+})(TypeOfGood = exports.TypeOfGood || (exports.TypeOfGood = {}));
+/**
+ * person service
+ *
+ * @class PersonService
+ */
 var PersonService = (function (_super) {
     __extends(PersonService, _super);
     function PersonService() {
@@ -1459,6 +1463,7 @@ var PersonService = (function (_super) {
     };
     /**
      * add a credit card
+     * @return {Promise<ISearchCardResult>} successfully created credit card info
      */
     PersonService.prototype.addCreditCard = function (params) {
         return __awaiter(this, void 0, void 0, function () {
@@ -1474,17 +1479,29 @@ var PersonService = (function (_super) {
             });
         });
     };
+    /**
+     * search ownerships of reservations
+     */
+    PersonService.prototype.searchReservationOwnerships = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, apiFetch_1.default({
+                        auth: this.options.auth,
+                        baseUrl: this.options.endpoint,
+                        uri: "/people/" + params.personId + "/ownerships/reservation",
+                        method: 'GET',
+                        qs: {},
+                        expectedStatusCodes: [http_status_1.OK]
+                    })];
+            });
+        });
+    };
     return PersonService;
 }(service_1.Service));
-exports.default = PersonService;
+exports.PersonService = PersonService;
 
 },{"../apiFetch":2,"../service":12,"http-status":26}],17:[function(require,module,exports){
 "use strict";
-/**
- * 場所サービス
- *
- * @namespace service.place
- */
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -1534,6 +1551,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var apiFetch_1 = require("../apiFetch");
 var http_status_1 = require("http-status");
 var service_1 = require("../service");
+/**
+ * place service
+ *
+ * @class PlaceService
+ */
 var PlaceService = (function (_super) {
     __extends(PlaceService, _super);
     function PlaceService() {
@@ -1579,15 +1601,10 @@ var PlaceService = (function (_super) {
     };
     return PlaceService;
 }(service_1.Service));
-exports.default = PlaceService;
+exports.PlaceService = PlaceService;
 
 },{"../apiFetch":2,"../service":12,"http-status":26}],18:[function(require,module,exports){
 "use strict";
-/**
- * 注文取引サービス
- *
- * @namespace service.transaction.placeOrder
- */
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -1637,16 +1654,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var apiFetch_1 = require("../../apiFetch");
 var http_status_1 = require("http-status");
 var service_1 = require("../../service");
-var EventService = (function (_super) {
-    __extends(EventService, _super);
-    function EventService() {
+/**
+ * placeOrder transaction service
+ *
+ * @class transaction/PlaceOrderService
+ */
+var PlaceOrderService = (function (_super) {
+    __extends(PlaceOrderService, _super);
+    function PlaceOrderService() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     /**
      * 取引を開始する
      * 開始できない場合(混雑中など)、nullが返されます。
      */
-    EventService.prototype.start = function (params) {
+    PlaceOrderService.prototype.start = function (params) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 return [2 /*return*/, apiFetch_1.default({
@@ -1666,7 +1688,7 @@ var EventService = (function (_super) {
     /**
      * 取引に座席予約を追加する
      */
-    EventService.prototype.createSeatReservationAuthorization = function (params) {
+    PlaceOrderService.prototype.createSeatReservationAuthorization = function (params) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 return [2 /*return*/, apiFetch_1.default({
@@ -1686,7 +1708,7 @@ var EventService = (function (_super) {
     /**
      * 座席予約取消
      */
-    EventService.prototype.cancelSeatReservationAuthorization = function (params) {
+    PlaceOrderService.prototype.cancelSeatReservationAuthorization = function (params) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 return [2 /*return*/, apiFetch_1.default({
@@ -1703,7 +1725,7 @@ var EventService = (function (_super) {
     /**
      * クレジットカードのオーソリを取得する
      */
-    EventService.prototype.createCreditCardAuthorization = function (params) {
+    PlaceOrderService.prototype.createCreditCardAuthorization = function (params) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 return [2 /*return*/, apiFetch_1.default({
@@ -1725,7 +1747,7 @@ var EventService = (function (_super) {
     /**
      * クレジットカードオーソリ取消
      */
-    EventService.prototype.cancelCreditCardAuthorization = function (params) {
+    PlaceOrderService.prototype.cancelCreditCardAuthorization = function (params) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 return [2 /*return*/, apiFetch_1.default({
@@ -1741,7 +1763,7 @@ var EventService = (function (_super) {
     /**
      * 決済方法として、ムビチケを追加する
      */
-    EventService.prototype.createMvtkAuthorization = function (params) {
+    PlaceOrderService.prototype.createMvtkAuthorization = function (params) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 return [2 /*return*/, apiFetch_1.default({
@@ -1758,7 +1780,7 @@ var EventService = (function (_super) {
     /**
      * ムビチケ取消
      */
-    EventService.prototype.cancelMvtkAuthorization = function (params) {
+    PlaceOrderService.prototype.cancelMvtkAuthorization = function (params) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 return [2 /*return*/, apiFetch_1.default({
@@ -1774,7 +1796,7 @@ var EventService = (function (_super) {
     /**
      * 購入者情報登録
      */
-    EventService.prototype.setAgentProfile = function (params) {
+    PlaceOrderService.prototype.setAgentProfile = function (params) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 return [2 /*return*/, apiFetch_1.default({
@@ -1791,7 +1813,7 @@ var EventService = (function (_super) {
     /**
      * 取引確定
      */
-    EventService.prototype.confirm = function (params) {
+    PlaceOrderService.prototype.confirm = function (params) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 return [2 /*return*/, apiFetch_1.default({
@@ -1807,7 +1829,7 @@ var EventService = (function (_super) {
     /**
      * 確定した取引に関して、購入者にメール通知を送信する
      */
-    EventService.prototype.sendEmailNotification = function (params) {
+    PlaceOrderService.prototype.sendEmailNotification = function (params) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 return [2 /*return*/, apiFetch_1.default({
@@ -1821,9 +1843,9 @@ var EventService = (function (_super) {
             });
         });
     };
-    return EventService;
+    return PlaceOrderService;
 }(service_1.Service));
-exports.default = EventService;
+exports.PlaceOrderService = PlaceOrderService;
 
 },{"../../apiFetch":2,"../../service":12,"http-status":26}],19:[function(require,module,exports){
 "use strict";
