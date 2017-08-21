@@ -14,6 +14,7 @@ const IdTokenVerifier = require('idtoken-verifier');
 // const assert = require('../helper/assert');
 
 import ICredentials from './credentials';
+import OAuth2client from './oAuth2client';
 
 export interface IOptions {
     domain: string;
@@ -29,8 +30,8 @@ export interface IOptions {
     tokenIssuer: string;
 }
 
-export class ImplicitGrantClient {
-    private baseOptions: IOptions;
+export class ImplicitGrantClient extends OAuth2client {
+    public options: IOptions;
 
     static AUTHORIZE_URL: string = '/authorize';
     static LOGOUT_URL: string = '/logout';
@@ -53,12 +54,14 @@ export class ImplicitGrantClient {
         //     }
         // );
 
-        this.baseOptions = options;
-        this.baseOptions.responseMode = 'fragment';
-        this.baseOptions.responseType = 'token';
+        super(options);
+
+        this.options = options;
+        this.options.responseMode = 'fragment';
+        this.options.responseType = 'token';
         // amazon cognitoの認可サーバーはnonce未実装
-        this.baseOptions.nonce = null;
-        console.log('baseOptions:', this.baseOptions);
+        this.options.nonce = null;
+        console.log('options:', this.options);
 
         this.credentials = {};
     }
@@ -79,12 +82,12 @@ export class ImplicitGrantClient {
         return <string>this.credentials.accessToken;
     }
 
-    async refreshAccessToken(): Promise<void> {
-        if (this.credentials === undefined) {
+    async refreshAccessToken(): Promise<ICredentials> {
+        if (this.credentials.refreshToken === undefined) {
             throw new Error('not authorized yet');
         }
 
-        // await this.refreshToken();
+        return await this.refreshToken();
     }
 
     /**
@@ -93,14 +96,14 @@ export class ImplicitGrantClient {
     async refreshToken() {
         const usePostMessage = false;
         const params = {
-            clientId: this.baseOptions.clientId,
-            responseType: this.baseOptions.responseType,
-            responseMode: this.baseOptions.responseMode,
+            clientId: this.options.clientId,
+            responseType: this.options.responseType,
+            responseMode: this.options.responseMode,
             prompt: 'none',
-            redirectUri: this.baseOptions.redirectUri,
-            scope: this.baseOptions.scope,
-            state: this.baseOptions.state,
-            nonce: this.baseOptions.nonce
+            redirectUri: this.options.redirectUri,
+            scope: this.options.scope,
+            state: this.options.state,
+            nonce: this.options.nonce
         }
 
         const handler = SilentAuthenticationHandler.create({
@@ -117,14 +120,14 @@ export class ImplicitGrantClient {
     async signIn() {
         const usePostMessage = true;
         const params = {
-            clientId: this.baseOptions.clientId,
-            responseType: this.baseOptions.responseType,
-            responseMode: this.baseOptions.responseMode,
+            clientId: this.options.clientId,
+            responseType: this.options.responseType,
+            responseMode: this.options.responseMode,
             prompt: '',
-            redirectUri: this.baseOptions.redirectUri,
-            scope: this.baseOptions.scope,
-            state: this.baseOptions.state,
-            nonce: this.baseOptions.nonce
+            redirectUri: this.options.redirectUri,
+            scope: this.options.scope,
+            state: this.options.state,
+            nonce: this.options.nonce
         };
 
         const handler = PopupAuthenticationHandler.create({
@@ -152,8 +155,8 @@ export class ImplicitGrantClient {
         const usePostMessage = false;
         const handler = SilentLogoutHandler.create({
             logoutUrl: this.buildLogoutUrl({
-                clientId: this.baseOptions.clientId,
-                logoutUri: this.baseOptions.logoutUri
+                clientId: this.options.clientId,
+                logoutUri: this.options.logoutUri
             })
         });
 
@@ -186,14 +189,14 @@ export class ImplicitGrantClient {
 
         // id_tokenを検証する
         if (parsedQs.id_token) {
-            const payload = await this.validateToken(parsedQs.id_token, this.baseOptions.nonce);
+            const payload = await this.validateToken(parsedQs.id_token, this.options.nonce);
             return this.buildParseHashResponse(parsedQs, '', payload);
         }
 
         if (parsedQs.id_token) {
             const verifier = new IdTokenVerifier({
-                issuer: this.baseOptions.tokenIssuer,
-                audience: this.baseOptions.clientId,
+                issuer: this.options.tokenIssuer,
+                audience: this.options.clientId,
             });
             const decodedToken = verifier.decode(parsedQs.id_token);
             return this.buildParseHashResponse(parsedQs, '', decodedToken.payload);
@@ -217,12 +220,12 @@ export class ImplicitGrantClient {
     /**
      * Decodes the a JWT and verifies its nonce value
      */
-    public async validateToken(token: string, nonce: string | null): Promise<any> {
+    private async validateToken(token: string, nonce: string | null): Promise<any> {
         console.log('validating id_token...');
         return new Promise<any>((resolve, reject) => {
             const verifier = new IdTokenVerifier({
-                issuer: this.baseOptions.tokenIssuer,
-                audience: this.baseOptions.clientId
+                issuer: this.options.tokenIssuer,
+                audience: this.options.clientId
             });
 
             verifier.verify(token, nonce, (err: any, payload: any) => {
@@ -250,7 +253,7 @@ export class ImplicitGrantClient {
             prompt: options.prompt
         });
 
-        return `https://${this.baseOptions.domain}${ImplicitGrantClient.AUTHORIZE_URL}?${qString}`;
+        return `https://${this.options.domain}${ImplicitGrantClient.AUTHORIZE_URL}?${qString}`;
     };
 
     /**
@@ -264,6 +267,6 @@ export class ImplicitGrantClient {
             logout_uri: options.logoutUri
         });
 
-        return `https://${this.baseOptions.domain}${ImplicitGrantClient.LOGOUT_URL}?${qString}`;
+        return `https://${this.options.domain}${ImplicitGrantClient.LOGOUT_URL}?${qString}`;
     };
 }

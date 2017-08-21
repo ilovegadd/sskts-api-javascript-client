@@ -1,4 +1,5 @@
 import ICredentials from './credentials';
+import OAuth2client from './oAuth2client';
 export interface IOptions {
     domain: string;
     clientId: string;
@@ -12,15 +13,15 @@ export interface IOptions {
     audience?: string;
     tokenIssuer: string;
 }
-export declare class ImplicitGrantClient {
-    private baseOptions;
+export declare class ImplicitGrantClient extends OAuth2client {
+    options: IOptions;
     static AUTHORIZE_URL: string;
     static LOGOUT_URL: string;
     credentials: ICredentials;
     constructor(options: IOptions);
     isSignedIn(): Promise<ICredentials | null>;
     getAccessToken(): Promise<string>;
-    refreshAccessToken(): Promise<void>;
+    refreshAccessToken(): Promise<ICredentials>;
     /**
      * Executes a silent authentication transaction under the hood in order to fetch a new tokens for the current session.
      */
@@ -39,7 +40,7 @@ export declare class ImplicitGrantClient {
     /**
      * Decodes the a JWT and verifies its nonce value
      */
-    validateToken(token: string, nonce: string | null): Promise<any>;
+    private validateToken(token, nonce);
     private buildAuthorizeUrl(options);
     /**
      * Builds and returns the Logout url in order to initialize a new authN/authZ transaction

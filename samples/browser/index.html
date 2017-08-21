@@ -170,10 +170,8 @@
                 auth: auth
             });
             event.searchIndividualScreeningEvent({
-                searchConditions: {
-                    day: '20170817',
-                    theater: '118'
-                }
+                day: '20170817',
+                theater: '118'
             }).then(function (events) {
                 console.log('events:', events);
                 document.getElementById('results').innerText = format(events);

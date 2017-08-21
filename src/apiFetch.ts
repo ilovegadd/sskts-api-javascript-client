@@ -3,12 +3,21 @@
  */
 
 import * as qs from 'qs';
+
+import OAuth2client from './auth/oAuth2client';
 import { DefaultTransporter } from './transporters';
 
-export interface IOptions extends RequestInit {
+export interface IOptions {
     baseUrl: string;
     uri: string;
+    form?: any;
+    auth?: OAuth2client;
     qs?: any;
+    method: string;
+    headers?: {
+        [key: string]: any;
+    };
+    body?: any;
     expectedStatusCodes: number[];
 }
 
@@ -16,9 +25,6 @@ export interface IOptions extends RequestInit {
  * Create and send request to API
  */
 function apiFetch(options: IOptions) {
-    const expectedStatusCodes = options.expectedStatusCodes;
-    delete options.expectedStatusCodes;
-
     const defaultOptions = {
         headers: {},
         method: 'GET',
@@ -41,7 +47,12 @@ function apiFetch(options: IOptions) {
         headers: headers
     }
 
-    return (new DefaultTransporter(expectedStatusCodes)).fetch(url, fetchOptions);
+    // create request (using authClient or otherwise and return request obj)
+    if (options.auth !== undefined) {
+        return options.auth.fetch(url, options, options.expectedStatusCodes);
+    } else {
+        return (new DefaultTransporter(options.expectedStatusCodes)).fetch(url, fetchOptions);
+    }
 }
 
 export default apiFetch;

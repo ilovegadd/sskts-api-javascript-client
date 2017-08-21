@@ -10,31 +10,27 @@ import { OK } from 'http-status';
 import { Service } from '../service';
 
 export interface ISearchIndividualScreeningEventsConditions {
-    day?: string;
-    theater?: string;
+    day: string;
+    theater: string;
 }
 
 export default class EventService extends Service {
     /**
      * 上映イベント検索
      */
-    async searchIndividualScreeningEvent(args: {
+    async searchIndividualScreeningEvent(
         /**
          * 検索条件
          */
-        searchConditions: ISearchIndividualScreeningEventsConditions
-    }): Promise<any[]> {
-        const options = {
+        params: ISearchIndividualScreeningEventsConditions
+    ): Promise<any[]> {
+        return apiFetch({
+            auth: this.options.auth,
             baseUrl: this.options.endpoint,
             uri: '/events/individualScreeningEvent',
             method: 'GET',
-            headers: {
-                'Authorization': `Bearer ${await this.options.auth.getAccessToken()}`
-            },
-            qs: args.searchConditions,
+            qs: params,
             expectedStatusCodes: [OK]
-        };
-
-        return apiFetch(options);
+        });
     }
 }
