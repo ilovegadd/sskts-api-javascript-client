@@ -10,7 +10,7 @@ export type IMovieTheater = any;
  *
  * @class OrganizationService
  */
-export default class OrganizationService extends Service {
+export class OrganizationService extends Service {
     /**
      * 劇場組織検索
      */

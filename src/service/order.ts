@@ -11,7 +11,7 @@ export type IOrder = any;
  *
  * @class OrderService
  */
-export default class OrderService extends Service {
+export class OrderService extends Service {
     /**
      * 照会キーで注文情報を取得する
      * 存在しなければnullを返します。

@@ -13,7 +13,7 @@ export interface ISearchIndividualScreeningEventsConditions {
  *
  * @class EventService
  */
-export default class EventService extends Service {
+export class EventService extends Service {
     /**
      * 上映イベント検索
      */

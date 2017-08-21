@@ -5,7 +5,7 @@ export declare type IMovieTheater = any;
  *
  * @class OrganizationService
  */
-export default class OrganizationService extends Service {
+export declare class OrganizationService extends Service {
     /**
      * 劇場組織検索
      */

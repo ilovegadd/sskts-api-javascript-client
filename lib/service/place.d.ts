@@ -7,7 +7,7 @@ export declare type IPlace = any;
  *
  * @class PlaceService
  */
-export default class PlaceService extends Service {
+export declare class PlaceService extends Service {
     /**
      * 劇場検索
      */

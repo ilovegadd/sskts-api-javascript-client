@@ -19,7 +19,7 @@ export declare type IContacts = {
  *
  * @class PersonService
  */
-export default class PersonService extends Service {
+export declare class PersonService extends Service {
     /**
      * retrieve user contacts
      */

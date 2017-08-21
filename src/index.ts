@@ -7,20 +7,20 @@
 import { IOptions as IImplicitGrantClientOptions, ImplicitGrantClient } from './auth/implicitGrantClient';
 
 import { IOptions as IServiceOptions } from './service';
-import EventService from './service/event';
-import OrderService from './service/order';
-import OrganizationService from './service/organization';
-import PersonService from './service/person';
-import PlaceService from './service/place';
-import PlaceOrderTransactionService from './service/transaction/placeOrder';
+import { EventService } from './service/event';
+import { OrderService } from './service/order';
+import { OrganizationService } from './service/organization';
+import { PersonService } from './service/person';
+import { PlaceService } from './service/place';
+import { PlaceOrderService } from './service/transaction/placeOrder';
 
-export type ImplicitGrantClient = ImplicitGrantClient;
-export type EventService = EventService;
-export type OrderService = OrderService;
-export type OrganizationService = OrganizationService;
-export type PersonService = PersonService;
-export type PlaceService = PlaceService;
-export type EventPlaceOrderTransactionServiceService = PlaceOrderTransactionService;
+export type IImplicitGrantClient = ImplicitGrantClient;
+export type IEventService = EventService;
+export type IOrderService = OrderService;
+export type IOrganizationService = OrganizationService;
+export type IPersonService = PersonService;
+export type IPlaceService = PlaceService;
+export type IPlaceOrderTransactionService = PlaceOrderService;
 
 /**
  * create OAuth2 client instance using implicit grant
@@ -48,7 +48,7 @@ export namespace service {
     }
     export namespace transaction {
         export function placeOrder(options: IServiceOptions) {
-            return new PlaceOrderTransactionService(options);
+            return new PlaceOrderService(options);
         }
     }
 }

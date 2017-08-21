@@ -27,7 +27,7 @@ export type IOrder = any;
  *
  * @class transaction/PlaceOrderService
  */
-export default class PlaceOrderService extends Service {
+export class PlaceOrderService extends Service {
     /**
      * 取引を開始する
      * 開始できない場合(混雑中など)、nullが返されます。
