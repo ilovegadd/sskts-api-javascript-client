@@ -4,17 +4,21 @@
  * @ignore
  */
 
-import ImplicitGrantClient from './auth/implicitGrantClient';
+import { IOptions as IImplicitGrantClientOptions, ImplicitGrantClient } from './auth/implicitGrantClient';
 
-import { IOptions } from './service';
+import { IOptions as IServiceOptions } from './service';
 import EventService from './service/event';
 
-export namespace auth {
-    export class Implicit extends ImplicitGrantClient { }
+/**
+ * create OAuth2 client instance using implicit grant
+ * @param options implicit grant configurations
+ */
+export function createAuthInstance(options: IImplicitGrantClientOptions) {
+    return new ImplicitGrantClient(options);
 }
 
 export namespace service {
-    export function event(options: IOptions) {
+    export function event(options: IServiceOptions) {
         return new EventService(options);
     }
 }

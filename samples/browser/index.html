@@ -21,7 +21,7 @@
     </div>
 
     <div id="signedOut" style="display:none;">
-        <a href="javascript:void(0);" onclick="authorize();">signIn</a><br>
+        <a href="javascript:void(0);" onclick="signIn();">signIn</a><br>
     </div>
 
     <p>
@@ -69,7 +69,7 @@
             nonce: randomString(16),
             tokenIssuer: ISSUER
         };
-        const auth = new sasaki.auth.Implicit(options);
+        const auth = new sasaki.createAuthInstance(options);
 
         // check if already signed in
         // result is credentials
@@ -127,11 +127,11 @@
             });
         }
 
-        function authorize() {
-            // authorize
+        function signIn() {
+            // signIn
             // result is credentials
-            auth.authorize().then(function (result) {
-                console.log('authorize result:', result);
+            auth.signIn().then(function (result) {
+                console.log('signIn result:', result);
                 document.getElementById('idToken').innerText = result.idToken;
                 document.getElementById('accessToken').innerText = result.accessToken;
 
@@ -143,7 +143,7 @@
         }
 
         function refreshToken() {
-            // authorize in iframe
+            // refreshToken in iframe
             // result is credentials
             auth.refreshToken().then(function (result) {
                 console.log('tryRenewAuth result:', result);
@@ -155,7 +155,7 @@
         }
 
         function signOut() {
-            auth.logout().then(function () {
+            auth.signOut().then(function () {
                 credentials = null;
                 onSignOut();
             }).catch(function (err) {

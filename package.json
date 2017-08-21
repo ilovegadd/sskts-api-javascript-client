@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Sasaki API Client Library for JavaScript",
   "main": "./lib/index.js",
+  "browser": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "files": [
     "lib/"
@@ -35,7 +36,6 @@
     "http-server": "^0.10.0",
     "jsonwebtoken": "^7.4.3",
     "jwk-to-pem": "^1.2.6",
-    "pem": "^1.9.7",
     "rimraf": "^2.6.1",
     "typescript": "^2.4.2",
     "watchify": "^3.9.0"

@@ -1,5 +1,5 @@
 import ICredentials from './credentials';
-export interface IBaseOption {
+export interface IOptions {
     domain: string;
     clientId: string;
     redirectUri: string;
@@ -12,12 +12,12 @@ export interface IBaseOption {
     audience?: string;
     tokenIssuer: string;
 }
-export default class ImplicitGrantClient {
+export declare class ImplicitGrantClient {
     private baseOptions;
     static AUTHORIZE_URL: string;
     static LOGOUT_URL: string;
     credentials: ICredentials;
-    constructor(options: IBaseOption);
+    constructor(options: IOptions);
     isSignedIn(): Promise<ICredentials | null>;
     getAccessToken(): Promise<string>;
     refreshAccessToken(): Promise<void>;
@@ -28,12 +28,12 @@ export default class ImplicitGrantClient {
     /**
      * Redirects to the hosted login page (`/authorize`) in order to start a new authN/authZ transaction.
      */
-    authorize(): Promise<ICredentials>;
+    signIn(): Promise<ICredentials>;
     private onLogin(hash);
     /**
      * Redirects to the auth0 logout endpoint
      */
-    logout(): Promise<void>;
+    signOut(): Promise<void>;
     private parseHash(hash?);
     private buildParseHashResponse(qsParams, __, idTokenPayload);
     /**

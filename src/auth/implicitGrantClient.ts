@@ -15,7 +15,7 @@ const IdTokenVerifier = require('idtoken-verifier');
 
 import ICredentials from './credentials';
 
-export interface IBaseOption {
+export interface IOptions {
     domain: string;
     clientId: string;
     redirectUri: string;
@@ -29,15 +29,15 @@ export interface IBaseOption {
     tokenIssuer: string;
 }
 
-export default class ImplicitGrantClient {
-    private baseOptions: IBaseOption;
+export class ImplicitGrantClient {
+    private baseOptions: IOptions;
 
     static AUTHORIZE_URL: string = '/authorize';
     static LOGOUT_URL: string = '/logout';
 
     public credentials: ICredentials;
 
-    constructor(options: IBaseOption) {
+    constructor(options: IOptions) {
         /* eslint-disable */
         // assert.check(
         //     options,
@@ -114,7 +114,7 @@ export default class ImplicitGrantClient {
     /**
      * Redirects to the hosted login page (`/authorize`) in order to start a new authN/authZ transaction.
      */
-    async authorize() {
+    async signIn() {
         const usePostMessage = true;
         const params = {
             clientId: this.baseOptions.clientId,
@@ -148,7 +148,7 @@ export default class ImplicitGrantClient {
     /**
      * Redirects to the auth0 logout endpoint
      */
-    async logout() {
+    async signOut() {
         const usePostMessage = false;
         const handler = SilentLogoutHandler.create({
             logoutUrl: this.buildLogoutUrl({

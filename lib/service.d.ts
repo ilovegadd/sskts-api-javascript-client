@@ -1,7 +1,7 @@
 /**
  * base service class
  */
-import ImplicitGrantClient from './auth/implicitGrantClient';
+import { ImplicitGrantClient } from './auth/implicitGrantClient';
 export interface IOptions {
     endpoint: string;
     auth: ImplicitGrantClient;
