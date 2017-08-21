@@ -14,46 +14,38 @@ export default class OrganizationService extends Service {
     /**
      * 劇場組織検索
      */
-    async  searchMovieTheaters(args: {
+    async  searchMovieTheaters(
         /**
          * 検索条件
          */
-        searchConditions?: {};
-    }): Promise<IMovieTheater[]> {
-        const options = {
+        params?: {}
+    ): Promise<IMovieTheater[]> {
+        return apiFetch({
+            auth: this.options.auth,
             baseUrl: this.options.endpoint,
             uri: '/organizations/movieTheater',
             method: 'GET',
-            headers: {
-                'Authorization': `Bearer ${await this.options.auth.getAccessToken()}`
-            },
-            qs: args.searchConditions,
+            qs: params,
             expectedStatusCodes: [OK]
-        };
-
-        return apiFetch(options);
+        });
     }
 
     /**
      * 枝番号で劇場組織検索
      */
-    async  findMovieTheaterByBranchCode(args: {
+    async  findMovieTheaterByBranchCode(params: {
         /**
          * 枝番号
          */
         branchCode: string;
     }): Promise<IMovieTheater | null> {
-        const options = {
+        return apiFetch({
+            auth: this.options.auth,
             baseUrl: this.options.endpoint,
-            uri: `/organizations/movieTheater/${args.branchCode}`,
+            uri: `/organizations/movieTheater/${params.branchCode}`,
             method: 'GET',
-            headers: {
-                'Authorization': `Bearer ${await this.options.auth.getAccessToken()}`
-            },
             qs: {},
             expectedStatusCodes: [NOT_FOUND, OK]
-        };
-
-        return apiFetch(options);
+        });
     }
 }

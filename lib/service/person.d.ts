@@ -13,7 +13,7 @@ export default class PersonService extends Service {
     /**
      * クレジットカード検索
      */
-    findCreditCards(args: {
+    findCreditCards(params: {
         /**
          * 人物ID
          * ログイン中の人物の場合、'me'を指定してください。
@@ -23,7 +23,7 @@ export default class PersonService extends Service {
     /**
      * クレジットカード追加
      */
-    addCreditCard(args: {
+    addCreditCard(params: {
         /**
          * 人物ID
          * ログイン中の人物の場合、'me'を指定してください。

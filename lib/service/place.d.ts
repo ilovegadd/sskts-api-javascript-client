@@ -6,16 +6,15 @@ export default class PlaceService extends Service {
     /**
      * 劇場検索
      */
-    searchMovieTheaters(args: {
+    searchMovieTheaters(
         /**
          * 検索条件
          */
-        searchConditions?: ISearchMovieTheatersConditions;
-    }): Promise<ISearchMovieTheaterResult[]>;
+        params?: ISearchMovieTheatersConditions): Promise<ISearchMovieTheaterResult[]>;
     /**
      * 劇場情報取得
      */
-    findMovieTheater(args: {
+    findMovieTheater(params: {
         /**
          * 枝番号
          */

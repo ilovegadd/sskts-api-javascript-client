@@ -13,6 +13,8 @@
             <a href="javascript:void(0);" onclick="refreshToken();">silent signIn</a><br>
             <a href="javascript:void(0);" onclick="signOut();">signOut</a><br>
             <a href="javascript:void(0);" onclick="searchEvents();">search events</a><br>
+            <a href="javascript:void(0);" onclick="searchOrganizations();">search organizations</a><br>
+            <a href="javascript:void(0);" onclick="startPlaceOrderTransaction();">start placeOrder transaction</a><br>
         </div>
         <div>
             profile:<br>
@@ -165,18 +167,52 @@
 
         function searchEvents() {
             // search events
-            var event = sasaki.service.event({
+            var events = sasaki.service.event({
                 endpoint: API_ENDPOINT,
                 auth: auth
             });
-            event.searchIndividualScreeningEvent({
+            events.searchIndividualScreeningEvent({
                 day: '20170817',
                 theater: '118'
-            }).then(function (events) {
-                console.log('events:', events);
-                document.getElementById('results').innerText = format(events);
+            }).then(function (screeningEvents) {
+                console.log('screeningEvents:', screeningEvents);
+                document.getElementById('results').innerText = format(screeningEvents);
             }).catch(function (err) {
                 console.error(err);
+                document.getElementById('results').innerText = format(err);
+            });
+        }
+
+        function searchOrganizations() {
+            // search organizations
+            var organizations = sasaki.service.organization({
+                endpoint: API_ENDPOINT,
+                auth: auth
+            });
+            organizations.searchMovieTheaters({}).then(function (movieTheaters) {
+                console.log('movieTheaters:', movieTheaters);
+                document.getElementById('results').innerText = format(movieTheaters);
+            }).catch(function (err) {
+                console.error(err);
+                document.getElementById('results').innerText = format(err);
+            });
+        }
+
+        function startPlaceOrderTransaction() {
+            // search organizations
+            var placeOrderTransactions = sasaki.service.transaction.placeOrder({
+                endpoint: API_ENDPOINT,
+                auth: auth
+            });
+            placeOrderTransactions.start({
+                expires: new Date(),
+                sellerId: '5979a3bfe53ebc2b4e6df88d'
+            }).then(function (transaction) {
+                console.log('transaction:', transaction);
+                document.getElementById('results').innerText = format(transaction);
+            }).catch(function (err) {
+                console.error(err);
+                document.getElementById('results').innerText = format(err);
             });
         }
     </script>

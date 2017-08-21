@@ -12,4 +12,14 @@ export default class EventService extends Service {
          * 検索条件
          */
         params: ISearchIndividualScreeningEventsConditions): Promise<any[]>;
+    /**
+     * 上映イベント情報取得
+     * 存在しなければnullを返します。
+     */
+    findIndividualScreeningEvent(params: {
+        /**
+         * イベント識別子
+         */
+        identifier: string;
+    }): Promise<any | null>;
 }

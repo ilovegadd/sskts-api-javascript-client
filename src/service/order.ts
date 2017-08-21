@@ -16,24 +16,19 @@ export default class OrderService extends Service {
      * 照会キーで注文情報を取得する
      * 存在しなければnullを返します。
      */
-    async findByOrderInquiryKey(args: {
+    async findByOrderInquiryKey(
         /**
          * 注文照会キー
          */
-        orderInquiryKey: IOrderInquiryKey;
-    }): Promise<IOrder | null> {
-        const options = {
+        params: IOrderInquiryKey
+    ): Promise<IOrder | null> {
+        return apiFetch({
+            auth: this.options.auth,
             baseUrl: this.options.endpoint,
             uri: '/orders/findByOrderInquiryKey',
             method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${await this.options.auth.getAccessToken()}`
-            },
-            qs: {},
-            body: args.orderInquiryKey,
+            body: params,
             expectedStatusCodes: [NOT_FOUND, OK]
-        };
-
-        return apiFetch(options);
+        });
     }
 }

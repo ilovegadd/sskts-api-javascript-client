@@ -24,31 +24,27 @@ export default class PersonService extends Service {
     /**
      * クレジットカード検索
      */
-    async  findCreditCards(args: {
+    async  findCreditCards(params: {
         /**
          * 人物ID
          * ログイン中の人物の場合、'me'を指定してください。
          */
         personId: string;
     }): Promise<ISearchCardResult[]> {
-        const options = {
+        return apiFetch({
+            auth: this.options.auth,
             baseUrl: this.options.endpoint,
-            uri: `/people/${args.personId}/creditCards`,
+            uri: `/people/${params.personId}/creditCards`,
             method: 'GET',
-            headers: {
-                'Authorization': `Bearer ${await this.options.auth.getAccessToken()}`
-            },
             qs: {},
             expectedStatusCodes: [OK]
-        };
-
-        return apiFetch(options);
+        });
     }
 
     /**
      * クレジットカード追加
      */
-    async addCreditCard(args: {
+    async addCreditCard(params: {
         /**
          * 人物ID
          * ログイン中の人物の場合、'me'を指定してください。
@@ -59,18 +55,13 @@ export default class PersonService extends Service {
          */
         creditCard: IPresavedCreditCardRaw | IPresavedCreditCardTokenized
     }): Promise<ISearchCardResult> {
-        const options = {
+        return apiFetch({
+            auth: this.options.auth,
             baseUrl: this.options.endpoint,
-            uri: `/people/${args.personId}/creditCards`,
+            uri: `/people/${params.personId}/creditCards`,
             method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${await this.options.auth.getAccessToken()}`
-            },
-            qs: {},
-            body: args.creditCard,
+            body: params.creditCard,
             expectedStatusCodes: [CREATED]
-        };
-
-        return apiFetch(options);
+        });
     }
 }

@@ -33,7 +33,7 @@ export default class EventService extends Service {
      * 取引を開始する
      * 開始できない場合(混雑中など)、nullが返されます。
      */
-    async start(args: {
+    async start(params: {
         /**
          * 取引期限
          * 指定した日時を過ぎると、取引を進行することはできなくなります。
@@ -44,27 +44,23 @@ export default class EventService extends Service {
          */
         sellerId: string;
     }): Promise<ITransaction> {
-        const options = {
+        return apiFetch({
+            auth: this.options.auth,
             baseUrl: this.options.endpoint,
             uri: '/transactions/placeOrder/start',
             method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${await this.options.auth.getAccessToken()}`
-            },
             body: {
-                expires: args.expires.valueOf(),
-                sellerId: args.sellerId
+                expires: params.expires.valueOf(),
+                sellerId: params.sellerId
             },
             expectedStatusCodes: [NOT_FOUND, OK]
-        };
-
-        return apiFetch(options);
+        });
     }
 
     /**
      * 取引に座席予約を追加する
      */
-    async createSeatReservationAuthorization(args: {
+    async createSeatReservationAuthorization(params: {
         /**
          * 取引ID
          */
@@ -78,27 +74,23 @@ export default class EventService extends Service {
          */
         offers: ISeatReservationOffer[];
     }): Promise<ISeatReservationAuthorization> {
-        const options = {
+        return apiFetch({
+            auth: this.options.auth,
             baseUrl: this.options.endpoint,
-            uri: `/transactions/placeOrder/${args.transactionId}/seatReservationAuthorization`,
+            uri: `/transactions/placeOrder/${params.transactionId}/seatReservationAuthorization`,
             method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${await this.options.auth.getAccessToken()}`
-            },
             body: {
-                eventIdentifier: args.eventIdentifier,
-                offers: args.offers
+                eventIdentifier: params.eventIdentifier,
+                offers: params.offers
             },
             expectedStatusCodes: [CREATED]
-        };
-
-        return apiFetch(options);
+        });
     }
 
     /**
      * 座席予約取消
      */
-    async cancelSeatReservationAuthorization(args: {
+    async cancelSeatReservationAuthorization(params: {
         /**
          * 取引ID
          */
@@ -108,23 +100,20 @@ export default class EventService extends Service {
          */
         authorizationId: string;
     }): Promise<void> {
-        const options = {
+        return apiFetch({
+            auth: this.options.auth,
             baseUrl: this.options.endpoint,
-            uri: `/transactions/placeOrder/${args.transactionId}/seatReservationAuthorization/${args.authorizationId}`,
+            uri: `/transactions/placeOrder/${params.transactionId}/seatReservationAuthorization/${params.authorizationId}`,
             method: 'DELETE',
-            headers: {
-                'Authorization': `Bearer ${await this.options.auth.getAccessToken()}`
-            },
+            body: params,
             expectedStatusCodes: [NO_CONTENT]
-        };
-
-        return apiFetch(options);
+        });
     }
 
     /**
      * クレジットカードのオーソリを取得する
      */
-    async createCreditCardAuthorization(args: {
+    async createCreditCardAuthorization(params: {
         /**
          * 取引ID
          */
@@ -146,29 +135,25 @@ export default class EventService extends Service {
          */
         creditCard: ICreditCard4authorization;
     }): Promise<IGMOAuthorization> {
-        const options = {
+        return apiFetch({
+            auth: this.options.auth,
             baseUrl: this.options.endpoint,
-            uri: `/transactions/placeOrder/${args.transactionId}/paymentInfos/creditCard`,
+            uri: `/transactions/placeOrder/${params.transactionId}/paymentInfos/creditCard`,
             method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${await this.options.auth.getAccessToken()}`
-            },
             body: {
-                orderId: args.orderId,
-                amount: args.amount,
-                method: args.method,
-                creditCard: args.creditCard
+                orderId: params.orderId,
+                amount: params.amount,
+                method: params.method,
+                creditCard: params.creditCard
             },
             expectedStatusCodes: [CREATED]
-        };
-
-        return apiFetch(options);
+        });
     }
 
     /**
      * クレジットカードオーソリ取消
      */
-    async cancelCreditCardAuthorization(args: {
+    async cancelCreditCardAuthorization(params: {
         /**
          * 取引ID
          */
@@ -178,24 +163,20 @@ export default class EventService extends Service {
          */
         authorizationId: string;
     }): Promise<void> {
-        const options = {
+        return apiFetch({
+            auth: this.options.auth,
             baseUrl: this.options.endpoint,
-            uri: `/transactions/placeOrder/${args.transactionId}/paymentInfos/creditCard/${args.authorizationId}`,
-            method: 'GET',
-            headers: {
-                'Authorization': `Bearer ${await this.options.auth.getAccessToken()}`
-            },
+            uri: `/transactions/placeOrder/${params.transactionId}/paymentInfos/creditCard/${params.authorizationId}`,
+            method: 'DELETE',
             expectedStatusCodes: [NO_CONTENT]
-        };
-
-        return apiFetch(options);
+        });
     }
 
 
     /**
      * 決済方法として、ムビチケを追加する
      */
-    async createMvtkAuthorization(args: {
+    async createMvtkAuthorization(params: {
         /**
          * 取引ID
          */
@@ -205,24 +186,20 @@ export default class EventService extends Service {
          */
         mvtk: IMvtk;
     }): Promise<IMvtkAuthorization> {
-        const options = {
+        return apiFetch({
+            auth: this.options.auth,
             baseUrl: this.options.endpoint,
-            uri: `/transactions/placeOrder/${args.transactionId}/paymentInfos/mvtk`,
+            uri: `/transactions/placeOrder/${params.transactionId}/paymentInfos/mvtk`,
             method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${await this.options.auth.getAccessToken()}`
-            },
-            body: args.mvtk,
+            body: params.mvtk,
             expectedStatusCodes: [CREATED]
-        };
-
-        return apiFetch(options);
+        });
     }
 
     /**
      * ムビチケ取消
      */
-    async cancelMvtkAuthorization(args: {
+    async cancelMvtkAuthorization(params: {
         /**
          * 取引ID
          */
@@ -232,23 +209,19 @@ export default class EventService extends Service {
          */
         authorizationId: string;
     }): Promise<void> {
-        const options = {
+        return apiFetch({
+            auth: this.options.auth,
             baseUrl: this.options.endpoint,
-            uri: `/transactions/placeOrder/${args.transactionId}/paymentInfos/mvtk/${args.authorizationId}`,
+            uri: `/transactions/placeOrder/${params.transactionId}/paymentInfos/mvtk/${params.authorizationId}`,
             method: 'DELETE',
-            headers: {
-                'Authorization': `Bearer ${await this.options.auth.getAccessToken()}`
-            },
             expectedStatusCodes: [NO_CONTENT]
-        };
-
-        return apiFetch(options);
+        });
     }
 
     /**
      * 購入者情報登録
      */
-    async setAgentProfile(args: {
+    async setAgentProfile(params: {
         /**
          * 取引ID
          */
@@ -258,47 +231,39 @@ export default class EventService extends Service {
          */
         profile: IProfile;
     }): Promise<void> {
-        const options = {
+        return apiFetch({
+            auth: this.options.auth,
             baseUrl: this.options.endpoint,
-            uri: `/transactions/placeOrder/${args.transactionId}/agent/profile`,
-            method: 'PUT',
-            headers: {
-                'Authorization': `Bearer ${await this.options.auth.getAccessToken()}`
-            },
-            body: args.profile,
+            uri: `/transactions/placeOrder/${params.transactionId}/agent/profile`,
+            method: 'POST',
+            body: params.profile,
             expectedStatusCodes: [NO_CONTENT]
-        };
-
-        return apiFetch(options);
+        });
     }
 
     /**
      * 取引確定
      */
-    async confirm(args: {
+    async confirm(params: {
         /**
          * 取引ID
          */
         transactionId: string;
     }): Promise<IOrder> {
-        const options = {
+        return apiFetch({
+            auth: this.options.auth,
             baseUrl: this.options.endpoint,
-            uri: `/transactions/placeOrder/${args.transactionId}/confirm`,
+            uri: `/transactions/placeOrder/${params.transactionId}/confirm`,
             method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${await this.options.auth.getAccessToken()}`
-            },
             expectedStatusCodes: [CREATED]
-        };
-
-        return apiFetch(options);
+        });
     }
 
 
     /**
      * 確定した取引に関して、購入者にメール通知を送信する
      */
-    async sendEmailNotification(args: {
+    async sendEmailNotification(params: {
         /**
          * 取引ID
          */
@@ -308,17 +273,13 @@ export default class EventService extends Service {
          */
         emailNotification: IEmailNotification
     }): Promise<void> {
-        const options = {
+        return apiFetch({
+            auth: this.options.auth,
             baseUrl: this.options.endpoint,
-            uri: `/transactions/placeOrder/${args.transactionId}/tasks/sendEmailNotification`,
+            uri: `/transactions/placeOrder/${params.transactionId}/tasks/sendEmailNotification`,
             method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${await this.options.auth.getAccessToken()}`
-            },
-            body: args.emailNotification,
+            body: params.emailNotification,
             expectedStatusCodes: [NO_CONTENT]
-        };
-
-        return apiFetch(options);
+        });
     }
 }

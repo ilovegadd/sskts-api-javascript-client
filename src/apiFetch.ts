@@ -44,12 +44,13 @@ function apiFetch(options: IOptions) {
 
     const fetchOptions = {
         method: options.method,
-        headers: headers
+        headers: headers,
+        body: JSON.stringify(options.body)
     }
 
     // create request (using authClient or otherwise and return request obj)
     if (options.auth !== undefined) {
-        return options.auth.fetch(url, options, options.expectedStatusCodes);
+        return options.auth.fetch(url, fetchOptions, options.expectedStatusCodes);
     } else {
         return (new DefaultTransporter(options.expectedStatusCodes)).fetch(url, fetchOptions);
     }

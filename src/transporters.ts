@@ -74,8 +74,10 @@ export class DefaultTransporter {
         if (this.expectedStatusCodes.indexOf(response.status) < 0) {
             if (response.status >= httpStatus.UNAUTHORIZED) {
                 // Consider all 4xx and 5xx responses errors.
-                err = new RequestError(await response.text());
+                const text = await response.text();
+                err = new RequestError(text);
                 err.code = response.status;
+                err.errors = [];
             } else {
                 const body = await response.json();
                 if (typeof body === 'object' && body.errors !== undefined) {

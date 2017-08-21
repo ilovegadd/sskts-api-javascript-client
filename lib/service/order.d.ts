@@ -6,10 +6,9 @@ export default class OrderService extends Service {
      * 照会キーで注文情報を取得する
      * 存在しなければnullを返します。
      */
-    findByOrderInquiryKey(args: {
+    findByOrderInquiryKey(
         /**
          * 注文照会キー
          */
-        orderInquiryKey: IOrderInquiryKey;
-    }): Promise<IOrder | null>;
+        params: IOrderInquiryKey): Promise<IOrder | null>;
 }
