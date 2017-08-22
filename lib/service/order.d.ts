@@ -1,6 +1,5 @@
+import * as factory from '@motionpicture/sskts-factory';
 import { Service } from '../service';
-export declare type IOrderInquiryKey = any;
-export declare type IOrder = any;
 /**
  * order service
  *
@@ -15,5 +14,5 @@ export declare class OrderService extends Service {
         /**
          * 注文照会キー
          */
-        params: IOrderInquiryKey): Promise<IOrder | null>;
+        params: factory.orderInquiryKey.IOrderInquiryKey): Promise<factory.order.IOrder | null>;
 }

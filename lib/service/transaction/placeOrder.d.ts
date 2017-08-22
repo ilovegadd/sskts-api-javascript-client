@@ -1,3 +1,4 @@
+import * as factory from '@motionpicture/sskts-factory';
 import { Service } from '../../service';
 export declare type IMvtk = any;
 export interface IEmailNotification {
@@ -6,14 +7,9 @@ export interface IEmailNotification {
     subject: string;
     content: string;
 }
-export declare type ITransaction = any;
 export declare type ISeatReservationOffer = any;
-export declare type ISeatReservationAuthorization = any;
 export declare type ICreditCard4authorization = any;
-export declare type IGMOAuthorization = any;
-export declare type IMvtkAuthorization = any;
 export declare type IProfile = any;
-export declare type IOrder = any;
 /**
  * placeOrder transaction service
  *
@@ -34,7 +30,7 @@ export declare class PlaceOrderService extends Service {
          * 販売者ID
          */
         sellerId: string;
-    }): Promise<ITransaction>;
+    }): Promise<factory.transaction.placeOrder.ITransaction>;
     /**
      * 取引に座席予約を追加する
      */
@@ -51,7 +47,7 @@ export declare class PlaceOrderService extends Service {
          * 座席販売情報
          */
         offers: ISeatReservationOffer[];
-    }): Promise<ISeatReservationAuthorization>;
+    }): Promise<factory.authorization.seatReservation.IAuthorization>;
     /**
      * 座席予約取消
      */
@@ -89,7 +85,7 @@ export declare class PlaceOrderService extends Service {
          * クレジットカード情報
          */
         creditCard: ICreditCard4authorization;
-    }): Promise<IGMOAuthorization>;
+    }): Promise<factory.authorization.gmo.IAuthorization>;
     /**
      * クレジットカードオーソリ取消
      */
@@ -115,7 +111,7 @@ export declare class PlaceOrderService extends Service {
          * ムビチケ情報
          */
         mvtk: IMvtk;
-    }): Promise<IMvtkAuthorization>;
+    }): Promise<factory.authorization.mvtk.IAuthorization>;
     /**
      * ムビチケ取消
      */
@@ -150,7 +146,7 @@ export declare class PlaceOrderService extends Service {
          * 取引ID
          */
         transactionId: string;
-    }): Promise<IOrder>;
+    }): Promise<factory.order.IOrder>;
     /**
      * 確定した取引に関して、購入者にメール通知を送信する
      */

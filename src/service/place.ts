@@ -1,11 +1,10 @@
+import * as factory from '@motionpicture/sskts-factory';
 import apiFetch from '../apiFetch';
 import { NOT_FOUND, OK } from 'http-status';
 
 import { Service } from '../service';
 
 export type ISearchMovieTheatersConditions = any;
-export type ISearchMovieTheaterResult = any;
-export type IPlace = any;
 
 /**
  * place service
@@ -21,7 +20,7 @@ export class PlaceService extends Service {
          * 検索条件
          */
         params?: ISearchMovieTheatersConditions
-    ): Promise<ISearchMovieTheaterResult[]> {
+    ): Promise<factory.place.movieTheater.IPlace[]> {
         return apiFetch({
             auth: this.options.auth,
             baseUrl: this.options.endpoint,
@@ -40,7 +39,7 @@ export class PlaceService extends Service {
          * 枝番号
          */
         branchCode: string;
-    }): Promise<IPlace | null> {
+    }): Promise<factory.place.movieTheater.IPlace | null> {
         return apiFetch({
             auth: this.options.auth,
             baseUrl: this.options.endpoint,

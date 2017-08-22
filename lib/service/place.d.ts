@@ -1,7 +1,6 @@
+import * as factory from '@motionpicture/sskts-factory';
 import { Service } from '../service';
 export declare type ISearchMovieTheatersConditions = any;
-export declare type ISearchMovieTheaterResult = any;
-export declare type IPlace = any;
 /**
  * place service
  *
@@ -15,7 +14,7 @@ export declare class PlaceService extends Service {
         /**
          * 検索条件
          */
-        params?: ISearchMovieTheatersConditions): Promise<ISearchMovieTheaterResult[]>;
+        params?: ISearchMovieTheatersConditions): Promise<factory.place.movieTheater.IPlace[]>;
     /**
      * 劇場情報取得
      */
@@ -24,5 +23,5 @@ export declare class PlaceService extends Service {
          * 枝番号
          */
         branchCode: string;
-    }): Promise<IPlace | null>;
+    }): Promise<factory.place.movieTheater.IPlace | null>;
 }

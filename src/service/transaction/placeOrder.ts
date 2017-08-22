@@ -1,3 +1,4 @@
+import * as factory from '@motionpicture/sskts-factory';
 import apiFetch from '../../apiFetch';
 import { CREATED, NO_CONTENT, NOT_FOUND, OK } from 'http-status';
 
@@ -13,14 +14,9 @@ export interface IEmailNotification {
     content: string;
 }
 
-export type ITransaction = any;
 export type ISeatReservationOffer = any;
-export type ISeatReservationAuthorization = any;
 export type ICreditCard4authorization = any;
-export type IGMOAuthorization = any;
-export type IMvtkAuthorization = any;
 export type IProfile = any;
-export type IOrder = any;
 
 /**
  * placeOrder transaction service
@@ -42,7 +38,7 @@ export class PlaceOrderService extends Service {
          * 販売者ID
          */
         sellerId: string;
-    }): Promise<ITransaction> {
+    }): Promise<factory.transaction.placeOrder.ITransaction> {
         return apiFetch({
             auth: this.options.auth,
             baseUrl: this.options.endpoint,
@@ -72,7 +68,7 @@ export class PlaceOrderService extends Service {
          * 座席販売情報
          */
         offers: ISeatReservationOffer[];
-    }): Promise<ISeatReservationAuthorization> {
+    }): Promise<factory.authorization.seatReservation.IAuthorization> {
         return apiFetch({
             auth: this.options.auth,
             baseUrl: this.options.endpoint,
@@ -133,7 +129,7 @@ export class PlaceOrderService extends Service {
          * クレジットカード情報
          */
         creditCard: ICreditCard4authorization;
-    }): Promise<IGMOAuthorization> {
+    }): Promise<factory.authorization.gmo.IAuthorization> {
         return apiFetch({
             auth: this.options.auth,
             baseUrl: this.options.endpoint,
@@ -184,7 +180,7 @@ export class PlaceOrderService extends Service {
          * ムビチケ情報
          */
         mvtk: IMvtk;
-    }): Promise<IMvtkAuthorization> {
+    }): Promise<factory.authorization.mvtk.IAuthorization> {
         return apiFetch({
             auth: this.options.auth,
             baseUrl: this.options.endpoint,
@@ -248,7 +244,7 @@ export class PlaceOrderService extends Service {
          * 取引ID
          */
         transactionId: string;
-    }): Promise<IOrder> {
+    }): Promise<factory.order.IOrder> {
         return apiFetch({
             auth: this.options.auth,
             baseUrl: this.options.endpoint,

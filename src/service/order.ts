@@ -1,10 +1,8 @@
+import * as factory from '@motionpicture/sskts-factory';
 import apiFetch from '../apiFetch';
 import { NOT_FOUND, OK } from 'http-status';
 
 import { Service } from '../service';
-
-export type IOrderInquiryKey = any;
-export type IOrder = any;
 
 /**
  * order service
@@ -20,8 +18,8 @@ export class OrderService extends Service {
         /**
          * 注文照会キー
          */
-        params: IOrderInquiryKey
-    ): Promise<IOrder | null> {
+        params: factory.orderInquiryKey.IOrderInquiryKey
+    ): Promise<factory.order.IOrder | null> {
         return apiFetch({
             auth: this.options.auth,
             baseUrl: this.options.endpoint,

@@ -1,9 +1,8 @@
+import * as factory from '@motionpicture/sskts-factory';
 import apiFetch from '../apiFetch';
 import { NOT_FOUND, OK } from 'http-status';
 
 import { Service } from '../service';
-
-export type IMovieTheater = any;
 
 /**
  * organization service
@@ -19,7 +18,7 @@ export class OrganizationService extends Service {
          * 検索条件
          */
         params?: {}
-    ): Promise<IMovieTheater[]> {
+    ): Promise<factory.organization.movieTheater.IOrganization[]> {
         return apiFetch({
             auth: this.options.auth,
             baseUrl: this.options.endpoint,
@@ -38,7 +37,7 @@ export class OrganizationService extends Service {
          * 枝番号
          */
         branchCode: string;
-    }): Promise<IMovieTheater | null> {
+    }): Promise<factory.organization.movieTheater.IOrganization | null> {
         return apiFetch({
             auth: this.options.auth,
             baseUrl: this.options.endpoint,
