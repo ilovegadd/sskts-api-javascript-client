@@ -1,3 +1,4 @@
+import * as factory from '@motionpicture/sskts-factory';
 import { Service } from '../service';
 export interface ISearchIndividualScreeningEventsConditions {
     day: string;
@@ -16,7 +17,7 @@ export declare class EventService extends Service {
         /**
          * 検索条件
          */
-        params: ISearchIndividualScreeningEventsConditions): Promise<any[]>;
+        params: ISearchIndividualScreeningEventsConditions): Promise<factory.event.individualScreeningEvent.IEvent[]>;
     /**
      * 上映イベント情報取得
      * 存在しなければnullを返します。
@@ -26,5 +27,5 @@ export declare class EventService extends Service {
          * イベント識別子
          */
         identifier: string;
-    }): Promise<any | null>;
+    }): Promise<factory.event.individualScreeningEvent.IEvent | null>;
 }

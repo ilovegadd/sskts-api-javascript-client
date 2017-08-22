@@ -1,3 +1,4 @@
+import * as factory from '@motionpicture/sskts-factory';
 import apiFetch from '../apiFetch';
 import { NOT_FOUND, OK } from 'http-status';
 
@@ -22,7 +23,7 @@ export class EventService extends Service {
          * 検索条件
          */
         params: ISearchIndividualScreeningEventsConditions
-    ): Promise<any[]> {
+    ): Promise<factory.event.individualScreeningEvent.IEvent[]> {
         return apiFetch({
             auth: this.options.auth,
             baseUrl: this.options.endpoint,
@@ -42,7 +43,7 @@ export class EventService extends Service {
          * イベント識別子
          */
         identifier: string;
-    }): Promise<any | null> {
+    }): Promise<factory.event.individualScreeningEvent.IEvent | null> {
         return apiFetch({
             auth: this.options.auth,
             baseUrl: this.options.endpoint,
