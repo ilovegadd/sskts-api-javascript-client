@@ -47,7 +47,7 @@ export class PlaceOrderService extends Service {
      */
     async createSeatReservationAuthorization(params: {
         /**
-         * 取引ID
+         * transaction ID
          */
         transactionId: string;
         /**
@@ -77,11 +77,11 @@ export class PlaceOrderService extends Service {
      */
     async cancelSeatReservationAuthorization(params: {
         /**
-         * 取引ID
+         * transaction ID
          */
         transactionId: string;
         /**
-         * 承認ID
+         * authorization ID
          */
         authorizationId: string;
     }): Promise<void> {
@@ -100,7 +100,7 @@ export class PlaceOrderService extends Service {
      */
     async createCreditCardAuthorization(params: {
         /**
-         * 取引ID
+         * transaction ID
          */
         transactionId: string;
         /**
@@ -140,11 +140,11 @@ export class PlaceOrderService extends Service {
      */
     async cancelCreditCardAuthorization(params: {
         /**
-         * 取引ID
+         * transaction ID
          */
         transactionId: string;
         /**
-         * 承認ID
+         * authorization ID
          */
         authorizationId: string;
     }): Promise<void> {
@@ -163,7 +163,7 @@ export class PlaceOrderService extends Service {
      */
     async createMvtkAuthorization(params: {
         /**
-         * 取引ID
+         * transaction ID
          */
         transactionId: string;
         /**
@@ -186,11 +186,11 @@ export class PlaceOrderService extends Service {
      */
     async cancelMvtkAuthorization(params: {
         /**
-         * 取引ID
+         * transaction ID
          */
         transactionId: string;
         /**
-         * 承認ID
+         * authorization ID
          */
         authorizationId: string;
     }): Promise<void> {
@@ -204,24 +204,24 @@ export class PlaceOrderService extends Service {
     }
 
     /**
-     * 購入者情報登録
+     * register a customer contact
      */
-    async setAgentProfile(params: {
+    async setCustomerContact(params: {
         /**
-         * 取引ID
+         * transaction ID
          */
         transactionId: string;
         /**
-         * 購入者情報
+         * customer contact info
          */
-        profile: factory.transaction.placeOrder.ICustomerContact;
+        contact: factory.transaction.placeOrder.ICustomerContact;
     }): Promise<void> {
         return apiFetch({
             auth: this.options.auth,
             baseUrl: this.options.endpoint,
-            uri: `/transactions/placeOrder/${params.transactionId}/agent/profile`,
-            method: 'POST',
-            body: params.profile,
+            uri: `/transactions/placeOrder/${params.transactionId}/customerContact`,
+            method: 'PUT',
+            body: params.contact,
             expectedStatusCodes: [NO_CONTENT]
         });
     }
@@ -231,7 +231,7 @@ export class PlaceOrderService extends Service {
      */
     async confirm(params: {
         /**
-         * 取引ID
+         * transaction ID
          */
         transactionId: string;
     }): Promise<factory.order.IOrder> {
@@ -250,7 +250,7 @@ export class PlaceOrderService extends Service {
      */
     async sendEmailNotification(params: {
         /**
-         * 取引ID
+         * transaction ID
          */
         transactionId: string;
         /**

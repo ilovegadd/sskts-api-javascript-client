@@ -1480,7 +1480,7 @@ var PersonService = (function (_super) {
                 return [2 /*return*/, apiFetch_1.default({
                         auth: this.options.auth,
                         baseUrl: this.options.endpoint,
-                        uri: "/people/" + params.personId + "/ownerships/reservation",
+                        uri: "/people/" + params.personId + "/ownershipInfos/reservation",
                         method: 'GET',
                         qs: {},
                         expectedStatusCodes: [http_status_1.OK]
@@ -1786,17 +1786,17 @@ var PlaceOrderService = (function (_super) {
         });
     };
     /**
-     * 購入者情報登録
+     * register a customer contact
      */
-    PlaceOrderService.prototype.setAgentProfile = function (params) {
+    PlaceOrderService.prototype.setCustomerContact = function (params) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 return [2 /*return*/, apiFetch_1.default({
                         auth: this.options.auth,
                         baseUrl: this.options.endpoint,
-                        uri: "/transactions/placeOrder/" + params.transactionId + "/agent/profile",
+                        uri: "/transactions/placeOrder/" + params.transactionId + "/customerContact",
                         method: 'POST',
-                        body: params.profile,
+                        body: params.contact,
                         expectedStatusCodes: [http_status_1.NO_CONTENT]
                     })];
             });

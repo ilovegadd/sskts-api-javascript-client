@@ -29,7 +29,7 @@ export declare class PlaceOrderService extends Service {
      */
     createSeatReservationAuthorization(params: {
         /**
-         * 取引ID
+         * transaction ID
          */
         transactionId: string;
         /**
@@ -46,11 +46,11 @@ export declare class PlaceOrderService extends Service {
      */
     cancelSeatReservationAuthorization(params: {
         /**
-         * 取引ID
+         * transaction ID
          */
         transactionId: string;
         /**
-         * 承認ID
+         * authorization ID
          */
         authorizationId: string;
     }): Promise<void>;
@@ -59,7 +59,7 @@ export declare class PlaceOrderService extends Service {
      */
     createCreditCardAuthorization(params: {
         /**
-         * 取引ID
+         * transaction ID
          */
         transactionId: string;
         /**
@@ -84,11 +84,11 @@ export declare class PlaceOrderService extends Service {
      */
     cancelCreditCardAuthorization(params: {
         /**
-         * 取引ID
+         * transaction ID
          */
         transactionId: string;
         /**
-         * 承認ID
+         * authorization ID
          */
         authorizationId: string;
     }): Promise<void>;
@@ -97,7 +97,7 @@ export declare class PlaceOrderService extends Service {
      */
     createMvtkAuthorization(params: {
         /**
-         * 取引ID
+         * transaction ID
          */
         transactionId: string;
         /**
@@ -110,33 +110,33 @@ export declare class PlaceOrderService extends Service {
      */
     cancelMvtkAuthorization(params: {
         /**
-         * 取引ID
+         * transaction ID
          */
         transactionId: string;
         /**
-         * 承認ID
+         * authorization ID
          */
         authorizationId: string;
     }): Promise<void>;
     /**
-     * 購入者情報登録
+     * register a customer contact
      */
-    setAgentProfile(params: {
+    setCustomerContact(params: {
         /**
-         * 取引ID
+         * transaction ID
          */
         transactionId: string;
         /**
-         * 購入者情報
+         * customer contact info
          */
-        profile: factory.transaction.placeOrder.ICustomerContact;
+        contact: factory.transaction.placeOrder.ICustomerContact;
     }): Promise<void>;
     /**
      * 取引確定
      */
     confirm(params: {
         /**
-         * 取引ID
+         * transaction ID
          */
         transactionId: string;
     }): Promise<factory.order.IOrder>;
@@ -145,7 +145,7 @@ export declare class PlaceOrderService extends Service {
      */
     sendEmailNotification(params: {
         /**
-         * 取引ID
+         * transaction ID
          */
         transactionId: string;
         /**
