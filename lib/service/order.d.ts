@@ -14,5 +14,5 @@ export declare class OrderService extends Service {
         /**
          * 注文照会キー
          */
-        params: factory.orderInquiryKey.IOrderInquiryKey): Promise<factory.order.IOrder | null>;
+        params: factory.order.IOrderInquiryKey): Promise<factory.order.IOrder | null>;
 }

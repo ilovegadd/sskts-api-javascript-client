@@ -1,22 +1,6 @@
+import * as factory from '@motionpicture/sskts-factory';
 import { Service } from '../service';
-export interface IPresavedCreditCardRaw {
-    cardNo: string;
-    cardPass?: string;
-    expire: string;
-    holderName: string;
-}
-export interface IPresavedCreditCardTokenized {
-    token: string;
-}
-export declare type ISearchCardResult = any;
-export declare type IContacts = {
-    givenName: string;
-    familyName: string;
-    telephone: string;
-};
-export declare enum TypeOfGood {
-    Reservation = "Resevation",
-}
+export declare type ICreditCard = factory.paymentMethod.paymentCard.creditCard.IUncheckedCardRaw | factory.paymentMethod.paymentCard.creditCard.IUncheckedCardTokenized;
 /**
  * person service
  *
@@ -32,7 +16,7 @@ export declare class PersonService extends Service {
          * basically specify 'me' to retrieve contacts of login user
          */
         personId: string;
-    }): Promise<IContacts>;
+    }): Promise<factory.person.IContact>;
     /**
      * update contacts
      */
@@ -45,7 +29,7 @@ export declare class PersonService extends Service {
         /**
          * contacts
          */
-        contacts: IContacts;
+        contacts: factory.person.IContact;
     }): Promise<void>;
     /**
      * find credit cards
@@ -56,7 +40,7 @@ export declare class PersonService extends Service {
          * basically specify 'me' to retrieve contacts of login user
          */
         personId: string;
-    }): Promise<ISearchCardResult[]>;
+    }): Promise<factory.paymentMethod.paymentCard.creditCard.ICheckedCard[]>;
     /**
      * add a credit card
      * @return {Promise<ISearchCardResult>} successfully created credit card info
@@ -70,8 +54,8 @@ export declare class PersonService extends Service {
         /**
          * credit card info
          */
-        creditCard: IPresavedCreditCardRaw | IPresavedCreditCardTokenized;
-    }): Promise<ISearchCardResult>;
+        creditCard: ICreditCard;
+    }): Promise<factory.paymentMethod.paymentCard.creditCard.ICheckedCard>;
     /**
      * search ownerships of reservations
      */
@@ -81,5 +65,5 @@ export declare class PersonService extends Service {
          * basically specify 'me' to retrieve contacts of login user
          */
         personId: string;
-    }): Promise<ISearchCardResult[]>;
+    }): Promise<factory.ownershipInfo.IOwnershipInfo<factory.reservation.IReservation>[]>;
 }

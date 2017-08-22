@@ -4,19 +4,9 @@ import { CREATED, NO_CONTENT, NOT_FOUND, OK } from 'http-status';
 
 import { Service } from '../../service';
 
-export type IMvtk = any;
-
-export interface IEmailNotification {
-    // tslint:disable-next-line:no-reserved-keywords
-    from: string;
-    to: string;
-    subject: string;
-    content: string;
-}
-
-export type ISeatReservationOffer = any;
-export type ICreditCard4authorization = any;
-export type IProfile = any;
+export type IMvtk = factory.authorization.mvtk.IResult & {
+    price: number;
+};
 
 /**
  * placeOrder transaction service
@@ -67,7 +57,7 @@ export class PlaceOrderService extends Service {
         /**
          * 座席販売情報
          */
-        offers: ISeatReservationOffer[];
+        offers: factory.offer.ISeatReservationOffer[];
     }): Promise<factory.authorization.seatReservation.IAuthorization> {
         return apiFetch({
             auth: this.options.auth,
@@ -128,7 +118,7 @@ export class PlaceOrderService extends Service {
         /**
          * クレジットカード情報
          */
-        creditCard: ICreditCard4authorization;
+        creditCard: factory.paymentMethod.paymentCard.creditCard.IUnauthorizedCardOfMember;
     }): Promise<factory.authorization.gmo.IAuthorization> {
         return apiFetch({
             auth: this.options.auth,
@@ -224,7 +214,7 @@ export class PlaceOrderService extends Service {
         /**
          * 購入者情報
          */
-        profile: IProfile;
+        profile: factory.transaction.placeOrder.ICustomerContact;
     }): Promise<void> {
         return apiFetch({
             auth: this.options.auth,
@@ -266,7 +256,7 @@ export class PlaceOrderService extends Service {
         /**
          * Eメール通知
          */
-        emailNotification: IEmailNotification
+        emailNotification: factory.notification.email.INotification
     }): Promise<void> {
         return apiFetch({
             auth: this.options.auth,

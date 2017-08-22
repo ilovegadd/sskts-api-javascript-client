@@ -13,7 +13,7 @@ export declare class OrganizationService extends Service {
         /**
          * 検索条件
          */
-        params?: {}): Promise<factory.organization.movieTheater.IOrganization[]>;
+        params?: {}): Promise<factory.organization.movieTheater.IPublicFields[]>;
     /**
      * 枝番号で劇場組織検索
      */
@@ -22,5 +22,5 @@ export declare class OrganizationService extends Service {
          * 枝番号
          */
         branchCode: string;
-    }): Promise<factory.organization.movieTheater.IOrganization | null>;
+    }): Promise<factory.organization.movieTheater.IPublicFields | null>;
 }

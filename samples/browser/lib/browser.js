@@ -1392,10 +1392,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var apiFetch_1 = require("../apiFetch");
 var http_status_1 = require("http-status");
 var service_1 = require("../service");
-var TypeOfGood;
-(function (TypeOfGood) {
-    TypeOfGood["Reservation"] = "Resevation";
-})(TypeOfGood = exports.TypeOfGood || (exports.TypeOfGood = {}));
 /**
  * person service
  *

@@ -4,8 +4,6 @@ import { NOT_FOUND, OK } from 'http-status';
 
 import { Service } from '../service';
 
-export type ISearchMovieTheatersConditions = any;
-
 /**
  * place service
  *
@@ -19,8 +17,8 @@ export class PlaceService extends Service {
         /**
          * 検索条件
          */
-        params?: ISearchMovieTheatersConditions
-    ): Promise<factory.place.movieTheater.IPlace[]> {
+        params?: {}
+    ): Promise<factory.place.movieTheater.IPlaceWithoutScreeningRoom[]> {
         return apiFetch({
             auth: this.options.auth,
             baseUrl: this.options.endpoint,

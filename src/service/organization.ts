@@ -18,7 +18,7 @@ export class OrganizationService extends Service {
          * 検索条件
          */
         params?: {}
-    ): Promise<factory.organization.movieTheater.IOrganization[]> {
+    ): Promise<factory.organization.movieTheater.IPublicFields[]> {
         return apiFetch({
             auth: this.options.auth,
             baseUrl: this.options.endpoint,
@@ -37,7 +37,7 @@ export class OrganizationService extends Service {
          * 枝番号
          */
         branchCode: string;
-    }): Promise<factory.organization.movieTheater.IOrganization | null> {
+    }): Promise<factory.organization.movieTheater.IPublicFields | null> {
         return apiFetch({
             auth: this.options.auth,
             baseUrl: this.options.endpoint,

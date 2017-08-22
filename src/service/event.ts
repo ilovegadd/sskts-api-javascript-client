@@ -4,11 +4,6 @@ import { NOT_FOUND, OK } from 'http-status';
 
 import { Service } from '../service';
 
-export interface ISearchIndividualScreeningEventsConditions {
-    day: string;
-    theater: string;
-}
-
 /**
  * event service
  *
@@ -22,7 +17,7 @@ export class EventService extends Service {
         /**
          * 検索条件
          */
-        params: ISearchIndividualScreeningEventsConditions
+        params: factory.event.individualScreeningEvent.ISearchConditions
     ): Promise<factory.event.individualScreeningEvent.IEvent[]> {
         return apiFetch({
             auth: this.options.auth,

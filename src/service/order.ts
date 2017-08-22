@@ -18,7 +18,7 @@ export class OrderService extends Service {
         /**
          * 注文照会キー
          */
-        params: factory.orderInquiryKey.IOrderInquiryKey
+        params: factory.order.IOrderInquiryKey
     ): Promise<factory.order.IOrder | null> {
         return apiFetch({
             auth: this.options.auth,

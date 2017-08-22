@@ -1,27 +1,11 @@
+import * as factory from '@motionpicture/sskts-factory';
 import apiFetch from '../apiFetch';
 import { CREATED, NO_CONTENT, OK } from 'http-status';
 
 import { Service } from '../service';
 
-
-export interface IPresavedCreditCardRaw {
-    cardNo: string;
-    cardPass?: string;
-    expire: string;
-    holderName: string;
-}
-export interface IPresavedCreditCardTokenized {
-    token: string;
-}
-export type ISearchCardResult = any;
-export type IContacts = {
-    givenName: string;
-    familyName: string;
-    telephone: string;
-};
-export enum TypeOfGood {
-    Reservation = 'Resevation'
-}
+export type ICreditCard =
+    factory.paymentMethod.paymentCard.creditCard.IUncheckedCardRaw | factory.paymentMethod.paymentCard.creditCard.IUncheckedCardTokenized
 
 /**
  * person service
@@ -38,7 +22,7 @@ export class PersonService extends Service {
          * basically specify 'me' to retrieve contacts of login user
          */
         personId: string;
-    }): Promise<IContacts> {
+    }): Promise<factory.person.IContact> {
         return apiFetch({
             auth: this.options.auth,
             baseUrl: this.options.endpoint,
@@ -61,7 +45,7 @@ export class PersonService extends Service {
         /**
          * contacts
          */
-        contacts: IContacts
+        contacts: factory.person.IContact
     }): Promise<void> {
         return apiFetch({
             auth: this.options.auth,
@@ -82,7 +66,7 @@ export class PersonService extends Service {
          * basically specify 'me' to retrieve contacts of login user
          */
         personId: string;
-    }): Promise<ISearchCardResult[]> {
+    }): Promise<factory.paymentMethod.paymentCard.creditCard.ICheckedCard[]> {
         return apiFetch({
             auth: this.options.auth,
             baseUrl: this.options.endpoint,
@@ -106,8 +90,8 @@ export class PersonService extends Service {
         /**
          * credit card info
          */
-        creditCard: IPresavedCreditCardRaw | IPresavedCreditCardTokenized
-    }): Promise<ISearchCardResult> {
+        creditCard: ICreditCard
+    }): Promise<factory.paymentMethod.paymentCard.creditCard.ICheckedCard> {
         return apiFetch({
             auth: this.options.auth,
             baseUrl: this.options.endpoint,
@@ -127,11 +111,11 @@ export class PersonService extends Service {
          * basically specify 'me' to retrieve contacts of login user
          */
         personId: string;
-    }): Promise<ISearchCardResult[]> {
+    }): Promise<factory.ownershipInfo.IOwnershipInfo<factory.reservation.IReservation>[]> {
         return apiFetch({
             auth: this.options.auth,
             baseUrl: this.options.endpoint,
-            uri: `/people/${params.personId}/ownerships/reservation`,
+            uri: `/people/${params.personId}/ownershipInfos/reservation`,
             method: 'GET',
             qs: {},
             expectedStatusCodes: [OK]

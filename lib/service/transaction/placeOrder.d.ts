@@ -1,15 +1,8 @@
 import * as factory from '@motionpicture/sskts-factory';
 import { Service } from '../../service';
-export declare type IMvtk = any;
-export interface IEmailNotification {
-    from: string;
-    to: string;
-    subject: string;
-    content: string;
-}
-export declare type ISeatReservationOffer = any;
-export declare type ICreditCard4authorization = any;
-export declare type IProfile = any;
+export declare type IMvtk = factory.authorization.mvtk.IResult & {
+    price: number;
+};
 /**
  * placeOrder transaction service
  *
@@ -46,7 +39,7 @@ export declare class PlaceOrderService extends Service {
         /**
          * 座席販売情報
          */
-        offers: ISeatReservationOffer[];
+        offers: factory.offer.ISeatReservationOffer[];
     }): Promise<factory.authorization.seatReservation.IAuthorization>;
     /**
      * 座席予約取消
@@ -84,7 +77,7 @@ export declare class PlaceOrderService extends Service {
         /**
          * クレジットカード情報
          */
-        creditCard: ICreditCard4authorization;
+        creditCard: factory.paymentMethod.paymentCard.creditCard.IUnauthorizedCardOfMember;
     }): Promise<factory.authorization.gmo.IAuthorization>;
     /**
      * クレジットカードオーソリ取消
@@ -136,7 +129,7 @@ export declare class PlaceOrderService extends Service {
         /**
          * 購入者情報
          */
-        profile: IProfile;
+        profile: factory.transaction.placeOrder.ICustomerContact;
     }): Promise<void>;
     /**
      * 取引確定
@@ -158,6 +151,6 @@ export declare class PlaceOrderService extends Service {
         /**
          * Eメール通知
          */
-        emailNotification: IEmailNotification;
+        emailNotification: factory.notification.email.INotification;
     }): Promise<void>;
 }
