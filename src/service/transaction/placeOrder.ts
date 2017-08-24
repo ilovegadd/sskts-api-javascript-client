@@ -4,10 +4,6 @@ import { CREATED, NO_CONTENT, NOT_FOUND, OK } from 'http-status';
 
 import { Service } from '../../service';
 
-export type IMvtk = factory.authorization.mvtk.IResult & {
-    price: number;
-};
-
 /**
  * placeOrder transaction service
  *
@@ -35,7 +31,8 @@ export class PlaceOrderService extends Service {
             uri: '/transactions/placeOrder/start',
             method: 'POST',
             body: {
-                expires: params.expires.valueOf(),
+                // tslint:disable-next-line:no-magic-numbers
+                expires: (params.expires.getTime() / 1000).toFixed(0), // unix timestamp
                 sellerId: params.sellerId
             },
             expectedStatusCodes: [NOT_FOUND, OK]
@@ -169,7 +166,7 @@ export class PlaceOrderService extends Service {
         /**
          * ムビチケ情報
          */
-        mvtk: IMvtk;
+        mvtk: factory.authorization.mvtk.IResult;
     }): Promise<factory.authorization.mvtk.IAuthorization> {
         return apiFetch({
             auth: this.options.auth,

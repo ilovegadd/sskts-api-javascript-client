@@ -25,7 +25,7 @@
   "private": true,
   "devDependencies": {
     "@types/debug": "0.0.30",
-    "@types/http-status": "^0.2.29",
+    "@types/http-status": "^0.2.30",
     "@types/isomorphic-fetch": "0.0.34",
     "@types/node": "^8.0.24",
     "@types/qs": "^6.5.0",
@@ -37,7 +37,7 @@
     "jsonwebtoken": "^7.4.3",
     "jwk-to-pem": "^1.2.6",
     "rimraf": "^2.6.1",
-    "typescript": "^2.4.2",
+    "typescript": "^2.5.1",
     "watchify": "^3.9.0"
   },
   "dependencies": {
