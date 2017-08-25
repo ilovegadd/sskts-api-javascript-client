@@ -171,7 +171,7 @@ export class PlaceOrderService extends Service {
         return apiFetch({
             auth: this.options.auth,
             baseUrl: this.options.endpoint,
-            uri: `/transactions/placeOrder/${params.transactionId}/paymentInfos/mvtk`,
+            uri: `/transactions/placeOrder/${params.transactionId}/discountInfos/mvtk`,
             method: 'POST',
             body: params.mvtk,
             expectedStatusCodes: [CREATED]
@@ -194,7 +194,7 @@ export class PlaceOrderService extends Service {
         return apiFetch({
             auth: this.options.auth,
             baseUrl: this.options.endpoint,
-            uri: `/transactions/placeOrder/${params.transactionId}/paymentInfos/mvtk/${params.authorizationId}`,
+            uri: `/transactions/placeOrder/${params.transactionId}/discountInfos/mvtk/${params.authorizationId}`,
             method: 'DELETE',
             expectedStatusCodes: [NO_CONTENT]
         });
