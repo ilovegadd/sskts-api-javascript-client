@@ -65,5 +65,5 @@ export declare class PersonService extends Service {
          * basically specify 'me' to retrieve contacts of login user
          */
         personId: string;
-    }): Promise<factory.ownershipInfo.IOwnershipInfo<factory.reservation.IReservation>[]>;
+    }): Promise<factory.ownershipInfo.IOwnershipInfo<factory.reservation.event.IEventReservation>[]>;
 }
