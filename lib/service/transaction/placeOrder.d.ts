@@ -1,5 +1,10 @@
 import * as factory from '@motionpicture/sskts-factory';
 import { Service } from '../../service';
+export declare type ICreditCard = factory.paymentMethod.paymentCard.creditCard.IUncheckedCardRaw | factory.paymentMethod.paymentCard.creditCard.IUncheckedCardTokenized | factory.paymentMethod.paymentCard.creditCard.IUnauthorizedCardOfMember;
+export interface IAuthorization {
+    id: string;
+    price: number;
+}
 /**
  * placeOrder transaction service
  *
@@ -74,8 +79,8 @@ export declare class PlaceOrderService extends Service {
         /**
          * クレジットカード情報
          */
-        creditCard: factory.paymentMethod.paymentCard.creditCard.IUnauthorizedCardOfMember;
-    }): Promise<factory.authorization.gmo.IAuthorization>;
+        creditCard: ICreditCard;
+    }): Promise<IAuthorization>;
     /**
      * クレジットカードオーソリ取消
      */
@@ -101,7 +106,7 @@ export declare class PlaceOrderService extends Service {
          * ムビチケ情報
          */
         mvtk: factory.authorization.mvtk.IResult;
-    }): Promise<factory.authorization.mvtk.IAuthorization>;
+    }): Promise<IAuthorization>;
     /**
      * ムビチケ取消
      */

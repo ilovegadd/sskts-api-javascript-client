@@ -4,6 +4,16 @@ import { CREATED, NO_CONTENT, NOT_FOUND, OK } from 'http-status';
 
 import { Service } from '../../service';
 
+export type ICreditCard =
+    factory.paymentMethod.paymentCard.creditCard.IUncheckedCardRaw |
+    factory.paymentMethod.paymentCard.creditCard.IUncheckedCardTokenized |
+    factory.paymentMethod.paymentCard.creditCard.IUnauthorizedCardOfMember;
+
+export interface IAuthorization {
+    id: string;
+    price: number;
+}
+
 /**
  * placeOrder transaction service
  *
@@ -115,8 +125,8 @@ export class PlaceOrderService extends Service {
         /**
          * クレジットカード情報
          */
-        creditCard: factory.paymentMethod.paymentCard.creditCard.IUnauthorizedCardOfMember;
-    }): Promise<factory.authorization.gmo.IAuthorization> {
+        creditCard: ICreditCard;
+    }): Promise<IAuthorization> {
         return apiFetch({
             auth: this.options.auth,
             baseUrl: this.options.endpoint,
@@ -167,7 +177,7 @@ export class PlaceOrderService extends Service {
          * ムビチケ情報
          */
         mvtk: factory.authorization.mvtk.IResult;
-    }): Promise<factory.authorization.mvtk.IAuthorization> {
+    }): Promise<IAuthorization> {
         return apiFetch({
             auth: this.options.auth,
             baseUrl: this.options.endpoint,
