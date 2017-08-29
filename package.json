@@ -15,7 +15,7 @@
     "watchify": "watchify ./browser.js -o ./lib/browser.js",
     "build4samples": "tsc -p ./samples",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "samples": "copyfiles ./lib/browser.js ./samples/browser && http-server --ssl --cert ./samples/browser/cert.pem --key ./samples/browser/key.pem ./samples/browser"
+    "samples": "copyfiles ./lib/browser.js ./samples/browser && http-server --ssl --cert ./samples/browser/server.crt --key ./samples/browser/server.key ./samples/browser"
   },
   "author": "Motionpicture co.,ltd.",
   "contributors": [

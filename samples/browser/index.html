@@ -49,15 +49,12 @@
         // http://docs.aws.amazon.com/ja_jp/cognito/latest/developerguide/cognito-user-pools-define-resource-servers.html
         // https://aws.amazon.com/blogs/mobile/integrating-amazon-cognito-user-pools-with-api-gateway/
 
-        var DOMAIN = 'sskts-development.auth.ap-northeast-1.amazoncognito.com';
-        // var DOMAIN = 'sasaki-development.auth.ap-northeast-1.amazoncognito.com';
-        var CLIENT_ID = '6figun12gcdtlj9e53p2u3oqvl'; // given by a token provider
-        // var CLIENT_ID = 'dn2sm34b6ili36mfj4c8a7k54'; // given by a token provider
+        var DOMAIN = 'sasaki-development.auth.ap-northeast-1.amazoncognito.com';
+        var CLIENT_ID = '1618r3pm156vu09l6m94vo1t72'; // given by a token provider
         var CALLBACK_URL = 'https://localhost:8080/signIn.html'; // an application should prepare it
         var LOGOUT_URL = 'https://localhost:8080/signOut.html'; // an application should prepare it
-        var ISSUER = 'https://cognito-idp.ap-northeast-1.amazonaws.com/ap-northeast-1_zThi0j1fe';
-        // var ISSUER = 'https://cognito-idp.ap-northeast-1.amazonaws.com/ap-northeast-1_teogOvSgz';
-        var API_ENDPOINT = 'https://sskts-api-development-preview.azurewebsites.net';
+        var ISSUER = 'https://cognito-idp.ap-northeast-1.amazonaws.com/ap-northeast-1_bQcyLA7Jq';
+        var API_ENDPOINT = 'https://localhost:44301';
 
         var credentials = null;
 
@@ -251,9 +248,10 @@
             people.updateContacts({
                 personId: 'me',
                 contacts: {
-                    givenName: 'せい',
-                    familyName: 'めい',
-                    telephone: '+09012345678',
+                    email: 'test@example.com',
+                    givenName: 'John',
+                    familyName: 'Smith',
+                    telephone: '09012345678',
                 }
             }).then(function (result) {
                 console.log('result:', result);
