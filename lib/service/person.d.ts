@@ -1,6 +1,7 @@
 import * as factory from '@motionpicture/sskts-factory';
 import { Service } from '../service';
 export declare type ICreditCard = factory.paymentMethod.paymentCard.creditCard.IUncheckedCardRaw | factory.paymentMethod.paymentCard.creditCard.IUncheckedCardTokenized;
+export declare type IScreenEventReservation = factory.reservation.event.IEventReservation<factory.event.individualScreeningEvent.IEvent>;
 /**
  * person service
  *
@@ -33,6 +34,8 @@ export declare class PersonService extends Service {
     }): Promise<void>;
     /**
      * find credit cards
+     * クレジットカード検索
+     * @see example /example/person/handleCreditCards
      */
     findCreditCards(params: {
         /**
@@ -43,7 +46,9 @@ export declare class PersonService extends Service {
     }): Promise<factory.paymentMethod.paymentCard.creditCard.ICheckedCard[]>;
     /**
      * add a credit card
+     * クレジットカード追加
      * @return {Promise<ISearchCardResult>} successfully created credit card info
+     * @see example /example/person/handleCreditCards
      */
     addCreditCard(params: {
         /**
@@ -53,9 +58,28 @@ export declare class PersonService extends Service {
         personId: string;
         /**
          * credit card info
+         * クレジットカード情報(情報の渡し方にはいくつかパターンがあるので、型を参照すること)
          */
         creditCard: ICreditCard;
     }): Promise<factory.paymentMethod.paymentCard.creditCard.ICheckedCard>;
+    /**
+     * delete a credit card by cardSeq
+     * クレジットカード削除
+     * @return {Promise<void>}
+     * @see example /example/person/handleCreditCards
+     */
+    deleteCreditCard(params: {
+        /**
+         * person id
+         * basically specify 'me' to retrieve contacts of login user
+         */
+        personId: string;
+        /**
+         * cardSeq
+         * カード連番
+         */
+        cardSeq: string;
+    }): Promise<void>;
     /**
      * search ownerships of reservations
      */
@@ -65,5 +89,5 @@ export declare class PersonService extends Service {
          * basically specify 'me' to retrieve contacts of login user
          */
         personId: string;
-    }): Promise<factory.ownershipInfo.IOwnershipInfo<factory.reservation.event.IEventReservation>[]>;
+    }): Promise<factory.ownershipInfo.IOwnershipInfo<IScreenEventReservation>[]>;
 }

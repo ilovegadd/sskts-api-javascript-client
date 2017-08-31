@@ -8,14 +8,20 @@
   "files": [
     "lib/"
   ],
+  "directories": {
+    "doc": "./doc",
+    "lib": "./lib",
+    "example": "./example",
+    "test": "./test"
+  },
   "scripts": {
     "check": "",
-    "clean": "rimraf lib/**/* types/**/* npm-debug.log* docs/*",
+    "clean": "rimraf ./lib npm-debug.log* ./doc",
     "build:watch": "tsc && concurrently \"tsc -w\" \"npm run watchify\"",
     "watchify": "watchify ./browser.js -o ./lib/browser.js",
-    "build4samples": "tsc -p ./samples",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "samples": "copyfiles ./lib/browser.js ./samples/browser && http-server --ssl --cert ./samples/browser/server.crt --key ./samples/browser/server.key ./samples/browser"
+    "example:ssl": "copyfiles ./lib/browser.js ./example/browser && http-server --ssl --cert ./example/browser/server.crt --key ./example/browser/server.key ./example/browser",
+    "example": "copyfiles ./lib/browser.js ./example/browser && http-server ./example/browser"
   },
   "author": "Motionpicture co.,ltd.",
   "contributors": [
@@ -27,7 +33,7 @@
     "@types/debug": "0.0.30",
     "@types/http-status": "^0.2.30",
     "@types/isomorphic-fetch": "0.0.34",
-    "@types/node": "^8.0.25",
+    "@types/node": "^8.0.26",
     "@types/qs": "^6.5.0",
     "browserify": "^14.4.0",
     "concurrently": "^3.5.0",

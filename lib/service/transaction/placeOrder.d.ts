@@ -1,3 +1,8 @@
+/**
+ * 注文取引サービス
+ *
+ * @namespace service.transaction.placeOrder
+ */
 import * as factory from '@motionpicture/sskts-factory';
 import { Service } from '../../service';
 export declare type ICreditCard = factory.paymentMethod.paymentCard.creditCard.IUncheckedCardRaw | factory.paymentMethod.paymentCard.creditCard.IUncheckedCardTokenized | factory.paymentMethod.paymentCard.creditCard.IUnauthorizedCardOfMember;
@@ -8,9 +13,9 @@ export interface IAuthorization {
 /**
  * placeOrder transaction service
  *
- * @class transaction/PlaceOrderService
+ * @class PlaceOrderTransactionService
  */
-export declare class PlaceOrderService extends Service {
+export declare class PlaceOrderTransactionService extends Service {
     /**
      * 取引を開始する
      * 開始できない場合(混雑中など)、nullが返されます。
@@ -153,6 +158,6 @@ export declare class PlaceOrderService extends Service {
         /**
          * Eメール通知
          */
-        emailNotification: factory.notification.email.INotification;
-    }): Promise<void>;
+        emailNotification: factory.notification.email.IData;
+    }): Promise<factory.order.IOrder>;
 }

@@ -1,3 +1,8 @@
+/**
+ * 組織サービス
+ *
+ * @namespace service.organization
+ */
 import * as factory from '@motionpicture/sskts-factory';
 import { Service } from '../service';
 /**
@@ -22,5 +27,5 @@ export declare class OrganizationService extends Service {
          * 枝番号
          */
         branchCode: string;
-    }): Promise<factory.organization.movieTheater.IPublicFields | null>;
+    }): Promise<factory.organization.movieTheater.IPublicFields>;
 }

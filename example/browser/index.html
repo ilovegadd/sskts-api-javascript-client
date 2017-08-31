@@ -49,12 +49,12 @@
         // http://docs.aws.amazon.com/ja_jp/cognito/latest/developerguide/cognito-user-pools-define-resource-servers.html
         // https://aws.amazon.com/blogs/mobile/integrating-amazon-cognito-user-pools-with-api-gateway/
 
-        var DOMAIN = 'sasaki-development.auth.ap-northeast-1.amazoncognito.com';
+        var DOMAIN = 'sskts-development.auth.ap-northeast-1.amazoncognito.com';
         var CLIENT_ID = '1618r3pm156vu09l6m94vo1t72'; // given by a token provider
         var CALLBACK_URL = 'https://localhost:8080/signIn.html'; // an application should prepare it
         var LOGOUT_URL = 'https://localhost:8080/signOut.html'; // an application should prepare it
         var ISSUER = 'https://cognito-idp.ap-northeast-1.amazonaws.com/ap-northeast-1_bQcyLA7Jq';
-        var API_ENDPOINT = 'https://localhost:44301';
+        var API_ENDPOINT = 'https://sskts-api-development-preview.azurewebsites.net';
 
         var credentials = null;
 
@@ -175,7 +175,7 @@
 
         function searchEvents() {
             // search events
-            var events = sasaki.service.event({
+            var events = new sasaki.service.Event({
                 endpoint: API_ENDPOINT,
                 auth: auth
             });
@@ -193,7 +193,7 @@
 
         function searchOrganizations() {
             // search organizations
-            var organizations = sasaki.service.organization({
+            var organizations = new sasaki.service.Organization({
                 endpoint: API_ENDPOINT,
                 auth: auth
             });
@@ -208,7 +208,7 @@
 
         function startPlaceOrderTransaction() {
             // search organizations
-            var placeOrderTransactions = sasaki.service.transaction.placeOrder({
+            var placeOrderTransactions = new sasaki.service.transaction.PlaceOrder({
                 endpoint: API_ENDPOINT,
                 auth: auth
             });
@@ -225,7 +225,7 @@
         }
 
         function getContacts() {
-            var people = sasaki.service.person({
+            var people = new sasaki.service.Person({
                 endpoint: API_ENDPOINT,
                 auth: auth
             });
@@ -241,7 +241,7 @@
         }
 
         function updateContacts() {
-            var people = sasaki.service.person({
+            var people = new sasaki.service.Person({
                 endpoint: API_ENDPOINT,
                 auth: auth
             });
@@ -263,7 +263,7 @@
         }
 
         function findCreditCards() {
-            var people = sasaki.service.person({
+            var people = new sasaki.service.Person({
                 endpoint: API_ENDPOINT,
                 auth: auth
             });
@@ -279,7 +279,7 @@
         }
 
         function addCreditCard() {
-            var people = sasaki.service.person({
+            var people = new sasaki.service.Person({
                 endpoint: API_ENDPOINT,
                 auth: auth
             });
@@ -300,7 +300,7 @@
         }
 
         function searchReservationOwnerships() {
-            var people = sasaki.service.person({
+            var people = new sasaki.service.Person({
                 endpoint: API_ENDPOINT,
                 auth: auth
             });

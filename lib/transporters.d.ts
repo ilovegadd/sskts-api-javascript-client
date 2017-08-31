@@ -1,6 +1,7 @@
 export interface ITransporter {
-    fetch(url: string, options: RequestInit): Promise<any>;
+    request(options: any, callback?: IBodyResponseCallback): any;
 }
+export declare type IBodyResponseCallback = Promise<any>;
 /**
  * RequestError
  */

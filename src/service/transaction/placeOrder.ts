@@ -1,6 +1,12 @@
+/**
+ * 注文取引サービス
+ *
+ * @namespace service.transaction.placeOrder
+ */
+
 import * as factory from '@motionpicture/sskts-factory';
+import { CREATED, NO_CONTENT, OK } from 'http-status';
 import apiFetch from '../../apiFetch';
-import { CREATED, NO_CONTENT, NOT_FOUND, OK } from 'http-status';
 
 import { Service } from '../../service';
 
@@ -17,14 +23,14 @@ export interface IAuthorization {
 /**
  * placeOrder transaction service
  *
- * @class transaction/PlaceOrderService
+ * @class PlaceOrderTransactionService
  */
-export class PlaceOrderService extends Service {
+export class PlaceOrderTransactionService extends Service {
     /**
      * 取引を開始する
      * 開始できない場合(混雑中など)、nullが返されます。
      */
-    async start(params: {
+    public async start(params: {
         /**
          * 取引期限
          * 指定した日時を過ぎると、取引を進行することはできなくなります。
@@ -45,14 +51,14 @@ export class PlaceOrderService extends Service {
                 expires: (params.expires.getTime() / 1000).toFixed(0), // unix timestamp
                 sellerId: params.sellerId
             },
-            expectedStatusCodes: [NOT_FOUND, OK]
+            expectedStatusCodes: [OK]
         });
     }
 
     /**
      * 取引に座席予約を追加する
      */
-    async createSeatReservationAuthorization(params: {
+    public async createSeatReservationAuthorization(params: {
         /**
          * transaction ID
          */
@@ -66,23 +72,23 @@ export class PlaceOrderService extends Service {
          */
         offers: factory.offer.ISeatReservationOffer[];
     }): Promise<factory.authorization.seatReservation.IAuthorization> {
-        return apiFetch({
-            auth: this.options.auth,
+        return await apiFetch({
             baseUrl: this.options.endpoint,
             uri: `/transactions/placeOrder/${params.transactionId}/seatReservationAuthorization`,
             method: 'POST',
+            expectedStatusCodes: [CREATED],
+            auth: this.options.auth,
             body: {
                 eventIdentifier: params.eventIdentifier,
                 offers: params.offers
-            },
-            expectedStatusCodes: [CREATED]
+            }
         });
     }
 
     /**
      * 座席予約取消
      */
-    async cancelSeatReservationAuthorization(params: {
+    public async cancelSeatReservationAuthorization(params: {
         /**
          * transaction ID
          */
@@ -92,20 +98,19 @@ export class PlaceOrderService extends Service {
          */
         authorizationId: string;
     }): Promise<void> {
-        return apiFetch({
-            auth: this.options.auth,
+        return await apiFetch({
             baseUrl: this.options.endpoint,
             uri: `/transactions/placeOrder/${params.transactionId}/seatReservationAuthorization/${params.authorizationId}`,
             method: 'DELETE',
-            body: params,
-            expectedStatusCodes: [NO_CONTENT]
+            expectedStatusCodes: [NO_CONTENT],
+            auth: this.options.auth
         });
     }
 
     /**
      * クレジットカードのオーソリを取得する
      */
-    async createCreditCardAuthorization(params: {
+    public async createCreditCardAuthorization(params: {
         /**
          * transaction ID
          */
@@ -127,25 +132,25 @@ export class PlaceOrderService extends Service {
          */
         creditCard: ICreditCard;
     }): Promise<IAuthorization> {
-        return apiFetch({
-            auth: this.options.auth,
+        return await apiFetch({
             baseUrl: this.options.endpoint,
             uri: `/transactions/placeOrder/${params.transactionId}/paymentInfos/creditCard`,
             method: 'POST',
+            expectedStatusCodes: [CREATED],
+            auth: this.options.auth,
             body: {
                 orderId: params.orderId,
                 amount: params.amount,
                 method: params.method,
                 creditCard: params.creditCard
-            },
-            expectedStatusCodes: [CREATED]
+            }
         });
     }
 
     /**
      * クレジットカードオーソリ取消
      */
-    async cancelCreditCardAuthorization(params: {
+    public async cancelCreditCardAuthorization(params: {
         /**
          * transaction ID
          */
@@ -155,20 +160,19 @@ export class PlaceOrderService extends Service {
          */
         authorizationId: string;
     }): Promise<void> {
-        return apiFetch({
-            auth: this.options.auth,
+        return await apiFetch({
             baseUrl: this.options.endpoint,
             uri: `/transactions/placeOrder/${params.transactionId}/paymentInfos/creditCard/${params.authorizationId}`,
             method: 'DELETE',
-            expectedStatusCodes: [NO_CONTENT]
+            expectedStatusCodes: [NO_CONTENT],
+            auth: this.options.auth
         });
     }
-
 
     /**
      * 決済方法として、ムビチケを追加する
      */
-    async createMvtkAuthorization(params: {
+    public async createMvtkAuthorization(params: {
         /**
          * transaction ID
          */
@@ -178,20 +182,20 @@ export class PlaceOrderService extends Service {
          */
         mvtk: factory.authorization.mvtk.IResult;
     }): Promise<IAuthorization> {
-        return apiFetch({
-            auth: this.options.auth,
+        return await apiFetch({
             baseUrl: this.options.endpoint,
             uri: `/transactions/placeOrder/${params.transactionId}/discountInfos/mvtk`,
             method: 'POST',
-            body: params.mvtk,
-            expectedStatusCodes: [CREATED]
+            expectedStatusCodes: [CREATED],
+            auth: this.options.auth,
+            body: params.mvtk
         });
     }
 
     /**
      * ムビチケ取消
      */
-    async cancelMvtkAuthorization(params: {
+    public async cancelMvtkAuthorization(params: {
         /**
          * transaction ID
          */
@@ -201,19 +205,19 @@ export class PlaceOrderService extends Service {
          */
         authorizationId: string;
     }): Promise<void> {
-        return apiFetch({
-            auth: this.options.auth,
+        return await apiFetch({
             baseUrl: this.options.endpoint,
             uri: `/transactions/placeOrder/${params.transactionId}/discountInfos/mvtk/${params.authorizationId}`,
             method: 'DELETE',
-            expectedStatusCodes: [NO_CONTENT]
+            expectedStatusCodes: [NO_CONTENT],
+            auth: this.options.auth
         });
     }
 
     /**
      * register a customer contact
      */
-    async setCustomerContact(params: {
+    public async setCustomerContact(params: {
         /**
          * transaction ID
          */
@@ -223,39 +227,38 @@ export class PlaceOrderService extends Service {
          */
         contact: factory.transaction.placeOrder.ICustomerContact;
     }): Promise<void> {
-        return apiFetch({
-            auth: this.options.auth,
+        await apiFetch({
             baseUrl: this.options.endpoint,
             uri: `/transactions/placeOrder/${params.transactionId}/customerContact`,
             method: 'PUT',
-            body: params.contact,
-            expectedStatusCodes: [NO_CONTENT]
+            expectedStatusCodes: [NO_CONTENT],
+            auth: this.options.auth,
+            body: params.contact
         });
     }
 
     /**
      * 取引確定
      */
-    async confirm(params: {
+    public async confirm(params: {
         /**
          * transaction ID
          */
         transactionId: string;
     }): Promise<factory.order.IOrder> {
-        return apiFetch({
-            auth: this.options.auth,
+        return await apiFetch({
             baseUrl: this.options.endpoint,
             uri: `/transactions/placeOrder/${params.transactionId}/confirm`,
             method: 'POST',
-            expectedStatusCodes: [CREATED]
+            expectedStatusCodes: [CREATED],
+            auth: this.options.auth
         });
     }
-
 
     /**
      * 確定した取引に関して、購入者にメール通知を送信する
      */
-    async sendEmailNotification(params: {
+    public async sendEmailNotification(params: {
         /**
          * transaction ID
          */
@@ -263,15 +266,15 @@ export class PlaceOrderService extends Service {
         /**
          * Eメール通知
          */
-        emailNotification: factory.notification.email.INotification
-    }): Promise<void> {
-        return apiFetch({
-            auth: this.options.auth,
+        emailNotification: factory.notification.email.IData
+    }): Promise<factory.order.IOrder> {
+        return await apiFetch({
             baseUrl: this.options.endpoint,
             uri: `/transactions/placeOrder/${params.transactionId}/tasks/sendEmailNotification`,
             method: 'POST',
-            body: params.emailNotification,
-            expectedStatusCodes: [NO_CONTENT]
+            expectedStatusCodes: [NO_CONTENT],
+            auth: this.options.auth,
+            body: params.emailNotification
         });
     }
 }

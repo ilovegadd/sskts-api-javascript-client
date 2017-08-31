@@ -1,6 +1,12 @@
+/**
+ * 場所サービス
+ *
+ * @namespace service.place
+ */
+
 import * as factory from '@motionpicture/sskts-factory';
+import { OK } from 'http-status';
 import apiFetch from '../apiFetch';
-import { NOT_FOUND, OK } from 'http-status';
 
 import { Service } from '../service';
 
@@ -13,7 +19,7 @@ export class PlaceService extends Service {
     /**
      * 劇場検索
      */
-    async searchMovieTheaters(
+    public async searchMovieTheaters(
         /**
          * 検索条件
          */
@@ -32,19 +38,19 @@ export class PlaceService extends Service {
     /**
      * 劇場情報取得
      */
-    async findMovieTheater(params: {
+    public async findMovieTheater(params: {
         /**
          * 枝番号
          */
         branchCode: string;
-    }): Promise<factory.place.movieTheater.IPlace | null> {
+    }): Promise<factory.place.movieTheater.IPlace> {
         return apiFetch({
             auth: this.options.auth,
             baseUrl: this.options.endpoint,
             uri: `/places/movieTheater/${params.branchCode}`,
             method: 'GET',
             qs: {},
-            expectedStatusCodes: [NOT_FOUND, OK]
+            expectedStatusCodes: [OK]
         });
     }
 }

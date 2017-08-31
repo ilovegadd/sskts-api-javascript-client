@@ -2,7 +2,7 @@
  * API fetch module
  */
 
-import * as qs from 'qs';
+import * as querystring from 'querystring';
 
 import OAuth2client from './auth/oAuth2client';
 import { DefaultTransporter } from './transporters';
@@ -24,35 +24,37 @@ export interface IOptions {
 /**
  * Create and send request to API
  */
-function apiFetch(options: IOptions) {
+async function apiFetch(options: IOptions) {
     const defaultOptions = {
         headers: {},
-        method: 'GET',
-        qs: {}
+        method: 'GET'
     };
     options = { ...defaultOptions, ...options };
 
-    const url = `${options.baseUrl}${options.uri}?${qs.stringify(options.qs)}`;
+    let url = `${options.baseUrl}${options.uri}`;
+
+    const querystrings = querystring.stringify(options.qs);
+    url += (querystrings.length > 0) ? `?${querystrings}` : '';
 
     const headers = {
         ...{
-            'Accept': 'application/json',
+            Accept: 'application/json',
             'Content-Type': 'application/json'
         },
         ...options.headers
-    }
+    };
 
     const fetchOptions = {
         method: options.method,
         headers: headers,
         body: JSON.stringify(options.body)
-    }
+    };
 
     // create request (using authClient or otherwise and return request obj)
     if (options.auth !== undefined) {
-        return options.auth.fetch(url, fetchOptions, options.expectedStatusCodes);
+        return await options.auth.fetch(url, fetchOptions, options.expectedStatusCodes);
     } else {
-        return (new DefaultTransporter(options.expectedStatusCodes)).fetch(url, fetchOptions);
+        return await (new DefaultTransporter(options.expectedStatusCodes)).fetch(url, fetchOptions);
     }
 }
 

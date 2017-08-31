@@ -1,3 +1,8 @@
+/**
+ * 場所サービス
+ *
+ * @namespace service.place
+ */
 import * as factory from '@motionpicture/sskts-factory';
 import { Service } from '../service';
 /**
@@ -22,5 +27,5 @@ export declare class PlaceService extends Service {
          * 枝番号
          */
         branchCode: string;
-    }): Promise<factory.place.movieTheater.IPlace | null>;
+    }): Promise<factory.place.movieTheater.IPlace>;
 }
