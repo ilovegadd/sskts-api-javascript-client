@@ -30,13 +30,19 @@ export default class PopupAuthenticationHandler {
     public static GET_CALLBACK_HANDLER(cb: (hash: any) => void, usePostMessage: boolean) {
         return (eventData: any) => {
             let callbackValue;
-            if (!usePostMessage) {
-                // loadイベントの場合は、ポップアップのフラグメントをコールバックへ渡す
-                callbackValue = eventData.sourceObject.location.hash;
-            } else if (typeof eventData.event.data === 'object' && eventData.event.data.hash) {
-                callbackValue = eventData.event.data.hash;
-            } else {
-                callbackValue = eventData.event.data;
+
+            try {
+                if (!usePostMessage) {
+                    // loadイベントの場合は、ポップアップのフラグメントをコールバックへ渡す
+                    callbackValue = eventData.sourceObject.location.hash;
+                } else if (typeof eventData.event.data === 'object' && eventData.event.data.hash) {
+                    callbackValue = eventData.event.data.hash;
+                } else {
+                    callbackValue = eventData.event.data;
+                }
+
+            } catch (error) {
+                console.error('PopupAuthenticationHandler.GET_CALLBACK_HANDLER:', error);
             }
 
             cb(callbackValue);
