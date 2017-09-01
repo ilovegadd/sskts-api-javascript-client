@@ -6,7 +6,7 @@
  * @ignore
  */
 
-// import * as factory from '@motionpicture/sskts-factory';
+import * as factory from '@motionpicture/sskts-factory';
 
 import { ImplicitGrantClient, IOptions as IImplicitGrantClientOptions } from './auth/implicitGrantClient';
 
@@ -23,10 +23,7 @@ import { PlaceOrderTransactionService } from './service/transaction/placeOrder';
  * 全てのオブジェクトのインターフェースはここに含まれます。
  * @export
  */
-// export {
-//     factory
-// }
-// export import factory = factory;
+export import factory = factory;
 
 export type IImplicitGrantClient = ImplicitGrantClient;
 

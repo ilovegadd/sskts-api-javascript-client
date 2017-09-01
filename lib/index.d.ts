@@ -3,6 +3,7 @@
  *
  * @ignore
  */
+import * as factory from '@motionpicture/sskts-factory';
 import { ImplicitGrantClient, IOptions as IImplicitGrantClientOptions } from './auth/implicitGrantClient';
 import { EventService } from './service/event';
 import { OrderService } from './service/order';
@@ -16,6 +17,7 @@ import { PlaceOrderTransactionService } from './service/transaction/placeOrder';
  * 全てのオブジェクトのインターフェースはここに含まれます。
  * @export
  */
+export import factory = factory;
 export declare type IImplicitGrantClient = ImplicitGrantClient;
 /**
  * create OAuth2 client instance using implicit grant
