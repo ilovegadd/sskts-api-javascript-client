@@ -115,25 +115,27 @@ exports.AuthorizeError = AuthorizeError;
 
 },{}],4:[function(require,module,exports){
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var createDebug = require("debug");
+var debug = createDebug('sasaki-api:auth:iframeHandler');
 /**
  * IframeHandler
- *
  * @class IframeHandler
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 var IframeHandler = /** @class */ (function () {
     function IframeHandler(options) {
         this.url = options.url;
         this.callback = options.callback;
-        this.timeout = options.timeout || 60 * 1000;
-        this.timeoutCallback = options.timeoutCallback || null;
-        this.eventListenerType = options.eventListenerType || 'message';
+        // tslint:disable-next-line:no-magic-numbers
+        this.timeout = (options.timeout !== undefined) ? options.timeout : 60 * 1000;
+        this.timeoutCallback = (options.timeoutCallback !== undefined) ? options.timeoutCallback : null;
+        this.eventListenerType = (options.eventListenerType !== undefined) ? options.eventListenerType : 'message';
         this.iframe = null;
         this.timeoutHandle = null;
-        this._destroyTimeout = null;
+        this.destroyTimeout = null;
         this.proxyEventListener = null;
         // If no event identifier specified, set default
-        this.eventValidator = options.eventValidator || {
+        this.eventValidator = (options.eventValidator !== undefined) ? options.eventValidator : {
             isValid: function () {
                 return true;
             }
@@ -144,7 +146,7 @@ var IframeHandler = /** @class */ (function () {
     }
     IframeHandler.prototype.init = function () {
         var _this = this;
-        console.log('opening iframe...', this.eventListenerType);
+        debug('opening iframe...', this.eventListenerType);
         this.iframe = window.document.createElement('iframe');
         this.iframe.style.display = 'none';
         this.iframe.src = this.url;
@@ -160,7 +162,7 @@ var IframeHandler = /** @class */ (function () {
                 this.eventSourceObject = this.iframe;
                 break;
             default:
-                throw new Error('Unsupported event listener type: ' + this.eventListenerType);
+                throw new Error("Unsupported event listener type: " + this.eventListenerType);
         }
         this.eventSourceObject.addEventListener(this.eventListenerType, this.proxyEventListener, false);
         window.document.body.appendChild(this.iframe);
@@ -168,34 +170,30 @@ var IframeHandler = /** @class */ (function () {
             _this.timeoutHandler();
         }, this.timeout);
     };
-    ;
     IframeHandler.prototype.eventListener = function (event) {
         var eventData = { event: event, sourceObject: this.eventSourceObject };
         this.destroy();
         this.callback(eventData);
     };
-    ;
     IframeHandler.prototype.timeoutHandler = function () {
         this.destroy();
         if (this.timeoutCallback) {
             this.timeoutCallback();
         }
     };
-    ;
     IframeHandler.prototype.destroy = function () {
         var _this = this;
         clearTimeout(this.timeoutHandle);
-        this._destroyTimeout = setTimeout(function () {
+        this.destroyTimeout = setTimeout(function () {
             _this.eventSourceObject.removeEventListener(_this.eventListenerType, _this.proxyEventListener, false);
             window.document.body.removeChild(_this.iframe);
         }, 0);
     };
-    ;
     return IframeHandler;
 }());
 exports.default = IframeHandler;
 
-},{}],5:[function(require,module,exports){
+},{"debug":24}],5:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -243,22 +241,23 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var createDebug = require("debug");
 var qs = require("qs");
 var ErrorFactory = require("./error");
 var popupAuthenticationHandler_1 = require("./popupAuthenticationHandler");
 var silentAuthenticationHandler_1 = require("./silentAuthenticationHandler");
 var silentLogoutHandler_1 = require("./silentLogoutHandler");
-var IdTokenVerifier = require('idtoken-verifier');
+// tslint:disable-next-line:no-require-imports no-var-requires
+var idTokenVerifier = require('idtoken-verifier');
 var oAuth2client_1 = require("./oAuth2client");
+var debug = createDebug('sasaki-api:auth:implicitGrantClient');
 /**
  * OAuth2 client using grant type 'implicit grant'
- *
  * @class ImplicitGrantClient
  */
 var ImplicitGrantClient = /** @class */ (function (_super) {
     __extends(ImplicitGrantClient, _super);
     function ImplicitGrantClient(options) {
-        /* eslint-disable */
         // assert.check(
         //     options,
         //     { type: 'object', message: 'options parameter is not valid' },
@@ -278,14 +277,33 @@ var ImplicitGrantClient = /** @class */ (function (_super) {
         _this.options.responseType = 'token';
         // amazon cognitoの認可サーバーはnonce未実装
         _this.options.nonce = null;
-        console.log('options:', _this.options);
+        debug('options:', _this.options);
         _this.credentials = {};
         return _this;
     }
+    ImplicitGrantClient.BUILD_PASRSE_HASH_RESPONS = function (qsParams, __, idTokenPayload) {
+        return {
+            accessToken: qsParams.access_token,
+            idToken: qsParams.id_token,
+            idTokenPayload: idTokenPayload,
+            refreshToken: qsParams.refresh_token,
+            state: qsParams.state,
+            // tslint:disable-next-line:no-magic-numbers
+            expiresIn: qsParams.expires_in ? parseInt(qsParams.expires_in, 10) : undefined,
+            tokenType: qsParams.token_type
+        };
+    };
     ImplicitGrantClient.prototype.isSignedIn = function () {
-        return this.refreshToken()
-            .then(function (result) { return result; })
-            .catch(function () { return null; });
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.refreshToken()
+                            .then(function (result) { return result; })
+                            .catch(function () { return null; })];
+                    case 1: return [2 /*return*/, _a.sent()];
+                }
+            });
+        });
     };
     ImplicitGrantClient.prototype.getAccessToken = function () {
         return __awaiter(this, void 0, void 0, function () {
@@ -336,7 +354,7 @@ var ImplicitGrantClient = /** @class */ (function (_super) {
                             state: this.options.state,
                             nonce: this.options.nonce
                         };
-                        handler = silentAuthenticationHandler_1.default.create({
+                        handler = silentAuthenticationHandler_1.default.CREATE({
                             authenticationUrl: this.buildAuthorizeUrl(params)
                         });
                         return [4 /*yield*/, handler.login(usePostMessage)];
@@ -348,7 +366,6 @@ var ImplicitGrantClient = /** @class */ (function (_super) {
             });
         });
     };
-    ;
     /**
      * Redirects to the hosted login page (`/authorize`) in order to start a new authN/authZ transaction.
      */
@@ -369,7 +386,7 @@ var ImplicitGrantClient = /** @class */ (function (_super) {
                             state: this.options.state,
                             nonce: this.options.nonce
                         };
-                        handler = popupAuthenticationHandler_1.default.create({
+                        handler = popupAuthenticationHandler_1.default.CREATE({
                             authenticationUrl: this.buildAuthorizeUrl(params)
                         });
                         return [4 /*yield*/, handler.login(usePostMessage)];
@@ -377,32 +394,6 @@ var ImplicitGrantClient = /** @class */ (function (_super) {
                         hash = _a.sent();
                         return [4 /*yield*/, this.onLogin(hash)];
                     case 2: return [2 /*return*/, _a.sent()];
-                }
-            });
-        });
-    };
-    ;
-    ImplicitGrantClient.prototype.onLogin = function (hash) {
-        return __awaiter(this, void 0, void 0, function () {
-            var _a, _b;
-            return __generator(this, function (_c) {
-                switch (_c.label) {
-                    case 0:
-                        console.log('onLogin');
-                        // hash was already parsed, so we just return it.
-                        _a = this;
-                        if (!(typeof hash === 'object')) return [3 /*break*/, 1];
-                        _b = hash;
-                        return [3 /*break*/, 3];
-                    case 1: return [4 /*yield*/, this.parseHash(hash)];
-                    case 2:
-                        _b = _c.sent();
-                        _c.label = 3;
-                    case 3:
-                        // hash was already parsed, so we just return it.
-                        _a.credentials = _b;
-                        console.log('credentials:', this.credentials);
-                        return [2 /*return*/, this.credentials];
                 }
             });
         });
@@ -417,7 +408,7 @@ var ImplicitGrantClient = /** @class */ (function (_super) {
                 switch (_a.label) {
                     case 0:
                         usePostMessage = false;
-                        handler = silentLogoutHandler_1.default.create({
+                        handler = silentLogoutHandler_1.default.CREATE({
                             logoutUrl: this.buildLogoutUrl({
                                 clientId: this.options.clientId,
                                 logoutUri: this.options.logoutUri
@@ -431,7 +422,31 @@ var ImplicitGrantClient = /** @class */ (function (_super) {
             });
         });
     };
-    ;
+    ImplicitGrantClient.prototype.onLogin = function (hash) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _a, _b;
+            return __generator(this, function (_c) {
+                switch (_c.label) {
+                    case 0:
+                        debug('onLogin');
+                        // hash was already parsed, so we just return it.
+                        _a = this;
+                        if (!(typeof hash === 'object')) return [3 /*break*/, 1];
+                        _b = hash;
+                        return [3 /*break*/, 3];
+                    case 1: return [4 /*yield*/, this.parseHash(hash)];
+                    case 2:
+                        _b = _c.sent();
+                        _c.label = 3;
+                    case 3:
+                        // hash was already parsed, so we just return it.
+                        _a.credentials = _b;
+                        debug('credentials:', this.credentials);
+                        return [2 /*return*/, this.credentials];
+                }
+            });
+        });
+    };
     ImplicitGrantClient.prototype.parseHash = function (hash) {
         return __awaiter(this, void 0, void 0, function () {
             var hashStr, parsedQs, err, payload, verifier, decodedToken;
@@ -458,35 +473,23 @@ var ImplicitGrantClient = /** @class */ (function (_super) {
                         return [4 /*yield*/, this.validateToken(parsedQs.id_token, this.options.nonce)];
                     case 1:
                         payload = _a.sent();
-                        return [2 /*return*/, this.buildParseHashResponse(parsedQs, '', payload)];
+                        return [2 /*return*/, ImplicitGrantClient.BUILD_PASRSE_HASH_RESPONS(parsedQs, '', payload)];
                     case 2:
                         if (parsedQs.id_token) {
-                            verifier = new IdTokenVerifier({
+                            verifier = new idTokenVerifier({
                                 issuer: this.options.tokenIssuer,
-                                audience: this.options.clientId,
+                                audience: this.options.clientId
                             });
                             decodedToken = verifier.decode(parsedQs.id_token);
-                            return [2 /*return*/, this.buildParseHashResponse(parsedQs, '', decodedToken.payload)];
+                            return [2 /*return*/, ImplicitGrantClient.BUILD_PASRSE_HASH_RESPONS(parsedQs, '', decodedToken.payload)];
                         }
                         else {
-                            return [2 /*return*/, this.buildParseHashResponse(parsedQs, '', null)];
+                            return [2 /*return*/, ImplicitGrantClient.BUILD_PASRSE_HASH_RESPONS(parsedQs, '', null)];
                         }
                         return [2 /*return*/];
                 }
             });
         });
-    };
-    ;
-    ImplicitGrantClient.prototype.buildParseHashResponse = function (qsParams, __, idTokenPayload) {
-        return {
-            accessToken: qsParams.access_token || undefined,
-            idToken: qsParams.id_token || undefined,
-            idTokenPayload: idTokenPayload || undefined,
-            refreshToken: qsParams.refresh_token || undefined,
-            state: qsParams.state || undefined,
-            expiresIn: qsParams.expires_in ? parseInt(qsParams.expires_in, 10) : undefined,
-            tokenType: qsParams.token_type || undefined
-        };
     };
     /**
      * Decodes the a JWT and verifies its nonce value
@@ -495,14 +498,14 @@ var ImplicitGrantClient = /** @class */ (function (_super) {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
             return __generator(this, function (_a) {
-                console.log('validating id_token...');
+                debug('validating id_token...');
                 return [2 /*return*/, new Promise(function (resolve, reject) {
-                        var verifier = new IdTokenVerifier({
+                        var verifier = new idTokenVerifier({
                             issuer: _this.options.tokenIssuer,
                             audience: _this.options.clientId
                         });
                         verifier.verify(token, nonce, function (err, payload) {
-                            console.log('id_token verified', err, payload);
+                            debug('id_token verified', err, payload);
                             if (err !== null) {
                                 reject(err);
                                 return;
@@ -513,7 +516,6 @@ var ImplicitGrantClient = /** @class */ (function (_super) {
             });
         });
     };
-    ;
     ImplicitGrantClient.prototype.buildAuthorizeUrl = function (options) {
         var qString = qs.stringify({
             client_id: options.clientId,
@@ -527,11 +529,10 @@ var ImplicitGrantClient = /** @class */ (function (_super) {
         });
         return "https://" + this.options.domain + ImplicitGrantClient.AUTHORIZE_URL + "?" + qString;
     };
-    ;
     /**
      * Builds and returns the Logout url in order to initialize a new authN/authZ transaction
-     *
-     * If you want to navigate the user to a specific URL after the logout, set that URL at the returnTo parameter. The URL should be included in any the appropriate Allowed Logout URLs list:
+     * If you want to navigate the user to a specific URL after the logout,
+     * set that URL at the returnTo parameter. The URL should be included in any the appropriate Allowed Logout URLs list:
      */
     ImplicitGrantClient.prototype.buildLogoutUrl = function (options) {
         var qString = qs.stringify({
@@ -540,18 +541,14 @@ var ImplicitGrantClient = /** @class */ (function (_super) {
         });
         return "https://" + this.options.domain + ImplicitGrantClient.LOGOUT_URL + "?" + qString;
     };
-    ;
     ImplicitGrantClient.AUTHORIZE_URL = '/authorize';
     ImplicitGrantClient.LOGOUT_URL = '/logout';
     return ImplicitGrantClient;
 }(oAuth2client_1.default));
 exports.ImplicitGrantClient = ImplicitGrantClient;
 
-},{"./error":3,"./oAuth2client":6,"./popupAuthenticationHandler":7,"./silentAuthenticationHandler":9,"./silentLogoutHandler":10,"idtoken-verifier":33,"qs":39}],6:[function(require,module,exports){
+},{"./error":3,"./oAuth2client":6,"./popupAuthenticationHandler":7,"./silentAuthenticationHandler":9,"./silentLogoutHandler":10,"debug":24,"idtoken-verifier":33,"qs":39}],6:[function(require,module,exports){
 "use strict";
-/**
- * OAuthクライアント
- */
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -595,6 +592,7 @@ var transporters_1 = require("../transporters");
 var debug = createDebug('sasaki-api:auth:oAuth2client');
 /**
  * OAuth2 client
+ * @class
  */
 var OAuth2client = /** @class */ (function () {
     function OAuth2client(options) {
@@ -670,23 +668,11 @@ var OAuth2client = /** @class */ (function () {
                     case 1:
                         accessToken = _a.sent();
                         options.headers = (options.headers === undefined || options.headers === null) ? {} : options.headers;
-                        options.headers['Authorization'] = "Bearer " + accessToken;
+                        options.headers.Authorization = "Bearer " + accessToken;
                         return [2 /*return*/, this.makeRequest(url, options, expectedStatusCodes)];
                 }
             });
         });
-    };
-    /**
-     * Makes a request without paying attention to refreshing or anything
-     * Assumes that all credentials are set correctly.
-     * @param  {object}   opts     Options for request
-     * @param  {Function} callback callback function
-     * @return {Request}           The request object created
-     */
-    // tslint:disable-next-line:prefer-function-over-method
-    OAuth2client.prototype.makeRequest = function (url, options, expectedStatusCodes) {
-        var transporter = new transporters_1.DefaultTransporter(expectedStatusCodes);
-        return transporter.fetch(url, options);
     };
     /**
      * Refreshes the access token.
@@ -707,7 +693,7 @@ var OAuth2client = /** @class */ (function () {
                                 client_id: this.options.clientId,
                                 client_secret: this.options.clientSecret,
                                 grant_type: 'refresh_token'
-                            },
+                            }
                         };
                         return [4 /*yield*/, fetch("https://" + this.options.domain + "/token", options)
                                 .then(function (response) { return __awaiter(_this, void 0, void 0, function () {
@@ -742,56 +728,82 @@ var OAuth2client = /** @class */ (function () {
             });
         });
     };
+    /**
+     * Makes a request without paying attention to refreshing or anything
+     * Assumes that all credentials are set correctly.
+     * @param  {object}   opts     Options for request
+     * @param  {Function} callback callback function
+     * @return {Request}           The request object created
+     */
+    // tslint:disable-next-line:prefer-function-over-method
+    OAuth2client.prototype.makeRequest = function (url, options, expectedStatusCodes) {
+        return __awaiter(this, void 0, void 0, function () {
+            var transporter;
+            return __generator(this, function (_a) {
+                transporter = new transporters_1.DefaultTransporter(expectedStatusCodes);
+                return [2 /*return*/, transporter.fetch(url, options)];
+            });
+        });
+    };
     return OAuth2client;
 }());
 exports.default = OAuth2client;
 
 },{"../transporters":19,"debug":24,"http-status":26,"isomorphic-fetch":34}],7:[function(require,module,exports){
 "use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var ErrorFactory = require("./error");
+var popupHandler_1 = require("./popupHandler");
 /**
  * PopupAuthenticationHandler
- *
  * @class PopupAuthenticationHandler
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-var popupHandler_1 = require("./popupHandler");
-var ErrorFactory = require("./error");
 var PopupAuthenticationHandler = /** @class */ (function () {
     function PopupAuthenticationHandler(options) {
         this.authenticationUrl = options.authenticationUrl;
-        this.timeout = options.timeout || 60 * 1000;
+        // tslint:disable-next-line:no-magic-numbers
+        this.timeout = (options.timeout !== undefined) ? options.timeout : 60 * 1000;
         this.handler = null;
     }
-    PopupAuthenticationHandler.create = function (options) {
-        return new PopupAuthenticationHandler(options);
-    };
-    ;
-    PopupAuthenticationHandler.prototype.login = function (usePostMessage) {
-        var _this = this;
-        return new Promise(function (resolve, reject) {
-            _this.handler = new popupHandler_1.default({
-                url: _this.authenticationUrl,
-                eventListenerType: usePostMessage ? 'message' : 'load',
-                callback: _this.getCallbackHandler(resolve, usePostMessage),
-                timeout: _this.timeout,
-                eventValidator: _this.getEventValidator(),
-                timeoutCallback: function () {
-                    var err = new ErrorFactory.AuthorizeError('Timeout during authentication');
-                    err.error = 'timeout';
-                    err.errorDescription = 'Timeout during authentication';
-                    reject(err);
-                },
-                usePostMessage: false
-            });
-            _this.handler.init();
-        });
-    };
-    ;
-    PopupAuthenticationHandler.prototype.getEventValidator = function () {
+    PopupAuthenticationHandler.GET_EVENT_VALIDATOR = function () {
         return {};
     };
-    ;
-    PopupAuthenticationHandler.prototype.getCallbackHandler = function (cb, usePostMessage) {
+    PopupAuthenticationHandler.GET_CALLBACK_HANDLER = function (cb, usePostMessage) {
         return function (eventData) {
             var callbackValue;
             if (!usePostMessage) {
@@ -807,32 +819,60 @@ var PopupAuthenticationHandler = /** @class */ (function () {
             cb(callbackValue);
         };
     };
-    ;
+    PopupAuthenticationHandler.CREATE = function (options) {
+        return new PopupAuthenticationHandler(options);
+    };
+    PopupAuthenticationHandler.prototype.login = function (usePostMessage) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        _this.handler = new popupHandler_1.default({
+                            url: _this.authenticationUrl,
+                            eventListenerType: usePostMessage ? 'message' : 'load',
+                            callback: PopupAuthenticationHandler.GET_CALLBACK_HANDLER(resolve, usePostMessage),
+                            timeout: _this.timeout,
+                            eventValidator: PopupAuthenticationHandler.GET_EVENT_VALIDATOR(),
+                            timeoutCallback: function () {
+                                var err = new ErrorFactory.AuthorizeError('Timeout during authentication');
+                                err.error = 'timeout';
+                                err.errorDescription = 'Timeout during authentication';
+                                reject(err);
+                            },
+                            usePostMessage: false
+                        });
+                        _this.handler.init();
+                    })];
+            });
+        });
+    };
     return PopupAuthenticationHandler;
 }());
 exports.default = PopupAuthenticationHandler;
 
 },{"./error":3,"./popupHandler":8}],8:[function(require,module,exports){
 "use strict";
-/**
- * PopupAuthenticationHandler
- *
- * @class PopupAuthenticationHandler
- */
 Object.defineProperty(exports, "__esModule", { value: true });
-var PopupAuthenticationHandler = /** @class */ (function () {
-    function PopupAuthenticationHandler(options) {
+var createDebug = require("debug");
+var debug = createDebug('sasaki-api:auth:popupHandler');
+/**
+ * PopupHandler
+ * @class PopupHandler
+ */
+var PopupHandler = /** @class */ (function () {
+    function PopupHandler(options) {
         this.url = options.url;
         this.callback = options.callback;
-        this.timeout = options.timeout || 60 * 1000;
-        this.timeoutCallback = options.timeoutCallback || null;
-        this.eventListenerType = options.eventListenerType || 'message';
+        // tslint:disable-next-line:no-magic-numbers
+        this.timeout = (options.timeout !== undefined) ? options.timeout : 60 * 1000;
+        this.timeoutCallback = (options.timeoutCallback !== undefined) ? options.timeoutCallback : null;
+        this.eventListenerType = (options.eventListenerType !== undefined) ? options.eventListenerType : 'message';
         this.popupWindow = null;
         this.timeoutHandle = null;
-        this._destroyTimeout = null;
+        this.destroyTimeout = null;
         this.proxyEventListener = null;
         // If no event identifier specified, set default
-        this.eventValidator = options.eventValidator || {
+        this.eventValidator = (options.eventValidator !== undefined) ? options.eventValidator : {
             isValid: function () {
                 return true;
             }
@@ -841,9 +881,9 @@ var PopupAuthenticationHandler = /** @class */ (function () {
             throw new Error('options.callback must be a function');
         }
     }
-    PopupAuthenticationHandler.prototype.init = function () {
+    PopupHandler.prototype.init = function () {
         var _this = this;
-        console.log('opening popup...', this.eventListenerType);
+        debug('opening popup...', this.eventListenerType);
         this.popupWindow = window.open(this.url, 'authorizeWindow');
         // Workaround to avoid using bind that does not work in IE8
         this.proxyEventListener = function (e) {
@@ -857,89 +897,94 @@ var PopupAuthenticationHandler = /** @class */ (function () {
                 this.eventSourceObject = this.popupWindow;
                 break;
             default:
-                throw new Error('Unsupported event listener type: ' + this.eventListenerType);
+                throw new Error("Unsupported event listener type: " + this.eventListenerType);
         }
-        console.log('this.eventSourceObject:', this.eventSourceObject);
+        debug('this.eventSourceObject:', this.eventSourceObject);
         this.eventSourceObject.addEventListener(this.eventListenerType, this.proxyEventListener, false);
         this.timeoutHandle = setTimeout(function () {
             _this.timeoutHandler();
         }, this.timeout);
     };
-    ;
-    PopupAuthenticationHandler.prototype.eventListener = function (event) {
-        console.log('PopupHandler.eventListener...event:', event);
+    PopupHandler.prototype.eventListener = function (event) {
+        debug('PopupHandler.eventListener...event:', event);
         var eventData = { event: event, sourceObject: this.eventSourceObject };
         this.destroy();
         // 呼び出し元へコールバック
         this.callback(eventData);
     };
-    ;
-    PopupAuthenticationHandler.prototype.timeoutHandler = function () {
+    PopupHandler.prototype.timeoutHandler = function () {
         if (this.timeoutCallback) {
             this.timeoutCallback();
         }
     };
-    ;
-    PopupAuthenticationHandler.prototype.destroy = function () {
+    PopupHandler.prototype.destroy = function () {
         var _this = this;
         clearTimeout(this.timeoutHandle);
-        this._destroyTimeout = setTimeout(function () {
+        this.destroyTimeout = setTimeout(function () {
             _this.eventSourceObject.removeEventListener(_this.eventListenerType, _this.proxyEventListener, false);
             // ポップアップを閉じる
             _this.popupWindow.close();
         }, 0);
     };
-    ;
-    return PopupAuthenticationHandler;
+    return PopupHandler;
 }());
-exports.default = PopupAuthenticationHandler;
+exports.default = PopupHandler;
 
-},{}],9:[function(require,module,exports){
+},{"debug":24}],9:[function(require,module,exports){
 "use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var ErrorFactory = require("./error");
+var iframeHandler_1 = require("./iframeHandler");
 /**
  * SilentAuthenticationHandler
- *
  * @class SilentAuthenticationHandler
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-var iframeHandler_1 = require("./iframeHandler");
-var ErrorFactory = require("./error");
 var SilentAuthenticationHandler = /** @class */ (function () {
     function SilentAuthenticationHandler(options) {
         this.authenticationUrl = options.authenticationUrl;
-        this.timeout = options.timeout || 60 * 1000;
+        // tslint:disable-next-line:no-magic-numbers
+        this.timeout = (options.timeout !== undefined) ? options.timeout : 60 * 1000;
         this.handler = null;
     }
-    SilentAuthenticationHandler.create = function (options) {
-        return new SilentAuthenticationHandler(options);
-    };
-    ;
-    SilentAuthenticationHandler.prototype.login = function (usePostMessage) {
-        var _this = this;
-        return new Promise(function (resolve, reject) {
-            _this.handler = new iframeHandler_1.default({
-                url: _this.authenticationUrl,
-                eventListenerType: usePostMessage ? 'message' : 'load',
-                callback: _this.getCallbackHandler(resolve, usePostMessage),
-                timeout: _this.timeout,
-                eventValidator: _this.getEventValidator(),
-                timeoutCallback: function () {
-                    var err = new ErrorFactory.AuthorizeError('Timeout during authentication renew');
-                    err.error = 'timeout';
-                    err.errorDescription = 'Timeout during authentication renew';
-                    reject(err);
-                },
-                usePostMessage: usePostMessage || false
-            });
-            _this.handler.init();
-        });
-    };
-    ;
-    SilentAuthenticationHandler.prototype.getEventValidator = function () {
+    SilentAuthenticationHandler.GET_EVENT_VALIDATOR = function () {
         return {};
     };
-    ;
-    SilentAuthenticationHandler.prototype.getCallbackHandler = function (cb, usePostMessage) {
+    SilentAuthenticationHandler.GET_CALLBACK_HANDLER = function (cb, usePostMessage) {
         return function (eventData) {
             var callbackValue;
             if (!usePostMessage) {
@@ -955,57 +1000,89 @@ var SilentAuthenticationHandler = /** @class */ (function () {
             cb(callbackValue);
         };
     };
-    ;
+    SilentAuthenticationHandler.CREATE = function (options) {
+        return new SilentAuthenticationHandler(options);
+    };
+    SilentAuthenticationHandler.prototype.login = function (usePostMessage) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        _this.handler = new iframeHandler_1.default({
+                            url: _this.authenticationUrl,
+                            eventListenerType: usePostMessage ? 'message' : 'load',
+                            callback: SilentAuthenticationHandler.GET_CALLBACK_HANDLER(resolve, usePostMessage),
+                            timeout: _this.timeout,
+                            eventValidator: SilentAuthenticationHandler.GET_EVENT_VALIDATOR(),
+                            timeoutCallback: function () {
+                                var err = new ErrorFactory.AuthorizeError('Timeout during authentication renew');
+                                err.error = 'timeout';
+                                err.errorDescription = 'Timeout during authentication renew';
+                                reject(err);
+                            },
+                            usePostMessage: usePostMessage || false
+                        });
+                        _this.handler.init();
+                    })];
+            });
+        });
+    };
     return SilentAuthenticationHandler;
 }());
 exports.default = SilentAuthenticationHandler;
 
 },{"./error":3,"./iframeHandler":4}],10:[function(require,module,exports){
 "use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var ErrorFactory = require("./error");
+var iframeHandler_1 = require("./iframeHandler");
 /**
  * SilentLogoutHandler
- *
  * @class SilentLogoutHandler
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-var iframeHandler_1 = require("./iframeHandler");
-var ErrorFactory = require("./error");
 var SilentLogoutHandler = /** @class */ (function () {
     function SilentLogoutHandler(options) {
         this.logoutUrl = options.logoutUrl;
-        this.timeout = options.timeout || 60 * 1000;
+        // tslint:disable-next-line:no-magic-numbers
+        this.timeout = (options.timeout !== undefined) ? options.timeout : 60 * 1000;
         this.handler = null;
     }
-    SilentLogoutHandler.create = function (options) {
-        return new SilentLogoutHandler(options);
-    };
-    ;
-    SilentLogoutHandler.prototype.logout = function (usePostMessage) {
-        var _this = this;
-        return new Promise(function (resolve, reject) {
-            _this.handler = new iframeHandler_1.default({
-                url: _this.logoutUrl,
-                eventListenerType: usePostMessage ? 'message' : 'load',
-                callback: _this.getCallbackHandler(resolve, usePostMessage),
-                timeout: _this.timeout,
-                eventValidator: _this.getEventValidator(),
-                timeoutCallback: function () {
-                    var err = new ErrorFactory.AuthorizeError('Timeout during logout');
-                    err.error = 'timeout';
-                    err.errorDescription = 'Timeout during logout';
-                    reject(err);
-                },
-                usePostMessage: usePostMessage || false
-            });
-            _this.handler.init();
-        });
-    };
-    ;
-    SilentLogoutHandler.prototype.getEventValidator = function () {
-        return {};
-    };
-    ;
-    SilentLogoutHandler.prototype.getCallbackHandler = function (cb, usePostMessage) {
+    SilentLogoutHandler.GET_CALLBACK_HANDLER = function (cb, usePostMessage) {
         return function (eventData) {
             var callbackValue;
             if (!usePostMessage) {
@@ -1021,7 +1098,36 @@ var SilentLogoutHandler = /** @class */ (function () {
             cb();
         };
     };
-    ;
+    SilentLogoutHandler.CREATE = function (options) {
+        return new SilentLogoutHandler(options);
+    };
+    SilentLogoutHandler.GET_EVENT_VALIDATOR = function () {
+        return {};
+    };
+    SilentLogoutHandler.prototype.logout = function (usePostMessage) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Promise(function (resolve, reject) {
+                        _this.handler = new iframeHandler_1.default({
+                            url: _this.logoutUrl,
+                            eventListenerType: usePostMessage ? 'message' : 'load',
+                            callback: SilentLogoutHandler.GET_CALLBACK_HANDLER(resolve, usePostMessage),
+                            timeout: _this.timeout,
+                            eventValidator: SilentLogoutHandler.GET_EVENT_VALIDATOR(),
+                            timeoutCallback: function () {
+                                var err = new ErrorFactory.AuthorizeError('Timeout during logout');
+                                err.error = 'timeout';
+                                err.errorDescription = 'Timeout during logout';
+                                reject(err);
+                            },
+                            usePostMessage: usePostMessage || false
+                        });
+                        _this.handler.init();
+                    })];
+            });
+        });
+    };
     return SilentLogoutHandler;
 }());
 exports.default = SilentLogoutHandler;
@@ -1045,6 +1151,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  *
  * @ignore
  */
+// import * as factory from '@motionpicture/sskts-factory';
 var implicitGrantClient_1 = require("./auth/implicitGrantClient");
 var event_1 = require("./service/event");
 var order_1 = require("./service/order");
@@ -1065,6 +1172,10 @@ exports.createAuthInstance = createAuthInstance;
  */
 var service;
 (function (service) {
+    /**
+     * event service
+     * @class
+     */
     var Event = /** @class */ (function (_super) {
         __extends(Event, _super);
         function Event() {
@@ -1073,6 +1184,10 @@ var service;
         return Event;
     }(event_1.EventService));
     service.Event = Event;
+    /**
+     * order service
+     * @class
+     */
     var Order = /** @class */ (function (_super) {
         __extends(Order, _super);
         function Order() {
@@ -1081,6 +1196,10 @@ var service;
         return Order;
     }(order_1.OrderService));
     service.Order = Order;
+    /**
+     * organization service
+     * @class
+     */
     var Organization = /** @class */ (function (_super) {
         __extends(Organization, _super);
         function Organization() {
@@ -1089,6 +1208,10 @@ var service;
         return Organization;
     }(organization_1.OrganizationService));
     service.Organization = Organization;
+    /**
+     * person service
+     * @class
+     */
     var Person = /** @class */ (function (_super) {
         __extends(Person, _super);
         function Person() {
@@ -1097,6 +1220,10 @@ var service;
         return Person;
     }(person_1.PersonService));
     service.Person = Person;
+    /**
+     * place service
+     * @class
+     */
     var Place = /** @class */ (function (_super) {
         __extends(Place, _super);
         function Place() {
@@ -1107,6 +1234,10 @@ var service;
     service.Place = Place;
     var transaction;
     (function (transaction) {
+        /**
+         * placeOrder transaction service
+         * @class
+         */
         var PlaceOrder = /** @class */ (function (_super) {
             __extends(PlaceOrder, _super);
             function PlaceOrder() {
@@ -1120,10 +1251,11 @@ var service;
 
 },{"./auth/implicitGrantClient":5,"./service/event":13,"./service/order":14,"./service/organization":15,"./service/person":16,"./service/place":17,"./service/transaction/placeOrder":18}],12:[function(require,module,exports){
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * base service class
+ * @class
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 var Service = /** @class */ (function () {
     function Service(options) {
         this.options = options;
@@ -3500,12 +3632,17 @@ exports.storage = 'undefined' != typeof chrome
  */
 
 exports.colors = [
-  'lightseagreen',
-  'forestgreen',
-  'goldenrod',
-  'dodgerblue',
-  'darkorchid',
-  'crimson'
+  '#0000CC', '#0000FF', '#0033CC', '#0033FF', '#0066CC', '#0066FF', '#0099CC',
+  '#0099FF', '#00CC00', '#00CC33', '#00CC66', '#00CC99', '#00CCCC', '#00CCFF',
+  '#3300CC', '#3300FF', '#3333CC', '#3333FF', '#3366CC', '#3366FF', '#3399CC',
+  '#3399FF', '#33CC00', '#33CC33', '#33CC66', '#33CC99', '#33CCCC', '#33CCFF',
+  '#6600CC', '#6600FF', '#6633CC', '#6633FF', '#66CC00', '#66CC33', '#9900CC',
+  '#9900FF', '#9933CC', '#9933FF', '#99CC00', '#99CC33', '#CC0000', '#CC0033',
+  '#CC0066', '#CC0099', '#CC00CC', '#CC00FF', '#CC3300', '#CC3333', '#CC3366',
+  '#CC3399', '#CC33CC', '#CC33FF', '#CC6600', '#CC6633', '#CC9900', '#CC9933',
+  '#CCCC00', '#CCCC33', '#FF0000', '#FF0033', '#FF0066', '#FF0099', '#FF00CC',
+  '#FF00FF', '#FF3300', '#FF3333', '#FF3366', '#FF3399', '#FF33CC', '#FF33FF',
+  '#FF6600', '#FF6633', '#FF9900', '#FF9933', '#FFCC00', '#FFCC33'
 ];
 
 /**
@@ -3522,6 +3659,11 @@ function useColors() {
   // explicitly
   if (typeof window !== 'undefined' && window.process && window.process.type === 'renderer') {
     return true;
+  }
+
+  // Internet Explorer and Edge do not support colors.
+  if (typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/(edge|trident)\/(\d+)/)) {
+    return false;
   }
 
   // is webkit? http://stackoverflow.com/a/16459606/376773
@@ -3682,6 +3824,11 @@ exports.enabled = enabled;
 exports.humanize = require('ms');
 
 /**
+ * Active `debug` instances.
+ */
+exports.instances = [];
+
+/**
  * The currently active debug mode names, and names to skip.
  */
 
@@ -3695,12 +3842,6 @@ exports.skips = [];
  */
 
 exports.formatters = {};
-
-/**
- * Previous log timestamp.
- */
-
-var prevTime;
 
 /**
  * Select a color.
@@ -3729,6 +3870,8 @@ function selectColor(namespace) {
  */
 
 function createDebug(namespace) {
+
+  var prevTime;
 
   function debug() {
     // disabled?
@@ -3786,13 +3929,26 @@ function createDebug(namespace) {
   debug.enabled = exports.enabled(namespace);
   debug.useColors = exports.useColors();
   debug.color = selectColor(namespace);
+  debug.destroy = destroy;
 
   // env-specific initialization logic for debug instances
   if ('function' === typeof exports.init) {
     exports.init(debug);
   }
 
+  exports.instances.push(debug);
+
   return debug;
+}
+
+function destroy () {
+  var index = exports.instances.indexOf(this);
+  if (index !== -1) {
+    exports.instances.splice(index, 1);
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -3809,10 +3965,11 @@ function enable(namespaces) {
   exports.names = [];
   exports.skips = [];
 
+  var i;
   var split = (typeof namespaces === 'string' ? namespaces : '').split(/[\s,]+/);
   var len = split.length;
 
-  for (var i = 0; i < len; i++) {
+  for (i = 0; i < len; i++) {
     if (!split[i]) continue; // ignore empty strings
     namespaces = split[i].replace(/\*/g, '.*?');
     if (namespaces[0] === '-') {
@@ -3820,6 +3977,11 @@ function enable(namespaces) {
     } else {
       exports.names.push(new RegExp('^' + namespaces + '$'));
     }
+  }
+
+  for (i = 0; i < exports.instances.length; i++) {
+    var instance = exports.instances[i];
+    instance.enabled = exports.enabled(instance.namespace);
   }
 }
 
@@ -3842,6 +4004,9 @@ function disable() {
  */
 
 function enabled(name) {
+  if (name[name.length - 1] === '*') {
+    return true;
+  }
   var i, len;
   for (i = 0, len = exports.skips.length; i < len; i++) {
     if (exports.skips[i].test(name)) {
@@ -9278,14 +9443,21 @@ module.exports={
   "files": [
     "lib/"
   ],
+  "directories": {
+    "doc": "./doc",
+    "lib": "./lib",
+    "example": "./example",
+    "test": "./test"
+  },
   "scripts": {
     "check": "",
-    "clean": "rimraf lib/**/* types/**/* npm-debug.log* docs/*",
+    "clean": "rimraf ./lib npm-debug.log* ./doc",
     "build:watch": "tsc && concurrently \"tsc -w\" \"npm run watchify\"",
     "watchify": "watchify ./browser.js -o ./lib/browser.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "example:ssl": "copyfiles ./lib/browser.js ./example/browser && http-server --ssl --cert ./example/browser/server.crt --key ./example/browser/server.key ./example/browser",
-    "example": "copyfiles ./lib/browser.js ./example/browser && http-server ./example/browser"
+    "example": "copyfiles ./lib/browser.js ./example/browser && http-server ./example/browser",
+    "tslint": "tslint --type-check --project tsconfig.json -c tslint.json src/**/*.ts"
   },
   "author": "Motionpicture co.,ltd.",
   "contributors": [
@@ -9307,11 +9479,14 @@ module.exports={
     "jsonwebtoken": "^7.4.3",
     "jwk-to-pem": "^1.2.6",
     "rimraf": "^2.6.1",
+    "tslint": "^5.7.0",
+    "tslint-microsoft-contrib": "^5.0.1",
     "typescript": "^2.5.1",
     "watchify": "^3.9.0"
   },
   "dependencies": {
     "@motionpicture/sskts-factory": "git+https://tetsu:M0P!Xmopix@m-p.backlog.jp/git/SSKTS/factory.git#feature/SSKTS-566",
+    "debug": "^3.0.1",
     "http-status": "^1.0.1",
     "idtoken-verifier": "^1.1.0",
     "isomorphic-fetch": "^2.2.1",

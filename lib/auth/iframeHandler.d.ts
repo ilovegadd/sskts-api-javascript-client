@@ -1,6 +1,5 @@
 /**
  * IframeHandler
- *
  * @class IframeHandler
  */
 export default class IframeHandler {
@@ -11,7 +10,7 @@ export default class IframeHandler {
     eventListenerType: any;
     iframe: any;
     timeoutHandle: any;
-    _destroyTimeout: any;
+    destroyTimeout: any;
     proxyEventListener: any;
     eventValidator: any;
     eventSourceObject: any;

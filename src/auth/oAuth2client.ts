@@ -1,12 +1,8 @@
-/**
- * OAuthクライアント
- */
-
 import * as createDebug from 'debug';
 import * as httpStatus from 'http-status';
 import * as fetch from 'isomorphic-fetch';
 
-import { RequestError, DefaultTransporter } from '../transporters';
+import { DefaultTransporter, RequestError } from '../transporters';
 import ICredentials from './credentials';
 
 const debug = createDebug('sasaki-api:auth:oAuth2client');
@@ -28,6 +24,7 @@ export interface IOptions {
 
 /**
  * OAuth2 client
+ * @class
  */
 export default class OAuth2client {
     public credentials: ICredentials;
@@ -122,23 +119,9 @@ export default class OAuth2client {
 
         const accessToken = await this.getAccessToken();
         options.headers = (options.headers === undefined || options.headers === null) ? {} : options.headers;
-        options.headers['Authorization'] = `Bearer ${accessToken}`;
+        options.headers.Authorization = `Bearer ${accessToken}`;
 
         return this.makeRequest(url, options, expectedStatusCodes);
-    }
-
-    /**
-     * Makes a request without paying attention to refreshing or anything
-     * Assumes that all credentials are set correctly.
-     * @param  {object}   opts     Options for request
-     * @param  {Function} callback callback function
-     * @return {Request}           The request object created
-     */
-    // tslint:disable-next-line:prefer-function-over-method
-    private makeRequest(url: string, options: RequestInit, expectedStatusCodes: number[]) {
-        const transporter = new DefaultTransporter(expectedStatusCodes);
-
-        return transporter.fetch(url, options);
     }
 
     /**
@@ -155,7 +138,7 @@ export default class OAuth2client {
                 client_id: this.options.clientId,
                 client_secret: this.options.clientSecret,
                 grant_type: 'refresh_token'
-            },
+            }
         };
 
         return await fetch(`https://${this.options.domain}/token`, options)
@@ -180,5 +163,19 @@ export default class OAuth2client {
 
                 return tokens;
             });
+    }
+
+    /**
+     * Makes a request without paying attention to refreshing or anything
+     * Assumes that all credentials are set correctly.
+     * @param  {object}   opts     Options for request
+     * @param  {Function} callback callback function
+     * @return {Request}           The request object created
+     */
+    // tslint:disable-next-line:prefer-function-over-method
+    private async makeRequest(url: string, options: RequestInit, expectedStatusCodes: number[]) {
+        const transporter = new DefaultTransporter(expectedStatusCodes);
+
+        return transporter.fetch(url, options);
     }
 }

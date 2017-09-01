@@ -15,6 +15,7 @@ export interface IOptions {
 }
 /**
  * OAuth2 client
+ * @class
  */
 export default class OAuth2client {
     credentials: ICredentials;
@@ -40,6 +41,10 @@ export default class OAuth2client {
      */
     fetch(url: string, options: RequestInit, expectedStatusCodes: number[]): Promise<any>;
     /**
+     * Refreshes the access token.
+     */
+    protected refreshToken(refreshToken: string): Promise<ICredentials>;
+    /**
      * Makes a request without paying attention to refreshing or anything
      * Assumes that all credentials are set correctly.
      * @param  {object}   opts     Options for request
@@ -47,8 +52,4 @@ export default class OAuth2client {
      * @return {Request}           The request object created
      */
     private makeRequest(url, options, expectedStatusCodes);
-    /**
-     * Refreshes the access token.
-     */
-    protected refreshToken(refreshToken: string): Promise<ICredentials>;
 }

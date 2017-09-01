@@ -1,10 +1,12 @@
-/**
- * PopupAuthenticationHandler
- * 
- * @class PopupAuthenticationHandler
- */
+import * as createDebug from 'debug';
 
-export default class PopupAuthenticationHandler {
+const debug = createDebug('sasaki-api:auth:popupHandler');
+
+/**
+ * PopupHandler
+ * @class PopupHandler
+ */
+export default class PopupHandler {
     public url: string;
     public callback: any;
     public timeout: any;
@@ -12,7 +14,7 @@ export default class PopupAuthenticationHandler {
     public eventListenerType: any;
     public popupWindow: any;
     public timeoutHandle: any;
-    public _destroyTimeout: any;
+    public destroyTimeout: any;
     public proxyEventListener: any;
     // If no event identifier specified, set default
     public eventValidator: any;
@@ -21,16 +23,17 @@ export default class PopupAuthenticationHandler {
     constructor(options: any) {
         this.url = options.url;
         this.callback = options.callback;
-        this.timeout = options.timeout || 60 * 1000;
-        this.timeoutCallback = options.timeoutCallback || null;
-        this.eventListenerType = options.eventListenerType || 'message';
+        // tslint:disable-next-line:no-magic-numbers
+        this.timeout = (options.timeout !== undefined) ? options.timeout : 60 * 1000;
+        this.timeoutCallback = (options.timeoutCallback !== undefined) ? options.timeoutCallback : null;
+        this.eventListenerType = (options.eventListenerType !== undefined) ? options.eventListenerType : 'message';
         this.popupWindow = null;
         this.timeoutHandle = null;
-        this._destroyTimeout = null;
+        this.destroyTimeout = null;
         this.proxyEventListener = null;
         // If no event identifier specified, set default
-        this.eventValidator = options.eventValidator || {
-            isValid: function () {
+        this.eventValidator = (options.eventValidator !== undefined) ? options.eventValidator : {
+            isValid: () => {
                 return true;
             }
         };
@@ -41,7 +44,7 @@ export default class PopupAuthenticationHandler {
     }
 
     public init() {
-        console.log('opening popup...', this.eventListenerType);
+        debug('opening popup...', this.eventListenerType);
 
         this.popupWindow = window.open(this.url, 'authorizeWindow');
 
@@ -58,44 +61,50 @@ export default class PopupAuthenticationHandler {
                 this.eventSourceObject = this.popupWindow;
                 break;
             default:
-                throw new Error('Unsupported event listener type: ' + this.eventListenerType);
+                throw new Error(`Unsupported event listener type: ${this.eventListenerType}`);
         }
 
-        console.log('this.eventSourceObject:', this.eventSourceObject);
+        debug('this.eventSourceObject:', this.eventSourceObject);
         this.eventSourceObject.addEventListener(this.eventListenerType, this.proxyEventListener, false);
 
-        this.timeoutHandle = setTimeout(() => {
-            this.timeoutHandler();
-        }, this.timeout);
-    };
+        this.timeoutHandle = setTimeout(
+            () => {
+                this.timeoutHandler();
+            },
+            this.timeout
+        );
+    }
 
-    eventListener(event: any) {
-        console.log('PopupHandler.eventListener...event:', event);
-        var eventData = { event: event, sourceObject: this.eventSourceObject };
+    public eventListener(event: any) {
+        debug('PopupHandler.eventListener...event:', event);
+        const eventData = { event: event, sourceObject: this.eventSourceObject };
 
         this.destroy();
         // 呼び出し元へコールバック
         this.callback(eventData);
-    };
+    }
 
-    timeoutHandler() {
+    public timeoutHandler() {
         if (this.timeoutCallback) {
             this.timeoutCallback();
         }
-    };
+    }
 
-    destroy() {
+    public destroy() {
         clearTimeout(this.timeoutHandle);
 
-        this._destroyTimeout = setTimeout(() => {
-            this.eventSourceObject.removeEventListener(
-                this.eventListenerType,
-                this.proxyEventListener,
-                false
-            );
+        this.destroyTimeout = setTimeout(
+            () => {
+                this.eventSourceObject.removeEventListener(
+                    this.eventListenerType,
+                    this.proxyEventListener,
+                    false
+                );
 
-            // ポップアップを閉じる
-            this.popupWindow.close();
-        }, 0);
-    };
+                // ポップアップを閉じる
+                this.popupWindow.close();
+            },
+            0
+        );
+    }
 }

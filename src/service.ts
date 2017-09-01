@@ -1,7 +1,3 @@
-/**
- * base service class
- */
-
 import { ImplicitGrantClient } from './auth/implicitGrantClient';
 
 export interface IOptions {
@@ -9,6 +5,10 @@ export interface IOptions {
     auth: ImplicitGrantClient;
 }
 
+/**
+ * base service class
+ * @class
+ */
 export class Service {
     public options: IOptions;
 

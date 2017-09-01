@@ -21,7 +21,8 @@
     "watchify": "watchify ./browser.js -o ./lib/browser.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "example:ssl": "copyfiles ./lib/browser.js ./example/browser && http-server --ssl --cert ./example/browser/server.crt --key ./example/browser/server.key ./example/browser",
-    "example": "copyfiles ./lib/browser.js ./example/browser && http-server ./example/browser"
+    "example": "copyfiles ./lib/browser.js ./example/browser && http-server ./example/browser",
+    "tslint": "tslint --type-check --project tsconfig.json -c tslint.json src/**/*.ts"
   },
   "author": "Motionpicture co.,ltd.",
   "contributors": [
@@ -43,11 +44,14 @@
     "jsonwebtoken": "^7.4.3",
     "jwk-to-pem": "^1.2.6",
     "rimraf": "^2.6.1",
+    "tslint": "^5.7.0",
+    "tslint-microsoft-contrib": "^5.0.1",
     "typescript": "^2.5.1",
     "watchify": "^3.9.0"
   },
   "dependencies": {
     "@motionpicture/sskts-factory": "git+https://tetsu:M0P!Xmopix@m-p.backlog.jp/git/SSKTS/factory.git#feature/SSKTS-566",
+    "debug": "^3.0.1",
     "http-status": "^1.0.1",
     "idtoken-verifier": "^1.1.0",
     "isomorphic-fetch": "^2.2.1",

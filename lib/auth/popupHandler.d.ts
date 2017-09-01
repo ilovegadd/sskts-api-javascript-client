@@ -1,9 +1,8 @@
 /**
- * PopupAuthenticationHandler
- *
- * @class PopupAuthenticationHandler
+ * PopupHandler
+ * @class PopupHandler
  */
-export default class PopupAuthenticationHandler {
+export default class PopupHandler {
     url: string;
     callback: any;
     timeout: any;
@@ -11,7 +10,7 @@ export default class PopupAuthenticationHandler {
     eventListenerType: any;
     popupWindow: any;
     timeoutHandle: any;
-    _destroyTimeout: any;
+    destroyTimeout: any;
     proxyEventListener: any;
     eventValidator: any;
     eventSourceObject: any;

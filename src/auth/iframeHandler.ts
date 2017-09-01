@@ -1,9 +1,11 @@
+import * as createDebug from 'debug';
+
+const debug = createDebug('sasaki-api:auth:iframeHandler');
+
 /**
  * IframeHandler
- * 
  * @class IframeHandler
  */
-
 export default class IframeHandler {
     public url: string;
     public callback: any;
@@ -12,7 +14,7 @@ export default class IframeHandler {
     public eventListenerType: any;
     public iframe: any;
     public timeoutHandle: any;
-    public _destroyTimeout: any;
+    public destroyTimeout: any;
     public proxyEventListener: any;
     // If no event identifier specified, set default
     public eventValidator: any;
@@ -21,16 +23,17 @@ export default class IframeHandler {
     constructor(options: any) {
         this.url = options.url;
         this.callback = options.callback;
-        this.timeout = options.timeout || 60 * 1000;
-        this.timeoutCallback = options.timeoutCallback || null;
-        this.eventListenerType = options.eventListenerType || 'message';
+        // tslint:disable-next-line:no-magic-numbers
+        this.timeout = (options.timeout !== undefined) ? options.timeout : 60 * 1000;
+        this.timeoutCallback = (options.timeoutCallback !== undefined) ? options.timeoutCallback : null;
+        this.eventListenerType = (options.eventListenerType !== undefined) ? options.eventListenerType : 'message';
         this.iframe = null;
         this.timeoutHandle = null;
-        this._destroyTimeout = null;
+        this.destroyTimeout = null;
         this.proxyEventListener = null;
         // If no event identifier specified, set default
-        this.eventValidator = options.eventValidator || {
-            isValid: function () {
+        this.eventValidator = (options.eventValidator !== undefined) ? options.eventValidator : {
+            isValid: () => {
                 return true;
             }
         };
@@ -40,8 +43,8 @@ export default class IframeHandler {
         }
     }
 
-    init() {
-        console.log('opening iframe...', this.eventListenerType);
+    public init() {
+        debug('opening iframe...', this.eventListenerType);
 
         this.iframe = window.document.createElement('iframe');
         this.iframe.style.display = 'none';
@@ -60,43 +63,49 @@ export default class IframeHandler {
                 this.eventSourceObject = this.iframe;
                 break;
             default:
-                throw new Error('Unsupported event listener type: ' + this.eventListenerType);
+                throw new Error(`Unsupported event listener type: ${this.eventListenerType}`);
         }
 
         this.eventSourceObject.addEventListener(this.eventListenerType, this.proxyEventListener, false);
 
         window.document.body.appendChild(this.iframe);
 
-        this.timeoutHandle = setTimeout(() => {
-            this.timeoutHandler();
-        }, this.timeout);
-    };
+        this.timeoutHandle = setTimeout(
+            () => {
+                this.timeoutHandler();
+            },
+            this.timeout
+        );
+    }
 
-    eventListener(event: any) {
-        var eventData = { event: event, sourceObject: this.eventSourceObject };
+    public eventListener(event: any) {
+        const eventData = { event: event, sourceObject: this.eventSourceObject };
 
         this.destroy();
         this.callback(eventData);
-    };
+    }
 
-    timeoutHandler() {
+    public timeoutHandler() {
         this.destroy();
         if (this.timeoutCallback) {
             this.timeoutCallback();
         }
-    };
+    }
 
-    destroy() {
+    public destroy() {
         clearTimeout(this.timeoutHandle);
 
-        this._destroyTimeout = setTimeout(() => {
-            this.eventSourceObject.removeEventListener(
-                this.eventListenerType,
-                this.proxyEventListener,
-                false
-            );
+        this.destroyTimeout = setTimeout(
+            () => {
+                this.eventSourceObject.removeEventListener(
+                    this.eventListenerType,
+                    this.proxyEventListener,
+                    false
+                );
 
-            window.document.body.removeChild(this.iframe);
-        }, 0);
-    };
+                window.document.body.removeChild(this.iframe);
+            },
+            0
+        );
+    }
 }
