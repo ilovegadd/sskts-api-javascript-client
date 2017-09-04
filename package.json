@@ -50,6 +50,7 @@
     "watchify": "^3.9.0"
   },
   "dependencies": {
+    "@motionpicture/sasaki-api-service": "git+https://m-p.backlog.jp/git/SSKTS/api-client-service.git#feature/SSKTS-580",
     "@motionpicture/sskts-factory": "git+https://tetsu:M0P!Xmopix@m-p.backlog.jp/git/SSKTS/factory.git#feature/SSKTS-566",
     "debug": "^3.0.1",
     "http-status": "^1.0.1",

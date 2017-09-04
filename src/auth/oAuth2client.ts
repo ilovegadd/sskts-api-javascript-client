@@ -2,7 +2,7 @@ import * as createDebug from 'debug';
 import * as httpStatus from 'http-status';
 import * as fetch from 'isomorphic-fetch';
 
-import { DefaultTransporter, RequestError } from '../transporters';
+import { transporters } from '@motionpicture/sasaki-api-service';
 import ICredentials from './credentials';
 
 const debug = createDebug('sasaki-api:auth:oAuth2client');
@@ -146,7 +146,9 @@ export default class OAuth2client {
                 if (response.status !== httpStatus.OK) {
                     const body = await response.json();
                     if (typeof body === 'object' && body.errors !== undefined) {
-                        const err = new RequestError((<any[]>body.errors).map((error) => `${error.title}:${error.detail}`).join('\n'));
+                        const err = new transporters.RequestError(
+                            (<any[]>body.errors).map((error) => `${error.title}:${error.detail}`).join('\n')
+                        );
                         err.code = response.status;
                         err.errors = body.errors;
                     }
@@ -174,7 +176,7 @@ export default class OAuth2client {
      */
     // tslint:disable-next-line:prefer-function-over-method
     private async makeRequest(url: string, options: RequestInit, expectedStatusCodes: number[]) {
-        const transporter = new DefaultTransporter(expectedStatusCodes);
+        const transporter = new transporters.DefaultTransporter(expectedStatusCodes);
 
         return transporter.fetch(url, options);
     }
