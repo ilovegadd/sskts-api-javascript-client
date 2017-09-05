@@ -1,3 +1,4 @@
+import { Auth } from '@motionpicture/sasaki-api-abstract';
 import ICredentials from './credentials';
 export interface IOptions {
     domain: string;
@@ -17,7 +18,7 @@ export interface IOptions {
  * OAuth2 client
  * @class
  */
-export default class OAuth2client {
+export default class OAuth2client implements Auth {
     credentials: ICredentials;
     options: IOptions;
     constructor(options: IOptions);

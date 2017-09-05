@@ -2,7 +2,7 @@ import * as createDebug from 'debug';
 import * as httpStatus from 'http-status';
 import * as fetch from 'isomorphic-fetch';
 
-import { transporters } from '@motionpicture/sasaki-api-abstract';
+import { Auth, transporters } from '@motionpicture/sasaki-api-abstract';
 import ICredentials from './credentials';
 
 const debug = createDebug('sasaki-api:auth:oAuth2client');
@@ -26,7 +26,7 @@ export interface IOptions {
  * OAuth2 client
  * @class
  */
-export default class OAuth2client {
+export default class OAuth2client implements Auth {
     public credentials: ICredentials;
     public options: IOptions;
 
