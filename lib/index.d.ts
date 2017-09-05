@@ -3,8 +3,7 @@
  *
  * @ignore
  */
-import * as service from '@motionpicture/sasaki-api-service';
-import * as factory from '@motionpicture/sskts-factory';
+import * as sasaki from '@motionpicture/sasaki-api-abstract';
 import { ImplicitGrantClient, IOptions as IImplicitGrantClientOptions } from './auth/implicitGrantClient';
 /**
  * factory
@@ -12,8 +11,8 @@ import { ImplicitGrantClient, IOptions as IImplicitGrantClientOptions } from './
  * 全てのオブジェクトのインターフェースはここに含まれます。
  * @export
  */
-export import factory = factory;
-export import service = service;
+export import factory = sasaki.factory;
+export import service = sasaki.service;
 export declare type IImplicitGrantClient = ImplicitGrantClient;
 /**
  * create OAuth2 client instance using implicit grant

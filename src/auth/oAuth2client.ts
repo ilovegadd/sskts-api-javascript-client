@@ -2,7 +2,7 @@ import * as createDebug from 'debug';
 import * as httpStatus from 'http-status';
 import * as fetch from 'isomorphic-fetch';
 
-import { transporters } from '@motionpicture/sasaki-api-service';
+import { transporters } from '@motionpicture/sasaki-api-abstract';
 import ICredentials from './credentials';
 
 const debug = createDebug('sasaki-api:auth:oAuth2client');
