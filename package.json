@@ -34,7 +34,7 @@
     "@types/debug": "0.0.30",
     "@types/http-status": "^0.2.30",
     "@types/isomorphic-fetch": "0.0.34",
-    "@types/node": "^8.0.27",
+    "@types/node": "^8.0.28",
     "@types/qs": "^6.5.0",
     "browserify": "^14.4.0",
     "concurrently": "^3.5.0",
@@ -55,6 +55,6 @@
     "http-status": "^1.0.1",
     "idtoken-verifier": "^1.1.0",
     "isomorphic-fetch": "^2.2.1",
-    "qs": "^6.5.0"
+    "qs": "^6.5.1"
   }
 }
