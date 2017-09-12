@@ -105,7 +105,7 @@ var IframeHandler = /** @class */ (function () {
 }());
 exports.default = IframeHandler;
 
-},{"debug":90}],4:[function(require,module,exports){
+},{"debug":91}],4:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -459,7 +459,7 @@ var ImplicitGrantClient = /** @class */ (function (_super) {
 }(oAuth2client_1.default));
 exports.ImplicitGrantClient = ImplicitGrantClient;
 
-},{"./error":2,"./oAuth2client":5,"./popupAuthenticationHandler":6,"./silentAuthenticationHandler":8,"./silentLogoutHandler":9,"debug":90,"idtoken-verifier":99,"qs":106}],5:[function(require,module,exports){
+},{"./error":2,"./oAuth2client":5,"./popupAuthenticationHandler":6,"./silentAuthenticationHandler":8,"./silentLogoutHandler":9,"debug":91,"idtoken-verifier":100,"qs":107}],5:[function(require,module,exports){
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -661,7 +661,7 @@ var OAuth2client = /** @class */ (function () {
 }());
 exports.default = OAuth2client;
 
-},{"@motionpicture/sasaki-api-abstract":12,"debug":90,"http-status":92,"isomorphic-fetch":100}],6:[function(require,module,exports){
+},{"@motionpicture/sasaki-api-abstract":12,"debug":91,"http-status":93,"isomorphic-fetch":101}],6:[function(require,module,exports){
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -847,7 +847,7 @@ var PopupHandler = /** @class */ (function () {
 }());
 exports.default = PopupHandler;
 
-},{"debug":90}],8:[function(require,module,exports){
+},{"debug":91}],8:[function(require,module,exports){
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -1341,7 +1341,7 @@ var service;
     })(transaction = service.transaction || (service.transaction = {}));
 })(service = exports.service || (exports.service = {}));
 
-},{"./auth/authClient":11,"./service/event":14,"./service/order":15,"./service/organization":16,"./service/person":17,"./service/place":18,"./service/transaction/placeOrder":19,"./transporters":20,"@motionpicture/sskts-factory":85}],13:[function(require,module,exports){
+},{"./auth/authClient":11,"./service/event":14,"./service/order":15,"./service/organization":16,"./service/person":17,"./service/place":18,"./service/transaction/placeOrder":19,"./transporters":20,"@motionpicture/sskts-factory":86}],13:[function(require,module,exports){
 "use strict";
 var __assign = (this && this.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -1440,7 +1440,7 @@ var Service = /** @class */ (function () {
 }());
 exports.Service = Service;
 
-},{"./transporters":20,"querystring":112}],14:[function(require,module,exports){
+},{"./transporters":20,"querystring":113}],14:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1536,7 +1536,7 @@ var EventService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.EventService = EventService;
 
-},{"../service":13,"http-status":92}],15:[function(require,module,exports){
+},{"../service":13,"http-status":93}],15:[function(require,module,exports){
 "use strict";
 /**
  * 注文サービス
@@ -1624,7 +1624,7 @@ var OrderService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.OrderService = OrderService;
 
-},{"../service":13,"http-status":92}],16:[function(require,module,exports){
+},{"../service":13,"http-status":93}],16:[function(require,module,exports){
 "use strict";
 /**
  * 組織サービス
@@ -1727,7 +1727,7 @@ var OrganizationService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.OrganizationService = OrganizationService;
 
-},{"../service":13,"http-status":92}],17:[function(require,module,exports){
+},{"../service":13,"http-status":93}],17:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1888,7 +1888,7 @@ var PersonService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PersonService = PersonService;
 
-},{"../service":13,"http-status":92}],18:[function(require,module,exports){
+},{"../service":13,"http-status":93}],18:[function(require,module,exports){
 "use strict";
 /**
  * 場所サービス
@@ -1991,7 +1991,7 @@ var PlaceService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PlaceService = PlaceService;
 
-},{"../service":13,"http-status":92}],19:[function(require,module,exports){
+},{"../service":13,"http-status":93}],19:[function(require,module,exports){
 "use strict";
 /**
  * 注文取引サービス
@@ -2246,7 +2246,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PlaceOrderTransactionService = PlaceOrderTransactionService;
 
-},{"../../service":13,"http-status":92}],20:[function(require,module,exports){
+},{"../../service":13,"http-status":93}],20:[function(require,module,exports){
 "use strict";
 // tslint:disable:max-classes-per-file
 var __extends = (this && this.__extends) || (function () {
@@ -2522,12 +2522,12 @@ exports.DefaultTransporter = DefaultTransporter;
 //     }
 // }
 
-},{"../package.json":21,"debug":90,"http-status":92,"isomorphic-fetch":100}],21:[function(require,module,exports){
+},{"../package.json":21,"debug":91,"http-status":93,"isomorphic-fetch":101}],21:[function(require,module,exports){
 module.exports={
   "_from": "git+https://tetsu:M0P!Xmopix@m-p.backlog.jp/git/SSKTS/api-client-service.git#feature/SSKTS-580",
   "_id": "@motionpicture/sasaki-api-abstract@1.0.0",
   "_inBundle": false,
-  "_integrity": "sha1-IjeRDkz+rdte8O8/YIEDM7WX4po=",
+  "_integrity": "sha1-lO5gz0tx9CioQrR1hr1w3SByK4o=",
   "_location": "/@motionpicture/sasaki-api-abstract",
   "_phantomChildren": {},
   "_requested": {
@@ -2542,7 +2542,7 @@ module.exports={
     "#USER",
     "/"
   ],
-  "_resolved": "git+https://tetsu:M0P!Xmopix@m-p.backlog.jp/git/SSKTS/api-client-service.git#1de44ca55a1747344d4d6573e167e13892a2f61a",
+  "_resolved": "git+https://tetsu:M0P!Xmopix@m-p.backlog.jp/git/SSKTS/api-client-service.git#522d4e9bc13a457fef8a6d33e530cb210ca0f899",
   "_spec": "git+https://tetsu:M0P!Xmopix@m-p.backlog.jp/git/SSKTS/api-client-service.git#feature/SSKTS-580",
   "_where": "C:\\Users\\tetsu\\projects\\sskts-api-javascript-client",
   "author": {
@@ -2573,17 +2573,17 @@ module.exports={
     "@types/open": "0.0.29",
     "@types/power-assert": "^1.4.29",
     "@types/request": "^2.0.3",
-    "@types/sinon": "^2.3.3",
+    "@types/sinon": "^2.3.4",
     "http-server": "^0.10.0",
     "ink-docstrap": "^1.3.0",
     "jsdoc": "^3.5.4",
-    "mocha": "^3.5.0",
+    "mocha": "^3.5.3",
     "nock": "^9.0.14",
     "nsp": "^2.8.0",
     "nyc": "^11.2.1",
     "open": "0.0.5",
     "power-assert": "^1.4.4",
-    "rimraf": "^2.6.1",
+    "rimraf": "^2.6.2",
     "sinon": "^3.2.1",
     "snyk": "^1.40.2",
     "ts-node": "^3.3.0",
@@ -2891,13 +2891,25 @@ exports.Unauthorized = unauthorized_1.default;
 /**
  * action factory
  * アクションファクトリー
- * @namespace factory/action
+ * @namespace action
  */
 Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * アクションタイプ
+ * @export
+ * @enum
+ * @memberof action
+ */
 var ActionType;
 (function (ActionType) {
     ActionType["AuthorizeAction"] = "AuthorizeAction";
 })(ActionType = exports.ActionType || (exports.ActionType = {}));
+/**
+ * アクションステータス
+ * @export
+ * @enum
+ * @memberof action
+ */
 var ActionStatusType;
 (function (ActionStatusType) {
     ActionStatusType["ActiveActionStatus"] = "ActiveActionStatus";
@@ -2912,7 +2924,7 @@ var ActionStatusType;
 /**
  * authorize action factory
  * 承認アクションファクトリー
- * @namespace factory/action/authorize
+ * @namespace action.authorize
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 var AuthorizeActionPurpose;
@@ -2927,14 +2939,13 @@ var AuthorizeActionPurpose;
 /**
  * credit card authorization factory
  * クレジットカードオーソリファクトリー
- * @namespace factory/authorization/gmo
+ * @namespace action.authorize.creditCard
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const action_1 = require("../../action");
 const AuthorizeActionFactory = require("../authorize");
-function create(params) {
+function createAttributes(params) {
     return {
-        id: params.id,
         actionStatus: params.actionStatus,
         typeOf: action_1.ActionType.AuthorizeAction,
         purpose: {
@@ -2948,21 +2959,20 @@ function create(params) {
         endDate: params.endDate
     };
 }
-exports.create = create;
+exports.createAttributes = createAttributes;
 
 },{"../../action":33,"../authorize":34}],36:[function(require,module,exports){
 "use strict";
 /**
  * mvtk authorization factory
  * ムビチケ着券情報ファクトリー
- * @namespace factory/authorization/mvtk
+ * @namespace action.authorize.mvtk
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const action_1 = require("../../action");
 const AuthorizeActionFactory = require("../authorize");
-function create(params) {
+function createAttributes(params) {
     return {
-        id: params.id,
         actionStatus: params.actionStatus,
         typeOf: action_1.ActionType.AuthorizeAction,
         purpose: {
@@ -2976,7 +2986,7 @@ function create(params) {
         endDate: params.endDate
     };
 }
-exports.create = create;
+exports.createAttributes = createAttributes;
 
 },{"../../action":33,"../authorize":34}],37:[function(require,module,exports){
 "use strict";
@@ -2993,9 +3003,8 @@ const AuthorizeActionFactory = require("../authorize");
  * @function
  * @memberof action.authorize.seatReservation
  */
-function create(params) {
+function createAttributes(params) {
     return {
-        id: params.id,
         actionStatus: params.actionStatus,
         typeOf: action_1.ActionType.AuthorizeAction,
         purpose: {
@@ -3010,7 +3019,7 @@ function create(params) {
         endDate: params.endDate
     };
 }
-exports.create = create;
+exports.createAttributes = createAttributes;
 
 },{"../../action":33,"../authorize":34}],38:[function(require,module,exports){
 "use strict";
@@ -3018,37 +3027,16 @@ exports.create = create;
  * アプリケーションクライアントイベントファクトリー
  * クライアントサイドで発生したイベントを生成する
  * クライアントサイドからapiを通じて生成される想定
- * @namespace factory/clientEvent
+ * @namespace clientEvent
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-function create(args) {
-    const event = {
-        id: args.id,
-        client: args.client,
-        occurredAt: args.occurredAt,
-        url: (args.url !== undefined) ? args.url : '',
-        label: args.label,
-        category: (args.category !== undefined) ? args.category : '',
-        action: (args.action !== undefined) ? args.action : '',
-        message: (args.message !== undefined) ? args.message : '',
-        notes: (args.notes !== undefined) ? args.notes : '',
-        useragent: (args.useragent !== undefined) ? args.useragent : '',
-        location: (args.location !== undefined) ? args.location : []
-    };
-    if (args.transaction !== undefined) {
-        event.transaction = args.transaction;
-    }
-    return event;
-}
-exports.create = create;
 
 },{}],39:[function(require,module,exports){
 "use strict";
 /**
  * アプリケーションクライアントユーザーファクトリー
  * クライアントサイドでapiを利用するユーザー
- *
- * @namespace factory/clientUser
+ * @namespace clientUser
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
@@ -3057,7 +3045,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * 作品タイプ
  *
- * @namespace factory/creativeWorkType
+ * @namespace creativeWorkType
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 var CreativeWorkType;
@@ -3069,15 +3057,17 @@ exports.default = CreativeWorkType;
 },{}],41:[function(require,module,exports){
 "use strict";
 /**
- * 映画ファクトリー
- *
- * @namespace factory/creativeWork/movie
+ * 映画作品ファクトリー
+ * @namespace creativeWork.movie
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const moment = require("moment");
 const creativeWorkType_1 = require("../creativeWorkType");
 /**
  * COAの作品抽出結果からFilmオブジェクトを作成する
+ * @export
+ * @function
+ * @memberof creativeWork.movie
  */
 function createFromCOA(filmFromCOA) {
     return {
@@ -3090,30 +3080,30 @@ function createFromCOA(filmFromCOA) {
 }
 exports.createFromCOA = createFromCOA;
 
-},{"../creativeWorkType":40,"moment":102}],42:[function(require,module,exports){
+},{"../creativeWorkType":40,"moment":103}],42:[function(require,module,exports){
 "use strict";
 /**
  * イベントファクトリー
  *
- * @namespace factory/event
+ * @namespace event
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-function create(args) {
+function create(params) {
     return {
-        identifier: args.identifier,
-        name: (args.name === undefined) ? { ja: '', en: '' } : args.name,
-        description: args.description,
-        doorTime: args.doorTime,
-        duration: (args.duration === undefined) ? undefined : args.duration.toString(),
-        endDate: args.endDate,
-        eventStatus: args.eventStatus,
-        location: args.location,
-        startDate: args.startDate,
-        workPerformed: args.workPerformed,
-        maximumAttendeeCapacity: args.maximumAttendeeCapacity,
-        // offers: args.offers,
-        remainingAttendeeCapacity: args.remainingAttendeeCapacity,
-        typeOf: args.typeOf
+        identifier: params.identifier,
+        name: (params.name === undefined) ? { ja: '', en: '' } : params.name,
+        description: params.description,
+        doorTime: params.doorTime,
+        duration: (params.duration === undefined) ? undefined : params.duration.toString(),
+        endDate: params.endDate,
+        eventStatus: params.eventStatus,
+        location: params.location,
+        startDate: params.startDate,
+        workPerformed: params.workPerformed,
+        maximumAttendeeCapacity: params.maximumAttendeeCapacity,
+        // offers: params.offers,
+        remainingAttendeeCapacity: params.remainingAttendeeCapacity,
+        typeOf: params.typeOf
     };
 }
 exports.create = create;
@@ -3123,7 +3113,7 @@ exports.create = create;
 /**
  * イベントステータス
  *
- * @namespace/factory/eventStatusType
+ * @namespace eventStatusType
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 var EventStatusType;
@@ -3140,7 +3130,7 @@ exports.default = EventStatusType;
 /**
  * イベントタイプ
  *
- * @namespace/factory/eventType
+ * @namespace eventType
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 var EventType;
@@ -3155,7 +3145,7 @@ exports.default = EventType;
 /**
  * individual screening event factory
  * 個々の上映イベントファクトリー
- * @namespace factory/event/individualScreeningEvent
+ * @namespace event.individualScreeningEvent
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const moment = require("moment");
@@ -3166,7 +3156,9 @@ const eventStatusType_1 = require("../eventStatusType");
 const eventType_1 = require("../eventType");
 /**
  * 座席数から在庫状況表現を生成する
- *
+ * @export
+ * @function
+ * @memberof event.individualScreeningEvent
  * @param {number} numberOfAvailableSeats 空席数
  * @param {number} numberOfAllSeats 全座席数
  * @returns {IItemAvailability} 在庫状況表現
@@ -3190,7 +3182,7 @@ exports.createItemAvailability = createItemAvailability;
  * create individualScreeningEvent from COA performance
  * @export
  * @function
- * @memberof factory/event/individualScreeningEvent
+ * @memberof event.individualScreeningEvent
  */
 function createFromCOA(params) {
     const identifier = createIdFromCOA({
@@ -3238,24 +3230,24 @@ exports.createFromCOA = createFromCOA;
  * create id by COA infos.
  * @export
  * @function
- * @memberof factory/event/individualScreeningEvent
+ * @memberof event.individualScreeningEvent
  */
-function createIdFromCOA(args) {
+function createIdFromCOA(params) {
     return [
-        args.screeningEvent.identifier,
-        args.dateJouei,
-        args.screenCode,
-        args.timeBegin
+        params.screeningEvent.identifier,
+        params.dateJouei,
+        params.screenCode,
+        params.timeBegin
     ].join('');
 }
 exports.createIdFromCOA = createIdFromCOA;
 
-},{"../../error/argument":24,"../event":42,"../eventStatusType":43,"../eventType":44,"moment":102,"underscore":120}],46:[function(require,module,exports){
+},{"../../error/argument":24,"../event":42,"../eventStatusType":43,"../eventType":44,"moment":103,"underscore":121}],46:[function(require,module,exports){
 "use strict";
 /**
  * screen event factory
  * 劇場の上映イベントファクトリー
- * @namespace factory/creativeWork/movie
+ * @namespace event.screeningEvent
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const moment = require("moment");
@@ -3264,6 +3256,9 @@ const eventStatusType_1 = require("../eventStatusType");
 const eventType_1 = require("../eventType");
 /**
  * COAの作品抽出結果からFilmオブジェクトを作成する
+ * @export
+ * @function
+ * @memberof event.screeningEvent
  */
 function createFromCOA(params) {
     const endDate = (moment(`${params.filmFromCOA.dateEnd} +09:00`, 'YYYYMMDD Z').isValid())
@@ -3320,12 +3315,11 @@ function createIdentifier(theaterCode, titleCode, titleBranchNum) {
 }
 exports.createIdentifier = createIdentifier;
 
-},{"../creativeWorkType":40,"../eventStatusType":43,"../eventType":44,"moment":102}],47:[function(require,module,exports){
+},{"../creativeWorkType":40,"../eventStatusType":43,"../eventType":44,"moment":103}],47:[function(require,module,exports){
 "use strict";
 /**
  * 通知グループ
- *
- * @namespace factory/notificationGroup
+ * @namespace notificationGroup
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 var NotificationGroup;
@@ -3342,7 +3336,7 @@ exports.default = NotificationGroup;
 /**
  * email notification factory
  * Eメール通知ファクトリー
- * @namespace factory/notification/email
+ * @namespace notification.email
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const _ = require("underscore");
@@ -3355,40 +3349,40 @@ const notificationGroup_1 = require("../notificationGroup");
  * Eメール通知オブジェクトを作成する
  * @export
  * @function
- * @memberof factory/notification/email
+ * @memberof notification.email
  */
-function create(args) {
-    if (_.isEmpty(args.data.from))
+function create(params) {
+    if (_.isEmpty(params.data.from))
         throw new argumentNull_1.default('from');
-    if (_.isEmpty(args.data.to))
+    if (_.isEmpty(params.data.to))
         throw new argumentNull_1.default('to');
-    if (_.isEmpty(args.data.subject))
+    if (_.isEmpty(params.data.subject))
         throw new argumentNull_1.default('subject');
-    if (_.isEmpty(args.data.content))
+    if (_.isEmpty(params.data.content))
         throw new argumentNull_1.default('content');
-    if (!validator.isEmail(args.data.from))
+    if (!validator.isEmail(params.data.from))
         throw new argument_1.default('from', 'from should be email');
-    if (!validator.isEmail(args.data.to))
+    if (!validator.isEmail(params.data.to))
         throw new argument_1.default('to', 'to should be email');
-    if (args.data.send_at !== undefined) {
-        if (!_.isDate(args.data.send_at))
+    if (params.data.send_at !== undefined) {
+        if (!_.isDate(params.data.send_at))
             throw new argument_1.default('send_at', 'send_at should be Date');
     }
     // tslint:disable-next-line:no-suspicious-comment
     // TODO sendgridの仕様上72時間後までしか設定できないのでバリデーション追加するかもしれない
     return {
-        id: args.id,
+        id: params.id,
         group: notificationGroup_1.default.EMAIL,
-        data: args.data
+        data: params.data
     };
 }
 exports.create = create;
 
-},{"../../error/argument":24,"../../error/argumentNull":25,"../notificationGroup":47,"underscore":120,"validator":121}],49:[function(require,module,exports){
+},{"../../error/argument":24,"../../error/argumentNull":25,"../notificationGroup":47,"underscore":121,"validator":122}],49:[function(require,module,exports){
 "use strict";
 /**
  * offer factory
- * @namespace factory/offer
+ * @namespace offer
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
@@ -3404,6 +3398,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const argument_1 = require("../error/argument");
+const notImplemented_1 = require("../error/notImplemented");
+const action_1 = require("./action");
 const authorize_1 = require("./action/authorize");
 const orderStatus_1 = require("./orderStatus");
 const priceCurrency_1 = require("./priceCurrency");
@@ -3419,15 +3415,21 @@ const reservationStatusType_1 = require("./reservationStatusType");
 // tslint:disable-next-line:max-func-body-length
 function createFromPlaceOrderTransaction(params) {
     // seatReservation exists?
-    const seatReservationAuthorizeAction = params.transaction.object.seatReservation;
-    if (seatReservationAuthorizeAction === undefined) {
-        throw new argument_1.default('transaction', 'seat reservation does not exist');
+    const seatReservationAuthorizeActions = params.transaction.object.authorizeActions
+        .filter((action) => action.actionStatus === action_1.ActionStatusType.CompletedActionStatus)
+        .filter((action) => action.purpose.typeOf === authorize_1.AuthorizeActionPurpose.SeatReservation);
+    if (seatReservationAuthorizeActions.length === 0) {
+        throw new argument_1.default('transaction', 'Seat reservation does not exist.');
     }
+    if (seatReservationAuthorizeActions.length > 1) {
+        throw new notImplemented_1.default('Number of seat reservation authorizeAction must be 1.');
+    }
+    const seatReservationAuthorizeAction = seatReservationAuthorizeActions[0];
     if (seatReservationAuthorizeAction.result === undefined) {
-        throw new argument_1.default('transaction', 'seat reservation result does not exist');
+        throw new argument_1.default('transaction', 'Seat reservation result does not exist.');
     }
     if (params.transaction.object.customerContact === undefined) {
-        throw new argument_1.default('transaction', 'customer contact does not exist');
+        throw new argument_1.default('transaction', 'Customer contact does not exist');
     }
     const cutomerContact = params.transaction.object.customerContact;
     const orderInquiryKey = {
@@ -3437,37 +3439,28 @@ function createFromPlaceOrderTransaction(params) {
     };
     // 結果作成
     const discounts = [];
-    params.transaction.object.discountInfos.forEach((discountInfo) => {
-        switch (discountInfo.purpose.typeOf) {
-            case authorize_1.AuthorizeActionPurpose.Mvtk:
-                const discountCode = discountInfo.object.seatInfoSyncIn.knyknrNoInfo.map((knshInfo) => knshInfo.knyknrNo).join(',');
-                discounts.push({
-                    name: 'ムビチケカード',
-                    discount: discountInfo.result.price,
-                    discountCode: discountCode,
-                    discountCurrency: priceCurrency_1.default.JPY
-                });
-                break;
-            default:
-                break;
-        }
+    params.transaction.object.authorizeActions
+        .filter((action) => action.actionStatus === action_1.ActionStatusType.CompletedActionStatus)
+        .filter((action) => action.purpose.typeOf === authorize_1.AuthorizeActionPurpose.Mvtk)
+        .forEach((mvtkAuthorizeAction) => {
+        const discountCode = mvtkAuthorizeAction.object.seatInfoSyncIn.knyknrNoInfo.map((knshInfo) => knshInfo.knyknrNo).join(',');
+        discounts.push({
+            name: 'ムビチケカード',
+            discount: mvtkAuthorizeAction.result.price,
+            discountCode: discountCode,
+            discountCurrency: priceCurrency_1.default.JPY
+        });
     });
     const paymentMethods = [];
-    params.transaction.object.paymentInfos.forEach((paymentInfo) => {
-        switch (paymentInfo.purpose.typeOf) {
-            case authorize_1.AuthorizeActionPurpose.CreditCard:
-                if (paymentInfo.result === undefined) {
-                    throw new argument_1.default('transaction', 'paymentInfo result does not exist');
-                }
-                paymentMethods.push({
-                    name: 'クレジットカード',
-                    paymentMethod: 'CreditCard',
-                    paymentMethodId: paymentInfo.result.execTranResult.orderId
-                });
-                break;
-            default:
-                break;
-        }
+    params.transaction.object.authorizeActions
+        .filter((action) => action.actionStatus === action_1.ActionStatusType.CompletedActionStatus)
+        .filter((action) => action.purpose.typeOf === authorize_1.AuthorizeActionPurpose.CreditCard)
+        .forEach((creditCardAuthorizeAction) => {
+        paymentMethods.push({
+            name: 'クレジットカード',
+            paymentMethod: 'CreditCard',
+            paymentMethodId: creditCardAuthorizeAction.result.execTranResult.orderId
+        });
     });
     const seller = params.transaction.seller;
     const customer = Object.assign({
@@ -3530,12 +3523,11 @@ function createFromPlaceOrderTransaction(params) {
 }
 exports.createFromPlaceOrderTransaction = createFromPlaceOrderTransaction;
 
-},{"../error/argument":24,"./action/authorize":34,"./orderStatus":51,"./priceCurrency":62,"./reservation/event":65,"./reservationStatusType":64}],51:[function(require,module,exports){
+},{"../error/argument":24,"../error/notImplemented":28,"./action":33,"./action/authorize":34,"./orderStatus":51,"./priceCurrency":62,"./reservation/event":65,"./reservationStatusType":64}],51:[function(require,module,exports){
 "use strict";
 /**
  * 注文ステータス
- *
- * @namespace factory/orderStatus
+ * @namespace orderStatus
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 var OrderStatus;
@@ -3555,20 +3547,19 @@ exports.default = OrderStatus;
 "use strict";
 /**
  * 組織ファクトリー
- *
- * @namespace factory/organization
+ * @namespace organization
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-function create(args) {
+function create(params) {
     return {
-        id: (args.id === undefined) ? '' : args.id,
-        identifier: args.identifier,
-        name: args.name,
-        legalName: (args.legalName === undefined) ? { ja: '', en: '' } : args.legalName,
-        typeOf: args.typeOf,
-        location: args.location,
-        telephone: args.telephone,
-        url: (args.url !== undefined) ? args.url.toString() : undefined
+        id: (params.id === undefined) ? '' : params.id,
+        identifier: params.identifier,
+        name: params.name,
+        legalName: (params.legalName === undefined) ? { ja: '', en: '' } : params.legalName,
+        typeOf: params.typeOf,
+        location: params.location,
+        telephone: params.telephone,
+        url: (params.url !== undefined) ? params.url.toString() : undefined
     };
 }
 exports.create = create;
@@ -3577,8 +3568,7 @@ exports.create = create;
 "use strict";
 /**
  * 企業識別子
- *
- * @namespace factory/organizationIdentifier/corporation
+ * @namespace organizationIdentifier.corporation
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 var CorporationOrganizationIdentifier;
@@ -3591,8 +3581,7 @@ exports.default = CorporationOrganizationIdentifier;
 "use strict";
 /**
  * 組織タイプ
- *
- * @namespace factory/organizationType
+ * @namespace organizationType
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 var OrganizationType;
@@ -3606,21 +3595,20 @@ exports.default = OrganizationType;
 "use strict";
 /**
  * 企業ファクトリー
- *
- * @namespace factory/organization/corporation
+ * @namespace organization.corporation
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const OrganizationFactory = require("../organization");
 const organizationType_1 = require("../organizationType");
-function create(args) {
+function create(params) {
     const organization = OrganizationFactory.create({
-        identifier: args.identifier,
-        name: args.name,
-        legalName: args.legalName,
+        identifier: params.identifier,
+        name: params.name,
+        legalName: params.legalName,
         typeOf: organizationType_1.default.Corporation
     });
     return Object.assign({}, organization, {
-        identifier: args.identifier
+        identifier: params.identifier
     });
 }
 exports.create = create;
@@ -3629,25 +3617,24 @@ exports.create = create;
 "use strict";
 /**
  * 劇場組織ファクトリー
- *
- * @namespace factory/organization/movieTheater
+ * @namespace organization.movieTheater
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const OrganizationFactory = require("../organization");
 const organizationType_1 = require("../organizationType");
-function create(args) {
-    const identifier = `MovieTheater-${args.branchCode}`;
+function create(params) {
+    const identifier = `MovieTheater-${params.branchCode}`;
     return Object.assign({}, OrganizationFactory.create({
         identifier: identifier,
-        name: args.name,
+        name: params.name,
         typeOf: organizationType_1.default.MovieTheater
     }), {
-        branchCode: args.branchCode,
-        gmoInfo: args.gmoInfo,
-        parentOrganization: args.parentOrganization,
-        location: args.location,
-        telephone: args.telephone,
-        url: args.url
+        branchCode: params.branchCode,
+        gmoInfo: params.gmoInfo,
+        parentOrganization: params.parentOrganization,
+        location: params.location,
+        telephone: params.telephone,
+        url: params.url
     });
 }
 exports.create = create;
@@ -3657,25 +3644,25 @@ exports.create = create;
 /**
  * ownershipInfo factory
  *
- * @namespace factory/ownershipInfo
+ * @namespace ownershipInfo
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * create ownershipInfo
  * @function
- * @memberof factory/ownershipInfo
+ * @memberof ownershipInfo
  */
-function create(args) {
+function create(params) {
     return {
         typeOf: 'OwnershipInfo',
         // tslint:disable-next-line:no-suspicious-comment
         // TODO 所有権の固有値仕様を決定
-        identifier: `Reservation-${args.typeOfGood.reservationNumber}`,
-        ownedBy: args.ownedBy,
-        acquiredFrom: args.acquiredFrom,
-        ownedFrom: args.ownedFrom,
-        ownedThrough: args.ownedThrough,
-        typeOfGood: args.typeOfGood
+        identifier: `Reservation-${params.typeOfGood.reservationNumber}`,
+        ownedBy: params.ownedBy,
+        acquiredFrom: params.acquiredFrom,
+        ownedFrom: params.ownedFrom,
+        ownedThrough: params.ownedThrough,
+        typeOfGood: params.typeOfGood
     };
 }
 exports.create = create;
@@ -3684,7 +3671,7 @@ exports.create = create;
 "use strict";
 /**
  * credit card factory
- * @namespace factory/paymentMethod/paymentCard/creditCard
+ * @namespace paymentMethod.paymentCard.creditCard
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -3692,7 +3679,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @export
  * @param {GMO.services.card.ISearchCardResult} searchCardResult GMOカード検索結果
  * @returns {ICheckedCard} 有効性確認済みカード
- * @memberof factory/paymentMethod/paymentCard/creditCard
+ * @memberof paymentMethod.paymentCard.creditCard
  */
 function createCheckedCardFromGMOSearchCardResult(searchCardResult) {
     return {
@@ -3715,7 +3702,7 @@ exports.createCheckedCardFromGMOSearchCardResult = createCheckedCardFromGMOSearc
  * @param {string} params.expire 有効期限 名義人
  * @param {string} params.holderName
  * @returns {IUncheckedCardRaw} 生の有効性確認前GMOカード
- * @memberof factory/paymentMethod/paymentCard/creditCard
+ * @memberof paymentMethod.paymentCard.creditCard
  */
 function createUncheckedCardRaw(params) {
     return params;
@@ -3726,7 +3713,7 @@ exports.createUncheckedCardRaw = createUncheckedCardRaw;
  * @export
  * @param {string} params.token
  * @returns {IUncheckedCardTokenized} トークン化有効性確認前GMOカード
- * @memberof factory/paymentMethod/paymentCard/creditCard
+ * @memberof paymentMethod.paymentCard.creditCard
  */
 function createUncheckedCardTokenized(params) {
     return params;
@@ -3738,7 +3725,7 @@ exports.createUncheckedCardTokenized = createUncheckedCardTokenized;
 /**
  * person factory
  * 人物ファクトリー
- * @namespace factory/person
+ * @namespace person
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
@@ -3746,8 +3733,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 "use strict";
 /**
  * 場所タイプ
- *
- * @namespace factory/placeType
+ * @namespace placeType
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 var PlaceType;
@@ -3764,7 +3750,7 @@ exports.default = PlaceType;
 /**
  * 劇場ファクトリー
  *
- * @namespace factory/place/movieTheater
+ * @namespace place.movieTheater
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const placeType_1 = require("../placeType");
@@ -3774,7 +3760,7 @@ const placeType_1 = require("../placeType");
  * @param {COA.services.master.TheaterResult} theaterFromCOA
  * @param {COA.services.master.IScreenResult[]} screensFromCOA
  * @returns {IPlace}
- * @memberof factory/place/movieTheater
+ * @memberof place.movieTheater
  */
 function createFromCOA(theaterFromCOA, screensFromCOA) {
     const identifier = `MovieTheater-${theaterFromCOA.theaterCode}`;
@@ -3799,7 +3785,7 @@ exports.createFromCOA = createFromCOA;
  *
  * @param {COA.services.master.ScreenResult} screenFromCOA
  * @returns {IScreeningRoom}
- * @memberof factory/place/movieTheater
+ * @memberof place.movieTheater
  */
 function createScreeningRoomFromCOA(screenFromCOA) {
     const sections = [];
@@ -3841,7 +3827,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * price currency
  * The currency (in 3-letter ISO 4217 format) of the price or a price component,
  * when attached to PriceSpecification and its subtypes.
- * @enum
+ * @enum priceCurrency
  */
 var PriceCurrency;
 (function (PriceCurrency) {
@@ -3853,7 +3839,7 @@ exports.default = PriceCurrency;
 "use strict";
 /**
  * reservation factory
- * @namespace factory/reservation
+ * @namespace reservation
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 var ReservationType;
@@ -3864,7 +3850,7 @@ var ReservationType;
  * create reservation object
  * @export
  * @function
- * @memberof factory/reservation
+ * @memberof reservation
  */
 function create(params) {
     return Object.assign({}, params, {
@@ -3878,7 +3864,7 @@ exports.create = create;
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Enumerated status values for Reservation.
- * @enum {ReservationStatusType}
+ * @enum reservationStatusType
  */
 var ReservationStatusType;
 (function (ReservationStatusType) {
@@ -3909,7 +3895,7 @@ exports.default = ReservationStatusType;
 "use strict";
 /**
  * event reservation factory
- * @namespace factory/reservation/event
+ * @namespace reservation.event
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const reservation_1 = require("../reservation");
@@ -3981,69 +3967,65 @@ exports.createFromCOATmpReserve = createFromCOATmpReserve;
 "use strict";
 /**
  * タスクファクトリー
- *
- * @namespace factory/task
+ * @namespace task
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const _ = require("underscore");
 const argument_1 = require("../error/argument");
 const argumentNull_1 = require("../error/argumentNull");
-function create(args) {
-    if (_.isEmpty(args.status)) {
+function createAttributes(params) {
+    if (_.isEmpty(params.status)) {
         throw new argumentNull_1.default('status');
     }
-    if (!_.isDate(args.runsAt)) {
+    if (!_.isDate(params.runsAt)) {
         throw new argument_1.default('runsAt', 'runsAt should be Date');
     }
-    if (!_.isNumber(args.remainingNumberOfTries)) {
+    if (!_.isNumber(params.remainingNumberOfTries)) {
         throw new argument_1.default('remainingNumberOfTries', 'remainingNumberOfTries should be number');
     }
-    if (!_.isNull(args.lastTriedAt) && !_.isDate(args.lastTriedAt)) {
+    if (!_.isNull(params.lastTriedAt) && !_.isDate(params.lastTriedAt)) {
         throw new argument_1.default('lastTriedAt', 'lastTriedAt should be Date or null');
     }
-    if (!_.isNumber(args.numberOfTried)) {
+    if (!_.isNumber(params.numberOfTried)) {
         throw new argument_1.default('numberOfTried', 'numberOfTried should be number');
     }
-    if (!_.isArray(args.executionResults)) {
+    if (!_.isArray(params.executionResults)) {
         throw new argument_1.default('executionResults', 'executionResults should be array');
     }
     return {
-        id: args.id,
-        name: args.name,
-        status: args.status,
-        runsAt: args.runsAt,
-        remainingNumberOfTries: args.remainingNumberOfTries,
-        lastTriedAt: args.lastTriedAt,
-        numberOfTried: args.numberOfTried,
-        executionResults: args.executionResults,
-        data: args.data
+        name: params.name,
+        status: params.status,
+        runsAt: params.runsAt,
+        remainingNumberOfTries: params.remainingNumberOfTries,
+        lastTriedAt: params.lastTriedAt,
+        numberOfTried: params.numberOfTried,
+        executionResults: params.executionResults,
+        data: params.data
     };
 }
-exports.create = create;
+exports.createAttributes = createAttributes;
 
-},{"../error/argument":24,"../error/argumentNull":25,"underscore":120}],67:[function(require,module,exports){
+},{"../error/argument":24,"../error/argumentNull":25,"underscore":121}],67:[function(require,module,exports){
 "use strict";
 /**
  * タスク実行結果ファクトリー
- *
- * @namespace factory/taskExecutionResult
+ * @namespace taskExecutionResult
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-function create(args) {
+function createAttributes(params) {
     return {
-        id: args.id,
-        executedAt: args.executedAt,
-        error: args.error
+        executedAt: params.executedAt,
+        error: params.error
     };
 }
-exports.create = create;
+exports.createAttributes = createAttributes;
 
 },{}],68:[function(require,module,exports){
 "use strict";
 /**
  * task name
  * タスク名
- * @namespace factory/taskName
+ * @namespace taskName
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 var TaskName;
@@ -4056,6 +4038,7 @@ var TaskName;
     TaskName["SettleCreditCard"] = "settleCreditCard";
     TaskName["SettleMvtk"] = "settleMvtk";
     TaskName["CreateOrder"] = "createOrder";
+    TaskName["CreateOwnershipInfos"] = "createOwnershipInfos";
 })(TaskName || (TaskName = {}));
 exports.default = TaskName;
 
@@ -4064,7 +4047,7 @@ exports.default = TaskName;
 /**
  * タスクステータス
  *
- * @namespace factory/taskStatus
+ * @namespace taskStatus
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 var TaskStatus;
@@ -4092,126 +4075,134 @@ exports.default = TaskStatus;
 "use strict";
 /**
  * クレジットカード承認解除タスクファクトリー
- * @namespace factory/task/cancelCreditCard
+ * @namespace task.cancelCreditCard
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const TaskFactory = require("../task");
 const taskName_1 = require("../taskName");
-function create(args) {
-    return TaskFactory.create(Object.assign({}, args, { name: taskName_1.default.CancelCreditCard }));
+function createAttributes(params) {
+    return TaskFactory.createAttributes(Object.assign({}, params, { name: taskName_1.default.CancelCreditCard }));
 }
-exports.create = create;
+exports.createAttributes = createAttributes;
 
 },{"../task":66,"../taskName":68}],71:[function(require,module,exports){
 "use strict";
 /**
  * ムビチケ承認解除タスクファクトリー
- *
- * @namespace factory/task/cancelMvtk
+ * @namespace task.cancelMvtk
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const TaskFactory = require("../task");
 const taskName_1 = require("../taskName");
-function create(args) {
-    return TaskFactory.create(Object.assign({}, args, { name: taskName_1.default.CancelMvtk }));
+function createAttributes(params) {
+    return TaskFactory.createAttributes(Object.assign({}, params, { name: taskName_1.default.CancelMvtk }));
 }
-exports.create = create;
+exports.createAttributes = createAttributes;
 
 },{"../task":66,"../taskName":68}],72:[function(require,module,exports){
 "use strict";
 /**
  * 座席予約承認解除タスクファクトリー
- *
- * @namespace factory/task/cancelSeatReservation
+ * @namespace task.cancelSeatReservation
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const TaskFactory = require("../task");
 const taskName_1 = require("../taskName");
-function create(args) {
-    return TaskFactory.create(Object.assign({}, args, { name: taskName_1.default.CancelSeatReservation }));
+function createAttributes(params) {
+    return TaskFactory.createAttributes(Object.assign({}, params, { name: taskName_1.default.CancelSeatReservation }));
 }
-exports.create = create;
+exports.createAttributes = createAttributes;
 
 },{"../task":66,"../taskName":68}],73:[function(require,module,exports){
 "use strict";
 /**
  * 注文作成タスクファクトリー
- *
- * @namespace factory/task/createOrder
+ * @namespace task.createOrder
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const TaskFactory = require("../task");
 const taskName_1 = require("../taskName");
-function create(args) {
-    return TaskFactory.create(Object.assign({}, args, { name: taskName_1.default.CreateOrder }));
+function createAttributes(params) {
+    return TaskFactory.createAttributes(Object.assign({}, params, { name: taskName_1.default.CreateOrder }));
 }
-exports.create = create;
+exports.createAttributes = createAttributes;
 
 },{"../task":66,"../taskName":68}],74:[function(require,module,exports){
 "use strict";
 /**
- * メール送信タスクファクトリー
- *
- * @namespace factory/task/sendEmailNotification
+ * 所有権作成タスクファクトリー
+ * @namespace task.createOwnershipInfos
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const TaskFactory = require("../task");
 const taskName_1 = require("../taskName");
-function create(args) {
-    return TaskFactory.create(Object.assign({}, args, { name: taskName_1.default.SendEmailNotification }));
+function createAttributes(params) {
+    return TaskFactory.createAttributes(Object.assign({}, params, { name: taskName_1.default.CreateOwnershipInfos }));
 }
-exports.create = create;
+exports.createAttributes = createAttributes;
 
 },{"../task":66,"../taskName":68}],75:[function(require,module,exports){
 "use strict";
 /**
- * クレジットカード承認資産移動タスクファクトリー
- * @namespace factory/task/settleCreditCard
+ * メール送信タスクファクトリー
+ * @namespace task.sendEmailNotification
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const TaskFactory = require("../task");
 const taskName_1 = require("../taskName");
-function create(args) {
-    return TaskFactory.create(Object.assign({}, args, { name: taskName_1.default.SettleCreditCard }));
+function createAttributes(params) {
+    return TaskFactory.createAttributes(Object.assign({}, params, { name: taskName_1.default.SendEmailNotification }));
 }
-exports.create = create;
+exports.createAttributes = createAttributes;
 
 },{"../task":66,"../taskName":68}],76:[function(require,module,exports){
 "use strict";
 /**
- * ムビチケ承認資産移動タスクファクトリー
- *
- * @namespace factory/task/settleMvtk
+ * クレジットカード承認資産移動タスクファクトリー
+ * @namespace task.settleCreditCard
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const TaskFactory = require("../task");
 const taskName_1 = require("../taskName");
-function create(args) {
-    return TaskFactory.create(Object.assign({}, args, { name: taskName_1.default.SettleMvtk }));
+function createAttributes(params) {
+    return TaskFactory.createAttributes(Object.assign({}, params, { name: taskName_1.default.SettleCreditCard }));
 }
-exports.create = create;
+exports.createAttributes = createAttributes;
 
 },{"../task":66,"../taskName":68}],77:[function(require,module,exports){
 "use strict";
 /**
- * 座席予約承認資産移動ファクトリー
- *
- * @namespace factory/task/settleSeatReservation
+ * ムビチケ承認資産移動タスクファクトリー
+ * @namespace task.settleMvtk
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const TaskFactory = require("../task");
 const taskName_1 = require("../taskName");
-function create(args) {
-    return TaskFactory.create(Object.assign({}, args, { name: taskName_1.default.SettleSeatReservation }));
+function createAttributes(params) {
+    return TaskFactory.createAttributes(Object.assign({}, params, { name: taskName_1.default.SettleMvtk }));
 }
-exports.create = create;
+exports.createAttributes = createAttributes;
 
 },{"../task":66,"../taskName":68}],78:[function(require,module,exports){
 "use strict";
 /**
+ * 座席予約承認資産移動ファクトリー
+ * @namespace task.settleSeatReservation
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+const TaskFactory = require("../task");
+const taskName_1 = require("../taskName");
+function createAttributes(params) {
+    return TaskFactory.createAttributes(Object.assign({}, params, { name: taskName_1.default.SettleSeatReservation }));
+}
+exports.createAttributes = createAttributes;
+
+},{"../task":66,"../taskName":68}],79:[function(require,module,exports){
+"use strict";
+/**
  * transaction factory
  * 取引ファクトリー
- * @namespace factory/transaction
+ * @namespace transaction
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const _ = require("underscore");
@@ -4223,63 +4214,69 @@ const transactionTasksExportationStatus_1 = require("./transactionTasksExportati
  * @export
  * @function
  * @returns {ITransaction} 取引
- * @memberof factory/transaction
+ * @memberof transaction
  */
-function create(args) {
-    if (_.isEmpty(args.status))
+function createAttributes(params) {
+    if (_.isEmpty(params.status))
         throw new argumentNull_1.default('status');
-    if (!_.isDate(args.expires))
+    if (!_.isDate(params.expires))
         throw new argument_1.default('expires', 'expires should be Date');
     return {
-        id: args.id,
-        typeOf: args.typeOf,
-        status: args.status,
-        agent: args.agent,
-        result: args.result,
-        error: args.error,
-        object: args.object,
-        expires: args.expires,
-        startDate: args.startDate,
-        endDate: args.endDate,
-        tasksExportedAt: args.tasksExportedAt,
+        typeOf: params.typeOf,
+        status: params.status,
+        agent: params.agent,
+        result: params.result,
+        error: params.error,
+        object: params.object,
+        expires: params.expires,
+        startDate: params.startDate,
+        endDate: params.endDate,
+        tasksExportedAt: params.tasksExportedAt,
         // tslint:disable-next-line:max-line-length
-        tasksExportationStatus: (args.tasksExportationStatus === undefined) ? transactionTasksExportationStatus_1.default.Unexported : args.tasksExportationStatus,
-        tasks: (args.tasks === undefined) ? [] : args.tasks
+        tasksExportationStatus: (params.tasksExportationStatus === undefined) ? transactionTasksExportationStatus_1.default.Unexported : params.tasksExportationStatus,
+        tasks: (params.tasks === undefined) ? [] : params.tasks
     };
 }
-exports.create = create;
+exports.createAttributes = createAttributes;
 
-},{"../error/argument":24,"../error/argumentNull":25,"./transactionTasksExportationStatus":81,"underscore":120}],79:[function(require,module,exports){
+},{"../error/argument":24,"../error/argumentNull":25,"./transactionTasksExportationStatus":82,"underscore":121}],80:[function(require,module,exports){
 "use strict";
 /**
  * 取引スコープファクトリー
- *
- * @namespace factory/transactionScope
+ * @namespace transactionScope
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const moment = require("moment");
 const _ = require("underscore");
 const argument_1 = require("../error/argument");
-function create(args) {
-    if (!_.isDate(args.readyFrom))
+/**
+ * create transactionScope object
+ * @export
+ * @function
+ * @memberof transactionScope
+ */
+function create(params) {
+    if (!_.isDate(params.readyFrom))
         throw new argument_1.default('readyFrom', 'readyFrom should be Date');
-    if (!_.isDate(args.readyThrough))
+    if (!_.isDate(params.readyThrough))
         throw new argument_1.default('readyThrough', 'readyThrough should be Date');
     // untilはfromより遅くなければならない
-    if (args.readyThrough.getTime() <= args.readyFrom.getTime()) {
+    if (params.readyThrough.getTime() <= params.readyFrom.getTime()) {
         throw new argument_1.default('readyThrough', 'readyThrough must be later than readyFrom');
     }
     return {
-        readyFrom: args.readyFrom,
-        readyThrough: args.readyThrough,
-        client: args.client,
-        theater: args.theater
+        readyFrom: params.readyFrom,
+        readyThrough: params.readyThrough,
+        client: params.client,
+        theater: params.theater
     };
 }
 exports.create = create;
 /**
  * スコープを文字列に変換する
- *
+ * @export
+ * @function
+ * @memberof transactionScope
  * @param {ITransactionScope} scope アクションスコープ
  */
 function scope2String(scope) {
@@ -4296,12 +4293,11 @@ function scope2String(scope) {
 }
 exports.scope2String = scope2String;
 
-},{"../error/argument":24,"moment":102,"underscore":120}],80:[function(require,module,exports){
+},{"../error/argument":24,"moment":103,"underscore":121}],81:[function(require,module,exports){
 "use strict";
 /**
  * 取引ステータス
- *
- * @namespace factory/transactionStatusType
+ * @namespace transactionStatusType
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 var TransactionStatusType;
@@ -4313,12 +4309,11 @@ var TransactionStatusType;
 })(TransactionStatusType || (TransactionStatusType = {}));
 exports.default = TransactionStatusType;
 
-},{}],81:[function(require,module,exports){
+},{}],82:[function(require,module,exports){
 "use strict";
 /**
  * 取引タスクエクスポートステータス
- *
- * @namespace factory/transactionTasksExportationStatus
+ * @namespace transactionTasksExportationStatus
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 var TransactionTasksExportationStatus;
@@ -4338,12 +4333,11 @@ var TransactionTasksExportationStatus;
 })(TransactionTasksExportationStatus || (TransactionTasksExportationStatus = {}));
 exports.default = TransactionTasksExportationStatus;
 
-},{}],82:[function(require,module,exports){
+},{}],83:[function(require,module,exports){
 "use strict";
 /**
  * 取引タイプ
- *
- * @namespace factory/transactionType
+ * @namespace transactionType
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 var TransactionType;
@@ -4355,55 +4349,53 @@ var TransactionType;
 })(TransactionType || (TransactionType = {}));
 exports.default = TransactionType;
 
-},{}],83:[function(require,module,exports){
+},{}],84:[function(require,module,exports){
 "use strict";
 /**
  * placeOrder transaction factory
  * 注文取引ファクトリー
- * @namespace factory/transaction/placeOrder
+ * @namespace transaction.placeOrder
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-const TranstransactionFactory = require("../transaction");
+const TransactionFactory = require("../transaction");
 const transactionType_1 = require("../transactionType");
 /**
  * create placeOrderTransaction object.
  * 注文取引オブジェクトを生成する。
  * @export
- * @interface
- * @memberof factory/transaction/placeOrder
+ * @function
+ * @memberof transaction.placeOrder
  */
-function create(args) {
-    return Object.assign({}, TranstransactionFactory.create({
-        id: args.id,
+function createAttributes(params) {
+    return Object.assign({}, TransactionFactory.createAttributes({
         typeOf: transactionType_1.default.PlaceOrder,
-        status: args.status,
-        agent: args.agent,
-        result: args.result,
-        error: args.error,
-        object: args.object,
-        expires: args.expires,
-        startDate: args.startDate,
-        endDate: args.endDate,
-        tasksExportedAt: args.tasksExportedAt,
-        tasksExportationStatus: args.tasksExportationStatus,
-        tasks: args.tasks
+        status: params.status,
+        agent: params.agent,
+        result: params.result,
+        error: params.error,
+        object: params.object,
+        expires: params.expires,
+        startDate: params.startDate,
+        endDate: params.endDate,
+        tasksExportedAt: params.tasksExportedAt,
+        tasksExportationStatus: params.tasksExportationStatus,
+        tasks: params.tasks
     }), {
-        seller: args.seller,
-        object: args.object
+        seller: params.seller,
+        object: params.object
     });
 }
-exports.create = create;
+exports.createAttributes = createAttributes;
 
-},{"../transaction":78,"../transactionType":82}],84:[function(require,module,exports){
+},{"../transaction":79,"../transactionType":83}],85:[function(require,module,exports){
 "use strict";
 /**
  * URLファクトリー
- *
- * @namespace factory/url
+ * @namespace url
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
-},{}],85:[function(require,module,exports){
+},{}],86:[function(require,module,exports){
 "use strict";
 // tslint:disable:max-classes-per-file
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -4411,7 +4403,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * sskts-factory
  * @module
  */
-const action_1 = require("./factory/action");
+const ActionFactory = require("./factory/action");
 const AuthorizeActionFactory = require("./factory/action/authorize");
 const CreditCardAuthorizeActionFactory = require("./factory/action/authorize/creditCard");
 const MvtkAuthorizeActionFactory = require("./factory/action/authorize/mvtk");
@@ -4444,6 +4436,7 @@ const CancelCreditCardTaskFactory = require("./factory/task/cancelCreditCard");
 const CancelMvtkTaskFactory = require("./factory/task/cancelMvtk");
 const CancelSeatReservationTaskFactory = require("./factory/task/cancelSeatReservation");
 const CreateOrderTaskFactory = require("./factory/task/createOrder");
+const CreateOwnershipInfosTaskFactory = require("./factory/task/createOwnershipInfos");
 const SendEmailNotificationTaskFactory = require("./factory/task/sendEmailNotification");
 const SettleCreditCardTaskFactory = require("./factory/task/settleCreditCard");
 const SettleMvtkTaskFactory = require("./factory/task/settleMvtk");
@@ -4461,8 +4454,8 @@ const errorCode_1 = require("./errorCode");
 const errors = require("./errors");
 exports.errors = errors;
 exports.errorCode = errorCode_1.default;
-exports.actionStatusType = action_1.ActionStatusType;
-exports.actionType = action_1.ActionType;
+exports.actionStatusType = ActionFactory.ActionStatusType;
+exports.actionType = ActionFactory.ActionType;
 var action;
 (function (action) {
     let authorize;
@@ -4531,6 +4524,7 @@ var task;
     task.cancelMvtk = CancelMvtkTaskFactory;
     task.cancelSeatReservation = CancelSeatReservationTaskFactory;
     task.createOrder = CreateOrderTaskFactory;
+    task.createOwnershipInfos = CreateOwnershipInfosTaskFactory;
     task.sendEmailNotification = SendEmailNotificationTaskFactory;
     task.settleCreditCard = SettleCreditCardTaskFactory;
     task.settleMvtk = SettleMvtkTaskFactory;
@@ -4549,7 +4543,7 @@ exports.transactionTasksExportationStatus = transactionTasksExportationStatus_1.
 exports.transactionType = transactionType_1.default;
 exports.url = URLFactory;
 
-},{"./errorCode":22,"./errors":32,"./factory/action":33,"./factory/action/authorize":34,"./factory/action/authorize/creditCard":35,"./factory/action/authorize/mvtk":36,"./factory/action/authorize/seatReservation":37,"./factory/clientEvent":38,"./factory/clientUser":39,"./factory/creativeWork/movie":41,"./factory/creativeWorkType":40,"./factory/event/individualScreeningEvent":45,"./factory/event/screeningEvent":46,"./factory/eventType":44,"./factory/notification/email":48,"./factory/notificationGroup":47,"./factory/offer":49,"./factory/order":50,"./factory/orderStatus":51,"./factory/organization/corporation":55,"./factory/organization/movieTheater":56,"./factory/organizationIdentifier/corporation":53,"./factory/organizationType":54,"./factory/ownershipInfo":57,"./factory/paymentMethod/paymentCard/creditCard":58,"./factory/person":59,"./factory/place/movieTheater":61,"./factory/placeType":60,"./factory/priceCurrency":62,"./factory/reservation/event":65,"./factory/reservationStatusType":64,"./factory/task/cancelCreditCard":70,"./factory/task/cancelMvtk":71,"./factory/task/cancelSeatReservation":72,"./factory/task/createOrder":73,"./factory/task/sendEmailNotification":74,"./factory/task/settleCreditCard":75,"./factory/task/settleMvtk":76,"./factory/task/settleSeatReservation":77,"./factory/taskExecutionResult":67,"./factory/taskName":68,"./factory/taskStatus":69,"./factory/transaction/placeOrder":83,"./factory/transactionScope":79,"./factory/transactionStatusType":80,"./factory/transactionTasksExportationStatus":81,"./factory/transactionType":82,"./factory/url":84}],86:[function(require,module,exports){
+},{"./errorCode":22,"./errors":32,"./factory/action":33,"./factory/action/authorize":34,"./factory/action/authorize/creditCard":35,"./factory/action/authorize/mvtk":36,"./factory/action/authorize/seatReservation":37,"./factory/clientEvent":38,"./factory/clientUser":39,"./factory/creativeWork/movie":41,"./factory/creativeWorkType":40,"./factory/event/individualScreeningEvent":45,"./factory/event/screeningEvent":46,"./factory/eventType":44,"./factory/notification/email":48,"./factory/notificationGroup":47,"./factory/offer":49,"./factory/order":50,"./factory/orderStatus":51,"./factory/organization/corporation":55,"./factory/organization/movieTheater":56,"./factory/organizationIdentifier/corporation":53,"./factory/organizationType":54,"./factory/ownershipInfo":57,"./factory/paymentMethod/paymentCard/creditCard":58,"./factory/person":59,"./factory/place/movieTheater":61,"./factory/placeType":60,"./factory/priceCurrency":62,"./factory/reservation/event":65,"./factory/reservationStatusType":64,"./factory/task/cancelCreditCard":70,"./factory/task/cancelMvtk":71,"./factory/task/cancelSeatReservation":72,"./factory/task/createOrder":73,"./factory/task/createOwnershipInfos":74,"./factory/task/sendEmailNotification":75,"./factory/task/settleCreditCard":76,"./factory/task/settleMvtk":77,"./factory/task/settleSeatReservation":78,"./factory/taskExecutionResult":67,"./factory/taskName":68,"./factory/taskStatus":69,"./factory/transaction/placeOrder":84,"./factory/transactionScope":80,"./factory/transactionStatusType":81,"./factory/transactionTasksExportationStatus":82,"./factory/transactionType":83,"./factory/url":85}],87:[function(require,module,exports){
 'use strict'
 
 exports.byteLength = byteLength
@@ -4665,7 +4659,7 @@ function fromByteArray (uint8) {
   return parts.join('')
 }
 
-},{}],87:[function(require,module,exports){
+},{}],88:[function(require,module,exports){
 
 /**
  * Expose `Emitter`.
@@ -4830,7 +4824,7 @@ Emitter.prototype.hasListeners = function(event){
   return !! this.listeners(event).length;
 };
 
-},{}],88:[function(require,module,exports){
+},{}],89:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -5591,7 +5585,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS;
 
 }));
-},{}],89:[function(require,module,exports){
+},{}],90:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -5791,7 +5785,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS.SHA256;
 
 }));
-},{"./core":88}],90:[function(require,module,exports){
+},{"./core":89}],91:[function(require,module,exports){
 (function (process){
 /**
  * This is the web browser implementation of `debug()`.
@@ -5990,7 +5984,7 @@ function localstorage() {
 }
 
 }).call(this,require('_process'))
-},{"./debug":91,"_process":104}],91:[function(require,module,exports){
+},{"./debug":92,"_process":105}],92:[function(require,module,exports){
 
 /**
  * This is the common logic for both the Node.js and web browser
@@ -6217,7 +6211,7 @@ function coerce(val) {
   return val;
 }
 
-},{"ms":103}],92:[function(require,module,exports){
+},{"ms":104}],93:[function(require,module,exports){
 // Generated by CoffeeScript 1.10.0
 module.exports = {
   100: 'Continue',
@@ -6342,7 +6336,7 @@ module.exports = {
   NETWORK_AUTHENTICATION_REQUIRED: 511
 };
 
-},{}],93:[function(require,module,exports){
+},{}],94:[function(require,module,exports){
 (function (name, context, definition) {
   if (typeof module !== 'undefined' && module.exports) module.exports = definition();
   else if (typeof define === 'function' && define.amd) define(definition);
@@ -6382,7 +6376,7 @@ module.exports = {
 
 });
 
-},{}],94:[function(require,module,exports){
+},{}],95:[function(require,module,exports){
 var base64 = require('base64-js');
 
 function padding(str) {
@@ -6455,7 +6449,7 @@ module.exports = {
   decodeToHEX: decodeToHEX
 };
 
-},{"base64-js":86}],95:[function(require,module,exports){
+},{"base64-js":87}],96:[function(require,module,exports){
 function DummyCache() {}
 
 DummyCache.prototype.get = function () {
@@ -6471,7 +6465,7 @@ DummyCache.prototype.set = function () {
 
 module.exports = DummyCache;
 
-},{}],96:[function(require,module,exports){
+},{}],97:[function(require,module,exports){
 function ConfigurationError(message) {
   this.name = 'ConfigurationError';
   this.message = (message || '');
@@ -6489,7 +6483,7 @@ module.exports = {
   TokenValidationError: TokenValidationError
 };
 
-},{}],97:[function(require,module,exports){
+},{}],98:[function(require,module,exports){
 var urljoin = require('url-join');
 var base64 = require('./base64');
 var request = require('superagent');
@@ -6535,7 +6529,7 @@ module.exports = {
   getJWKS: getJWKS
 };
 
-},{"./base64":94,"superagent":113,"url-join":93}],98:[function(require,module,exports){
+},{"./base64":95,"superagent":114,"url-join":94}],99:[function(require,module,exports){
 /*
 Based on the work of Tom Wu
 http://www-cs-students.stanford.edu/~tjw/jsbn/
@@ -6614,7 +6608,7 @@ RSAVerifier.prototype.verify = function (msg, encsig) {
 
 module.exports = RSAVerifier;
 
-},{"crypto-js/sha256":89,"jsbn":101}],99:[function(require,module,exports){
+},{"crypto-js/sha256":90,"jsbn":102}],100:[function(require,module,exports){
 var RSAVerifier = require('./helpers/rsa-verifier');
 var base64 = require('./helpers/base64');
 var jwks = require('./helpers/jwks');
@@ -6864,7 +6858,7 @@ IdTokenVerifier.prototype.decode = function (token) {
 
 module.exports = IdTokenVerifier;
 
-},{"./helpers/base64":94,"./helpers/dummy-cache":95,"./helpers/error":96,"./helpers/jwks":97,"./helpers/rsa-verifier":98}],100:[function(require,module,exports){
+},{"./helpers/base64":95,"./helpers/dummy-cache":96,"./helpers/error":97,"./helpers/jwks":98,"./helpers/rsa-verifier":99}],101:[function(require,module,exports){
 // the whatwg-fetch polyfill installs the fetch() function
 // on the global object (window or self)
 //
@@ -6872,7 +6866,7 @@ module.exports = IdTokenVerifier;
 require('whatwg-fetch');
 module.exports = self.fetch.bind(self);
 
-},{"whatwg-fetch":189}],101:[function(require,module,exports){
+},{"whatwg-fetch":190}],102:[function(require,module,exports){
 (function(){
 
     // Copyright (c) 2005  Tom Wu
@@ -8231,7 +8225,7 @@ module.exports = self.fetch.bind(self);
 
 }).call(this);
 
-},{}],102:[function(require,module,exports){
+},{}],103:[function(require,module,exports){
 //! moment.js
 //! version : 2.18.1
 //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
@@ -12696,7 +12690,7 @@ return hooks;
 
 })));
 
-},{}],103:[function(require,module,exports){
+},{}],104:[function(require,module,exports){
 /**
  * Helpers.
  */
@@ -12850,7 +12844,7 @@ function plural(ms, n, name) {
   return Math.ceil(ms / n) + ' ' + name + 's';
 }
 
-},{}],104:[function(require,module,exports){
+},{}],105:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -13036,7 +13030,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],105:[function(require,module,exports){
+},{}],106:[function(require,module,exports){
 'use strict';
 
 var replace = String.prototype.replace;
@@ -13056,7 +13050,7 @@ module.exports = {
     RFC3986: 'RFC3986'
 };
 
-},{}],106:[function(require,module,exports){
+},{}],107:[function(require,module,exports){
 'use strict';
 
 var stringify = require('./stringify');
@@ -13069,7 +13063,7 @@ module.exports = {
     stringify: stringify
 };
 
-},{"./formats":105,"./parse":107,"./stringify":108}],107:[function(require,module,exports){
+},{"./formats":106,"./parse":108,"./stringify":109}],108:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -13245,7 +13239,7 @@ module.exports = function (str, opts) {
     return utils.compact(obj);
 };
 
-},{"./utils":109}],108:[function(require,module,exports){
+},{"./utils":110}],109:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -13457,7 +13451,7 @@ module.exports = function (object, opts) {
     return joined.length > 0 ? prefix + joined : '';
 };
 
-},{"./formats":105,"./utils":109}],109:[function(require,module,exports){
+},{"./formats":106,"./utils":110}],110:[function(require,module,exports){
 'use strict';
 
 var has = Object.prototype.hasOwnProperty;
@@ -13661,7 +13655,7 @@ exports.isBuffer = function isBuffer(obj) {
     return !!(obj.constructor && obj.constructor.isBuffer && obj.constructor.isBuffer(obj));
 };
 
-},{}],110:[function(require,module,exports){
+},{}],111:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -13747,7 +13741,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],111:[function(require,module,exports){
+},{}],112:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -13834,13 +13828,13 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],112:[function(require,module,exports){
+},{}],113:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":110,"./encode":111}],113:[function(require,module,exports){
+},{"./decode":111,"./encode":112}],114:[function(require,module,exports){
 /**
  * Root reference for iframes.
  */
@@ -14775,7 +14769,7 @@ request.put = function(url, data, fn){
   return req;
 };
 
-},{"./is-function":114,"./is-object":115,"./request-base":116,"./response-base":117,"./should-retry":118,"component-emitter":87}],114:[function(require,module,exports){
+},{"./is-function":115,"./is-object":116,"./request-base":117,"./response-base":118,"./should-retry":119,"component-emitter":88}],115:[function(require,module,exports){
 /**
  * Check if `fn` is a function.
  *
@@ -14792,7 +14786,7 @@ function isFunction(fn) {
 
 module.exports = isFunction;
 
-},{"./is-object":115}],115:[function(require,module,exports){
+},{"./is-object":116}],116:[function(require,module,exports){
 /**
  * Check if `obj` is an object.
  *
@@ -14807,7 +14801,7 @@ function isObject(obj) {
 
 module.exports = isObject;
 
-},{}],116:[function(require,module,exports){
+},{}],117:[function(require,module,exports){
 /**
  * Module of mixed-in functions shared between node and client code
  */
@@ -15400,7 +15394,7 @@ RequestBase.prototype._setTimeouts = function() {
   }
 }
 
-},{"./is-object":115}],117:[function(require,module,exports){
+},{"./is-object":116}],118:[function(require,module,exports){
 
 /**
  * Module dependencies.
@@ -15535,7 +15529,7 @@ ResponseBase.prototype._setStatusProperties = function(status){
     this.notFound = 404 == status;
 };
 
-},{"./utils":119}],118:[function(require,module,exports){
+},{"./utils":120}],119:[function(require,module,exports){
 var ERROR_CODES = [
   'ECONNRESET',
   'ETIMEDOUT',
@@ -15560,7 +15554,7 @@ module.exports = function shouldRetry(err, res) {
   return false;
 };
 
-},{}],119:[function(require,module,exports){
+},{}],120:[function(require,module,exports){
 
 /**
  * Return the mime type for the given `str`.
@@ -15629,7 +15623,7 @@ exports.cleanHeader = function(header, shouldStripCookie){
   }
   return header;
 };
-},{}],120:[function(require,module,exports){
+},{}],121:[function(require,module,exports){
 //     Underscore.js 1.8.3
 //     http://underscorejs.org
 //     (c) 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -17179,7 +17173,7 @@ exports.cleanHeader = function(header, shouldStripCookie){
   }
 }.call(this));
 
-},{}],121:[function(require,module,exports){
+},{}],122:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17516,7 +17510,7 @@ var validator = {
 
 exports.default = validator;
 module.exports = exports['default'];
-},{"./lib/blacklist":123,"./lib/contains":124,"./lib/equals":125,"./lib/escape":126,"./lib/isAfter":127,"./lib/isAlpha":128,"./lib/isAlphanumeric":129,"./lib/isAscii":130,"./lib/isBase64":131,"./lib/isBefore":132,"./lib/isBoolean":133,"./lib/isByteLength":134,"./lib/isCreditCard":135,"./lib/isCurrency":136,"./lib/isDataURI":137,"./lib/isDecimal":138,"./lib/isDivisibleBy":139,"./lib/isEmail":140,"./lib/isEmpty":141,"./lib/isFQDN":142,"./lib/isFloat":143,"./lib/isFullWidth":144,"./lib/isHalfWidth":145,"./lib/isHash":146,"./lib/isHexColor":147,"./lib/isHexadecimal":148,"./lib/isIP":149,"./lib/isISBN":150,"./lib/isISIN":151,"./lib/isISO8601":152,"./lib/isISRC":153,"./lib/isISSN":154,"./lib/isIn":155,"./lib/isInt":156,"./lib/isJSON":157,"./lib/isLatLong":158,"./lib/isLength":159,"./lib/isLowercase":160,"./lib/isMACAddress":161,"./lib/isMD5":162,"./lib/isMobilePhone":163,"./lib/isMongoId":164,"./lib/isMultibyte":165,"./lib/isNumeric":166,"./lib/isPostalCode":167,"./lib/isSurrogatePair":168,"./lib/isURL":169,"./lib/isUUID":170,"./lib/isUppercase":171,"./lib/isVariableWidth":172,"./lib/isWhitelisted":173,"./lib/ltrim":174,"./lib/matches":175,"./lib/normalizeEmail":176,"./lib/rtrim":177,"./lib/stripLow":178,"./lib/toBoolean":179,"./lib/toDate":180,"./lib/toFloat":181,"./lib/toInt":182,"./lib/trim":183,"./lib/unescape":184,"./lib/util/toString":187,"./lib/whitelist":188}],122:[function(require,module,exports){
+},{"./lib/blacklist":124,"./lib/contains":125,"./lib/equals":126,"./lib/escape":127,"./lib/isAfter":128,"./lib/isAlpha":129,"./lib/isAlphanumeric":130,"./lib/isAscii":131,"./lib/isBase64":132,"./lib/isBefore":133,"./lib/isBoolean":134,"./lib/isByteLength":135,"./lib/isCreditCard":136,"./lib/isCurrency":137,"./lib/isDataURI":138,"./lib/isDecimal":139,"./lib/isDivisibleBy":140,"./lib/isEmail":141,"./lib/isEmpty":142,"./lib/isFQDN":143,"./lib/isFloat":144,"./lib/isFullWidth":145,"./lib/isHalfWidth":146,"./lib/isHash":147,"./lib/isHexColor":148,"./lib/isHexadecimal":149,"./lib/isIP":150,"./lib/isISBN":151,"./lib/isISIN":152,"./lib/isISO8601":153,"./lib/isISRC":154,"./lib/isISSN":155,"./lib/isIn":156,"./lib/isInt":157,"./lib/isJSON":158,"./lib/isLatLong":159,"./lib/isLength":160,"./lib/isLowercase":161,"./lib/isMACAddress":162,"./lib/isMD5":163,"./lib/isMobilePhone":164,"./lib/isMongoId":165,"./lib/isMultibyte":166,"./lib/isNumeric":167,"./lib/isPostalCode":168,"./lib/isSurrogatePair":169,"./lib/isURL":170,"./lib/isUUID":171,"./lib/isUppercase":172,"./lib/isVariableWidth":173,"./lib/isWhitelisted":174,"./lib/ltrim":175,"./lib/matches":176,"./lib/normalizeEmail":177,"./lib/rtrim":178,"./lib/stripLow":179,"./lib/toBoolean":180,"./lib/toDate":181,"./lib/toFloat":182,"./lib/toInt":183,"./lib/trim":184,"./lib/unescape":185,"./lib/util/toString":188,"./lib/whitelist":189}],123:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17587,7 +17581,7 @@ for (var _locale, _i = 0; _i < arabicLocales.length; _i++) {
   alpha[_locale] = alpha.ar;
   alphanumeric[_locale] = alphanumeric.ar;
 }
-},{}],123:[function(require,module,exports){
+},{}],124:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17606,7 +17600,7 @@ function blacklist(str, chars) {
   return str.replace(new RegExp('[' + chars + ']+', 'g'), '');
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],124:[function(require,module,exports){
+},{"./util/assertString":186}],125:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17629,7 +17623,7 @@ function contains(str, elem) {
   return str.indexOf((0, _toString2.default)(elem)) >= 0;
 }
 module.exports = exports['default'];
-},{"./util/assertString":185,"./util/toString":187}],125:[function(require,module,exports){
+},{"./util/assertString":186,"./util/toString":188}],126:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17648,7 +17642,7 @@ function equals(str, comparison) {
   return str === comparison;
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],126:[function(require,module,exports){
+},{"./util/assertString":186}],127:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17667,7 +17661,7 @@ function escape(str) {
   return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#x27;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\//g, '&#x2F;').replace(/\\/g, '&#x5C;').replace(/`/g, '&#96;');
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],127:[function(require,module,exports){
+},{"./util/assertString":186}],128:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17694,7 +17688,7 @@ function isAfter(str) {
   return !!(original && comparison && original > comparison);
 }
 module.exports = exports['default'];
-},{"./toDate":180,"./util/assertString":185}],128:[function(require,module,exports){
+},{"./toDate":181,"./util/assertString":186}],129:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17720,7 +17714,7 @@ function isAlpha(str) {
   throw new Error('Invalid locale \'' + locale + '\'');
 }
 module.exports = exports['default'];
-},{"./alpha":122,"./util/assertString":185}],129:[function(require,module,exports){
+},{"./alpha":123,"./util/assertString":186}],130:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17746,7 +17740,7 @@ function isAlphanumeric(str) {
   throw new Error('Invalid locale \'' + locale + '\'');
 }
 module.exports = exports['default'];
-},{"./alpha":122,"./util/assertString":185}],130:[function(require,module,exports){
+},{"./alpha":123,"./util/assertString":186}],131:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17769,7 +17763,7 @@ function isAscii(str) {
   return ascii.test(str);
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],131:[function(require,module,exports){
+},{"./util/assertString":186}],132:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17795,7 +17789,7 @@ function isBase64(str) {
   return firstPaddingChar === -1 || firstPaddingChar === len - 1 || firstPaddingChar === len - 2 && str[len - 1] === '=';
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],132:[function(require,module,exports){
+},{"./util/assertString":186}],133:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17822,7 +17816,7 @@ function isBefore(str) {
   return !!(original && comparison && original < comparison);
 }
 module.exports = exports['default'];
-},{"./toDate":180,"./util/assertString":185}],133:[function(require,module,exports){
+},{"./toDate":181,"./util/assertString":186}],134:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17841,7 +17835,7 @@ function isBoolean(str) {
   return ['true', 'false', '1', '0'].indexOf(str) >= 0;
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],134:[function(require,module,exports){
+},{"./util/assertString":186}],135:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17875,7 +17869,7 @@ function isByteLength(str, options) {
   return len >= min && (typeof max === 'undefined' || len <= max);
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],135:[function(require,module,exports){
+},{"./util/assertString":186}],136:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -17921,7 +17915,7 @@ function isCreditCard(str) {
   return !!(sum % 10 === 0 ? sanitized : false);
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],136:[function(require,module,exports){
+},{"./util/assertString":186}],137:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18014,7 +18008,7 @@ function isCurrency(str, options) {
   return currencyRegex(options).test(str);
 }
 module.exports = exports['default'];
-},{"./util/assertString":185,"./util/merge":186}],137:[function(require,module,exports){
+},{"./util/assertString":186,"./util/merge":187}],138:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18035,7 +18029,7 @@ function isDataURI(str) {
   return dataURI.test(str);
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],138:[function(require,module,exports){
+},{"./util/assertString":186}],139:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18056,7 +18050,7 @@ function isDecimal(str) {
   return str !== '' && decimal.test(str);
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],139:[function(require,module,exports){
+},{"./util/assertString":186}],140:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18079,7 +18073,7 @@ function isDivisibleBy(str, num) {
   return (0, _toFloat2.default)(str) % parseInt(num, 10) === 0;
 }
 module.exports = exports['default'];
-},{"./toFloat":181,"./util/assertString":185}],140:[function(require,module,exports){
+},{"./toFloat":182,"./util/assertString":186}],141:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18169,7 +18163,7 @@ function isEmail(str, options) {
   return true;
 }
 module.exports = exports['default'];
-},{"./isByteLength":134,"./isFQDN":142,"./util/assertString":185,"./util/merge":186}],141:[function(require,module,exports){
+},{"./isByteLength":135,"./isFQDN":143,"./util/assertString":186,"./util/merge":187}],142:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18188,7 +18182,7 @@ function isEmpty(str) {
   return str.length === 0;
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],142:[function(require,module,exports){
+},{"./util/assertString":186}],143:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18250,7 +18244,7 @@ function isFDQN(str, options) {
   return true;
 }
 module.exports = exports['default'];
-},{"./util/assertString":185,"./util/merge":186}],143:[function(require,module,exports){
+},{"./util/assertString":186,"./util/merge":187}],144:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18275,7 +18269,7 @@ function isFloat(str, options) {
   return float.test(str) && (!options.hasOwnProperty('min') || str >= options.min) && (!options.hasOwnProperty('max') || str <= options.max) && (!options.hasOwnProperty('lt') || str < options.lt) && (!options.hasOwnProperty('gt') || str > options.gt);
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],144:[function(require,module,exports){
+},{"./util/assertString":186}],145:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18296,7 +18290,7 @@ function isFullWidth(str) {
   (0, _assertString2.default)(str);
   return fullWidth.test(str);
 }
-},{"./util/assertString":185}],145:[function(require,module,exports){
+},{"./util/assertString":186}],146:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18317,7 +18311,7 @@ function isHalfWidth(str) {
   (0, _assertString2.default)(str);
   return halfWidth.test(str);
 }
-},{"./util/assertString":185}],146:[function(require,module,exports){
+},{"./util/assertString":186}],147:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18353,7 +18347,7 @@ function isHash(str, algorithm) {
   return hash.test(str);
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],147:[function(require,module,exports){
+},{"./util/assertString":186}],148:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18374,7 +18368,7 @@ function isHexColor(str) {
   return hexcolor.test(str);
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],148:[function(require,module,exports){
+},{"./util/assertString":186}],149:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18395,7 +18389,7 @@ function isHexadecimal(str) {
   return hexadecimal.test(str);
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],149:[function(require,module,exports){
+},{"./util/assertString":186}],150:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18477,7 +18471,7 @@ function isIP(str) {
   return false;
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],150:[function(require,module,exports){
+},{"./util/assertString":186}],151:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18535,7 +18529,7 @@ function isISBN(str) {
   return false;
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],151:[function(require,module,exports){
+},{"./util/assertString":186}],152:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18584,7 +18578,7 @@ function isISIN(str) {
   return parseInt(str.substr(str.length - 1), 10) === (10000 - sum) % 10;
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],152:[function(require,module,exports){
+},{"./util/assertString":186}],153:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18608,7 +18602,7 @@ function isISO8601(str) {
   return iso8601.test(str);
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],153:[function(require,module,exports){
+},{"./util/assertString":186}],154:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18630,7 +18624,7 @@ function isISRC(str) {
   return isrc.test(str);
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],154:[function(require,module,exports){
+},{"./util/assertString":186}],155:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18689,7 +18683,7 @@ function isISSN(str) {
   return checksum % 11 === 0;
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],155:[function(require,module,exports){
+},{"./util/assertString":186}],156:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18729,7 +18723,7 @@ function isIn(str, options) {
   return false;
 }
 module.exports = exports['default'];
-},{"./util/assertString":185,"./util/toString":187}],156:[function(require,module,exports){
+},{"./util/assertString":186,"./util/toString":188}],157:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18763,7 +18757,7 @@ function isInt(str, options) {
   return regex.test(str) && minCheckPassed && maxCheckPassed && ltCheckPassed && gtCheckPassed;
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],157:[function(require,module,exports){
+},{"./util/assertString":186}],158:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18789,7 +18783,7 @@ function isJSON(str) {
   return false;
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],158:[function(require,module,exports){
+},{"./util/assertString":186}],159:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18813,7 +18807,7 @@ var lat = /^\(?[+-]?(90(\.0+)?|[1-8]?\d(\.\d+)?)$/;
 var long = /^\s?[+-]?(180(\.0+)?|1[0-7]\d(\.\d+)?|\d{1,2}(\.\d+)?)\)?$/;
 
 module.exports = exports['default'];
-},{"./util/assertString":185}],159:[function(require,module,exports){
+},{"./util/assertString":186}],160:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18848,7 +18842,7 @@ function isLength(str, options) {
   return len >= min && (typeof max === 'undefined' || len <= max);
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],160:[function(require,module,exports){
+},{"./util/assertString":186}],161:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18867,7 +18861,7 @@ function isLowercase(str) {
   return str === str.toLowerCase();
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],161:[function(require,module,exports){
+},{"./util/assertString":186}],162:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18888,7 +18882,7 @@ function isMACAddress(str) {
   return macAddress.test(str);
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],162:[function(require,module,exports){
+},{"./util/assertString":186}],163:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -18909,7 +18903,7 @@ function isMD5(str) {
   return md5.test(str);
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],163:[function(require,module,exports){
+},{"./util/assertString":186}],164:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19001,7 +18995,7 @@ function isMobilePhone(str, locale) {
   throw new Error('Invalid locale \'' + locale + '\'');
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],164:[function(require,module,exports){
+},{"./util/assertString":186}],165:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19024,7 +19018,7 @@ function isMongoId(str) {
   return (0, _isHexadecimal2.default)(str) && str.length === 24;
 }
 module.exports = exports['default'];
-},{"./isHexadecimal":148,"./util/assertString":185}],165:[function(require,module,exports){
+},{"./isHexadecimal":149,"./util/assertString":186}],166:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19047,7 +19041,7 @@ function isMultibyte(str) {
   return multibyte.test(str);
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],166:[function(require,module,exports){
+},{"./util/assertString":186}],167:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19068,7 +19062,7 @@ function isNumeric(str) {
   return numeric.test(str);
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],167:[function(require,module,exports){
+},{"./util/assertString":186}],168:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19144,7 +19138,7 @@ var patterns = {
 };
 
 var locales = exports.locales = Object.keys(patterns);
-},{"./util/assertString":185}],168:[function(require,module,exports){
+},{"./util/assertString":186}],169:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19165,7 +19159,7 @@ function isSurrogatePair(str) {
   return surrogatePair.test(str);
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],169:[function(require,module,exports){
+},{"./util/assertString":186}],170:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19313,7 +19307,7 @@ function isURL(url, options) {
   return true;
 }
 module.exports = exports['default'];
-},{"./isFQDN":142,"./isIP":149,"./util/assertString":185,"./util/merge":186}],170:[function(require,module,exports){
+},{"./isFQDN":143,"./isIP":150,"./util/assertString":186,"./util/merge":187}],171:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19342,7 +19336,7 @@ function isUUID(str) {
   return pattern && pattern.test(str);
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],171:[function(require,module,exports){
+},{"./util/assertString":186}],172:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19361,7 +19355,7 @@ function isUppercase(str) {
   return str === str.toUpperCase();
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],172:[function(require,module,exports){
+},{"./util/assertString":186}],173:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19384,7 +19378,7 @@ function isVariableWidth(str) {
   return _isFullWidth.fullWidth.test(str) && _isHalfWidth.halfWidth.test(str);
 }
 module.exports = exports['default'];
-},{"./isFullWidth":144,"./isHalfWidth":145,"./util/assertString":185}],173:[function(require,module,exports){
+},{"./isFullWidth":145,"./isHalfWidth":146,"./util/assertString":186}],174:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19408,7 +19402,7 @@ function isWhitelisted(str, chars) {
   return true;
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],174:[function(require,module,exports){
+},{"./util/assertString":186}],175:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19428,7 +19422,7 @@ function ltrim(str, chars) {
   return str.replace(pattern, '');
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],175:[function(require,module,exports){
+},{"./util/assertString":186}],176:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19450,7 +19444,7 @@ function matches(str, pattern, modifiers) {
   return pattern.test(str);
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],176:[function(require,module,exports){
+},{"./util/assertString":186}],177:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19588,7 +19582,7 @@ function normalizeEmail(email, options) {
   return parts.join('@');
 }
 module.exports = exports['default'];
-},{"./isEmail":140,"./util/merge":186}],177:[function(require,module,exports){
+},{"./isEmail":141,"./util/merge":187}],178:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19614,7 +19608,7 @@ function rtrim(str, chars) {
   return idx < str.length ? str.substr(0, idx + 1) : str;
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],178:[function(require,module,exports){
+},{"./util/assertString":186}],179:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19638,7 +19632,7 @@ function stripLow(str, keep_new_lines) {
   return (0, _blacklist2.default)(str, chars);
 }
 module.exports = exports['default'];
-},{"./blacklist":123,"./util/assertString":185}],179:[function(require,module,exports){
+},{"./blacklist":124,"./util/assertString":186}],180:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19660,7 +19654,7 @@ function toBoolean(str, strict) {
   return str !== '0' && str !== 'false' && str !== '';
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],180:[function(require,module,exports){
+},{"./util/assertString":186}],181:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19680,7 +19674,7 @@ function toDate(date) {
   return !isNaN(date) ? new Date(date) : null;
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],181:[function(require,module,exports){
+},{"./util/assertString":186}],182:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19699,7 +19693,7 @@ function toFloat(str) {
   return parseFloat(str);
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],182:[function(require,module,exports){
+},{"./util/assertString":186}],183:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19718,7 +19712,7 @@ function toInt(str, radix) {
   return parseInt(str, radix || 10);
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],183:[function(require,module,exports){
+},{"./util/assertString":186}],184:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19740,7 +19734,7 @@ function trim(str, chars) {
   return (0, _rtrim2.default)((0, _ltrim2.default)(str, chars), chars);
 }
 module.exports = exports['default'];
-},{"./ltrim":174,"./rtrim":177}],184:[function(require,module,exports){
+},{"./ltrim":175,"./rtrim":178}],185:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19759,7 +19753,7 @@ function unescape(str) {
   return str.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#x27;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&#x2F;/g, '/').replace(/&#x5C;/g, '\\').replace(/&#96;/g, '`');
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],185:[function(require,module,exports){
+},{"./util/assertString":186}],186:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19774,7 +19768,7 @@ function assertString(input) {
   }
 }
 module.exports = exports['default'];
-},{}],186:[function(require,module,exports){
+},{}],187:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19793,7 +19787,7 @@ function merge() {
   return obj;
 }
 module.exports = exports['default'];
-},{}],187:[function(require,module,exports){
+},{}],188:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19816,7 +19810,7 @@ function toString(input) {
   return String(input);
 }
 module.exports = exports['default'];
-},{}],188:[function(require,module,exports){
+},{}],189:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19835,7 +19829,7 @@ function whitelist(str, chars) {
   return str.replace(new RegExp('[^' + chars + ']+', 'g'), '');
 }
 module.exports = exports['default'];
-},{"./util/assertString":185}],189:[function(require,module,exports){
+},{"./util/assertString":186}],190:[function(require,module,exports){
 (function(self) {
   'use strict';
 

@@ -43,7 +43,7 @@
     "http-server": "^0.10.0",
     "jsonwebtoken": "^7.4.3",
     "jwk-to-pem": "^1.2.6",
-    "rimraf": "^2.6.1",
+    "rimraf": "^2.6.2",
     "tslint": "^5.7.0",
     "tslint-microsoft-contrib": "^5.0.1",
     "typescript": "^2.5.2",
