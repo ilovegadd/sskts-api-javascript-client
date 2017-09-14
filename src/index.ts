@@ -17,6 +17,7 @@ import { ImplicitGrantClient, IOptions as IImplicitGrantClientOptions } from './
 export import factory = sasaki.factory;
 
 export import service = sasaki.service;
+export import transporters = sasaki.transporters;
 
 export type IImplicitGrantClient = ImplicitGrantClient;
 
