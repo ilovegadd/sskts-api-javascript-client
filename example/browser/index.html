@@ -50,22 +50,28 @@
         // https://aws.amazon.com/blogs/mobile/integrating-amazon-cognito-user-pools-with-api-gateway/
 
         var DOMAIN = 'sskts-development.auth.ap-northeast-1.amazoncognito.com';
+        // var DOMAIN = 'sskts-test.auth.ap-northeast-1.amazoncognito.com';
         var CLIENT_ID = '1618r3pm156vu09l6m94vo1t72'; // given by a token provider
+        // var CLIENT_ID = '2mgpcvbok2b8pvtltg5rm2opq1'; // given by a token provider
         var CALLBACK_URL = 'https://localhost:8080/signIn.html'; // an application should prepare it
         var LOGOUT_URL = 'https://localhost:8080/signOut.html'; // an application should prepare it
         var ISSUER = 'https://cognito-idp.ap-northeast-1.amazonaws.com/ap-northeast-1_bQcyLA7Jq';
+        // var ISSUER = 'https://cognito-idp.ap-northeast-1.amazonaws.com/ap-northeast-1_5vOWvnHhk';
         var API_ENDPOINT = 'https://sskts-api-development-preview.azurewebsites.net';
+        // var API_ENDPOINT = 'https://sskts-api-test-preview.azurewebsites.net';
+        var RESOURCE_SERVER_IDENFIER = 'https://sskts-api-development.azurewebsites.net';
+        // var RESOURCE_SERVER_IDENFIER = 'https://sskts-api-test.azurewebsites.net';
 
         var credentials = null;
 
         var scopes = [
             'phone', 'openid', 'email', 'aws.cognito.signin.user.admin', 'profile',
-            'https://sskts-api-development.azurewebsites.net/transactions',
-            'https://sskts-api-development.azurewebsites.net/events.read-only',
-            'https://sskts-api-development.azurewebsites.net/organizations.read-only',
-            'https://sskts-api-development.azurewebsites.net/people.contacts',
-            'https://sskts-api-development.azurewebsites.net/people.creditCards',
-            'https://sskts-api-development.azurewebsites.net/people.ownershipInfos.read-only'
+            RESOURCE_SERVER_IDENFIER + '/transactions',
+            RESOURCE_SERVER_IDENFIER + '/events.read-only',
+            RESOURCE_SERVER_IDENFIER + '/organizations.read-only',
+            RESOURCE_SERVER_IDENFIER + '/people.contacts',
+            RESOURCE_SERVER_IDENFIER + '/people.creditCards',
+            RESOURCE_SERVER_IDENFIER + '/people.ownershipInfos.read-only'
         ];
 
         var options = {
