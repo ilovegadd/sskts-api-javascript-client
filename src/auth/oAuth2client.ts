@@ -2,10 +2,10 @@ import * as createDebug from 'debug';
 import * as httpStatus from 'http-status';
 import * as fetch from 'isomorphic-fetch';
 
-import { Auth, transporters } from '@motionpicture/sasaki-api-abstract';
+import { Auth, transporters } from '@motionpicture/sskts-api-abstract-client';
 import ICredentials from './credentials';
 
-const debug = createDebug('sasaki-api:auth:oAuth2client');
+const debug = createDebug('sskts-api:auth:oAuth2client');
 
 export interface IOptions {
     domain: string;

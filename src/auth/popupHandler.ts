@@ -1,6 +1,6 @@
 import * as createDebug from 'debug';
 
-const debug = createDebug('sasaki-api:auth:popupHandler');
+const debug = createDebug('sskts-api:auth:popupHandler');
 
 /**
  * PopupHandler

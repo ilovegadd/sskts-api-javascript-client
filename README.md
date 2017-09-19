@@ -25,7 +25,7 @@ This library is distributed on `npm`. In order to add it as a dependency,
 run the following command:
 
 ``` sh
-$ npm install @motionpicture/sasaki-api
+$ npm install @motionpicture/sskts-api
 ```
 
 ### CommonJS
@@ -33,14 +33,14 @@ $ npm install @motionpicture/sasaki-api
 Include the library in your JavaScript file with
 
 ``` js
-const sasaki = require("@motionpicture/sasaki-api");
+const sasaki = require("@motionpicture/sskts-api");
 ```
 
 ### Browser
 
 Include [lib/browser.js] in your page.
 ```html
-<script type="text/javascript" src="./node_modules/@motionpicture/sasaki-api/lib/browser.js"></script>
+<script type="text/javascript" src="./node_modules/@motionpicture/sskts-api/lib/browser.js"></script>
 ```
 
 ## Usage
@@ -49,7 +49,7 @@ Example: Creates a URL Shortener client and retrieves the long url of the
 given short url:
 
 ``` js
-var sasaki = require('@motionpicture/sasaki-api');
+var sasaki = require('@motionpicture/sskts-api');
 var event = sasaki.service.event({
     endpoint: 'https://sskts-api-development-preview.azurewebsites.net'.
     auth: auth
@@ -89,7 +89,7 @@ client is available at [`samples/browser/index.html`].
 redirect them to a consent page. To redirect them a consent page URL:
 
 ``` js
-var sasaki = require('@motionpicture/sasaki-api');
+var sasaki = require('@motionpicture/sskts-api');
 
 // generate a url that asks permissions for Sasai API scopes
 var scopes = [
@@ -126,7 +126,7 @@ You can set the `auth` as a service-level option.
 Example: Setting a service-level `auth` option.
 
 ``` js
-var sasaki = require('@motionpicture/sasaki-api');
+var sasaki = require('@motionpicture/sskts-api');
 
 // generate a url that asks permissions for Sasai API scopes
 var scopes = [
@@ -187,9 +187,9 @@ oauth2Client.refreshToken().then(function (result) {
 
 UNLICNSED
 
-[npmimg]: https://img.shields.io/npm/v/sasaki-api.svg
-[npm]: https://www.npmjs.org/package/@motionpicture/sasaki-api
+[npmimg]: https://img.shields.io/npm/v/sskts-api.svg
+[npm]: https://www.npmjs.org/package/@motionpicture/sskts-api
 [javascript]: https://developer.mozilla.org/ja/docs/Web/JavaScript
 [oauth]: https://tools.ietf.org/html/rfc6749
-[codecovimg]: https://codecov.io/github/motionpicture/sasaki-api-javascript-client/coverage.svg?branch=master
-[codecov]: https://codecov.io/github/motionpicture/sasaki-api-javascript-client?branch=master
+[codecovimg]: https://codecov.io/github/motionpicture/sskts-api-javascript-client/coverage.svg?branch=master
+[codecov]: https://codecov.io/github/motionpicture/sskts-api-javascript-client?branch=master

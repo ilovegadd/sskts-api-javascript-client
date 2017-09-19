@@ -1,6 +1,6 @@
 import * as createDebug from 'debug';
 
-const debug = createDebug('sasaki-api:auth:iframeHandler');
+const debug = createDebug('sskts-api:auth:iframeHandler');
 
 /**
  * IframeHandler

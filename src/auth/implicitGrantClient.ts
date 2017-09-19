@@ -11,7 +11,7 @@ const idTokenVerifier = require('idtoken-verifier');
 import ICredentials from './credentials';
 import OAuth2client from './oAuth2client';
 
-const debug = createDebug('sasaki-api:auth:implicitGrantClient');
+const debug = createDebug('sskts-api:auth:implicitGrantClient');
 
 export interface IOptions {
     domain: string;

@@ -4,7 +4,7 @@
  * @ignore
  */
 
-import * as sasaki from '@motionpicture/sasaki-api-abstract';
+import * as sasaki from '@motionpicture/sskts-api-abstract-client';
 
 import { ImplicitGrantClient, IOptions as IImplicitGrantClientOptions } from './auth/implicitGrantClient';
 
