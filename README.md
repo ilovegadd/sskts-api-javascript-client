@@ -1,9 +1,13 @@
 <img src="http://http://www.cinemasunshine.co.jp/theaters_image/news/CS_logo%20mini_2_19.jpg" alt="Cinema Sunshine" title="Cinema Sunshine" align="right" height="96" width="96"/>
 
-# Sasaki APIs Javascript Client
+# SSKTS API client library for Javascript
 
-[![npm version][npmimg]][npm]
-[![Code Coverage][codecovimg]][codecov]
+[![npm (scoped)](https://img.shields.io/npm/v/@motionpicture/sskts-api-javascript-client.svg)](https://www.npmjs.com/package/@motionpicture/sskts-api-javascript-client)
+[![Build status](https://circleci.com/gh/ilovegadd/sskts-api-javascript-client.png?style=shield)](https://circleci.com/gh/ilovegadd/sskts-api-javascript-client)
+[![Coverage Status](https://coveralls.io/repos/github/ilovegadd/sskts-api-javascript-client/badge.svg)](https://coveralls.io/github/ilovegadd/sskts-api-javascript-client)
+[![Dependency Status](https://img.shields.io/david/ilovegadd/sskts-api-javascript-client.svg)](https://david-dm.org/ilovegadd/sskts-api-javascript-client)
+[![Known Vulnerabilities](https://snyk.io/test/github/ilovegadd/sskts-api-javascript-client/badge.svg)](https://snyk.io/test/github/ilovegadd/sskts-api-javascript-client)
+[![npm](https://img.shields.io/npm/dm/@motionpicture/sskts-api-javascript-client.svg)](https://nodei.co/npm/@motionpicture/sskts-api-javascript-client/)
 
 [Javascript][javascript] client library for using Sasaki APIs. Support for authorization and authentication with OAuth 2.0.
 
@@ -187,9 +191,5 @@ oauth2Client.refreshToken().then(function (result) {
 
 UNLICNSED
 
-[npmimg]: https://img.shields.io/npm/v/sskts-api.svg
-[npm]: https://www.npmjs.org/package/@motionpicture/sskts-api
 [javascript]: https://developer.mozilla.org/ja/docs/Web/JavaScript
 [oauth]: https://tools.ietf.org/html/rfc6749
-[codecovimg]: https://codecov.io/github/motionpicture/sskts-api-javascript-client/coverage.svg?branch=master
-[codecov]: https://codecov.io/github/motionpicture/sskts-api-javascript-client?branch=master
