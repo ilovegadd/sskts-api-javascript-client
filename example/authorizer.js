@@ -33,10 +33,8 @@ const fetch = require("isomorphic-fetch");
 
 // tslint:disable-next-line:max-line-length
 // const ISSUER = 'https://cognito-identity.amazonaws.com';
-const ISSUER = `https://cognito-idp.ap-northeast-1.amazonaws.com/ap-northeast-1_zThi0j1fe`;
+const ISSUER = process.env.TEST_ISSUER;
 const permittedAudiences = [
-    '4flh35hcir4jl73s3puf7prljq',
-    '6figun12gcdtlj9e53p2u3oqvl'
 ];
 
 const rl = readline.createInterface({

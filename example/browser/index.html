@@ -49,19 +49,13 @@
         // http://docs.aws.amazon.com/ja_jp/cognito/latest/developerguide/cognito-user-pools-define-resource-servers.html
         // https://aws.amazon.com/blogs/mobile/integrating-amazon-cognito-user-pools-with-api-gateway/
 
-        var DOMAIN = 'sskts-development.auth.ap-northeast-1.amazoncognito.com';
-        // var DOMAIN = 'sskts-test.auth.ap-northeast-1.amazoncognito.com';
-        var CLIENT_ID = '1618r3pm156vu09l6m94vo1t72'; // given by a token provider
-        // var CLIENT_ID = '2mgpcvbok2b8pvtltg5rm2opq1'; // given by a token provider
+        var DOMAIN = 'DOMAIN';
+        var CLIENT_ID = 'CLIENT_ID'; // given by a token provider
         var CALLBACK_URL = 'https://localhost:8080/signIn.html'; // an application should prepare it
         var LOGOUT_URL = 'https://localhost:8080/signOut.html'; // an application should prepare it
-        var ISSUER = 'https://cognito-idp.ap-northeast-1.amazonaws.com/ap-northeast-1_bQcyLA7Jq';
-        // var ISSUER = 'https://cognito-idp.ap-northeast-1.amazonaws.com/ap-northeast-1_5vOWvnHhk';
-        // var API_ENDPOINT = 'https://localhost:44301';
-        var API_ENDPOINT = 'https://sskts-api-development-preview.azurewebsites.net';
-        // var API_ENDPOINT = 'https://sskts-api-test-preview.azurewebsites.net';
-        var RESOURCE_SERVER_IDENFIER = 'https://sskts-api-development.azurewebsites.net';
-        // var RESOURCE_SERVER_IDENFIER = 'https://sskts-api-test.azurewebsites.net';
+        var ISSUER = 'ISSUER';
+        var API_ENDPOINT = 'API_ENDPOINT';
+        var RESOURCE_SERVER_IDENFIER = 'RESOURCE_SERVER_IDENFIER';
 
         var credentials = null;
 

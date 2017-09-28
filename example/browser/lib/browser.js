@@ -2205,7 +2205,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.fetch({
-                            uri: "/transactions/placeOrder/" + params.transactionId + "/seatReservationAuthorization",
+                            uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/seatReservation",
                             method: 'POST',
                             expectedStatusCodes: [http_status_1.CREATED],
                             body: {
@@ -2226,7 +2226,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.fetch({
-                            uri: "/transactions/placeOrder/" + params.transactionId + "/seatReservationAuthorization/" + params.authorizationId,
+                            uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/seatReservation/" + params.actionId,
                             method: 'DELETE',
                             expectedStatusCodes: [http_status_1.NO_CONTENT]
                         })];
@@ -2243,7 +2243,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.fetch({
-                            uri: "/transactions/placeOrder/" + params.transactionId + "/paymentInfos/creditCard",
+                            uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/creditCard",
                             method: 'POST',
                             expectedStatusCodes: [http_status_1.CREATED],
                             body: {
@@ -2266,7 +2266,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.fetch({
-                            uri: "/transactions/placeOrder/" + params.transactionId + "/paymentInfos/creditCard/" + params.authorizationId,
+                            uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/creditCard/" + params.actionId,
                             method: 'DELETE',
                             expectedStatusCodes: [http_status_1.NO_CONTENT]
                         })];
@@ -2283,7 +2283,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.fetch({
-                            uri: "/transactions/placeOrder/" + params.transactionId + "/discountInfos/mvtk",
+                            uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/mvtk",
                             method: 'POST',
                             expectedStatusCodes: [http_status_1.CREATED],
                             body: params.mvtk
@@ -2301,7 +2301,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.fetch({
-                            uri: "/transactions/placeOrder/" + params.transactionId + "/discountInfos/mvtk/" + params.authorizationId,
+                            uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/mvtk/" + params.actionId,
                             method: 'DELETE',
                             expectedStatusCodes: [http_status_1.NO_CONTENT]
                         })];
@@ -2320,7 +2320,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
                     case 0: return [4 /*yield*/, this.fetch({
                             uri: "/transactions/placeOrder/" + params.transactionId + "/customerContact",
                             method: 'PUT',
-                            expectedStatusCodes: [http_status_1.NO_CONTENT],
+                            expectedStatusCodes: [http_status_1.CREATED],
                             body: params.contact
                         })];
                     case 1: return [2 /*return*/, _a.sent()];
@@ -2645,33 +2645,36 @@ exports.DefaultTransporter = DefaultTransporter;
 
 },{"../package.json":22,"debug":93,"http-status":95,"isomorphic-fetch":103}],22:[function(require,module,exports){
 module.exports={
-  "_from": "@motionpicture/sskts-api-abstract-client",
-  "_id": "@motionpicture/sskts-api-abstract-client@1.0.0-alpha.0",
+  "_from": "@motionpicture/sskts-api-abstract-client@1.1.1",
+  "_id": "@motionpicture/sskts-api-abstract-client@1.1.1",
   "_inBundle": false,
-  "_integrity": "sha512-BFQck3vEWd6+d+HZcvXbsF13fktkWW5o1LEl6vvDCsDk+a3ho6tTcr09HIGkLwgCYR88JWYUdfCp+EqYeqiPgQ==",
+  "_integrity": "sha512-h/xx1xt3ZYn+pA2PMfMrok56t9t0kyyIwG9TrqzYOu/LB4cy3rKFt5k402mo7EzxGzhB2DXN6WWkt1QlRsJTAA==",
   "_location": "/@motionpicture/sskts-api-abstract-client",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
+    "type": "version",
     "registry": true,
-    "raw": "@motionpicture/sskts-api-abstract-client",
+    "raw": "@motionpicture/sskts-api-abstract-client@1.1.1",
     "name": "@motionpicture/sskts-api-abstract-client",
     "escapedName": "@motionpicture%2fsskts-api-abstract-client",
     "scope": "@motionpicture",
-    "rawSpec": "",
+    "rawSpec": "1.1.1",
     "saveSpec": null,
-    "fetchSpec": "latest"
+    "fetchSpec": "1.1.1"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@motionpicture/sskts-api-abstract-client/-/sskts-api-abstract-client-1.0.0-alpha.0.tgz",
-  "_shasum": "280528b47311c1287b5c5341a6f1e52f0c63dc58",
-  "_spec": "@motionpicture/sskts-api-abstract-client",
+  "_resolved": "https://registry.npmjs.org/@motionpicture/sskts-api-abstract-client/-/sskts-api-abstract-client-1.1.1.tgz",
+  "_shasum": "a7d8df967460cc678658f3cd6285a4923313b1db",
+  "_spec": "@motionpicture/sskts-api-abstract-client@1.1.1",
   "_where": "C:\\Users\\tetsu\\projects\\sskts-api-javascript-client",
   "author": {
     "name": "Motionpicture co.,ltd."
+  },
+  "bugs": {
+    "url": "https://github.com/motionpicture/sskts-api-abstract-client/issues"
   },
   "bundleDependencies": false,
   "contributors": [
@@ -2681,13 +2684,13 @@ module.exports={
     }
   ],
   "dependencies": {
-    "@motionpicture/sskts-factory": "^1.0.0-alpha.1",
-    "debug": "^3.0.1",
+    "@motionpicture/sskts-factory": "^1.0.2",
+    "debug": "^3.1.0",
     "http-status": "^1.0.1",
     "isomorphic-fetch": "^2.2.1"
   },
   "deprecated": false,
-  "description": "Sasaki API Abstract Client Library for Javascript",
+  "description": "SSKTS API abstract client library for Javascript",
   "devDependencies": {
     "@types/debug": "0.0.30",
     "@types/form-data": "^2.2.0",
@@ -2698,23 +2701,24 @@ module.exports={
     "@types/open": "0.0.29",
     "@types/power-assert": "^1.4.29",
     "@types/request": "^2.0.3",
-    "@types/sinon": "^2.3.4",
+    "@types/sinon": "^2.3.5",
+    "coveralls": "^2.13.1",
     "http-server": "^0.10.0",
     "ink-docstrap": "^1.3.0",
     "jsdoc": "^3.5.5",
     "mocha": "^3.5.3",
-    "nock": "^9.0.16",
-    "nsp": "^2.8.0",
+    "nock": "^9.0.21",
+    "nsp": "^2.8.1",
     "nyc": "^11.2.1",
     "open": "0.0.5",
     "power-assert": "^1.4.4",
     "rimraf": "^2.6.2",
     "sinon": "^3.3.0",
-    "snyk": "^1.40.3",
+    "snyk": "^1.41.1",
     "ts-node": "^3.3.0",
     "tslint": "^5.7.0",
     "tslint-microsoft-contrib": "^5.0.1",
-    "typescript": "^2.5.2"
+    "typescript": "^2.5.3"
   },
   "directories": {
     "doc": "./doc",
@@ -2723,36 +2727,39 @@ module.exports={
     "test": "./test"
   },
   "files": [
+    "doc",
+    "example",
     "lib"
   ],
+  "homepage": "https://github.com/motionpicture/sskts-api-abstract-client#readme",
   "keywords": [
-    "sasaki-api"
+    "sskts"
   ],
-  "license": "UNLICENSED",
+  "license": "ISC",
   "main": "./lib/index.js",
   "name": "@motionpicture/sskts-api-abstract-client",
   "repository": {
     "type": "git",
-    "url": "https://m-p.backlog.jp/git/SSKTS/api-client-service.git"
+    "url": "git+https://github.com/motionpicture/sskts-api-abstract-client.git"
   },
   "scripts": {
     "build": "tsc",
-    "check": "npm run tslint && nsp check && npm run snyk",
-    "clean": "rimraf ./src/**/*.js ./src/**/*.d.ts ./lib npm-debug.log* ./test/**/*.js ./doc",
-    "coverage": "nyc mocha src/**/*.spec.ts",
+    "check": "npm run tslint && nsp check",
+    "clean": "rimraf ./src/**/*.js ./src/**/*.d.ts ./lib npm-debug.log* ./doc ./.nyc_output",
+    "coverage": "nyc mocha src/**/*.spec.ts | coveralls",
     "doc": "jsdoc -c jsdoc.json",
     "example": "http-server ./example",
     "mocha": "mocha",
     "postversion": "git push origin --tags",
-    "pretest": "npm run build",
-    "preversion": "npm run clean && npm run build && npm test && npm run doc",
-    "snyk": "snyk auth && snyk test --ignore-policy",
+    "prepublishOnly": "npm run clean && npm run build && npm test && npm run doc",
+    "preversion": "npm run clean && npm run build && npm test",
+    "snyk": "snyk wizard",
     "test": "npm run check && npm run coverage",
-    "tslint": "tslint --type-check --project tsconfig.json -c tslint.json src/**/*.ts --exclude **/*.spec.ts",
+    "tslint": "tslint --type-check --project tsconfig.json -c tslint.json --exclude \"**/*.spec.ts\" src/**/*.ts",
     "version": "git add -A"
   },
   "types": "./lib/index.d.ts",
-  "version": "1.0.0-alpha.0"
+  "version": "1.1.1"
 }
 
 },{}],23:[function(require,module,exports){
@@ -4346,12 +4353,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const _ = require("underscore");
 const argument_1 = require("../error/argument");
 const argumentNull_1 = require("../error/argumentNull");
-const transactionTasksExportationStatus_1 = require("./transactionTasksExportationStatus");
 /**
  * 取引を作成する
  * @export
  * @function
- * @returns {ITransaction} 取引
+ * @returns {IAttributes} 取引属性
  * @memberof transaction
  */
 function createAttributes(params) {
@@ -4370,14 +4376,12 @@ function createAttributes(params) {
         startDate: params.startDate,
         endDate: params.endDate,
         tasksExportedAt: params.tasksExportedAt,
-        // tslint:disable-next-line:max-line-length
-        tasksExportationStatus: (params.tasksExportationStatus === undefined) ? transactionTasksExportationStatus_1.default.Unexported : params.tasksExportationStatus,
-        tasks: (params.tasks === undefined) ? [] : params.tasks
+        tasksExportationStatus: params.tasksExportationStatus
     };
 }
 exports.createAttributes = createAttributes;
 
-},{"../error/argument":25,"../error/argumentNull":26,"./transactionTasksExportationStatus":84,"underscore":123}],82:[function(require,module,exports){
+},{"../error/argument":25,"../error/argumentNull":26,"underscore":123}],82:[function(require,module,exports){
 "use strict";
 /**
  * 取引スコープファクトリー
@@ -4516,8 +4520,7 @@ function createAttributes(params) {
         startDate: params.startDate,
         endDate: params.endDate,
         tasksExportedAt: params.tasksExportedAt,
-        tasksExportationStatus: params.tasksExportationStatus,
-        tasks: params.tasks
+        tasksExportationStatus: params.tasksExportationStatus
     }), {
         seller: params.seller,
         object: params.object

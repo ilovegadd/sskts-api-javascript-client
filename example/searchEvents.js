@@ -1,6 +1,6 @@
 var sskts = require('../lib/index');
 
-const API_ENDPOINT = 'https://sskts-api-development-preview.azurewebsites.net';
+const API_ENDPOINT = process.env.TEST_API_ENDPOINT;
 
 var auth = new sskts.auth.Implicit({});
 var event = sskts.service.event({

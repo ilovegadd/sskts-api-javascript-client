@@ -1,12 +1,13 @@
-<img src="http://http://www.cinemasunshine.co.jp/theaters_image/news/CS_logo%20mini_2_19.jpg" alt="Cinema Sunshine" title="Cinema Sunshine" align="right" height="96" width="96"/>
+<img src="https://motionpicture.jp/images/common/logo_01.svg" alt="motionpicture" title="motionpicture" align="right" height="56" width="98"/>
 
 # SSKTS API client library for Javascript
 
 [![npm (scoped)](https://img.shields.io/npm/v/@motionpicture/sskts-api-javascript-client.svg)](https://www.npmjs.com/package/@motionpicture/sskts-api-javascript-client)
-[![Build status](https://circleci.com/gh/ilovegadd/sskts-api-javascript-client.png?style=shield)](https://circleci.com/gh/ilovegadd/sskts-api-javascript-client)
-[![Coverage Status](https://coveralls.io/repos/github/ilovegadd/sskts-api-javascript-client/badge.svg)](https://coveralls.io/github/ilovegadd/sskts-api-javascript-client)
-[![Dependency Status](https://img.shields.io/david/ilovegadd/sskts-api-javascript-client.svg)](https://david-dm.org/ilovegadd/sskts-api-javascript-client)
-[![Known Vulnerabilities](https://snyk.io/test/github/ilovegadd/sskts-api-javascript-client/badge.svg)](https://snyk.io/test/github/ilovegadd/sskts-api-javascript-client)
+[![Build status](https://circleci.com/gh/motionpicture/sskts-api-javascript-client.png?style=shield)](https://circleci.com/gh/motionpicture/sskts-api-javascript-client)
+[![Coverage Status](https://coveralls.io/repos/github/motionpicture/sskts-api-javascript-client/badge.svg)](https://coveralls.io/github/motionpicture/sskts-api-javascript-client)
+[![Dependency Status](https://img.shields.io/david/motionpicture/sskts-api-javascript-client.svg)](https://david-dm.org/motionpicture/sskts-api-javascript-client)
+[![Known Vulnerabilities](https://snyk.io/test/github/motionpicture/sskts-api-javascript-client/badge.svg)](https://snyk.io/test/github/motionpicture/sskts-api-javascript-client)
+[![NSP Status](https://nodesecurity.io/orgs/motionpicture/projects/91e22996-2b1b-401e-9647-112fe9323156/badge)](https://nodesecurity.io/orgs/motionpicture/projects/91e22996-2b1b-401e-9647-112fe9323156)
 [![npm](https://img.shields.io/npm/dm/@motionpicture/sskts-api-javascript-client.svg)](https://nodei.co/npm/@motionpicture/sskts-api-javascript-client/)
 
 [Javascript][javascript] client library for using Sasaki APIs. Support for authorization and authentication with OAuth 2.0.
@@ -29,7 +30,7 @@ This library is distributed on `npm`. In order to add it as a dependency,
 run the following command:
 
 ``` sh
-$ npm install @motionpicture/sskts-api
+$ npm install @motionpicture/sskts-api-javascript-client
 ```
 
 ### CommonJS
@@ -37,14 +38,14 @@ $ npm install @motionpicture/sskts-api
 Include the library in your JavaScript file with
 
 ``` js
-const sasaki = require("@motionpicture/sskts-api");
+const sasaki = require("@motionpicture/sskts-api-javascript-client");
 ```
 
 ### Browser
 
 Include [lib/browser.js] in your page.
 ```html
-<script type="text/javascript" src="./node_modules/@motionpicture/sskts-api/lib/browser.js"></script>
+<script type="text/javascript" src="./node_modules/@motionpicture/sskts-api-javascript-client/lib/browser.js"></script>
 ```
 
 ## Usage
@@ -53,9 +54,9 @@ Example: Creates a URL Shortener client and retrieves the long url of the
 given short url:
 
 ``` js
-var sasaki = require('@motionpicture/sskts-api');
+var sasaki = require('@motionpicture/sskts-api-javascript-client');
 var event = sasaki.service.event({
-    endpoint: 'https://sskts-api-development-preview.azurewebsites.net'.
+    endpoint: 'endpoint'.
     auth: auth
 });
 
@@ -93,12 +94,12 @@ client is available at [`samples/browser/index.html`].
 redirect them to a consent page. To redirect them a consent page URL:
 
 ``` js
-var sasaki = require('@motionpicture/sskts-api');
+var sasaki = require('@motionpicture/sskts-api-javascript-client');
 
 // generate a url that asks permissions for Sasai API scopes
 var scopes = [
     'phone', 'openid', 'email', 'aws.cognito.signin.user.admin', 'profile',
-    'https://sskts-api-development.azurewebsites.net/events.read-only'
+    'https://IDENTIFIER/events.read-only'
 ];
 
 var oauth2Client = new sasaki.auth.Implicit({
@@ -130,12 +131,12 @@ You can set the `auth` as a service-level option.
 Example: Setting a service-level `auth` option.
 
 ``` js
-var sasaki = require('@motionpicture/sskts-api');
+var sasaki = require('@motionpicture/sskts-api-javascript-client');
 
 // generate a url that asks permissions for Sasai API scopes
 var scopes = [
     'phone', 'openid', 'email', 'aws.cognito.signin.user.admin', 'profile',
-    'https://sskts-api-development.azurewebsites.net/events.read-only'
+    'https://IDENTIFIER/events.read-only'
 ];
 
 var oauth2Client = new sasaki.auth.Implicit({
@@ -152,7 +153,7 @@ oauth2Client.authorize().then(function (credentials) {
     console.log('authorize result:', credentials);
 
     var event = sasaki.service.event({
-        endpoint: 'https://sskts-api-development-preview.azurewebsites.net'.
+        endpoint: 'endpoint'.
         auth: oauth2Client
     });
 
@@ -189,7 +190,7 @@ oauth2Client.refreshToken().then(function (result) {
 
 ## License
 
-UNLICNSED
+ISC
 
 [javascript]: https://developer.mozilla.org/ja/docs/Web/JavaScript
 [oauth]: https://tools.ietf.org/html/rfc6749
