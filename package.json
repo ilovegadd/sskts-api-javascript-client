@@ -17,7 +17,7 @@
     "test": "./test"
   },
   "scripts": {
-    "check": "npm run tslint && nsp check",
+    "check": "npm run tslint && nsp check && snyk test",
     "clean": "rimraf ./lib npm-debug.log* ./doc ./coverage ./.nyc_output",
     "build": "npm run build:node && npm run build:browser",
     "build:node": "tsc",
