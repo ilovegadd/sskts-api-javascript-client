@@ -79,7 +79,7 @@ export class ImplicitGrantClient extends OAuth2client {
     }
 
     public async isSignedIn() {
-        return await this.refreshToken()
+        return this.refreshToken()
             .then((result) => result)
             .catch(() => null);
     }
@@ -99,7 +99,7 @@ export class ImplicitGrantClient extends OAuth2client {
             throw new Error('not authorized yet');
         }
 
-        return await this.refreshToken();
+        return this.refreshToken();
     }
 
     /**
@@ -124,7 +124,7 @@ export class ImplicitGrantClient extends OAuth2client {
 
         const hash = await handler.login(usePostMessage);
 
-        return await this.onLogin(hash);
+        return this.onLogin(hash);
     }
 
     /**
@@ -150,7 +150,7 @@ export class ImplicitGrantClient extends OAuth2client {
         // 認可画面を新規タブで開く
         const hash = await handler.login(usePostMessage);
 
-        return await this.onLogin(hash);
+        return this.onLogin(hash);
     }
 
     /**
