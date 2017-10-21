@@ -47,7 +47,7 @@ export default class OAuth2client implements Auth {
             throw new Error('No refresh token is set.');
         }
 
-        return await this.refreshToken(this.credentials.refreshToken)
+        return this.refreshToken(this.credentials.refreshToken)
             .then((tokens) => {
                 debug('setting credentials...', tokens);
                 this.credentials = tokens;
@@ -141,7 +141,7 @@ export default class OAuth2client implements Auth {
             }
         };
 
-        return await fetch(`https://${this.options.domain}/token`, options)
+        return fetch(`https://${this.options.domain}/token`, options)
             .then(async (response) => {
                 if (response.status !== httpStatus.OK) {
                     const body = await response.json();
