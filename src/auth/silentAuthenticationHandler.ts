@@ -8,7 +8,6 @@ export interface IOptions {
 
 /**
  * SilentAuthenticationHandler
- * @class SilentAuthenticationHandler
  */
 export default class SilentAuthenticationHandler {
     public authenticationUrl: string;

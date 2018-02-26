@@ -24,7 +24,6 @@ export interface IOptions {
 
 /**
  * OAuth2 client
- * @class
  */
 export default class OAuth2client implements Auth {
     public credentials: ICredentials;
@@ -87,8 +86,7 @@ export default class OAuth2client implements Auth {
      * If credentials have a refresh_token, in cases of HTTP
      * 401 and 403 responses, it automatically asks for a new
      * access token and replays the unsuccessful request.
-     * @param {request.OptionsWithUri} options Request options.
-     * @return {Promise<any>}
+     * @param options Request options.
      */
     public async fetch(url: string, options: RequestInit, expectedStatusCodes: number[]) {
         // Callbacks will close over this to ensure that we only retry once
@@ -170,9 +168,9 @@ export default class OAuth2client implements Auth {
     /**
      * Makes a request without paying attention to refreshing or anything
      * Assumes that all credentials are set correctly.
-     * @param  {object}   opts     Options for request
-     * @param  {Function} callback callback function
-     * @return {Request}           The request object created
+     * @param opts Options for request
+     * @param callback callback function
+     * @return The request object created
      */
     // tslint:disable-next-line:prefer-function-over-method
     private async makeRequest(url: string, options: RequestInit, expectedStatusCodes: number[]) {

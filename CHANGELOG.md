@@ -5,14 +5,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## Unreleased
 ### Added
+- Pecorino口座関連のエンドポイントを追加。
+- 注文返品取引サービスを追加。
 
 ### Changed
+- イベント検索条件から非推奨属性(day,theater)を削除。
 
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+- IE11でes6コードが動作しない問題を解消。
 
 ### Security
 
