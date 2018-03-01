@@ -8,7 +8,6 @@ export interface IOptions {
 
 /**
  * SilentLogoutHandler
- * @class SilentLogoutHandler
  */
 export default class SilentLogoutHandler {
     public logoutUrl: string;

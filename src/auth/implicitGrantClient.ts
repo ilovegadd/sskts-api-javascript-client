@@ -29,7 +29,6 @@ export interface IOptions {
 
 /**
  * OAuth2 client using grant type 'implicit grant'
- * @class ImplicitGrantClient
  */
 export class ImplicitGrantClient extends OAuth2client {
     public static AUTHORIZE_URL: string = '/authorize';

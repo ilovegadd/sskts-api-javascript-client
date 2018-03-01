@@ -4,7 +4,6 @@ const debug = createDebug('sskts-api:auth:iframeHandler');
 
 /**
  * IframeHandler
- * @class IframeHandler
  */
 export default class IframeHandler {
     public url: string;

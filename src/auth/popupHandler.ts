@@ -4,7 +4,6 @@ const debug = createDebug('sskts-api:auth:popupHandler');
 
 /**
  * PopupHandler
- * @class PopupHandler
  */
 export default class PopupHandler {
     public url: string;

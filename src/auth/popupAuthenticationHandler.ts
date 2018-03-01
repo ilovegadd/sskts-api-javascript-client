@@ -8,7 +8,6 @@ export interface IOptions {
 
 /**
  * PopupAuthenticationHandler
- * @class PopupAuthenticationHandler
  */
 export default class PopupAuthenticationHandler {
     public authenticationUrl: string;
