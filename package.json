@@ -68,14 +68,14 @@
     "rimraf": "^2.6.2",
     "sinon": "^3.3.0",
     "snyk": "^1.69.9",
-    "ts-node": "^3.3.0",
+    "ts-node": "^6.0.3",
     "tslint": "^5.9.1",
     "tslint-microsoft-contrib": "^5.0.3",
-    "typescript": "^2.5.3",
+    "typescript": "^2.8.3",
     "watchify": "^3.10.0"
   },
   "dependencies": {
-    "@motionpicture/sskts-api-abstract-client": "^3.0.0",
+    "@motionpicture/sskts-api-abstract-client": "^3.1.0-alpha.2",
     "debug": "^3.1.0",
     "http-status": "^1.0.1",
     "idtoken-verifier": "^1.1.1",
