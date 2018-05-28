@@ -104,7 +104,7 @@ var IframeHandler = /** @class */ (function () {
 }());
 exports.default = IframeHandler;
 
-},{"debug":234}],4:[function(require,module,exports){
+},{"debug":233}],4:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -448,7 +448,7 @@ var ImplicitGrantClient = /** @class */ (function (_super) {
 }(oAuth2client_1.default));
 exports.ImplicitGrantClient = ImplicitGrantClient;
 
-},{"./error":2,"./oAuth2client":5,"./popupAuthenticationHandler":6,"./silentAuthenticationHandler":8,"./silentLogoutHandler":9,"debug":234,"idtoken-verifier":243,"qs":249}],5:[function(require,module,exports){
+},{"./error":2,"./oAuth2client":5,"./popupAuthenticationHandler":6,"./silentAuthenticationHandler":8,"./silentLogoutHandler":9,"debug":233,"idtoken-verifier":242,"qs":248}],5:[function(require,module,exports){
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -640,7 +640,7 @@ var OAuth2client = /** @class */ (function () {
 }());
 exports.default = OAuth2client;
 
-},{"@motionpicture/sskts-api-abstract-client":123,"debug":234,"http-status":236,"isomorphic-fetch":244}],6:[function(require,module,exports){
+},{"@motionpicture/sskts-api-abstract-client":123,"debug":233,"http-status":235,"isomorphic-fetch":243}],6:[function(require,module,exports){
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -824,7 +824,7 @@ var PopupHandler = /** @class */ (function () {
 }());
 exports.default = PopupHandler;
 
-},{"debug":234}],8:[function(require,module,exports){
+},{"debug":233}],8:[function(require,module,exports){
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -1295,7 +1295,7 @@ var AlreadyInUseError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = AlreadyInUseError;
 
-},{"../errorCode":21,"./pecorino":28,"setprototypeof":253}],23:[function(require,module,exports){
+},{"../errorCode":21,"./pecorino":28,"setprototypeof":252}],23:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1332,7 +1332,7 @@ var ArgumentError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = ArgumentError;
 
-},{"../errorCode":21,"./pecorino":28,"setprototypeof":253}],24:[function(require,module,exports){
+},{"../errorCode":21,"./pecorino":28,"setprototypeof":252}],24:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1369,7 +1369,7 @@ var ArgumentNullError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = ArgumentNullError;
 
-},{"../errorCode":21,"./pecorino":28,"setprototypeof":253}],25:[function(require,module,exports){
+},{"../errorCode":21,"./pecorino":28,"setprototypeof":252}],25:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1405,7 +1405,7 @@ var ForbiddenError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = ForbiddenError;
 
-},{"../errorCode":21,"./pecorino":28,"setprototypeof":253}],26:[function(require,module,exports){
+},{"../errorCode":21,"./pecorino":28,"setprototypeof":252}],26:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1442,7 +1442,7 @@ var NotFoundError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = NotFoundError;
 
-},{"../errorCode":21,"./pecorino":28,"setprototypeof":253}],27:[function(require,module,exports){
+},{"../errorCode":21,"./pecorino":28,"setprototypeof":252}],27:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1478,7 +1478,7 @@ var NotImplementedError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = NotImplementedError;
 
-},{"../errorCode":21,"./pecorino":28,"setprototypeof":253}],28:[function(require,module,exports){
+},{"../errorCode":21,"./pecorino":28,"setprototypeof":252}],28:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1543,7 +1543,7 @@ var RateLimitExceededError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = RateLimitExceededError;
 
-},{"../errorCode":21,"./pecorino":28,"setprototypeof":253}],30:[function(require,module,exports){
+},{"../errorCode":21,"./pecorino":28,"setprototypeof":252}],30:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1579,7 +1579,7 @@ var ServiceUnavailableError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = ServiceUnavailableError;
 
-},{"../errorCode":21,"./pecorino":28,"setprototypeof":253}],31:[function(require,module,exports){
+},{"../errorCode":21,"./pecorino":28,"setprototypeof":252}],31:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1615,7 +1615,7 @@ var UnauthorizedError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = UnauthorizedError;
 
-},{"../errorCode":21,"./pecorino":28,"setprototypeof":253}],32:[function(require,module,exports){
+},{"../errorCode":21,"./pecorino":28,"setprototypeof":252}],32:[function(require,module,exports){
 "use strict";
 /**
  * errors
@@ -22191,7 +22191,7 @@ var service;
     })(transaction = service.transaction || (service.transaction = {}));
 })(service = exports.service || (exports.service = {}));
 
-},{"./auth/authClient":122,"./service/action":125,"./service/event":126,"./service/order":127,"./service/organization":128,"./service/person":129,"./service/place":130,"./service/programMembership":131,"./service/transaction/placeOrder":132,"./service/transaction/returnOrder":133,"./transporters":134,"@motionpicture/sskts-factory":227}],124:[function(require,module,exports){
+},{"./auth/authClient":122,"./service/action":125,"./service/event":126,"./service/order":127,"./service/organization":128,"./service/person":129,"./service/place":130,"./service/programMembership":131,"./service/transaction/placeOrder":132,"./service/transaction/returnOrder":133,"./transporters":134,"@motionpicture/sskts-factory":224}],124:[function(require,module,exports){
 "use strict";
 var __assign = (this && this.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -22289,7 +22289,7 @@ var Service = /** @class */ (function () {
 }());
 exports.Service = Service;
 
-},{"./transporters":134,"qs":137}],125:[function(require,module,exports){
+},{"./transporters":134,"qs":248}],125:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -22389,7 +22389,7 @@ var ActionService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.ActionService = ActionService;
 
-},{"../service":124,"http-status":135}],126:[function(require,module,exports){
+},{"../service":124,"http-status":235}],126:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -22484,7 +22484,7 @@ var EventService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.EventService = EventService;
 
-},{"../service":124,"http-status":135}],127:[function(require,module,exports){
+},{"../service":124,"http-status":235}],127:[function(require,module,exports){
 "use strict";
 /**
  * 注文サービス
@@ -22570,7 +22570,7 @@ var OrderService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.OrderService = OrderService;
 
-},{"../service":124,"http-status":135}],128:[function(require,module,exports){
+},{"../service":124,"http-status":235}],128:[function(require,module,exports){
 "use strict";
 /**
  * 組織サービス
@@ -22671,7 +22671,7 @@ var OrganizationService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.OrganizationService = OrganizationService;
 
-},{"../service":124,"http-status":135}],129:[function(require,module,exports){
+},{"../service":124,"http-status":235}],129:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -22888,11 +22888,31 @@ var PersonService = /** @class */ (function (_super) {
             });
         });
     };
+    /**
+     * 会員プログラムに登録する
+     */
+    PersonService.prototype.registerProgramMembership = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/people/" + params.personId + "/ownershipInfos/programMembership/register",
+                        method: 'PUT',
+                        body: {
+                            programMembershipId: params.programMembershipId,
+                            offerIdentifier: params.offerIdentifier,
+                            sellerType: params.sellerType,
+                            sellerId: params.sellerId
+                        },
+                        expectedStatusCodes: [http_status_1.ACCEPTED]
+                    })];
+            });
+        });
+    };
     return PersonService;
 }(service_1.Service));
 exports.PersonService = PersonService;
 
-},{"../service":124,"http-status":135}],130:[function(require,module,exports){
+},{"../service":124,"http-status":235}],130:[function(require,module,exports){
 "use strict";
 /**
  * 場所サービス
@@ -22993,7 +23013,7 @@ var PlaceService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PlaceService = PlaceService;
 
-},{"../service":124,"http-status":135}],131:[function(require,module,exports){
+},{"../service":124,"http-status":235}],131:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -23074,7 +23094,7 @@ var ProgramMembershipService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.ProgramMembershipService = ProgramMembershipService;
 
-},{"../service":124,"http-status":135}],132:[function(require,module,exports){
+},{"../service":124,"http-status":235}],132:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -23410,7 +23430,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PlaceOrderTransactionService = PlaceOrderTransactionService;
 
-},{"../../service":124,"http-status":135}],133:[function(require,module,exports){
+},{"../../service":124,"http-status":235}],133:[function(require,module,exports){
 "use strict";
 /**
  * 注文返品取引サービス
@@ -23510,7 +23530,7 @@ var ReturnOrderTransactionService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.ReturnOrderTransactionService = ReturnOrderTransactionService;
 
-},{"../../service":124,"http-status":135}],134:[function(require,module,exports){
+},{"../../service":124,"http-status":235}],134:[function(require,module,exports){
 "use strict";
 // tslint:disable:max-classes-per-file
 var __extends = (this && this.__extends) || (function () {
@@ -23776,1125 +23796,9 @@ exports.DefaultTransporter = DefaultTransporter;
 //     }
 // }
 
-},{"debug":234,"http-status":135,"isomorphic-fetch":244}],135:[function(require,module,exports){
-// Generated by CoffeeScript 2.3.0
-// # node-http-status
-
-// **Reference:**  
-// http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html  
-// http://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html#sec6.1.1
-module.exports = {
-  // ## Informational 1xx
-
-  // Request received, continuing process.
-
-  // 100 - The server has received the request headers and the client should proceed to send the request body.
-  100: 'Continue',
-  '100_NAME': 'CONTINUE',
-  '100_MESSAGE': 'The server has received the request headers and the client should proceed to send the request body.',
-  CONTINUE: 100,
-  // 101 - The requester has asked the server to switch protocols and the server has agreed to do so.
-  101: 'Switching Protocols',
-  '101_NAME': 'SWITCHING_PROTOCOLS',
-  '101_MESSAGE': 'The requester has asked the server to switch protocols and the server has agreed to do so.',
-  SWITCHING_PROTOCOLS: 101,
-  // ## Successful 2xx
-
-  // The action was successfully received, understood, and accepted.
-
-  // 200 - Standard response for successful HTTP requests.
-  200: 'OK',
-  '200_NAME': 'OK',
-  '200_MESSAGE': 'Standard response for successful HTTP requests.',
-  OK: 200,
-  // 201 - The request has been fulfilled, resulting in the creation of a new resource.
-  201: 'Created',
-  '201_NAME': 'CREATED',
-  '201_MESSAGE': 'The request has been fulfilled, resulting in the creation of a new resource.',
-  CREATED: 201,
-  // 202 - The request has been accepted for processing, but the processing has not been completed.
-  202: 'Accepted',
-  '202_NAME': 'ACCEPTED',
-  '202_MESSAGE': 'The request has been accepted for processing, but the processing has not been completed.',
-  ACCEPTED: 202,
-  // 203 (since HTTP/1.1) - The server is a transforming proxy (e.g. a Web accelerator) that received a 200 OK from its origin, but is returning a modified version of the origin's response.
-  203: 'Non-Authoritative Information',
-  '203_NAME': 'NON_AUTHORITATIVE_INFORMATION',
-  '203_MESSAGE': 'The server is a transforming proxy (e.g. a Web accelerator) that received a 200 OK from its origin, but is returning a modified version of the origin\'s response.',
-  NON_AUTHORITATIVE_INFORMATION: 203,
-  // 204 - The server successfully processed the request and is not returning any content.
-  204: 'No Content',
-  '204_NAME': 'NO_CONTENT',
-  '204_MESSAGE': 'The server successfully processed the request and is not returning any content.',
-  NO_CONTENT: 204,
-  // 205 - The server successfully processed the request, but is not returning any content. Unlike a 204 response, this response requires that the requester reset the document view.
-  205: 'Reset Content',
-  '205_NAME': 'RESET_CONTENT',
-  '205_MESSAGE': 'The server successfully processed the request, but is not returning any content. Unlike a 204 response, this response requires that the requester reset the document view.',
-  RESET_CONTENT: 205,
-  // 206 (RFC 7233) - The server is delivering only part of the resource (byte serving) due to a range header sent by the client.
-  206: 'Partial Content',
-  '206_NAME': 'PARTIAL_CONTENT',
-  '206_MESSAGE': 'The server is delivering only part of the resource (byte serving) due to a range header sent by the client.',
-  PARTIAL_CONTENT: 206,
-  // 207 (WebDAV; RFC 4918) - The message body that follows is by default an XML message and can contain a number of separate response codes, depending on how many sub-requests were made.
-  207: 'Multi Status',
-  '207_NAME': 'MULTI_STATUS',
-  '207_MESSAGE': 'The message body that follows is by default an XML message and can contain a number of separate response codes, depending on how many sub-requests were made.',
-  MULTI_STATUS: 207,
-  // 208 (WebDAV; RFC 5842) - The members of a DAV binding have already been enumerated in a preceding part of the (multistatus) response, and are not being included again.
-  208: 'Already Reported',
-  '208_NAME': 'ALREADY_REPORTED',
-  '208_MESSAGE': 'The members of a DAV binding have already been enumerated in a preceding part of the (multistatus) response, and are not being included again.',
-  ALREADY_REPORTED: 208,
-  // 204 (RFC 3229) - The server has fulfilled a request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance.
-  226: 'IM Used',
-  '226_NAME': 'IM_USED',
-  '226_MESSAGE': 'The server has fulfilled a request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance.',
-  IM_USED: 226,
-  // ## Redirection 3xx
-
-  // Further action must be taken in order to complete the request.
-
-  // 300 - Indicates multiple options for the resource from which the client may choose.
-  300: 'Multiple Choices',
-  '300_NAME': 'MULTIPLE_CHOICES',
-  '300_MESSAGE': 'Indicates multiple options for the resource from which the client may choose.',
-  MULTIPLE_CHOICES: 300,
-  // 301 - This and all future requests should be directed to the given URI.
-  301: 'Moved Permanently',
-  '301_NAME': 'MOVED_PERMANENTLY',
-  '301_MESSAGE': 'This and all future requests should be directed to the given URI.',
-  MOVED_PERMANENTLY: 301,
-  // 302 - This is an example of industry practice contradicting the standard. The HTTP/1.0 specification (RFC 1945) required the client to perform a temporary redirect (the original describing phrase was "Moved Temporarily"), but popular browsers implemented 302 with the functionality of a 303 See Other. Therefore, HTTP/1.1 added status codes 303 and 307 to distinguish between the two behaviours.
-  302: 'Found',
-  '302_NAME': 'FOUND',
-  '302_MESSAGE': 'This is an example of industry practice contradicting the standard. The HTTP/1.0 specification (RFC 1945) required the client to perform a temporary redirect (the original describing phrase was "Moved Temporarily"), but popular browsers implemented 302 with the functionality of a 303 See Other. Therefore, HTTP/1.1 added status codes 303 and 307 to distinguish between the two behaviours.',
-  FOUND: 302,
-  // 303 (since HTTP/1.1) - The response to the request can be found under another URI using the GET method.
-  303: 'See Other',
-  '303_NAME': 'SEE_OTHER',
-  '303_MESSAGE': 'The response to the request can be found under another URI using the GET method.',
-  SEE_OTHER: 303,
-  // 304 (RFC 7232) - Indicates that the resource has not been modified since the version specified by the request headers If-Modified-Since or If-None-Match.
-  304: 'Not Modified',
-  '304_NAME': 'NOT_MODIFIED',
-  '304_MESSAGE': 'Indicates that the resource has not been modified since the version specified by the request headers If-Modified-Since or If-None-Match.',
-  NOT_MODIFIED: 304,
-  // 305 (since HTTP/1.1) - The requested resource is available only through a proxy, the address for which is provided in the response.
-  305: 'Use Proxy',
-  '305_NAME': 'USE_PROXY',
-  '305_MESSAGE': 'The requested resource is available only through a proxy, the address for which is provided in the response.',
-  USE_PROXY: 305,
-  // 306 - No longer used. Originally meant "Subsequent requests should use the specified proxy.
-  306: 'Switch Proxy',
-  '306_NAME': 'SWITCH_PROXY',
-  '306_MESSAGE': 'No longer used. Originally meant "Subsequent requests should use the specified proxy.',
-  SWITCH_PROXY: 306,
-  // 307 (since HTTP/1.1) - In this case, the request should be repeated with another URI; however, future requests should still use the original URI.
-  307: 'Temporary Redirect',
-  '307_NAME': 'TEMPORARY_REDIRECT',
-  '307_MESSAGE': 'In this case, the request should be repeated with another URI; however, future requests should still use the original URI.',
-  TEMPORARY_REDIRECT: 307,
-  // 308 (RFC 7538) - The request and all future requests should be repeated using another URI.
-  308: 'Permanent Redirect',
-  '308_NAME': 'PERMANENT_REDIRECT',
-  '308_MESSAGE': 'The request and all future requests should be repeated using another URI.',
-  PERMANENT_REDIRECT: 308,
-  // ## Client Error 4xx
-
-  // The request contains bad syntax or cannot be fulfilled.
-
-  // 400 - The server cannot or will not process the request due to an apparent client error.
-  400: 'Bad Request',
-  '400_NAME': 'BAD_REQUEST',
-  '400_MESSAGE': 'The server cannot or will not process the request due to an apparent client error.',
-  BAD_REQUEST: 400,
-  // 401 (RFC 7235) - Similar to 403 Forbidden, but specifically for use when authentication is required and has failed or has not yet been provided.
-  401: 'Unauthorized',
-  '401_NAME': 'UNAUTHORIZED',
-  '401_MESSAGE': 'Similar to 403 Forbidden, but specifically for use when authentication is required and has failed or has not yet been provided.',
-  UNAUTHORIZED: 401,
-  // 402 - Reserved for future use. The original intention was that this code might be used as part of some form of digital cash or micropayment scheme, as proposed for example by GNU Taler, but that has not yet happened, and this code is not usually used.
-  402: 'Payment Required',
-  '402_NAME': 'PAYMENT_REQUIRED',
-  '402_MESSAGE': 'Reserved for future use. The original intention was that this code might be used as part of some form of digital cash or micropayment scheme, as proposed for example by GNU Taler, but that has not yet happened, and this code is not usually used.',
-  PAYMENT_REQUIRED: 402,
-  // 403 - The request was valid, but the server is refusing action.
-  403: 'Forbidden',
-  '403_NAME': 'FORBIDDEN',
-  '403_MESSAGE': 'The request was valid, but the server is refusing action.',
-  FORBIDDEN: 403,
-  // 404 - The requested resource could not be found but may be available in the future. Subsequent requests by the client are permissible.
-  404: 'Not Found',
-  '404_NAME': 'NOT_FOUND',
-  '404_MESSAGE': 'The requested resource could not be found but may be available in the future. Subsequent requests by the client are permissible.',
-  NOT_FOUND: 404,
-  // 405 - A request method is not supported for the requested resource.
-  405: 'Method Not Allowed',
-  '405_NAME': 'METHOD_NOT_ALLOWED',
-  '405_MESSAGE': 'A request method is not supported for the requested resource.',
-  METHOD_NOT_ALLOWED: 405,
-  // 406 - The requested resource is capable of generating only content not acceptable according to the Accept headers sent in the request.
-  406: 'Not Acceptable',
-  '406_NAME': 'NOT_ACCEPTABLE',
-  '406_MESSAGE': 'The requested resource is capable of generating only content not acceptable according to the Accept headers sent in the request.',
-  NOT_ACCEPTABLE: 406,
-  // 407 (RFC 7235) - The client must first authenticate itself with the proxy.
-  407: 'Proxy Authentication Required',
-  '407_NAME': 'PROXY_AUTHENTICATION_REQUIRED',
-  '407_MESSAGE': 'The client must first authenticate itself with the proxy.',
-  PROXY_AUTHENTICATION_REQUIRED: 407,
-  // 408 - The server timed out waiting for the request.
-  408: 'Request Time-out',
-  '408_NAME': 'REQUEST_TIMEOUT',
-  '408_MESSAGE': 'The server timed out waiting for the request.',
-  REQUEST_TIMEOUT: 408,
-  // 409 - Indicates that the request could not be processed because of conflict in the request, such as an edit conflict between multiple simultaneous updates.
-  409: 'Conflict',
-  '409_NAME': 'CONFLICT',
-  '409_MESSAGE': 'Indicates that the request could not be processed because of conflict in the request, such as an edit conflict between multiple simultaneous updates.',
-  CONFLICT: 409,
-  // 410 - Indicates that the resource requested is no longer available and will not be available again.
-  410: 'Gone',
-  '410_NAME': 'GONE',
-  '410_MESSAGE': 'Indicates that the resource requested is no longer available and will not be available again.',
-  GONE: 410,
-  // 411 - The request did not specify the length of its content, which is required by the requested resource.
-  411: 'Length Required',
-  '411_NAME': 'LENGTH_REQUIRED',
-  '411_MESSAGE': 'The request did not specify the length of its content, which is required by the requested resource.',
-  LENGTH_REQUIRED: 411,
-  // 412 (RFC 7232) - The server does not meet one of the preconditions that the requester put on the request.
-  412: 'Precondition Failed',
-  '412_NAME': 'PRECONDITION_FAILED',
-  '412_MESSAGE': 'The server does not meet one of the preconditions that the requester put on the request.',
-  PRECONDITION_FAILED: 412,
-  // 413 (RFC 7231) - The request is larger than the server is willing or able to process. Previously called "Request Entity Too Large".
-  413: 'Request Entity Too Large',
-  '413_NAME': 'REQUEST_ENTITY_TOO_LARGE',
-  '413_MESSAGE': 'The request is larger than the server is willing or able to process. Previously called "Request Entity Too Large".',
-  REQUEST_ENTITY_TOO_LARGE: 413,
-  // 414 (RFC 7231) - The URI provided was too long for the server to process.
-  414: 'Request-URI Too Large',
-  '414_NAME': 'REQUEST_URI_TOO_LONG',
-  '414_MESSAGE': 'The URI provided was too long for the server to process.',
-  REQUEST_URI_TOO_LONG: 414,
-  // 415 - The request entity has a media type which the server or resource does not support.
-  415: 'Unsupported Media Type',
-  '415_NAME': 'UNSUPPORTED_MEDIA_TYPE',
-  '415_MESSAGE': 'The request entity has a media type which the server or resource does not support.',
-  UNSUPPORTED_MEDIA_TYPE: 415,
-  // 416 (RFC 7233) - The client has asked for a portion of the file (byte serving), but the server cannot supply that portion.
-  416: 'Requested Range not Satisfiable',
-  '416_NAME': 'REQUESTED_RANGE_NOT_SATISFIABLE',
-  '416_MESSAGE': 'The client has asked for a portion of the file (byte serving), but the server cannot supply that portion.',
-  REQUESTED_RANGE_NOT_SATISFIABLE: 416,
-  // 417 - The server cannot meet the requirements of the Expect request-header field.
-  417: 'Expectation Failed',
-  '417_NAME': 'EXPECTATION_FAILED',
-  '417_MESSAGE': 'The server cannot meet the requirements of the Expect request-header field.',
-  EXPECTATION_FAILED: 417,
-  // 418 (RFC 2324, RFC 7168) - Any attempt to brew coffee with a teapot should result in the error code "418 I'm a teapot". The resulting entity body MAY be short and stout. This code was defined in 1998 as one of the traditional IETF April Fools' jokes, in RFC 2324, Hyper Text Coffee Pot Control Protocol, and is not expected to be implemented by actual HTTP servers. The RFC specifies this code should be returned by teapots requested to brew coffee. This HTTP status is used as an Easter egg in some websites, including Google.com.
-  418: 'I\'m a teapot',
-  '418_NAME': 'IM_A_TEAPOT',
-  '418_MESSAGE': 'Any attempt to brew coffee with a teapot should result in the error code "418 I\'m a teapot". The resulting entity body MAY be short and stout.',
-  IM_A_TEAPOT: 418,
-  // 421 (RFC 7540) - The request was directed at a server that is not able to produce a response.
-  421: 'Misdirected Request',
-  '421_NAME': 'MISDIRECTED_REQUEST',
-  '421_MESSAGE': 'The request was directed at a server that is not able to produce a response.',
-  MISDIRECTED_REQUEST: 421,
-  // 422 (WebDAV; RFC 4918) - The request was well-formed but was unable to be followed due to semantic errors.
-  422: 'Unprocessable Entity',
-  '422_NAME': 'UNPROCESSABLE_ENTITY',
-  '422_MESSAGE': 'The request was well-formed but was unable to be followed due to semantic errors.',
-  UNPROCESSABLE_ENTITY: 422,
-  // 423 (WebDAV; RFC 4918) - The resource that is being accessed is locked.
-  423: 'Locked',
-  '423_NAME': 'LOCKED',
-  '423_MESSAGE': 'The resource that is being accessed is locked.',
-  LOCKED: 423,
-  // 424 (WebDAV; RFC 4918) - The request failed because it depended on another request and that request failed.
-  424: 'Failed Dependency',
-  '424_NAME': 'FAILED_DEPENDENCY',
-  '424_MESSAGE': 'The request failed because it depended on another request and that request failed.',
-  FAILED_DEPENDENCY: 424,
-  // 426 - The client should switch to a different protocol such as TLS/1.0, given in the Upgrade header field.
-  426: 'Upgrade Required',
-  '426_NAME': 'UPGRADE_REQUIRED',
-  '426_MESSAGE': 'The client should switch to a different protocol such as TLS/1.0, given in the Upgrade header field.',
-  UPGRADE_REQUIRED: 426,
-  // 428 (RFC 6585) - The origin server requires the request to be conditional.
-  428: 'Precondition Required', // RFC 6585
-  '428_NAME': 'PRECONDITION_REQUIRED',
-  '428_MESSAGE': 'The origin server requires the request to be conditional.',
-  PRECONDITION_REQUIRED: 428,
-  // 429 (RFC 6585) - The user has sent too many requests in a given amount of time.
-  429: 'Too Many Requests',
-  '429_NAME': 'TOO_MANY_REQUESTS',
-  '429_MESSAGE': 'The user has sent too many requests in a given amount of time.',
-  TOO_MANY_REQUESTS: 429,
-  // 431 (RFC 6585) - The server is unwilling to process the request because either an individual header field, or all the header fields collectively, are too large.
-  431: 'Request Header Fields Too Large', // RFC 6585
-  '431_NAME': 'REQUEST_HEADER_FIELDS_TOO_LARGE',
-  '431_MESSAGE': 'The server is unwilling to process the request because either an individual header field, or all the header fields collectively, are too large.',
-  REQUEST_HEADER_FIELDS_TOO_LARGE: 431,
-  // 451 (RFC 7725) - A server operator has received a legal demand to deny access to a resource or to a set of resources that includes the requested resource.
-  451: 'Unavailable For Legal Reasons',
-  '451_NAME': 'UNAVAILABLE_FOR_LEGAL_REASONS',
-  '451_MESSAGE': 'A server operator has received a legal demand to deny access to a resource or to a set of resources that includes the requested resource.',
-  UNAVAILABLE_FOR_LEGAL_REASONS: 451,
-  // ## Server Error 5xx
-
-  // The server failed to fulfill an apparently valid request.
-
-  // 500 - A generic error message, given when an unexpected condition was encountered and no more specific message is suitable.
-  500: 'Internal Server Error',
-  '500_NAME': 'INTERNAL_SERVER_ERROR',
-  '500_MESSAGE': 'A generic error message, given when an unexpected condition was encountered and no more specific message is suitable.',
-  INTERNAL_SERVER_ERROR: 500,
-  // 501 - The server either does not recognize the request method, or it lacks the ability to fulfil the request. Usually this implies future availability.
-  501: 'Not Implemented',
-  '501_NAME': 'NOT_IMPLEMENTED',
-  '501_MESSAGE': 'The server either does not recognize the request method, or it lacks the ability to fulfil the request. Usually this implies future availability.',
-  NOT_IMPLEMENTED: 501,
-  // 502 - The server was acting as a gateway or proxy and received an invalid response from the upstream server.
-  502: 'Bad Gateway',
-  '_NAME': 'BAD_GATEWAY',
-  '_MESSAGE': 'The server was acting as a gateway or proxy and received an invalid response from the upstream server.',
-  BAD_GATEWAY: 502,
-  // 503 - The server is currently unavailable (because it is overloaded or down for maintenance). Generally, this is a temporary state.
-  503: 'Service Unavailable',
-  '503_NAME': 'SERVICE_UNAVAILABLE',
-  '503_MESSAGE': 'The server is currently unavailable (because it is overloaded or down for maintenance). Generally, this is a temporary state.',
-  SERVICE_UNAVAILABLE: 503,
-  // 504 - The server was acting as a gateway or proxy and did not receive a timely response from the upstream server.
-  504: 'Gateway Time-out',
-  '504_NAME': 'GATEWAY_TIMEOUT',
-  '504_MESSAGE': 'The server was acting as a gateway or proxy and did not receive a timely response from the upstream server.',
-  GATEWAY_TIMEOUT: 504,
-  // 505 - The server does not support the HTTP protocol version used in the request.
-  505: 'HTTP Version not Supported',
-  '505_NAME': 'HTTP_VERSION_NOT_SUPPORTED',
-  '505_MESSAGE': 'The server does not support the HTTP protocol version used in the request.',
-  HTTP_VERSION_NOT_SUPPORTED: 505,
-  // 506 (RFC 2295) - Transparent content negotiation for the request results in a circular reference.
-  506: 'Variant Also Negotiates',
-  '506_NAME': 'VARIANT_ALSO_NEGOTIATES',
-  '506_MESSAGE': 'Transparent content negotiation for the request results in a circular reference.',
-  VARIANT_ALSO_NEGOTIATES: 506,
-  // 507 (WebDAV; RFC 4918) - The server is unable to store the representation needed to complete the request.
-  507: 'Insufficient Storage',
-  '507_NAME': 'INSUFFICIENT_STORAGE',
-  '507_MESSAGE': 'The server is unable to store the representation needed to complete the request.',
-  INSUFFICIENT_STORAGE: 507,
-  // 508 (WebDAV; RFC 5842) - The server detected an infinite loop while processing the request.
-  508: 'Loop Detected',
-  '508_NAME': 'LOOP_DETECTED',
-  '508_MESSAGE': 'The server detected an infinite loop while processing the request.',
-  LOOP_DETECTED: 508,
-  // 510 (RFC 2774) - Further extensions to the request are required for the server to fulfil it.
-  510: 'Not Extended',
-  '510_NAME': 'NOT_EXTENDED',
-  '510_MESSAGE': 'Further extensions to the request are required for the server to fulfil it.',
-  NOT_EXTENDED: 510,
-  // 511 (RFC 6585) - The client needs to authenticate to gain network access. Intended for use by intercepting proxies used to control access to the network.
-  511: 'Network Authentication Required',
-  '511_NAME': 'NETWORK_AUTHENTICATION_REQUIRED',
-  '511_MESSAGE': 'The client needs to authenticate to gain network access. Intended for use by intercepting proxies used to control access to the network.',
-  NETWORK_AUTHENTICATION_REQUIRED: 511,
-  // ## Extra code
-
-  // Extra HTTP code implemented by vendors and other specifications.
-  extra: {
-    // ### Unofficial codes
-
-    // The following codes are not specified by any standard.
-    unofficial: {
-      // 103 - Used in the resumable requests proposal to resume aborted PUT or POST requests.
-      103: 'Checkpoint',
-      '103_NAME': 'CHECKPOINT',
-      '103_MESSAGE': 'Used in the resumable requests proposal to resume aborted PUT or POST requests.',
-      CHECKPOINT: 103,
-      // 420 (Twitter) - Returned by version 1 of the Twitter Search and Trends API when the client is being rate limited; versions 1.1 and later use the 429 Too Many Requests response code instead.
-      420: 'Enhance Your Calm',
-      '420_NAME': 'ENHANCE_YOUR_CALM',
-      '420_MESSAGE': 'Returned by version 1 of the Twitter Search and Trends API when the client is being rate limited; versions 1.1 and later use the 429 Too Many Requests response code instead.',
-      ENHANCE_YOUR_CALM: 420,
-      // 450 (Microsoft) - The Microsoft extension code indicated when Windows Parental Controls are turned on and are blocking access to the requested webpage.
-      450: 'Blocked by Windows Parental Controls',
-      '450_NAME': 'BLOCKED_BY_WINDOWS_PARENTAL_CONTROLS',
-      '450_MESSAGE': 'The Microsoft extension code indicated when Windows Parental Controls are turned on and are blocking access to the requested webpage.',
-      BLOCKED_BY_WINDOWS_PARENTAL_CONTROLS: 450,
-      // 498 (Esri) - Returned by ArcGIS for Server. Code 498 indicates an expired or otherwise invalid token.
-      498: 'Invalid Token',
-      '498_NAME': 'INVALID_TOKEN',
-      '498_MESSAGE': 'Returned by ArcGIS for Server. Code 498 indicates an expired or otherwise invalid token.',
-      INVALID_TOKEN: 498,
-      // 499 (Esri) - Returned by ArcGIS for Server. Code 499 indicates that a token is required but was not submitted.
-      499: 'Token Required',
-      '499_NAME': 'TOKEN_REQUIRED',
-      '499_MESSAGE': 'Returned by ArcGIS for Server. Code 499 indicates that a token is required but was not submitted.',
-      TOKEN_REQUIRED: 499,
-      // 509 (Apache Web Server/cPanel) - The server has exceeded the bandwidth specified by the server administrator.
-      509: 'Bandwidth Limit Exceeded',
-      '509_NAME': 'BANDWIDTH_LIMIT_EXCEEDED',
-      '509_MESSAGE': 'The server has exceeded the bandwidth specified by the server administrator.',
-      BANDWIDTH_LIMIT_EXCEEDED: 509,
-      // 530 - Used by the Pantheon web platform to indicate a site that has been frozen due to inactivity.
-      530: 'Site is frozen',
-      '530_NAME': 'SITE_IS_FROZEN',
-      '530_MESSAGE': 'Used by the Pantheon web platform to indicate a site that has been frozen due to inactivity.',
-      SITE_IS_FROZEN: 530,
-      // 598 (Informal convention)  - Used by some HTTP proxies to signal a network read timeout behind the proxy to a client in front of the proxy.
-      598: 'Network read timeout error',
-      '598_NAME': 'NETWORK_READ_TIMEOUT_ERROR',
-      '598_MESSAGE': 'Used by some HTTP proxies to signal a network read timeout behind the proxy to a client in front of the proxy.',
-      NETWORK_READ_TIMEOUT_ERROR: 598
-    },
-    // ### Internet Information Services (IIS)
-
-    // Microsoft's Internet Information Services (IIS) web server expands the 4xx error space to signal errors with the client's request.
-    iis: {
-      // 440 - The client's session has expired and must log in again.
-      440: 'Login Time-out',
-      '440_NAME': 'LOGIN_TIME_OUT',
-      '440_MESSAGE': 'The client\'s session has expired and must log in again.',
-      LOGIN_TIME_OUT: 440,
-      // 449 - The server cannot honour the request because the user has not provided the required information.
-      449: 'Retry With',
-      '449_NAME': 'RETRY_WITH',
-      '449_MESSAGE': 'The server cannot honour the request because the user has not provided the required information.',
-      RETRY_WITH: 449,
-      // 451 - Used in Exchange ActiveSync when either a more efficient server is available or the server cannot access the users' mailbox.
-      451: 'Redirect',
-      '451_NAME': 'REDIRECT',
-      '451_MESSAGE': 'Used in Exchange ActiveSync when either a more efficient server is available or the server cannot access the users\' mailbox.',
-      REDIRECT: 451
-    },
-    // ### NGINX
-
-    // The NGINX web server software expands the 4xx error space to signal issues with the client's request.
-    nginx: {
-      // 444 - Used internally to instruct the server to return no information to the client and close the connection immediately.
-      444: 'No Response',
-      '444_NAME': 'NO_RESPONSE',
-      '444_MESSAGE': 'Used internally to instruct the server to return no information to the client and close the connection immediately.',
-      NO_RESPONSE: 444,
-      // 494 - Client sent too large request or too long header line.
-      494: 'Request header too large',
-      '494_NAME': 'REQUEST_HEADER_TOO_LARGE',
-      '494_MESSAGE': 'Client sent too large request or too long header line.',
-      REQUEST_HEADER_TOO_LARGE: 494,
-      // 495 - An expansion of the 400 Bad Request response code, used when the client has provided an invalid client certificate.
-      495: 'SSL Certificate Error',
-      '495_NAME': 'SSL_CERTIFICATE_ERROR',
-      '495_MESSAGE': 'An expansion of the 400 Bad Request response code, used when the client has provided an invalid client certificate.',
-      SSL_CERTIFICATE_ERROR: 495,
-      // 496 - An expansion of the 400 Bad Request response code, used when a client certificate is required but not provided.
-      496: 'SSL Certificate Required',
-      '496_NAME': 'SSL_CERTIFICATE_REQUIRED',
-      '496_MESSAGE': 'An expansion of the 400 Bad Request response code, used when a client certificate is required but not provided.',
-      SSL_CERTIFICATE_REQUIRED: 496,
-      // 497 - An expansion of the 400 Bad Request response code, used when the client has made a HTTP request to a port listening for HTTPS requests.
-      497: 'HTTP Request Sent to HTTPS Port',
-      '497_NAME': 'HTTP_REQUEST_SENT_TO_HTTPS_PORT',
-      '497_MESSAGE': 'An expansion of the 400 Bad Request response code, used when the client has made a HTTP request to a port listening for HTTPS requests.',
-      HTTP_REQUEST_SENT_TO_HTTPS_PORT: 497,
-      // 499 - Used when the client has closed the request before the server could send a response.
-      499: 'Client Closed Request',
-      '499_NAME': 'CLIENT_CLOSED_REQUEST',
-      '499_MESSAGE': 'Used when the client has closed the request before the server could send a response.',
-      CLIENT_CLOSED_REQUEST: 499
-    },
-    // ### Cloudflare
-
-    // Cloudflare's reverse proxy service expands the 5xx series of errors space to signal issues with the origin server.
-    cloudflare: {
-      // 520 - The 520 error is used as a "catch-all response for when the origin server returns something unexpected", listing connection resets, large headers, and empty or invalid responses as common triggers.
-      520: 'Unknown Error',
-      '520_NAME': 'UNKNOWN_ERROR',
-      '520_MESSAGE': 'The 520 error is used as a "catch-all response for when the origin server returns something unexpected", listing connection resets, large headers, and empty or invalid responses as common triggers.',
-      UNKNOWN_ERROR: 520,
-      // 521 - The origin server has refused the connection from Cloudflare.
-      521: 'Web Server Is Down',
-      '521_NAME': 'WEB_SERVER_IS_DOWN',
-      '521_MESSAGE': 'The origin server has refused the connection from Cloudflare.',
-      WEB_SERVER_IS_DOWN: 521,
-      // 522 - Cloudflare could not negotiate a TCP handshake with the origin server.
-      522: 'Connection Timed Out',
-      '522_NAME': 'CONNECTION_TIMED_OUT',
-      '522_MESSAGE': 'Cloudflare could not negotiate a TCP handshake with the origin server.',
-      CONNECTION_TIMED_OUT: 522,
-      // 523 - Cloudflare could not reach the origin server.
-      523: 'Origin Is Unreachable',
-      '523_NAME': 'ORIGIN_IS_UNREACHABLE',
-      '523_MESSAGE': 'Cloudflare could not reach the origin server.',
-      ORIGIN_IS_UNREACHABLE: 523,
-      // 524 - Cloudflare was able to complete a TCP connection to the origin server, but did not receive a timely HTTP response.
-      524: 'A Timeout Occurred',
-      '524_NAME': 'A_TIMEOUT_OCCURRED',
-      '524_MESSAGE': 'Cloudflare was able to complete a TCP connection to the origin server, but did not receive a timely HTTP response.',
-      A_TIMEOUT_OCCURRED: 524,
-      // 525 - Cloudflare could not negotiate a SSL/TLS handshake with the origin server.
-      525: 'SSL Handshake Failed',
-      '525_NAME': 'SSL_HANDSHAKE_FAILED',
-      '525_MESSAGE': 'Cloudflare could not negotiate a SSL/TLS handshake with the origin server.',
-      SSL_HANDSHAKE_FAILED: 525,
-      // 526 - Cloudflare could not validate the SSL/TLS certificate that the origin server presented.
-      526: 'Invalid SSL Certificate',
-      '526_NAME': 'INVALID_SSL_CERTIFICATE',
-      '526_MESSAGE': 'Cloudflare could not validate the SSL/TLS certificate that the origin server presented.',
-      INVALID_SSL_CERTIFICATE: 526,
-      // 527 - Error 527 indicates that the request timed out or failed after the WAN connection had been established.
-      527: 'Railgun Error',
-      '527_NAME': 'RAILGUN_ERROR',
-      '527_MESSAGE': 'Error 527 indicates that the request timed out or failed after the WAN connection had been established.',
-      RAILGUN_ERROR: 527
-    }
-  }
-};
-
-},{}],136:[function(require,module,exports){
-'use strict';
-
-var replace = String.prototype.replace;
-var percentTwenties = /%20/g;
-
-module.exports = {
-    'default': 'RFC3986',
-    formatters: {
-        RFC1738: function (value) {
-            return replace.call(value, percentTwenties, '+');
-        },
-        RFC3986: function (value) {
-            return value;
-        }
-    },
-    RFC1738: 'RFC1738',
-    RFC3986: 'RFC3986'
-};
-
-},{}],137:[function(require,module,exports){
-'use strict';
-
-var stringify = require('./stringify');
-var parse = require('./parse');
-var formats = require('./formats');
-
-module.exports = {
-    formats: formats,
-    parse: parse,
-    stringify: stringify
-};
-
-},{"./formats":136,"./parse":138,"./stringify":139}],138:[function(require,module,exports){
-'use strict';
-
-var utils = require('./utils');
-
-var has = Object.prototype.hasOwnProperty;
-
-var defaults = {
-    allowDots: false,
-    allowPrototypes: false,
-    arrayLimit: 20,
-    decoder: utils.decode,
-    delimiter: '&',
-    depth: 5,
-    parameterLimit: 1000,
-    plainObjects: false,
-    strictNullHandling: false
-};
-
-var parseValues = function parseQueryStringValues(str, options) {
-    var obj = {};
-    var cleanStr = options.ignoreQueryPrefix ? str.replace(/^\?/, '') : str;
-    var limit = options.parameterLimit === Infinity ? undefined : options.parameterLimit;
-    var parts = cleanStr.split(options.delimiter, limit);
-
-    for (var i = 0; i < parts.length; ++i) {
-        var part = parts[i];
-
-        var bracketEqualsPos = part.indexOf(']=');
-        var pos = bracketEqualsPos === -1 ? part.indexOf('=') : bracketEqualsPos + 1;
-
-        var key, val;
-        if (pos === -1) {
-            key = options.decoder(part, defaults.decoder);
-            val = options.strictNullHandling ? null : '';
-        } else {
-            key = options.decoder(part.slice(0, pos), defaults.decoder);
-            val = options.decoder(part.slice(pos + 1), defaults.decoder);
-        }
-        if (has.call(obj, key)) {
-            obj[key] = [].concat(obj[key]).concat(val);
-        } else {
-            obj[key] = val;
-        }
-    }
-
-    return obj;
-};
-
-var parseObject = function (chain, val, options) {
-    var leaf = val;
-
-    for (var i = chain.length - 1; i >= 0; --i) {
-        var obj;
-        var root = chain[i];
-
-        if (root === '[]') {
-            obj = [];
-            obj = obj.concat(leaf);
-        } else {
-            obj = options.plainObjects ? Object.create(null) : {};
-            var cleanRoot = root.charAt(0) === '[' && root.charAt(root.length - 1) === ']' ? root.slice(1, -1) : root;
-            var index = parseInt(cleanRoot, 10);
-            if (
-                !isNaN(index)
-                && root !== cleanRoot
-                && String(index) === cleanRoot
-                && index >= 0
-                && (options.parseArrays && index <= options.arrayLimit)
-            ) {
-                obj = [];
-                obj[index] = leaf;
-            } else {
-                obj[cleanRoot] = leaf;
-            }
-        }
-
-        leaf = obj;
-    }
-
-    return leaf;
-};
-
-var parseKeys = function parseQueryStringKeys(givenKey, val, options) {
-    if (!givenKey) {
-        return;
-    }
-
-    // Transform dot notation to bracket notation
-    var key = options.allowDots ? givenKey.replace(/\.([^.[]+)/g, '[$1]') : givenKey;
-
-    // The regex chunks
-
-    var brackets = /(\[[^[\]]*])/;
-    var child = /(\[[^[\]]*])/g;
-
-    // Get the parent
-
-    var segment = brackets.exec(key);
-    var parent = segment ? key.slice(0, segment.index) : key;
-
-    // Stash the parent if it exists
-
-    var keys = [];
-    if (parent) {
-        // If we aren't using plain objects, optionally prefix keys
-        // that would overwrite object prototype properties
-        if (!options.plainObjects && has.call(Object.prototype, parent)) {
-            if (!options.allowPrototypes) {
-                return;
-            }
-        }
-
-        keys.push(parent);
-    }
-
-    // Loop through children appending to the array until we hit depth
-
-    var i = 0;
-    while ((segment = child.exec(key)) !== null && i < options.depth) {
-        i += 1;
-        if (!options.plainObjects && has.call(Object.prototype, segment[1].slice(1, -1))) {
-            if (!options.allowPrototypes) {
-                return;
-            }
-        }
-        keys.push(segment[1]);
-    }
-
-    // If there's a remainder, just add whatever is left
-
-    if (segment) {
-        keys.push('[' + key.slice(segment.index) + ']');
-    }
-
-    return parseObject(keys, val, options);
-};
-
-module.exports = function (str, opts) {
-    var options = opts ? utils.assign({}, opts) : {};
-
-    if (options.decoder !== null && options.decoder !== undefined && typeof options.decoder !== 'function') {
-        throw new TypeError('Decoder has to be a function.');
-    }
-
-    options.ignoreQueryPrefix = options.ignoreQueryPrefix === true;
-    options.delimiter = typeof options.delimiter === 'string' || utils.isRegExp(options.delimiter) ? options.delimiter : defaults.delimiter;
-    options.depth = typeof options.depth === 'number' ? options.depth : defaults.depth;
-    options.arrayLimit = typeof options.arrayLimit === 'number' ? options.arrayLimit : defaults.arrayLimit;
-    options.parseArrays = options.parseArrays !== false;
-    options.decoder = typeof options.decoder === 'function' ? options.decoder : defaults.decoder;
-    options.allowDots = typeof options.allowDots === 'boolean' ? options.allowDots : defaults.allowDots;
-    options.plainObjects = typeof options.plainObjects === 'boolean' ? options.plainObjects : defaults.plainObjects;
-    options.allowPrototypes = typeof options.allowPrototypes === 'boolean' ? options.allowPrototypes : defaults.allowPrototypes;
-    options.parameterLimit = typeof options.parameterLimit === 'number' ? options.parameterLimit : defaults.parameterLimit;
-    options.strictNullHandling = typeof options.strictNullHandling === 'boolean' ? options.strictNullHandling : defaults.strictNullHandling;
-
-    if (str === '' || str === null || typeof str === 'undefined') {
-        return options.plainObjects ? Object.create(null) : {};
-    }
-
-    var tempObj = typeof str === 'string' ? parseValues(str, options) : str;
-    var obj = options.plainObjects ? Object.create(null) : {};
-
-    // Iterate over the keys and setup the new object
-
-    var keys = Object.keys(tempObj);
-    for (var i = 0; i < keys.length; ++i) {
-        var key = keys[i];
-        var newObj = parseKeys(key, tempObj[key], options);
-        obj = utils.merge(obj, newObj, options);
-    }
-
-    return utils.compact(obj);
-};
-
-},{"./utils":140}],139:[function(require,module,exports){
-'use strict';
-
-var utils = require('./utils');
-var formats = require('./formats');
-
-var arrayPrefixGenerators = {
-    brackets: function brackets(prefix) { // eslint-disable-line func-name-matching
-        return prefix + '[]';
-    },
-    indices: function indices(prefix, key) { // eslint-disable-line func-name-matching
-        return prefix + '[' + key + ']';
-    },
-    repeat: function repeat(prefix) { // eslint-disable-line func-name-matching
-        return prefix;
-    }
-};
-
-var toISO = Date.prototype.toISOString;
-
-var defaults = {
-    delimiter: '&',
-    encode: true,
-    encoder: utils.encode,
-    encodeValuesOnly: false,
-    serializeDate: function serializeDate(date) { // eslint-disable-line func-name-matching
-        return toISO.call(date);
-    },
-    skipNulls: false,
-    strictNullHandling: false
-};
-
-var stringify = function stringify( // eslint-disable-line func-name-matching
-    object,
-    prefix,
-    generateArrayPrefix,
-    strictNullHandling,
-    skipNulls,
-    encoder,
-    filter,
-    sort,
-    allowDots,
-    serializeDate,
-    formatter,
-    encodeValuesOnly
-) {
-    var obj = object;
-    if (typeof filter === 'function') {
-        obj = filter(prefix, obj);
-    } else if (obj instanceof Date) {
-        obj = serializeDate(obj);
-    } else if (obj === null) {
-        if (strictNullHandling) {
-            return encoder && !encodeValuesOnly ? encoder(prefix, defaults.encoder) : prefix;
-        }
-
-        obj = '';
-    }
-
-    if (typeof obj === 'string' || typeof obj === 'number' || typeof obj === 'boolean' || utils.isBuffer(obj)) {
-        if (encoder) {
-            var keyValue = encodeValuesOnly ? prefix : encoder(prefix, defaults.encoder);
-            return [formatter(keyValue) + '=' + formatter(encoder(obj, defaults.encoder))];
-        }
-        return [formatter(prefix) + '=' + formatter(String(obj))];
-    }
-
-    var values = [];
-
-    if (typeof obj === 'undefined') {
-        return values;
-    }
-
-    var objKeys;
-    if (Array.isArray(filter)) {
-        objKeys = filter;
-    } else {
-        var keys = Object.keys(obj);
-        objKeys = sort ? keys.sort(sort) : keys;
-    }
-
-    for (var i = 0; i < objKeys.length; ++i) {
-        var key = objKeys[i];
-
-        if (skipNulls && obj[key] === null) {
-            continue;
-        }
-
-        if (Array.isArray(obj)) {
-            values = values.concat(stringify(
-                obj[key],
-                generateArrayPrefix(prefix, key),
-                generateArrayPrefix,
-                strictNullHandling,
-                skipNulls,
-                encoder,
-                filter,
-                sort,
-                allowDots,
-                serializeDate,
-                formatter,
-                encodeValuesOnly
-            ));
-        } else {
-            values = values.concat(stringify(
-                obj[key],
-                prefix + (allowDots ? '.' + key : '[' + key + ']'),
-                generateArrayPrefix,
-                strictNullHandling,
-                skipNulls,
-                encoder,
-                filter,
-                sort,
-                allowDots,
-                serializeDate,
-                formatter,
-                encodeValuesOnly
-            ));
-        }
-    }
-
-    return values;
-};
-
-module.exports = function (object, opts) {
-    var obj = object;
-    var options = opts ? utils.assign({}, opts) : {};
-
-    if (options.encoder !== null && options.encoder !== undefined && typeof options.encoder !== 'function') {
-        throw new TypeError('Encoder has to be a function.');
-    }
-
-    var delimiter = typeof options.delimiter === 'undefined' ? defaults.delimiter : options.delimiter;
-    var strictNullHandling = typeof options.strictNullHandling === 'boolean' ? options.strictNullHandling : defaults.strictNullHandling;
-    var skipNulls = typeof options.skipNulls === 'boolean' ? options.skipNulls : defaults.skipNulls;
-    var encode = typeof options.encode === 'boolean' ? options.encode : defaults.encode;
-    var encoder = typeof options.encoder === 'function' ? options.encoder : defaults.encoder;
-    var sort = typeof options.sort === 'function' ? options.sort : null;
-    var allowDots = typeof options.allowDots === 'undefined' ? false : options.allowDots;
-    var serializeDate = typeof options.serializeDate === 'function' ? options.serializeDate : defaults.serializeDate;
-    var encodeValuesOnly = typeof options.encodeValuesOnly === 'boolean' ? options.encodeValuesOnly : defaults.encodeValuesOnly;
-    if (typeof options.format === 'undefined') {
-        options.format = formats['default'];
-    } else if (!Object.prototype.hasOwnProperty.call(formats.formatters, options.format)) {
-        throw new TypeError('Unknown format option provided.');
-    }
-    var formatter = formats.formatters[options.format];
-    var objKeys;
-    var filter;
-
-    if (typeof options.filter === 'function') {
-        filter = options.filter;
-        obj = filter('', obj);
-    } else if (Array.isArray(options.filter)) {
-        filter = options.filter;
-        objKeys = filter;
-    }
-
-    var keys = [];
-
-    if (typeof obj !== 'object' || obj === null) {
-        return '';
-    }
-
-    var arrayFormat;
-    if (options.arrayFormat in arrayPrefixGenerators) {
-        arrayFormat = options.arrayFormat;
-    } else if ('indices' in options) {
-        arrayFormat = options.indices ? 'indices' : 'repeat';
-    } else {
-        arrayFormat = 'indices';
-    }
-
-    var generateArrayPrefix = arrayPrefixGenerators[arrayFormat];
-
-    if (!objKeys) {
-        objKeys = Object.keys(obj);
-    }
-
-    if (sort) {
-        objKeys.sort(sort);
-    }
-
-    for (var i = 0; i < objKeys.length; ++i) {
-        var key = objKeys[i];
-
-        if (skipNulls && obj[key] === null) {
-            continue;
-        }
-
-        keys = keys.concat(stringify(
-            obj[key],
-            key,
-            generateArrayPrefix,
-            strictNullHandling,
-            skipNulls,
-            encode ? encoder : null,
-            filter,
-            sort,
-            allowDots,
-            serializeDate,
-            formatter,
-            encodeValuesOnly
-        ));
-    }
-
-    var joined = keys.join(delimiter);
-    var prefix = options.addQueryPrefix === true ? '?' : '';
-
-    return joined.length > 0 ? prefix + joined : '';
-};
-
-},{"./formats":136,"./utils":140}],140:[function(require,module,exports){
-'use strict';
-
-var has = Object.prototype.hasOwnProperty;
-
-var hexTable = (function () {
-    var array = [];
-    for (var i = 0; i < 256; ++i) {
-        array.push('%' + ((i < 16 ? '0' : '') + i.toString(16)).toUpperCase());
-    }
-
-    return array;
-}());
-
-var compactQueue = function compactQueue(queue) {
-    var obj;
-
-    while (queue.length) {
-        var item = queue.pop();
-        obj = item.obj[item.prop];
-
-        if (Array.isArray(obj)) {
-            var compacted = [];
-
-            for (var j = 0; j < obj.length; ++j) {
-                if (typeof obj[j] !== 'undefined') {
-                    compacted.push(obj[j]);
-                }
-            }
-
-            item.obj[item.prop] = compacted;
-        }
-    }
-
-    return obj;
-};
-
-var arrayToObject = function arrayToObject(source, options) {
-    var obj = options && options.plainObjects ? Object.create(null) : {};
-    for (var i = 0; i < source.length; ++i) {
-        if (typeof source[i] !== 'undefined') {
-            obj[i] = source[i];
-        }
-    }
-
-    return obj;
-};
-
-var merge = function merge(target, source, options) {
-    if (!source) {
-        return target;
-    }
-
-    if (typeof source !== 'object') {
-        if (Array.isArray(target)) {
-            target.push(source);
-        } else if (typeof target === 'object') {
-            if (options.plainObjects || options.allowPrototypes || !has.call(Object.prototype, source)) {
-                target[source] = true;
-            }
-        } else {
-            return [target, source];
-        }
-
-        return target;
-    }
-
-    if (typeof target !== 'object') {
-        return [target].concat(source);
-    }
-
-    var mergeTarget = target;
-    if (Array.isArray(target) && !Array.isArray(source)) {
-        mergeTarget = arrayToObject(target, options);
-    }
-
-    if (Array.isArray(target) && Array.isArray(source)) {
-        source.forEach(function (item, i) {
-            if (has.call(target, i)) {
-                if (target[i] && typeof target[i] === 'object') {
-                    target[i] = merge(target[i], item, options);
-                } else {
-                    target.push(item);
-                }
-            } else {
-                target[i] = item;
-            }
-        });
-        return target;
-    }
-
-    return Object.keys(source).reduce(function (acc, key) {
-        var value = source[key];
-
-        if (has.call(acc, key)) {
-            acc[key] = merge(acc[key], value, options);
-        } else {
-            acc[key] = value;
-        }
-        return acc;
-    }, mergeTarget);
-};
-
-var assign = function assignSingleSource(target, source) {
-    return Object.keys(source).reduce(function (acc, key) {
-        acc[key] = source[key];
-        return acc;
-    }, target);
-};
-
-var decode = function (str) {
-    try {
-        return decodeURIComponent(str.replace(/\+/g, ' '));
-    } catch (e) {
-        return str;
-    }
-};
-
-var encode = function encode(str) {
-    // This code was originally written by Brian White (mscdex) for the io.js core querystring library.
-    // It has been adapted here for stricter adherence to RFC 3986
-    if (str.length === 0) {
-        return str;
-    }
-
-    var string = typeof str === 'string' ? str : String(str);
-
-    var out = '';
-    for (var i = 0; i < string.length; ++i) {
-        var c = string.charCodeAt(i);
-
-        if (
-            c === 0x2D // -
-            || c === 0x2E // .
-            || c === 0x5F // _
-            || c === 0x7E // ~
-            || (c >= 0x30 && c <= 0x39) // 0-9
-            || (c >= 0x41 && c <= 0x5A) // a-z
-            || (c >= 0x61 && c <= 0x7A) // A-Z
-        ) {
-            out += string.charAt(i);
-            continue;
-        }
-
-        if (c < 0x80) {
-            out = out + hexTable[c];
-            continue;
-        }
-
-        if (c < 0x800) {
-            out = out + (hexTable[0xC0 | (c >> 6)] + hexTable[0x80 | (c & 0x3F)]);
-            continue;
-        }
-
-        if (c < 0xD800 || c >= 0xE000) {
-            out = out + (hexTable[0xE0 | (c >> 12)] + hexTable[0x80 | ((c >> 6) & 0x3F)] + hexTable[0x80 | (c & 0x3F)]);
-            continue;
-        }
-
-        i += 1;
-        c = 0x10000 + (((c & 0x3FF) << 10) | (string.charCodeAt(i) & 0x3FF));
-        out += hexTable[0xF0 | (c >> 18)]
-            + hexTable[0x80 | ((c >> 12) & 0x3F)]
-            + hexTable[0x80 | ((c >> 6) & 0x3F)]
-            + hexTable[0x80 | (c & 0x3F)];
-    }
-
-    return out;
-};
-
-var compact = function compact(value) {
-    var queue = [{ obj: { o: value }, prop: 'o' }];
-    var refs = [];
-
-    for (var i = 0; i < queue.length; ++i) {
-        var item = queue[i];
-        var obj = item.obj[item.prop];
-
-        var keys = Object.keys(obj);
-        for (var j = 0; j < keys.length; ++j) {
-            var key = keys[j];
-            var val = obj[key];
-            if (typeof val === 'object' && val !== null && refs.indexOf(val) === -1) {
-                queue.push({ obj: obj, prop: key });
-                refs.push(val);
-            }
-        }
-    }
-
-    return compactQueue(queue);
-};
-
-var isRegExp = function isRegExp(obj) {
-    return Object.prototype.toString.call(obj) === '[object RegExp]';
-};
-
-var isBuffer = function isBuffer(obj) {
-    if (obj === null || typeof obj === 'undefined') {
-        return false;
-    }
-
-    return !!(obj.constructor && obj.constructor.isBuffer && obj.constructor.isBuffer(obj));
-};
-
-module.exports = {
-    arrayToObject: arrayToObject,
-    assign: assign,
-    compact: compact,
-    decode: decode,
-    encode: encode,
-    isBuffer: isBuffer,
-    isRegExp: isRegExp,
-    merge: merge
-};
-
-},{}],141:[function(require,module,exports){
+},{"debug":233,"http-status":235,"isomorphic-fetch":243}],135:[function(require,module,exports){
 arguments[4][13][0].apply(exports,arguments)
-},{"dup":13}],142:[function(require,module,exports){
+},{"dup":13}],136:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -24909,14 +23813,16 @@ var ActionType;
     ActionType["PayAction"] = "PayAction";
     ActionType["PrintAction"] = "PrintAction";
     ActionType["RefundAction"] = "RefundAction";
+    ActionType["RegisterAction"] = "RegisterAction";
     ActionType["ReturnAction"] = "ReturnAction";
     ActionType["SendAction"] = "SendAction";
+    ActionType["UnRegisterAction"] = "UnRegisterAction";
     ActionType["UpdateAction"] = "UpdateAction";
     ActionType["UseAction"] = "UseAction";
 })(ActionType || (ActionType = {}));
 exports.default = ActionType;
 
-},{}],143:[function(require,module,exports){
+},{}],137:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var ObjectType;
@@ -24924,7 +23830,7 @@ var ObjectType;
     ObjectType["PecorinoAward"] = "PecorinoAward";
 })(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
 
-},{}],144:[function(require,module,exports){
+},{}],138:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var ObjectType;
@@ -24932,7 +23838,7 @@ var ObjectType;
     ObjectType["Mvtk"] = "Mvtk";
 })(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
 
-},{}],145:[function(require,module,exports){
+},{}],139:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var ObjectType;
@@ -24940,7 +23846,7 @@ var ObjectType;
     ObjectType["SeatReservation"] = "SeatReservation";
 })(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
 
-},{}],146:[function(require,module,exports){
+},{}],140:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var ObjectType;
@@ -24948,7 +23854,7 @@ var ObjectType;
     ObjectType["CreditCard"] = "CreditCard";
 })(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
 
-},{}],147:[function(require,module,exports){
+},{}],141:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var ObjectType;
@@ -24956,31 +23862,35 @@ var ObjectType;
     ObjectType["PecorinoPayment"] = "PecorinoPayment";
 })(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
 
-},{}],148:[function(require,module,exports){
-arguments[4][144][0].apply(exports,arguments)
-},{"dup":144}],149:[function(require,module,exports){
+},{}],142:[function(require,module,exports){
+arguments[4][138][0].apply(exports,arguments)
+},{"dup":138}],143:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],144:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],145:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],146:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],147:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],148:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var pecorino_1 = require("../../../action/authorize/award/pecorino");
+exports.ObjectType = pecorino_1.ObjectType;
+
+},{"../../../action/authorize/award/pecorino":137}],149:[function(require,module,exports){
 arguments[4][15][0].apply(exports,arguments)
 },{"dup":15}],150:[function(require,module,exports){
 arguments[4][15][0].apply(exports,arguments)
 },{"dup":15}],151:[function(require,module,exports){
 arguments[4][15][0].apply(exports,arguments)
 },{"dup":15}],152:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var pecorino_1 = require("../../../action/authorize/award/pecorino");
-exports.ObjectType = pecorino_1.ObjectType;
-
-},{"../../../action/authorize/award/pecorino":143}],153:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],153:[function(require,module,exports){
 arguments[4][15][0].apply(exports,arguments)
 },{"dup":15}],154:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],155:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],156:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],157:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],158:[function(require,module,exports){
 "use strict";
 /**
  * アプリケーションクライアントイベントファクトリー
@@ -24990,9 +23900,9 @@ arguments[4][15][0].apply(exports,arguments)
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
-},{}],159:[function(require,module,exports){
+},{}],155:[function(require,module,exports){
 arguments[4][18][0].apply(exports,arguments)
-},{"dup":18}],160:[function(require,module,exports){
+},{"dup":18}],156:[function(require,module,exports){
 "use strict";
 /**
  * 作品タイプ
@@ -25005,9 +23915,9 @@ var CreativeWorkType;
 })(CreativeWorkType || (CreativeWorkType = {}));
 exports.default = CreativeWorkType;
 
-},{}],161:[function(require,module,exports){
+},{}],157:[function(require,module,exports){
 arguments[4][20][0].apply(exports,arguments)
-},{"../../creativeWorkType":160,"../../error/argument":165,"../../error/argumentNull":166,"dup":20,"validator":260}],162:[function(require,module,exports){
+},{"../../creativeWorkType":156,"../../error/argument":161,"../../error/argumentNull":162,"dup":20,"validator":259}],158:[function(require,module,exports){
 "use strict";
 /**
  * 映画作品ファクトリー
@@ -25031,9 +23941,9 @@ function createFromCOA(filmFromCOA) {
 }
 exports.createFromCOA = createFromCOA;
 
-},{"../creativeWorkType":160,"moment":229}],163:[function(require,module,exports){
+},{"../creativeWorkType":156,"moment":226}],159:[function(require,module,exports){
 arguments[4][21][0].apply(exports,arguments)
-},{"dup":21}],164:[function(require,module,exports){
+},{"dup":21}],160:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -25072,7 +23982,7 @@ var AlreadyInUseError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = AlreadyInUseError;
 
-},{"../errorCode":163,"./sskts":172,"setprototypeof":253}],165:[function(require,module,exports){
+},{"../errorCode":159,"./sskts":168,"setprototypeof":252}],161:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -25110,7 +24020,7 @@ var ArgumentError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = ArgumentError;
 
-},{"../errorCode":163,"./sskts":172,"setprototypeof":253}],166:[function(require,module,exports){
+},{"../errorCode":159,"./sskts":168,"setprototypeof":252}],162:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -25148,7 +24058,7 @@ var ArgumentNullError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = ArgumentNullError;
 
-},{"../errorCode":163,"./sskts":172,"setprototypeof":253}],167:[function(require,module,exports){
+},{"../errorCode":159,"./sskts":168,"setprototypeof":252}],163:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -25185,7 +24095,7 @@ var ForbiddenError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = ForbiddenError;
 
-},{"../errorCode":163,"./sskts":172,"setprototypeof":253}],168:[function(require,module,exports){
+},{"../errorCode":159,"./sskts":168,"setprototypeof":252}],164:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -25223,7 +24133,7 @@ var NotFoundError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = NotFoundError;
 
-},{"../errorCode":163,"./sskts":172,"setprototypeof":253}],169:[function(require,module,exports){
+},{"../errorCode":159,"./sskts":168,"setprototypeof":252}],165:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -25260,7 +24170,7 @@ var NotImplementedError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = NotImplementedError;
 
-},{"../errorCode":163,"./sskts":172,"setprototypeof":253}],170:[function(require,module,exports){
+},{"../errorCode":159,"./sskts":168,"setprototypeof":252}],166:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -25297,7 +24207,7 @@ var RateLimitExceededError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = RateLimitExceededError;
 
-},{"../errorCode":163,"./sskts":172,"setprototypeof":253}],171:[function(require,module,exports){
+},{"../errorCode":159,"./sskts":168,"setprototypeof":252}],167:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -25334,7 +24244,7 @@ var ServiceUnavailableError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = ServiceUnavailableError;
 
-},{"../errorCode":163,"./sskts":172,"setprototypeof":253}],172:[function(require,module,exports){
+},{"../errorCode":159,"./sskts":168,"setprototypeof":252}],168:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -25363,7 +24273,7 @@ var SSKTSError = /** @class */ (function (_super) {
 }(Error));
 exports.SSKTSError = SSKTSError;
 
-},{}],173:[function(require,module,exports){
+},{}],169:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -25400,7 +24310,7 @@ var UnauthorizedError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = UnauthorizedError;
 
-},{"../errorCode":163,"./sskts":172,"setprototypeof":253}],174:[function(require,module,exports){
+},{"../errorCode":159,"./sskts":168,"setprototypeof":252}],170:[function(require,module,exports){
 "use strict";
 /**
  * errors
@@ -25428,7 +24338,7 @@ exports.SSKTS = sskts_1.SSKTSError;
 var unauthorized_1 = require("./error/unauthorized");
 exports.Unauthorized = unauthorized_1.default;
 
-},{"./error/alreadyInUse":164,"./error/argument":165,"./error/argumentNull":166,"./error/forbidden":167,"./error/notFound":168,"./error/notImplemented":169,"./error/rateLimitExceeded":170,"./error/serviceUnavailable":171,"./error/sskts":172,"./error/unauthorized":173}],175:[function(require,module,exports){
+},{"./error/alreadyInUse":160,"./error/argument":161,"./error/argumentNull":162,"./error/forbidden":163,"./error/notFound":164,"./error/notImplemented":165,"./error/rateLimitExceeded":166,"./error/serviceUnavailable":167,"./error/sskts":168,"./error/unauthorized":169}],171:[function(require,module,exports){
 "use strict";
 /**
  * イベントファクトリー
@@ -25456,7 +24366,7 @@ function create(params) {
 }
 exports.create = create;
 
-},{}],176:[function(require,module,exports){
+},{}],172:[function(require,module,exports){
 "use strict";
 /**
  * イベントステータス
@@ -25471,7 +24381,7 @@ var EventStatusType;
 })(EventStatusType || (EventStatusType = {}));
 exports.default = EventStatusType;
 
-},{}],177:[function(require,module,exports){
+},{}],173:[function(require,module,exports){
 "use strict";
 /**
  * イベントタイプ
@@ -25484,7 +24394,7 @@ var EventType;
 })(EventType || (EventType = {}));
 exports.default = EventType;
 
-},{}],178:[function(require,module,exports){
+},{}],174:[function(require,module,exports){
 "use strict";
 /**
  * individual screening event factory
@@ -25594,7 +24504,7 @@ function createIdentifierFromCOA(params) {
 }
 exports.createIdentifierFromCOA = createIdentifierFromCOA;
 
-},{"../error/argument":165,"../event":175,"../event/screeningEvent":179,"../eventStatusType":176,"../eventType":177,"lodash":228,"moment":229}],179:[function(require,module,exports){
+},{"../error/argument":161,"../event":171,"../event/screeningEvent":175,"../eventStatusType":172,"../eventType":173,"lodash":225,"moment":226}],175:[function(require,module,exports){
 "use strict";
 /**
  * screen event factory
@@ -25679,7 +24589,7 @@ function createIdentifier(params) {
 }
 exports.createIdentifier = createIdentifier;
 
-},{"../creativeWorkType":160,"../eventStatusType":176,"../eventType":177,"../organizationType":184,"moment":229}],180:[function(require,module,exports){
+},{"../creativeWorkType":156,"../eventStatusType":172,"../eventType":173,"../organizationType":180,"moment":226}],176:[function(require,module,exports){
 "use strict";
 /**
  * 座席予約供給情報ファクトリー
@@ -25687,7 +24597,7 @@ exports.createIdentifier = createIdentifier;
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
-},{}],181:[function(require,module,exports){
+},{}],177:[function(require,module,exports){
 "use strict";
 /**
  * order factory
@@ -25699,7 +24609,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
-},{}],182:[function(require,module,exports){
+},{}],178:[function(require,module,exports){
 "use strict";
 /**
  * 注文ステータス
@@ -25718,7 +24628,7 @@ var OrderStatus;
 })(OrderStatus || (OrderStatus = {}));
 exports.default = OrderStatus;
 
-},{}],183:[function(require,module,exports){
+},{}],179:[function(require,module,exports){
 "use strict";
 /**
  * 企業識別子
@@ -25730,7 +24640,7 @@ var CorporationOrganizationIdentifier;
 })(CorporationOrganizationIdentifier || (CorporationOrganizationIdentifier = {}));
 exports.default = CorporationOrganizationIdentifier;
 
-},{}],184:[function(require,module,exports){
+},{}],180:[function(require,module,exports){
 "use strict";
 /**
  * 組織タイプ
@@ -25743,13 +24653,13 @@ var OrganizationType;
 })(OrganizationType || (OrganizationType = {}));
 exports.default = OrganizationType;
 
-},{}],185:[function(require,module,exports){
+},{}],181:[function(require,module,exports){
 arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],186:[function(require,module,exports){
+},{"dup":15}],182:[function(require,module,exports){
 arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],187:[function(require,module,exports){
+},{"dup":15}],183:[function(require,module,exports){
 arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],188:[function(require,module,exports){
+},{"dup":15}],184:[function(require,module,exports){
 "use strict";
 /**
  * 決済方法タイプ
@@ -25762,7 +24672,7 @@ var PaymentMethodType;
 })(PaymentMethodType || (PaymentMethodType = {}));
 exports.default = PaymentMethodType;
 
-},{}],189:[function(require,module,exports){
+},{}],185:[function(require,module,exports){
 "use strict";
 /**
  * credit card factory
@@ -25809,18 +24719,11 @@ function createUncheckedCardTokenized(params) {
 }
 exports.createUncheckedCardTokenized = createUncheckedCardTokenized;
 
-},{"../../paymentMethodType":188}],190:[function(require,module,exports){
-"use strict";
-/**
- * person factory
- * 人物ファクトリー
- * @namespace person
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-
-},{}],191:[function(require,module,exports){
+},{"../../paymentMethodType":184}],186:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],187:[function(require,module,exports){
 arguments[4][34][0].apply(exports,arguments)
-},{"dup":34}],192:[function(require,module,exports){
+},{"dup":34}],188:[function(require,module,exports){
 "use strict";
 /**
  * 場所タイプ
@@ -25835,7 +24738,7 @@ var PlaceType;
 })(PlaceType || (PlaceType = {}));
 exports.default = PlaceType;
 
-},{}],193:[function(require,module,exports){
+},{}],189:[function(require,module,exports){
 "use strict";
 /**
  * 劇場ファクトリー
@@ -25905,9 +24808,9 @@ function createScreeningRoomFromCOA(screenFromCOA) {
 }
 exports.createScreeningRoomFromCOA = createScreeningRoomFromCOA;
 
-},{"../placeType":192}],194:[function(require,module,exports){
+},{"../placeType":188}],190:[function(require,module,exports){
 arguments[4][35][0].apply(exports,arguments)
-},{"dup":35}],195:[function(require,module,exports){
+},{"dup":35}],191:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -25921,9 +24824,9 @@ var Award;
     Award["PecorinoPayment"] = "PecorinoPayment";
 })(Award = exports.Award || (exports.Award = {}));
 
-},{}],196:[function(require,module,exports){
+},{}],192:[function(require,module,exports){
 arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],197:[function(require,module,exports){
+},{"dup":15}],193:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -25950,7 +24853,7 @@ var ReservationStatusType;
 })(ReservationStatusType || (ReservationStatusType = {}));
 exports.default = ReservationStatusType;
 
-},{}],198:[function(require,module,exports){
+},{}],194:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -25962,7 +24865,7 @@ var ReservationType;
 })(ReservationType || (ReservationType = {}));
 exports.default = ReservationType;
 
-},{}],199:[function(require,module,exports){
+},{}],195:[function(require,module,exports){
 "use strict";
 /**
  * イベント予約ファクトリー
@@ -26042,11 +24945,11 @@ function createFromCOATmpReserve(params) {
 }
 exports.createFromCOATmpReserve = createFromCOATmpReserve;
 
-},{"../error/argument":165,"../personType":191,"../placeType":192,"../reservationStatusType":197,"../reservationType":198}],200:[function(require,module,exports){
+},{"../error/argument":161,"../personType":187,"../placeType":188,"../reservationStatusType":193,"../reservationType":194}],196:[function(require,module,exports){
 arguments[4][36][0].apply(exports,arguments)
-},{"./error/argument":165,"./error/argumentNull":166,"dup":36,"lodash":228,"validator":260}],201:[function(require,module,exports){
+},{"./error/argument":161,"./error/argumentNull":162,"dup":36,"lodash":225,"validator":259}],197:[function(require,module,exports){
 arguments[4][37][0].apply(exports,arguments)
-},{"dup":37}],202:[function(require,module,exports){
+},{"dup":37}],198:[function(require,module,exports){
 "use strict";
 /**
  * task name
@@ -26115,12 +25018,20 @@ var TaskName;
      * Pecorinoインセンティブ付与
      */
     TaskName["GivePecorinoAward"] = "givePecorinoAward";
+    /**
+     * 会員プログラム登録
+     */
+    TaskName["RegisterProgramMembership"] = "registerProgramMembership";
+    /**
+     * 会員プログラム登録解除
+     */
+    TaskName["UnRegisterProgramMembership"] = "unRegisterProgramMembership";
 })(TaskName || (TaskName = {}));
 exports.default = TaskName;
 
-},{}],203:[function(require,module,exports){
+},{}],199:[function(require,module,exports){
 arguments[4][39][0].apply(exports,arguments)
-},{"dup":39}],204:[function(require,module,exports){
+},{"dup":39}],200:[function(require,module,exports){
 "use strict";
 /**
  * クレジットカード承認解除タスクファクトリー
@@ -26142,7 +25053,7 @@ function createAttributes(params) {
 }
 exports.createAttributes = createAttributes;
 
-},{"../task":200,"../taskName":202}],205:[function(require,module,exports){
+},{"../task":196,"../taskName":198}],201:[function(require,module,exports){
 "use strict";
 /**
  * ムビチケ承認解除タスクファクトリー
@@ -26164,9 +25075,9 @@ function createAttributes(params) {
 }
 exports.createAttributes = createAttributes;
 
-},{"../task":200,"../taskName":202}],206:[function(require,module,exports){
+},{"../task":196,"../taskName":198}],202:[function(require,module,exports){
 arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],207:[function(require,module,exports){
+},{"dup":15}],203:[function(require,module,exports){
 "use strict";
 /**
  * 座席予約承認解除タスクファクトリー
@@ -26188,9 +25099,9 @@ function createAttributes(params) {
 }
 exports.createAttributes = createAttributes;
 
-},{"../task":200,"../taskName":202}],208:[function(require,module,exports){
+},{"../task":196,"../taskName":198}],204:[function(require,module,exports){
 arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],209:[function(require,module,exports){
+},{"dup":15}],205:[function(require,module,exports){
 "use strict";
 /**
  * クレジットカード支払タスクファクトリー
@@ -26212,9 +25123,9 @@ function createAttributes(params) {
 }
 exports.createAttributes = createAttributes;
 
-},{"../task":200,"../taskName":202}],210:[function(require,module,exports){
+},{"../task":196,"../taskName":198}],206:[function(require,module,exports){
 arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],211:[function(require,module,exports){
+},{"dup":15}],207:[function(require,module,exports){
 "use strict";
 /**
  * 注文受付タスクファクトリー
@@ -26236,11 +25147,13 @@ function createAttributes(params) {
 }
 exports.createAttributes = createAttributes;
 
-},{"../task":200,"../taskName":202}],212:[function(require,module,exports){
+},{"../task":196,"../taskName":198}],208:[function(require,module,exports){
 arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],213:[function(require,module,exports){
+},{"dup":15}],209:[function(require,module,exports){
 arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],214:[function(require,module,exports){
+},{"dup":15}],210:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],211:[function(require,module,exports){
 "use strict";
 /**
  * 注文返品タスクファクトリー
@@ -26261,9 +25174,9 @@ function createAttributes(params) {
 }
 exports.createAttributes = createAttributes;
 
-},{"../task":200,"../taskName":202}],215:[function(require,module,exports){
+},{"../task":196,"../taskName":198}],212:[function(require,module,exports){
 arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],216:[function(require,module,exports){
+},{"dup":15}],213:[function(require,module,exports){
 "use strict";
 /**
  * Eメール送信タスクファクトリー
@@ -26285,7 +25198,7 @@ function createAttributes(params) {
 }
 exports.createAttributes = createAttributes;
 
-},{"../task":200,"../taskName":202}],217:[function(require,module,exports){
+},{"../task":196,"../taskName":198}],214:[function(require,module,exports){
 "use strict";
 /**
  * 注文配送タスクファクトリー
@@ -26307,7 +25220,9 @@ function createAttributes(params) {
 }
 exports.createAttributes = createAttributes;
 
-},{"../task":200,"../taskName":202}],218:[function(require,module,exports){
+},{"../task":196,"../taskName":198}],215:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],216:[function(require,module,exports){
 "use strict";
 /**
  * ムビチケ使用ファクトリー
@@ -26329,63 +25244,11 @@ function createAttributes(params) {
 }
 exports.createAttributes = createAttributes;
 
-},{"../task":200,"../taskName":202}],219:[function(require,module,exports){
-"use strict";
-/**
- * transaction factory
- * 取引ファクトリー
- * @namespace transaction
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-var validator = require("validator");
-var argument_1 = require("./error/argument");
-var argumentNull_1 = require("./error/argumentNull");
-/**
- * 取引を作成する
- * @export
- * @returns 取引属性
- */
-function createAttributes(params) {
-    if (typeof params.status !== 'string' || validator.isEmpty(params.status)) {
-        throw new argumentNull_1.default('status');
-    }
-    if (typeof params.tasksExportationStatus !== 'string' || validator.isEmpty(params.tasksExportationStatus)) {
-        throw new argumentNull_1.default('tasksExportationStatus');
-    }
-    if (!(params.expires instanceof Date)) {
-        throw new argument_1.default('expires', 'expires must be Date.');
-    }
-    if (params.startDate !== undefined && !(params.startDate instanceof Date)) {
-        throw new argument_1.default('startDate', 'startDate must be Date.');
-    }
-    if (params.endDate !== undefined && !(params.endDate instanceof Date)) {
-        throw new argument_1.default('endDate', 'endDate must be Date.');
-    }
-    if (params.tasksExportedAt !== undefined && !(params.tasksExportedAt instanceof Date)) {
-        throw new argument_1.default('tasksExportedAt', 'tasksExportedAt must be Date.');
-    }
-    return {
-        typeOf: params.typeOf,
-        status: params.status,
-        agent: params.agent,
-        result: params.result,
-        error: params.error,
-        object: params.object,
-        expires: params.expires,
-        startDate: params.startDate,
-        endDate: params.endDate,
-        tasksExportedAt: params.tasksExportedAt,
-        tasksExportationStatus: params.tasksExportationStatus,
-        potentialActions: params.potentialActions
-    };
-}
-exports.createAttributes = createAttributes;
-
-},{"./error/argument":165,"./error/argumentNull":166,"validator":260}],220:[function(require,module,exports){
+},{"../task":196,"../taskName":198}],217:[function(require,module,exports){
 arguments[4][42][0].apply(exports,arguments)
-},{"dup":42}],221:[function(require,module,exports){
+},{"dup":42}],218:[function(require,module,exports){
 arguments[4][43][0].apply(exports,arguments)
-},{"dup":43}],222:[function(require,module,exports){
+},{"dup":43}],219:[function(require,module,exports){
 "use strict";
 /**
  * 取引タイプ
@@ -26404,67 +25267,11 @@ var TransactionType;
 })(TransactionType || (TransactionType = {}));
 exports.default = TransactionType;
 
-},{}],223:[function(require,module,exports){
+},{}],220:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],221:[function(require,module,exports){
 "use strict";
-/**
- * placeOrder transaction factory
- * 注文取引ファクトリー
- * @namespace transaction.placeOrder
- */
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-var TransactionFactory = require("../transaction");
-var transactionType_1 = require("../transactionType");
-/**
- * create placeOrderTransaction object.
- * 注文取引オブジェクトを生成する。
- * @export
- */
-function createAttributes(params) {
-    return __assign({}, TransactionFactory.createAttributes({
-        typeOf: transactionType_1.default.PlaceOrder,
-        status: params.status,
-        agent: params.agent,
-        result: params.result,
-        error: params.error,
-        object: params.object,
-        expires: params.expires,
-        startDate: params.startDate,
-        endDate: params.endDate,
-        tasksExportedAt: params.tasksExportedAt,
-        tasksExportationStatus: params.tasksExportationStatus,
-        potentialActions: params.potentialActions
-    }), {
-        seller: params.seller,
-        object: params.object
-    });
-}
-exports.createAttributes = createAttributes;
-
-},{"../transaction":219,"../transactionType":222}],224:[function(require,module,exports){
-"use strict";
-/**
- * 返品取引ファクトリー
- * @namespace transaction.returnOrder
- */
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var TransactionFactory = require("../transaction");
-var transactionType_1 = require("../transactionType");
 /**
  * 返品理由
  */
@@ -26479,31 +25286,8 @@ var Reason;
      */
     Reason["Seller"] = "Seller";
 })(Reason = exports.Reason || (exports.Reason = {}));
-/**
- * 返品取引オブジェクトを生成する。
- * @export
- */
-function createAttributes(params) {
-    return __assign({}, TransactionFactory.createAttributes({
-        typeOf: transactionType_1.default.ReturnOrder,
-        status: params.status,
-        agent: params.agent,
-        result: params.result,
-        error: params.error,
-        object: params.object,
-        expires: params.expires,
-        startDate: params.startDate,
-        endDate: params.endDate,
-        tasksExportedAt: params.tasksExportedAt,
-        tasksExportationStatus: params.tasksExportationStatus,
-        potentialActions: params.potentialActions
-    }), {
-        object: params.object
-    });
-}
-exports.createAttributes = createAttributes;
 
-},{"../transaction":219,"../transactionType":222}],225:[function(require,module,exports){
+},{}],222:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -26517,9 +25301,9 @@ var UnitCode;
     UnitCode["Sec"] = "SEC";
 })(UnitCode = exports.UnitCode || (exports.UnitCode = {}));
 
-},{}],226:[function(require,module,exports){
+},{}],223:[function(require,module,exports){
 arguments[4][48][0].apply(exports,arguments)
-},{"dup":48}],227:[function(require,module,exports){
+},{"dup":48}],224:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -26532,6 +25316,8 @@ var seatReservationAuthorizeActionFactory = require("./factory/action/authorize/
 var CreditCardAuthorizeActionFactory = require("./factory/action/authorize/paymentMethod/creditCard");
 var PecorinoAuthorizeActionFactory = require("./factory/action/authorize/paymentMethod/pecorino");
 var UseMvtkActionFactory = require("./factory/action/consume/use/mvtk");
+var ProgramMembershipRegisterActionFactory = require("./factory/action/interact/register/programMembership");
+var UnRegisterActionFactory = require("./factory/action/interact/unRegister");
 var OrderActionFactory = require("./factory/action/trade/order");
 var PayActionFactory = require("./factory/action/trade/pay");
 var RefundActionFactory = require("./factory/action/trade/refund");
@@ -26583,10 +25369,12 @@ var PayPecorinoTaskFactory = require("./factory/task/payPecorino");
 var PlaceOrderTaskFactory = require("./factory/task/placeOrder");
 var RefundCreditCardTaskFactory = require("./factory/task/refundCreditCard");
 var RefundPecorinoTaskFactory = require("./factory/task/refundPecorino");
+var RegisterProgramMembershipTaskFactory = require("./factory/task/registerProgramMembership");
 var ReturnOrderTaskFactory = require("./factory/task/returnOrder");
 var ReturnPecorinoAwardTaskFactory = require("./factory/task/returnPecorinoAward");
 var SendEmailMessageTaskFactory = require("./factory/task/sendEmailMessage");
 var SendOrderTaskFactory = require("./factory/task/sendOrder");
+var UnRegisterProgramMembershipTaskFactory = require("./factory/task/unRegisterProgramMembership");
 var UseMvtkTaskFactory = require("./factory/task/useMvtk");
 var TaskExecutionResultFactory = require("./factory/taskExecutionResult");
 var taskName_1 = require("./factory/taskName");
@@ -26630,6 +25418,15 @@ var action;
             offer.seatReservation = seatReservationAuthorizeActionFactory;
         })(offer = authorize.offer || (authorize.offer = {}));
     })(authorize = action.authorize || (action.authorize = {}));
+    var interact;
+    (function (interact) {
+        var register;
+        (function (register) {
+            // tslint:disable-next-line:no-shadowed-variable
+            register.programMembership = ProgramMembershipRegisterActionFactory;
+        })(register = interact.register || (interact.register = {}));
+        interact.unRegister = UnRegisterActionFactory;
+    })(interact = action.interact || (action.interact = {}));
     var trade;
     (function (trade) {
         // tslint:disable-next-line:no-shadowed-variable
@@ -26746,12 +25543,14 @@ var task;
     task.placeOrder = PlaceOrderTaskFactory;
     task.refundCreditCard = RefundCreditCardTaskFactory;
     task.refundPecorino = RefundPecorinoTaskFactory;
+    task.registerProgramMembership = RegisterProgramMembershipTaskFactory;
     task.returnOrder = ReturnOrderTaskFactory;
     task.returnPecorinoAward = ReturnPecorinoAwardTaskFactory;
     task.sendEmailMessage = SendEmailMessageTaskFactory;
     task.sendOrder = SendOrderTaskFactory;
     task.payCreditCard = PayCreditCardTaskFactory;
     task.payPecorino = PayPecorinoTaskFactory;
+    task.UnRegisterProgramMembership = UnRegisterProgramMembershipTaskFactory;
     task.useMvtk = UseMvtkTaskFactory;
 })(task = exports.task || (exports.task = {}));
 exports.taskExecutionResult = TaskExecutionResultFactory;
@@ -26768,9 +25567,9 @@ exports.transactionType = transactionType_1.default;
 exports.unitCode = unitCode_1.UnitCode;
 exports.url = URLFactory;
 
-},{"./factory/action/authorize/award/pecorino":143,"./factory/action/authorize/discount/mvtk":144,"./factory/action/authorize/offer/seatReservation":145,"./factory/action/authorize/paymentMethod/creditCard":146,"./factory/action/authorize/paymentMethod/pecorino":147,"./factory/action/consume/use/mvtk":148,"./factory/action/trade/order":149,"./factory/action/trade/pay":150,"./factory/action/trade/refund":151,"./factory/action/transfer/give/pecorinoAward":152,"./factory/action/transfer/print/ticket":153,"./factory/action/transfer/return/order":154,"./factory/action/transfer/return/pecorinoAward":155,"./factory/action/transfer/send/message/email":156,"./factory/action/transfer/send/order":157,"./factory/actionStatusType":141,"./factory/actionType":142,"./factory/clientEvent":158,"./factory/clientUser":159,"./factory/creativeWork/message/email":161,"./factory/creativeWork/movie":162,"./factory/creativeWorkType":160,"./factory/errorCode":163,"./factory/errors":174,"./factory/event/individualScreeningEvent":178,"./factory/event/screeningEvent":179,"./factory/eventStatusType":176,"./factory/eventType":177,"./factory/offer/seatReservation":180,"./factory/order":181,"./factory/orderStatus":182,"./factory/organization/corporation":185,"./factory/organization/movieTheater":186,"./factory/organizationIdentifier/corporation":183,"./factory/organizationType":184,"./factory/ownershipInfo":187,"./factory/paymentMethod/paymentCard/creditCard":189,"./factory/paymentMethodType":188,"./factory/person":190,"./factory/personType":191,"./factory/place/movieTheater":193,"./factory/placeType":192,"./factory/priceCurrency":194,"./factory/programMembership":195,"./factory/quantitativeValue":196,"./factory/reservation/event":199,"./factory/reservationStatusType":197,"./factory/reservationType":198,"./factory/task/cancelCreditCard":204,"./factory/task/cancelMvtk":205,"./factory/task/cancelPecorino":206,"./factory/task/cancelSeatReservation":207,"./factory/task/givePecorinoAward":208,"./factory/task/payCreditCard":209,"./factory/task/payPecorino":210,"./factory/task/placeOrder":211,"./factory/task/refundCreditCard":212,"./factory/task/refundPecorino":213,"./factory/task/returnOrder":214,"./factory/task/returnPecorinoAward":215,"./factory/task/sendEmailMessage":216,"./factory/task/sendOrder":217,"./factory/task/useMvtk":218,"./factory/taskExecutionResult":201,"./factory/taskName":202,"./factory/taskStatus":203,"./factory/transaction/placeOrder":223,"./factory/transaction/returnOrder":224,"./factory/transactionStatusType":220,"./factory/transactionTasksExportationStatus":221,"./factory/transactionType":222,"./factory/unitCode":225,"./factory/url":226,"@motionpicture/pecorino-factory":49}],228:[function(require,module,exports){
+},{"./factory/action/authorize/award/pecorino":137,"./factory/action/authorize/discount/mvtk":138,"./factory/action/authorize/offer/seatReservation":139,"./factory/action/authorize/paymentMethod/creditCard":140,"./factory/action/authorize/paymentMethod/pecorino":141,"./factory/action/consume/use/mvtk":142,"./factory/action/interact/register/programMembership":143,"./factory/action/interact/unRegister":144,"./factory/action/trade/order":145,"./factory/action/trade/pay":146,"./factory/action/trade/refund":147,"./factory/action/transfer/give/pecorinoAward":148,"./factory/action/transfer/print/ticket":149,"./factory/action/transfer/return/order":150,"./factory/action/transfer/return/pecorinoAward":151,"./factory/action/transfer/send/message/email":152,"./factory/action/transfer/send/order":153,"./factory/actionStatusType":135,"./factory/actionType":136,"./factory/clientEvent":154,"./factory/clientUser":155,"./factory/creativeWork/message/email":157,"./factory/creativeWork/movie":158,"./factory/creativeWorkType":156,"./factory/errorCode":159,"./factory/errors":170,"./factory/event/individualScreeningEvent":174,"./factory/event/screeningEvent":175,"./factory/eventStatusType":172,"./factory/eventType":173,"./factory/offer/seatReservation":176,"./factory/order":177,"./factory/orderStatus":178,"./factory/organization/corporation":181,"./factory/organization/movieTheater":182,"./factory/organizationIdentifier/corporation":179,"./factory/organizationType":180,"./factory/ownershipInfo":183,"./factory/paymentMethod/paymentCard/creditCard":185,"./factory/paymentMethodType":184,"./factory/person":186,"./factory/personType":187,"./factory/place/movieTheater":189,"./factory/placeType":188,"./factory/priceCurrency":190,"./factory/programMembership":191,"./factory/quantitativeValue":192,"./factory/reservation/event":195,"./factory/reservationStatusType":193,"./factory/reservationType":194,"./factory/task/cancelCreditCard":200,"./factory/task/cancelMvtk":201,"./factory/task/cancelPecorino":202,"./factory/task/cancelSeatReservation":203,"./factory/task/givePecorinoAward":204,"./factory/task/payCreditCard":205,"./factory/task/payPecorino":206,"./factory/task/placeOrder":207,"./factory/task/refundCreditCard":208,"./factory/task/refundPecorino":209,"./factory/task/registerProgramMembership":210,"./factory/task/returnOrder":211,"./factory/task/returnPecorinoAward":212,"./factory/task/sendEmailMessage":213,"./factory/task/sendOrder":214,"./factory/task/unRegisterProgramMembership":215,"./factory/task/useMvtk":216,"./factory/taskExecutionResult":197,"./factory/taskName":198,"./factory/taskStatus":199,"./factory/transaction/placeOrder":220,"./factory/transaction/returnOrder":221,"./factory/transactionStatusType":217,"./factory/transactionTasksExportationStatus":218,"./factory/transactionType":219,"./factory/unitCode":222,"./factory/url":223,"@motionpicture/pecorino-factory":49}],225:[function(require,module,exports){
 arguments[4][50][0].apply(exports,arguments)
-},{"dup":50}],229:[function(require,module,exports){
+},{"dup":50}],226:[function(require,module,exports){
 //! moment.js
 
 ;(function (global, factory) {
@@ -31278,7 +30077,7 @@ arguments[4][50][0].apply(exports,arguments)
 
 })));
 
-},{}],230:[function(require,module,exports){
+},{}],227:[function(require,module,exports){
 'use strict'
 
 exports.byteLength = byteLength
@@ -31394,7 +30193,7 @@ function fromByteArray (uint8) {
   return parts.join('')
 }
 
-},{}],231:[function(require,module,exports){
+},{}],228:[function(require,module,exports){
 
 /**
  * Expose `Emitter`.
@@ -31559,7 +30358,7 @@ Emitter.prototype.hasListeners = function(event){
   return !! this.listeners(event).length;
 };
 
-},{}],232:[function(require,module,exports){
+},{}],229:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -32320,7 +31119,162 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS;
 
 }));
-},{}],233:[function(require,module,exports){
+},{}],230:[function(require,module,exports){
+;(function (root, factory) {
+	if (typeof exports === "object") {
+		// CommonJS
+		module.exports = exports = factory(require("./core"));
+	}
+	else if (typeof define === "function" && define.amd) {
+		// AMD
+		define(["./core"], factory);
+	}
+	else {
+		// Global (browser)
+		factory(root.CryptoJS);
+	}
+}(this, function (CryptoJS) {
+
+	(function () {
+	    // Shortcuts
+	    var C = CryptoJS;
+	    var C_lib = C.lib;
+	    var WordArray = C_lib.WordArray;
+	    var C_enc = C.enc;
+
+	    /**
+	     * Base64 encoding strategy.
+	     */
+	    var Base64 = C_enc.Base64 = {
+	        /**
+	         * Converts a word array to a Base64 string.
+	         *
+	         * @param {WordArray} wordArray The word array.
+	         *
+	         * @return {string} The Base64 string.
+	         *
+	         * @static
+	         *
+	         * @example
+	         *
+	         *     var base64String = CryptoJS.enc.Base64.stringify(wordArray);
+	         */
+	        stringify: function (wordArray) {
+	            // Shortcuts
+	            var words = wordArray.words;
+	            var sigBytes = wordArray.sigBytes;
+	            var map = this._map;
+
+	            // Clamp excess bits
+	            wordArray.clamp();
+
+	            // Convert
+	            var base64Chars = [];
+	            for (var i = 0; i < sigBytes; i += 3) {
+	                var byte1 = (words[i >>> 2]       >>> (24 - (i % 4) * 8))       & 0xff;
+	                var byte2 = (words[(i + 1) >>> 2] >>> (24 - ((i + 1) % 4) * 8)) & 0xff;
+	                var byte3 = (words[(i + 2) >>> 2] >>> (24 - ((i + 2) % 4) * 8)) & 0xff;
+
+	                var triplet = (byte1 << 16) | (byte2 << 8) | byte3;
+
+	                for (var j = 0; (j < 4) && (i + j * 0.75 < sigBytes); j++) {
+	                    base64Chars.push(map.charAt((triplet >>> (6 * (3 - j))) & 0x3f));
+	                }
+	            }
+
+	            // Add padding
+	            var paddingChar = map.charAt(64);
+	            if (paddingChar) {
+	                while (base64Chars.length % 4) {
+	                    base64Chars.push(paddingChar);
+	                }
+	            }
+
+	            return base64Chars.join('');
+	        },
+
+	        /**
+	         * Converts a Base64 string to a word array.
+	         *
+	         * @param {string} base64Str The Base64 string.
+	         *
+	         * @return {WordArray} The word array.
+	         *
+	         * @static
+	         *
+	         * @example
+	         *
+	         *     var wordArray = CryptoJS.enc.Base64.parse(base64String);
+	         */
+	        parse: function (base64Str) {
+	            // Shortcuts
+	            var base64StrLength = base64Str.length;
+	            var map = this._map;
+	            var reverseMap = this._reverseMap;
+
+	            if (!reverseMap) {
+	                    reverseMap = this._reverseMap = [];
+	                    for (var j = 0; j < map.length; j++) {
+	                        reverseMap[map.charCodeAt(j)] = j;
+	                    }
+	            }
+
+	            // Ignore padding
+	            var paddingChar = map.charAt(64);
+	            if (paddingChar) {
+	                var paddingIndex = base64Str.indexOf(paddingChar);
+	                if (paddingIndex !== -1) {
+	                    base64StrLength = paddingIndex;
+	                }
+	            }
+
+	            // Convert
+	            return parseLoop(base64Str, base64StrLength, reverseMap);
+
+	        },
+
+	        _map: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/='
+	    };
+
+	    function parseLoop(base64Str, base64StrLength, reverseMap) {
+	      var words = [];
+	      var nBytes = 0;
+	      for (var i = 0; i < base64StrLength; i++) {
+	          if (i % 4) {
+	              var bits1 = reverseMap[base64Str.charCodeAt(i - 1)] << ((i % 4) * 2);
+	              var bits2 = reverseMap[base64Str.charCodeAt(i)] >>> (6 - (i % 4) * 2);
+	              words[nBytes >>> 2] |= (bits1 | bits2) << (24 - (nBytes % 4) * 8);
+	              nBytes++;
+	          }
+	      }
+	      return WordArray.create(words, nBytes);
+	    }
+	}());
+
+
+	return CryptoJS.enc.Base64;
+
+}));
+},{"./core":229}],231:[function(require,module,exports){
+;(function (root, factory) {
+	if (typeof exports === "object") {
+		// CommonJS
+		module.exports = exports = factory(require("./core"));
+	}
+	else if (typeof define === "function" && define.amd) {
+		// AMD
+		define(["./core"], factory);
+	}
+	else {
+		// Global (browser)
+		factory(root.CryptoJS);
+	}
+}(this, function (CryptoJS) {
+
+	return CryptoJS.enc.Hex;
+
+}));
+},{"./core":229}],232:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -32520,7 +31474,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS.SHA256;
 
 }));
-},{"./core":232}],234:[function(require,module,exports){
+},{"./core":229}],233:[function(require,module,exports){
 (function (process){
 /**
  * This is the web browser implementation of `debug()`.
@@ -32719,7 +31673,7 @@ function localstorage() {
 }
 
 }).call(this,require('_process'))
-},{"./debug":235,"_process":247}],235:[function(require,module,exports){
+},{"./debug":234,"_process":246}],234:[function(require,module,exports){
 
 /**
  * This is the common logic for both the Node.js and web browser
@@ -32946,132 +31900,487 @@ function coerce(val) {
   return val;
 }
 
-},{"ms":246}],236:[function(require,module,exports){
-// Generated by CoffeeScript 1.10.0
+},{"ms":245}],235:[function(require,module,exports){
+// Generated by CoffeeScript 2.3.0
+// # node-http-status
+
+// **Reference:**  
+// http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html  
+// http://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html#sec6.1.1
 module.exports = {
+  // ## Informational 1xx
+
+  // Request received, continuing process.
+
+  // 100 - The server has received the request headers and the client should proceed to send the request body.
   100: 'Continue',
-  101: 'Switching Protocols',
-  200: 'OK',
-  201: 'Created',
-  202: 'Accepted',
-  203: 'Non-Authoritative Information',
-  204: 'No Content',
-  205: 'Reset Content',
-  206: 'Partial Content',
-  207: 'Multi Status',
-  208: 'Already Reported',
-  226: 'IM Used',
-  300: 'Multiple Choices',
-  301: 'Moved Permanently',
-  302: 'Found',
-  303: 'See Other',
-  304: 'Not Modified',
-  305: 'Use Proxy',
-  306: 'Switch Proxy',
-  307: 'Temporary Redirect',
-  308: 'Permanent Redirect',
-  400: 'Bad Request',
-  401: 'Unauthorized',
-  402: 'Payment Required',
-  403: 'Forbidden',
-  404: 'Not Found',
-  405: 'Method Not Allowed',
-  406: 'Not Acceptable',
-  407: 'Proxy Authentication Required',
-  408: 'Request Time-out',
-  409: 'Conflict',
-  410: 'Gone',
-  411: 'Length Required',
-  412: 'Precondition Failed',
-  413: 'Request Entity Too Large',
-  414: 'Request-URI Too Large',
-  415: 'Unsupported Media Type',
-  416: 'Requested Range not Satisfiable',
-  417: 'Expectation Failed',
-  418: 'I\'m a teapot',
-  421: 'Misdirected Request',
-  422: 'Unprocessable Entity',
-  423: 'Locked',
-  424: 'Failed Dependency',
-  426: 'Upgrade Required',
-  428: 'Precondition Required',
-  429: 'Too Many Requests',
-  431: 'Request Header Fields Too Large',
-  451: 'Unavailable For Legal Reasons',
-  500: 'Internal Server Error',
-  501: 'Not Implemented',
-  502: 'Bad Gateway',
-  503: 'Service Unavailable',
-  504: 'Gateway Time-out',
-  505: 'HTTP Version not Supported',
-  506: 'Variant Also Negotiates',
-  507: 'Insufficient Storage',
-  508: 'Loop Detected',
-  510: 'Not Extended',
-  511: 'Network Authentication Required',
+  '100_NAME': 'CONTINUE',
+  '100_MESSAGE': 'The server has received the request headers and the client should proceed to send the request body.',
   CONTINUE: 100,
+  // 101 - The requester has asked the server to switch protocols and the server has agreed to do so.
+  101: 'Switching Protocols',
+  '101_NAME': 'SWITCHING_PROTOCOLS',
+  '101_MESSAGE': 'The requester has asked the server to switch protocols and the server has agreed to do so.',
   SWITCHING_PROTOCOLS: 101,
+  // ## Successful 2xx
+
+  // The action was successfully received, understood, and accepted.
+
+  // 200 - Standard response for successful HTTP requests.
+  200: 'OK',
+  '200_NAME': 'OK',
+  '200_MESSAGE': 'Standard response for successful HTTP requests.',
   OK: 200,
+  // 201 - The request has been fulfilled, resulting in the creation of a new resource.
+  201: 'Created',
+  '201_NAME': 'CREATED',
+  '201_MESSAGE': 'The request has been fulfilled, resulting in the creation of a new resource.',
   CREATED: 201,
+  // 202 - The request has been accepted for processing, but the processing has not been completed.
+  202: 'Accepted',
+  '202_NAME': 'ACCEPTED',
+  '202_MESSAGE': 'The request has been accepted for processing, but the processing has not been completed.',
   ACCEPTED: 202,
+  // 203 (since HTTP/1.1) - The server is a transforming proxy (e.g. a Web accelerator) that received a 200 OK from its origin, but is returning a modified version of the origin's response.
+  203: 'Non-Authoritative Information',
+  '203_NAME': 'NON_AUTHORITATIVE_INFORMATION',
+  '203_MESSAGE': 'The server is a transforming proxy (e.g. a Web accelerator) that received a 200 OK from its origin, but is returning a modified version of the origin\'s response.',
   NON_AUTHORITATIVE_INFORMATION: 203,
+  // 204 - The server successfully processed the request and is not returning any content.
+  204: 'No Content',
+  '204_NAME': 'NO_CONTENT',
+  '204_MESSAGE': 'The server successfully processed the request and is not returning any content.',
   NO_CONTENT: 204,
+  // 205 - The server successfully processed the request, but is not returning any content. Unlike a 204 response, this response requires that the requester reset the document view.
+  205: 'Reset Content',
+  '205_NAME': 'RESET_CONTENT',
+  '205_MESSAGE': 'The server successfully processed the request, but is not returning any content. Unlike a 204 response, this response requires that the requester reset the document view.',
   RESET_CONTENT: 205,
+  // 206 (RFC 7233) - The server is delivering only part of the resource (byte serving) due to a range header sent by the client.
+  206: 'Partial Content',
+  '206_NAME': 'PARTIAL_CONTENT',
+  '206_MESSAGE': 'The server is delivering only part of the resource (byte serving) due to a range header sent by the client.',
   PARTIAL_CONTENT: 206,
+  // 207 (WebDAV; RFC 4918) - The message body that follows is by default an XML message and can contain a number of separate response codes, depending on how many sub-requests were made.
+  207: 'Multi Status',
+  '207_NAME': 'MULTI_STATUS',
+  '207_MESSAGE': 'The message body that follows is by default an XML message and can contain a number of separate response codes, depending on how many sub-requests were made.',
   MULTI_STATUS: 207,
+  // 208 (WebDAV; RFC 5842) - The members of a DAV binding have already been enumerated in a preceding part of the (multistatus) response, and are not being included again.
+  208: 'Already Reported',
+  '208_NAME': 'ALREADY_REPORTED',
+  '208_MESSAGE': 'The members of a DAV binding have already been enumerated in a preceding part of the (multistatus) response, and are not being included again.',
   ALREADY_REPORTED: 208,
+  // 204 (RFC 3229) - The server has fulfilled a request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance.
+  226: 'IM Used',
+  '226_NAME': 'IM_USED',
+  '226_MESSAGE': 'The server has fulfilled a request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance.',
   IM_USED: 226,
+  // ## Redirection 3xx
+
+  // Further action must be taken in order to complete the request.
+
+  // 300 - Indicates multiple options for the resource from which the client may choose.
+  300: 'Multiple Choices',
+  '300_NAME': 'MULTIPLE_CHOICES',
+  '300_MESSAGE': 'Indicates multiple options for the resource from which the client may choose.',
   MULTIPLE_CHOICES: 300,
+  // 301 - This and all future requests should be directed to the given URI.
+  301: 'Moved Permanently',
+  '301_NAME': 'MOVED_PERMANENTLY',
+  '301_MESSAGE': 'This and all future requests should be directed to the given URI.',
   MOVED_PERMANENTLY: 301,
+  // 302 - This is an example of industry practice contradicting the standard. The HTTP/1.0 specification (RFC 1945) required the client to perform a temporary redirect (the original describing phrase was "Moved Temporarily"), but popular browsers implemented 302 with the functionality of a 303 See Other. Therefore, HTTP/1.1 added status codes 303 and 307 to distinguish between the two behaviours.
+  302: 'Found',
+  '302_NAME': 'FOUND',
+  '302_MESSAGE': 'This is an example of industry practice contradicting the standard. The HTTP/1.0 specification (RFC 1945) required the client to perform a temporary redirect (the original describing phrase was "Moved Temporarily"), but popular browsers implemented 302 with the functionality of a 303 See Other. Therefore, HTTP/1.1 added status codes 303 and 307 to distinguish between the two behaviours.',
   FOUND: 302,
+  // 303 (since HTTP/1.1) - The response to the request can be found under another URI using the GET method.
+  303: 'See Other',
+  '303_NAME': 'SEE_OTHER',
+  '303_MESSAGE': 'The response to the request can be found under another URI using the GET method.',
   SEE_OTHER: 303,
+  // 304 (RFC 7232) - Indicates that the resource has not been modified since the version specified by the request headers If-Modified-Since or If-None-Match.
+  304: 'Not Modified',
+  '304_NAME': 'NOT_MODIFIED',
+  '304_MESSAGE': 'Indicates that the resource has not been modified since the version specified by the request headers If-Modified-Since or If-None-Match.',
   NOT_MODIFIED: 304,
+  // 305 (since HTTP/1.1) - The requested resource is available only through a proxy, the address for which is provided in the response.
+  305: 'Use Proxy',
+  '305_NAME': 'USE_PROXY',
+  '305_MESSAGE': 'The requested resource is available only through a proxy, the address for which is provided in the response.',
   USE_PROXY: 305,
+  // 306 - No longer used. Originally meant "Subsequent requests should use the specified proxy.
+  306: 'Switch Proxy',
+  '306_NAME': 'SWITCH_PROXY',
+  '306_MESSAGE': 'No longer used. Originally meant "Subsequent requests should use the specified proxy.',
   SWITCH_PROXY: 306,
+  // 307 (since HTTP/1.1) - In this case, the request should be repeated with another URI; however, future requests should still use the original URI.
+  307: 'Temporary Redirect',
+  '307_NAME': 'TEMPORARY_REDIRECT',
+  '307_MESSAGE': 'In this case, the request should be repeated with another URI; however, future requests should still use the original URI.',
   TEMPORARY_REDIRECT: 307,
+  // 308 (RFC 7538) - The request and all future requests should be repeated using another URI.
+  308: 'Permanent Redirect',
+  '308_NAME': 'PERMANENT_REDIRECT',
+  '308_MESSAGE': 'The request and all future requests should be repeated using another URI.',
   PERMANENT_REDIRECT: 308,
+  // ## Client Error 4xx
+
+  // The request contains bad syntax or cannot be fulfilled.
+
+  // 400 - The server cannot or will not process the request due to an apparent client error.
+  400: 'Bad Request',
+  '400_NAME': 'BAD_REQUEST',
+  '400_MESSAGE': 'The server cannot or will not process the request due to an apparent client error.',
   BAD_REQUEST: 400,
+  // 401 (RFC 7235) - Similar to 403 Forbidden, but specifically for use when authentication is required and has failed or has not yet been provided.
+  401: 'Unauthorized',
+  '401_NAME': 'UNAUTHORIZED',
+  '401_MESSAGE': 'Similar to 403 Forbidden, but specifically for use when authentication is required and has failed or has not yet been provided.',
   UNAUTHORIZED: 401,
+  // 402 - Reserved for future use. The original intention was that this code might be used as part of some form of digital cash or micropayment scheme, as proposed for example by GNU Taler, but that has not yet happened, and this code is not usually used.
+  402: 'Payment Required',
+  '402_NAME': 'PAYMENT_REQUIRED',
+  '402_MESSAGE': 'Reserved for future use. The original intention was that this code might be used as part of some form of digital cash or micropayment scheme, as proposed for example by GNU Taler, but that has not yet happened, and this code is not usually used.',
   PAYMENT_REQUIRED: 402,
+  // 403 - The request was valid, but the server is refusing action.
+  403: 'Forbidden',
+  '403_NAME': 'FORBIDDEN',
+  '403_MESSAGE': 'The request was valid, but the server is refusing action.',
   FORBIDDEN: 403,
+  // 404 - The requested resource could not be found but may be available in the future. Subsequent requests by the client are permissible.
+  404: 'Not Found',
+  '404_NAME': 'NOT_FOUND',
+  '404_MESSAGE': 'The requested resource could not be found but may be available in the future. Subsequent requests by the client are permissible.',
   NOT_FOUND: 404,
+  // 405 - A request method is not supported for the requested resource.
+  405: 'Method Not Allowed',
+  '405_NAME': 'METHOD_NOT_ALLOWED',
+  '405_MESSAGE': 'A request method is not supported for the requested resource.',
   METHOD_NOT_ALLOWED: 405,
+  // 406 - The requested resource is capable of generating only content not acceptable according to the Accept headers sent in the request.
+  406: 'Not Acceptable',
+  '406_NAME': 'NOT_ACCEPTABLE',
+  '406_MESSAGE': 'The requested resource is capable of generating only content not acceptable according to the Accept headers sent in the request.',
   NOT_ACCEPTABLE: 406,
+  // 407 (RFC 7235) - The client must first authenticate itself with the proxy.
+  407: 'Proxy Authentication Required',
+  '407_NAME': 'PROXY_AUTHENTICATION_REQUIRED',
+  '407_MESSAGE': 'The client must first authenticate itself with the proxy.',
   PROXY_AUTHENTICATION_REQUIRED: 407,
+  // 408 - The server timed out waiting for the request.
+  408: 'Request Time-out',
+  '408_NAME': 'REQUEST_TIMEOUT',
+  '408_MESSAGE': 'The server timed out waiting for the request.',
   REQUEST_TIMEOUT: 408,
+  // 409 - Indicates that the request could not be processed because of conflict in the request, such as an edit conflict between multiple simultaneous updates.
+  409: 'Conflict',
+  '409_NAME': 'CONFLICT',
+  '409_MESSAGE': 'Indicates that the request could not be processed because of conflict in the request, such as an edit conflict between multiple simultaneous updates.',
   CONFLICT: 409,
+  // 410 - Indicates that the resource requested is no longer available and will not be available again.
+  410: 'Gone',
+  '410_NAME': 'GONE',
+  '410_MESSAGE': 'Indicates that the resource requested is no longer available and will not be available again.',
   GONE: 410,
+  // 411 - The request did not specify the length of its content, which is required by the requested resource.
+  411: 'Length Required',
+  '411_NAME': 'LENGTH_REQUIRED',
+  '411_MESSAGE': 'The request did not specify the length of its content, which is required by the requested resource.',
   LENGTH_REQUIRED: 411,
+  // 412 (RFC 7232) - The server does not meet one of the preconditions that the requester put on the request.
+  412: 'Precondition Failed',
+  '412_NAME': 'PRECONDITION_FAILED',
+  '412_MESSAGE': 'The server does not meet one of the preconditions that the requester put on the request.',
   PRECONDITION_FAILED: 412,
+  // 413 (RFC 7231) - The request is larger than the server is willing or able to process. Previously called "Request Entity Too Large".
+  413: 'Request Entity Too Large',
+  '413_NAME': 'REQUEST_ENTITY_TOO_LARGE',
+  '413_MESSAGE': 'The request is larger than the server is willing or able to process. Previously called "Request Entity Too Large".',
   REQUEST_ENTITY_TOO_LARGE: 413,
+  // 414 (RFC 7231) - The URI provided was too long for the server to process.
+  414: 'Request-URI Too Large',
+  '414_NAME': 'REQUEST_URI_TOO_LONG',
+  '414_MESSAGE': 'The URI provided was too long for the server to process.',
   REQUEST_URI_TOO_LONG: 414,
+  // 415 - The request entity has a media type which the server or resource does not support.
+  415: 'Unsupported Media Type',
+  '415_NAME': 'UNSUPPORTED_MEDIA_TYPE',
+  '415_MESSAGE': 'The request entity has a media type which the server or resource does not support.',
   UNSUPPORTED_MEDIA_TYPE: 415,
+  // 416 (RFC 7233) - The client has asked for a portion of the file (byte serving), but the server cannot supply that portion.
+  416: 'Requested Range not Satisfiable',
+  '416_NAME': 'REQUESTED_RANGE_NOT_SATISFIABLE',
+  '416_MESSAGE': 'The client has asked for a portion of the file (byte serving), but the server cannot supply that portion.',
   REQUESTED_RANGE_NOT_SATISFIABLE: 416,
+  // 417 - The server cannot meet the requirements of the Expect request-header field.
+  417: 'Expectation Failed',
+  '417_NAME': 'EXPECTATION_FAILED',
+  '417_MESSAGE': 'The server cannot meet the requirements of the Expect request-header field.',
   EXPECTATION_FAILED: 417,
+  // 418 (RFC 2324, RFC 7168) - Any attempt to brew coffee with a teapot should result in the error code "418 I'm a teapot". The resulting entity body MAY be short and stout. This code was defined in 1998 as one of the traditional IETF April Fools' jokes, in RFC 2324, Hyper Text Coffee Pot Control Protocol, and is not expected to be implemented by actual HTTP servers. The RFC specifies this code should be returned by teapots requested to brew coffee. This HTTP status is used as an Easter egg in some websites, including Google.com.
+  418: 'I\'m a teapot',
+  '418_NAME': 'IM_A_TEAPOT',
+  '418_MESSAGE': 'Any attempt to brew coffee with a teapot should result in the error code "418 I\'m a teapot". The resulting entity body MAY be short and stout.',
   IM_A_TEAPOT: 418,
+  // 421 (RFC 7540) - The request was directed at a server that is not able to produce a response.
+  421: 'Misdirected Request',
+  '421_NAME': 'MISDIRECTED_REQUEST',
+  '421_MESSAGE': 'The request was directed at a server that is not able to produce a response.',
   MISDIRECTED_REQUEST: 421,
+  // 422 (WebDAV; RFC 4918) - The request was well-formed but was unable to be followed due to semantic errors.
+  422: 'Unprocessable Entity',
+  '422_NAME': 'UNPROCESSABLE_ENTITY',
+  '422_MESSAGE': 'The request was well-formed but was unable to be followed due to semantic errors.',
   UNPROCESSABLE_ENTITY: 422,
-  UPGRADE_REQUIRED: 426,
-  PRECONDITION_REQUIRED: 428,
+  // 423 (WebDAV; RFC 4918) - The resource that is being accessed is locked.
+  423: 'Locked',
+  '423_NAME': 'LOCKED',
+  '423_MESSAGE': 'The resource that is being accessed is locked.',
   LOCKED: 423,
+  // 424 (WebDAV; RFC 4918) - The request failed because it depended on another request and that request failed.
+  424: 'Failed Dependency',
+  '424_NAME': 'FAILED_DEPENDENCY',
+  '424_MESSAGE': 'The request failed because it depended on another request and that request failed.',
   FAILED_DEPENDENCY: 424,
+  // 426 - The client should switch to a different protocol such as TLS/1.0, given in the Upgrade header field.
+  426: 'Upgrade Required',
+  '426_NAME': 'UPGRADE_REQUIRED',
+  '426_MESSAGE': 'The client should switch to a different protocol such as TLS/1.0, given in the Upgrade header field.',
+  UPGRADE_REQUIRED: 426,
+  // 428 (RFC 6585) - The origin server requires the request to be conditional.
+  428: 'Precondition Required', // RFC 6585
+  '428_NAME': 'PRECONDITION_REQUIRED',
+  '428_MESSAGE': 'The origin server requires the request to be conditional.',
+  PRECONDITION_REQUIRED: 428,
+  // 429 (RFC 6585) - The user has sent too many requests in a given amount of time.
+  429: 'Too Many Requests',
+  '429_NAME': 'TOO_MANY_REQUESTS',
+  '429_MESSAGE': 'The user has sent too many requests in a given amount of time.',
   TOO_MANY_REQUESTS: 429,
+  // 431 (RFC 6585) - The server is unwilling to process the request because either an individual header field, or all the header fields collectively, are too large.
+  431: 'Request Header Fields Too Large', // RFC 6585
+  '431_NAME': 'REQUEST_HEADER_FIELDS_TOO_LARGE',
+  '431_MESSAGE': 'The server is unwilling to process the request because either an individual header field, or all the header fields collectively, are too large.',
   REQUEST_HEADER_FIELDS_TOO_LARGE: 431,
+  // 451 (RFC 7725) - A server operator has received a legal demand to deny access to a resource or to a set of resources that includes the requested resource.
+  451: 'Unavailable For Legal Reasons',
+  '451_NAME': 'UNAVAILABLE_FOR_LEGAL_REASONS',
+  '451_MESSAGE': 'A server operator has received a legal demand to deny access to a resource or to a set of resources that includes the requested resource.',
   UNAVAILABLE_FOR_LEGAL_REASONS: 451,
+  // ## Server Error 5xx
+
+  // The server failed to fulfill an apparently valid request.
+
+  // 500 - A generic error message, given when an unexpected condition was encountered and no more specific message is suitable.
+  500: 'Internal Server Error',
+  '500_NAME': 'INTERNAL_SERVER_ERROR',
+  '500_MESSAGE': 'A generic error message, given when an unexpected condition was encountered and no more specific message is suitable.',
   INTERNAL_SERVER_ERROR: 500,
+  // 501 - The server either does not recognize the request method, or it lacks the ability to fulfil the request. Usually this implies future availability.
+  501: 'Not Implemented',
+  '501_NAME': 'NOT_IMPLEMENTED',
+  '501_MESSAGE': 'The server either does not recognize the request method, or it lacks the ability to fulfil the request. Usually this implies future availability.',
   NOT_IMPLEMENTED: 501,
+  // 502 - The server was acting as a gateway or proxy and received an invalid response from the upstream server.
+  502: 'Bad Gateway',
+  '_NAME': 'BAD_GATEWAY',
+  '_MESSAGE': 'The server was acting as a gateway or proxy and received an invalid response from the upstream server.',
   BAD_GATEWAY: 502,
+  // 503 - The server is currently unavailable (because it is overloaded or down for maintenance). Generally, this is a temporary state.
+  503: 'Service Unavailable',
+  '503_NAME': 'SERVICE_UNAVAILABLE',
+  '503_MESSAGE': 'The server is currently unavailable (because it is overloaded or down for maintenance). Generally, this is a temporary state.',
   SERVICE_UNAVAILABLE: 503,
+  // 504 - The server was acting as a gateway or proxy and did not receive a timely response from the upstream server.
+  504: 'Gateway Time-out',
+  '504_NAME': 'GATEWAY_TIMEOUT',
+  '504_MESSAGE': 'The server was acting as a gateway or proxy and did not receive a timely response from the upstream server.',
   GATEWAY_TIMEOUT: 504,
+  // 505 - The server does not support the HTTP protocol version used in the request.
+  505: 'HTTP Version not Supported',
+  '505_NAME': 'HTTP_VERSION_NOT_SUPPORTED',
+  '505_MESSAGE': 'The server does not support the HTTP protocol version used in the request.',
   HTTP_VERSION_NOT_SUPPORTED: 505,
+  // 506 (RFC 2295) - Transparent content negotiation for the request results in a circular reference.
+  506: 'Variant Also Negotiates',
+  '506_NAME': 'VARIANT_ALSO_NEGOTIATES',
+  '506_MESSAGE': 'Transparent content negotiation for the request results in a circular reference.',
   VARIANT_ALSO_NEGOTIATES: 506,
+  // 507 (WebDAV; RFC 4918) - The server is unable to store the representation needed to complete the request.
+  507: 'Insufficient Storage',
+  '507_NAME': 'INSUFFICIENT_STORAGE',
+  '507_MESSAGE': 'The server is unable to store the representation needed to complete the request.',
   INSUFFICIENT_STORAGE: 507,
+  // 508 (WebDAV; RFC 5842) - The server detected an infinite loop while processing the request.
+  508: 'Loop Detected',
+  '508_NAME': 'LOOP_DETECTED',
+  '508_MESSAGE': 'The server detected an infinite loop while processing the request.',
   LOOP_DETECTED: 508,
+  // 510 (RFC 2774) - Further extensions to the request are required for the server to fulfil it.
+  510: 'Not Extended',
+  '510_NAME': 'NOT_EXTENDED',
+  '510_MESSAGE': 'Further extensions to the request are required for the server to fulfil it.',
   NOT_EXTENDED: 510,
-  NETWORK_AUTHENTICATION_REQUIRED: 511
+  // 511 (RFC 6585) - The client needs to authenticate to gain network access. Intended for use by intercepting proxies used to control access to the network.
+  511: 'Network Authentication Required',
+  '511_NAME': 'NETWORK_AUTHENTICATION_REQUIRED',
+  '511_MESSAGE': 'The client needs to authenticate to gain network access. Intended for use by intercepting proxies used to control access to the network.',
+  NETWORK_AUTHENTICATION_REQUIRED: 511,
+  // ## Extra code
+
+  // Extra HTTP code implemented by vendors and other specifications.
+  extra: {
+    // ### Unofficial codes
+
+    // The following codes are not specified by any standard.
+    unofficial: {
+      // 103 - Used in the resumable requests proposal to resume aborted PUT or POST requests.
+      103: 'Checkpoint',
+      '103_NAME': 'CHECKPOINT',
+      '103_MESSAGE': 'Used in the resumable requests proposal to resume aborted PUT or POST requests.',
+      CHECKPOINT: 103,
+      // 420 (Twitter) - Returned by version 1 of the Twitter Search and Trends API when the client is being rate limited; versions 1.1 and later use the 429 Too Many Requests response code instead.
+      420: 'Enhance Your Calm',
+      '420_NAME': 'ENHANCE_YOUR_CALM',
+      '420_MESSAGE': 'Returned by version 1 of the Twitter Search and Trends API when the client is being rate limited; versions 1.1 and later use the 429 Too Many Requests response code instead.',
+      ENHANCE_YOUR_CALM: 420,
+      // 450 (Microsoft) - The Microsoft extension code indicated when Windows Parental Controls are turned on and are blocking access to the requested webpage.
+      450: 'Blocked by Windows Parental Controls',
+      '450_NAME': 'BLOCKED_BY_WINDOWS_PARENTAL_CONTROLS',
+      '450_MESSAGE': 'The Microsoft extension code indicated when Windows Parental Controls are turned on and are blocking access to the requested webpage.',
+      BLOCKED_BY_WINDOWS_PARENTAL_CONTROLS: 450,
+      // 498 (Esri) - Returned by ArcGIS for Server. Code 498 indicates an expired or otherwise invalid token.
+      498: 'Invalid Token',
+      '498_NAME': 'INVALID_TOKEN',
+      '498_MESSAGE': 'Returned by ArcGIS for Server. Code 498 indicates an expired or otherwise invalid token.',
+      INVALID_TOKEN: 498,
+      // 499 (Esri) - Returned by ArcGIS for Server. Code 499 indicates that a token is required but was not submitted.
+      499: 'Token Required',
+      '499_NAME': 'TOKEN_REQUIRED',
+      '499_MESSAGE': 'Returned by ArcGIS for Server. Code 499 indicates that a token is required but was not submitted.',
+      TOKEN_REQUIRED: 499,
+      // 509 (Apache Web Server/cPanel) - The server has exceeded the bandwidth specified by the server administrator.
+      509: 'Bandwidth Limit Exceeded',
+      '509_NAME': 'BANDWIDTH_LIMIT_EXCEEDED',
+      '509_MESSAGE': 'The server has exceeded the bandwidth specified by the server administrator.',
+      BANDWIDTH_LIMIT_EXCEEDED: 509,
+      // 530 - Used by the Pantheon web platform to indicate a site that has been frozen due to inactivity.
+      530: 'Site is frozen',
+      '530_NAME': 'SITE_IS_FROZEN',
+      '530_MESSAGE': 'Used by the Pantheon web platform to indicate a site that has been frozen due to inactivity.',
+      SITE_IS_FROZEN: 530,
+      // 598 (Informal convention)  - Used by some HTTP proxies to signal a network read timeout behind the proxy to a client in front of the proxy.
+      598: 'Network read timeout error',
+      '598_NAME': 'NETWORK_READ_TIMEOUT_ERROR',
+      '598_MESSAGE': 'Used by some HTTP proxies to signal a network read timeout behind the proxy to a client in front of the proxy.',
+      NETWORK_READ_TIMEOUT_ERROR: 598
+    },
+    // ### Internet Information Services (IIS)
+
+    // Microsoft's Internet Information Services (IIS) web server expands the 4xx error space to signal errors with the client's request.
+    iis: {
+      // 440 - The client's session has expired and must log in again.
+      440: 'Login Time-out',
+      '440_NAME': 'LOGIN_TIME_OUT',
+      '440_MESSAGE': 'The client\'s session has expired and must log in again.',
+      LOGIN_TIME_OUT: 440,
+      // 449 - The server cannot honour the request because the user has not provided the required information.
+      449: 'Retry With',
+      '449_NAME': 'RETRY_WITH',
+      '449_MESSAGE': 'The server cannot honour the request because the user has not provided the required information.',
+      RETRY_WITH: 449,
+      // 451 - Used in Exchange ActiveSync when either a more efficient server is available or the server cannot access the users' mailbox.
+      451: 'Redirect',
+      '451_NAME': 'REDIRECT',
+      '451_MESSAGE': 'Used in Exchange ActiveSync when either a more efficient server is available or the server cannot access the users\' mailbox.',
+      REDIRECT: 451
+    },
+    // ### NGINX
+
+    // The NGINX web server software expands the 4xx error space to signal issues with the client's request.
+    nginx: {
+      // 444 - Used internally to instruct the server to return no information to the client and close the connection immediately.
+      444: 'No Response',
+      '444_NAME': 'NO_RESPONSE',
+      '444_MESSAGE': 'Used internally to instruct the server to return no information to the client and close the connection immediately.',
+      NO_RESPONSE: 444,
+      // 494 - Client sent too large request or too long header line.
+      494: 'Request header too large',
+      '494_NAME': 'REQUEST_HEADER_TOO_LARGE',
+      '494_MESSAGE': 'Client sent too large request or too long header line.',
+      REQUEST_HEADER_TOO_LARGE: 494,
+      // 495 - An expansion of the 400 Bad Request response code, used when the client has provided an invalid client certificate.
+      495: 'SSL Certificate Error',
+      '495_NAME': 'SSL_CERTIFICATE_ERROR',
+      '495_MESSAGE': 'An expansion of the 400 Bad Request response code, used when the client has provided an invalid client certificate.',
+      SSL_CERTIFICATE_ERROR: 495,
+      // 496 - An expansion of the 400 Bad Request response code, used when a client certificate is required but not provided.
+      496: 'SSL Certificate Required',
+      '496_NAME': 'SSL_CERTIFICATE_REQUIRED',
+      '496_MESSAGE': 'An expansion of the 400 Bad Request response code, used when a client certificate is required but not provided.',
+      SSL_CERTIFICATE_REQUIRED: 496,
+      // 497 - An expansion of the 400 Bad Request response code, used when the client has made a HTTP request to a port listening for HTTPS requests.
+      497: 'HTTP Request Sent to HTTPS Port',
+      '497_NAME': 'HTTP_REQUEST_SENT_TO_HTTPS_PORT',
+      '497_MESSAGE': 'An expansion of the 400 Bad Request response code, used when the client has made a HTTP request to a port listening for HTTPS requests.',
+      HTTP_REQUEST_SENT_TO_HTTPS_PORT: 497,
+      // 499 - Used when the client has closed the request before the server could send a response.
+      499: 'Client Closed Request',
+      '499_NAME': 'CLIENT_CLOSED_REQUEST',
+      '499_MESSAGE': 'Used when the client has closed the request before the server could send a response.',
+      CLIENT_CLOSED_REQUEST: 499
+    },
+    // ### Cloudflare
+
+    // Cloudflare's reverse proxy service expands the 5xx series of errors space to signal issues with the origin server.
+    cloudflare: {
+      // 520 - The 520 error is used as a "catch-all response for when the origin server returns something unexpected", listing connection resets, large headers, and empty or invalid responses as common triggers.
+      520: 'Unknown Error',
+      '520_NAME': 'UNKNOWN_ERROR',
+      '520_MESSAGE': 'The 520 error is used as a "catch-all response for when the origin server returns something unexpected", listing connection resets, large headers, and empty or invalid responses as common triggers.',
+      UNKNOWN_ERROR: 520,
+      // 521 - The origin server has refused the connection from Cloudflare.
+      521: 'Web Server Is Down',
+      '521_NAME': 'WEB_SERVER_IS_DOWN',
+      '521_MESSAGE': 'The origin server has refused the connection from Cloudflare.',
+      WEB_SERVER_IS_DOWN: 521,
+      // 522 - Cloudflare could not negotiate a TCP handshake with the origin server.
+      522: 'Connection Timed Out',
+      '522_NAME': 'CONNECTION_TIMED_OUT',
+      '522_MESSAGE': 'Cloudflare could not negotiate a TCP handshake with the origin server.',
+      CONNECTION_TIMED_OUT: 522,
+      // 523 - Cloudflare could not reach the origin server.
+      523: 'Origin Is Unreachable',
+      '523_NAME': 'ORIGIN_IS_UNREACHABLE',
+      '523_MESSAGE': 'Cloudflare could not reach the origin server.',
+      ORIGIN_IS_UNREACHABLE: 523,
+      // 524 - Cloudflare was able to complete a TCP connection to the origin server, but did not receive a timely HTTP response.
+      524: 'A Timeout Occurred',
+      '524_NAME': 'A_TIMEOUT_OCCURRED',
+      '524_MESSAGE': 'Cloudflare was able to complete a TCP connection to the origin server, but did not receive a timely HTTP response.',
+      A_TIMEOUT_OCCURRED: 524,
+      // 525 - Cloudflare could not negotiate a SSL/TLS handshake with the origin server.
+      525: 'SSL Handshake Failed',
+      '525_NAME': 'SSL_HANDSHAKE_FAILED',
+      '525_MESSAGE': 'Cloudflare could not negotiate a SSL/TLS handshake with the origin server.',
+      SSL_HANDSHAKE_FAILED: 525,
+      // 526 - Cloudflare could not validate the SSL/TLS certificate that the origin server presented.
+      526: 'Invalid SSL Certificate',
+      '526_NAME': 'INVALID_SSL_CERTIFICATE',
+      '526_MESSAGE': 'Cloudflare could not validate the SSL/TLS certificate that the origin server presented.',
+      INVALID_SSL_CERTIFICATE: 526,
+      // 527 - Error 527 indicates that the request timed out or failed after the WAN connection had been established.
+      527: 'Railgun Error',
+      '527_NAME': 'RAILGUN_ERROR',
+      '527_MESSAGE': 'Error 527 indicates that the request timed out or failed after the WAN connection had been established.',
+      RAILGUN_ERROR: 527
+    }
+  }
 };
 
-},{}],237:[function(require,module,exports){
+},{}],236:[function(require,module,exports){
 (function (name, context, definition) {
   if (typeof module !== 'undefined' && module.exports) module.exports = definition();
   else if (typeof define === 'function' && define.amd) define(definition);
@@ -33111,7 +32420,7 @@ module.exports = {
 
 });
 
-},{}],238:[function(require,module,exports){
+},{}],237:[function(require,module,exports){
 var base64 = require('base64-js');
 
 function padding(str) {
@@ -33153,9 +32462,9 @@ function byteArrayToHex(raw) {
 }
 
 function encodeString(str) {
-  return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function (match, p1) {
+  return base64.fromByteArray(stringToByteArray(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function (match, p1) {
     return String.fromCharCode('0x' + p1);
-  }))
+  })))
   .replace(/\+/g, '-') // Convert '+' to '-'
   .replace(/\//g, '_'); // Convert '/' to '_';
 }
@@ -33165,13 +32474,25 @@ function decodeToString(str) {
     .replace(/\-/g, '+') // Convert '-' to '+'
     .replace(/_/g, '/'); // Convert '_' to '/'
 
-  return decodeURIComponent(atob(str).split('').map(function (c) {
+  return decodeURIComponent(byteArrayToString(base64.toByteArray(str)).split('').map(function (c) {
     return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
   }).join(''));
 }
 
 function decodeToHEX(str) {
   return byteArrayToHex(base64.toByteArray(padding(str)));
+}
+
+function base64ToBase64Url(base64String) {
+  var SAFE_URL_ENCODING_MAPPING = {
+    "+": "-",
+    "/": "_",
+    "=": ""
+  };
+
+  return base64String.replace(/[+/=]/g, function(m) {
+    return SAFE_URL_ENCODING_MAPPING[m];
+  });
 }
 
 module.exports = {
@@ -33181,10 +32502,11 @@ module.exports = {
   stringToByteArray: stringToByteArray,
   padding: padding,
   byteArrayToHex: byteArrayToHex,
-  decodeToHEX: decodeToHEX
+  decodeToHEX: decodeToHEX,
+  base64ToBase64Url: base64ToBase64Url
 };
 
-},{"base64-js":230}],239:[function(require,module,exports){
+},{"base64-js":227}],238:[function(require,module,exports){
 function DummyCache() {}
 
 DummyCache.prototype.get = function () {
@@ -33200,7 +32522,7 @@ DummyCache.prototype.set = function () {
 
 module.exports = DummyCache;
 
-},{}],240:[function(require,module,exports){
+},{}],239:[function(require,module,exports){
 function ConfigurationError(message) {
   this.name = 'ConfigurationError';
   this.message = (message || '');
@@ -33218,7 +32540,7 @@ module.exports = {
   TokenValidationError: TokenValidationError
 };
 
-},{}],241:[function(require,module,exports){
+},{}],240:[function(require,module,exports){
 var urljoin = require('url-join');
 var base64 = require('./base64');
 var request = require('superagent');
@@ -33234,7 +32556,7 @@ function process(jwks) {
 }
 
 function getJWKS(options, cb) {
-  var url = urljoin(options.iss, '.well-known', 'jwks.json');
+  var url = options.jwksURI || urljoin(options.iss, '.well-known', 'jwks.json');
 
   return request
     .get(url)
@@ -33244,7 +32566,7 @@ function getJWKS(options, cb) {
       var key;
 
       if (err) {
-        cb(err);
+        return cb(err);
       }
 
       // eslint-disable-next-line no-plusplus
@@ -33255,7 +32577,7 @@ function getJWKS(options, cb) {
         }
       }
 
-      cb(null, process(matchingKey));
+      return cb(null, process(matchingKey));
     });
 }
 
@@ -33264,7 +32586,7 @@ module.exports = {
   getJWKS: getJWKS
 };
 
-},{"./base64":238,"superagent":255,"url-join":237}],242:[function(require,module,exports){
+},{"./base64":237,"superagent":254,"url-join":236}],241:[function(require,module,exports){
 /*
 Based on the work of Tom Wu
 http://www-cs-students.stanford.edu/~tjw/jsbn/
@@ -33343,7 +32665,11 @@ RSAVerifier.prototype.verify = function (msg, encsig) {
 
 module.exports = RSAVerifier;
 
-},{"crypto-js/sha256":233,"jsbn":245}],243:[function(require,module,exports){
+},{"crypto-js/sha256":232,"jsbn":244}],242:[function(require,module,exports){
+var sha256 = require('crypto-js/sha256');
+var cryptoBase64 = require('crypto-js/enc-base64');
+var cryptoHex = require('crypto-js/enc-hex');
+
 var RSAVerifier = require('./helpers/rsa-verifier');
 var base64 = require('./helpers/base64');
 var jwks = require('./helpers/jwks');
@@ -33360,6 +32686,7 @@ var supportedAlgs = ['RS256'];
  * @param {String} parameters.audience identifies the recipients that the JWT is intended for
  * and should match the `aud` claim
  * @param {Object} [parameters.jwksCache] cache for JSON Web Token Keys. By default it has no cache
+ * @param {String} [parameters.jwksURI] A valid, direct URI to fetch the JSON Web Key Set (JWKS).
  * @param {String} [parameters.expectedAlg='RS256'] algorithm in which the id_token was signed
  * and will be used to validate
  * @param {number} [parameters.leeway=0] number of seconds that the clock can be out of sync
@@ -33374,6 +32701,7 @@ function IdTokenVerifier(parameters) {
   this.audience = options.audience;
   this.leeway = options.leeway || 0;
   this.__disableExpirationCheck = options.__disableExpirationCheck || false;
+  this.jwksURI = options.jwksURI;
 
   if (this.leeway < 0 || this.leeway > 60) {
     throw new error.ConfigurationError('The leeway should be positive and lower than a minute.');
@@ -33533,14 +32861,15 @@ IdTokenVerifier.prototype.getRsaVerifier = function (iss, kid, cb) {
 
   if (!this.jwksCache.has(cachekey)) {
     jwks.getJWKS({
+      jwksURI: this.jwksURI,
       iss: iss,
       kid: kid
     }, function (err, keyInfo) {
       if (err) {
-        cb(err);
+        return cb(err);
       }
       _this.jwksCache.set(cachekey, keyInfo);
-      cb(null, new RSAVerifier(keyInfo.modulus, keyInfo.exp));
+      return cb(null, new RSAVerifier(keyInfo.modulus, keyInfo.exp));
     });
   } else {
     var keyInfo = this.jwksCache.get(cachekey); // eslint-disable-line vars-on-top
@@ -33591,9 +32920,45 @@ IdTokenVerifier.prototype.decode = function (token) {
   };
 };
 
+/**
+ * @callback validateAccessTokenCallback
+ * @param {Error} [err] error returned if the validation cannot be performed
+ * or the token is invalid. If there is no error, then the access_token is valid.
+ */
+
+/**
+ * Validates an access_token based on {@link http://openid.net/specs/openid-connect-core-1_0.html#ImplicitTokenValidation}.
+ * The id_token from where the alg and atHash parameters are taken,
+ * should be decoded and verified before using thisfunction
+ *
+ * @method validateAccessToken
+ * @param {String} access_token the access_token
+ * @param {String} alg The algorithm defined in the header of the
+ * previously verified id_token under the "alg" claim.
+ * @param {String} atHash The "at_hash" value included in the payload
+ * of the previously verified id_token.
+ * @param {validateAccessTokenCallback} cb callback used to notify the results of the validation.
+ */
+IdTokenVerifier.prototype.validateAccessToken = function (accessToken, alg, atHash, cb) {
+  if (this.expectedAlg !== alg) {
+    return cb(new error.TokenValidationError('Algorithm ' + alg +
+      ' is not supported. (Expected alg: ' + this.expectedAlg + ')'));
+  }
+  var sha256AccessToken = sha256(accessToken);
+  var hashToHex = cryptoHex.stringify(sha256AccessToken);
+  var hashToHexFirstHalf = hashToHex.substring(0, hashToHex.length / 2);
+  var hashFirstHalfWordArray = cryptoHex.parse(hashToHexFirstHalf);
+  var hashFirstHalfBase64 = cryptoBase64.stringify(hashFirstHalfWordArray);
+  var hashFirstHalfBase64SafeUrl = base64.base64ToBase64Url(hashFirstHalfBase64);
+  if (hashFirstHalfBase64SafeUrl !== atHash) {
+    return cb(new error.TokenValidationError('Invalid access_token'));
+  }
+  return cb(null);
+};
+
 module.exports = IdTokenVerifier;
 
-},{"./helpers/base64":238,"./helpers/dummy-cache":239,"./helpers/error":240,"./helpers/jwks":241,"./helpers/rsa-verifier":242}],244:[function(require,module,exports){
+},{"./helpers/base64":237,"./helpers/dummy-cache":238,"./helpers/error":239,"./helpers/jwks":240,"./helpers/rsa-verifier":241,"crypto-js/enc-base64":230,"crypto-js/enc-hex":231,"crypto-js/sha256":232}],243:[function(require,module,exports){
 // the whatwg-fetch polyfill installs the fetch() function
 // on the global object (window or self)
 //
@@ -33601,7 +32966,7 @@ module.exports = IdTokenVerifier;
 require('whatwg-fetch');
 module.exports = self.fetch.bind(self);
 
-},{"whatwg-fetch":333}],245:[function(require,module,exports){
+},{"whatwg-fetch":332}],244:[function(require,module,exports){
 (function(){
 
     // Copyright (c) 2005  Tom Wu
@@ -34960,7 +34325,7 @@ module.exports = self.fetch.bind(self);
 
 }).call(this);
 
-},{}],246:[function(require,module,exports){
+},{}],245:[function(require,module,exports){
 /**
  * Helpers.
  */
@@ -35114,7 +34479,7 @@ function plural(ms, n, name) {
   return Math.ceil(ms / n) + ' ' + name + 's';
 }
 
-},{}],247:[function(require,module,exports){
+},{}],246:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -35300,15 +34665,428 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
+},{}],247:[function(require,module,exports){
+'use strict';
+
+var replace = String.prototype.replace;
+var percentTwenties = /%20/g;
+
+module.exports = {
+    'default': 'RFC3986',
+    formatters: {
+        RFC1738: function (value) {
+            return replace.call(value, percentTwenties, '+');
+        },
+        RFC3986: function (value) {
+            return value;
+        }
+    },
+    RFC1738: 'RFC1738',
+    RFC3986: 'RFC3986'
+};
+
 },{}],248:[function(require,module,exports){
-arguments[4][136][0].apply(exports,arguments)
-},{"dup":136}],249:[function(require,module,exports){
-arguments[4][137][0].apply(exports,arguments)
-},{"./formats":248,"./parse":250,"./stringify":251,"dup":137}],250:[function(require,module,exports){
-arguments[4][138][0].apply(exports,arguments)
-},{"./utils":252,"dup":138}],251:[function(require,module,exports){
-arguments[4][139][0].apply(exports,arguments)
-},{"./formats":248,"./utils":252,"dup":139}],252:[function(require,module,exports){
+'use strict';
+
+var stringify = require('./stringify');
+var parse = require('./parse');
+var formats = require('./formats');
+
+module.exports = {
+    formats: formats,
+    parse: parse,
+    stringify: stringify
+};
+
+},{"./formats":247,"./parse":249,"./stringify":250}],249:[function(require,module,exports){
+'use strict';
+
+var utils = require('./utils');
+
+var has = Object.prototype.hasOwnProperty;
+
+var defaults = {
+    allowDots: false,
+    allowPrototypes: false,
+    arrayLimit: 20,
+    decoder: utils.decode,
+    delimiter: '&',
+    depth: 5,
+    parameterLimit: 1000,
+    plainObjects: false,
+    strictNullHandling: false
+};
+
+var parseValues = function parseQueryStringValues(str, options) {
+    var obj = {};
+    var cleanStr = options.ignoreQueryPrefix ? str.replace(/^\?/, '') : str;
+    var limit = options.parameterLimit === Infinity ? undefined : options.parameterLimit;
+    var parts = cleanStr.split(options.delimiter, limit);
+
+    for (var i = 0; i < parts.length; ++i) {
+        var part = parts[i];
+
+        var bracketEqualsPos = part.indexOf(']=');
+        var pos = bracketEqualsPos === -1 ? part.indexOf('=') : bracketEqualsPos + 1;
+
+        var key, val;
+        if (pos === -1) {
+            key = options.decoder(part, defaults.decoder);
+            val = options.strictNullHandling ? null : '';
+        } else {
+            key = options.decoder(part.slice(0, pos), defaults.decoder);
+            val = options.decoder(part.slice(pos + 1), defaults.decoder);
+        }
+        if (has.call(obj, key)) {
+            obj[key] = [].concat(obj[key]).concat(val);
+        } else {
+            obj[key] = val;
+        }
+    }
+
+    return obj;
+};
+
+var parseObject = function (chain, val, options) {
+    var leaf = val;
+
+    for (var i = chain.length - 1; i >= 0; --i) {
+        var obj;
+        var root = chain[i];
+
+        if (root === '[]') {
+            obj = [];
+            obj = obj.concat(leaf);
+        } else {
+            obj = options.plainObjects ? Object.create(null) : {};
+            var cleanRoot = root.charAt(0) === '[' && root.charAt(root.length - 1) === ']' ? root.slice(1, -1) : root;
+            var index = parseInt(cleanRoot, 10);
+            if (
+                !isNaN(index)
+                && root !== cleanRoot
+                && String(index) === cleanRoot
+                && index >= 0
+                && (options.parseArrays && index <= options.arrayLimit)
+            ) {
+                obj = [];
+                obj[index] = leaf;
+            } else {
+                obj[cleanRoot] = leaf;
+            }
+        }
+
+        leaf = obj;
+    }
+
+    return leaf;
+};
+
+var parseKeys = function parseQueryStringKeys(givenKey, val, options) {
+    if (!givenKey) {
+        return;
+    }
+
+    // Transform dot notation to bracket notation
+    var key = options.allowDots ? givenKey.replace(/\.([^.[]+)/g, '[$1]') : givenKey;
+
+    // The regex chunks
+
+    var brackets = /(\[[^[\]]*])/;
+    var child = /(\[[^[\]]*])/g;
+
+    // Get the parent
+
+    var segment = brackets.exec(key);
+    var parent = segment ? key.slice(0, segment.index) : key;
+
+    // Stash the parent if it exists
+
+    var keys = [];
+    if (parent) {
+        // If we aren't using plain objects, optionally prefix keys
+        // that would overwrite object prototype properties
+        if (!options.plainObjects && has.call(Object.prototype, parent)) {
+            if (!options.allowPrototypes) {
+                return;
+            }
+        }
+
+        keys.push(parent);
+    }
+
+    // Loop through children appending to the array until we hit depth
+
+    var i = 0;
+    while ((segment = child.exec(key)) !== null && i < options.depth) {
+        i += 1;
+        if (!options.plainObjects && has.call(Object.prototype, segment[1].slice(1, -1))) {
+            if (!options.allowPrototypes) {
+                return;
+            }
+        }
+        keys.push(segment[1]);
+    }
+
+    // If there's a remainder, just add whatever is left
+
+    if (segment) {
+        keys.push('[' + key.slice(segment.index) + ']');
+    }
+
+    return parseObject(keys, val, options);
+};
+
+module.exports = function (str, opts) {
+    var options = opts ? utils.assign({}, opts) : {};
+
+    if (options.decoder !== null && options.decoder !== undefined && typeof options.decoder !== 'function') {
+        throw new TypeError('Decoder has to be a function.');
+    }
+
+    options.ignoreQueryPrefix = options.ignoreQueryPrefix === true;
+    options.delimiter = typeof options.delimiter === 'string' || utils.isRegExp(options.delimiter) ? options.delimiter : defaults.delimiter;
+    options.depth = typeof options.depth === 'number' ? options.depth : defaults.depth;
+    options.arrayLimit = typeof options.arrayLimit === 'number' ? options.arrayLimit : defaults.arrayLimit;
+    options.parseArrays = options.parseArrays !== false;
+    options.decoder = typeof options.decoder === 'function' ? options.decoder : defaults.decoder;
+    options.allowDots = typeof options.allowDots === 'boolean' ? options.allowDots : defaults.allowDots;
+    options.plainObjects = typeof options.plainObjects === 'boolean' ? options.plainObjects : defaults.plainObjects;
+    options.allowPrototypes = typeof options.allowPrototypes === 'boolean' ? options.allowPrototypes : defaults.allowPrototypes;
+    options.parameterLimit = typeof options.parameterLimit === 'number' ? options.parameterLimit : defaults.parameterLimit;
+    options.strictNullHandling = typeof options.strictNullHandling === 'boolean' ? options.strictNullHandling : defaults.strictNullHandling;
+
+    if (str === '' || str === null || typeof str === 'undefined') {
+        return options.plainObjects ? Object.create(null) : {};
+    }
+
+    var tempObj = typeof str === 'string' ? parseValues(str, options) : str;
+    var obj = options.plainObjects ? Object.create(null) : {};
+
+    // Iterate over the keys and setup the new object
+
+    var keys = Object.keys(tempObj);
+    for (var i = 0; i < keys.length; ++i) {
+        var key = keys[i];
+        var newObj = parseKeys(key, tempObj[key], options);
+        obj = utils.merge(obj, newObj, options);
+    }
+
+    return utils.compact(obj);
+};
+
+},{"./utils":251}],250:[function(require,module,exports){
+'use strict';
+
+var utils = require('./utils');
+var formats = require('./formats');
+
+var arrayPrefixGenerators = {
+    brackets: function brackets(prefix) { // eslint-disable-line func-name-matching
+        return prefix + '[]';
+    },
+    indices: function indices(prefix, key) { // eslint-disable-line func-name-matching
+        return prefix + '[' + key + ']';
+    },
+    repeat: function repeat(prefix) { // eslint-disable-line func-name-matching
+        return prefix;
+    }
+};
+
+var toISO = Date.prototype.toISOString;
+
+var defaults = {
+    delimiter: '&',
+    encode: true,
+    encoder: utils.encode,
+    encodeValuesOnly: false,
+    serializeDate: function serializeDate(date) { // eslint-disable-line func-name-matching
+        return toISO.call(date);
+    },
+    skipNulls: false,
+    strictNullHandling: false
+};
+
+var stringify = function stringify( // eslint-disable-line func-name-matching
+    object,
+    prefix,
+    generateArrayPrefix,
+    strictNullHandling,
+    skipNulls,
+    encoder,
+    filter,
+    sort,
+    allowDots,
+    serializeDate,
+    formatter,
+    encodeValuesOnly
+) {
+    var obj = object;
+    if (typeof filter === 'function') {
+        obj = filter(prefix, obj);
+    } else if (obj instanceof Date) {
+        obj = serializeDate(obj);
+    } else if (obj === null) {
+        if (strictNullHandling) {
+            return encoder && !encodeValuesOnly ? encoder(prefix, defaults.encoder) : prefix;
+        }
+
+        obj = '';
+    }
+
+    if (typeof obj === 'string' || typeof obj === 'number' || typeof obj === 'boolean' || utils.isBuffer(obj)) {
+        if (encoder) {
+            var keyValue = encodeValuesOnly ? prefix : encoder(prefix, defaults.encoder);
+            return [formatter(keyValue) + '=' + formatter(encoder(obj, defaults.encoder))];
+        }
+        return [formatter(prefix) + '=' + formatter(String(obj))];
+    }
+
+    var values = [];
+
+    if (typeof obj === 'undefined') {
+        return values;
+    }
+
+    var objKeys;
+    if (Array.isArray(filter)) {
+        objKeys = filter;
+    } else {
+        var keys = Object.keys(obj);
+        objKeys = sort ? keys.sort(sort) : keys;
+    }
+
+    for (var i = 0; i < objKeys.length; ++i) {
+        var key = objKeys[i];
+
+        if (skipNulls && obj[key] === null) {
+            continue;
+        }
+
+        if (Array.isArray(obj)) {
+            values = values.concat(stringify(
+                obj[key],
+                generateArrayPrefix(prefix, key),
+                generateArrayPrefix,
+                strictNullHandling,
+                skipNulls,
+                encoder,
+                filter,
+                sort,
+                allowDots,
+                serializeDate,
+                formatter,
+                encodeValuesOnly
+            ));
+        } else {
+            values = values.concat(stringify(
+                obj[key],
+                prefix + (allowDots ? '.' + key : '[' + key + ']'),
+                generateArrayPrefix,
+                strictNullHandling,
+                skipNulls,
+                encoder,
+                filter,
+                sort,
+                allowDots,
+                serializeDate,
+                formatter,
+                encodeValuesOnly
+            ));
+        }
+    }
+
+    return values;
+};
+
+module.exports = function (object, opts) {
+    var obj = object;
+    var options = opts ? utils.assign({}, opts) : {};
+
+    if (options.encoder !== null && options.encoder !== undefined && typeof options.encoder !== 'function') {
+        throw new TypeError('Encoder has to be a function.');
+    }
+
+    var delimiter = typeof options.delimiter === 'undefined' ? defaults.delimiter : options.delimiter;
+    var strictNullHandling = typeof options.strictNullHandling === 'boolean' ? options.strictNullHandling : defaults.strictNullHandling;
+    var skipNulls = typeof options.skipNulls === 'boolean' ? options.skipNulls : defaults.skipNulls;
+    var encode = typeof options.encode === 'boolean' ? options.encode : defaults.encode;
+    var encoder = typeof options.encoder === 'function' ? options.encoder : defaults.encoder;
+    var sort = typeof options.sort === 'function' ? options.sort : null;
+    var allowDots = typeof options.allowDots === 'undefined' ? false : options.allowDots;
+    var serializeDate = typeof options.serializeDate === 'function' ? options.serializeDate : defaults.serializeDate;
+    var encodeValuesOnly = typeof options.encodeValuesOnly === 'boolean' ? options.encodeValuesOnly : defaults.encodeValuesOnly;
+    if (typeof options.format === 'undefined') {
+        options.format = formats['default'];
+    } else if (!Object.prototype.hasOwnProperty.call(formats.formatters, options.format)) {
+        throw new TypeError('Unknown format option provided.');
+    }
+    var formatter = formats.formatters[options.format];
+    var objKeys;
+    var filter;
+
+    if (typeof options.filter === 'function') {
+        filter = options.filter;
+        obj = filter('', obj);
+    } else if (Array.isArray(options.filter)) {
+        filter = options.filter;
+        objKeys = filter;
+    }
+
+    var keys = [];
+
+    if (typeof obj !== 'object' || obj === null) {
+        return '';
+    }
+
+    var arrayFormat;
+    if (options.arrayFormat in arrayPrefixGenerators) {
+        arrayFormat = options.arrayFormat;
+    } else if ('indices' in options) {
+        arrayFormat = options.indices ? 'indices' : 'repeat';
+    } else {
+        arrayFormat = 'indices';
+    }
+
+    var generateArrayPrefix = arrayPrefixGenerators[arrayFormat];
+
+    if (!objKeys) {
+        objKeys = Object.keys(obj);
+    }
+
+    if (sort) {
+        objKeys.sort(sort);
+    }
+
+    for (var i = 0; i < objKeys.length; ++i) {
+        var key = objKeys[i];
+
+        if (skipNulls && obj[key] === null) {
+            continue;
+        }
+
+        keys = keys.concat(stringify(
+            obj[key],
+            key,
+            generateArrayPrefix,
+            strictNullHandling,
+            skipNulls,
+            encode ? encoder : null,
+            filter,
+            sort,
+            allowDots,
+            serializeDate,
+            formatter,
+            encodeValuesOnly
+        ));
+    }
+
+    var joined = keys.join(delimiter);
+    var prefix = options.addQueryPrefix === true ? '?' : '';
+
+    return joined.length > 0 ? prefix + joined : '';
+};
+
+},{"./formats":247,"./utils":251}],251:[function(require,module,exports){
 'use strict';
 
 var has = Object.prototype.hasOwnProperty;
@@ -35345,7 +35123,7 @@ var compactQueue = function compactQueue(queue) {
     return obj;
 };
 
-exports.arrayToObject = function arrayToObject(source, options) {
+var arrayToObject = function arrayToObject(source, options) {
     var obj = options && options.plainObjects ? Object.create(null) : {};
     for (var i = 0; i < source.length; ++i) {
         if (typeof source[i] !== 'undefined') {
@@ -35356,7 +35134,7 @@ exports.arrayToObject = function arrayToObject(source, options) {
     return obj;
 };
 
-exports.merge = function merge(target, source, options) {
+var merge = function merge(target, source, options) {
     if (!source) {
         return target;
     }
@@ -35381,14 +35159,14 @@ exports.merge = function merge(target, source, options) {
 
     var mergeTarget = target;
     if (Array.isArray(target) && !Array.isArray(source)) {
-        mergeTarget = exports.arrayToObject(target, options);
+        mergeTarget = arrayToObject(target, options);
     }
 
     if (Array.isArray(target) && Array.isArray(source)) {
         source.forEach(function (item, i) {
             if (has.call(target, i)) {
                 if (target[i] && typeof target[i] === 'object') {
-                    target[i] = exports.merge(target[i], item, options);
+                    target[i] = merge(target[i], item, options);
                 } else {
                     target.push(item);
                 }
@@ -35403,7 +35181,7 @@ exports.merge = function merge(target, source, options) {
         var value = source[key];
 
         if (has.call(acc, key)) {
-            acc[key] = exports.merge(acc[key], value, options);
+            acc[key] = merge(acc[key], value, options);
         } else {
             acc[key] = value;
         }
@@ -35411,14 +35189,14 @@ exports.merge = function merge(target, source, options) {
     }, mergeTarget);
 };
 
-exports.assign = function assignSingleSource(target, source) {
+var assign = function assignSingleSource(target, source) {
     return Object.keys(source).reduce(function (acc, key) {
         acc[key] = source[key];
         return acc;
     }, target);
 };
 
-exports.decode = function (str) {
+var decode = function (str) {
     try {
         return decodeURIComponent(str.replace(/\+/g, ' '));
     } catch (e) {
@@ -35426,7 +35204,7 @@ exports.decode = function (str) {
     }
 };
 
-exports.encode = function encode(str) {
+var encode = function encode(str) {
     // This code was originally written by Brian White (mscdex) for the io.js core querystring library.
     // It has been adapted here for stricter adherence to RFC 3986
     if (str.length === 0) {
@@ -35478,7 +35256,7 @@ exports.encode = function encode(str) {
     return out;
 };
 
-exports.compact = function compact(value) {
+var compact = function compact(value) {
     var queue = [{ obj: { o: value }, prop: 'o' }];
     var refs = [];
 
@@ -35500,11 +35278,11 @@ exports.compact = function compact(value) {
     return compactQueue(queue);
 };
 
-exports.isRegExp = function isRegExp(obj) {
+var isRegExp = function isRegExp(obj) {
     return Object.prototype.toString.call(obj) === '[object RegExp]';
 };
 
-exports.isBuffer = function isBuffer(obj) {
+var isBuffer = function isBuffer(obj) {
     if (obj === null || typeof obj === 'undefined') {
         return false;
     }
@@ -35512,7 +35290,18 @@ exports.isBuffer = function isBuffer(obj) {
     return !!(obj.constructor && obj.constructor.isBuffer && obj.constructor.isBuffer(obj));
 };
 
-},{}],253:[function(require,module,exports){
+module.exports = {
+    arrayToObject: arrayToObject,
+    assign: assign,
+    compact: compact,
+    decode: decode,
+    encode: encode,
+    isBuffer: isBuffer,
+    isRegExp: isRegExp,
+    merge: merge
+};
+
+},{}],252:[function(require,module,exports){
 module.exports = Object.setPrototypeOf || ({__proto__:[]} instanceof Array ? setProtoOf : mixinProperties);
 
 function setProtoOf(obj, proto) {
@@ -35529,7 +35318,7 @@ function mixinProperties(obj, proto) {
 	return obj;
 }
 
-},{}],254:[function(require,module,exports){
+},{}],253:[function(require,module,exports){
 function Agent() {
   this._defaults = [];
 }
@@ -35551,7 +35340,7 @@ Agent.prototype._setDefaults = function(req) {
 
 module.exports = Agent;
 
-},{}],255:[function(require,module,exports){
+},{}],254:[function(require,module,exports){
 /**
  * Root reference for iframes.
  */
@@ -35740,7 +35529,7 @@ request.types = {
 
 request.serialize = {
   'application/x-www-form-urlencoded': serialize,
-  'application/json': JSON.stringify,
+  'application/json': JSON.stringify
 };
 
 /**
@@ -35754,7 +35543,7 @@ request.serialize = {
 
 request.parse = {
   'application/x-www-form-urlencoded': parseString,
-  'application/json': JSON.parse,
+  'application/json': JSON.parse
 };
 
 /**
@@ -36473,7 +36262,7 @@ request.put = function(url, data, fn) {
   return req;
 };
 
-},{"./agent-base":254,"./is-object":256,"./request-base":257,"./response-base":258,"component-emitter":231}],256:[function(require,module,exports){
+},{"./agent-base":253,"./is-object":255,"./request-base":256,"./response-base":257,"component-emitter":228}],255:[function(require,module,exports){
 'use strict';
 
 /**
@@ -36490,7 +36279,7 @@ function isObject(obj) {
 
 module.exports = isObject;
 
-},{}],257:[function(require,module,exports){
+},{}],256:[function(require,module,exports){
 'use strict';
 
 /**
@@ -36737,7 +36526,7 @@ RequestBase.prototype.then = function then(resolve, reject) {
   return this._fullfilledPromise.then(resolve, reject);
 };
 
-RequestBase.prototype.catch = function(cb) {
+RequestBase.prototype['catch'] = function(cb) {
   return this.then(undefined, cb);
 };
 
@@ -37186,7 +36975,7 @@ RequestBase.prototype._setTimeouts = function() {
   }
 };
 
-},{"./is-object":256}],258:[function(require,module,exports){
+},{"./is-object":255}],257:[function(require,module,exports){
 'use strict';
 
 /**
@@ -37313,6 +37102,7 @@ ResponseBase.prototype._setStatusProperties = function(status){
         : false;
 
     // sugar
+    this.created = 201 == status;
     this.accepted = 202 == status;
     this.noContent = 204 == status;
     this.badRequest = 400 == status;
@@ -37320,9 +37110,10 @@ ResponseBase.prototype._setStatusProperties = function(status){
     this.notAcceptable = 406 == status;
     this.forbidden = 403 == status;
     this.notFound = 404 == status;
+    this.unprocessableEntity = 422 == status;
 };
 
-},{"./utils":259}],259:[function(require,module,exports){
+},{"./utils":258}],258:[function(require,module,exports){
 'use strict';
 
 /**
@@ -37395,7 +37186,7 @@ exports.cleanHeader = function(header, changesOrigin){
   return header;
 };
 
-},{}],260:[function(require,module,exports){
+},{}],259:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -37758,33 +37549,33 @@ var validator = {
 
 exports.default = validator;
 module.exports = exports['default'];
-},{"./lib/blacklist":262,"./lib/contains":263,"./lib/equals":264,"./lib/escape":265,"./lib/isAfter":266,"./lib/isAlpha":267,"./lib/isAlphanumeric":268,"./lib/isAscii":269,"./lib/isBase64":270,"./lib/isBefore":271,"./lib/isBoolean":272,"./lib/isByteLength":273,"./lib/isCreditCard":274,"./lib/isCurrency":275,"./lib/isDataURI":276,"./lib/isDecimal":277,"./lib/isDivisibleBy":278,"./lib/isEmail":279,"./lib/isEmpty":280,"./lib/isFQDN":281,"./lib/isFloat":282,"./lib/isFullWidth":283,"./lib/isHalfWidth":284,"./lib/isHash":285,"./lib/isHexColor":286,"./lib/isHexadecimal":287,"./lib/isIP":288,"./lib/isISBN":289,"./lib/isISIN":290,"./lib/isISO31661Alpha2":291,"./lib/isISO31661Alpha3":292,"./lib/isISO8601":293,"./lib/isISRC":294,"./lib/isISSN":295,"./lib/isIn":296,"./lib/isInt":297,"./lib/isJSON":298,"./lib/isLatLong":299,"./lib/isLength":300,"./lib/isLowercase":301,"./lib/isMACAddress":302,"./lib/isMD5":303,"./lib/isMimeType":304,"./lib/isMobilePhone":305,"./lib/isMongoId":306,"./lib/isMultibyte":307,"./lib/isNumeric":308,"./lib/isPort":309,"./lib/isPostalCode":310,"./lib/isRFC3339":311,"./lib/isSurrogatePair":312,"./lib/isURL":313,"./lib/isUUID":314,"./lib/isUppercase":315,"./lib/isVariableWidth":316,"./lib/isWhitelisted":317,"./lib/ltrim":318,"./lib/matches":319,"./lib/normalizeEmail":320,"./lib/rtrim":321,"./lib/stripLow":322,"./lib/toBoolean":323,"./lib/toDate":324,"./lib/toFloat":325,"./lib/toInt":326,"./lib/trim":327,"./lib/unescape":328,"./lib/util/toString":331,"./lib/whitelist":332}],261:[function(require,module,exports){
+},{"./lib/blacklist":261,"./lib/contains":262,"./lib/equals":263,"./lib/escape":264,"./lib/isAfter":265,"./lib/isAlpha":266,"./lib/isAlphanumeric":267,"./lib/isAscii":268,"./lib/isBase64":269,"./lib/isBefore":270,"./lib/isBoolean":271,"./lib/isByteLength":272,"./lib/isCreditCard":273,"./lib/isCurrency":274,"./lib/isDataURI":275,"./lib/isDecimal":276,"./lib/isDivisibleBy":277,"./lib/isEmail":278,"./lib/isEmpty":279,"./lib/isFQDN":280,"./lib/isFloat":281,"./lib/isFullWidth":282,"./lib/isHalfWidth":283,"./lib/isHash":284,"./lib/isHexColor":285,"./lib/isHexadecimal":286,"./lib/isIP":287,"./lib/isISBN":288,"./lib/isISIN":289,"./lib/isISO31661Alpha2":290,"./lib/isISO31661Alpha3":291,"./lib/isISO8601":292,"./lib/isISRC":293,"./lib/isISSN":294,"./lib/isIn":295,"./lib/isInt":296,"./lib/isJSON":297,"./lib/isLatLong":298,"./lib/isLength":299,"./lib/isLowercase":300,"./lib/isMACAddress":301,"./lib/isMD5":302,"./lib/isMimeType":303,"./lib/isMobilePhone":304,"./lib/isMongoId":305,"./lib/isMultibyte":306,"./lib/isNumeric":307,"./lib/isPort":308,"./lib/isPostalCode":309,"./lib/isRFC3339":310,"./lib/isSurrogatePair":311,"./lib/isURL":312,"./lib/isUUID":313,"./lib/isUppercase":314,"./lib/isVariableWidth":315,"./lib/isWhitelisted":316,"./lib/ltrim":317,"./lib/matches":318,"./lib/normalizeEmail":319,"./lib/rtrim":320,"./lib/stripLow":321,"./lib/toBoolean":322,"./lib/toDate":323,"./lib/toFloat":324,"./lib/toInt":325,"./lib/trim":326,"./lib/unescape":327,"./lib/util/toString":330,"./lib/whitelist":331}],260:[function(require,module,exports){
 arguments[4][52][0].apply(exports,arguments)
-},{"dup":52}],262:[function(require,module,exports){
+},{"dup":52}],261:[function(require,module,exports){
 arguments[4][53][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":53}],263:[function(require,module,exports){
+},{"./util/assertString":328,"dup":53}],262:[function(require,module,exports){
 arguments[4][54][0].apply(exports,arguments)
-},{"./util/assertString":329,"./util/toString":331,"dup":54}],264:[function(require,module,exports){
+},{"./util/assertString":328,"./util/toString":330,"dup":54}],263:[function(require,module,exports){
 arguments[4][55][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":55}],265:[function(require,module,exports){
+},{"./util/assertString":328,"dup":55}],264:[function(require,module,exports){
 arguments[4][56][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":56}],266:[function(require,module,exports){
+},{"./util/assertString":328,"dup":56}],265:[function(require,module,exports){
 arguments[4][57][0].apply(exports,arguments)
-},{"./toDate":324,"./util/assertString":329,"dup":57}],267:[function(require,module,exports){
+},{"./toDate":323,"./util/assertString":328,"dup":57}],266:[function(require,module,exports){
 arguments[4][58][0].apply(exports,arguments)
-},{"./alpha":261,"./util/assertString":329,"dup":58}],268:[function(require,module,exports){
+},{"./alpha":260,"./util/assertString":328,"dup":58}],267:[function(require,module,exports){
 arguments[4][59][0].apply(exports,arguments)
-},{"./alpha":261,"./util/assertString":329,"dup":59}],269:[function(require,module,exports){
+},{"./alpha":260,"./util/assertString":328,"dup":59}],268:[function(require,module,exports){
 arguments[4][60][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":60}],270:[function(require,module,exports){
+},{"./util/assertString":328,"dup":60}],269:[function(require,module,exports){
 arguments[4][61][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":61}],271:[function(require,module,exports){
+},{"./util/assertString":328,"dup":61}],270:[function(require,module,exports){
 arguments[4][62][0].apply(exports,arguments)
-},{"./toDate":324,"./util/assertString":329,"dup":62}],272:[function(require,module,exports){
+},{"./toDate":323,"./util/assertString":328,"dup":62}],271:[function(require,module,exports){
 arguments[4][63][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":63}],273:[function(require,module,exports){
+},{"./util/assertString":328,"dup":63}],272:[function(require,module,exports){
 arguments[4][64][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":64}],274:[function(require,module,exports){
+},{"./util/assertString":328,"dup":64}],273:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -37830,15 +37621,15 @@ function isCreditCard(str) {
   return !!(sum % 10 === 0 ? sanitized : false);
 }
 module.exports = exports['default'];
-},{"./util/assertString":329}],275:[function(require,module,exports){
+},{"./util/assertString":328}],274:[function(require,module,exports){
 arguments[4][66][0].apply(exports,arguments)
-},{"./util/assertString":329,"./util/merge":330,"dup":66}],276:[function(require,module,exports){
+},{"./util/assertString":328,"./util/merge":329,"dup":66}],275:[function(require,module,exports){
 arguments[4][67][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":67}],277:[function(require,module,exports){
+},{"./util/assertString":328,"dup":67}],276:[function(require,module,exports){
 arguments[4][68][0].apply(exports,arguments)
-},{"./alpha":261,"./util/assertString":329,"./util/merge":330,"dup":68}],278:[function(require,module,exports){
+},{"./alpha":260,"./util/assertString":328,"./util/merge":329,"dup":68}],277:[function(require,module,exports){
 arguments[4][69][0].apply(exports,arguments)
-},{"./toFloat":325,"./util/assertString":329,"dup":69}],279:[function(require,module,exports){
+},{"./toFloat":324,"./util/assertString":328,"dup":69}],278:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -37936,9 +37727,9 @@ function isEmail(str, options) {
   return true;
 }
 module.exports = exports['default'];
-},{"./isByteLength":273,"./isFQDN":281,"./util/assertString":329,"./util/merge":330}],280:[function(require,module,exports){
+},{"./isByteLength":272,"./isFQDN":280,"./util/assertString":328,"./util/merge":329}],279:[function(require,module,exports){
 arguments[4][71][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":71}],281:[function(require,module,exports){
+},{"./util/assertString":328,"dup":71}],280:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38005,7 +37796,7 @@ function isFQDN(str, options) {
   return true;
 }
 module.exports = exports['default'];
-},{"./util/assertString":329,"./util/merge":330}],282:[function(require,module,exports){
+},{"./util/assertString":328,"./util/merge":329}],281:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38032,25 +37823,25 @@ function isFloat(str, options) {
   return float.test(str) && (!options.hasOwnProperty('min') || value >= options.min) && (!options.hasOwnProperty('max') || value <= options.max) && (!options.hasOwnProperty('lt') || value < options.lt) && (!options.hasOwnProperty('gt') || value > options.gt);
 }
 module.exports = exports['default'];
-},{"./alpha":261,"./util/assertString":329}],283:[function(require,module,exports){
+},{"./alpha":260,"./util/assertString":328}],282:[function(require,module,exports){
 arguments[4][74][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":74}],284:[function(require,module,exports){
+},{"./util/assertString":328,"dup":74}],283:[function(require,module,exports){
 arguments[4][75][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":75}],285:[function(require,module,exports){
+},{"./util/assertString":328,"dup":75}],284:[function(require,module,exports){
 arguments[4][76][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":76}],286:[function(require,module,exports){
+},{"./util/assertString":328,"dup":76}],285:[function(require,module,exports){
 arguments[4][77][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":77}],287:[function(require,module,exports){
+},{"./util/assertString":328,"dup":77}],286:[function(require,module,exports){
 arguments[4][78][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":78}],288:[function(require,module,exports){
+},{"./util/assertString":328,"dup":78}],287:[function(require,module,exports){
 arguments[4][79][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":79}],289:[function(require,module,exports){
+},{"./util/assertString":328,"dup":79}],288:[function(require,module,exports){
 arguments[4][80][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":80}],290:[function(require,module,exports){
+},{"./util/assertString":328,"dup":80}],289:[function(require,module,exports){
 arguments[4][81][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":81}],291:[function(require,module,exports){
+},{"./util/assertString":328,"dup":81}],290:[function(require,module,exports){
 arguments[4][82][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":82}],292:[function(require,module,exports){
+},{"./util/assertString":328,"dup":82}],291:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38072,37 +37863,37 @@ function isISO31661Alpha3(str) {
   return validISO31661Alpha3CountriesCodes.includes(str.toUpperCase());
 }
 module.exports = exports['default'];
-},{"./util/assertString":329}],293:[function(require,module,exports){
+},{"./util/assertString":328}],292:[function(require,module,exports){
 arguments[4][83][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":83}],294:[function(require,module,exports){
+},{"./util/assertString":328,"dup":83}],293:[function(require,module,exports){
 arguments[4][84][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":84}],295:[function(require,module,exports){
+},{"./util/assertString":328,"dup":84}],294:[function(require,module,exports){
 arguments[4][85][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":85}],296:[function(require,module,exports){
+},{"./util/assertString":328,"dup":85}],295:[function(require,module,exports){
 arguments[4][86][0].apply(exports,arguments)
-},{"./util/assertString":329,"./util/toString":331,"dup":86}],297:[function(require,module,exports){
+},{"./util/assertString":328,"./util/toString":330,"dup":86}],296:[function(require,module,exports){
 arguments[4][87][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":87}],298:[function(require,module,exports){
+},{"./util/assertString":328,"dup":87}],297:[function(require,module,exports){
 arguments[4][88][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":88}],299:[function(require,module,exports){
+},{"./util/assertString":328,"dup":88}],298:[function(require,module,exports){
 arguments[4][89][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":89}],300:[function(require,module,exports){
+},{"./util/assertString":328,"dup":89}],299:[function(require,module,exports){
 arguments[4][90][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":90}],301:[function(require,module,exports){
+},{"./util/assertString":328,"dup":90}],300:[function(require,module,exports){
 arguments[4][91][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":91}],302:[function(require,module,exports){
+},{"./util/assertString":328,"dup":91}],301:[function(require,module,exports){
 arguments[4][92][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":92}],303:[function(require,module,exports){
+},{"./util/assertString":328,"dup":92}],302:[function(require,module,exports){
 arguments[4][93][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":93}],304:[function(require,module,exports){
+},{"./util/assertString":328,"dup":93}],303:[function(require,module,exports){
 arguments[4][94][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":94}],305:[function(require,module,exports){
+},{"./util/assertString":328,"dup":94}],304:[function(require,module,exports){
 arguments[4][95][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":95}],306:[function(require,module,exports){
+},{"./util/assertString":328,"dup":95}],305:[function(require,module,exports){
 arguments[4][96][0].apply(exports,arguments)
-},{"./isHexadecimal":287,"./util/assertString":329,"dup":96}],307:[function(require,module,exports){
+},{"./isHexadecimal":286,"./util/assertString":328,"dup":96}],306:[function(require,module,exports){
 arguments[4][97][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":97}],308:[function(require,module,exports){
+},{"./util/assertString":328,"dup":97}],307:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38123,9 +37914,9 @@ function isNumeric(str) {
   return numeric.test(str);
 }
 module.exports = exports['default'];
-},{"./util/assertString":329}],309:[function(require,module,exports){
+},{"./util/assertString":328}],308:[function(require,module,exports){
 arguments[4][99][0].apply(exports,arguments)
-},{"./isInt":297,"dup":99}],310:[function(require,module,exports){
+},{"./isInt":296,"dup":99}],309:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38203,7 +37994,7 @@ var patterns = {
 };
 
 var locales = exports.locales = Object.keys(patterns);
-},{"./util/assertString":329}],311:[function(require,module,exports){
+},{"./util/assertString":328}],310:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38243,23 +38034,23 @@ function isRFC3339(str) {
   return rfc3339.test(str);
 }
 module.exports = exports['default'];
-},{"./util/assertString":329}],312:[function(require,module,exports){
+},{"./util/assertString":328}],311:[function(require,module,exports){
 arguments[4][101][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":101}],313:[function(require,module,exports){
+},{"./util/assertString":328,"dup":101}],312:[function(require,module,exports){
 arguments[4][102][0].apply(exports,arguments)
-},{"./isFQDN":281,"./isIP":288,"./util/assertString":329,"./util/merge":330,"dup":102}],314:[function(require,module,exports){
+},{"./isFQDN":280,"./isIP":287,"./util/assertString":328,"./util/merge":329,"dup":102}],313:[function(require,module,exports){
 arguments[4][103][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":103}],315:[function(require,module,exports){
+},{"./util/assertString":328,"dup":103}],314:[function(require,module,exports){
 arguments[4][104][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":104}],316:[function(require,module,exports){
+},{"./util/assertString":328,"dup":104}],315:[function(require,module,exports){
 arguments[4][105][0].apply(exports,arguments)
-},{"./isFullWidth":283,"./isHalfWidth":284,"./util/assertString":329,"dup":105}],317:[function(require,module,exports){
+},{"./isFullWidth":282,"./isHalfWidth":283,"./util/assertString":328,"dup":105}],316:[function(require,module,exports){
 arguments[4][106][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":106}],318:[function(require,module,exports){
+},{"./util/assertString":328,"dup":106}],317:[function(require,module,exports){
 arguments[4][107][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":107}],319:[function(require,module,exports){
+},{"./util/assertString":328,"dup":107}],318:[function(require,module,exports){
 arguments[4][108][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":108}],320:[function(require,module,exports){
+},{"./util/assertString":328,"dup":108}],319:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -38410,31 +38201,31 @@ function normalizeEmail(email, options) {
   return parts.join('@');
 }
 module.exports = exports['default'];
-},{"./util/merge":330}],321:[function(require,module,exports){
+},{"./util/merge":329}],320:[function(require,module,exports){
 arguments[4][110][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":110}],322:[function(require,module,exports){
+},{"./util/assertString":328,"dup":110}],321:[function(require,module,exports){
 arguments[4][111][0].apply(exports,arguments)
-},{"./blacklist":262,"./util/assertString":329,"dup":111}],323:[function(require,module,exports){
+},{"./blacklist":261,"./util/assertString":328,"dup":111}],322:[function(require,module,exports){
 arguments[4][112][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":112}],324:[function(require,module,exports){
+},{"./util/assertString":328,"dup":112}],323:[function(require,module,exports){
 arguments[4][113][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":113}],325:[function(require,module,exports){
+},{"./util/assertString":328,"dup":113}],324:[function(require,module,exports){
 arguments[4][114][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":114}],326:[function(require,module,exports){
+},{"./util/assertString":328,"dup":114}],325:[function(require,module,exports){
 arguments[4][115][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":115}],327:[function(require,module,exports){
+},{"./util/assertString":328,"dup":115}],326:[function(require,module,exports){
 arguments[4][116][0].apply(exports,arguments)
-},{"./ltrim":318,"./rtrim":321,"dup":116}],328:[function(require,module,exports){
+},{"./ltrim":317,"./rtrim":320,"dup":116}],327:[function(require,module,exports){
 arguments[4][117][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":117}],329:[function(require,module,exports){
+},{"./util/assertString":328,"dup":117}],328:[function(require,module,exports){
 arguments[4][118][0].apply(exports,arguments)
-},{"dup":118}],330:[function(require,module,exports){
+},{"dup":118}],329:[function(require,module,exports){
 arguments[4][119][0].apply(exports,arguments)
-},{"dup":119}],331:[function(require,module,exports){
+},{"dup":119}],330:[function(require,module,exports){
 arguments[4][120][0].apply(exports,arguments)
-},{"dup":120}],332:[function(require,module,exports){
+},{"dup":120}],331:[function(require,module,exports){
 arguments[4][121][0].apply(exports,arguments)
-},{"./util/assertString":329,"dup":121}],333:[function(require,module,exports){
+},{"./util/assertString":328,"dup":121}],332:[function(require,module,exports){
 (function(self) {
   'use strict';
 
