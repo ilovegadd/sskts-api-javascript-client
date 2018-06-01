@@ -10,37 +10,48 @@
 <body>
     <div id="signedIn" style="display:none;">
         <div class="apis">
-            <a href="javascript:void(0);" onclick="refreshToken();">silent signIn</a><br>
-            <a href="javascript:void(0);" onclick="signOut();">signOut</a><br>
-            <a href="javascript:void(0);" onclick="searchEvents();">search events</a><br>
-            <a href="javascript:void(0);" onclick="searchOrganizations();">search organizations</a><br>
-            <a href="javascript:void(0);" onclick="startPlaceOrderTransaction();">start placeOrder transaction</a><br>
-            <a href="javascript:void(0);" onclick="getContacts();">get contacts</a><br>
-            <a href="javascript:void(0);" onclick="updateContacts();">update contacts</a><br>
-            <a href="javascript:void(0);" onclick="findCreditCards();">find credit cards</a><br>
-            <a href="javascript:void(0);" onclick="addCreditCard();">add credit cards</a><br>
-            <a href="javascript:void(0);" onclick="searchReservationOwnerships();">search ownerships of reservations</a><br>
+            <a href="javascript:void(0);" onclick="refreshToken();">silent signIn</a>
+            <br>
+            <a href="javascript:void(0);" onclick="signOut();">signOut</a>
+            <br>
+            <a href="javascript:void(0);" onclick="searchEvents();">イベント検索</a>
+            <br>
+            <a href="javascript:void(0);" onclick="searchOrganizations();">組織検索</a>
+            <br>
+            <a href="javascript:void(0);" onclick="getContacts();">連絡先取得</a>
+            <br>
+            <a href="javascript:void(0);" onclick="findCreditCards();">クレジットカード検索</a>
+            <br>
+            <a href="javascript:void(0);" onclick="addCreditCard();">クレジットカード追加</a>
+            <br>
+            <a href="javascript:void(0);" onclick="searchReservationOwnerships();">座席予約所有権検索</a>
+            <br>
         </div>
         <div>
-            profile:<br>
+            profile:
+            <br>
             <textarea id="profile" readonly rows="20" cols="80"></textarea>
         </div>
     </div>
 
     <div id="signedOut" style="display:none;">
-        <a href="javascript:void(0);" onclick="signIn();">signIn</a><br>
+        <a href="javascript:void(0);" onclick="signIn();">signIn</a>
+        <br>
     </div>
 
     <p>
-        results:<br>
+        results:
+        <br>
         <textarea id="results" readonly rows="20" cols="80"></textarea>
     </p>
     <p>
-        idToken:<br>
+        idToken:
+        <br>
         <textarea id="idToken" readonly rows="20" cols="80"></textarea>
     </p>
     <p>
-        accessToken:<br>
+        accessToken:
+        <br>
         <textarea id="accessToken" readonly rows="20" cols="80"></textarea>
     </p>
 
@@ -49,25 +60,17 @@
         // http://docs.aws.amazon.com/ja_jp/cognito/latest/developerguide/cognito-user-pools-define-resource-servers.html
         // https://aws.amazon.com/blogs/mobile/integrating-amazon-cognito-user-pools-with-api-gateway/
 
-        var DOMAIN = 'DOMAIN';
+        var DOMAIN = 'sskts-development.auth.ap-northeast-1.amazoncognito.com';
         var CLIENT_ID = 'CLIENT_ID'; // given by a token provider
-        var CALLBACK_URL = 'https://localhost:8080/signIn.html'; // an application should prepare it
-        var LOGOUT_URL = 'https://localhost:8080/signOut.html'; // an application should prepare it
+        var CALLBACK_URL = 'http://localhost:8080/signIn.html'; // an application should prepare it
+        var LOGOUT_URL = 'http://localhost:8080/signOut.html'; // an application should prepare it
         var ISSUER = 'ISSUER';
         var API_ENDPOINT = 'API_ENDPOINT';
         var RESOURCE_SERVER_IDENFIER = 'RESOURCE_SERVER_IDENFIER';
 
         var credentials = null;
 
-        var scopes = [
-            'phone', 'openid', 'email', 'aws.cognito.signin.user.admin', 'profile',
-            RESOURCE_SERVER_IDENFIER + '/transactions',
-            RESOURCE_SERVER_IDENFIER + '/events.read-only',
-            RESOURCE_SERVER_IDENFIER + '/organizations.read-only',
-            RESOURCE_SERVER_IDENFIER + '/people.contacts',
-            RESOURCE_SERVER_IDENFIER + '/people.creditCards',
-            RESOURCE_SERVER_IDENFIER + '/people.ownershipInfos.read-only'
-        ];
+        var scopes = [];
 
         var options = {
             domain: DOMAIN,
@@ -207,24 +210,6 @@
             });
         }
 
-        function startPlaceOrderTransaction() {
-            // search organizations
-            var placeOrderTransactions = new sasaki.service.transaction.PlaceOrder({
-                endpoint: API_ENDPOINT,
-                auth: auth
-            });
-            placeOrderTransactions.start({
-                expires: new Date(),
-                sellerId: '5979a3bfe53ebc2b4e6df88d'
-            }).then(function (transaction) {
-                console.log('transaction:', transaction);
-                document.getElementById('results').innerText = format(transaction);
-            }).catch(function (err) {
-                console.error(err);
-                document.getElementById('results').innerText = format(err);
-            });
-        }
-
         function getContacts() {
             var people = new sasaki.service.Person({
                 endpoint: API_ENDPOINT,
@@ -235,28 +220,6 @@
             }).then(function (contacts) {
                 console.log('contacts:', contacts);
                 document.getElementById('results').innerText = format(contacts);
-            }).catch(function (err) {
-                console.error(err);
-                document.getElementById('results').innerText = format(err);
-            });
-        }
-
-        function updateContacts() {
-            var people = new sasaki.service.Person({
-                endpoint: API_ENDPOINT,
-                auth: auth
-            });
-            people.updateContacts({
-                personId: 'me',
-                contacts: {
-                    email: 'test@example.com',
-                    givenName: 'めい',
-                    familyName: 'せい',
-                    telephone: '09012345678',
-                }
-            }).then(function (result) {
-                console.log('result:', result);
-                document.getElementById('results').innerText = format(result);
             }).catch(function (err) {
                 console.error(err);
                 document.getElementById('results').innerText = format(err);
@@ -305,8 +268,9 @@
                 endpoint: API_ENDPOINT,
                 auth: auth
             });
-            people.searchReservationOwnerships({
-                personId: 'me'
+            people.searchOwnershipInfos({
+                ownedBy: 'me',
+                goodType: sasaki.factory.reservationType.EventReservation
             }).then(function (ownerships) {
                 console.log('ownerships:', ownerships);
                 document.getElementById('results').innerText = format(ownerships);
