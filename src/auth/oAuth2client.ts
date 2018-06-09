@@ -117,7 +117,7 @@ export default class OAuth2client implements Auth {
 
         const accessToken = await this.getAccessToken();
         options.headers = (options.headers === undefined || options.headers === null) ? {} : options.headers;
-        options.headers.Authorization = `Bearer ${accessToken}`;
+        (<any>options.headers).Authorization = `Bearer ${accessToken}`;
 
         return this.makeRequest(url, options, expectedStatusCodes);
     }
@@ -129,14 +129,14 @@ export default class OAuth2client implements Auth {
         // request for new token
         debug('refreshing access token...');
 
+        const formData = new FormData();
+        formData.set('refresh_token', refreshToken);
+        formData.set('client_id', <string>this.options.clientId);
+        formData.set('client_secret', <string>this.options.clientSecret);
+        formData.set('grant_type', 'refresh_token');
         const options = {
             method: 'POST',
-            body: {
-                refresh_token: refreshToken,
-                client_id: this.options.clientId,
-                client_secret: this.options.clientSecret,
-                grant_type: 'refresh_token'
-            }
+            body: formData
         };
 
         return fetch(`https://${this.options.domain}/token`, options)

@@ -21,7 +21,7 @@ export default class SilentLogoutHandler {
         this.handler = null;
     }
 
-    public static GET_CALLBACK_HANDLER(cb: () => void, usePostMessage: boolean) {
+    public static GET_CALLBACK_HANDLER(cb: (hash: any) => void, usePostMessage: boolean) {
         return (eventData: any) => {
             let callbackValue;
 
@@ -39,7 +39,7 @@ export default class SilentLogoutHandler {
                 console.error('SilentLogoutHandler.GET_CALLBACK_HANDLER:', error);
             }
 
-            cb();
+            cb(callbackValue);
         };
     }
 
