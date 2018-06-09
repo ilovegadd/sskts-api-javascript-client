@@ -83,7 +83,7 @@
             nonce: randomString(16),
             tokenIssuer: ISSUER
         };
-        const auth = new sasaki.createAuthInstance(options);
+        const auth = sasaki.createAuthInstance(options);
 
         // check if already signed in
         // result is credentials

@@ -104,7 +104,7 @@ var IframeHandler = /** @class */ (function () {
 }());
 exports.default = IframeHandler;
 
-},{"debug":236}],4:[function(require,module,exports){
+},{"debug":161}],4:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -448,7 +448,7 @@ var ImplicitGrantClient = /** @class */ (function (_super) {
 }(oAuth2client_1.default));
 exports.ImplicitGrantClient = ImplicitGrantClient;
 
-},{"./error":2,"./oAuth2client":5,"./popupAuthenticationHandler":6,"./silentAuthenticationHandler":8,"./silentLogoutHandler":9,"debug":236,"idtoken-verifier":245,"qs":251}],5:[function(require,module,exports){
+},{"./error":2,"./oAuth2client":5,"./popupAuthenticationHandler":6,"./silentAuthenticationHandler":8,"./silentLogoutHandler":9,"debug":161,"idtoken-verifier":170,"qs":176}],5:[function(require,module,exports){
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -574,8 +574,8 @@ var OAuth2client = /** @class */ (function () {
      */
     OAuth2client.prototype.refreshToken = function (refreshToken) {
         return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
             var formData, options;
+            var _this = this;
             return __generator(this, function (_a) {
                 // request for new token
                 debug('refreshing access token...');
@@ -640,7 +640,7 @@ var OAuth2client = /** @class */ (function () {
 }());
 exports.default = OAuth2client;
 
-},{"@motionpicture/sskts-api-abstract-client":123,"debug":236,"http-status":238,"isomorphic-fetch":246}],6:[function(require,module,exports){
+},{"@motionpicture/sskts-api-abstract-client":49,"debug":161,"http-status":163,"isomorphic-fetch":171}],6:[function(require,module,exports){
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -824,7 +824,7 @@ var PopupHandler = /** @class */ (function () {
 }());
 exports.default = PopupHandler;
 
-},{"debug":236}],8:[function(require,module,exports){
+},{"debug":161}],8:[function(require,module,exports){
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -1062,17 +1062,17 @@ function createAuthInstance(options) {
 }
 exports.createAuthInstance = createAuthInstance;
 
-},{"./auth/implicitGrantClient":4,"@motionpicture/sskts-api-abstract-client":123}],11:[function(require,module,exports){
+},{"./auth/implicitGrantClient":4,"@motionpicture/sskts-api-abstract-client":49}],11:[function(require,module,exports){
 "use strict";
-/**
- * 口座ファクトリー
- */
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * 口座タイプ
  */
 var AccountType;
 (function (AccountType) {
+    /**
+     * 普通口座タイプ
+     */
     AccountType["Account"] = "Account";
 })(AccountType = exports.AccountType || (exports.AccountType = {}));
 
@@ -1084,7 +1084,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 var AccountStatusType;
 (function (AccountStatusType) {
+    /**
+     * 開設済
+     */
     AccountStatusType["Opened"] = "Opened";
+    /**
+     * 解約済
+     */
     AccountStatusType["Closed"] = "Closed";
 })(AccountStatusType || (AccountStatusType = {}));
 exports.default = AccountStatusType;
@@ -1131,46 +1137,8 @@ exports.default = ActionType;
 Object.defineProperty(exports, "__esModule", { value: true });
 
 },{}],16:[function(require,module,exports){
-"use strict";
-/**
- * 送信(配送)アクションファクトリー
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-var actionType_1 = require("../../actionType");
-function createAttributes(params) {
-    return {
-        typeOf: actionType_1.default.SendAction,
-        result: params.result,
-        object: params.object,
-        agent: params.agent,
-        recipient: params.recipient,
-        potentialActions: params.potentialActions,
-        purpose: params.purpose
-    };
-}
-exports.createAttributes = createAttributes;
-
-},{"../../actionType":14}],17:[function(require,module,exports){
-"use strict";
-/**
- * Eメール送信アクションファクトリー
- */
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var SendActionFactory = require("../../send");
-function createAttributes(params) {
-    return __assign({}, SendActionFactory.createAttributes(params), { potentialActions: params.potentialActions, purpose: params.purpose });
-}
-exports.createAttributes = createAttributes;
-
-},{"../../send":16}],18:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],17:[function(require,module,exports){
 "use strict";
 /**
  * アプリケーションクライアントユーザーファクトリー
@@ -1178,71 +1146,26 @@ exports.createAttributes = createAttributes;
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
-},{}],19:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * 作品タイプ
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 var CreativeWorkType;
 (function (CreativeWorkType) {
     CreativeWorkType["EmailMessage"] = "EmailMessage";
 })(CreativeWorkType || (CreativeWorkType = {}));
 exports.default = CreativeWorkType;
 
-},{}],20:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],20:[function(require,module,exports){
 "use strict";
-/**
- * Eメールメッセージファクトリー
- * @namespace creativeWork.message.email
- */
 Object.defineProperty(exports, "__esModule", { value: true });
-var validator = require("validator");
-var argument_1 = require("../../error/argument");
-var argumentNull_1 = require("../../error/argumentNull");
-var creativeWorkType_1 = require("../../creativeWorkType");
-/**
- * create email message object
- * Eメール通知オブジェクトを作成する
- * @export
- */
-function create(params) {
-    if (params.sender === null || typeof params.sender !== 'object') {
-        throw new argumentNull_1.default('sender');
-    }
-    if (params.toRecipient === null || typeof params.toRecipient !== 'object') {
-        throw new argumentNull_1.default('sender');
-    }
-    if (typeof params.about !== 'string' || validator.isEmpty(params.about)) {
-        throw new argumentNull_1.default('about');
-    }
-    if (typeof params.text !== 'string' || validator.isEmpty(params.text)) {
-        throw new argumentNull_1.default('text');
-    }
-    if (typeof params.sender.email !== 'string' || !validator.isEmail(params.sender.email)) {
-        throw new argument_1.default('sender.email', 'sender.email must be email.');
-    }
-    if (typeof params.toRecipient.email !== 'string' || !validator.isEmail(params.toRecipient.email)) {
-        throw new argument_1.default('toRecipient.email', 'toRecipient.email must be email.');
-    }
-    return {
-        typeOf: creativeWorkType_1.default.EmailMessage,
-        identifier: params.identifier,
-        name: params.identifier,
-        sender: params.sender,
-        toRecipient: params.toRecipient,
-        about: params.about,
-        text: params.text
-    };
-}
-exports.create = create;
-
-},{"../../creativeWorkType":19,"../../error/argument":23,"../../error/argumentNull":24,"validator":51}],21:[function(require,module,exports){
-"use strict";
 /**
  * エラーコード
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 var ErrorCode;
 (function (ErrorCode) {
     ErrorCode["AlreadyInUse"] = "AlreadyInUse";
@@ -1257,7 +1180,7 @@ var ErrorCode;
 })(ErrorCode || (ErrorCode = {}));
 exports.default = ErrorCode;
 
-},{}],22:[function(require,module,exports){
+},{}],21:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1285,7 +1208,8 @@ var AlreadyInUseError = /** @class */ (function (_super) {
         if (message === undefined || message.length === 0) {
             actualMessage = "The specified '" + entityName + "' value is already in use for: " + fieldNames.join(', ') + ".";
         }
-        _this = _super.call(this, errorCode_1.default.AlreadyInUse, actualMessage) || this;
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.AlreadyInUse, actualMessage) /* istanbul ignore next */ || this;
         _this.entityName = entityName;
         _this.fieldNames = fieldNames;
         setPrototypeOf(_this, AlreadyInUseError.prototype);
@@ -1295,7 +1219,7 @@ var AlreadyInUseError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = AlreadyInUseError;
 
-},{"../errorCode":21,"./pecorino":28,"setprototypeof":255}],23:[function(require,module,exports){
+},{"../errorCode":20,"./pecorino":27,"setprototypeof":180}],22:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1323,7 +1247,8 @@ var ArgumentError = /** @class */ (function (_super) {
         if (message === undefined || message.length === 0) {
             actualMessage = "Invalid or missing argument supplied: " + argumentName + ".";
         }
-        _this = _super.call(this, errorCode_1.default.Argument, actualMessage) || this;
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.Argument, actualMessage) /* istanbul ignore next */ || this;
         _this.argumentName = argumentName;
         setPrototypeOf(_this, ArgumentError.prototype);
         return _this;
@@ -1332,7 +1257,7 @@ var ArgumentError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = ArgumentError;
 
-},{"../errorCode":21,"./pecorino":28,"setprototypeof":255}],24:[function(require,module,exports){
+},{"../errorCode":20,"./pecorino":27,"setprototypeof":180}],23:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1360,7 +1285,8 @@ var ArgumentNullError = /** @class */ (function (_super) {
         if (message === undefined || message.length === 0) {
             actualMessage = "Missing argument: " + argumentName + ".";
         }
-        _this = _super.call(this, errorCode_1.default.ArgumentNull, actualMessage) || this;
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.ArgumentNull, actualMessage) /* istanbul ignore next */ || this;
         _this.argumentName = argumentName;
         setPrototypeOf(_this, ArgumentNullError.prototype);
         return _this;
@@ -1369,7 +1295,7 @@ var ArgumentNullError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = ArgumentNullError;
 
-},{"../errorCode":21,"./pecorino":28,"setprototypeof":255}],25:[function(require,module,exports){
+},{"../errorCode":20,"./pecorino":27,"setprototypeof":180}],24:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1397,7 +1323,8 @@ var ForbiddenError = /** @class */ (function (_super) {
         if (message === undefined || message.length === 0) {
             actualMessage = 'Forbidden.';
         }
-        _this = _super.call(this, errorCode_1.default.Forbidden, actualMessage) || this;
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.Forbidden, actualMessage) /* istanbul ignore next */ || this;
         setPrototypeOf(_this, ForbiddenError.prototype);
         return _this;
     }
@@ -1405,7 +1332,7 @@ var ForbiddenError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = ForbiddenError;
 
-},{"../errorCode":21,"./pecorino":28,"setprototypeof":255}],26:[function(require,module,exports){
+},{"../errorCode":20,"./pecorino":27,"setprototypeof":180}],25:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1433,7 +1360,8 @@ var NotFoundError = /** @class */ (function (_super) {
         if (message === undefined || message.length === 0) {
             actualMessage = "Not Found: " + entityName + ".";
         }
-        _this = _super.call(this, errorCode_1.default.NotFound, actualMessage) || this;
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.NotFound, actualMessage) /* istanbul ignore next */ || this;
         _this.entityName = entityName;
         setPrototypeOf(_this, NotFoundError.prototype);
         return _this;
@@ -1442,7 +1370,7 @@ var NotFoundError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = NotFoundError;
 
-},{"../errorCode":21,"./pecorino":28,"setprototypeof":255}],27:[function(require,module,exports){
+},{"../errorCode":20,"./pecorino":27,"setprototypeof":180}],26:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1470,7 +1398,8 @@ var NotImplementedError = /** @class */ (function (_super) {
         if (message === undefined || message.length === 0) {
             actualMessage = 'Method is not yet implemented.';
         }
-        _this = _super.call(this, errorCode_1.default.NotImplemented, actualMessage) || this;
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.NotImplemented, actualMessage) /* istanbul ignore next */ || this;
         setPrototypeOf(_this, NotImplementedError.prototype);
         return _this;
     }
@@ -1478,7 +1407,7 @@ var NotImplementedError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = NotImplementedError;
 
-},{"../errorCode":21,"./pecorino":28,"setprototypeof":255}],28:[function(require,module,exports){
+},{"../errorCode":20,"./pecorino":27,"setprototypeof":180}],27:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1498,7 +1427,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var PecorinoError = /** @class */ (function (_super) {
     __extends(PecorinoError, _super);
     function PecorinoError(code, message) {
-        var _this = _super.call(this, message) || this;
+        var _this = 
+        // tslint:disable-next-line:no-single-line-block-comment
+        _super.call(this, message) /* istanbul ignore next */ || this;
         _this.name = 'PecorinoError';
         _this.reason = code;
         return _this;
@@ -1507,7 +1438,7 @@ var PecorinoError = /** @class */ (function (_super) {
 }(Error));
 exports.PecorinoError = PecorinoError;
 
-},{}],29:[function(require,module,exports){
+},{}],28:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1535,7 +1466,8 @@ var RateLimitExceededError = /** @class */ (function (_super) {
         if (message === undefined || message.length === 0) {
             actualMessage = 'Rate limit exceeded.';
         }
-        _this = _super.call(this, errorCode_1.default.RateLimitExceeded, actualMessage) || this;
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.RateLimitExceeded, actualMessage) /* istanbul ignore next */ || this;
         setPrototypeOf(_this, RateLimitExceededError.prototype);
         return _this;
     }
@@ -1543,7 +1475,7 @@ var RateLimitExceededError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = RateLimitExceededError;
 
-},{"../errorCode":21,"./pecorino":28,"setprototypeof":255}],30:[function(require,module,exports){
+},{"../errorCode":20,"./pecorino":27,"setprototypeof":180}],29:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1571,7 +1503,8 @@ var ServiceUnavailableError = /** @class */ (function (_super) {
         if (message === undefined || message.length === 0) {
             actualMessage = 'Service unavailable temporarily.';
         }
-        _this = _super.call(this, errorCode_1.default.ServiceUnavailable, actualMessage) || this;
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.ServiceUnavailable, actualMessage) /* istanbul ignore next */ || this;
         setPrototypeOf(_this, ServiceUnavailableError.prototype);
         return _this;
     }
@@ -1579,7 +1512,7 @@ var ServiceUnavailableError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = ServiceUnavailableError;
 
-},{"../errorCode":21,"./pecorino":28,"setprototypeof":255}],31:[function(require,module,exports){
+},{"../errorCode":20,"./pecorino":27,"setprototypeof":180}],30:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1607,7 +1540,8 @@ var UnauthorizedError = /** @class */ (function (_super) {
         if (message === undefined || message.length === 0) {
             actualMessage = 'Unauthorized.';
         }
-        _this = _super.call(this, errorCode_1.default.Unauthorized, actualMessage) || this;
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.Unauthorized, actualMessage) /* istanbul ignore next */ || this;
         setPrototypeOf(_this, UnauthorizedError.prototype);
         return _this;
     }
@@ -1615,13 +1549,12 @@ var UnauthorizedError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = UnauthorizedError;
 
-},{"../errorCode":21,"./pecorino":28,"setprototypeof":255}],32:[function(require,module,exports){
+},{"../errorCode":20,"./pecorino":27,"setprototypeof":180}],31:[function(require,module,exports){
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * errors
- * @namespace errors
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 var alreadyInUse_1 = require("./error/alreadyInUse");
 exports.AlreadyInUse = alreadyInUse_1.default;
 var argument_1 = require("./error/argument");
@@ -1643,31 +1576,31 @@ exports.ServiceUnavailable = serviceUnavailable_1.default;
 var unauthorized_1 = require("./error/unauthorized");
 exports.Unauthorized = unauthorized_1.default;
 
-},{"./error/alreadyInUse":22,"./error/argument":23,"./error/argumentNull":24,"./error/forbidden":25,"./error/notFound":26,"./error/notImplemented":27,"./error/pecorino":28,"./error/rateLimitExceeded":29,"./error/serviceUnavailable":30,"./error/unauthorized":31}],33:[function(require,module,exports){
+},{"./error/alreadyInUse":21,"./error/argument":22,"./error/argumentNull":23,"./error/forbidden":24,"./error/notFound":25,"./error/notImplemented":26,"./error/pecorino":27,"./error/rateLimitExceeded":28,"./error/serviceUnavailable":29,"./error/unauthorized":30}],32:[function(require,module,exports){
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * 組織タイプ
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 var OrganizationType;
 (function (OrganizationType) {
     OrganizationType["Corporation"] = "Corporation";
 })(OrganizationType || (OrganizationType = {}));
 exports.default = OrganizationType;
 
-},{}],34:[function(require,module,exports){
+},{}],33:[function(require,module,exports){
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * 人物タイプ
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 var PersonType;
 (function (PersonType) {
     PersonType["Person"] = "Person";
 })(PersonType || (PersonType = {}));
 exports.default = PersonType;
 
-},{}],35:[function(require,module,exports){
+},{}],34:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -1681,73 +1614,14 @@ var PriceCurrency;
 })(PriceCurrency || (PriceCurrency = {}));
 exports.default = PriceCurrency;
 
-},{}],36:[function(require,module,exports){
+},{}],35:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],36:[function(require,module,exports){
 "use strict";
-/**
- * タスクファクトリー
- * @namespace task
- */
 Object.defineProperty(exports, "__esModule", { value: true });
-var _ = require("lodash");
-var validator = require("validator");
-var argument_1 = require("./error/argument");
-var argumentNull_1 = require("./error/argumentNull");
-function createAttributes(params) {
-    if (typeof params.name !== 'string' || validator.isEmpty(params.name)) {
-        throw new argumentNull_1.default('name');
-    }
-    if (typeof params.status !== 'string' || validator.isEmpty(params.status)) {
-        throw new argumentNull_1.default('status');
-    }
-    if (!(params.runsAt instanceof Date)) {
-        throw new argument_1.default('runsAt', 'runsAt must be Date.');
-    }
-    if (!_.isInteger(params.remainingNumberOfTries)) {
-        throw new argument_1.default('remainingNumberOfTries', 'remainingNumberOfTries must be number.');
-    }
-    if (params.lastTriedAt !== null && !(params.lastTriedAt instanceof Date)) {
-        throw new argument_1.default('lastTriedAt', 'lastTriedAt must be Date or null.');
-    }
-    if (!_.isInteger(params.numberOfTried)) {
-        throw new argument_1.default('numberOfTried', 'numberOfTried must be number.');
-    }
-    if (!Array.isArray(params.executionResults)) {
-        throw new argument_1.default('executionResults', 'executionResults must be array.');
-    }
-    return {
-        name: params.name,
-        status: params.status,
-        runsAt: params.runsAt,
-        remainingNumberOfTries: params.remainingNumberOfTries,
-        lastTriedAt: params.lastTriedAt,
-        numberOfTried: params.numberOfTried,
-        executionResults: params.executionResults,
-        data: params.data
-    };
-}
-exports.createAttributes = createAttributes;
-
-},{"./error/argument":23,"./error/argumentNull":24,"lodash":50,"validator":51}],37:[function(require,module,exports){
-"use strict";
-/**
- * タスク実行結果ファクトリー
- * @namespace taskExecutionResult
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-function createAttributes(params) {
-    return {
-        executedAt: params.executedAt,
-        error: params.error
-    };
-}
-exports.createAttributes = createAttributes;
-
-},{}],38:[function(require,module,exports){
-"use strict";
 /**
  * タスク名
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 var TaskName;
 (function (TaskName) {
     /**
@@ -1761,12 +1635,12 @@ var TaskName;
 })(TaskName || (TaskName = {}));
 exports.default = TaskName;
 
-},{}],39:[function(require,module,exports){
+},{}],37:[function(require,module,exports){
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * タスクステータス
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 var TaskStatus;
 (function (TaskStatus) {
     /**
@@ -1788,56 +1662,16 @@ var TaskStatus;
 })(TaskStatus || (TaskStatus = {}));
 exports.default = TaskStatus;
 
-},{}],40:[function(require,module,exports){
+},{}],38:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],39:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],40:[function(require,module,exports){
 "use strict";
-/**
- * 現金転送中止タスクファクトリー
- * @namespace task.cancelMoneyTransfer
- */
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-var TaskFactory = require("../task");
-var taskName_1 = require("../taskName");
-function createAttributes(params) {
-    return TaskFactory.createAttributes(__assign({}, params, { name: taskName_1.default.CancelMoneyTransfer }));
-}
-exports.createAttributes = createAttributes;
-
-},{"../task":36,"../taskName":38}],41:[function(require,module,exports){
-"use strict";
-/**
- * 現金転送タスクファクトリー
- * @namespace task.moneyTransfer
- */
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var TaskFactory = require("../task");
-var taskName_1 = require("../taskName");
-function createAttributes(params) {
-    return TaskFactory.createAttributes(__assign({}, params, { name: taskName_1.default.MoneyTransfer }));
-}
-exports.createAttributes = createAttributes;
-
-},{"../task":36,"../taskName":38}],42:[function(require,module,exports){
-"use strict";
 /**
  * 取引ステータス
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 var TransactionStatusType;
 (function (TransactionStatusType) {
     TransactionStatusType["InProgress"] = "InProgress";
@@ -1847,12 +1681,12 @@ var TransactionStatusType;
 })(TransactionStatusType || (TransactionStatusType = {}));
 exports.default = TransactionStatusType;
 
-},{}],43:[function(require,module,exports){
+},{}],41:[function(require,module,exports){
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * 取引タスクエクスポートステータス
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 var TransactionTasksExportationStatus;
 (function (TransactionTasksExportationStatus) {
     /**
@@ -1870,12 +1704,12 @@ var TransactionTasksExportationStatus;
 })(TransactionTasksExportationStatus || (TransactionTasksExportationStatus = {}));
 exports.default = TransactionTasksExportationStatus;
 
-},{}],44:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * 取引タイプ
  */
-Object.defineProperty(exports, "__esModule", { value: true });
 var TransactionType;
 (function (TransactionType) {
     /**
@@ -1893,35 +1727,35 @@ var TransactionType;
 })(TransactionType || (TransactionType = {}));
 exports.default = TransactionType;
 
-},{}],45:[function(require,module,exports){
+},{}],43:[function(require,module,exports){
 "use strict";
 /**
  * 入金取引ファクトリー
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
-},{}],46:[function(require,module,exports){
+},{}],44:[function(require,module,exports){
 "use strict";
 /**
  * 転送取引ファクトリー
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
-},{}],47:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
 "use strict";
 /**
  * 支払取引ファクトリー
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
-},{}],48:[function(require,module,exports){
+},{}],46:[function(require,module,exports){
 "use strict";
 /**
  * URLファクトリー
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
-},{}],49:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -2005,7 +1839,3563 @@ exports.transactionTasksExportationStatus = transactionTasksExportationStatus_1.
 exports.transactionType = transactionType_1.default;
 exports.url = URLFactory;
 
-},{"./factory/account":11,"./factory/accountStatusType":12,"./factory/action/transfer/moneyTransfer":15,"./factory/action/transfer/send/message/email":17,"./factory/actionStatusType":13,"./factory/actionType":14,"./factory/clientUser":18,"./factory/creativeWork/message/email":20,"./factory/creativeWorkType":19,"./factory/errorCode":21,"./factory/errors":32,"./factory/organizationType":33,"./factory/personType":34,"./factory/priceCurrency":35,"./factory/task/cancelMoneyTransfer":40,"./factory/task/moneyTransfer":41,"./factory/taskExecutionResult":37,"./factory/taskName":38,"./factory/taskStatus":39,"./factory/transaction/deposit":45,"./factory/transaction/transfer":46,"./factory/transaction/withdraw":47,"./factory/transactionStatusType":42,"./factory/transactionTasksExportationStatus":43,"./factory/transactionType":44,"./factory/url":48}],50:[function(require,module,exports){
+},{"./factory/account":11,"./factory/accountStatusType":12,"./factory/action/transfer/moneyTransfer":15,"./factory/action/transfer/send/message/email":16,"./factory/actionStatusType":13,"./factory/actionType":14,"./factory/clientUser":17,"./factory/creativeWork/message/email":19,"./factory/creativeWorkType":18,"./factory/errorCode":20,"./factory/errors":31,"./factory/organizationType":32,"./factory/personType":33,"./factory/priceCurrency":34,"./factory/task/cancelMoneyTransfer":38,"./factory/task/moneyTransfer":39,"./factory/taskExecutionResult":35,"./factory/taskName":36,"./factory/taskStatus":37,"./factory/transaction/deposit":43,"./factory/transaction/transfer":44,"./factory/transaction/withdraw":45,"./factory/transactionStatusType":40,"./factory/transactionTasksExportationStatus":41,"./factory/transactionType":42,"./factory/url":46}],48:[function(require,module,exports){
+"use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var transporters_1 = require("../transporters");
+/**
+ * AuthClient abstract class
+ * 抽象認証クライアント
+ * @export
+ */
+var AuthClient = /** @class */ (function () {
+    function AuthClient() {
+    }
+    return AuthClient;
+}());
+exports.AuthClient = AuthClient;
+/**
+ * test auth client
+ * テスト認証クライアント
+ * @export
+ */
+// tslint:disable-next-line:no-single-line-block-comment
+/* istanbul ignore next */
+var StubAuthClient = /** @class */ (function () {
+    function StubAuthClient() {
+    }
+    // tslint:disable-next-line:prefer-function-over-method
+    StubAuthClient.prototype.fetch = function (url, options, expectedStatusCodes) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, (new transporters_1.DefaultTransporter(expectedStatusCodes)).fetch(url, options)];
+            });
+        });
+    };
+    // tslint:disable-next-line:prefer-function-over-method
+    StubAuthClient.prototype.getAccessToken = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, 'access_token'];
+            });
+        });
+    };
+    return StubAuthClient;
+}());
+exports.StubAuthClient = StubAuthClient;
+
+},{"../transporters":61}],49:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable:max-classes-per-file
+/**
+ * Sasaki API Service Library for Javascript
+ * @ignore
+ */
+var factory = require("@motionpicture/sskts-factory");
+var authClient_1 = require("./auth/authClient");
+var account_1 = require("./service/account");
+var action_1 = require("./service/action");
+var event_1 = require("./service/event");
+var order_1 = require("./service/order");
+var organization_1 = require("./service/organization");
+var person_1 = require("./service/person");
+var place_1 = require("./service/place");
+var programMembership_1 = require("./service/programMembership");
+var placeOrder_1 = require("./service/transaction/placeOrder");
+var returnOrder_1 = require("./service/transaction/returnOrder");
+var transporters = require("./transporters");
+exports.factory = factory;
+exports.transporters = transporters;
+/**
+ * auth client abstract class
+ * 認証クライアント抽象クラス
+ * @export
+ */
+var Auth = /** @class */ (function (_super) {
+    __extends(Auth, _super);
+    function Auth() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return Auth;
+}(authClient_1.AuthClient));
+exports.Auth = Auth;
+var service;
+(function (service) {
+    /**
+     * Pecorino口座サービス
+     */
+    var Account = /** @class */ (function (_super) {
+        __extends(Account, _super);
+        function Account() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Account;
+    }(account_1.AccountService));
+    service.Account = Account;
+    /**
+     * アクションサービス
+     */
+    var Action = /** @class */ (function (_super) {
+        __extends(Action, _super);
+        function Action() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Action;
+    }(action_1.ActionService));
+    service.Action = Action;
+    /**
+     * イベントサービス
+     */
+    var Event = /** @class */ (function (_super) {
+        __extends(Event, _super);
+        function Event() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Event;
+    }(event_1.EventService));
+    service.Event = Event;
+    /**
+     * 注文サービス
+     */
+    var Order = /** @class */ (function (_super) {
+        __extends(Order, _super);
+        function Order() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Order;
+    }(order_1.OrderService));
+    service.Order = Order;
+    /**
+     * 組織サービス
+     */
+    var Organization = /** @class */ (function (_super) {
+        __extends(Organization, _super);
+        function Organization() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Organization;
+    }(organization_1.OrganizationService));
+    service.Organization = Organization;
+    /**
+     * ユーザーサービス
+     */
+    var Person = /** @class */ (function (_super) {
+        __extends(Person, _super);
+        function Person() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Person;
+    }(person_1.PersonService));
+    service.Person = Person;
+    /**
+     * 場所サービス
+     */
+    var Place = /** @class */ (function (_super) {
+        __extends(Place, _super);
+        function Place() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Place;
+    }(place_1.PlaceService));
+    service.Place = Place;
+    /**
+     * 会員プログラムサービス
+     */
+    var ProgramMembership = /** @class */ (function (_super) {
+        __extends(ProgramMembership, _super);
+        function ProgramMembership() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return ProgramMembership;
+    }(programMembership_1.ProgramMembershipService));
+    service.ProgramMembership = ProgramMembership;
+    var transaction;
+    (function (transaction) {
+        /**
+         * 注文取引サービス
+         */
+        var PlaceOrder = /** @class */ (function (_super) {
+            __extends(PlaceOrder, _super);
+            function PlaceOrder() {
+                return _super !== null && _super.apply(this, arguments) || this;
+            }
+            return PlaceOrder;
+        }(placeOrder_1.PlaceOrderTransactionService));
+        transaction.PlaceOrder = PlaceOrder;
+        /**
+         * 注文返品取引サービス
+         */
+        var ReturnOrder = /** @class */ (function (_super) {
+            __extends(ReturnOrder, _super);
+            function ReturnOrder() {
+                return _super !== null && _super.apply(this, arguments) || this;
+            }
+            return ReturnOrder;
+        }(returnOrder_1.ReturnOrderTransactionService));
+        transaction.ReturnOrder = ReturnOrder;
+    })(transaction = service.transaction || (service.transaction = {}));
+})(service = exports.service || (exports.service = {}));
+
+},{"./auth/authClient":48,"./service/account":51,"./service/action":52,"./service/event":53,"./service/order":54,"./service/organization":55,"./service/person":56,"./service/place":57,"./service/programMembership":58,"./service/transaction/placeOrder":59,"./service/transaction/returnOrder":60,"./transporters":61,"@motionpicture/sskts-factory":152}],50:[function(require,module,exports){
+"use strict";
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var qs = require("qs");
+var transporters_1 = require("./transporters");
+/**
+ * base service class
+ * @export
+ */
+var Service = /** @class */ (function () {
+    function Service(options) {
+        this.options = options;
+    }
+    /**
+     * Create and send request to API
+     */
+    Service.prototype.fetch = function (options) {
+        return __awaiter(this, void 0, void 0, function () {
+            var defaultOptions, baseUrl, url, querystrings, headers, fetchOptions, transporter;
+            return __generator(this, function (_a) {
+                defaultOptions = {
+                    headers: {},
+                    method: 'GET'
+                };
+                // tslint:disable-next-line:no-parameter-reassignment
+                options = __assign({}, defaultOptions, options);
+                baseUrl = this.options.endpoint;
+                url = "" + baseUrl + options.uri;
+                querystrings = qs.stringify(options.qs);
+                url += (querystrings.length > 0) ? "?" + querystrings : '';
+                headers = __assign({
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json'
+                }, options.headers);
+                fetchOptions = {
+                    method: options.method,
+                    headers: headers,
+                    body: JSON.stringify(options.body)
+                };
+                // create request (using authClient or otherwise and return request obj)
+                if (this.options.auth !== undefined) {
+                    return [2 /*return*/, this.options.auth.fetch(url, fetchOptions, options.expectedStatusCodes)];
+                }
+                else {
+                    transporter = (this.options.transporter !== undefined) ? this.options.transporter : new transporters_1.DefaultTransporter(options.expectedStatusCodes);
+                    return [2 /*return*/, transporter.fetch(url, fetchOptions)];
+                }
+                return [2 /*return*/];
+            });
+        });
+    };
+    return Service;
+}());
+exports.Service = Service;
+
+},{"./transporters":61,"qs":176}],51:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../service");
+/**
+ * Pecorino口座サービス
+ */
+var AccountService = /** @class */ (function (_super) {
+    __extends(AccountService, _super);
+    function AccountService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * Pecorinoポイントを入金する
+     * 管理者権限が必要です。
+     */
+    AccountService.prototype.deposit = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/accounts/transactions/deposit',
+                        method: 'POST',
+                        body: params,
+                        expectedStatusCodes: [http_status_1.NO_CONTENT]
+                    })];
+            });
+        });
+    };
+    return AccountService;
+}(service_1.Service));
+exports.AccountService = AccountService;
+
+},{"../service":50,"http-status":163}],52:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../service");
+/**
+ * action service
+ */
+var ActionService = /** @class */ (function (_super) {
+    __extends(ActionService, _super);
+    function ActionService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * チケット印刷
+     */
+    ActionService.prototype.printTicket = function (
+    /**
+     * チケットオブジェクト
+     */
+    params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/actions/print/ticket',
+                        method: 'POST',
+                        body: params,
+                        expectedStatusCodes: [http_status_1.CREATED]
+                    })];
+            });
+        });
+    };
+    /**
+     * チケット印刷アクション検索
+     */
+    ActionService.prototype.searchPrintTicket = function (
+    /**
+     * 検索条件
+     */
+    params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/actions/print/ticket',
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })];
+            });
+        });
+    };
+    return ActionService;
+}(service_1.Service));
+exports.ActionService = ActionService;
+
+},{"../service":50,"http-status":163}],53:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../service");
+/**
+ * event service
+ */
+var EventService = /** @class */ (function (_super) {
+    __extends(EventService, _super);
+    function EventService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * 上映イベント検索
+     */
+    EventService.prototype.searchIndividualScreeningEvent = function (
+    /**
+     * 検索条件
+     */
+    params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/events/individualScreeningEvent',
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })];
+            });
+        });
+    };
+    /**
+     * 上映イベント情報取得
+     */
+    EventService.prototype.findIndividualScreeningEvent = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/events/individualScreeningEvent/" + params.identifier,
+                        method: 'GET',
+                        expectedStatusCodes: [http_status_1.OK]
+                    })];
+            });
+        });
+    };
+    return EventService;
+}(service_1.Service));
+exports.EventService = EventService;
+
+},{"../service":50,"http-status":163}],54:[function(require,module,exports){
+"use strict";
+/**
+ * 注文サービス
+ *
+ * @namespace service.order
+ */
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../service");
+/**
+ * order service
+ */
+var OrderService = /** @class */ (function (_super) {
+    __extends(OrderService, _super);
+    function OrderService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * 照会キーで注文情報を取得する
+     */
+    OrderService.prototype.findByOrderInquiryKey = function (
+    /**
+     * 注文照会キー
+     */
+    params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/orders/findByOrderInquiryKey',
+                        method: 'POST',
+                        body: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })];
+            });
+        });
+    };
+    /**
+     * 注文を検索する
+     */
+    OrderService.prototype.search = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/orders',
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })];
+            });
+        });
+    };
+    return OrderService;
+}(service_1.Service));
+exports.OrderService = OrderService;
+
+},{"../service":50,"http-status":163}],55:[function(require,module,exports){
+"use strict";
+/**
+ * 組織サービス
+ *
+ * @namespace service.organization
+ */
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../service");
+/**
+ * organization service
+ */
+var OrganizationService = /** @class */ (function (_super) {
+    __extends(OrganizationService, _super);
+    function OrganizationService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * 劇場組織検索
+     */
+    OrganizationService.prototype.searchMovieTheaters = function (
+    /**
+     * 検索条件
+     */
+    params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/organizations/movieTheater',
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })];
+            });
+        });
+    };
+    /**
+     * 枝番号で劇場組織検索
+     */
+    OrganizationService.prototype.findMovieTheaterByBranchCode = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/organizations/movieTheater/" + params.branchCode,
+                        method: 'GET',
+                        qs: {},
+                        expectedStatusCodes: [http_status_1.OK]
+                    })];
+            });
+        });
+    };
+    return OrganizationService;
+}(service_1.Service));
+exports.OrganizationService = OrganizationService;
+
+},{"../service":50,"http-status":163}],56:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../service");
+/**
+ * ユーザーサービス
+ */
+var PersonService = /** @class */ (function (_super) {
+    __extends(PersonService, _super);
+    function PersonService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * ユーザーの連絡先を検索する
+     */
+    PersonService.prototype.getContacts = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/people/" + params.personId + "/contacts",
+                        method: 'GET',
+                        qs: {},
+                        expectedStatusCodes: [http_status_1.OK]
+                    })];
+            });
+        });
+    };
+    /**
+     * ユーザーの連絡先を更新する
+     */
+    PersonService.prototype.updateContacts = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/people/" + params.personId + "/contacts",
+                        method: 'PUT',
+                        body: params.contacts,
+                        expectedStatusCodes: [http_status_1.NO_CONTENT]
+                    })];
+            });
+        });
+    };
+    /**
+     * クレジットカード検索
+     * @see example /example/person/handleCreditCards
+     */
+    PersonService.prototype.findCreditCards = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/people/" + params.personId + "/creditCards",
+                        method: 'GET',
+                        qs: {},
+                        expectedStatusCodes: [http_status_1.OK]
+                    })];
+            });
+        });
+    };
+    /**
+     * クレジットカード追加
+     * @return successfully created credit card info
+     * @see example /example/person/handleCreditCards
+     */
+    PersonService.prototype.addCreditCard = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/people/" + params.personId + "/creditCards",
+                        method: 'POST',
+                        body: params.creditCard,
+                        expectedStatusCodes: [http_status_1.CREATED]
+                    })];
+            });
+        });
+    };
+    /**
+     * クレジットカード削除
+     * @see /example/person/handleCreditCards
+     */
+    PersonService.prototype.deleteCreditCard = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/people/" + params.personId + "/creditCards/" + params.cardSeq,
+                        method: 'DELETE',
+                        expectedStatusCodes: [http_status_1.NO_CONTENT]
+                    })];
+            });
+        });
+    };
+    /**
+     * 口座開設
+     */
+    PersonService.prototype.openAccount = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/people/" + params.personId + "/accounts",
+                        method: 'POST',
+                        body: {
+                            name: params.name
+                        },
+                        expectedStatusCodes: [http_status_1.CREATED]
+                    })];
+            });
+        });
+    };
+    /**
+     * 口座開解約
+     * 口座の状態を変更するだけで、ユーザーの所有する口座リストから削除はされません。
+     * 解約された口座で取引を進行しようとすると400エラーとなります。
+     */
+    PersonService.prototype.closeAccount = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/people/" + params.personId + "/accounts/" + params.accountNumber + "/close",
+                        method: 'PUT',
+                        expectedStatusCodes: [http_status_1.NO_CONTENT]
+                    })];
+            });
+        });
+    };
+    /**
+     * 口座照会
+     */
+    PersonService.prototype.findAccounts = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/people/" + params.personId + "/accounts",
+                        method: 'GET',
+                        qs: {},
+                        expectedStatusCodes: [http_status_1.OK]
+                    })];
+            });
+        });
+    };
+    /**
+     * 口座取引履歴検索
+     */
+    PersonService.prototype.searchAccountMoneyTransferActions = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/people/" + params.personId + "/accounts/" + params.accountNumber + "/actions/moneyTransfer",
+                        method: 'GET',
+                        qs: {},
+                        expectedStatusCodes: [http_status_1.OK]
+                    })];
+            });
+        });
+    };
+    /**
+     * 所有権を検索する
+     * 座席予約、所属会員プログラム、などユーザーの資産(モノ、サービス)を検索します。
+     */
+    PersonService.prototype.searchOwnershipInfos = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/people/" + params.ownedBy + "/ownershipInfos/" + params.goodType,
+                        method: 'GET',
+                        qs: {
+                            ownedAt: params.ownedAt
+                        },
+                        expectedStatusCodes: [http_status_1.OK]
+                    })];
+            });
+        });
+    };
+    /**
+     * 会員プログラムに登録する
+     */
+    PersonService.prototype.registerProgramMembership = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/people/" + params.personId + "/ownershipInfos/programMembership/register",
+                        method: 'PUT',
+                        body: {
+                            programMembershipId: params.programMembershipId,
+                            offerIdentifier: params.offerIdentifier,
+                            sellerType: params.sellerType,
+                            sellerId: params.sellerId
+                        },
+                        expectedStatusCodes: [http_status_1.ACCEPTED]
+                    })];
+            });
+        });
+    };
+    /**
+     * 会員プログラム登録解除
+     */
+    PersonService.prototype.unRegisterProgramMembership = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/people/" + params.personId + "/ownershipInfos/programMembership/" + params.ownershipInfoIdentifier + "/unRegister",
+                        method: 'PUT',
+                        body: {},
+                        expectedStatusCodes: [http_status_1.ACCEPTED]
+                    })];
+            });
+        });
+    };
+    return PersonService;
+}(service_1.Service));
+exports.PersonService = PersonService;
+
+},{"../service":50,"http-status":163}],57:[function(require,module,exports){
+"use strict";
+/**
+ * 場所サービス
+ *
+ * @namespace service.place
+ */
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../service");
+/**
+ * place service
+ */
+var PlaceService = /** @class */ (function (_super) {
+    __extends(PlaceService, _super);
+    function PlaceService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * 劇場検索
+     */
+    PlaceService.prototype.searchMovieTheaters = function (
+    /**
+     * 検索条件
+     */
+    params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/places/movieTheater',
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })];
+            });
+        });
+    };
+    /**
+     * 劇場情報取得
+     */
+    PlaceService.prototype.findMovieTheater = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/places/movieTheater/" + params.branchCode,
+                        method: 'GET',
+                        qs: {},
+                        expectedStatusCodes: [http_status_1.OK]
+                    })];
+            });
+        });
+    };
+    return PlaceService;
+}(service_1.Service));
+exports.PlaceService = PlaceService;
+
+},{"../service":50,"http-status":163}],58:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../service");
+/**
+ * 会員プログラムサービス
+ */
+var ProgramMembershipService = /** @class */ (function (_super) {
+    __extends(ProgramMembershipService, _super);
+    function ProgramMembershipService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * 検索
+     */
+    ProgramMembershipService.prototype.search = function (
+    /**
+     * 検索条件
+     */
+    params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/programMemberships',
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })];
+            });
+        });
+    };
+    return ProgramMembershipService;
+}(service_1.Service));
+exports.ProgramMembershipService = ProgramMembershipService;
+
+},{"../service":50,"http-status":163}],59:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../../service");
+/**
+ * 注文取引サービス
+ */
+var PlaceOrderTransactionService = /** @class */ (function (_super) {
+    __extends(PlaceOrderTransactionService, _super);
+    function PlaceOrderTransactionService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * 取引を開始する
+     * 開始できない場合(混雑中など)、nullが返されます。
+     * @returns 取引オブジェクト
+     */
+    PlaceOrderTransactionService.prototype.start = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/transactions/placeOrder/start',
+                        method: 'POST',
+                        body: {
+                            expires: params.expires,
+                            sellerId: params.sellerId,
+                            passportToken: params.passportToken
+                        },
+                        expectedStatusCodes: [http_status_1.OK]
+                    })];
+            });
+        });
+    };
+    /**
+     * 取引に座席予約を追加する
+     * @returns 座席予約承認アクション
+     */
+    PlaceOrderTransactionService.prototype.createSeatReservationAuthorization = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/seatReservation",
+                        method: 'POST',
+                        expectedStatusCodes: [http_status_1.CREATED],
+                        body: {
+                            eventIdentifier: params.eventIdentifier,
+                            offers: params.offers
+                        }
+                    })];
+            });
+        });
+    };
+    /**
+     * 座席予約取消
+     */
+    PlaceOrderTransactionService.prototype.cancelSeatReservationAuthorization = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/seatReservation/" + params.actionId,
+                        method: 'DELETE',
+                        expectedStatusCodes: [http_status_1.NO_CONTENT]
+                    })];
+            });
+        });
+    };
+    /**
+     * 座席予約承認アクションの供給情報を変更する
+     * 完了ステータスの座席仮予約に対して券種変更する際に使用
+     * @returns 座席予約承認アクション
+     */
+    PlaceOrderTransactionService.prototype.changeSeatReservationOffers = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/seatReservation/" + params.actionId,
+                        method: 'PATCH',
+                        expectedStatusCodes: [http_status_1.OK],
+                        body: {
+                            eventIdentifier: params.eventIdentifier,
+                            offers: params.offers
+                        }
+                    })];
+            });
+        });
+    };
+    /**
+     * クレジットカードのオーソリを取得する
+     * @returns 承認アクション
+     */
+    PlaceOrderTransactionService.prototype.createCreditCardAuthorization = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/creditCard",
+                        method: 'POST',
+                        expectedStatusCodes: [http_status_1.CREATED],
+                        body: {
+                            orderId: params.orderId,
+                            amount: params.amount,
+                            method: params.method,
+                            creditCard: params.creditCard
+                        }
+                    })];
+            });
+        });
+    };
+    /**
+     * クレジットカードオーソリ取消
+     */
+    PlaceOrderTransactionService.prototype.cancelCreditCardAuthorization = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/creditCard/" + params.actionId,
+                        method: 'DELETE',
+                        expectedStatusCodes: [http_status_1.NO_CONTENT]
+                    })];
+            });
+        });
+    };
+    /**
+     * 決済方法として、ムビチケを追加する
+     * @returns 承認アクション
+     */
+    PlaceOrderTransactionService.prototype.createMvtkAuthorization = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/mvtk",
+                        method: 'POST',
+                        expectedStatusCodes: [http_status_1.CREATED],
+                        body: params.mvtk
+                    })];
+            });
+        });
+    };
+    /**
+     * ムビチケ取消
+     */
+    PlaceOrderTransactionService.prototype.cancelMvtkAuthorization = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/mvtk/" + params.actionId,
+                        method: 'DELETE',
+                        expectedStatusCodes: [http_status_1.NO_CONTENT]
+                    })];
+            });
+        });
+    };
+    /**
+     * Pecorino口座決済のオーソリを取得する
+     * @returns 承認アクション
+     */
+    PlaceOrderTransactionService.prototype.createPecorinoPaymentAuthorization = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/paymentMethod/pecorino",
+                        method: 'POST',
+                        expectedStatusCodes: [http_status_1.CREATED],
+                        body: {
+                            amount: params.amount,
+                            fromAccountNumber: params.fromAccountNumber,
+                            notes: params.notes
+                        }
+                    })];
+            });
+        });
+    };
+    /**
+     * Pecorino口座決済オーソリ取消
+     */
+    PlaceOrderTransactionService.prototype.cancelPecorinoPaymentAuthorization = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/paymentMethod/pecorino/" + params.actionId,
+                        method: 'DELETE',
+                        expectedStatusCodes: [http_status_1.NO_CONTENT]
+                    })];
+            });
+        });
+    };
+    /**
+     * Pecorinoポイントインセンティブのオーソリを取得する
+     * @returns 承認アクション
+     */
+    PlaceOrderTransactionService.prototype.createPecorinoAwardAuthorization = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/award/pecorino",
+                        method: 'POST',
+                        expectedStatusCodes: [http_status_1.CREATED],
+                        body: {
+                            amount: params.amount,
+                            toAccountNumber: params.toAccountNumber,
+                            notes: params.notes
+                        }
+                    })];
+            });
+        });
+    };
+    /**
+     * Pecorinoポイントインセンティブオーソリ取消
+     */
+    PlaceOrderTransactionService.prototype.cancelPecorinoAwardAuthorization = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/award/pecorino/" + params.actionId,
+                        method: 'DELETE',
+                        expectedStatusCodes: [http_status_1.NO_CONTENT]
+                    })];
+            });
+        });
+    };
+    /**
+     * register a customer contact
+     * @returns 登録された購入者情報
+     */
+    PlaceOrderTransactionService.prototype.setCustomerContact = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/placeOrder/" + params.transactionId + "/customerContact",
+                        method: 'PUT',
+                        expectedStatusCodes: [http_status_1.CREATED],
+                        body: params.contact
+                    })];
+            });
+        });
+    };
+    /**
+     * 取引確定
+     * @returns 作成された注文
+     */
+    PlaceOrderTransactionService.prototype.confirm = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/placeOrder/" + params.transactionId + "/confirm",
+                        method: 'POST',
+                        expectedStatusCodes: [http_status_1.CREATED],
+                        body: {
+                            sendEmailMessage: params.sendEmailMessage,
+                            incentives: params.incentives
+                        }
+                    })];
+            });
+        });
+    };
+    /**
+     * 確定した取引に関して、購入者にメール通知を送信する
+     * @returns メール送信タスク
+     */
+    PlaceOrderTransactionService.prototype.sendEmailNotification = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/placeOrder/" + params.transactionId + "/tasks/sendEmailNotification",
+                        method: 'POST',
+                        expectedStatusCodes: [http_status_1.CREATED],
+                        body: params.emailMessageAttributes
+                    })];
+            });
+        });
+    };
+    /**
+     * 明示的に取引を中止する
+     * 既に確定済、あるいは、期限切れの取引に対して実行するとNotFoundエラーが返されます。
+     * @param params.transactionId 取引ID
+     */
+    PlaceOrderTransactionService.prototype.cancel = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/placeOrder/" + params.transactionId + "/cancel",
+                        method: 'POST',
+                        expectedStatusCodes: [http_status_1.NO_CONTENT]
+                    })];
+            });
+        });
+    };
+    return PlaceOrderTransactionService;
+}(service_1.Service));
+exports.PlaceOrderTransactionService = PlaceOrderTransactionService;
+
+},{"../../service":50,"http-status":163}],60:[function(require,module,exports){
+"use strict";
+/**
+ * 注文返品取引サービス
+ * @namespace service.transaction.returnOrder
+ */
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../../service");
+/**
+ * 注文返品取引サービス
+ */
+var ReturnOrderTransactionService = /** @class */ (function (_super) {
+    __extends(ReturnOrderTransactionService, _super);
+    function ReturnOrderTransactionService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * 取引を開始する
+     * @returns 注文返品取引オブジェクト
+     */
+    ReturnOrderTransactionService.prototype.start = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/transactions/returnOrder/start',
+                        method: 'POST',
+                        body: {
+                            expires: params.expires,
+                            transactionId: params.transactionId
+                        },
+                        expectedStatusCodes: [http_status_1.OK]
+                    })];
+            });
+        });
+    };
+    /**
+     * 取引確定
+     * @returns 注文返品取引結果
+     */
+    ReturnOrderTransactionService.prototype.confirm = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/returnOrder/" + params.transactionId + "/confirm",
+                        method: 'POST',
+                        expectedStatusCodes: [http_status_1.CREATED]
+                    })];
+            });
+        });
+    };
+    return ReturnOrderTransactionService;
+}(service_1.Service));
+exports.ReturnOrderTransactionService = ReturnOrderTransactionService;
+
+},{"../../service":50,"http-status":163}],61:[function(require,module,exports){
+"use strict";
+// tslint:disable:max-classes-per-file
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * transporters
+ * @ignore
+ */
+var createDebug = require("debug");
+var http_status_1 = require("http-status");
+var fetch = require("isomorphic-fetch");
+var debug = createDebug('sskts-api-abstract-client:transporters');
+// tslint:disable-next-line
+// const pkg = require('../package.json');
+/**
+ * transporter abstract class
+ * トランスポーター抽象クラス
+ * @export
+ */
+var Transporter = /** @class */ (function () {
+    function Transporter() {
+    }
+    return Transporter;
+}());
+exports.Transporter = Transporter;
+/**
+ * RequestError
+ * @export
+ */
+var RequestError = /** @class */ (function (_super) {
+    __extends(RequestError, _super);
+    function RequestError() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return RequestError;
+}(Error));
+exports.RequestError = RequestError;
+/**
+ * stub transporter
+ * スタブトランポーター
+ * @export
+ */
+var StubTransporter = /** @class */ (function () {
+    function StubTransporter(body) {
+        this.body = body;
+    }
+    StubTransporter.prototype.fetch = function (url, options) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                debug('fetching...', url, options);
+                return [2 /*return*/, this.body];
+            });
+        });
+    };
+    return StubTransporter;
+}());
+exports.StubTransporter = StubTransporter;
+/**
+ * DefaultTransporter
+ * @export
+ */
+var DefaultTransporter = /** @class */ (function () {
+    function DefaultTransporter(expectedStatusCodes) {
+        this.expectedStatusCodes = expectedStatusCodes;
+    }
+    /**
+     * Configures request options before making a request.
+     */
+    DefaultTransporter.CONFIGURE = function (options) {
+        // set transporter user agent
+        options.headers = (options.headers !== undefined) ? options.headers : {};
+        // tslint:disable-next-line:no-single-line-block-comment
+        /* istanbul ignore else */
+        // if (!options.headers['User-Agent']) {
+        //     options.headers['User-Agent'] = DefaultTransporter.USER_AGENT;
+        // } else if (options.headers['User-Agent'].indexOf(DefaultTransporter.USER_AGENT) === -1) {
+        //     options.headers['User-Agent'] = `${options.headers['User-Agent']} ${DefaultTransporter.USER_AGENT}`;
+        // }
+        return options;
+    };
+    /**
+     * Makes a request with given options and invokes callback.
+     */
+    DefaultTransporter.prototype.fetch = function (url, options) {
+        return __awaiter(this, void 0, void 0, function () {
+            var fetchOptions;
+            var _this = this;
+            return __generator(this, function (_a) {
+                fetchOptions = DefaultTransporter.CONFIGURE(options);
+                debug('fetching...', url, fetchOptions);
+                return [2 /*return*/, fetch(url, fetchOptions).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, this.wrapCallback(response)];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * Wraps the response callback.
+     */
+    DefaultTransporter.prototype.wrapCallback = function (response) {
+        return __awaiter(this, void 0, void 0, function () {
+            var err, body, error_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        err = new RequestError('An unexpected error occurred');
+                        debug('request processed', response.status);
+                        if (!(this.expectedStatusCodes.indexOf(response.status) < 0)) return [3 /*break*/, 6];
+                        body = void 0;
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 3, , 5]);
+                        return [4 /*yield*/, response.clone().json()];
+                    case 2:
+                        // Only and only application/json responses should
+                        // be decoded back to JSON, but there are cases API back-ends
+                        // responds without proper content-type.
+                        body = _a.sent();
+                        return [3 /*break*/, 5];
+                    case 3:
+                        error_1 = _a.sent();
+                        return [4 /*yield*/, response.clone().text()];
+                    case 4:
+                        body = _a.sent();
+                        return [3 /*break*/, 5];
+                    case 5:
+                        if (typeof body === 'object' && body.error !== undefined) {
+                            err = new RequestError(body.error.message);
+                            err.code = response.status;
+                            err.errors = body.error.errors;
+                        }
+                        else {
+                            err = new RequestError(body);
+                            err.code = response.status;
+                            err.errors = [];
+                        }
+                        return [3 /*break*/, 7];
+                    case 6:
+                        if (response.status === http_status_1.NO_CONTENT) {
+                            // consider 204
+                            return [2 /*return*/];
+                        }
+                        else {
+                            // consider 200,201
+                            return [2 /*return*/, response.json()];
+                        }
+                        _a.label = 7;
+                    case 7: throw err;
+                }
+            });
+        });
+    };
+    return DefaultTransporter;
+}());
+exports.DefaultTransporter = DefaultTransporter;
+/**
+ * TransporterWithRequestPromise
+ */
+// export class TransporterWithRequestPromise {
+//     /**
+//      * Default user agent.
+//      */
+//     public static readonly USER_AGENT: string = `sasaki-api-nodejs-client/${pkg.version}`;
+//     public expectedStatusCodes: number[];
+//     constructor(expectedStatusCodes: number[]) {
+//         this.expectedStatusCodes = expectedStatusCodes;
+//     }
+//     /**
+//      * Configures request options before making a request.
+//      */
+//     public static CONFIGURE(options: request.OptionsWithUri): request.OptionsWithUri {
+//         // set transporter user agent
+//         options.headers = (options.headers !== undefined) ? options.headers : {};
+//         if (!options.headers['User-Agent']) {
+//             options.headers['User-Agent'] = DefaultTransporter.USER_AGENT;
+//         } else if (options.headers['User-Agent'].indexOf(DefaultTransporter.USER_AGENT) === -1) {
+//             options.headers['User-Agent'] = `${options.headers['User-Agent']} ${DefaultTransporter.USER_AGENT}`;
+//         }
+//         return options;
+//     }
+//     /**
+//      * Makes a request with given options and invokes callback.
+//      */
+//     public async request(options: request.OptionsWithUri) {
+//         const requestOptions = DefaultTransporter.CONFIGURE(options);
+//         return await request(requestOptions)
+//             .then((res) => this.wrapCallback(res));
+//     }
+//     /**
+//      * Wraps the response callback.
+//      */
+//     private wrapCallback(res: request.FullResponse): any {
+//         let err: RequestError = new RequestError('An unexpected error occurred');
+//         debug('request processed', res.statusCode, res.body);
+//         if (res.statusCode !== undefined) {
+//             if (this.expectedStatusCodes.indexOf(res.statusCode) < 0) {
+//                 if (typeof res.body === 'string') {
+//                     // Consider all 4xx and 5xx responses errors.
+//                     err = new RequestError(res.body);
+//                     err.code = res.statusCode;
+//                 }
+//                 if (typeof res.body === 'object' && res.body.errors !== undefined) {
+//                     // consider 400
+//                     err = new RequestError((<any[]>res.body.errors).map((error) => `${error.title}:${error.detail}`).join('\n'));
+//                     err.code = res.statusCode;
+//                     err.errors = res.body.errors;
+//                 }
+//             } else {
+//                 if (res.body !== undefined) {
+//                     // consider 200,201,404
+//                     return res.body;
+//                 } else {
+//                     // consider 204
+//                     return;
+//                 }
+//             }
+//         }
+//         throw err;
+//     }
+// }
+
+},{"debug":161,"http-status":163,"isomorphic-fetch":171}],62:[function(require,module,exports){
+arguments[4][13][0].apply(exports,arguments)
+},{"dup":13}],63:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * アクションタイプ
+ */
+var ActionType;
+(function (ActionType) {
+    ActionType["AuthorizeAction"] = "AuthorizeAction";
+    ActionType["CheckInAction"] = "CheckInAction";
+    ActionType["GiveAction"] = "GiveAction";
+    ActionType["OrderAction"] = "OrderAction";
+    ActionType["PayAction"] = "PayAction";
+    ActionType["PrintAction"] = "PrintAction";
+    ActionType["RefundAction"] = "RefundAction";
+    ActionType["RegisterAction"] = "RegisterAction";
+    ActionType["ReturnAction"] = "ReturnAction";
+    ActionType["SendAction"] = "SendAction";
+    ActionType["UnRegisterAction"] = "UnRegisterAction";
+    ActionType["UpdateAction"] = "UpdateAction";
+    ActionType["UseAction"] = "UseAction";
+})(ActionType || (ActionType = {}));
+exports.default = ActionType;
+
+},{}],64:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var ObjectType;
+(function (ObjectType) {
+    ObjectType["PecorinoAward"] = "PecorinoAward";
+})(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
+
+},{}],65:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var ObjectType;
+(function (ObjectType) {
+    ObjectType["Mvtk"] = "Mvtk";
+})(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
+
+},{}],66:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],67:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var ObjectType;
+(function (ObjectType) {
+    ObjectType["SeatReservation"] = "SeatReservation";
+})(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
+
+},{}],68:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var ObjectType;
+(function (ObjectType) {
+    ObjectType["CreditCard"] = "CreditCard";
+})(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
+
+},{}],69:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var ObjectType;
+(function (ObjectType) {
+    ObjectType["PecorinoPayment"] = "PecorinoPayment";
+})(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
+
+},{}],70:[function(require,module,exports){
+arguments[4][65][0].apply(exports,arguments)
+},{"dup":65}],71:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],72:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],73:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],74:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],75:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],76:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var pecorino_1 = require("../../../action/authorize/award/pecorino");
+exports.ObjectType = pecorino_1.ObjectType;
+
+},{"../../../action/authorize/award/pecorino":64}],77:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],78:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],79:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],80:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],81:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],82:[function(require,module,exports){
+"use strict";
+/**
+ * アプリケーションクライアントイベントファクトリー
+ * クライアントサイドで発生したイベントを生成する
+ * クライアントサイドからapiを通じて生成される想定
+ * @namespace clientEvent
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+
+},{}],83:[function(require,module,exports){
+arguments[4][17][0].apply(exports,arguments)
+},{"dup":17}],84:[function(require,module,exports){
+"use strict";
+/**
+ * 作品タイプ
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var CreativeWorkType;
+(function (CreativeWorkType) {
+    CreativeWorkType["EmailMessage"] = "EmailMessage";
+    CreativeWorkType["Movie"] = "Movie";
+})(CreativeWorkType || (CreativeWorkType = {}));
+exports.default = CreativeWorkType;
+
+},{}],85:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],86:[function(require,module,exports){
+"use strict";
+/**
+ * 映画作品ファクトリー
+ * @namespace creativeWork.movie
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var moment = require("moment");
+var creativeWorkType_1 = require("../creativeWorkType");
+/**
+ * COAの作品抽出結果からFilmオブジェクトを作成する
+ * @export
+ */
+// tslint:disable-next-line:no-single-line-block-comment
+/* istanbul ignore next */
+function createFromCOA(filmFromCOA) {
+    return {
+        identifier: filmFromCOA.titleCode,
+        name: filmFromCOA.titleNameOrig,
+        duration: moment.duration(filmFromCOA.showTime, 'm').toISOString(),
+        contentRating: filmFromCOA.kbnEirin,
+        typeOf: creativeWorkType_1.default.Movie
+    };
+}
+exports.createFromCOA = createFromCOA;
+
+},{"../creativeWorkType":84,"moment":154}],87:[function(require,module,exports){
+"use strict";
+/**
+ * エラーコード
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var ErrorCode;
+(function (ErrorCode) {
+    ErrorCode["AlreadyInUse"] = "AlreadyInUse";
+    ErrorCode["Argument"] = "Argument";
+    ErrorCode["ArgumentNull"] = "ArgumentNull";
+    ErrorCode["Forbidden"] = "Forbidden";
+    ErrorCode["NotFound"] = "NotFound";
+    ErrorCode["NotImplemented"] = "NotImplemented";
+    ErrorCode["RateLimitExceeded"] = "RateLimitExceeded";
+    ErrorCode["ServiceUnavailable"] = "ServiceUnavailable";
+    ErrorCode["Unauthorized"] = "Unauthorized";
+})(ErrorCode || (ErrorCode = {}));
+exports.default = ErrorCode;
+
+},{}],88:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable-next-line:no-require-imports
+var setPrototypeOf = require("setprototypeof");
+var errorCode_1 = require("../errorCode");
+var sskts_1 = require("./sskts");
+/**
+ * AlreadyInUseError
+ * @extends {SSKTSError}
+ */
+var AlreadyInUseError = /** @class */ (function (_super) {
+    __extends(AlreadyInUseError, _super);
+    function AlreadyInUseError(entityName, fieldNames, message) {
+        var _this = this;
+        var actualMessage = message;
+        if (message === undefined || message.length === 0) {
+            actualMessage = "The specified '" + entityName + "' value is already in use for: " + fieldNames.join(', ') + ".";
+        }
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.AlreadyInUse, actualMessage) /* istanbul ignore next */ || this;
+        _this.entityName = entityName;
+        _this.fieldNames = fieldNames;
+        setPrototypeOf(_this, AlreadyInUseError.prototype);
+        return _this;
+    }
+    return AlreadyInUseError;
+}(sskts_1.SSKTSError));
+exports.default = AlreadyInUseError;
+
+},{"../errorCode":87,"./sskts":96,"setprototypeof":180}],89:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable-next-line:no-require-imports
+var setPrototypeOf = require("setprototypeof");
+var errorCode_1 = require("../errorCode");
+var sskts_1 = require("./sskts");
+/**
+ * ArgumentError
+ * @extends {SSKTSError}
+ */
+var ArgumentError = /** @class */ (function (_super) {
+    __extends(ArgumentError, _super);
+    function ArgumentError(argumentName, message) {
+        var _this = this;
+        var actualMessage = message;
+        if (message === undefined || message.length === 0) {
+            actualMessage = "Invalid or missing argument supplied: " + argumentName + ".";
+        }
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.Argument, actualMessage) /* istanbul ignore next */ || this;
+        _this.argumentName = argumentName;
+        setPrototypeOf(_this, ArgumentError.prototype);
+        return _this;
+    }
+    return ArgumentError;
+}(sskts_1.SSKTSError));
+exports.default = ArgumentError;
+
+},{"../errorCode":87,"./sskts":96,"setprototypeof":180}],90:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable-next-line:no-require-imports
+var setPrototypeOf = require("setprototypeof");
+var errorCode_1 = require("../errorCode");
+var sskts_1 = require("./sskts");
+/**
+ * ArgumentNullError
+ * @extends {SSKTSError}
+ */
+var ArgumentNullError = /** @class */ (function (_super) {
+    __extends(ArgumentNullError, _super);
+    function ArgumentNullError(argumentName, message) {
+        var _this = this;
+        var actualMessage = message;
+        if (message === undefined || message.length === 0) {
+            actualMessage = "Missing argument: " + argumentName + ".";
+        }
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.ArgumentNull, actualMessage) /* istanbul ignore next */ || this;
+        _this.argumentName = argumentName;
+        setPrototypeOf(_this, ArgumentNullError.prototype);
+        return _this;
+    }
+    return ArgumentNullError;
+}(sskts_1.SSKTSError));
+exports.default = ArgumentNullError;
+
+},{"../errorCode":87,"./sskts":96,"setprototypeof":180}],91:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable-next-line:no-require-imports
+var setPrototypeOf = require("setprototypeof");
+var errorCode_1 = require("../errorCode");
+var sskts_1 = require("./sskts");
+/**
+ * ForbiddenError
+ * @extends {SSKTSError}
+ */
+var ForbiddenError = /** @class */ (function (_super) {
+    __extends(ForbiddenError, _super);
+    function ForbiddenError(message) {
+        var _this = this;
+        var actualMessage = message;
+        if (message === undefined || message.length === 0) {
+            actualMessage = 'Forbidden.';
+        }
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.Forbidden, actualMessage) /* istanbul ignore next */ || this;
+        setPrototypeOf(_this, ForbiddenError.prototype);
+        return _this;
+    }
+    return ForbiddenError;
+}(sskts_1.SSKTSError));
+exports.default = ForbiddenError;
+
+},{"../errorCode":87,"./sskts":96,"setprototypeof":180}],92:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable-next-line:no-require-imports
+var setPrototypeOf = require("setprototypeof");
+var errorCode_1 = require("../errorCode");
+var sskts_1 = require("./sskts");
+/**
+ * NotFoundError
+ * @extends {SSKTSError}
+ */
+var NotFoundError = /** @class */ (function (_super) {
+    __extends(NotFoundError, _super);
+    function NotFoundError(entityName, message) {
+        var _this = this;
+        var actualMessage = message;
+        if (message === undefined || message.length === 0) {
+            actualMessage = "Not Found: " + entityName + ".";
+        }
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.NotFound, actualMessage) /* istanbul ignore next */ || this;
+        _this.entityName = entityName;
+        setPrototypeOf(_this, NotFoundError.prototype);
+        return _this;
+    }
+    return NotFoundError;
+}(sskts_1.SSKTSError));
+exports.default = NotFoundError;
+
+},{"../errorCode":87,"./sskts":96,"setprototypeof":180}],93:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable-next-line:no-require-imports
+var setPrototypeOf = require("setprototypeof");
+var errorCode_1 = require("../errorCode");
+var sskts_1 = require("./sskts");
+/**
+ * NotImplementedError
+ * @extends {SSKTSError}
+ */
+var NotImplementedError = /** @class */ (function (_super) {
+    __extends(NotImplementedError, _super);
+    function NotImplementedError(message) {
+        var _this = this;
+        var actualMessage = message;
+        if (message === undefined || message.length === 0) {
+            actualMessage = 'Method is not yet implemented.';
+        }
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.NotImplemented, actualMessage) /* istanbul ignore next */ || this;
+        setPrototypeOf(_this, NotImplementedError.prototype);
+        return _this;
+    }
+    return NotImplementedError;
+}(sskts_1.SSKTSError));
+exports.default = NotImplementedError;
+
+},{"../errorCode":87,"./sskts":96,"setprototypeof":180}],94:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable-next-line:no-require-imports
+var setPrototypeOf = require("setprototypeof");
+var errorCode_1 = require("../errorCode");
+var sskts_1 = require("./sskts");
+/**
+ * RateLimitExceededError
+ * @extends {SSKTSError}
+ */
+var RateLimitExceededError = /** @class */ (function (_super) {
+    __extends(RateLimitExceededError, _super);
+    function RateLimitExceededError(message) {
+        var _this = this;
+        var actualMessage = message;
+        if (message === undefined || message.length === 0) {
+            actualMessage = 'Rate limit exceeded.';
+        }
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.RateLimitExceeded, actualMessage) /* istanbul ignore next */ || this;
+        setPrototypeOf(_this, RateLimitExceededError.prototype);
+        return _this;
+    }
+    return RateLimitExceededError;
+}(sskts_1.SSKTSError));
+exports.default = RateLimitExceededError;
+
+},{"../errorCode":87,"./sskts":96,"setprototypeof":180}],95:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable-next-line:no-require-imports
+var setPrototypeOf = require("setprototypeof");
+var errorCode_1 = require("../errorCode");
+var sskts_1 = require("./sskts");
+/**
+ * ServiceUnavailableError
+ * @extends {SSKTSError}
+ */
+var ServiceUnavailableError = /** @class */ (function (_super) {
+    __extends(ServiceUnavailableError, _super);
+    function ServiceUnavailableError(message) {
+        var _this = this;
+        var actualMessage = message;
+        if (message === undefined || message.length === 0) {
+            actualMessage = 'Service unavailable temporarily.';
+        }
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.ServiceUnavailable, actualMessage) /* istanbul ignore next */ || this;
+        setPrototypeOf(_this, ServiceUnavailableError.prototype);
+        return _this;
+    }
+    return ServiceUnavailableError;
+}(sskts_1.SSKTSError));
+exports.default = ServiceUnavailableError;
+
+},{"../errorCode":87,"./sskts":96,"setprototypeof":180}],96:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * SSKTSError
+ * @extends {Error}
+ */
+var SSKTSError = /** @class */ (function (_super) {
+    __extends(SSKTSError, _super);
+    function SSKTSError(code, message) {
+        var _this = 
+        // tslint:disable-next-line:no-single-line-block-comment
+        _super.call(this, message) /* istanbul ignore next */ || this;
+        _this.name = 'SSKTSError';
+        _this.reason = code;
+        return _this;
+    }
+    return SSKTSError;
+}(Error));
+exports.SSKTSError = SSKTSError;
+
+},{}],97:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable-next-line:no-require-imports
+var setPrototypeOf = require("setprototypeof");
+var errorCode_1 = require("../errorCode");
+var sskts_1 = require("./sskts");
+/**
+ * UnauthorizedError
+ * @extends {SSKTSError}
+ */
+var UnauthorizedError = /** @class */ (function (_super) {
+    __extends(UnauthorizedError, _super);
+    function UnauthorizedError(message) {
+        var _this = this;
+        var actualMessage = message;
+        if (message === undefined || message.length === 0) {
+            actualMessage = 'Unauthorized.';
+        }
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.Unauthorized, actualMessage) /* istanbul ignore next */ || this;
+        setPrototypeOf(_this, UnauthorizedError.prototype);
+        return _this;
+    }
+    return UnauthorizedError;
+}(sskts_1.SSKTSError));
+exports.default = UnauthorizedError;
+
+},{"../errorCode":87,"./sskts":96,"setprototypeof":180}],98:[function(require,module,exports){
+"use strict";
+/**
+ * errors
+ * @namespace errors
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var alreadyInUse_1 = require("./error/alreadyInUse");
+exports.AlreadyInUse = alreadyInUse_1.default;
+var argument_1 = require("./error/argument");
+exports.Argument = argument_1.default;
+var argumentNull_1 = require("./error/argumentNull");
+exports.ArgumentNull = argumentNull_1.default;
+var forbidden_1 = require("./error/forbidden");
+exports.Forbidden = forbidden_1.default;
+var notFound_1 = require("./error/notFound");
+exports.NotFound = notFound_1.default;
+var notImplemented_1 = require("./error/notImplemented");
+exports.NotImplemented = notImplemented_1.default;
+var rateLimitExceeded_1 = require("./error/rateLimitExceeded");
+exports.RateLimitExceeded = rateLimitExceeded_1.default;
+var serviceUnavailable_1 = require("./error/serviceUnavailable");
+exports.ServiceUnavailable = serviceUnavailable_1.default;
+var sskts_1 = require("./error/sskts");
+exports.SSKTS = sskts_1.SSKTSError;
+var unauthorized_1 = require("./error/unauthorized");
+exports.Unauthorized = unauthorized_1.default;
+
+},{"./error/alreadyInUse":88,"./error/argument":89,"./error/argumentNull":90,"./error/forbidden":91,"./error/notFound":92,"./error/notImplemented":93,"./error/rateLimitExceeded":94,"./error/serviceUnavailable":95,"./error/sskts":96,"./error/unauthorized":97}],99:[function(require,module,exports){
+"use strict";
+/**
+ * イベントファクトリー
+ *
+ * @namespace event
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable-next-line:no-single-line-block-comment
+/* istanbul ignore next */
+function create(params) {
+    return {
+        identifier: params.identifier,
+        name: (params.name === undefined) ? { ja: '', en: '' } : params.name,
+        description: params.description,
+        doorTime: params.doorTime,
+        duration: (params.duration === undefined) ? undefined : params.duration.toString(),
+        endDate: params.endDate,
+        eventStatus: params.eventStatus,
+        location: params.location,
+        startDate: params.startDate,
+        workPerformed: params.workPerformed,
+        maximumAttendeeCapacity: params.maximumAttendeeCapacity,
+        // offers: params.offers,
+        remainingAttendeeCapacity: params.remainingAttendeeCapacity,
+        typeOf: params.typeOf
+    };
+}
+exports.create = create;
+
+},{}],100:[function(require,module,exports){
+"use strict";
+/**
+ * イベントステータス
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var EventStatusType;
+(function (EventStatusType) {
+    EventStatusType["EventCancelled"] = "EventCancelled";
+    EventStatusType["EventPostponed"] = "EventPostponed";
+    EventStatusType["EventRescheduled"] = "EventRescheduled";
+    EventStatusType["EventScheduled"] = "EventScheduled";
+})(EventStatusType || (EventStatusType = {}));
+exports.default = EventStatusType;
+
+},{}],101:[function(require,module,exports){
+"use strict";
+/**
+ * イベントタイプ
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var EventType;
+(function (EventType) {
+    EventType["ScreeningEvent"] = "ScreeningEvent";
+    EventType["IndividualScreeningEvent"] = "IndividualScreeningEvent";
+})(EventType || (EventType = {}));
+exports.default = EventType;
+
+},{}],102:[function(require,module,exports){
+"use strict";
+/**
+ * individual screening event factory
+ * 個々の上映イベントファクトリー
+ * @namespace event.individualScreeningEvent
+ */
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var _ = require("lodash");
+var moment = require("moment");
+var argument_1 = require("../error/argument");
+var EventFactory = require("../event");
+var ScreeningEventFactory = require("../event/screeningEvent");
+var eventStatusType_1 = require("../eventStatusType");
+var eventType_1 = require("../eventType");
+/**
+ * 座席数から在庫状況表現を生成する
+ * @export
+ * @param numberOfAvailableSeats 空席数
+ * @param numberOfAllSeats 全座席数
+ */
+// tslint:disable-next-line:no-single-line-block-comment
+/* istanbul ignore next */
+function createItemAvailability(numberOfAvailableSeats, numberOfAllSeats) {
+    if (!_.isInteger(numberOfAvailableSeats)) {
+        throw new argument_1.default('numberOfAvailableSeats', 'numberOfAvailableSeats must be number.');
+    }
+    if (!_.isInteger(numberOfAllSeats)) {
+        throw new argument_1.default('numberOfAllSeats', 'numberOfAllSeats must be number.');
+    }
+    if (numberOfAllSeats === 0) {
+        return 0;
+    }
+    // 残席数より空席率を算出
+    // tslint:disable-next-line:no-magic-numbers
+    return Math.floor(numberOfAvailableSeats / numberOfAllSeats * 100);
+}
+exports.createItemAvailability = createItemAvailability;
+/**
+ * create individualScreeningEvent from COA performance
+ * @export
+ */
+// tslint:disable-next-line:no-single-line-block-comment
+/* istanbul ignore next */
+function createFromCOA(params) {
+    var identifier = createIdentifierFromCOA({
+        theaterCode: params.screeningEvent.location.branchCode,
+        titleCode: params.screeningEvent.workPerformed.identifier,
+        titleBranchNum: params.screeningEvent.coaInfo.titleBranchNum,
+        dateJouei: params.performanceFromCOA.dateJouei,
+        screenCode: params.performanceFromCOA.screenCode,
+        timeBegin: params.performanceFromCOA.timeBegin
+    });
+    // COA情報を整形して開始日時と終了日時を作成
+    // tslint:disable-next-line:max-line-length
+    var endDate = moment(params.performanceFromCOA.dateJouei + " " + params.performanceFromCOA.timeEnd + " +09:00", 'YYYYMMDD HHmm Z').toDate();
+    // tslint:disable-next-line:max-line-length
+    var startDate = moment(params.performanceFromCOA.dateJouei + " " + params.performanceFromCOA.timeBegin + " +09:00", 'YYYYMMDD HHmm Z').toDate();
+    return __assign({}, EventFactory.create({
+        eventStatus: eventStatusType_1.default.EventScheduled,
+        typeOf: eventType_1.default.IndividualScreeningEvent,
+        identifier: identifier,
+        name: params.screeningEvent.name
+    }), {
+        workPerformed: params.screeningEvent.workPerformed,
+        location: {
+            typeOf: params.screenRoom.typeOf,
+            branchCode: params.screenRoom.branchCode,
+            name: params.screenRoom.name
+        },
+        endDate: endDate,
+        startDate: startDate,
+        superEvent: params.screeningEvent,
+        coaInfo: {
+            theaterCode: params.screeningEvent.location.branchCode,
+            dateJouei: params.performanceFromCOA.dateJouei,
+            titleCode: params.performanceFromCOA.titleCode,
+            titleBranchNum: params.performanceFromCOA.titleBranchNum,
+            timeBegin: params.performanceFromCOA.timeBegin,
+            screenCode: params.performanceFromCOA.screenCode,
+            trailerTime: params.performanceFromCOA.trailerTime,
+            kbnService: params.serviceKubuns.filter(function (kubun) { return kubun.kubunCode === params.performanceFromCOA.kbnService; })[0],
+            kbnAcoustic: params.acousticKubuns.filter(function (kubun) { return kubun.kubunCode === params.performanceFromCOA.kbnAcoustic; })[0],
+            nameServiceDay: params.performanceFromCOA.nameServiceDay,
+            availableNum: params.performanceFromCOA.availableNum,
+            rsvStartDate: params.performanceFromCOA.rsvStartDate,
+            rsvEndDate: params.performanceFromCOA.rsvEndDate,
+            flgEarlyBooking: params.performanceFromCOA.flgEarlyBooking
+        }
+    });
+}
+exports.createFromCOA = createFromCOA;
+/**
+ * COA情報から個々の上映イベント識別子を作成する
+ * @export
+ */
+// tslint:disable-next-line:no-single-line-block-comment
+/* istanbul ignore next */
+function createIdentifierFromCOA(params) {
+    return [
+        ScreeningEventFactory.createIdentifier(params),
+        params.dateJouei,
+        params.screenCode,
+        params.timeBegin
+    ].join('');
+}
+exports.createIdentifierFromCOA = createIdentifierFromCOA;
+
+},{"../error/argument":89,"../event":99,"../event/screeningEvent":103,"../eventStatusType":100,"../eventType":101,"lodash":153,"moment":154}],103:[function(require,module,exports){
+"use strict";
+/**
+ * screen event factory
+ * 劇場の上映イベントファクトリー
+ * @namespace event.screeningEvent
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var moment = require("moment");
+var creativeWorkType_1 = require("../creativeWorkType");
+var eventStatusType_1 = require("../eventStatusType");
+var eventType_1 = require("../eventType");
+var organizationType_1 = require("../organizationType");
+/**
+ * COAの作品抽出結果からFilmオブジェクトを作成する
+ * @export
+ */
+// tslint:disable-next-line:no-single-line-block-comment
+/* istanbul ignore next */
+function createFromCOA(params) {
+    var endDate = (moment(params.filmFromCOA.dateEnd + " +09:00", 'YYYYMMDD Z').isValid())
+        ? moment(params.filmFromCOA.dateEnd + " +09:00", 'YYYYMMDD Z').toDate()
+        : undefined;
+    var startDate = (moment(params.filmFromCOA.dateBegin + " +09:00", 'YYYYMMDD Z').isValid())
+        ? moment(params.filmFromCOA.dateBegin + " +09:00", 'YYYYMMDD Z').toDate()
+        : undefined;
+    return {
+        // title_codeは劇場をまたいで共有、title_branch_numは劇場毎に管理
+        identifier: createIdentifier({
+            theaterCode: params.movieTheater.branchCode,
+            titleCode: params.filmFromCOA.titleCode,
+            titleBranchNum: params.filmFromCOA.titleBranchNum
+        }),
+        name: {
+            ja: params.filmFromCOA.titleName,
+            en: params.filmFromCOA.titleNameEng
+        },
+        kanaName: params.filmFromCOA.titleNameKana,
+        alternativeHeadline: params.filmFromCOA.titleNameShort,
+        location: {
+            identifier: params.movieTheater.identifier,
+            branchCode: params.movieTheater.branchCode,
+            name: params.movieTheater.name,
+            kanaName: params.movieTheater.kanaName,
+            typeOf: params.movieTheater.typeOf
+        },
+        organizer: {
+            typeOf: organizationType_1.default.MovieTheater,
+            identifier: params.movieTheater.identifier,
+            name: params.movieTheater.name
+        },
+        videoFormat: params.eizouKubuns.filter(function (kubun) { return kubun.kubunCode === params.filmFromCOA.kbnEizou; })[0],
+        workPerformed: {
+            identifier: params.filmFromCOA.titleCode,
+            name: params.filmFromCOA.titleNameOrig,
+            duration: moment.duration(params.filmFromCOA.showTime, 'm').toISOString(),
+            contentRating: params.eirinKubuns.filter(function (kubun) { return kubun.kubunCode === params.filmFromCOA.kbnEirin; })[0],
+            typeOf: creativeWorkType_1.default.Movie
+        },
+        duration: moment.duration(params.filmFromCOA.showTime, 'm').toISOString(),
+        endDate: endDate,
+        startDate: startDate,
+        coaInfo: {
+            titleBranchNum: params.filmFromCOA.titleBranchNum,
+            kbnJoueihousiki: params.joueihousikiKubuns.filter(function (kubun) { return kubun.kubunCode === params.filmFromCOA.kbnJoueihousiki; })[0],
+            kbnJimakufukikae: params.jimakufukikaeKubuns.filter(function (kubun) { return kubun.kubunCode === params.filmFromCOA.kbnJimakufukikae; })[0],
+            flgMvtkUse: params.filmFromCOA.flgMvtkUse,
+            dateMvtkBegin: params.filmFromCOA.dateMvtkBegin
+        },
+        eventStatus: eventStatusType_1.default.EventScheduled,
+        typeOf: eventType_1.default.ScreeningEvent
+    };
+}
+exports.createFromCOA = createFromCOA;
+/**
+ * COA情報から上映イベント識別子を作成する
+ * @export
+ */
+// tslint:disable-next-line:no-single-line-block-comment
+/* istanbul ignore next */
+function createIdentifier(params) {
+    return [
+        params.theaterCode,
+        params.titleCode,
+        params.titleBranchNum
+    ].join('');
+}
+exports.createIdentifier = createIdentifier;
+
+},{"../creativeWorkType":84,"../eventStatusType":100,"../eventType":101,"../organizationType":108,"moment":154}],104:[function(require,module,exports){
+"use strict";
+/**
+ * 座席予約供給情報ファクトリー
+ * @namespace offer.seatReservation
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+
+},{}],105:[function(require,module,exports){
+"use strict";
+/**
+ * order factory
+ * An order is a confirmation of a transaction (a receipt),
+ * which can contain multiple line items, each represented by an Offer that has been accepted by the customer.
+ * 注文ファクトリー
+ * 注文は、確定した注文取引の領収証に値するものです。
+ * @namespace order
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+
+},{}],106:[function(require,module,exports){
+"use strict";
+/**
+ * 注文ステータス
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var OrderStatus;
+(function (OrderStatus) {
+    OrderStatus["OrderCancelled"] = "OrderCancelled";
+    OrderStatus["OrderDelivered"] = "OrderDelivered";
+    OrderStatus["OrderInTransit"] = "OrderInTransit";
+    OrderStatus["OrderPaymentDue"] = "OrderPaymentDue";
+    OrderStatus["OrderPickupAvailable"] = "OrderPickupAvailable";
+    OrderStatus["OrderProblem"] = "OrderProblem";
+    OrderStatus["OrderProcessing"] = "OrderProcessing";
+    OrderStatus["OrderReturned"] = "OrderReturned";
+})(OrderStatus || (OrderStatus = {}));
+exports.default = OrderStatus;
+
+},{}],107:[function(require,module,exports){
+"use strict";
+/**
+ * 企業識別子
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var CorporationOrganizationIdentifier;
+(function (CorporationOrganizationIdentifier) {
+    CorporationOrganizationIdentifier["SasakiKogyo"] = "SasakiKogyo";
+})(CorporationOrganizationIdentifier || (CorporationOrganizationIdentifier = {}));
+exports.default = CorporationOrganizationIdentifier;
+
+},{}],108:[function(require,module,exports){
+"use strict";
+/**
+ * 組織タイプ
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var OrganizationType;
+(function (OrganizationType) {
+    OrganizationType["Corporation"] = "Corporation";
+    OrganizationType["MovieTheater"] = "MovieTheater";
+})(OrganizationType || (OrganizationType = {}));
+exports.default = OrganizationType;
+
+},{}],109:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],110:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],111:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],112:[function(require,module,exports){
+"use strict";
+/**
+ * 決済方法タイプ
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var PaymentMethodType;
+(function (PaymentMethodType) {
+    PaymentMethodType["CreditCard"] = "CreditCard";
+    PaymentMethodType["Pecorino"] = "Pecorino";
+})(PaymentMethodType || (PaymentMethodType = {}));
+exports.default = PaymentMethodType;
+
+},{}],113:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],114:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],115:[function(require,module,exports){
+"use strict";
+/**
+ * 人物タイプ
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var PersonType;
+(function (PersonType) {
+    PersonType["Person"] = "Person";
+})(PersonType || (PersonType = {}));
+exports.default = PersonType;
+
+},{}],116:[function(require,module,exports){
+"use strict";
+/**
+ * 場所タイプ
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var PlaceType;
+(function (PlaceType) {
+    PlaceType["MovieTheater"] = "MovieTheater";
+    PlaceType["ScreeningRoom"] = "ScreeningRoom";
+    PlaceType["ScreeningRoomSection"] = "ScreeningRoomSection";
+    PlaceType["Seat"] = "Seat";
+})(PlaceType || (PlaceType = {}));
+exports.default = PlaceType;
+
+},{}],117:[function(require,module,exports){
+"use strict";
+/**
+ * 劇場ファクトリー
+ *
+ * @namespace place.movieTheater
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var placeType_1 = require("../placeType");
+/**
+ * COAのマスター抽出結果から作成する
+ * @param theaterFromCOA COA劇場抽出結果
+ * @param screensFromCOA COAスクリーン抽出結果
+ */
+// tslint:disable-next-line:no-single-line-block-comment
+/* istanbul ignore next */
+function createFromCOA(theaterFromCOA, screensFromCOA) {
+    var identifier = "MovieTheater-" + theaterFromCOA.theaterCode;
+    return {
+        identifier: identifier,
+        screenCount: screensFromCOA.length,
+        branchCode: theaterFromCOA.theaterCode,
+        name: {
+            ja: theaterFromCOA.theaterName,
+            en: theaterFromCOA.theaterNameEng
+        },
+        kanaName: theaterFromCOA.theaterNameKana,
+        containsPlace: screensFromCOA.map(function (screenFromCOA) {
+            return createScreeningRoomFromCOA(screenFromCOA);
+        }),
+        typeOf: placeType_1.default.MovieTheater,
+        telephone: theaterFromCOA.theaterTelNum
+    };
+}
+exports.createFromCOA = createFromCOA;
+/**
+ * COAのスクリーン抽出結果から上映室を作成する
+ * @param screenFromCOA COAスクリーン抽出結果
+ */
+// tslint:disable-next-line:no-single-line-block-comment
+/* istanbul ignore next */
+function createScreeningRoomFromCOA(screenFromCOA) {
+    var sections = [];
+    var sectionCodes = [];
+    screenFromCOA.listSeat.forEach(function (seat) {
+        if (sectionCodes.indexOf(seat.seatSection) < 0) {
+            sectionCodes.push(seat.seatSection);
+            sections.push({
+                branchCode: seat.seatSection,
+                name: {
+                    ja: "\u30BB\u30AF\u30B7\u30E7\u30F3" + seat.seatSection,
+                    en: "section" + seat.seatSection
+                },
+                containsPlace: [],
+                typeOf: placeType_1.default.ScreeningRoomSection
+            });
+        }
+        sections[sectionCodes.indexOf(seat.seatSection)].containsPlace.push({
+            branchCode: seat.seatNum,
+            typeOf: placeType_1.default.Seat
+        });
+    });
+    return {
+        containsPlace: sections,
+        branchCode: screenFromCOA.screenCode,
+        name: {
+            ja: screenFromCOA.screenName,
+            en: screenFromCOA.screenNameEng
+        },
+        typeOf: placeType_1.default.ScreeningRoom
+    };
+}
+exports.createScreeningRoomFromCOA = createScreeningRoomFromCOA;
+
+},{"../placeType":116}],118:[function(require,module,exports){
+arguments[4][34][0].apply(exports,arguments)
+},{"dup":34}],119:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * 会員プログラム特典インターフェース
+ */
+var Award;
+(function (Award) {
+    /**
+     * 口座決済
+     */
+    Award["PecorinoPayment"] = "PecorinoPayment";
+})(Award = exports.Award || (exports.Award = {}));
+
+},{}],120:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],121:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * Enumerated status values for Reservation.
+ */
+var ReservationStatusType;
+(function (ReservationStatusType) {
+    /**
+     * The status for a previously confirmed reservation that is now cancelled.
+     */
+    ReservationStatusType["ReservationCancelled"] = "ReservationCancelled";
+    /**
+     * The status of a confirmed reservation.
+     */
+    ReservationStatusType["ReservationConfirmed"] = "ReservationConfirmed";
+    /**
+     * The status of a reservation on hold pending an update like credit card number or flight changes.
+     */
+    ReservationStatusType["ReservationHold"] = "ReservationHold";
+    /**
+     * The status of a reservation when a request has been sent, but not confirmed.
+     */
+    ReservationStatusType["ReservationPending"] = "ReservationPending";
+})(ReservationStatusType || (ReservationStatusType = {}));
+exports.default = ReservationStatusType;
+
+},{}],122:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * 予約タイプ
+ */
+var ReservationType;
+(function (ReservationType) {
+    ReservationType["EventReservation"] = "EventReservation";
+})(ReservationType || (ReservationType = {}));
+exports.default = ReservationType;
+
+},{}],123:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],124:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],125:[function(require,module,exports){
+"use strict";
+/**
+ * task name
+ * タスク名
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var TaskName;
+(function (TaskName) {
+    /**
+     * 座席予約承認アクション取消
+     */
+    TaskName["CancelSeatReservation"] = "cancelSeatReservation";
+    /**
+     * クレジットカード承認アクション取消
+     */
+    TaskName["CancelCreditCard"] = "cancelCreditCard";
+    /**
+     * ムビチケ承認アクション取消
+     */
+    TaskName["CancelMvtk"] = "cancelMvtk";
+    /**
+     * Pecorino口座承認アクション取消
+     */
+    TaskName["CancelPecorino"] = "cancelPecorino";
+    /**
+     * Pecorinoインセンティブ承認アクション取消
+     */
+    TaskName["CancelPecorinoAward"] = "cancelPecorinoAward";
+    /**
+     *  Eメールメッセージ送信
+     */
+    TaskName["SendEmailMessage"] = "sendEmailMessage";
+    /**
+     * ムビチケ使用
+     */
+    TaskName["UseMvtk"] = "useMvtk";
+    /**
+     * 注文受付
+     */
+    TaskName["PlaceOrder"] = "placeOrder";
+    /**
+     * 注文返品
+     */
+    TaskName["ReturnOrder"] = "returnOrder";
+    /**
+     * Pecorinoインセンティブ返却
+     */
+    TaskName["ReturnPecorinoAward"] = "returnPecorinoAward";
+    /**
+     * クレジットカード支払
+     */
+    TaskName["PayCreditCard"] = "payCreditCard";
+    /**
+     * Pecorino支払
+     */
+    TaskName["PayPecorino"] = "payPecorino";
+    /**
+     * 注文配送
+     */
+    TaskName["SendOrder"] = "sendOrder";
+    /**
+     * クレジットカード返金
+     */
+    TaskName["RefundCreditCard"] = "refundCreditCard";
+    /**
+     * Pecorino返金
+     */
+    TaskName["RefundPecorino"] = "refundPecorino";
+    /**
+     * Pecorinoインセンティブ付与
+     */
+    TaskName["GivePecorinoAward"] = "givePecorinoAward";
+    /**
+     * 会員プログラム登録
+     */
+    TaskName["RegisterProgramMembership"] = "registerProgramMembership";
+    /**
+     * 会員プログラム登録解除
+     */
+    TaskName["UnRegisterProgramMembership"] = "unRegisterProgramMembership";
+})(TaskName || (TaskName = {}));
+exports.default = TaskName;
+
+},{}],126:[function(require,module,exports){
+"use strict";
+/**
+ * タスクステータス
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var TaskStatus;
+(function (TaskStatus) {
+    /**
+     * 準備OK
+     */
+    TaskStatus["Ready"] = "Ready";
+    /**
+     * 実行中
+     */
+    TaskStatus["Running"] = "Running";
+    /**
+     * 実行済
+     */
+    TaskStatus["Executed"] = "Executed";
+    /**
+     * 実行中止
+     */
+    TaskStatus["Aborted"] = "Aborted";
+})(TaskStatus || (TaskStatus = {}));
+exports.default = TaskStatus;
+
+},{}],127:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],128:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],129:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],130:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],131:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],132:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],133:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],134:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],135:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],136:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],137:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],138:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],139:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],140:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],141:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],142:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],143:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],144:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],145:[function(require,module,exports){
+"use strict";
+/**
+ * 取引ステータス
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var TransactionStatusType;
+(function (TransactionStatusType) {
+    TransactionStatusType["InProgress"] = "InProgress";
+    TransactionStatusType["Canceled"] = "Canceled";
+    TransactionStatusType["Confirmed"] = "Confirmed";
+    TransactionStatusType["Expired"] = "Expired";
+})(TransactionStatusType || (TransactionStatusType = {}));
+exports.default = TransactionStatusType;
+
+},{}],146:[function(require,module,exports){
+"use strict";
+/**
+ * 取引タスクエクスポートステータス
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var TransactionTasksExportationStatus;
+(function (TransactionTasksExportationStatus) {
+    /**
+     * 未エクスポート
+     */
+    TransactionTasksExportationStatus["Unexported"] = "Unexported";
+    /**
+     * エクスポート中
+     */
+    TransactionTasksExportationStatus["Exporting"] = "Exporting";
+    /**
+     * エクスポート済
+     */
+    TransactionTasksExportationStatus["Exported"] = "Exported";
+})(TransactionTasksExportationStatus || (TransactionTasksExportationStatus = {}));
+exports.default = TransactionTasksExportationStatus;
+
+},{}],147:[function(require,module,exports){
+"use strict";
+/**
+ * 取引タイプ
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var TransactionType;
+(function (TransactionType) {
+    /**
+     * 注文取引
+     */
+    TransactionType["PlaceOrder"] = "PlaceOrder";
+    /**
+     * 注文返品取引
+     */
+    TransactionType["ReturnOrder"] = "ReturnOrder";
+})(TransactionType || (TransactionType = {}));
+exports.default = TransactionType;
+
+},{}],148:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"dup":15}],149:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * 返品理由
+ */
+var Reason;
+(function (Reason) {
+    /**
+     * 購入者自身の都合での返品
+     */
+    Reason["Customer"] = "Customer";
+    /**
+     * 販売者都合での返品
+     */
+    Reason["Seller"] = "Seller";
+})(Reason = exports.Reason || (exports.Reason = {}));
+
+},{}],150:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * 単位符号
+ */
+var UnitCode;
+(function (UnitCode) {
+    /**
+     * 秒
+     */
+    UnitCode["Sec"] = "SEC";
+})(UnitCode = exports.UnitCode || (exports.UnitCode = {}));
+
+},{}],151:[function(require,module,exports){
+arguments[4][46][0].apply(exports,arguments)
+},{"dup":46}],152:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * sskts-factory
+ */
+var pecorinoFactory = require("@motionpicture/pecorino-factory");
+var PecorinoAwardAuthorizeActionFactory = require("./factory/action/authorize/award/pecorino");
+var MvtkAuthorizeActionFactory = require("./factory/action/authorize/discount/mvtk");
+var ProgramMembershipOfferAuthorizeActionFactory = require("./factory/action/authorize/offer/programMembership");
+var SeatReservationOfferAuthorizeActionFactory = require("./factory/action/authorize/offer/seatReservation");
+var CreditCardAuthorizeActionFactory = require("./factory/action/authorize/paymentMethod/creditCard");
+var PecorinoAuthorizeActionFactory = require("./factory/action/authorize/paymentMethod/pecorino");
+var UseMvtkActionFactory = require("./factory/action/consume/use/mvtk");
+var RegisterProgramMembershipActionFactory = require("./factory/action/interact/register/programMembership");
+var UnRegisterProgramMembershipActionFactory = require("./factory/action/interact/unRegister/programMembership");
+var OrderActionFactory = require("./factory/action/trade/order");
+var PayActionFactory = require("./factory/action/trade/pay");
+var RefundActionFactory = require("./factory/action/trade/refund");
+var GivePecorinoAwardActionFactory = require("./factory/action/transfer/give/pecorinoAward");
+var PrintTicketActionFactory = require("./factory/action/transfer/print/ticket");
+var ReturnOrderActionFactory = require("./factory/action/transfer/return/order");
+var ReturnPecorinoAwardActionFactory = require("./factory/action/transfer/return/pecorinoAward");
+var SendEmailMessageActionFactory = require("./factory/action/transfer/send/message/email");
+var SendOrderActionFactory = require("./factory/action/transfer/send/order");
+var actionStatusType_1 = require("./factory/actionStatusType");
+var actionType_1 = require("./factory/actionType");
+var ClientEventFactory = require("./factory/clientEvent");
+var ClientUserFactory = require("./factory/clientUser");
+var EmailMessageFactory = require("./factory/creativeWork/message/email");
+var MovieCreativeWorkFactory = require("./factory/creativeWork/movie");
+var creativeWorkType_1 = require("./factory/creativeWorkType");
+var IndividualScreeningEventFactory = require("./factory/event/individualScreeningEvent");
+var ScreeningEventFactory = require("./factory/event/screeningEvent");
+var eventStatusType_1 = require("./factory/eventStatusType");
+var eventType_1 = require("./factory/eventType");
+var SeatReservationOfferFactory = require("./factory/offer/seatReservation");
+var OrderFactory = require("./factory/order");
+var orderStatus_1 = require("./factory/orderStatus");
+var CorporationOrganizationFactory = require("./factory/organization/corporation");
+var MovieTheaterOrganizationFactory = require("./factory/organization/movieTheater");
+var corporation_1 = require("./factory/organizationIdentifier/corporation");
+var organizationType_1 = require("./factory/organizationType");
+var OwnershipInfoFactory = require("./factory/ownershipInfo");
+var CreditCardFactory = require("./factory/paymentMethod/paymentCard/creditCard");
+var paymentMethodType_1 = require("./factory/paymentMethodType");
+var PersonFactory = require("./factory/person");
+var personType_1 = require("./factory/personType");
+var MovieTheaterPlaceFactory = require("./factory/place/movieTheater");
+var placeType_1 = require("./factory/placeType");
+var priceCurrency_1 = require("./factory/priceCurrency");
+var ProgramMembershipFactory = require("./factory/programMembership");
+var QuantitativeValueFactory = require("./factory/quantitativeValue");
+var EventReservationFactory = require("./factory/reservation/event");
+var reservationStatusType_1 = require("./factory/reservationStatusType");
+var reservationType_1 = require("./factory/reservationType");
+var unitCode_1 = require("./factory/unitCode");
+var CancelCreditCardTaskFactory = require("./factory/task/cancelCreditCard");
+var CancelMvtkTaskFactory = require("./factory/task/cancelMvtk");
+var CancelPecorinoTaskFactory = require("./factory/task/cancelPecorino");
+var CancelPecorinoAwardTaskFactory = require("./factory/task/cancelPecorinoAward");
+var CancelSeatReservationTaskFactory = require("./factory/task/cancelSeatReservation");
+var GivePecorinoAwardTaskFactory = require("./factory/task/givePecorinoAward");
+var PayCreditCardTaskFactory = require("./factory/task/payCreditCard");
+var PayPecorinoTaskFactory = require("./factory/task/payPecorino");
+var PlaceOrderTaskFactory = require("./factory/task/placeOrder");
+var RefundCreditCardTaskFactory = require("./factory/task/refundCreditCard");
+var RefundPecorinoTaskFactory = require("./factory/task/refundPecorino");
+var RegisterProgramMembershipTaskFactory = require("./factory/task/registerProgramMembership");
+var ReturnOrderTaskFactory = require("./factory/task/returnOrder");
+var ReturnPecorinoAwardTaskFactory = require("./factory/task/returnPecorinoAward");
+var SendEmailMessageTaskFactory = require("./factory/task/sendEmailMessage");
+var SendOrderTaskFactory = require("./factory/task/sendOrder");
+var UnRegisterProgramMembershipTaskFactory = require("./factory/task/unRegisterProgramMembership");
+var UseMvtkTaskFactory = require("./factory/task/useMvtk");
+var TaskExecutionResultFactory = require("./factory/taskExecutionResult");
+var taskName_1 = require("./factory/taskName");
+var taskStatus_1 = require("./factory/taskStatus");
+var PlaceOrderTransactionFactory = require("./factory/transaction/placeOrder");
+var ReturnOrderTransactionFactory = require("./factory/transaction/returnOrder");
+var transactionStatusType_1 = require("./factory/transactionStatusType");
+var transactionTasksExportationStatus_1 = require("./factory/transactionTasksExportationStatus");
+var transactionType_1 = require("./factory/transactionType");
+var URLFactory = require("./factory/url");
+var errorCode_1 = require("./factory/errorCode");
+var errors = require("./factory/errors");
+exports.pecorino = pecorinoFactory;
+exports.errors = errors;
+exports.errorCode = errorCode_1.default;
+exports.actionStatusType = actionStatusType_1.default;
+exports.actionType = actionType_1.default;
+var action;
+(function (action) {
+    var authorize;
+    (function (authorize) {
+        var award;
+        (function (award) {
+            // tslint:disable-next-line:no-shadowed-variable
+            award.pecorino = PecorinoAwardAuthorizeActionFactory;
+        })(award = authorize.award || (authorize.award = {}));
+        // tslint:disable-next-line:no-shadowed-variable
+        var paymentMethod;
+        (function (paymentMethod) {
+            paymentMethod.creditCard = CreditCardAuthorizeActionFactory;
+            // tslint:disable-next-line:no-shadowed-variable
+            paymentMethod.pecorino = PecorinoAuthorizeActionFactory;
+        })(paymentMethod = authorize.paymentMethod || (authorize.paymentMethod = {}));
+        var discount;
+        (function (discount) {
+            discount.mvtk = MvtkAuthorizeActionFactory;
+        })(discount = authorize.discount || (authorize.discount = {}));
+        // tslint:disable-next-line:no-shadowed-variable
+        var offer;
+        (function (offer) {
+            // tslint:disable-next-line:no-shadowed-variable
+            offer.programMembership = ProgramMembershipOfferAuthorizeActionFactory;
+            offer.seatReservation = SeatReservationOfferAuthorizeActionFactory;
+        })(offer = authorize.offer || (authorize.offer = {}));
+    })(authorize = action.authorize || (action.authorize = {}));
+    var interact;
+    (function (interact) {
+        var register;
+        (function (register) {
+            // tslint:disable-next-line:no-shadowed-variable
+            register.programMembership = RegisterProgramMembershipActionFactory;
+        })(register = interact.register || (interact.register = {}));
+        var unRegister;
+        (function (unRegister) {
+            // tslint:disable-next-line:no-shadowed-variable
+            unRegister.programMembership = UnRegisterProgramMembershipActionFactory;
+        })(unRegister = interact.unRegister || (interact.unRegister = {}));
+    })(interact = action.interact || (action.interact = {}));
+    var trade;
+    (function (trade) {
+        // tslint:disable-next-line:no-shadowed-variable
+        trade.order = OrderActionFactory;
+        trade.pay = PayActionFactory;
+        trade.refund = RefundActionFactory;
+    })(trade = action.trade || (action.trade = {}));
+    var transfer;
+    (function (transfer) {
+        var give;
+        (function (give) {
+            // tslint:disable-next-line:no-shadowed-variable
+            give.pecorinoAward = GivePecorinoAwardActionFactory;
+        })(give = transfer.give || (transfer.give = {}));
+        var print;
+        (function (print) {
+            print.ticket = PrintTicketActionFactory;
+        })(print = transfer.print || (transfer.print = {}));
+        /**
+         * 返却アクション
+         * returnはネームスペース名に使えないのでreturnAction
+         */
+        var returnAction;
+        (function (returnAction) {
+            // tslint:disable-next-line:no-shadowed-variable
+            returnAction.order = ReturnOrderActionFactory;
+            returnAction.pecorinoAward = ReturnPecorinoAwardActionFactory;
+        })(returnAction = transfer.returnAction || (transfer.returnAction = {}));
+        var send;
+        (function (send) {
+            var message;
+            (function (message) {
+                message.email = SendEmailMessageActionFactory;
+            })(message = send.message || (send.message = {}));
+            // tslint:disable-next-line:no-shadowed-variable
+            send.order = SendOrderActionFactory;
+        })(send = transfer.send || (transfer.send = {}));
+    })(transfer = action.transfer || (action.transfer = {}));
+    var consume;
+    (function (consume) {
+        var use;
+        (function (use) {
+            use.mvtk = UseMvtkActionFactory;
+        })(use = consume.use || (consume.use = {}));
+    })(consume = action.consume || (action.consume = {}));
+})(action = exports.action || (exports.action = {}));
+var paymentMethod;
+(function (paymentMethod) {
+    var paymentCard;
+    (function (paymentCard) {
+        paymentCard.creditCard = CreditCardFactory;
+    })(paymentCard = paymentMethod.paymentCard || (paymentMethod.paymentCard = {}));
+})(paymentMethod = exports.paymentMethod || (exports.paymentMethod = {}));
+exports.clientEvent = ClientEventFactory;
+exports.clientUser = ClientUserFactory;
+var creativeWork;
+(function (creativeWork) {
+    var message;
+    (function (message) {
+        message.email = EmailMessageFactory;
+    })(message = creativeWork.message || (creativeWork.message = {}));
+    creativeWork.movie = MovieCreativeWorkFactory;
+})(creativeWork = exports.creativeWork || (exports.creativeWork = {}));
+exports.creativeWorkType = creativeWorkType_1.default;
+var event;
+(function (event) {
+    event.individualScreeningEvent = IndividualScreeningEventFactory;
+    event.screeningEvent = ScreeningEventFactory;
+})(event = exports.event || (exports.event = {}));
+exports.eventStatusType = eventStatusType_1.default;
+exports.eventType = eventType_1.default;
+var offer;
+(function (offer) {
+    offer.seatReservation = SeatReservationOfferFactory;
+})(offer = exports.offer || (exports.offer = {}));
+exports.order = OrderFactory;
+exports.orderStatus = orderStatus_1.default;
+var organization;
+(function (organization) {
+    organization.corporation = CorporationOrganizationFactory;
+    organization.movieTheater = MovieTheaterOrganizationFactory;
+})(organization = exports.organization || (exports.organization = {}));
+var organizationIdentifier;
+(function (organizationIdentifier) {
+    organizationIdentifier.corporation = corporation_1.default;
+})(organizationIdentifier = exports.organizationIdentifier || (exports.organizationIdentifier = {}));
+exports.organizationType = organizationType_1.default;
+exports.ownershipInfo = OwnershipInfoFactory;
+exports.priceCurrency = priceCurrency_1.default;
+var place;
+(function (place) {
+    place.movieTheater = MovieTheaterPlaceFactory;
+})(place = exports.place || (exports.place = {}));
+exports.paymentMethodType = paymentMethodType_1.default;
+exports.person = PersonFactory;
+exports.personType = personType_1.default;
+exports.placeType = placeType_1.default;
+exports.programMembership = ProgramMembershipFactory;
+exports.quantitativeValue = QuantitativeValueFactory;
+var reservation;
+(function (reservation) {
+    // tslint:disable-next-line:no-shadowed-variable
+    reservation.event = EventReservationFactory;
+})(reservation = exports.reservation || (exports.reservation = {}));
+exports.reservationStatusType = reservationStatusType_1.default;
+exports.reservationType = reservationType_1.default;
+var task;
+(function (task) {
+    task.cancelCreditCard = CancelCreditCardTaskFactory;
+    task.cancelMvtk = CancelMvtkTaskFactory;
+    task.cancelPecorino = CancelPecorinoTaskFactory;
+    task.cancelPecorinoAward = CancelPecorinoAwardTaskFactory;
+    task.cancelSeatReservation = CancelSeatReservationTaskFactory;
+    task.givePecorinoAward = GivePecorinoAwardTaskFactory;
+    task.placeOrder = PlaceOrderTaskFactory;
+    task.refundCreditCard = RefundCreditCardTaskFactory;
+    task.refundPecorino = RefundPecorinoTaskFactory;
+    task.registerProgramMembership = RegisterProgramMembershipTaskFactory;
+    task.returnOrder = ReturnOrderTaskFactory;
+    task.returnPecorinoAward = ReturnPecorinoAwardTaskFactory;
+    task.sendEmailMessage = SendEmailMessageTaskFactory;
+    task.sendOrder = SendOrderTaskFactory;
+    task.payCreditCard = PayCreditCardTaskFactory;
+    task.payPecorino = PayPecorinoTaskFactory;
+    task.unRegisterProgramMembership = UnRegisterProgramMembershipTaskFactory;
+    task.useMvtk = UseMvtkTaskFactory;
+})(task = exports.task || (exports.task = {}));
+exports.taskExecutionResult = TaskExecutionResultFactory;
+exports.taskName = taskName_1.default;
+exports.taskStatus = taskStatus_1.default;
+var transaction;
+(function (transaction) {
+    transaction.placeOrder = PlaceOrderTransactionFactory;
+    transaction.returnOrder = ReturnOrderTransactionFactory;
+})(transaction = exports.transaction || (exports.transaction = {}));
+exports.transactionStatusType = transactionStatusType_1.default;
+exports.transactionTasksExportationStatus = transactionTasksExportationStatus_1.default;
+exports.transactionType = transactionType_1.default;
+exports.unitCode = unitCode_1.UnitCode;
+exports.url = URLFactory;
+
+},{"./factory/action/authorize/award/pecorino":64,"./factory/action/authorize/discount/mvtk":65,"./factory/action/authorize/offer/programMembership":66,"./factory/action/authorize/offer/seatReservation":67,"./factory/action/authorize/paymentMethod/creditCard":68,"./factory/action/authorize/paymentMethod/pecorino":69,"./factory/action/consume/use/mvtk":70,"./factory/action/interact/register/programMembership":71,"./factory/action/interact/unRegister/programMembership":72,"./factory/action/trade/order":73,"./factory/action/trade/pay":74,"./factory/action/trade/refund":75,"./factory/action/transfer/give/pecorinoAward":76,"./factory/action/transfer/print/ticket":77,"./factory/action/transfer/return/order":78,"./factory/action/transfer/return/pecorinoAward":79,"./factory/action/transfer/send/message/email":80,"./factory/action/transfer/send/order":81,"./factory/actionStatusType":62,"./factory/actionType":63,"./factory/clientEvent":82,"./factory/clientUser":83,"./factory/creativeWork/message/email":85,"./factory/creativeWork/movie":86,"./factory/creativeWorkType":84,"./factory/errorCode":87,"./factory/errors":98,"./factory/event/individualScreeningEvent":102,"./factory/event/screeningEvent":103,"./factory/eventStatusType":100,"./factory/eventType":101,"./factory/offer/seatReservation":104,"./factory/order":105,"./factory/orderStatus":106,"./factory/organization/corporation":109,"./factory/organization/movieTheater":110,"./factory/organizationIdentifier/corporation":107,"./factory/organizationType":108,"./factory/ownershipInfo":111,"./factory/paymentMethod/paymentCard/creditCard":113,"./factory/paymentMethodType":112,"./factory/person":114,"./factory/personType":115,"./factory/place/movieTheater":117,"./factory/placeType":116,"./factory/priceCurrency":118,"./factory/programMembership":119,"./factory/quantitativeValue":120,"./factory/reservation/event":123,"./factory/reservationStatusType":121,"./factory/reservationType":122,"./factory/task/cancelCreditCard":127,"./factory/task/cancelMvtk":128,"./factory/task/cancelPecorino":129,"./factory/task/cancelPecorinoAward":130,"./factory/task/cancelSeatReservation":131,"./factory/task/givePecorinoAward":132,"./factory/task/payCreditCard":133,"./factory/task/payPecorino":134,"./factory/task/placeOrder":135,"./factory/task/refundCreditCard":136,"./factory/task/refundPecorino":137,"./factory/task/registerProgramMembership":138,"./factory/task/returnOrder":139,"./factory/task/returnPecorinoAward":140,"./factory/task/sendEmailMessage":141,"./factory/task/sendOrder":142,"./factory/task/unRegisterProgramMembership":143,"./factory/task/useMvtk":144,"./factory/taskExecutionResult":124,"./factory/taskName":125,"./factory/taskStatus":126,"./factory/transaction/placeOrder":148,"./factory/transaction/returnOrder":149,"./factory/transactionStatusType":145,"./factory/transactionTasksExportationStatus":146,"./factory/transactionType":147,"./factory/unitCode":150,"./factory/url":151,"@motionpicture/pecorino-factory":47}],153:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -19114,6476 +22504,7 @@ exports.url = URLFactory;
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],51:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _toDate = require('./lib/toDate');
-
-var _toDate2 = _interopRequireDefault(_toDate);
-
-var _toFloat = require('./lib/toFloat');
-
-var _toFloat2 = _interopRequireDefault(_toFloat);
-
-var _toInt = require('./lib/toInt');
-
-var _toInt2 = _interopRequireDefault(_toInt);
-
-var _toBoolean = require('./lib/toBoolean');
-
-var _toBoolean2 = _interopRequireDefault(_toBoolean);
-
-var _equals = require('./lib/equals');
-
-var _equals2 = _interopRequireDefault(_equals);
-
-var _contains = require('./lib/contains');
-
-var _contains2 = _interopRequireDefault(_contains);
-
-var _matches = require('./lib/matches');
-
-var _matches2 = _interopRequireDefault(_matches);
-
-var _isEmail = require('./lib/isEmail');
-
-var _isEmail2 = _interopRequireDefault(_isEmail);
-
-var _isURL = require('./lib/isURL');
-
-var _isURL2 = _interopRequireDefault(_isURL);
-
-var _isMACAddress = require('./lib/isMACAddress');
-
-var _isMACAddress2 = _interopRequireDefault(_isMACAddress);
-
-var _isIP = require('./lib/isIP');
-
-var _isIP2 = _interopRequireDefault(_isIP);
-
-var _isFQDN = require('./lib/isFQDN');
-
-var _isFQDN2 = _interopRequireDefault(_isFQDN);
-
-var _isBoolean = require('./lib/isBoolean');
-
-var _isBoolean2 = _interopRequireDefault(_isBoolean);
-
-var _isAlpha = require('./lib/isAlpha');
-
-var _isAlpha2 = _interopRequireDefault(_isAlpha);
-
-var _isAlphanumeric = require('./lib/isAlphanumeric');
-
-var _isAlphanumeric2 = _interopRequireDefault(_isAlphanumeric);
-
-var _isNumeric = require('./lib/isNumeric');
-
-var _isNumeric2 = _interopRequireDefault(_isNumeric);
-
-var _isPort = require('./lib/isPort');
-
-var _isPort2 = _interopRequireDefault(_isPort);
-
-var _isLowercase = require('./lib/isLowercase');
-
-var _isLowercase2 = _interopRequireDefault(_isLowercase);
-
-var _isUppercase = require('./lib/isUppercase');
-
-var _isUppercase2 = _interopRequireDefault(_isUppercase);
-
-var _isAscii = require('./lib/isAscii');
-
-var _isAscii2 = _interopRequireDefault(_isAscii);
-
-var _isFullWidth = require('./lib/isFullWidth');
-
-var _isFullWidth2 = _interopRequireDefault(_isFullWidth);
-
-var _isHalfWidth = require('./lib/isHalfWidth');
-
-var _isHalfWidth2 = _interopRequireDefault(_isHalfWidth);
-
-var _isVariableWidth = require('./lib/isVariableWidth');
-
-var _isVariableWidth2 = _interopRequireDefault(_isVariableWidth);
-
-var _isMultibyte = require('./lib/isMultibyte');
-
-var _isMultibyte2 = _interopRequireDefault(_isMultibyte);
-
-var _isSurrogatePair = require('./lib/isSurrogatePair');
-
-var _isSurrogatePair2 = _interopRequireDefault(_isSurrogatePair);
-
-var _isInt = require('./lib/isInt');
-
-var _isInt2 = _interopRequireDefault(_isInt);
-
-var _isFloat = require('./lib/isFloat');
-
-var _isFloat2 = _interopRequireDefault(_isFloat);
-
-var _isDecimal = require('./lib/isDecimal');
-
-var _isDecimal2 = _interopRequireDefault(_isDecimal);
-
-var _isHexadecimal = require('./lib/isHexadecimal');
-
-var _isHexadecimal2 = _interopRequireDefault(_isHexadecimal);
-
-var _isDivisibleBy = require('./lib/isDivisibleBy');
-
-var _isDivisibleBy2 = _interopRequireDefault(_isDivisibleBy);
-
-var _isHexColor = require('./lib/isHexColor');
-
-var _isHexColor2 = _interopRequireDefault(_isHexColor);
-
-var _isISRC = require('./lib/isISRC');
-
-var _isISRC2 = _interopRequireDefault(_isISRC);
-
-var _isMD = require('./lib/isMD5');
-
-var _isMD2 = _interopRequireDefault(_isMD);
-
-var _isHash = require('./lib/isHash');
-
-var _isHash2 = _interopRequireDefault(_isHash);
-
-var _isJSON = require('./lib/isJSON');
-
-var _isJSON2 = _interopRequireDefault(_isJSON);
-
-var _isEmpty = require('./lib/isEmpty');
-
-var _isEmpty2 = _interopRequireDefault(_isEmpty);
-
-var _isLength = require('./lib/isLength');
-
-var _isLength2 = _interopRequireDefault(_isLength);
-
-var _isByteLength = require('./lib/isByteLength');
-
-var _isByteLength2 = _interopRequireDefault(_isByteLength);
-
-var _isUUID = require('./lib/isUUID');
-
-var _isUUID2 = _interopRequireDefault(_isUUID);
-
-var _isMongoId = require('./lib/isMongoId');
-
-var _isMongoId2 = _interopRequireDefault(_isMongoId);
-
-var _isAfter = require('./lib/isAfter');
-
-var _isAfter2 = _interopRequireDefault(_isAfter);
-
-var _isBefore = require('./lib/isBefore');
-
-var _isBefore2 = _interopRequireDefault(_isBefore);
-
-var _isIn = require('./lib/isIn');
-
-var _isIn2 = _interopRequireDefault(_isIn);
-
-var _isCreditCard = require('./lib/isCreditCard');
-
-var _isCreditCard2 = _interopRequireDefault(_isCreditCard);
-
-var _isISIN = require('./lib/isISIN');
-
-var _isISIN2 = _interopRequireDefault(_isISIN);
-
-var _isISBN = require('./lib/isISBN');
-
-var _isISBN2 = _interopRequireDefault(_isISBN);
-
-var _isISSN = require('./lib/isISSN');
-
-var _isISSN2 = _interopRequireDefault(_isISSN);
-
-var _isMobilePhone = require('./lib/isMobilePhone');
-
-var _isMobilePhone2 = _interopRequireDefault(_isMobilePhone);
-
-var _isCurrency = require('./lib/isCurrency');
-
-var _isCurrency2 = _interopRequireDefault(_isCurrency);
-
-var _isISO = require('./lib/isISO8601');
-
-var _isISO2 = _interopRequireDefault(_isISO);
-
-var _isISO31661Alpha = require('./lib/isISO31661Alpha2');
-
-var _isISO31661Alpha2 = _interopRequireDefault(_isISO31661Alpha);
-
-var _isBase = require('./lib/isBase64');
-
-var _isBase2 = _interopRequireDefault(_isBase);
-
-var _isDataURI = require('./lib/isDataURI');
-
-var _isDataURI2 = _interopRequireDefault(_isDataURI);
-
-var _isMimeType = require('./lib/isMimeType');
-
-var _isMimeType2 = _interopRequireDefault(_isMimeType);
-
-var _isLatLong = require('./lib/isLatLong');
-
-var _isLatLong2 = _interopRequireDefault(_isLatLong);
-
-var _isPostalCode = require('./lib/isPostalCode');
-
-var _isPostalCode2 = _interopRequireDefault(_isPostalCode);
-
-var _ltrim = require('./lib/ltrim');
-
-var _ltrim2 = _interopRequireDefault(_ltrim);
-
-var _rtrim = require('./lib/rtrim');
-
-var _rtrim2 = _interopRequireDefault(_rtrim);
-
-var _trim = require('./lib/trim');
-
-var _trim2 = _interopRequireDefault(_trim);
-
-var _escape = require('./lib/escape');
-
-var _escape2 = _interopRequireDefault(_escape);
-
-var _unescape = require('./lib/unescape');
-
-var _unescape2 = _interopRequireDefault(_unescape);
-
-var _stripLow = require('./lib/stripLow');
-
-var _stripLow2 = _interopRequireDefault(_stripLow);
-
-var _whitelist = require('./lib/whitelist');
-
-var _whitelist2 = _interopRequireDefault(_whitelist);
-
-var _blacklist = require('./lib/blacklist');
-
-var _blacklist2 = _interopRequireDefault(_blacklist);
-
-var _isWhitelisted = require('./lib/isWhitelisted');
-
-var _isWhitelisted2 = _interopRequireDefault(_isWhitelisted);
-
-var _normalizeEmail = require('./lib/normalizeEmail');
-
-var _normalizeEmail2 = _interopRequireDefault(_normalizeEmail);
-
-var _toString = require('./lib/util/toString');
-
-var _toString2 = _interopRequireDefault(_toString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var version = '9.4.1';
-
-var validator = {
-  version: version,
-  toDate: _toDate2.default,
-  toFloat: _toFloat2.default,
-  toInt: _toInt2.default,
-  toBoolean: _toBoolean2.default,
-  equals: _equals2.default,
-  contains: _contains2.default,
-  matches: _matches2.default,
-  isEmail: _isEmail2.default,
-  isURL: _isURL2.default,
-  isMACAddress: _isMACAddress2.default,
-  isIP: _isIP2.default,
-  isFQDN: _isFQDN2.default,
-  isBoolean: _isBoolean2.default,
-  isAlpha: _isAlpha2.default,
-  isAlphanumeric: _isAlphanumeric2.default,
-  isNumeric: _isNumeric2.default,
-  isPort: _isPort2.default,
-  isLowercase: _isLowercase2.default,
-  isUppercase: _isUppercase2.default,
-  isAscii: _isAscii2.default,
-  isFullWidth: _isFullWidth2.default,
-  isHalfWidth: _isHalfWidth2.default,
-  isVariableWidth: _isVariableWidth2.default,
-  isMultibyte: _isMultibyte2.default,
-  isSurrogatePair: _isSurrogatePair2.default,
-  isInt: _isInt2.default,
-  isFloat: _isFloat2.default,
-  isDecimal: _isDecimal2.default,
-  isHexadecimal: _isHexadecimal2.default,
-  isDivisibleBy: _isDivisibleBy2.default,
-  isHexColor: _isHexColor2.default,
-  isISRC: _isISRC2.default,
-  isMD5: _isMD2.default,
-  isHash: _isHash2.default,
-  isJSON: _isJSON2.default,
-  isEmpty: _isEmpty2.default,
-  isLength: _isLength2.default,
-  isByteLength: _isByteLength2.default,
-  isUUID: _isUUID2.default,
-  isMongoId: _isMongoId2.default,
-  isAfter: _isAfter2.default,
-  isBefore: _isBefore2.default,
-  isIn: _isIn2.default,
-  isCreditCard: _isCreditCard2.default,
-  isISIN: _isISIN2.default,
-  isISBN: _isISBN2.default,
-  isISSN: _isISSN2.default,
-  isMobilePhone: _isMobilePhone2.default,
-  isPostalCode: _isPostalCode2.default,
-  isCurrency: _isCurrency2.default,
-  isISO8601: _isISO2.default,
-  isISO31661Alpha2: _isISO31661Alpha2.default,
-  isBase64: _isBase2.default,
-  isDataURI: _isDataURI2.default,
-  isMimeType: _isMimeType2.default,
-  isLatLong: _isLatLong2.default,
-  ltrim: _ltrim2.default,
-  rtrim: _rtrim2.default,
-  trim: _trim2.default,
-  escape: _escape2.default,
-  unescape: _unescape2.default,
-  stripLow: _stripLow2.default,
-  whitelist: _whitelist2.default,
-  blacklist: _blacklist2.default,
-  isWhitelisted: _isWhitelisted2.default,
-  normalizeEmail: _normalizeEmail2.default,
-  toString: _toString2.default
-};
-
-exports.default = validator;
-module.exports = exports['default'];
-},{"./lib/blacklist":53,"./lib/contains":54,"./lib/equals":55,"./lib/escape":56,"./lib/isAfter":57,"./lib/isAlpha":58,"./lib/isAlphanumeric":59,"./lib/isAscii":60,"./lib/isBase64":61,"./lib/isBefore":62,"./lib/isBoolean":63,"./lib/isByteLength":64,"./lib/isCreditCard":65,"./lib/isCurrency":66,"./lib/isDataURI":67,"./lib/isDecimal":68,"./lib/isDivisibleBy":69,"./lib/isEmail":70,"./lib/isEmpty":71,"./lib/isFQDN":72,"./lib/isFloat":73,"./lib/isFullWidth":74,"./lib/isHalfWidth":75,"./lib/isHash":76,"./lib/isHexColor":77,"./lib/isHexadecimal":78,"./lib/isIP":79,"./lib/isISBN":80,"./lib/isISIN":81,"./lib/isISO31661Alpha2":82,"./lib/isISO8601":83,"./lib/isISRC":84,"./lib/isISSN":85,"./lib/isIn":86,"./lib/isInt":87,"./lib/isJSON":88,"./lib/isLatLong":89,"./lib/isLength":90,"./lib/isLowercase":91,"./lib/isMACAddress":92,"./lib/isMD5":93,"./lib/isMimeType":94,"./lib/isMobilePhone":95,"./lib/isMongoId":96,"./lib/isMultibyte":97,"./lib/isNumeric":98,"./lib/isPort":99,"./lib/isPostalCode":100,"./lib/isSurrogatePair":101,"./lib/isURL":102,"./lib/isUUID":103,"./lib/isUppercase":104,"./lib/isVariableWidth":105,"./lib/isWhitelisted":106,"./lib/ltrim":107,"./lib/matches":108,"./lib/normalizeEmail":109,"./lib/rtrim":110,"./lib/stripLow":111,"./lib/toBoolean":112,"./lib/toDate":113,"./lib/toFloat":114,"./lib/toInt":115,"./lib/trim":116,"./lib/unescape":117,"./lib/util/toString":120,"./lib/whitelist":121}],52:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var alpha = exports.alpha = {
-  'en-US': /^[A-Z]+$/i,
-  'bg-BG': /^[А-Я]+$/i,
-  'cs-CZ': /^[A-ZÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]+$/i,
-  'da-DK': /^[A-ZÆØÅ]+$/i,
-  'de-DE': /^[A-ZÄÖÜß]+$/i,
-  'el-GR': /^[Α-ω]+$/i,
-  'es-ES': /^[A-ZÁÉÍÑÓÚÜ]+$/i,
-  'fr-FR': /^[A-ZÀÂÆÇÉÈÊËÏÎÔŒÙÛÜŸ]+$/i,
-  'it-IT': /^[A-ZÀÉÈÌÎÓÒÙ]+$/i,
-  'nb-NO': /^[A-ZÆØÅ]+$/i,
-  'nl-NL': /^[A-ZÁÉËÏÓÖÜÚ]+$/i,
-  'nn-NO': /^[A-ZÆØÅ]+$/i,
-  'hu-HU': /^[A-ZÁÉÍÓÖŐÚÜŰ]+$/i,
-  'pl-PL': /^[A-ZĄĆĘŚŁŃÓŻŹ]+$/i,
-  'pt-PT': /^[A-ZÃÁÀÂÇÉÊÍÕÓÔÚÜ]+$/i,
-  'ru-RU': /^[А-ЯЁ]+$/i,
-  'sk-SK': /^[A-ZÁČĎÉÍŇÓŠŤÚÝŽĹŔĽÄÔ]+$/i,
-  'sr-RS@latin': /^[A-ZČĆŽŠĐ]+$/i,
-  'sr-RS': /^[А-ЯЂЈЉЊЋЏ]+$/i,
-  'sv-SE': /^[A-ZÅÄÖ]+$/i,
-  'tr-TR': /^[A-ZÇĞİıÖŞÜ]+$/i,
-  'uk-UA': /^[А-ЩЬЮЯЄIЇҐі]+$/i,
-  ar: /^[ءآأؤإئابةتثجحخدذرزسشصضطظعغفقكلمنهوىيًٌٍَُِّْٰ]+$/
-};
-
-var alphanumeric = exports.alphanumeric = {
-  'en-US': /^[0-9A-Z]+$/i,
-  'bg-BG': /^[0-9А-Я]+$/i,
-  'cs-CZ': /^[0-9A-ZÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ]+$/i,
-  'da-DK': /^[0-9A-ZÆØÅ]+$/i,
-  'de-DE': /^[0-9A-ZÄÖÜß]+$/i,
-  'el-GR': /^[0-9Α-ω]+$/i,
-  'es-ES': /^[0-9A-ZÁÉÍÑÓÚÜ]+$/i,
-  'fr-FR': /^[0-9A-ZÀÂÆÇÉÈÊËÏÎÔŒÙÛÜŸ]+$/i,
-  'it-IT': /^[0-9A-ZÀÉÈÌÎÓÒÙ]+$/i,
-  'hu-HU': /^[0-9A-ZÁÉÍÓÖŐÚÜŰ]+$/i,
-  'nb-NO': /^[0-9A-ZÆØÅ]+$/i,
-  'nl-NL': /^[0-9A-ZÁÉËÏÓÖÜÚ]+$/i,
-  'nn-NO': /^[0-9A-ZÆØÅ]+$/i,
-  'pl-PL': /^[0-9A-ZĄĆĘŚŁŃÓŻŹ]+$/i,
-  'pt-PT': /^[0-9A-ZÃÁÀÂÇÉÊÍÕÓÔÚÜ]+$/i,
-  'ru-RU': /^[0-9А-ЯЁ]+$/i,
-  'sk-SK': /^[0-9A-ZÁČĎÉÍŇÓŠŤÚÝŽĹŔĽÄÔ]+$/i,
-  'sr-RS@latin': /^[0-9A-ZČĆŽŠĐ]+$/i,
-  'sr-RS': /^[0-9А-ЯЂЈЉЊЋЏ]+$/i,
-  'sv-SE': /^[0-9A-ZÅÄÖ]+$/i,
-  'tr-TR': /^[0-9A-ZÇĞİıÖŞÜ]+$/i,
-  'uk-UA': /^[0-9А-ЩЬЮЯЄIЇҐі]+$/i,
-  ar: /^[٠١٢٣٤٥٦٧٨٩0-9ءآأؤإئابةتثجحخدذرزسشصضطظعغفقكلمنهوىيًٌٍَُِّْٰ]+$/
-};
-
-var decimal = exports.decimal = {
-  'en-US': '.',
-  ar: '٫'
-};
-
-var englishLocales = exports.englishLocales = ['AU', 'GB', 'HK', 'IN', 'NZ', 'ZA', 'ZM'];
-
-for (var locale, i = 0; i < englishLocales.length; i++) {
-  locale = 'en-' + englishLocales[i];
-  alpha[locale] = alpha['en-US'];
-  alphanumeric[locale] = alphanumeric['en-US'];
-  decimal[locale] = decimal['en-US'];
-}
-
-// Source: http://www.localeplanet.com/java/
-var arabicLocales = exports.arabicLocales = ['AE', 'BH', 'DZ', 'EG', 'IQ', 'JO', 'KW', 'LB', 'LY', 'MA', 'QM', 'QA', 'SA', 'SD', 'SY', 'TN', 'YE'];
-
-for (var _locale, _i = 0; _i < arabicLocales.length; _i++) {
-  _locale = 'ar-' + arabicLocales[_i];
-  alpha[_locale] = alpha.ar;
-  alphanumeric[_locale] = alphanumeric.ar;
-  decimal[_locale] = decimal.ar;
-}
-
-// Source: https://en.wikipedia.org/wiki/Decimal_mark
-var dotDecimal = exports.dotDecimal = [];
-var commaDecimal = exports.commaDecimal = ['bg-BG', 'cs-CZ', 'da-DK', 'de-DE', 'el-GR', 'es-ES', 'fr-FR', 'it-IT', 'hu-HU', 'nb-NO', 'nn-NO', 'nl-NL', 'pl-Pl', 'pt-PT', 'ru-RU', 'sr-RS@latin', 'sr-RS', 'sv-SE', 'tr-TR', 'uk-UA'];
-
-for (var _i2 = 0; _i2 < dotDecimal.length; _i2++) {
-  decimal[dotDecimal[_i2]] = decimal['en-US'];
-}
-
-for (var _i3 = 0; _i3 < commaDecimal.length; _i3++) {
-  decimal[commaDecimal[_i3]] = ',';
-}
-
-alpha['pt-BR'] = alpha['pt-PT'];
-alphanumeric['pt-BR'] = alphanumeric['pt-PT'];
-decimal['pt-BR'] = decimal['pt-PT'];
-},{}],53:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = blacklist;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function blacklist(str, chars) {
-  (0, _assertString2.default)(str);
-  return str.replace(new RegExp('[' + chars + ']+', 'g'), '');
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],54:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = contains;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-var _toString = require('./util/toString');
-
-var _toString2 = _interopRequireDefault(_toString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function contains(str, elem) {
-  (0, _assertString2.default)(str);
-  return str.indexOf((0, _toString2.default)(elem)) >= 0;
-}
-module.exports = exports['default'];
-},{"./util/assertString":118,"./util/toString":120}],55:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = equals;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function equals(str, comparison) {
-  (0, _assertString2.default)(str);
-  return str === comparison;
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],56:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = escape;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function escape(str) {
-  (0, _assertString2.default)(str);
-  return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#x27;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\//g, '&#x2F;').replace(/\\/g, '&#x5C;').replace(/`/g, '&#96;');
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],57:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isAfter;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-var _toDate = require('./toDate');
-
-var _toDate2 = _interopRequireDefault(_toDate);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function isAfter(str) {
-  var date = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : String(new Date());
-
-  (0, _assertString2.default)(str);
-  var comparison = (0, _toDate2.default)(date);
-  var original = (0, _toDate2.default)(str);
-  return !!(original && comparison && original > comparison);
-}
-module.exports = exports['default'];
-},{"./toDate":113,"./util/assertString":118}],58:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isAlpha;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-var _alpha = require('./alpha');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function isAlpha(str) {
-  var locale = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'en-US';
-
-  (0, _assertString2.default)(str);
-  if (locale in _alpha.alpha) {
-    return _alpha.alpha[locale].test(str);
-  }
-  throw new Error('Invalid locale \'' + locale + '\'');
-}
-module.exports = exports['default'];
-},{"./alpha":52,"./util/assertString":118}],59:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isAlphanumeric;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-var _alpha = require('./alpha');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function isAlphanumeric(str) {
-  var locale = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'en-US';
-
-  (0, _assertString2.default)(str);
-  if (locale in _alpha.alphanumeric) {
-    return _alpha.alphanumeric[locale].test(str);
-  }
-  throw new Error('Invalid locale \'' + locale + '\'');
-}
-module.exports = exports['default'];
-},{"./alpha":52,"./util/assertString":118}],60:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isAscii;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/* eslint-disable no-control-regex */
-var ascii = /^[\x00-\x7F]+$/;
-/* eslint-enable no-control-regex */
-
-function isAscii(str) {
-  (0, _assertString2.default)(str);
-  return ascii.test(str);
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],61:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isBase64;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var notBase64 = /[^A-Z0-9+\/=]/i;
-
-function isBase64(str) {
-  (0, _assertString2.default)(str);
-  var len = str.length;
-  if (!len || len % 4 !== 0 || notBase64.test(str)) {
-    return false;
-  }
-  var firstPaddingChar = str.indexOf('=');
-  return firstPaddingChar === -1 || firstPaddingChar === len - 1 || firstPaddingChar === len - 2 && str[len - 1] === '=';
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],62:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isBefore;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-var _toDate = require('./toDate');
-
-var _toDate2 = _interopRequireDefault(_toDate);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function isBefore(str) {
-  var date = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : String(new Date());
-
-  (0, _assertString2.default)(str);
-  var comparison = (0, _toDate2.default)(date);
-  var original = (0, _toDate2.default)(str);
-  return !!(original && comparison && original < comparison);
-}
-module.exports = exports['default'];
-},{"./toDate":113,"./util/assertString":118}],63:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isBoolean;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function isBoolean(str) {
-  (0, _assertString2.default)(str);
-  return ['true', 'false', '1', '0'].indexOf(str) >= 0;
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],64:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-exports.default = isByteLength;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/* eslint-disable prefer-rest-params */
-function isByteLength(str, options) {
-  (0, _assertString2.default)(str);
-  var min = void 0;
-  var max = void 0;
-  if ((typeof options === 'undefined' ? 'undefined' : _typeof(options)) === 'object') {
-    min = options.min || 0;
-    max = options.max;
-  } else {
-    // backwards compatibility: isByteLength(str, min [, max])
-    min = arguments[1];
-    max = arguments[2];
-  }
-  var len = encodeURI(str).split(/%..|./).length - 1;
-  return len >= min && (typeof max === 'undefined' || len <= max);
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],65:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isCreditCard;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/* eslint-disable max-len */
-var creditCard = /^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|(222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11}|62[0-9]{14})$/;
-/* eslint-enable max-len */
-
-function isCreditCard(str) {
-  (0, _assertString2.default)(str);
-  var sanitized = str.replace(/[- ]+/g, '');
-  if (!creditCard.test(sanitized)) {
-    return false;
-  }
-  var sum = 0;
-  var digit = void 0;
-  var tmpNum = void 0;
-  var shouldDouble = void 0;
-  for (var i = sanitized.length - 1; i >= 0; i--) {
-    digit = sanitized.substring(i, i + 1);
-    tmpNum = parseInt(digit, 10);
-    if (shouldDouble) {
-      tmpNum *= 2;
-      if (tmpNum >= 10) {
-        sum += tmpNum % 10 + 1;
-      } else {
-        sum += tmpNum;
-      }
-    } else {
-      sum += tmpNum;
-    }
-    shouldDouble = !shouldDouble;
-  }
-  return !!(sum % 10 === 0 ? sanitized : false);
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],66:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isCurrency;
-
-var _merge = require('./util/merge');
-
-var _merge2 = _interopRequireDefault(_merge);
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function currencyRegex(options) {
-  var decimal_digits = '\\d{' + options.digits_after_decimal[0] + '}';
-  options.digits_after_decimal.forEach(function (digit, index) {
-    if (index !== 0) decimal_digits = decimal_digits + '|\\d{' + digit + '}';
-  });
-  var symbol = '(\\' + options.symbol.replace(/\./g, '\\.') + ')' + (options.require_symbol ? '' : '?'),
-      negative = '-?',
-      whole_dollar_amount_without_sep = '[1-9]\\d*',
-      whole_dollar_amount_with_sep = '[1-9]\\d{0,2}(\\' + options.thousands_separator + '\\d{3})*',
-      valid_whole_dollar_amounts = ['0', whole_dollar_amount_without_sep, whole_dollar_amount_with_sep],
-      whole_dollar_amount = '(' + valid_whole_dollar_amounts.join('|') + ')?',
-      decimal_amount = '(\\' + options.decimal_separator + '(' + decimal_digits + '))' + (options.require_decimal ? '' : '?');
-  var pattern = whole_dollar_amount + (options.allow_decimal || options.require_decimal ? decimal_amount : '');
-
-  // default is negative sign before symbol, but there are two other options (besides parens)
-  if (options.allow_negatives && !options.parens_for_negatives) {
-    if (options.negative_sign_after_digits) {
-      pattern += negative;
-    } else if (options.negative_sign_before_digits) {
-      pattern = negative + pattern;
-    }
-  }
-
-  // South African Rand, for example, uses R 123 (space) and R-123 (no space)
-  if (options.allow_negative_sign_placeholder) {
-    pattern = '( (?!\\-))?' + pattern;
-  } else if (options.allow_space_after_symbol) {
-    pattern = ' ?' + pattern;
-  } else if (options.allow_space_after_digits) {
-    pattern += '( (?!$))?';
-  }
-
-  if (options.symbol_after_digits) {
-    pattern += symbol;
-  } else {
-    pattern = symbol + pattern;
-  }
-
-  if (options.allow_negatives) {
-    if (options.parens_for_negatives) {
-      pattern = '(\\(' + pattern + '\\)|' + pattern + ')';
-    } else if (!(options.negative_sign_before_digits || options.negative_sign_after_digits)) {
-      pattern = negative + pattern;
-    }
-  }
-
-  // ensure there's a dollar and/or decimal amount, and that
-  // it doesn't start with a space or a negative sign followed by a space
-  return new RegExp('^(?!-? )(?=.*\\d)' + pattern + '$');
-}
-
-var default_currency_options = {
-  symbol: '$',
-  require_symbol: false,
-  allow_space_after_symbol: false,
-  symbol_after_digits: false,
-  allow_negatives: true,
-  parens_for_negatives: false,
-  negative_sign_before_digits: false,
-  negative_sign_after_digits: false,
-  allow_negative_sign_placeholder: false,
-  thousands_separator: ',',
-  decimal_separator: '.',
-  allow_decimal: true,
-  require_decimal: false,
-  digits_after_decimal: [2],
-  allow_space_after_digits: false
-};
-
-function isCurrency(str, options) {
-  (0, _assertString2.default)(str);
-  options = (0, _merge2.default)(options, default_currency_options);
-  return currencyRegex(options).test(str);
-}
-module.exports = exports['default'];
-},{"./util/assertString":118,"./util/merge":119}],67:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isDataURI;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var validMediaType = /^[a-z]+\/[a-z0-9\-\+]+$/i;
-
-var validAttribute = /^[a-z\-]+=[a-z0-9\-]+$/i;
-
-var validData = /^[a-z0-9!\$&'\(\)\*\+,;=\-\._~:@\/\?%\s]*$/i;
-
-function isDataURI(str) {
-  (0, _assertString2.default)(str);
-  var data = str.split(',');
-  if (data.length < 2) {
-    return false;
-  }
-  var attributes = data.shift().trim().split(';');
-  var schemeAndMediaType = attributes.shift();
-  if (schemeAndMediaType.substr(0, 5) !== 'data:') {
-    return false;
-  }
-  var mediaType = schemeAndMediaType.substr(5);
-  if (mediaType !== '' && !validMediaType.test(mediaType)) {
-    return false;
-  }
-  for (var i = 0; i < attributes.length; i++) {
-    if (i === attributes.length - 1 && attributes[i].toLowerCase() === 'base64') {
-      // ok
-    } else if (!validAttribute.test(attributes[i])) {
-      return false;
-    }
-  }
-  for (var _i = 0; _i < data.length; _i++) {
-    if (!validData.test(data[_i])) {
-      return false;
-    }
-  }
-  return true;
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],68:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isDecimal;
-
-var _merge = require('./util/merge');
-
-var _merge2 = _interopRequireDefault(_merge);
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-var _alpha = require('./alpha');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function decimalRegExp(options) {
-  var regExp = new RegExp('^[-+]?([0-9]+)?(\\' + _alpha.decimal[options.locale] + '[0-9]{' + options.decimal_digits + '})' + (options.force_decimal ? '' : '?') + '$');
-  return regExp;
-}
-
-var default_decimal_options = {
-  force_decimal: false,
-  decimal_digits: '1,',
-  locale: 'en-US'
-};
-
-var blacklist = ['', '-', '+'];
-
-function isDecimal(str, options) {
-  (0, _assertString2.default)(str);
-  options = (0, _merge2.default)(options, default_decimal_options);
-  if (options.locale in _alpha.decimal) {
-    return !blacklist.includes(str.replace(/ /g, '')) && decimalRegExp(options).test(str);
-  }
-  throw new Error('Invalid locale \'' + options.locale + '\'');
-}
-module.exports = exports['default'];
-},{"./alpha":52,"./util/assertString":118,"./util/merge":119}],69:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isDivisibleBy;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-var _toFloat = require('./toFloat');
-
-var _toFloat2 = _interopRequireDefault(_toFloat);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function isDivisibleBy(str, num) {
-  (0, _assertString2.default)(str);
-  return (0, _toFloat2.default)(str) % parseInt(num, 10) === 0;
-}
-module.exports = exports['default'];
-},{"./toFloat":114,"./util/assertString":118}],70:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isEmail;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-var _merge = require('./util/merge');
-
-var _merge2 = _interopRequireDefault(_merge);
-
-var _isByteLength = require('./isByteLength');
-
-var _isByteLength2 = _interopRequireDefault(_isByteLength);
-
-var _isFQDN = require('./isFQDN');
-
-var _isFQDN2 = _interopRequireDefault(_isFQDN);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var default_email_options = {
-  allow_display_name: false,
-  require_display_name: false,
-  allow_utf8_local_part: true,
-  require_tld: true
-};
-
-/* eslint-disable max-len */
-/* eslint-disable no-control-regex */
-var displayName = /^[a-z\d!#\$%&'\*\+\-\/=\?\^_`{\|}~\.\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+[a-z\d!#\$%&'\*\+\-\/=\?\^_`{\|}~\,\.\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF\s]*<(.+)>$/i;
-var emailUserPart = /^[a-z\d!#\$%&'\*\+\-\/=\?\^_`{\|}~]+$/i;
-var quotedEmailUser = /^([\s\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e]|(\\[\x01-\x09\x0b\x0c\x0d-\x7f]))*$/i;
-var emailUserUtf8Part = /^[a-z\d!#\$%&'\*\+\-\/=\?\^_`{\|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+$/i;
-var quotedEmailUserUtf8 = /^([\s\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|(\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*$/i;
-/* eslint-enable max-len */
-/* eslint-enable no-control-regex */
-
-function isEmail(str, options) {
-  (0, _assertString2.default)(str);
-  options = (0, _merge2.default)(options, default_email_options);
-
-  if (options.require_display_name || options.allow_display_name) {
-    var display_email = str.match(displayName);
-    if (display_email) {
-      str = display_email[1];
-    } else if (options.require_display_name) {
-      return false;
-    }
-  }
-
-  var parts = str.split('@');
-  var domain = parts.pop();
-  var user = parts.join('@');
-
-  var lower_domain = domain.toLowerCase();
-  if (lower_domain === 'gmail.com' || lower_domain === 'googlemail.com') {
-    user = user.replace(/\./g, '').toLowerCase();
-  }
-
-  if (!(0, _isByteLength2.default)(user, { max: 64 }) || !(0, _isByteLength2.default)(domain, { max: 254 })) {
-    return false;
-  }
-
-  if (!(0, _isFQDN2.default)(domain, { require_tld: options.require_tld })) {
-    return false;
-  }
-
-  if (user[0] === '"') {
-    user = user.slice(1, user.length - 1);
-    return options.allow_utf8_local_part ? quotedEmailUserUtf8.test(user) : quotedEmailUser.test(user);
-  }
-
-  var pattern = options.allow_utf8_local_part ? emailUserUtf8Part : emailUserPart;
-
-  var user_parts = user.split('.');
-  for (var i = 0; i < user_parts.length; i++) {
-    if (!pattern.test(user_parts[i])) {
-      return false;
-    }
-  }
-
-  return true;
-}
-module.exports = exports['default'];
-},{"./isByteLength":64,"./isFQDN":72,"./util/assertString":118,"./util/merge":119}],71:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isEmpty;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function isEmpty(str) {
-  (0, _assertString2.default)(str);
-  return str.length === 0;
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],72:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isFQDN;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-var _merge = require('./util/merge');
-
-var _merge2 = _interopRequireDefault(_merge);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var default_fqdn_options = {
-  require_tld: true,
-  allow_underscores: false,
-  allow_trailing_dot: false
-};
-
-function isFQDN(str, options) {
-  (0, _assertString2.default)(str);
-  options = (0, _merge2.default)(options, default_fqdn_options);
-
-  /* Remove the optional trailing dot before checking validity */
-  if (options.allow_trailing_dot && str[str.length - 1] === '.') {
-    str = str.substring(0, str.length - 1);
-  }
-  var parts = str.split('.');
-  if (options.require_tld) {
-    var tld = parts.pop();
-    if (!parts.length || !/^([a-z\u00a1-\uffff]{2,}|xn[a-z0-9-]{2,})$/i.test(tld)) {
-      return false;
-    }
-    // disallow spaces
-    if (/[\s\u2002-\u200B\u202F\u205F\u3000\uFEFF\uDB40\uDC20]/.test(tld)) {
-      return false;
-    }
-  }
-  for (var part, i = 0; i < parts.length; i++) {
-    part = parts[i];
-    if (options.allow_underscores) {
-      part = part.replace(/_/g, '');
-    }
-    if (!/^[a-z\u00a1-\uffff0-9-]+$/i.test(part)) {
-      return false;
-    }
-    // disallow full-width chars
-    if (/[\uff01-\uff5e]/.test(part)) {
-      return false;
-    }
-    if (part[0] === '-' || part[part.length - 1] === '-') {
-      return false;
-    }
-  }
-  return true;
-}
-module.exports = exports['default'];
-},{"./util/assertString":118,"./util/merge":119}],73:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isFloat;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-var _alpha = require('./alpha');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function isFloat(str, options) {
-  (0, _assertString2.default)(str);
-  options = options || {};
-  var float = new RegExp('^(?:[-+])?(?:[0-9]+)?(?:\\' + (options.locale ? _alpha.decimal[options.locale] : '.') + '[0-9]*)?(?:[eE][\\+\\-]?(?:[0-9]+))?$');
-  if (str === '' || str === '.' || str === '-' || str === '+') {
-    return false;
-  }
-  return float.test(str) && (!options.hasOwnProperty('min') || str >= options.min) && (!options.hasOwnProperty('max') || str <= options.max) && (!options.hasOwnProperty('lt') || str < options.lt) && (!options.hasOwnProperty('gt') || str > options.gt);
-}
-module.exports = exports['default'];
-},{"./alpha":52,"./util/assertString":118}],74:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.fullWidth = undefined;
-exports.default = isFullWidth;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var fullWidth = exports.fullWidth = /[^\u0020-\u007E\uFF61-\uFF9F\uFFA0-\uFFDC\uFFE8-\uFFEE0-9a-zA-Z]/;
-
-function isFullWidth(str) {
-  (0, _assertString2.default)(str);
-  return fullWidth.test(str);
-}
-},{"./util/assertString":118}],75:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.halfWidth = undefined;
-exports.default = isHalfWidth;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var halfWidth = exports.halfWidth = /[\u0020-\u007E\uFF61-\uFF9F\uFFA0-\uFFDC\uFFE8-\uFFEE0-9a-zA-Z]/;
-
-function isHalfWidth(str) {
-  (0, _assertString2.default)(str);
-  return halfWidth.test(str);
-}
-},{"./util/assertString":118}],76:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isHash;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var lengths = {
-  md5: 32,
-  md4: 32,
-  sha1: 40,
-  sha256: 64,
-  sha384: 96,
-  sha512: 128,
-  ripemd128: 32,
-  ripemd160: 40,
-  tiger128: 32,
-  tiger160: 40,
-  tiger192: 48,
-  crc32: 8,
-  crc32b: 8
-};
-
-function isHash(str, algorithm) {
-  (0, _assertString2.default)(str);
-  var hash = new RegExp('^[a-f0-9]{' + lengths[algorithm] + '}$');
-  return hash.test(str);
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],77:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isHexColor;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var hexcolor = /^#?([0-9A-F]{3}|[0-9A-F]{6})$/i;
-
-function isHexColor(str) {
-  (0, _assertString2.default)(str);
-  return hexcolor.test(str);
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],78:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isHexadecimal;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var hexadecimal = /^[0-9A-F]+$/i;
-
-function isHexadecimal(str) {
-  (0, _assertString2.default)(str);
-  return hexadecimal.test(str);
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],79:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isIP;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var ipv4Maybe = /^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/;
-var ipv6Block = /^[0-9A-F]{1,4}$/i;
-
-function isIP(str) {
-  var version = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
-
-  (0, _assertString2.default)(str);
-  version = String(version);
-  if (!version) {
-    return isIP(str, 4) || isIP(str, 6);
-  } else if (version === '4') {
-    if (!ipv4Maybe.test(str)) {
-      return false;
-    }
-    var parts = str.split('.').sort(function (a, b) {
-      return a - b;
-    });
-    return parts[3] <= 255;
-  } else if (version === '6') {
-    var blocks = str.split(':');
-    var foundOmissionBlock = false; // marker to indicate ::
-
-    // At least some OS accept the last 32 bits of an IPv6 address
-    // (i.e. 2 of the blocks) in IPv4 notation, and RFC 3493 says
-    // that '::ffff:a.b.c.d' is valid for IPv4-mapped IPv6 addresses,
-    // and '::a.b.c.d' is deprecated, but also valid.
-    var foundIPv4TransitionBlock = isIP(blocks[blocks.length - 1], 4);
-    var expectedNumberOfBlocks = foundIPv4TransitionBlock ? 7 : 8;
-
-    if (blocks.length > expectedNumberOfBlocks) {
-      return false;
-    }
-    // initial or final ::
-    if (str === '::') {
-      return true;
-    } else if (str.substr(0, 2) === '::') {
-      blocks.shift();
-      blocks.shift();
-      foundOmissionBlock = true;
-    } else if (str.substr(str.length - 2) === '::') {
-      blocks.pop();
-      blocks.pop();
-      foundOmissionBlock = true;
-    }
-
-    for (var i = 0; i < blocks.length; ++i) {
-      // test for a :: which can not be at the string start/end
-      // since those cases have been handled above
-      if (blocks[i] === '' && i > 0 && i < blocks.length - 1) {
-        if (foundOmissionBlock) {
-          return false; // multiple :: in address
-        }
-        foundOmissionBlock = true;
-      } else if (foundIPv4TransitionBlock && i === blocks.length - 1) {
-        // it has been checked before that the last
-        // block is a valid IPv4 address
-      } else if (!ipv6Block.test(blocks[i])) {
-        return false;
-      }
-    }
-    if (foundOmissionBlock) {
-      return blocks.length >= 1;
-    }
-    return blocks.length === expectedNumberOfBlocks;
-  }
-  return false;
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],80:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isISBN;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var isbn10Maybe = /^(?:[0-9]{9}X|[0-9]{10})$/;
-var isbn13Maybe = /^(?:[0-9]{13})$/;
-var factor = [1, 3];
-
-function isISBN(str) {
-  var version = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
-
-  (0, _assertString2.default)(str);
-  version = String(version);
-  if (!version) {
-    return isISBN(str, 10) || isISBN(str, 13);
-  }
-  var sanitized = str.replace(/[\s-]+/g, '');
-  var checksum = 0;
-  var i = void 0;
-  if (version === '10') {
-    if (!isbn10Maybe.test(sanitized)) {
-      return false;
-    }
-    for (i = 0; i < 9; i++) {
-      checksum += (i + 1) * sanitized.charAt(i);
-    }
-    if (sanitized.charAt(9) === 'X') {
-      checksum += 10 * 10;
-    } else {
-      checksum += 10 * sanitized.charAt(9);
-    }
-    if (checksum % 11 === 0) {
-      return !!sanitized;
-    }
-  } else if (version === '13') {
-    if (!isbn13Maybe.test(sanitized)) {
-      return false;
-    }
-    for (i = 0; i < 12; i++) {
-      checksum += factor[i % 2] * sanitized.charAt(i);
-    }
-    if (sanitized.charAt(12) - (10 - checksum % 10) % 10 === 0) {
-      return !!sanitized;
-    }
-  }
-  return false;
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],81:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isISIN;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var isin = /^[A-Z]{2}[0-9A-Z]{9}[0-9]$/;
-
-function isISIN(str) {
-  (0, _assertString2.default)(str);
-  if (!isin.test(str)) {
-    return false;
-  }
-
-  var checksumStr = str.replace(/[A-Z]/g, function (character) {
-    return parseInt(character, 36);
-  });
-
-  var sum = 0;
-  var digit = void 0;
-  var tmpNum = void 0;
-  var shouldDouble = true;
-  for (var i = checksumStr.length - 2; i >= 0; i--) {
-    digit = checksumStr.substring(i, i + 1);
-    tmpNum = parseInt(digit, 10);
-    if (shouldDouble) {
-      tmpNum *= 2;
-      if (tmpNum >= 10) {
-        sum += tmpNum + 1;
-      } else {
-        sum += tmpNum;
-      }
-    } else {
-      sum += tmpNum;
-    }
-    shouldDouble = !shouldDouble;
-  }
-
-  return parseInt(str.substr(str.length - 1), 10) === (10000 - sum) % 10;
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],82:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isISO31661Alpha2;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// from https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
-var validISO31661Alpha2CountriesCodes = ['AD', 'AE', 'AF', 'AG', 'AI', 'AL', 'AM', 'AO', 'AQ', 'AR', 'AS', 'AT', 'AU', 'AW', 'AX', 'AZ', 'BA', 'BB', 'BD', 'BE', 'BF', 'BG', 'BH', 'BI', 'BJ', 'BL', 'BM', 'BN', 'BO', 'BQ', 'BR', 'BS', 'BT', 'BV', 'BW', 'BY', 'BZ', 'CA', 'CC', 'CD', 'CF', 'CG', 'CH', 'CI', 'CK', 'CL', 'CM', 'CN', 'CO', 'CR', 'CU', 'CV', 'CW', 'CX', 'CY', 'CZ', 'DE', 'DJ', 'DK', 'DM', 'DO', 'DZ', 'EC', 'EE', 'EG', 'EH', 'ER', 'ES', 'ET', 'FI', 'FJ', 'FK', 'FM', 'FO', 'FR', 'GA', 'GB', 'GD', 'GE', 'GF', 'GG', 'GH', 'GI', 'GL', 'GM', 'GN', 'GP', 'GQ', 'GR', 'GS', 'GT', 'GU', 'GW', 'GY', 'HK', 'HM', 'HN', 'HR', 'HT', 'HU', 'ID', 'IE', 'IL', 'IM', 'IN', 'IO', 'IQ', 'IR', 'IS', 'IT', 'JE', 'JM', 'JO', 'JP', 'KE', 'KG', 'KH', 'KI', 'KM', 'KN', 'KP', 'KR', 'KW', 'KY', 'KZ', 'LA', 'LB', 'LC', 'LI', 'LK', 'LR', 'LS', 'LT', 'LU', 'LV', 'LY', 'MA', 'MC', 'MD', 'ME', 'MF', 'MG', 'MH', 'MK', 'ML', 'MM', 'MN', 'MO', 'MP', 'MQ', 'MR', 'MS', 'MT', 'MU', 'MV', 'MW', 'MX', 'MY', 'MZ', 'NA', 'NC', 'NE', 'NF', 'NG', 'NI', 'NL', 'NO', 'NP', 'NR', 'NU', 'NZ', 'OM', 'PA', 'PE', 'PF', 'PG', 'PH', 'PK', 'PL', 'PM', 'PN', 'PR', 'PS', 'PT', 'PW', 'PY', 'QA', 'RE', 'RO', 'RS', 'RU', 'RW', 'SA', 'SB', 'SC', 'SD', 'SE', 'SG', 'SH', 'SI', 'SJ', 'SK', 'SL', 'SM', 'SN', 'SO', 'SR', 'SS', 'ST', 'SV', 'SX', 'SY', 'SZ', 'TC', 'TD', 'TF', 'TG', 'TH', 'TJ', 'TK', 'TL', 'TM', 'TN', 'TO', 'TR', 'TT', 'TV', 'TW', 'TZ', 'UA', 'UG', 'UM', 'US', 'UY', 'UZ', 'VA', 'VC', 'VE', 'VG', 'VI', 'VN', 'VU', 'WF', 'WS', 'YE', 'YT', 'ZA', 'ZM', 'ZW'];
-
-function isISO31661Alpha2(str) {
-  (0, _assertString2.default)(str);
-  return validISO31661Alpha2CountriesCodes.includes(str.toUpperCase());
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],83:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isISO8601;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/* eslint-disable max-len */
-// from http://goo.gl/0ejHHW
-var iso8601 = /^([\+-]?\d{4}(?!\d{2}\b))((-?)((0[1-9]|1[0-2])(\3([12]\d|0[1-9]|3[01]))?|W([0-4]\d|5[0-2])(-?[1-7])?|(00[1-9]|0[1-9]\d|[12]\d{2}|3([0-5]\d|6[1-6])))([T\s]((([01]\d|2[0-3])((:?)[0-5]\d)?|24:?00)([\.,]\d+(?!:))?)?(\17[0-5]\d([\.,]\d+)?)?([zZ]|([\+-])([01]\d|2[0-3]):?([0-5]\d)?)?)?)?$/;
-/* eslint-enable max-len */
-
-function isISO8601(str) {
-  (0, _assertString2.default)(str);
-  return iso8601.test(str);
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],84:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isISRC;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// see http://isrc.ifpi.org/en/isrc-standard/code-syntax
-var isrc = /^[A-Z]{2}[0-9A-Z]{3}\d{2}\d{5}$/;
-
-function isISRC(str) {
-  (0, _assertString2.default)(str);
-  return isrc.test(str);
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],85:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isISSN;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var issn = '^\\d{4}-?\\d{3}[\\dX]$';
-
-function isISSN(str) {
-  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-  (0, _assertString2.default)(str);
-  var testIssn = issn;
-  testIssn = options.require_hyphen ? testIssn.replace('?', '') : testIssn;
-  testIssn = options.case_sensitive ? new RegExp(testIssn) : new RegExp(testIssn, 'i');
-  if (!testIssn.test(str)) {
-    return false;
-  }
-  var issnDigits = str.replace('-', '');
-  var position = 8;
-  var checksum = 0;
-  var _iteratorNormalCompletion = true;
-  var _didIteratorError = false;
-  var _iteratorError = undefined;
-
-  try {
-    for (var _iterator = issnDigits[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-      var digit = _step.value;
-
-      var digitValue = digit.toUpperCase() === 'X' ? 10 : +digit;
-      checksum += digitValue * position;
-      --position;
-    }
-  } catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion && _iterator.return) {
-        _iterator.return();
-      }
-    } finally {
-      if (_didIteratorError) {
-        throw _iteratorError;
-      }
-    }
-  }
-
-  return checksum % 11 === 0;
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],86:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-exports.default = isIn;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-var _toString = require('./util/toString');
-
-var _toString2 = _interopRequireDefault(_toString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function isIn(str, options) {
-  (0, _assertString2.default)(str);
-  var i = void 0;
-  if (Object.prototype.toString.call(options) === '[object Array]') {
-    var array = [];
-    for (i in options) {
-      if ({}.hasOwnProperty.call(options, i)) {
-        array[i] = (0, _toString2.default)(options[i]);
-      }
-    }
-    return array.indexOf(str) >= 0;
-  } else if ((typeof options === 'undefined' ? 'undefined' : _typeof(options)) === 'object') {
-    return options.hasOwnProperty(str);
-  } else if (options && typeof options.indexOf === 'function') {
-    return options.indexOf(str) >= 0;
-  }
-  return false;
-}
-module.exports = exports['default'];
-},{"./util/assertString":118,"./util/toString":120}],87:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isInt;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var int = /^(?:[-+]?(?:0|[1-9][0-9]*))$/;
-var intLeadingZeroes = /^[-+]?[0-9]+$/;
-
-function isInt(str, options) {
-  (0, _assertString2.default)(str);
-  options = options || {};
-
-  // Get the regex to use for testing, based on whether
-  // leading zeroes are allowed or not.
-  var regex = options.hasOwnProperty('allow_leading_zeroes') && !options.allow_leading_zeroes ? int : intLeadingZeroes;
-
-  // Check min/max/lt/gt
-  var minCheckPassed = !options.hasOwnProperty('min') || str >= options.min;
-  var maxCheckPassed = !options.hasOwnProperty('max') || str <= options.max;
-  var ltCheckPassed = !options.hasOwnProperty('lt') || str < options.lt;
-  var gtCheckPassed = !options.hasOwnProperty('gt') || str > options.gt;
-
-  return regex.test(str) && minCheckPassed && maxCheckPassed && ltCheckPassed && gtCheckPassed;
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],88:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-exports.default = isJSON;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function isJSON(str) {
-  (0, _assertString2.default)(str);
-  try {
-    var obj = JSON.parse(str);
-    return !!obj && (typeof obj === 'undefined' ? 'undefined' : _typeof(obj)) === 'object';
-  } catch (e) {/* ignore */}
-  return false;
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],89:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-exports.default = function (str) {
-  (0, _assertString2.default)(str);
-  if (!str.includes(',')) return false;
-  var pair = str.split(',');
-  return lat.test(pair[0]) && long.test(pair[1]);
-};
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var lat = /^\(?[+-]?(90(\.0+)?|[1-8]?\d(\.\d+)?)$/;
-var long = /^\s?[+-]?(180(\.0+)?|1[0-7]\d(\.\d+)?|\d{1,2}(\.\d+)?)\)?$/;
-
-module.exports = exports['default'];
-},{"./util/assertString":118}],90:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-exports.default = isLength;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/* eslint-disable prefer-rest-params */
-function isLength(str, options) {
-  (0, _assertString2.default)(str);
-  var min = void 0;
-  var max = void 0;
-  if ((typeof options === 'undefined' ? 'undefined' : _typeof(options)) === 'object') {
-    min = options.min || 0;
-    max = options.max;
-  } else {
-    // backwards compatibility: isLength(str, min [, max])
-    min = arguments[1];
-    max = arguments[2];
-  }
-  var surrogatePairs = str.match(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g) || [];
-  var len = str.length - surrogatePairs.length;
-  return len >= min && (typeof max === 'undefined' || len <= max);
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],91:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isLowercase;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function isLowercase(str) {
-  (0, _assertString2.default)(str);
-  return str === str.toLowerCase();
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],92:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isMACAddress;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var macAddress = /^([0-9a-fA-F][0-9a-fA-F]:){5}([0-9a-fA-F][0-9a-fA-F])$/;
-
-function isMACAddress(str) {
-  (0, _assertString2.default)(str);
-  return macAddress.test(str);
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],93:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isMD5;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var md5 = /^[a-f0-9]{32}$/;
-
-function isMD5(str) {
-  (0, _assertString2.default)(str);
-  return md5.test(str);
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],94:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isMimeType;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/*
-  Checks if the provided string matches to a correct Media type format (MIME type)
-
-  This function only checks is the string format follows the
-  etablished rules by the according RFC specifications.
-  This function supports 'charset' in textual media types
-  (https://tools.ietf.org/html/rfc6657).
-
-  This function does not check against all the media types listed
-  by the IANA (https://www.iana.org/assignments/media-types/media-types.xhtml)
-  because of lightness purposes : it would require to include
-  all these MIME types in this librairy, which would weigh it
-  significantly. This kind of effort maybe is not worth for the use that
-  this function has in this entire librairy.
-
-  More informations in the RFC specifications :
-  - https://tools.ietf.org/html/rfc2045
-  - https://tools.ietf.org/html/rfc2046
-  - https://tools.ietf.org/html/rfc7231#section-3.1.1.1
-  - https://tools.ietf.org/html/rfc7231#section-3.1.1.5
-*/
-
-// Match simple MIME types
-// NB :
-//   Subtype length must not exceed 100 characters.
-//   This rule does not comply to the RFC specs (what is the max length ?).
-var mimeTypeSimple = /^(application|audio|font|image|message|model|multipart|text|video)\/[a-zA-Z0-9\.\-\+]{1,100}$/i; // eslint-disable-line max-len
-
-// Handle "charset" in "text/*"
-var mimeTypeText = /^text\/[a-zA-Z0-9\.\-\+]{1,100};\s?charset=("[a-zA-Z0-9\.\-\+\s]{0,70}"|[a-zA-Z0-9\.\-\+]{0,70})(\s?\([a-zA-Z0-9\.\-\+\s]{1,20}\))?$/i; // eslint-disable-line max-len
-
-// Handle "boundary" in "multipart/*"
-var mimeTypeMultipart = /^multipart\/[a-zA-Z0-9\.\-\+]{1,100}(;\s?(boundary|charset)=("[a-zA-Z0-9\.\-\+\s]{0,70}"|[a-zA-Z0-9\.\-\+]{0,70})(\s?\([a-zA-Z0-9\.\-\+\s]{1,20}\))?){0,2}$/i; // eslint-disable-line max-len
-
-function isMimeType(str) {
-  (0, _assertString2.default)(str);
-  return mimeTypeSimple.test(str) || mimeTypeText.test(str) || mimeTypeMultipart.test(str);
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],95:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isMobilePhone;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/* eslint-disable max-len */
-var phones = {
-  'ar-AE': /^((\+?971)|0)?5[024568]\d{7}$/,
-  'ar-DZ': /^(\+?213|0)(5|6|7)\d{8}$/,
-  'ar-EG': /^((\+?20)|0)?1[012]\d{8}$/,
-  'ar-JO': /^(\+?962|0)?7[789]\d{7}$/,
-  'ar-SA': /^(!?(\+?966)|0)?5\d{8}$/,
-  'ar-SY': /^(!?(\+?963)|0)?9\d{8}$/,
-  'be-BY': /^(\+?375)?(24|25|29|33|44)\d{7}$/,
-  'bg-BG': /^(\+?359|0)?8[789]\d{7}$/,
-  'cs-CZ': /^(\+?420)? ?[1-9][0-9]{2} ?[0-9]{3} ?[0-9]{3}$/,
-  'da-DK': /^(\+?45)?\s?\d{2}\s?\d{2}\s?\d{2}\s?\d{2}$/,
-  'de-DE': /^(\+?49[ \.\-])?([\(]{1}[0-9]{1,6}[\)])?([0-9 \.\-\/]{3,20})((x|ext|extension)[ ]?[0-9]{1,4})?$/,
-  'el-GR': /^(\+?30|0)?(69\d{8})$/,
-  'en-AU': /^(\+?61|0)4\d{8}$/,
-  'en-GB': /^(\+?44|0)7\d{9}$/,
-  'en-HK': /^(\+?852\-?)?[456789]\d{3}\-?\d{4}$/,
-  'en-IN': /^(\+?91|0)?[6789]\d{9}$/,
-  'en-KE': /^(\+?254|0)?[7]\d{8}$/,
-  'en-NG': /^(\+?234|0)?[789]\d{9}$/,
-  'en-NZ': /^(\+?64|0)2\d{7,9}$/,
-  'en-PK': /^((\+92)|(0092))-{0,1}\d{3}-{0,1}\d{7}$|^\d{11}$|^\d{4}-\d{7}$/,
-  'en-RW': /^(\+?250|0)?[7]\d{8}$/,
-  'en-SG': /^(\+65)?[89]\d{7}$/,
-  'en-TZ': /^(\+?255|0)?[67]\d{8}$/,
-  'en-UG': /^(\+?256|0)?[7]\d{8}$/,
-  'en-US': /^(\+?1)?[2-9]\d{2}[2-9](?!11)\d{6}$/,
-  'en-ZA': /^(\+?27|0)\d{9}$/,
-  'en-ZM': /^(\+?26)?09[567]\d{7}$/,
-  'es-ES': /^(\+?34)?(6\d{1}|7[1234])\d{7}$/,
-  'et-EE': /^(\+?372)?\s?(5|8[1-4])\s?([0-9]\s?){6,7}$/,
-  'fa-IR': /^(\+?98[\-\s]?|0)9[0-39]\d[\-\s]?\d{3}[\-\s]?\d{4}$/,
-  'fi-FI': /^(\+?358|0)\s?(4(0|1|2|4|5|6)?|50)\s?(\d\s?){4,8}\d$/,
-  'fo-FO': /^(\+?298)?\s?\d{2}\s?\d{2}\s?\d{2}$/,
-  'fr-FR': /^(\+?33|0)[67]\d{8}$/,
-  'he-IL': /^(\+972|0)([23489]|5[012345689]|77)[1-9]\d{6}/,
-  'hu-HU': /^(\+?36)(20|30|70)\d{7}$/,
-  'id-ID': /^(\+?62|0[1-9])[\s|\d]+$/,
-  'it-IT': /^(\+?39)?\s?3\d{2} ?\d{6,7}$/,
-  'ja-JP': /^(\+?81|0)[789]0[ \-]?[1-9]\d{2}[ \-]?\d{5}$/,
-  'kk-KZ': /^(\+?7|8)?7\d{9}$/,
-  'kl-GL': /^(\+?299)?\s?\d{2}\s?\d{2}\s?\d{2}$/,
-  'ko-KR': /^((\+?82)[ \-]?)?0?1([0|1|6|7|8|9]{1})[ \-]?\d{3,4}[ \-]?\d{4}$/,
-  'lt-LT': /^(\+370|8)\d{8}$/,
-  'ms-MY': /^(\+?6?01){1}(([145]{1}(\-|\s)?\d{7,8})|([236789]{1}(\s|\-)?\d{7}))$/,
-  'nb-NO': /^(\+?47)?[49]\d{7}$/,
-  'nl-BE': /^(\+?32|0)4?\d{8}$/,
-  'nn-NO': /^(\+?47)?[49]\d{7}$/,
-  'pl-PL': /^(\+?48)? ?[5-8]\d ?\d{3} ?\d{2} ?\d{2}$/,
-  'pt-BR': /^(\+?55|0)\-?[1-9]{2}\-?[2-9]{1}\d{3,4}\-?\d{4}$/,
-  'pt-PT': /^(\+?351)?9[1236]\d{7}$/,
-  'ro-RO': /^(\+?4?0)\s?7\d{2}(\/|\s|\.|\-)?\d{3}(\s|\.|\-)?\d{3}$/,
-  'ru-RU': /^(\+?7|8)?9\d{9}$/,
-  'sk-SK': /^(\+?421)? ?[1-9][0-9]{2} ?[0-9]{3} ?[0-9]{3}$/,
-  'sr-RS': /^(\+3816|06)[- \d]{5,9}$/,
-  'th-TH': /^(\+66|66|0)\d{9}$/,
-  'tr-TR': /^(\+?90|0)?5\d{9}$/,
-  'uk-UA': /^(\+?38|8)?0\d{9}$/,
-  'vi-VN': /^(\+?84|0)?((1(2([0-9])|6([2-9])|88|99))|(9((?!5)[0-9])))([0-9]{7})$/,
-  'zh-CN': /^(\+?0?86\-?)?1[3456789]\d{9}$/,
-  'zh-TW': /^(\+?886\-?|0)?9\d{8}$/
-};
-/* eslint-enable max-len */
-
-// aliases
-phones['en-CA'] = phones['en-US'];
-phones['fr-BE'] = phones['nl-BE'];
-phones['zh-HK'] = phones['en-HK'];
-
-function isMobilePhone(str, locale, options) {
-  (0, _assertString2.default)(str);
-  if (options && options.strictMode && !str.startsWith('+')) {
-    return false;
-  }
-  if (locale in phones) {
-    return phones[locale].test(str);
-  } else if (locale === 'any') {
-    for (var key in phones) {
-      if (phones.hasOwnProperty(key)) {
-        var phone = phones[key];
-        if (phone.test(str)) {
-          return true;
-        }
-      }
-    }
-    return false;
-  }
-  throw new Error('Invalid locale \'' + locale + '\'');
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],96:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isMongoId;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-var _isHexadecimal = require('./isHexadecimal');
-
-var _isHexadecimal2 = _interopRequireDefault(_isHexadecimal);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function isMongoId(str) {
-  (0, _assertString2.default)(str);
-  return (0, _isHexadecimal2.default)(str) && str.length === 24;
-}
-module.exports = exports['default'];
-},{"./isHexadecimal":78,"./util/assertString":118}],97:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isMultibyte;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/* eslint-disable no-control-regex */
-var multibyte = /[^\x00-\x7F]/;
-/* eslint-enable no-control-regex */
-
-function isMultibyte(str) {
-  (0, _assertString2.default)(str);
-  return multibyte.test(str);
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],98:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isNumeric;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var numeric = /^[-+]?[0-9]+$/;
-
-function isNumeric(str) {
-  (0, _assertString2.default)(str);
-  return numeric.test(str);
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],99:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isPort;
-
-var _isInt = require('./isInt');
-
-var _isInt2 = _interopRequireDefault(_isInt);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function isPort(str) {
-  return (0, _isInt2.default)(str, { min: 0, max: 65535 });
-}
-module.exports = exports['default'];
-},{"./isInt":87}],100:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.locales = undefined;
-
-exports.default = function (str, locale) {
-  (0, _assertString2.default)(str);
-  if (locale in patterns) {
-    return patterns[locale].test(str);
-  } else if (locale === 'any') {
-    for (var key in patterns) {
-      if (patterns.hasOwnProperty(key)) {
-        var pattern = patterns[key];
-        if (pattern.test(str)) {
-          return true;
-        }
-      }
-    }
-    return false;
-  }
-  throw new Error('Invalid locale \'' + locale + '\'');
-};
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// common patterns
-var threeDigit = /^\d{3}$/;
-var fourDigit = /^\d{4}$/;
-var fiveDigit = /^\d{5}$/;
-var sixDigit = /^\d{6}$/;
-
-var patterns = {
-  AT: fourDigit,
-  AU: fourDigit,
-  BE: fourDigit,
-  BG: fourDigit,
-  CA: /^[ABCEGHJKLMNPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][\s\-]?\d[ABCEGHJ-NPRSTV-Z]\d$/i,
-  CH: fourDigit,
-  CZ: /^\d{3}\s?\d{2}$/,
-  DE: fiveDigit,
-  DK: fourDigit,
-  DZ: fiveDigit,
-  ES: fiveDigit,
-  FI: fiveDigit,
-  FR: /^\d{2}\s?\d{3}$/,
-  GB: /^(gir\s?0aa|[a-z]{1,2}\d[\da-z]?\s?(\d[a-z]{2})?)$/i,
-  GR: /^\d{3}\s?\d{2}$/,
-  IL: fiveDigit,
-  IN: sixDigit,
-  IS: threeDigit,
-  IT: fiveDigit,
-  JP: /^\d{3}\-\d{4}$/,
-  KE: fiveDigit,
-  LI: /^(948[5-9]|949[0-7])$/,
-  MX: fiveDigit,
-  NL: /^\d{4}\s?[a-z]{2}$/i,
-  NO: fourDigit,
-  PL: /^\d{2}\-\d{3}$/,
-  PT: /^\d{4}\-\d{3}?$/,
-  RO: sixDigit,
-  RU: sixDigit,
-  SA: fiveDigit,
-  SE: /^\d{3}\s?\d{2}$/,
-  TW: /^\d{3}(\d{2})?$/,
-  US: /^\d{5}(-\d{4})?$/,
-  ZA: fourDigit,
-  ZM: fiveDigit
-};
-
-var locales = exports.locales = Object.keys(patterns);
-},{"./util/assertString":118}],101:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isSurrogatePair;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var surrogatePair = /[\uD800-\uDBFF][\uDC00-\uDFFF]/;
-
-function isSurrogatePair(str) {
-  (0, _assertString2.default)(str);
-  return surrogatePair.test(str);
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],102:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isURL;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-var _isFQDN = require('./isFQDN');
-
-var _isFQDN2 = _interopRequireDefault(_isFQDN);
-
-var _isIP = require('./isIP');
-
-var _isIP2 = _interopRequireDefault(_isIP);
-
-var _merge = require('./util/merge');
-
-var _merge2 = _interopRequireDefault(_merge);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var default_url_options = {
-  protocols: ['http', 'https', 'ftp'],
-  require_tld: true,
-  require_protocol: false,
-  require_host: true,
-  require_valid_protocol: true,
-  allow_underscores: false,
-  allow_trailing_dot: false,
-  allow_protocol_relative_urls: false
-};
-
-var wrapped_ipv6 = /^\[([^\]]+)\](?::([0-9]+))?$/;
-
-function isRegExp(obj) {
-  return Object.prototype.toString.call(obj) === '[object RegExp]';
-}
-
-function checkHost(host, matches) {
-  for (var i = 0; i < matches.length; i++) {
-    var match = matches[i];
-    if (host === match || isRegExp(match) && match.test(host)) {
-      return true;
-    }
-  }
-  return false;
-}
-
-function isURL(url, options) {
-  (0, _assertString2.default)(url);
-  if (!url || url.length >= 2083 || /[\s<>]/.test(url)) {
-    return false;
-  }
-  if (url.indexOf('mailto:') === 0) {
-    return false;
-  }
-  options = (0, _merge2.default)(options, default_url_options);
-  var protocol = void 0,
-      auth = void 0,
-      host = void 0,
-      hostname = void 0,
-      port = void 0,
-      port_str = void 0,
-      split = void 0,
-      ipv6 = void 0;
-
-  split = url.split('#');
-  url = split.shift();
-
-  split = url.split('?');
-  url = split.shift();
-
-  split = url.split('://');
-  if (split.length > 1) {
-    protocol = split.shift();
-    if (options.require_valid_protocol && options.protocols.indexOf(protocol) === -1) {
-      return false;
-    }
-  } else if (options.require_protocol) {
-    return false;
-  } else if (options.allow_protocol_relative_urls && url.substr(0, 2) === '//') {
-    split[0] = url.substr(2);
-  }
-  url = split.join('://');
-
-  if (url === '') {
-    return false;
-  }
-
-  split = url.split('/');
-  url = split.shift();
-
-  if (url === '' && !options.require_host) {
-    return true;
-  }
-
-  split = url.split('@');
-  if (split.length > 1) {
-    auth = split.shift();
-    if (auth.indexOf(':') >= 0 && auth.split(':').length > 2) {
-      return false;
-    }
-  }
-  hostname = split.join('@');
-
-  port_str = null;
-  ipv6 = null;
-  var ipv6_match = hostname.match(wrapped_ipv6);
-  if (ipv6_match) {
-    host = '';
-    ipv6 = ipv6_match[1];
-    port_str = ipv6_match[2] || null;
-  } else {
-    split = hostname.split(':');
-    host = split.shift();
-    if (split.length) {
-      port_str = split.join(':');
-    }
-  }
-
-  if (port_str !== null) {
-    port = parseInt(port_str, 10);
-    if (!/^[0-9]+$/.test(port_str) || port <= 0 || port > 65535) {
-      return false;
-    }
-  }
-
-  if (!(0, _isIP2.default)(host) && !(0, _isFQDN2.default)(host, options) && (!ipv6 || !(0, _isIP2.default)(ipv6, 6))) {
-    return false;
-  }
-
-  host = host || ipv6;
-
-  if (options.host_whitelist && !checkHost(host, options.host_whitelist)) {
-    return false;
-  }
-  if (options.host_blacklist && checkHost(host, options.host_blacklist)) {
-    return false;
-  }
-
-  return true;
-}
-module.exports = exports['default'];
-},{"./isFQDN":72,"./isIP":79,"./util/assertString":118,"./util/merge":119}],103:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isUUID;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var uuid = {
-  3: /^[0-9A-F]{8}-[0-9A-F]{4}-3[0-9A-F]{3}-[0-9A-F]{4}-[0-9A-F]{12}$/i,
-  4: /^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i,
-  5: /^[0-9A-F]{8}-[0-9A-F]{4}-5[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i,
-  all: /^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}$/i
-};
-
-function isUUID(str) {
-  var version = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'all';
-
-  (0, _assertString2.default)(str);
-  var pattern = uuid[version];
-  return pattern && pattern.test(str);
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],104:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isUppercase;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function isUppercase(str) {
-  (0, _assertString2.default)(str);
-  return str === str.toUpperCase();
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],105:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isVariableWidth;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-var _isFullWidth = require('./isFullWidth');
-
-var _isHalfWidth = require('./isHalfWidth');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function isVariableWidth(str) {
-  (0, _assertString2.default)(str);
-  return _isFullWidth.fullWidth.test(str) && _isHalfWidth.halfWidth.test(str);
-}
-module.exports = exports['default'];
-},{"./isFullWidth":74,"./isHalfWidth":75,"./util/assertString":118}],106:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isWhitelisted;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function isWhitelisted(str, chars) {
-  (0, _assertString2.default)(str);
-  for (var i = str.length - 1; i >= 0; i--) {
-    if (chars.indexOf(str[i]) === -1) {
-      return false;
-    }
-  }
-  return true;
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],107:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = ltrim;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function ltrim(str, chars) {
-  (0, _assertString2.default)(str);
-  var pattern = chars ? new RegExp('^[' + chars + ']+', 'g') : /^\s+/g;
-  return str.replace(pattern, '');
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],108:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = matches;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function matches(str, pattern, modifiers) {
-  (0, _assertString2.default)(str);
-  if (Object.prototype.toString.call(pattern) !== '[object RegExp]') {
-    pattern = new RegExp(pattern, modifiers);
-  }
-  return pattern.test(str);
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],109:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = normalizeEmail;
-
-var _merge = require('./util/merge');
-
-var _merge2 = _interopRequireDefault(_merge);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var default_normalize_email_options = {
-  // The following options apply to all email addresses
-  // Lowercases the local part of the email address.
-  // Please note this may violate RFC 5321 as per http://stackoverflow.com/a/9808332/192024).
-  // The domain is always lowercased, as per RFC 1035
-  all_lowercase: true,
-
-  // The following conversions are specific to GMail
-  // Lowercases the local part of the GMail address (known to be case-insensitive)
-  gmail_lowercase: true,
-  // Removes dots from the local part of the email address, as that's ignored by GMail
-  gmail_remove_dots: true,
-  // Removes the subaddress (e.g. "+foo") from the email address
-  gmail_remove_subaddress: true,
-  // Conversts the googlemail.com domain to gmail.com
-  gmail_convert_googlemaildotcom: true,
-
-  // The following conversions are specific to Outlook.com / Windows Live / Hotmail
-  // Lowercases the local part of the Outlook.com address (known to be case-insensitive)
-  outlookdotcom_lowercase: true,
-  // Removes the subaddress (e.g. "+foo") from the email address
-  outlookdotcom_remove_subaddress: true,
-
-  // The following conversions are specific to Yahoo
-  // Lowercases the local part of the Yahoo address (known to be case-insensitive)
-  yahoo_lowercase: true,
-  // Removes the subaddress (e.g. "-foo") from the email address
-  yahoo_remove_subaddress: true,
-
-  // The following conversions are specific to iCloud
-  // Lowercases the local part of the iCloud address (known to be case-insensitive)
-  icloud_lowercase: true,
-  // Removes the subaddress (e.g. "+foo") from the email address
-  icloud_remove_subaddress: true
-};
-
-// List of domains used by iCloud
-var icloud_domains = ['icloud.com', 'me.com'];
-
-// List of domains used by Outlook.com and its predecessors
-// This list is likely incomplete.
-// Partial reference:
-// https://blogs.office.com/2013/04/17/outlook-com-gets-two-step-verification-sign-in-by-alias-and-new-international-domains/
-var outlookdotcom_domains = ['hotmail.at', 'hotmail.be', 'hotmail.ca', 'hotmail.cl', 'hotmail.co.il', 'hotmail.co.nz', 'hotmail.co.th', 'hotmail.co.uk', 'hotmail.com', 'hotmail.com.ar', 'hotmail.com.au', 'hotmail.com.br', 'hotmail.com.gr', 'hotmail.com.mx', 'hotmail.com.pe', 'hotmail.com.tr', 'hotmail.com.vn', 'hotmail.cz', 'hotmail.de', 'hotmail.dk', 'hotmail.es', 'hotmail.fr', 'hotmail.hu', 'hotmail.id', 'hotmail.ie', 'hotmail.in', 'hotmail.it', 'hotmail.jp', 'hotmail.kr', 'hotmail.lv', 'hotmail.my', 'hotmail.ph', 'hotmail.pt', 'hotmail.sa', 'hotmail.sg', 'hotmail.sk', 'live.be', 'live.co.uk', 'live.com', 'live.com.ar', 'live.com.mx', 'live.de', 'live.es', 'live.eu', 'live.fr', 'live.it', 'live.nl', 'msn.com', 'outlook.at', 'outlook.be', 'outlook.cl', 'outlook.co.il', 'outlook.co.nz', 'outlook.co.th', 'outlook.com', 'outlook.com.ar', 'outlook.com.au', 'outlook.com.br', 'outlook.com.gr', 'outlook.com.pe', 'outlook.com.tr', 'outlook.com.vn', 'outlook.cz', 'outlook.de', 'outlook.dk', 'outlook.es', 'outlook.fr', 'outlook.hu', 'outlook.id', 'outlook.ie', 'outlook.in', 'outlook.it', 'outlook.jp', 'outlook.kr', 'outlook.lv', 'outlook.my', 'outlook.ph', 'outlook.pt', 'outlook.sa', 'outlook.sg', 'outlook.sk', 'passport.com'];
-
-// List of domains used by Yahoo Mail
-// This list is likely incomplete
-var yahoo_domains = ['rocketmail.com', 'yahoo.ca', 'yahoo.co.uk', 'yahoo.com', 'yahoo.de', 'yahoo.fr', 'yahoo.in', 'yahoo.it', 'ymail.com'];
-
-function normalizeEmail(email, options) {
-  options = (0, _merge2.default)(options, default_normalize_email_options);
-
-  var raw_parts = email.split('@');
-  var domain = raw_parts.pop();
-  var user = raw_parts.join('@');
-  var parts = [user, domain];
-
-  // The domain is always lowercased, as it's case-insensitive per RFC 1035
-  parts[1] = parts[1].toLowerCase();
-
-  if (parts[1] === 'gmail.com' || parts[1] === 'googlemail.com') {
-    // Address is GMail
-    if (options.gmail_remove_subaddress) {
-      parts[0] = parts[0].split('+')[0];
-    }
-    if (options.gmail_remove_dots) {
-      parts[0] = parts[0].replace(/\./g, '');
-    }
-    if (!parts[0].length) {
-      return false;
-    }
-    if (options.all_lowercase || options.gmail_lowercase) {
-      parts[0] = parts[0].toLowerCase();
-    }
-    parts[1] = options.gmail_convert_googlemaildotcom ? 'gmail.com' : parts[1];
-  } else if (~icloud_domains.indexOf(parts[1])) {
-    // Address is iCloud
-    if (options.icloud_remove_subaddress) {
-      parts[0] = parts[0].split('+')[0];
-    }
-    if (!parts[0].length) {
-      return false;
-    }
-    if (options.all_lowercase || options.icloud_lowercase) {
-      parts[0] = parts[0].toLowerCase();
-    }
-  } else if (~outlookdotcom_domains.indexOf(parts[1])) {
-    // Address is Outlook.com
-    if (options.outlookdotcom_remove_subaddress) {
-      parts[0] = parts[0].split('+')[0];
-    }
-    if (!parts[0].length) {
-      return false;
-    }
-    if (options.all_lowercase || options.outlookdotcom_lowercase) {
-      parts[0] = parts[0].toLowerCase();
-    }
-  } else if (~yahoo_domains.indexOf(parts[1])) {
-    // Address is Yahoo
-    if (options.yahoo_remove_subaddress) {
-      var components = parts[0].split('-');
-      parts[0] = components.length > 1 ? components.slice(0, -1).join('-') : components[0];
-    }
-    if (!parts[0].length) {
-      return false;
-    }
-    if (options.all_lowercase || options.yahoo_lowercase) {
-      parts[0] = parts[0].toLowerCase();
-    }
-  } else if (options.all_lowercase) {
-    // Any other address
-    parts[0] = parts[0].toLowerCase();
-  }
-  return parts.join('@');
-}
-module.exports = exports['default'];
-},{"./util/merge":119}],110:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = rtrim;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function rtrim(str, chars) {
-  (0, _assertString2.default)(str);
-  var pattern = chars ? new RegExp('[' + chars + ']') : /\s/;
-
-  var idx = str.length - 1;
-  while (idx >= 0 && pattern.test(str[idx])) {
-    idx--;
-  }
-
-  return idx < str.length ? str.substr(0, idx + 1) : str;
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],111:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = stripLow;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-var _blacklist = require('./blacklist');
-
-var _blacklist2 = _interopRequireDefault(_blacklist);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function stripLow(str, keep_new_lines) {
-  (0, _assertString2.default)(str);
-  var chars = keep_new_lines ? '\\x00-\\x09\\x0B\\x0C\\x0E-\\x1F\\x7F' : '\\x00-\\x1F\\x7F';
-  return (0, _blacklist2.default)(str, chars);
-}
-module.exports = exports['default'];
-},{"./blacklist":53,"./util/assertString":118}],112:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = toBoolean;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function toBoolean(str, strict) {
-  (0, _assertString2.default)(str);
-  if (strict) {
-    return str === '1' || str === 'true';
-  }
-  return str !== '0' && str !== 'false' && str !== '';
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],113:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = toDate;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function toDate(date) {
-  (0, _assertString2.default)(date);
-  date = Date.parse(date);
-  return !isNaN(date) ? new Date(date) : null;
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],114:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = toFloat;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function toFloat(str) {
-  (0, _assertString2.default)(str);
-  return parseFloat(str);
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],115:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = toInt;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function toInt(str, radix) {
-  (0, _assertString2.default)(str);
-  return parseInt(str, radix || 10);
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],116:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = trim;
-
-var _rtrim = require('./rtrim');
-
-var _rtrim2 = _interopRequireDefault(_rtrim);
-
-var _ltrim = require('./ltrim');
-
-var _ltrim2 = _interopRequireDefault(_ltrim);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function trim(str, chars) {
-  return (0, _rtrim2.default)((0, _ltrim2.default)(str, chars), chars);
-}
-module.exports = exports['default'];
-},{"./ltrim":107,"./rtrim":110}],117:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = unescape;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function unescape(str) {
-  (0, _assertString2.default)(str);
-  return str.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#x27;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&#x2F;/g, '/').replace(/&#x5C;/g, '\\').replace(/&#96;/g, '`');
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],118:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = assertString;
-function assertString(input) {
-  var isString = typeof input === 'string' || input instanceof String;
-
-  if (!isString) {
-    throw new TypeError('This library (validator.js) validates strings only');
-  }
-}
-module.exports = exports['default'];
-},{}],119:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = merge;
-function merge() {
-  var obj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var defaults = arguments[1];
-
-  for (var key in defaults) {
-    if (typeof obj[key] === 'undefined') {
-      obj[key] = defaults[key];
-    }
-  }
-  return obj;
-}
-module.exports = exports['default'];
-},{}],120:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-exports.default = toString;
-function toString(input) {
-  if ((typeof input === 'undefined' ? 'undefined' : _typeof(input)) === 'object' && input !== null) {
-    if (typeof input.toString === 'function') {
-      input = input.toString();
-    } else {
-      input = '[object Object]';
-    }
-  } else if (input === null || typeof input === 'undefined' || isNaN(input) && !input.length) {
-    input = '';
-  }
-  return String(input);
-}
-module.exports = exports['default'];
-},{}],121:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = whitelist;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function whitelist(str, chars) {
-  (0, _assertString2.default)(str);
-  return str.replace(new RegExp('[^' + chars + ']+', 'g'), '');
-}
-module.exports = exports['default'];
-},{"./util/assertString":118}],122:[function(require,module,exports){
-"use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var transporters_1 = require("../transporters");
-/**
- * AuthClient abstract class
- * 抽象認証クライアント
- * @export
- */
-var AuthClient = /** @class */ (function () {
-    function AuthClient() {
-    }
-    return AuthClient;
-}());
-exports.AuthClient = AuthClient;
-/**
- * test auth client
- * テスト認証クライアント
- * @export
- */
-// tslint:disable-next-line:no-single-line-block-comment
-/* istanbul ignore next */
-var StubAuthClient = /** @class */ (function () {
-    function StubAuthClient() {
-    }
-    // tslint:disable-next-line:prefer-function-over-method
-    StubAuthClient.prototype.fetch = function (url, options, expectedStatusCodes) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, (new transporters_1.DefaultTransporter(expectedStatusCodes)).fetch(url, options)];
-            });
-        });
-    };
-    // tslint:disable-next-line:prefer-function-over-method
-    StubAuthClient.prototype.getAccessToken = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, 'access_token'];
-            });
-        });
-    };
-    return StubAuthClient;
-}());
-exports.StubAuthClient = StubAuthClient;
-
-},{"../transporters":135}],123:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-// tslint:disable:max-classes-per-file
-/**
- * Sasaki API Service Library for Javascript
- * @ignore
- */
-var factory = require("@motionpicture/sskts-factory");
-var authClient_1 = require("./auth/authClient");
-var account_1 = require("./service/account");
-var action_1 = require("./service/action");
-var event_1 = require("./service/event");
-var order_1 = require("./service/order");
-var organization_1 = require("./service/organization");
-var person_1 = require("./service/person");
-var place_1 = require("./service/place");
-var programMembership_1 = require("./service/programMembership");
-var placeOrder_1 = require("./service/transaction/placeOrder");
-var returnOrder_1 = require("./service/transaction/returnOrder");
-var transporters = require("./transporters");
-exports.factory = factory;
-exports.transporters = transporters;
-/**
- * auth client abstract class
- * 認証クライアント抽象クラス
- * @export
- */
-var Auth = /** @class */ (function (_super) {
-    __extends(Auth, _super);
-    function Auth() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    return Auth;
-}(authClient_1.AuthClient));
-exports.Auth = Auth;
-var service;
-(function (service) {
-    /**
-     * Pecorino口座サービス
-     */
-    var Account = /** @class */ (function (_super) {
-        __extends(Account, _super);
-        function Account() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        return Account;
-    }(account_1.AccountService));
-    service.Account = Account;
-    /**
-     * アクションサービス
-     */
-    var Action = /** @class */ (function (_super) {
-        __extends(Action, _super);
-        function Action() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        return Action;
-    }(action_1.ActionService));
-    service.Action = Action;
-    /**
-     * イベントサービス
-     */
-    var Event = /** @class */ (function (_super) {
-        __extends(Event, _super);
-        function Event() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        return Event;
-    }(event_1.EventService));
-    service.Event = Event;
-    /**
-     * 注文サービス
-     */
-    var Order = /** @class */ (function (_super) {
-        __extends(Order, _super);
-        function Order() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        return Order;
-    }(order_1.OrderService));
-    service.Order = Order;
-    /**
-     * 組織サービス
-     */
-    var Organization = /** @class */ (function (_super) {
-        __extends(Organization, _super);
-        function Organization() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        return Organization;
-    }(organization_1.OrganizationService));
-    service.Organization = Organization;
-    /**
-     * ユーザーサービス
-     */
-    var Person = /** @class */ (function (_super) {
-        __extends(Person, _super);
-        function Person() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        return Person;
-    }(person_1.PersonService));
-    service.Person = Person;
-    /**
-     * 場所サービス
-     */
-    var Place = /** @class */ (function (_super) {
-        __extends(Place, _super);
-        function Place() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        return Place;
-    }(place_1.PlaceService));
-    service.Place = Place;
-    /**
-     * 会員プログラムサービス
-     */
-    var ProgramMembership = /** @class */ (function (_super) {
-        __extends(ProgramMembership, _super);
-        function ProgramMembership() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        return ProgramMembership;
-    }(programMembership_1.ProgramMembershipService));
-    service.ProgramMembership = ProgramMembership;
-    var transaction;
-    (function (transaction) {
-        /**
-         * 注文取引サービス
-         */
-        var PlaceOrder = /** @class */ (function (_super) {
-            __extends(PlaceOrder, _super);
-            function PlaceOrder() {
-                return _super !== null && _super.apply(this, arguments) || this;
-            }
-            return PlaceOrder;
-        }(placeOrder_1.PlaceOrderTransactionService));
-        transaction.PlaceOrder = PlaceOrder;
-        /**
-         * 注文返品取引サービス
-         */
-        var ReturnOrder = /** @class */ (function (_super) {
-            __extends(ReturnOrder, _super);
-            function ReturnOrder() {
-                return _super !== null && _super.apply(this, arguments) || this;
-            }
-            return ReturnOrder;
-        }(returnOrder_1.ReturnOrderTransactionService));
-        transaction.ReturnOrder = ReturnOrder;
-    })(transaction = service.transaction || (service.transaction = {}));
-})(service = exports.service || (exports.service = {}));
-
-},{"./auth/authClient":122,"./service/account":125,"./service/action":126,"./service/event":127,"./service/order":128,"./service/organization":129,"./service/person":130,"./service/place":131,"./service/programMembership":132,"./service/transaction/placeOrder":133,"./service/transaction/returnOrder":134,"./transporters":135,"@motionpicture/sskts-factory":227}],124:[function(require,module,exports){
-"use strict";
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var qs = require("qs");
-var transporters_1 = require("./transporters");
-/**
- * base service class
- * @export
- */
-var Service = /** @class */ (function () {
-    function Service(options) {
-        this.options = options;
-    }
-    /**
-     * Create and send request to API
-     */
-    Service.prototype.fetch = function (options) {
-        return __awaiter(this, void 0, void 0, function () {
-            var defaultOptions, baseUrl, url, querystrings, headers, fetchOptions, transporter;
-            return __generator(this, function (_a) {
-                defaultOptions = {
-                    headers: {},
-                    method: 'GET'
-                };
-                // tslint:disable-next-line:no-parameter-reassignment
-                options = __assign({}, defaultOptions, options);
-                baseUrl = this.options.endpoint;
-                url = "" + baseUrl + options.uri;
-                querystrings = qs.stringify(options.qs);
-                url += (querystrings.length > 0) ? "?" + querystrings : '';
-                headers = __assign({
-                    Accept: 'application/json',
-                    'Content-Type': 'application/json'
-                }, options.headers);
-                fetchOptions = {
-                    method: options.method,
-                    headers: headers,
-                    body: JSON.stringify(options.body)
-                };
-                // create request (using authClient or otherwise and return request obj)
-                if (this.options.auth !== undefined) {
-                    return [2 /*return*/, this.options.auth.fetch(url, fetchOptions, options.expectedStatusCodes)];
-                }
-                else {
-                    transporter = (this.options.transporter !== undefined) ? this.options.transporter : new transporters_1.DefaultTransporter(options.expectedStatusCodes);
-                    return [2 /*return*/, transporter.fetch(url, fetchOptions)];
-                }
-                return [2 /*return*/];
-            });
-        });
-    };
-    return Service;
-}());
-exports.Service = Service;
-
-},{"./transporters":135,"qs":251}],125:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var http_status_1 = require("http-status");
-var service_1 = require("../service");
-/**
- * Pecorino口座サービス
- */
-var AccountService = /** @class */ (function (_super) {
-    __extends(AccountService, _super);
-    function AccountService() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    /**
-     * Pecorinoポイントを入金する
-     * 管理者権限が必要です。
-     */
-    AccountService.prototype.deposit = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: '/accounts/transactions/deposit',
-                        method: 'POST',
-                        body: params,
-                        expectedStatusCodes: [http_status_1.NO_CONTENT]
-                    })];
-            });
-        });
-    };
-    return AccountService;
-}(service_1.Service));
-exports.AccountService = AccountService;
-
-},{"../service":124,"http-status":238}],126:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var http_status_1 = require("http-status");
-var service_1 = require("../service");
-/**
- * action service
- */
-var ActionService = /** @class */ (function (_super) {
-    __extends(ActionService, _super);
-    function ActionService() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    /**
-     * チケット印刷
-     */
-    ActionService.prototype.printTicket = function (
-    /**
-     * チケットオブジェクト
-     */
-    params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: '/actions/print/ticket',
-                        method: 'POST',
-                        body: params,
-                        expectedStatusCodes: [http_status_1.CREATED]
-                    })];
-            });
-        });
-    };
-    /**
-     * チケット印刷アクション検索
-     */
-    ActionService.prototype.searchPrintTicket = function (
-    /**
-     * 検索条件
-     */
-    params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: '/actions/print/ticket',
-                        method: 'GET',
-                        qs: params,
-                        expectedStatusCodes: [http_status_1.OK]
-                    })];
-            });
-        });
-    };
-    return ActionService;
-}(service_1.Service));
-exports.ActionService = ActionService;
-
-},{"../service":124,"http-status":238}],127:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var http_status_1 = require("http-status");
-var service_1 = require("../service");
-/**
- * event service
- */
-var EventService = /** @class */ (function (_super) {
-    __extends(EventService, _super);
-    function EventService() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    /**
-     * 上映イベント検索
-     */
-    EventService.prototype.searchIndividualScreeningEvent = function (
-    /**
-     * 検索条件
-     */
-    params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: '/events/individualScreeningEvent',
-                        method: 'GET',
-                        qs: params,
-                        expectedStatusCodes: [http_status_1.OK]
-                    })];
-            });
-        });
-    };
-    /**
-     * 上映イベント情報取得
-     */
-    EventService.prototype.findIndividualScreeningEvent = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/events/individualScreeningEvent/" + params.identifier,
-                        method: 'GET',
-                        expectedStatusCodes: [http_status_1.OK]
-                    })];
-            });
-        });
-    };
-    return EventService;
-}(service_1.Service));
-exports.EventService = EventService;
-
-},{"../service":124,"http-status":238}],128:[function(require,module,exports){
-"use strict";
-/**
- * 注文サービス
- *
- * @namespace service.order
- */
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var http_status_1 = require("http-status");
-var service_1 = require("../service");
-/**
- * order service
- */
-var OrderService = /** @class */ (function (_super) {
-    __extends(OrderService, _super);
-    function OrderService() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    /**
-     * 照会キーで注文情報を取得する
-     */
-    OrderService.prototype.findByOrderInquiryKey = function (
-    /**
-     * 注文照会キー
-     */
-    params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: '/orders/findByOrderInquiryKey',
-                        method: 'POST',
-                        body: params,
-                        expectedStatusCodes: [http_status_1.OK]
-                    })];
-            });
-        });
-    };
-    /**
-     * 注文を検索する
-     */
-    OrderService.prototype.search = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: '/orders',
-                        method: 'GET',
-                        qs: params,
-                        expectedStatusCodes: [http_status_1.OK]
-                    })];
-            });
-        });
-    };
-    return OrderService;
-}(service_1.Service));
-exports.OrderService = OrderService;
-
-},{"../service":124,"http-status":238}],129:[function(require,module,exports){
-"use strict";
-/**
- * 組織サービス
- *
- * @namespace service.organization
- */
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var http_status_1 = require("http-status");
-var service_1 = require("../service");
-/**
- * organization service
- */
-var OrganizationService = /** @class */ (function (_super) {
-    __extends(OrganizationService, _super);
-    function OrganizationService() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    /**
-     * 劇場組織検索
-     */
-    OrganizationService.prototype.searchMovieTheaters = function (
-    /**
-     * 検索条件
-     */
-    params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: '/organizations/movieTheater',
-                        method: 'GET',
-                        qs: params,
-                        expectedStatusCodes: [http_status_1.OK]
-                    })];
-            });
-        });
-    };
-    /**
-     * 枝番号で劇場組織検索
-     */
-    OrganizationService.prototype.findMovieTheaterByBranchCode = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/organizations/movieTheater/" + params.branchCode,
-                        method: 'GET',
-                        qs: {},
-                        expectedStatusCodes: [http_status_1.OK]
-                    })];
-            });
-        });
-    };
-    return OrganizationService;
-}(service_1.Service));
-exports.OrganizationService = OrganizationService;
-
-},{"../service":124,"http-status":238}],130:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var http_status_1 = require("http-status");
-var service_1 = require("../service");
-/**
- * ユーザーサービス
- */
-var PersonService = /** @class */ (function (_super) {
-    __extends(PersonService, _super);
-    function PersonService() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    /**
-     * ユーザーの連絡先を検索する
-     */
-    PersonService.prototype.getContacts = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/people/" + params.personId + "/contacts",
-                        method: 'GET',
-                        qs: {},
-                        expectedStatusCodes: [http_status_1.OK]
-                    })];
-            });
-        });
-    };
-    /**
-     * ユーザーの連絡先を更新する
-     */
-    PersonService.prototype.updateContacts = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/people/" + params.personId + "/contacts",
-                        method: 'PUT',
-                        body: params.contacts,
-                        expectedStatusCodes: [http_status_1.NO_CONTENT]
-                    })];
-            });
-        });
-    };
-    /**
-     * クレジットカード検索
-     * @see example /example/person/handleCreditCards
-     */
-    PersonService.prototype.findCreditCards = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/people/" + params.personId + "/creditCards",
-                        method: 'GET',
-                        qs: {},
-                        expectedStatusCodes: [http_status_1.OK]
-                    })];
-            });
-        });
-    };
-    /**
-     * クレジットカード追加
-     * @return successfully created credit card info
-     * @see example /example/person/handleCreditCards
-     */
-    PersonService.prototype.addCreditCard = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/people/" + params.personId + "/creditCards",
-                        method: 'POST',
-                        body: params.creditCard,
-                        expectedStatusCodes: [http_status_1.CREATED]
-                    })];
-            });
-        });
-    };
-    /**
-     * クレジットカード削除
-     * @see /example/person/handleCreditCards
-     */
-    PersonService.prototype.deleteCreditCard = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/people/" + params.personId + "/creditCards/" + params.cardSeq,
-                        method: 'DELETE',
-                        expectedStatusCodes: [http_status_1.NO_CONTENT]
-                    })];
-            });
-        });
-    };
-    /**
-     * 口座開設
-     */
-    PersonService.prototype.openAccount = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/people/" + params.personId + "/accounts",
-                        method: 'POST',
-                        body: {
-                            name: params.name
-                        },
-                        expectedStatusCodes: [http_status_1.CREATED]
-                    })];
-            });
-        });
-    };
-    /**
-     * 口座開解約
-     * 口座の状態を変更するだけで、ユーザーの所有する口座リストから削除はされません。
-     * 解約された口座で取引を進行しようとすると400エラーとなります。
-     */
-    PersonService.prototype.closeAccount = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/people/" + params.personId + "/accounts/" + params.accountNumber + "/close",
-                        method: 'PUT',
-                        expectedStatusCodes: [http_status_1.NO_CONTENT]
-                    })];
-            });
-        });
-    };
-    /**
-     * 口座照会
-     */
-    PersonService.prototype.findAccounts = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/people/" + params.personId + "/accounts",
-                        method: 'GET',
-                        qs: {},
-                        expectedStatusCodes: [http_status_1.OK]
-                    })];
-            });
-        });
-    };
-    /**
-     * 口座取引履歴検索
-     */
-    PersonService.prototype.searchAccountMoneyTransferActions = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/people/" + params.personId + "/accounts/" + params.accountNumber + "/actions/moneyTransfer",
-                        method: 'GET',
-                        qs: {},
-                        expectedStatusCodes: [http_status_1.OK]
-                    })];
-            });
-        });
-    };
-    /**
-     * 所有権を検索する
-     * 座席予約、所属会員プログラム、などユーザーの資産(モノ、サービス)を検索します。
-     */
-    PersonService.prototype.searchOwnershipInfos = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/people/" + params.ownedBy + "/ownershipInfos/" + params.goodType,
-                        method: 'GET',
-                        qs: {
-                            ownedAt: params.ownedAt
-                        },
-                        expectedStatusCodes: [http_status_1.OK]
-                    })];
-            });
-        });
-    };
-    /**
-     * 会員プログラムに登録する
-     */
-    PersonService.prototype.registerProgramMembership = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/people/" + params.personId + "/ownershipInfos/programMembership/register",
-                        method: 'PUT',
-                        body: {
-                            programMembershipId: params.programMembershipId,
-                            offerIdentifier: params.offerIdentifier,
-                            sellerType: params.sellerType,
-                            sellerId: params.sellerId
-                        },
-                        expectedStatusCodes: [http_status_1.ACCEPTED]
-                    })];
-            });
-        });
-    };
-    /**
-     * 会員プログラム登録解除
-     */
-    PersonService.prototype.unRegisterProgramMembership = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/people/" + params.personId + "/ownershipInfos/programMembership/" + params.ownershipInfoIdentifier + "/unRegister",
-                        method: 'PUT',
-                        body: {},
-                        expectedStatusCodes: [http_status_1.ACCEPTED]
-                    })];
-            });
-        });
-    };
-    return PersonService;
-}(service_1.Service));
-exports.PersonService = PersonService;
-
-},{"../service":124,"http-status":238}],131:[function(require,module,exports){
-"use strict";
-/**
- * 場所サービス
- *
- * @namespace service.place
- */
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var http_status_1 = require("http-status");
-var service_1 = require("../service");
-/**
- * place service
- */
-var PlaceService = /** @class */ (function (_super) {
-    __extends(PlaceService, _super);
-    function PlaceService() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    /**
-     * 劇場検索
-     */
-    PlaceService.prototype.searchMovieTheaters = function (
-    /**
-     * 検索条件
-     */
-    params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: '/places/movieTheater',
-                        method: 'GET',
-                        qs: params,
-                        expectedStatusCodes: [http_status_1.OK]
-                    })];
-            });
-        });
-    };
-    /**
-     * 劇場情報取得
-     */
-    PlaceService.prototype.findMovieTheater = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/places/movieTheater/" + params.branchCode,
-                        method: 'GET',
-                        qs: {},
-                        expectedStatusCodes: [http_status_1.OK]
-                    })];
-            });
-        });
-    };
-    return PlaceService;
-}(service_1.Service));
-exports.PlaceService = PlaceService;
-
-},{"../service":124,"http-status":238}],132:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var http_status_1 = require("http-status");
-var service_1 = require("../service");
-/**
- * 会員プログラムサービス
- */
-var ProgramMembershipService = /** @class */ (function (_super) {
-    __extends(ProgramMembershipService, _super);
-    function ProgramMembershipService() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    /**
-     * 検索
-     */
-    ProgramMembershipService.prototype.search = function (
-    /**
-     * 検索条件
-     */
-    params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: '/programMemberships',
-                        method: 'GET',
-                        qs: params,
-                        expectedStatusCodes: [http_status_1.OK]
-                    })];
-            });
-        });
-    };
-    return ProgramMembershipService;
-}(service_1.Service));
-exports.ProgramMembershipService = ProgramMembershipService;
-
-},{"../service":124,"http-status":238}],133:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var http_status_1 = require("http-status");
-var service_1 = require("../../service");
-/**
- * 注文取引サービス
- */
-var PlaceOrderTransactionService = /** @class */ (function (_super) {
-    __extends(PlaceOrderTransactionService, _super);
-    function PlaceOrderTransactionService() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    /**
-     * 取引を開始する
-     * 開始できない場合(混雑中など)、nullが返されます。
-     * @returns 取引オブジェクト
-     */
-    PlaceOrderTransactionService.prototype.start = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: '/transactions/placeOrder/start',
-                        method: 'POST',
-                        body: {
-                            expires: params.expires,
-                            sellerId: params.sellerId,
-                            passportToken: params.passportToken
-                        },
-                        expectedStatusCodes: [http_status_1.OK]
-                    })];
-            });
-        });
-    };
-    /**
-     * 取引に座席予約を追加する
-     * @returns 座席予約承認アクション
-     */
-    PlaceOrderTransactionService.prototype.createSeatReservationAuthorization = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/seatReservation",
-                        method: 'POST',
-                        expectedStatusCodes: [http_status_1.CREATED],
-                        body: {
-                            eventIdentifier: params.eventIdentifier,
-                            offers: params.offers
-                        }
-                    })];
-            });
-        });
-    };
-    /**
-     * 座席予約取消
-     */
-    PlaceOrderTransactionService.prototype.cancelSeatReservationAuthorization = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/seatReservation/" + params.actionId,
-                        method: 'DELETE',
-                        expectedStatusCodes: [http_status_1.NO_CONTENT]
-                    })];
-            });
-        });
-    };
-    /**
-     * 座席予約承認アクションの供給情報を変更する
-     * 完了ステータスの座席仮予約に対して券種変更する際に使用
-     * @returns 座席予約承認アクション
-     */
-    PlaceOrderTransactionService.prototype.changeSeatReservationOffers = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/seatReservation/" + params.actionId,
-                        method: 'PATCH',
-                        expectedStatusCodes: [http_status_1.OK],
-                        body: {
-                            eventIdentifier: params.eventIdentifier,
-                            offers: params.offers
-                        }
-                    })];
-            });
-        });
-    };
-    /**
-     * クレジットカードのオーソリを取得する
-     * @returns 承認アクション
-     */
-    PlaceOrderTransactionService.prototype.createCreditCardAuthorization = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/creditCard",
-                        method: 'POST',
-                        expectedStatusCodes: [http_status_1.CREATED],
-                        body: {
-                            orderId: params.orderId,
-                            amount: params.amount,
-                            method: params.method,
-                            creditCard: params.creditCard
-                        }
-                    })];
-            });
-        });
-    };
-    /**
-     * クレジットカードオーソリ取消
-     */
-    PlaceOrderTransactionService.prototype.cancelCreditCardAuthorization = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/creditCard/" + params.actionId,
-                        method: 'DELETE',
-                        expectedStatusCodes: [http_status_1.NO_CONTENT]
-                    })];
-            });
-        });
-    };
-    /**
-     * 決済方法として、ムビチケを追加する
-     * @returns 承認アクション
-     */
-    PlaceOrderTransactionService.prototype.createMvtkAuthorization = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/mvtk",
-                        method: 'POST',
-                        expectedStatusCodes: [http_status_1.CREATED],
-                        body: params.mvtk
-                    })];
-            });
-        });
-    };
-    /**
-     * ムビチケ取消
-     */
-    PlaceOrderTransactionService.prototype.cancelMvtkAuthorization = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/mvtk/" + params.actionId,
-                        method: 'DELETE',
-                        expectedStatusCodes: [http_status_1.NO_CONTENT]
-                    })];
-            });
-        });
-    };
-    /**
-     * Pecorino口座決済のオーソリを取得する
-     * @returns 承認アクション
-     */
-    PlaceOrderTransactionService.prototype.createPecorinoPaymentAuthorization = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/paymentMethod/pecorino",
-                        method: 'POST',
-                        expectedStatusCodes: [http_status_1.CREATED],
-                        body: {
-                            amount: params.amount,
-                            fromAccountNumber: params.fromAccountNumber,
-                            notes: params.notes
-                        }
-                    })];
-            });
-        });
-    };
-    /**
-     * Pecorino口座決済オーソリ取消
-     */
-    PlaceOrderTransactionService.prototype.cancelPecorinoPaymentAuthorization = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/paymentMethod/pecorino/" + params.actionId,
-                        method: 'DELETE',
-                        expectedStatusCodes: [http_status_1.NO_CONTENT]
-                    })];
-            });
-        });
-    };
-    /**
-     * Pecorinoポイントインセンティブのオーソリを取得する
-     * @returns 承認アクション
-     */
-    PlaceOrderTransactionService.prototype.createPecorinoAwardAuthorization = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/award/pecorino",
-                        method: 'POST',
-                        expectedStatusCodes: [http_status_1.CREATED],
-                        body: {
-                            amount: params.amount,
-                            toAccountNumber: params.toAccountNumber,
-                            notes: params.notes
-                        }
-                    })];
-            });
-        });
-    };
-    /**
-     * Pecorinoポイントインセンティブオーソリ取消
-     */
-    PlaceOrderTransactionService.prototype.cancelPecorinoAwardAuthorization = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/award/pecorino/" + params.actionId,
-                        method: 'DELETE',
-                        expectedStatusCodes: [http_status_1.NO_CONTENT]
-                    })];
-            });
-        });
-    };
-    /**
-     * register a customer contact
-     * @returns 登録された購入者情報
-     */
-    PlaceOrderTransactionService.prototype.setCustomerContact = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/transactions/placeOrder/" + params.transactionId + "/customerContact",
-                        method: 'PUT',
-                        expectedStatusCodes: [http_status_1.CREATED],
-                        body: params.contact
-                    })];
-            });
-        });
-    };
-    /**
-     * 取引確定
-     * @returns 作成された注文
-     */
-    PlaceOrderTransactionService.prototype.confirm = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/transactions/placeOrder/" + params.transactionId + "/confirm",
-                        method: 'POST',
-                        expectedStatusCodes: [http_status_1.CREATED],
-                        body: {
-                            sendEmailMessage: params.sendEmailMessage,
-                            incentives: params.incentives
-                        }
-                    })];
-            });
-        });
-    };
-    /**
-     * 確定した取引に関して、購入者にメール通知を送信する
-     * @returns メール送信タスク
-     */
-    PlaceOrderTransactionService.prototype.sendEmailNotification = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/transactions/placeOrder/" + params.transactionId + "/tasks/sendEmailNotification",
-                        method: 'POST',
-                        expectedStatusCodes: [http_status_1.CREATED],
-                        body: params.emailMessageAttributes
-                    })];
-            });
-        });
-    };
-    /**
-     * 明示的に取引を中止する
-     * 既に確定済、あるいは、期限切れの取引に対して実行するとNotFoundエラーが返されます。
-     * @param params.transactionId 取引ID
-     */
-    PlaceOrderTransactionService.prototype.cancel = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/transactions/placeOrder/" + params.transactionId + "/cancel",
-                        method: 'POST',
-                        expectedStatusCodes: [http_status_1.NO_CONTENT]
-                    })];
-            });
-        });
-    };
-    return PlaceOrderTransactionService;
-}(service_1.Service));
-exports.PlaceOrderTransactionService = PlaceOrderTransactionService;
-
-},{"../../service":124,"http-status":238}],134:[function(require,module,exports){
-"use strict";
-/**
- * 注文返品取引サービス
- * @namespace service.transaction.returnOrder
- */
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var http_status_1 = require("http-status");
-var service_1 = require("../../service");
-/**
- * 注文返品取引サービス
- */
-var ReturnOrderTransactionService = /** @class */ (function (_super) {
-    __extends(ReturnOrderTransactionService, _super);
-    function ReturnOrderTransactionService() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    /**
-     * 取引を開始する
-     * @returns 注文返品取引オブジェクト
-     */
-    ReturnOrderTransactionService.prototype.start = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: '/transactions/returnOrder/start',
-                        method: 'POST',
-                        body: {
-                            expires: params.expires,
-                            transactionId: params.transactionId
-                        },
-                        expectedStatusCodes: [http_status_1.OK]
-                    })];
-            });
-        });
-    };
-    /**
-     * 取引確定
-     * @returns 注文返品取引結果
-     */
-    ReturnOrderTransactionService.prototype.confirm = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/transactions/returnOrder/" + params.transactionId + "/confirm",
-                        method: 'POST',
-                        expectedStatusCodes: [http_status_1.CREATED]
-                    })];
-            });
-        });
-    };
-    return ReturnOrderTransactionService;
-}(service_1.Service));
-exports.ReturnOrderTransactionService = ReturnOrderTransactionService;
-
-},{"../../service":124,"http-status":238}],135:[function(require,module,exports){
-"use strict";
-// tslint:disable:max-classes-per-file
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * transporters
- * @ignore
- */
-var createDebug = require("debug");
-var http_status_1 = require("http-status");
-var fetch = require("isomorphic-fetch");
-var debug = createDebug('sskts-api-abstract-client:transporters');
-// tslint:disable-next-line
-// const pkg = require('../package.json');
-/**
- * transporter abstract class
- * トランスポーター抽象クラス
- * @export
- */
-var Transporter = /** @class */ (function () {
-    function Transporter() {
-    }
-    return Transporter;
-}());
-exports.Transporter = Transporter;
-/**
- * RequestError
- * @export
- */
-var RequestError = /** @class */ (function (_super) {
-    __extends(RequestError, _super);
-    function RequestError() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    return RequestError;
-}(Error));
-exports.RequestError = RequestError;
-/**
- * stub transporter
- * スタブトランポーター
- * @export
- */
-var StubTransporter = /** @class */ (function () {
-    function StubTransporter(body) {
-        this.body = body;
-    }
-    StubTransporter.prototype.fetch = function (url, options) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                debug('fetching...', url, options);
-                return [2 /*return*/, this.body];
-            });
-        });
-    };
-    return StubTransporter;
-}());
-exports.StubTransporter = StubTransporter;
-/**
- * DefaultTransporter
- * @export
- */
-var DefaultTransporter = /** @class */ (function () {
-    function DefaultTransporter(expectedStatusCodes) {
-        this.expectedStatusCodes = expectedStatusCodes;
-    }
-    /**
-     * Configures request options before making a request.
-     */
-    DefaultTransporter.CONFIGURE = function (options) {
-        // set transporter user agent
-        options.headers = (options.headers !== undefined) ? options.headers : {};
-        // tslint:disable-next-line:no-single-line-block-comment
-        /* istanbul ignore else */
-        // if (!options.headers['User-Agent']) {
-        //     options.headers['User-Agent'] = DefaultTransporter.USER_AGENT;
-        // } else if (options.headers['User-Agent'].indexOf(DefaultTransporter.USER_AGENT) === -1) {
-        //     options.headers['User-Agent'] = `${options.headers['User-Agent']} ${DefaultTransporter.USER_AGENT}`;
-        // }
-        return options;
-    };
-    /**
-     * Makes a request with given options and invokes callback.
-     */
-    DefaultTransporter.prototype.fetch = function (url, options) {
-        return __awaiter(this, void 0, void 0, function () {
-            var fetchOptions;
-            var _this = this;
-            return __generator(this, function (_a) {
-                fetchOptions = DefaultTransporter.CONFIGURE(options);
-                debug('fetching...', url, fetchOptions);
-                return [2 /*return*/, fetch(url, fetchOptions).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
-                        return [2 /*return*/, this.wrapCallback(response)];
-                    }); }); })];
-            });
-        });
-    };
-    /**
-     * Wraps the response callback.
-     */
-    DefaultTransporter.prototype.wrapCallback = function (response) {
-        return __awaiter(this, void 0, void 0, function () {
-            var err, body, error_1;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        err = new RequestError('An unexpected error occurred');
-                        debug('request processed', response.status);
-                        if (!(this.expectedStatusCodes.indexOf(response.status) < 0)) return [3 /*break*/, 6];
-                        body = void 0;
-                        _a.label = 1;
-                    case 1:
-                        _a.trys.push([1, 3, , 5]);
-                        return [4 /*yield*/, response.clone().json()];
-                    case 2:
-                        // Only and only application/json responses should
-                        // be decoded back to JSON, but there are cases API back-ends
-                        // responds without proper content-type.
-                        body = _a.sent();
-                        return [3 /*break*/, 5];
-                    case 3:
-                        error_1 = _a.sent();
-                        return [4 /*yield*/, response.clone().text()];
-                    case 4:
-                        body = _a.sent();
-                        return [3 /*break*/, 5];
-                    case 5:
-                        if (typeof body === 'object' && body.error !== undefined) {
-                            err = new RequestError(body.error.message);
-                            err.code = response.status;
-                            err.errors = body.error.errors;
-                        }
-                        else {
-                            err = new RequestError(body);
-                            err.code = response.status;
-                            err.errors = [];
-                        }
-                        return [3 /*break*/, 7];
-                    case 6:
-                        if (response.status === http_status_1.NO_CONTENT) {
-                            // consider 204
-                            return [2 /*return*/];
-                        }
-                        else {
-                            // consider 200,201
-                            return [2 /*return*/, response.json()];
-                        }
-                        _a.label = 7;
-                    case 7: throw err;
-                }
-            });
-        });
-    };
-    return DefaultTransporter;
-}());
-exports.DefaultTransporter = DefaultTransporter;
-/**
- * TransporterWithRequestPromise
- */
-// export class TransporterWithRequestPromise {
-//     /**
-//      * Default user agent.
-//      */
-//     public static readonly USER_AGENT: string = `sasaki-api-nodejs-client/${pkg.version}`;
-//     public expectedStatusCodes: number[];
-//     constructor(expectedStatusCodes: number[]) {
-//         this.expectedStatusCodes = expectedStatusCodes;
-//     }
-//     /**
-//      * Configures request options before making a request.
-//      */
-//     public static CONFIGURE(options: request.OptionsWithUri): request.OptionsWithUri {
-//         // set transporter user agent
-//         options.headers = (options.headers !== undefined) ? options.headers : {};
-//         if (!options.headers['User-Agent']) {
-//             options.headers['User-Agent'] = DefaultTransporter.USER_AGENT;
-//         } else if (options.headers['User-Agent'].indexOf(DefaultTransporter.USER_AGENT) === -1) {
-//             options.headers['User-Agent'] = `${options.headers['User-Agent']} ${DefaultTransporter.USER_AGENT}`;
-//         }
-//         return options;
-//     }
-//     /**
-//      * Makes a request with given options and invokes callback.
-//      */
-//     public async request(options: request.OptionsWithUri) {
-//         const requestOptions = DefaultTransporter.CONFIGURE(options);
-//         return await request(requestOptions)
-//             .then((res) => this.wrapCallback(res));
-//     }
-//     /**
-//      * Wraps the response callback.
-//      */
-//     private wrapCallback(res: request.FullResponse): any {
-//         let err: RequestError = new RequestError('An unexpected error occurred');
-//         debug('request processed', res.statusCode, res.body);
-//         if (res.statusCode !== undefined) {
-//             if (this.expectedStatusCodes.indexOf(res.statusCode) < 0) {
-//                 if (typeof res.body === 'string') {
-//                     // Consider all 4xx and 5xx responses errors.
-//                     err = new RequestError(res.body);
-//                     err.code = res.statusCode;
-//                 }
-//                 if (typeof res.body === 'object' && res.body.errors !== undefined) {
-//                     // consider 400
-//                     err = new RequestError((<any[]>res.body.errors).map((error) => `${error.title}:${error.detail}`).join('\n'));
-//                     err.code = res.statusCode;
-//                     err.errors = res.body.errors;
-//                 }
-//             } else {
-//                 if (res.body !== undefined) {
-//                     // consider 200,201,404
-//                     return res.body;
-//                 } else {
-//                     // consider 204
-//                     return;
-//                 }
-//             }
-//         }
-//         throw err;
-//     }
-// }
-
-},{"debug":236,"http-status":238,"isomorphic-fetch":246}],136:[function(require,module,exports){
-arguments[4][13][0].apply(exports,arguments)
-},{"dup":13}],137:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * アクションタイプ
- */
-var ActionType;
-(function (ActionType) {
-    ActionType["AuthorizeAction"] = "AuthorizeAction";
-    ActionType["CheckInAction"] = "CheckInAction";
-    ActionType["GiveAction"] = "GiveAction";
-    ActionType["OrderAction"] = "OrderAction";
-    ActionType["PayAction"] = "PayAction";
-    ActionType["PrintAction"] = "PrintAction";
-    ActionType["RefundAction"] = "RefundAction";
-    ActionType["RegisterAction"] = "RegisterAction";
-    ActionType["ReturnAction"] = "ReturnAction";
-    ActionType["SendAction"] = "SendAction";
-    ActionType["UnRegisterAction"] = "UnRegisterAction";
-    ActionType["UpdateAction"] = "UpdateAction";
-    ActionType["UseAction"] = "UseAction";
-})(ActionType || (ActionType = {}));
-exports.default = ActionType;
-
-},{}],138:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var ObjectType;
-(function (ObjectType) {
-    ObjectType["PecorinoAward"] = "PecorinoAward";
-})(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
-
-},{}],139:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var ObjectType;
-(function (ObjectType) {
-    ObjectType["Mvtk"] = "Mvtk";
-})(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
-
-},{}],140:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],141:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var ObjectType;
-(function (ObjectType) {
-    ObjectType["SeatReservation"] = "SeatReservation";
-})(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
-
-},{}],142:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var ObjectType;
-(function (ObjectType) {
-    ObjectType["CreditCard"] = "CreditCard";
-})(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
-
-},{}],143:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var ObjectType;
-(function (ObjectType) {
-    ObjectType["PecorinoPayment"] = "PecorinoPayment";
-})(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
-
-},{}],144:[function(require,module,exports){
-arguments[4][139][0].apply(exports,arguments)
-},{"dup":139}],145:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],146:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],147:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],148:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],149:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],150:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var pecorino_1 = require("../../../action/authorize/award/pecorino");
-exports.ObjectType = pecorino_1.ObjectType;
-
-},{"../../../action/authorize/award/pecorino":138}],151:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],152:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],153:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],154:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],155:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],156:[function(require,module,exports){
-"use strict";
-/**
- * アプリケーションクライアントイベントファクトリー
- * クライアントサイドで発生したイベントを生成する
- * クライアントサイドからapiを通じて生成される想定
- * @namespace clientEvent
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-
-},{}],157:[function(require,module,exports){
-arguments[4][18][0].apply(exports,arguments)
-},{"dup":18}],158:[function(require,module,exports){
-"use strict";
-/**
- * 作品タイプ
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-var CreativeWorkType;
-(function (CreativeWorkType) {
-    CreativeWorkType["EmailMessage"] = "EmailMessage";
-    CreativeWorkType["Movie"] = "Movie";
-})(CreativeWorkType || (CreativeWorkType = {}));
-exports.default = CreativeWorkType;
-
-},{}],159:[function(require,module,exports){
-arguments[4][20][0].apply(exports,arguments)
-},{"../../creativeWorkType":158,"../../error/argument":163,"../../error/argumentNull":164,"dup":20,"validator":262}],160:[function(require,module,exports){
-"use strict";
-/**
- * 映画作品ファクトリー
- * @namespace creativeWork.movie
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-var moment = require("moment");
-var creativeWorkType_1 = require("../creativeWorkType");
-/**
- * COAの作品抽出結果からFilmオブジェクトを作成する
- * @export
- */
-function createFromCOA(filmFromCOA) {
-    return {
-        identifier: filmFromCOA.titleCode,
-        name: filmFromCOA.titleNameOrig,
-        duration: moment.duration(filmFromCOA.showTime, 'm').toISOString(),
-        contentRating: filmFromCOA.kbnEirin,
-        typeOf: creativeWorkType_1.default.Movie
-    };
-}
-exports.createFromCOA = createFromCOA;
-
-},{"../creativeWorkType":158,"moment":229}],161:[function(require,module,exports){
-arguments[4][21][0].apply(exports,arguments)
-},{"dup":21}],162:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-// tslint:disable-next-line:no-require-imports
-var setPrototypeOf = require("setprototypeof");
-var errorCode_1 = require("../errorCode");
-var sskts_1 = require("./sskts");
-/**
- * AlreadyInUseError
- * @extends {SSKTSError}
- */
-var AlreadyInUseError = /** @class */ (function (_super) {
-    __extends(AlreadyInUseError, _super);
-    function AlreadyInUseError(entityName, fieldNames, message) {
-        var _this = this;
-        var actualMessage = message;
-        if (message === undefined || message.length === 0) {
-            actualMessage = "The specified '" + entityName + "' value is already in use for: " + fieldNames.join(', ') + ".";
-        }
-        _this = _super.call(this, errorCode_1.default.AlreadyInUse, actualMessage) || this;
-        _this.entityName = entityName;
-        _this.fieldNames = fieldNames;
-        setPrototypeOf(_this, AlreadyInUseError.prototype);
-        return _this;
-    }
-    return AlreadyInUseError;
-}(sskts_1.SSKTSError));
-exports.default = AlreadyInUseError;
-
-},{"../errorCode":161,"./sskts":170,"setprototypeof":255}],163:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-// tslint:disable-next-line:no-require-imports
-var setPrototypeOf = require("setprototypeof");
-var errorCode_1 = require("../errorCode");
-var sskts_1 = require("./sskts");
-/**
- * ArgumentError
- * @extends {SSKTSError}
- */
-var ArgumentError = /** @class */ (function (_super) {
-    __extends(ArgumentError, _super);
-    function ArgumentError(argumentName, message) {
-        var _this = this;
-        var actualMessage = message;
-        if (message === undefined || message.length === 0) {
-            actualMessage = "Invalid or missing argument supplied: " + argumentName + ".";
-        }
-        _this = _super.call(this, errorCode_1.default.Argument, actualMessage) || this;
-        _this.argumentName = argumentName;
-        setPrototypeOf(_this, ArgumentError.prototype);
-        return _this;
-    }
-    return ArgumentError;
-}(sskts_1.SSKTSError));
-exports.default = ArgumentError;
-
-},{"../errorCode":161,"./sskts":170,"setprototypeof":255}],164:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-// tslint:disable-next-line:no-require-imports
-var setPrototypeOf = require("setprototypeof");
-var errorCode_1 = require("../errorCode");
-var sskts_1 = require("./sskts");
-/**
- * ArgumentNullError
- * @extends {SSKTSError}
- */
-var ArgumentNullError = /** @class */ (function (_super) {
-    __extends(ArgumentNullError, _super);
-    function ArgumentNullError(argumentName, message) {
-        var _this = this;
-        var actualMessage = message;
-        if (message === undefined || message.length === 0) {
-            actualMessage = "Missing argument: " + argumentName + ".";
-        }
-        _this = _super.call(this, errorCode_1.default.ArgumentNull, actualMessage) || this;
-        _this.argumentName = argumentName;
-        setPrototypeOf(_this, ArgumentNullError.prototype);
-        return _this;
-    }
-    return ArgumentNullError;
-}(sskts_1.SSKTSError));
-exports.default = ArgumentNullError;
-
-},{"../errorCode":161,"./sskts":170,"setprototypeof":255}],165:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-// tslint:disable-next-line:no-require-imports
-var setPrototypeOf = require("setprototypeof");
-var errorCode_1 = require("../errorCode");
-var sskts_1 = require("./sskts");
-/**
- * ForbiddenError
- * @extends {SSKTSError}
- */
-var ForbiddenError = /** @class */ (function (_super) {
-    __extends(ForbiddenError, _super);
-    function ForbiddenError(message) {
-        var _this = this;
-        var actualMessage = message;
-        if (message === undefined || message.length === 0) {
-            actualMessage = 'Forbidden.';
-        }
-        _this = _super.call(this, errorCode_1.default.Forbidden, actualMessage) || this;
-        setPrototypeOf(_this, ForbiddenError.prototype);
-        return _this;
-    }
-    return ForbiddenError;
-}(sskts_1.SSKTSError));
-exports.default = ForbiddenError;
-
-},{"../errorCode":161,"./sskts":170,"setprototypeof":255}],166:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-// tslint:disable-next-line:no-require-imports
-var setPrototypeOf = require("setprototypeof");
-var errorCode_1 = require("../errorCode");
-var sskts_1 = require("./sskts");
-/**
- * NotFoundError
- * @extends {SSKTSError}
- */
-var NotFoundError = /** @class */ (function (_super) {
-    __extends(NotFoundError, _super);
-    function NotFoundError(entityName, message) {
-        var _this = this;
-        var actualMessage = message;
-        if (message === undefined || message.length === 0) {
-            actualMessage = "Not Found: " + entityName + ".";
-        }
-        _this = _super.call(this, errorCode_1.default.NotFound, actualMessage) || this;
-        _this.entityName = entityName;
-        setPrototypeOf(_this, NotFoundError.prototype);
-        return _this;
-    }
-    return NotFoundError;
-}(sskts_1.SSKTSError));
-exports.default = NotFoundError;
-
-},{"../errorCode":161,"./sskts":170,"setprototypeof":255}],167:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-// tslint:disable-next-line:no-require-imports
-var setPrototypeOf = require("setprototypeof");
-var errorCode_1 = require("../errorCode");
-var sskts_1 = require("./sskts");
-/**
- * NotImplementedError
- * @extends {SSKTSError}
- */
-var NotImplementedError = /** @class */ (function (_super) {
-    __extends(NotImplementedError, _super);
-    function NotImplementedError(message) {
-        var _this = this;
-        var actualMessage = message;
-        if (message === undefined || message.length === 0) {
-            actualMessage = 'Method is not yet implemented.';
-        }
-        _this = _super.call(this, errorCode_1.default.NotImplemented, actualMessage) || this;
-        setPrototypeOf(_this, NotImplementedError.prototype);
-        return _this;
-    }
-    return NotImplementedError;
-}(sskts_1.SSKTSError));
-exports.default = NotImplementedError;
-
-},{"../errorCode":161,"./sskts":170,"setprototypeof":255}],168:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-// tslint:disable-next-line:no-require-imports
-var setPrototypeOf = require("setprototypeof");
-var errorCode_1 = require("../errorCode");
-var sskts_1 = require("./sskts");
-/**
- * RateLimitExceededError
- * @extends {SSKTSError}
- */
-var RateLimitExceededError = /** @class */ (function (_super) {
-    __extends(RateLimitExceededError, _super);
-    function RateLimitExceededError(message) {
-        var _this = this;
-        var actualMessage = message;
-        if (message === undefined || message.length === 0) {
-            actualMessage = 'Rate limit exceeded.';
-        }
-        _this = _super.call(this, errorCode_1.default.RateLimitExceeded, actualMessage) || this;
-        setPrototypeOf(_this, RateLimitExceededError.prototype);
-        return _this;
-    }
-    return RateLimitExceededError;
-}(sskts_1.SSKTSError));
-exports.default = RateLimitExceededError;
-
-},{"../errorCode":161,"./sskts":170,"setprototypeof":255}],169:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-// tslint:disable-next-line:no-require-imports
-var setPrototypeOf = require("setprototypeof");
-var errorCode_1 = require("../errorCode");
-var sskts_1 = require("./sskts");
-/**
- * ServiceUnavailableError
- * @extends {SSKTSError}
- */
-var ServiceUnavailableError = /** @class */ (function (_super) {
-    __extends(ServiceUnavailableError, _super);
-    function ServiceUnavailableError(message) {
-        var _this = this;
-        var actualMessage = message;
-        if (message === undefined || message.length === 0) {
-            actualMessage = 'Service unavailable temporarily.';
-        }
-        _this = _super.call(this, errorCode_1.default.ServiceUnavailable, actualMessage) || this;
-        setPrototypeOf(_this, ServiceUnavailableError.prototype);
-        return _this;
-    }
-    return ServiceUnavailableError;
-}(sskts_1.SSKTSError));
-exports.default = ServiceUnavailableError;
-
-},{"../errorCode":161,"./sskts":170,"setprototypeof":255}],170:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * SSKTSError
- * @extends {Error}
- */
-var SSKTSError = /** @class */ (function (_super) {
-    __extends(SSKTSError, _super);
-    function SSKTSError(code, message) {
-        var _this = _super.call(this, message) || this;
-        _this.name = 'SSKTSError';
-        _this.reason = code;
-        return _this;
-    }
-    return SSKTSError;
-}(Error));
-exports.SSKTSError = SSKTSError;
-
-},{}],171:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-// tslint:disable-next-line:no-require-imports
-var setPrototypeOf = require("setprototypeof");
-var errorCode_1 = require("../errorCode");
-var sskts_1 = require("./sskts");
-/**
- * UnauthorizedError
- * @extends {SSKTSError}
- */
-var UnauthorizedError = /** @class */ (function (_super) {
-    __extends(UnauthorizedError, _super);
-    function UnauthorizedError(message) {
-        var _this = this;
-        var actualMessage = message;
-        if (message === undefined || message.length === 0) {
-            actualMessage = 'Unauthorized.';
-        }
-        _this = _super.call(this, errorCode_1.default.Unauthorized, actualMessage) || this;
-        setPrototypeOf(_this, UnauthorizedError.prototype);
-        return _this;
-    }
-    return UnauthorizedError;
-}(sskts_1.SSKTSError));
-exports.default = UnauthorizedError;
-
-},{"../errorCode":161,"./sskts":170,"setprototypeof":255}],172:[function(require,module,exports){
-"use strict";
-/**
- * errors
- * @namespace errors
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-var alreadyInUse_1 = require("./error/alreadyInUse");
-exports.AlreadyInUse = alreadyInUse_1.default;
-var argument_1 = require("./error/argument");
-exports.Argument = argument_1.default;
-var argumentNull_1 = require("./error/argumentNull");
-exports.ArgumentNull = argumentNull_1.default;
-var forbidden_1 = require("./error/forbidden");
-exports.Forbidden = forbidden_1.default;
-var notFound_1 = require("./error/notFound");
-exports.NotFound = notFound_1.default;
-var notImplemented_1 = require("./error/notImplemented");
-exports.NotImplemented = notImplemented_1.default;
-var rateLimitExceeded_1 = require("./error/rateLimitExceeded");
-exports.RateLimitExceeded = rateLimitExceeded_1.default;
-var serviceUnavailable_1 = require("./error/serviceUnavailable");
-exports.ServiceUnavailable = serviceUnavailable_1.default;
-var sskts_1 = require("./error/sskts");
-exports.SSKTS = sskts_1.SSKTSError;
-var unauthorized_1 = require("./error/unauthorized");
-exports.Unauthorized = unauthorized_1.default;
-
-},{"./error/alreadyInUse":162,"./error/argument":163,"./error/argumentNull":164,"./error/forbidden":165,"./error/notFound":166,"./error/notImplemented":167,"./error/rateLimitExceeded":168,"./error/serviceUnavailable":169,"./error/sskts":170,"./error/unauthorized":171}],173:[function(require,module,exports){
-"use strict";
-/**
- * イベントファクトリー
- *
- * @namespace event
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-function create(params) {
-    return {
-        identifier: params.identifier,
-        name: (params.name === undefined) ? { ja: '', en: '' } : params.name,
-        description: params.description,
-        doorTime: params.doorTime,
-        duration: (params.duration === undefined) ? undefined : params.duration.toString(),
-        endDate: params.endDate,
-        eventStatus: params.eventStatus,
-        location: params.location,
-        startDate: params.startDate,
-        workPerformed: params.workPerformed,
-        maximumAttendeeCapacity: params.maximumAttendeeCapacity,
-        // offers: params.offers,
-        remainingAttendeeCapacity: params.remainingAttendeeCapacity,
-        typeOf: params.typeOf
-    };
-}
-exports.create = create;
-
-},{}],174:[function(require,module,exports){
-"use strict";
-/**
- * イベントステータス
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-var EventStatusType;
-(function (EventStatusType) {
-    EventStatusType["EventCancelled"] = "EventCancelled";
-    EventStatusType["EventPostponed"] = "EventPostponed";
-    EventStatusType["EventRescheduled"] = "EventRescheduled";
-    EventStatusType["EventScheduled"] = "EventScheduled";
-})(EventStatusType || (EventStatusType = {}));
-exports.default = EventStatusType;
-
-},{}],175:[function(require,module,exports){
-"use strict";
-/**
- * イベントタイプ
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-var EventType;
-(function (EventType) {
-    EventType["ScreeningEvent"] = "ScreeningEvent";
-    EventType["IndividualScreeningEvent"] = "IndividualScreeningEvent";
-})(EventType || (EventType = {}));
-exports.default = EventType;
-
-},{}],176:[function(require,module,exports){
-"use strict";
-/**
- * individual screening event factory
- * 個々の上映イベントファクトリー
- * @namespace event.individualScreeningEvent
- */
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var _ = require("lodash");
-var moment = require("moment");
-var argument_1 = require("../error/argument");
-var EventFactory = require("../event");
-var ScreeningEventFactory = require("../event/screeningEvent");
-var eventStatusType_1 = require("../eventStatusType");
-var eventType_1 = require("../eventType");
-/**
- * 座席数から在庫状況表現を生成する
- * @export
- * @param numberOfAvailableSeats 空席数
- * @param numberOfAllSeats 全座席数
- */
-function createItemAvailability(numberOfAvailableSeats, numberOfAllSeats) {
-    if (!_.isInteger(numberOfAvailableSeats)) {
-        throw new argument_1.default('numberOfAvailableSeats', 'numberOfAvailableSeats must be number.');
-    }
-    if (!_.isInteger(numberOfAllSeats)) {
-        throw new argument_1.default('numberOfAllSeats', 'numberOfAllSeats must be number.');
-    }
-    if (numberOfAllSeats === 0) {
-        return 0;
-    }
-    // 残席数より空席率を算出
-    // tslint:disable-next-line:no-magic-numbers
-    return Math.floor(numberOfAvailableSeats / numberOfAllSeats * 100);
-}
-exports.createItemAvailability = createItemAvailability;
-/**
- * create individualScreeningEvent from COA performance
- * @export
- */
-function createFromCOA(params) {
-    var identifier = createIdentifierFromCOA({
-        theaterCode: params.screeningEvent.location.branchCode,
-        titleCode: params.screeningEvent.workPerformed.identifier,
-        titleBranchNum: params.screeningEvent.coaInfo.titleBranchNum,
-        dateJouei: params.performanceFromCOA.dateJouei,
-        screenCode: params.performanceFromCOA.screenCode,
-        timeBegin: params.performanceFromCOA.timeBegin
-    });
-    // COA情報を整形して開始日時と終了日時を作成
-    // tslint:disable-next-line:max-line-length
-    var endDate = moment(params.performanceFromCOA.dateJouei + " " + params.performanceFromCOA.timeEnd + " +09:00", 'YYYYMMDD HHmm Z').toDate();
-    // tslint:disable-next-line:max-line-length
-    var startDate = moment(params.performanceFromCOA.dateJouei + " " + params.performanceFromCOA.timeBegin + " +09:00", 'YYYYMMDD HHmm Z').toDate();
-    return __assign({}, EventFactory.create({
-        eventStatus: eventStatusType_1.default.EventScheduled,
-        typeOf: eventType_1.default.IndividualScreeningEvent,
-        identifier: identifier,
-        name: params.screeningEvent.name
-    }), {
-        workPerformed: params.screeningEvent.workPerformed,
-        location: {
-            typeOf: params.screenRoom.typeOf,
-            branchCode: params.screenRoom.branchCode,
-            name: params.screenRoom.name
-        },
-        endDate: endDate,
-        startDate: startDate,
-        superEvent: params.screeningEvent,
-        coaInfo: {
-            theaterCode: params.screeningEvent.location.branchCode,
-            dateJouei: params.performanceFromCOA.dateJouei,
-            titleCode: params.performanceFromCOA.titleCode,
-            titleBranchNum: params.performanceFromCOA.titleBranchNum,
-            timeBegin: params.performanceFromCOA.timeBegin,
-            screenCode: params.performanceFromCOA.screenCode,
-            trailerTime: params.performanceFromCOA.trailerTime,
-            kbnService: params.serviceKubuns.filter(function (kubun) { return kubun.kubunCode === params.performanceFromCOA.kbnService; })[0],
-            kbnAcoustic: params.acousticKubuns.filter(function (kubun) { return kubun.kubunCode === params.performanceFromCOA.kbnAcoustic; })[0],
-            nameServiceDay: params.performanceFromCOA.nameServiceDay,
-            availableNum: params.performanceFromCOA.availableNum,
-            rsvStartDate: params.performanceFromCOA.rsvStartDate,
-            rsvEndDate: params.performanceFromCOA.rsvEndDate,
-            flgEarlyBooking: params.performanceFromCOA.flgEarlyBooking
-        }
-    });
-}
-exports.createFromCOA = createFromCOA;
-/**
- * COA情報から個々の上映イベント識別子を作成する
- * @export
- */
-function createIdentifierFromCOA(params) {
-    return [
-        ScreeningEventFactory.createIdentifier(params),
-        params.dateJouei,
-        params.screenCode,
-        params.timeBegin
-    ].join('');
-}
-exports.createIdentifierFromCOA = createIdentifierFromCOA;
-
-},{"../error/argument":163,"../event":173,"../event/screeningEvent":177,"../eventStatusType":174,"../eventType":175,"lodash":228,"moment":229}],177:[function(require,module,exports){
-"use strict";
-/**
- * screen event factory
- * 劇場の上映イベントファクトリー
- * @namespace event.screeningEvent
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-var moment = require("moment");
-var creativeWorkType_1 = require("../creativeWorkType");
-var eventStatusType_1 = require("../eventStatusType");
-var eventType_1 = require("../eventType");
-var organizationType_1 = require("../organizationType");
-/**
- * COAの作品抽出結果からFilmオブジェクトを作成する
- * @export
- */
-function createFromCOA(params) {
-    var endDate = (moment(params.filmFromCOA.dateEnd + " +09:00", 'YYYYMMDD Z').isValid())
-        ? moment(params.filmFromCOA.dateEnd + " +09:00", 'YYYYMMDD Z').toDate()
-        : undefined;
-    var startDate = (moment(params.filmFromCOA.dateBegin + " +09:00", 'YYYYMMDD Z').isValid())
-        ? moment(params.filmFromCOA.dateBegin + " +09:00", 'YYYYMMDD Z').toDate()
-        : undefined;
-    return {
-        // title_codeは劇場をまたいで共有、title_branch_numは劇場毎に管理
-        identifier: createIdentifier({
-            theaterCode: params.movieTheater.branchCode,
-            titleCode: params.filmFromCOA.titleCode,
-            titleBranchNum: params.filmFromCOA.titleBranchNum
-        }),
-        name: {
-            ja: params.filmFromCOA.titleName,
-            en: params.filmFromCOA.titleNameEng
-        },
-        kanaName: params.filmFromCOA.titleNameKana,
-        alternativeHeadline: params.filmFromCOA.titleNameShort,
-        location: {
-            identifier: params.movieTheater.identifier,
-            branchCode: params.movieTheater.branchCode,
-            name: params.movieTheater.name,
-            kanaName: params.movieTheater.kanaName,
-            typeOf: params.movieTheater.typeOf
-        },
-        organizer: {
-            typeOf: organizationType_1.default.MovieTheater,
-            identifier: params.movieTheater.identifier,
-            name: params.movieTheater.name
-        },
-        videoFormat: params.eizouKubuns.filter(function (kubun) { return kubun.kubunCode === params.filmFromCOA.kbnEizou; })[0],
-        workPerformed: {
-            identifier: params.filmFromCOA.titleCode,
-            name: params.filmFromCOA.titleNameOrig,
-            duration: moment.duration(params.filmFromCOA.showTime, 'm').toISOString(),
-            contentRating: params.eirinKubuns.filter(function (kubun) { return kubun.kubunCode === params.filmFromCOA.kbnEirin; })[0],
-            typeOf: creativeWorkType_1.default.Movie
-        },
-        duration: moment.duration(params.filmFromCOA.showTime, 'm').toISOString(),
-        endDate: endDate,
-        startDate: startDate,
-        coaInfo: {
-            titleBranchNum: params.filmFromCOA.titleBranchNum,
-            kbnJoueihousiki: params.joueihousikiKubuns.filter(function (kubun) { return kubun.kubunCode === params.filmFromCOA.kbnJoueihousiki; })[0],
-            kbnJimakufukikae: params.jimakufukikaeKubuns.filter(function (kubun) { return kubun.kubunCode === params.filmFromCOA.kbnJimakufukikae; })[0],
-            flgMvtkUse: params.filmFromCOA.flgMvtkUse,
-            dateMvtkBegin: params.filmFromCOA.dateMvtkBegin
-        },
-        eventStatus: eventStatusType_1.default.EventScheduled,
-        typeOf: eventType_1.default.ScreeningEvent
-    };
-}
-exports.createFromCOA = createFromCOA;
-/**
- * COA情報から上映イベント識別子を作成する
- * @export
- */
-function createIdentifier(params) {
-    return [
-        params.theaterCode,
-        params.titleCode,
-        params.titleBranchNum
-    ].join('');
-}
-exports.createIdentifier = createIdentifier;
-
-},{"../creativeWorkType":158,"../eventStatusType":174,"../eventType":175,"../organizationType":182,"moment":229}],178:[function(require,module,exports){
-"use strict";
-/**
- * 座席予約供給情報ファクトリー
- * @namespace offer.seatReservation
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-
-},{}],179:[function(require,module,exports){
-"use strict";
-/**
- * order factory
- * An order is a confirmation of a transaction (a receipt),
- * which can contain multiple line items, each represented by an Offer that has been accepted by the customer.
- * 注文ファクトリー
- * 注文は、確定した注文取引の領収証に値するものです。
- * @namespace order
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-
-},{}],180:[function(require,module,exports){
-"use strict";
-/**
- * 注文ステータス
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-var OrderStatus;
-(function (OrderStatus) {
-    OrderStatus["OrderCancelled"] = "OrderCancelled";
-    OrderStatus["OrderDelivered"] = "OrderDelivered";
-    OrderStatus["OrderInTransit"] = "OrderInTransit";
-    OrderStatus["OrderPaymentDue"] = "OrderPaymentDue";
-    OrderStatus["OrderPickupAvailable"] = "OrderPickupAvailable";
-    OrderStatus["OrderProblem"] = "OrderProblem";
-    OrderStatus["OrderProcessing"] = "OrderProcessing";
-    OrderStatus["OrderReturned"] = "OrderReturned";
-})(OrderStatus || (OrderStatus = {}));
-exports.default = OrderStatus;
-
-},{}],181:[function(require,module,exports){
-"use strict";
-/**
- * 企業識別子
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-var CorporationOrganizationIdentifier;
-(function (CorporationOrganizationIdentifier) {
-    CorporationOrganizationIdentifier["SasakiKogyo"] = "SasakiKogyo";
-})(CorporationOrganizationIdentifier || (CorporationOrganizationIdentifier = {}));
-exports.default = CorporationOrganizationIdentifier;
-
-},{}],182:[function(require,module,exports){
-"use strict";
-/**
- * 組織タイプ
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-var OrganizationType;
-(function (OrganizationType) {
-    OrganizationType["Corporation"] = "Corporation";
-    OrganizationType["MovieTheater"] = "MovieTheater";
-})(OrganizationType || (OrganizationType = {}));
-exports.default = OrganizationType;
-
-},{}],183:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],184:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],185:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],186:[function(require,module,exports){
-"use strict";
-/**
- * 決済方法タイプ
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-var PaymentMethodType;
-(function (PaymentMethodType) {
-    PaymentMethodType["CreditCard"] = "CreditCard";
-    PaymentMethodType["Pecorino"] = "Pecorino";
-})(PaymentMethodType || (PaymentMethodType = {}));
-exports.default = PaymentMethodType;
-
-},{}],187:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],188:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],189:[function(require,module,exports){
-arguments[4][34][0].apply(exports,arguments)
-},{"dup":34}],190:[function(require,module,exports){
-"use strict";
-/**
- * 場所タイプ
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-var PlaceType;
-(function (PlaceType) {
-    PlaceType["MovieTheater"] = "MovieTheater";
-    PlaceType["ScreeningRoom"] = "ScreeningRoom";
-    PlaceType["ScreeningRoomSection"] = "ScreeningRoomSection";
-    PlaceType["Seat"] = "Seat";
-})(PlaceType || (PlaceType = {}));
-exports.default = PlaceType;
-
-},{}],191:[function(require,module,exports){
-"use strict";
-/**
- * 劇場ファクトリー
- *
- * @namespace place.movieTheater
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-var placeType_1 = require("../placeType");
-/**
- * COAのマスター抽出結果から作成する
- * @param theaterFromCOA COA劇場抽出結果
- * @param screensFromCOA COAスクリーン抽出結果
- */
-function createFromCOA(theaterFromCOA, screensFromCOA) {
-    var identifier = "MovieTheater-" + theaterFromCOA.theaterCode;
-    return {
-        identifier: identifier,
-        screenCount: screensFromCOA.length,
-        branchCode: theaterFromCOA.theaterCode,
-        name: {
-            ja: theaterFromCOA.theaterName,
-            en: theaterFromCOA.theaterNameEng
-        },
-        kanaName: theaterFromCOA.theaterNameKana,
-        containsPlace: screensFromCOA.map(function (screenFromCOA) {
-            return createScreeningRoomFromCOA(screenFromCOA);
-        }),
-        typeOf: placeType_1.default.MovieTheater,
-        telephone: theaterFromCOA.theaterTelNum
-    };
-}
-exports.createFromCOA = createFromCOA;
-/**
- * COAのスクリーン抽出結果から上映室を作成する
- * @param screenFromCOA COAスクリーン抽出結果
- */
-function createScreeningRoomFromCOA(screenFromCOA) {
-    var sections = [];
-    var sectionCodes = [];
-    screenFromCOA.listSeat.forEach(function (seat) {
-        if (sectionCodes.indexOf(seat.seatSection) < 0) {
-            sectionCodes.push(seat.seatSection);
-            sections.push({
-                branchCode: seat.seatSection,
-                name: {
-                    ja: "\u30BB\u30AF\u30B7\u30E7\u30F3" + seat.seatSection,
-                    en: "section" + seat.seatSection
-                },
-                containsPlace: [],
-                typeOf: placeType_1.default.ScreeningRoomSection
-            });
-        }
-        sections[sectionCodes.indexOf(seat.seatSection)].containsPlace.push({
-            branchCode: seat.seatNum,
-            typeOf: placeType_1.default.Seat
-        });
-    });
-    return {
-        containsPlace: sections,
-        branchCode: screenFromCOA.screenCode,
-        name: {
-            ja: screenFromCOA.screenName,
-            en: screenFromCOA.screenNameEng
-        },
-        typeOf: placeType_1.default.ScreeningRoom
-    };
-}
-exports.createScreeningRoomFromCOA = createScreeningRoomFromCOA;
-
-},{"../placeType":190}],192:[function(require,module,exports){
-arguments[4][35][0].apply(exports,arguments)
-},{"dup":35}],193:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * 会員プログラム特典インターフェース
- */
-var Award;
-(function (Award) {
-    /**
-     * 口座決済
-     */
-    Award["PecorinoPayment"] = "PecorinoPayment";
-})(Award = exports.Award || (exports.Award = {}));
-
-},{}],194:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],195:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * Enumerated status values for Reservation.
- */
-var ReservationStatusType;
-(function (ReservationStatusType) {
-    /**
-     * The status for a previously confirmed reservation that is now cancelled.
-     */
-    ReservationStatusType["ReservationCancelled"] = "ReservationCancelled";
-    /**
-     * The status of a confirmed reservation.
-     */
-    ReservationStatusType["ReservationConfirmed"] = "ReservationConfirmed";
-    /**
-     * The status of a reservation on hold pending an update like credit card number or flight changes.
-     */
-    ReservationStatusType["ReservationHold"] = "ReservationHold";
-    /**
-     * The status of a reservation when a request has been sent, but not confirmed.
-     */
-    ReservationStatusType["ReservationPending"] = "ReservationPending";
-})(ReservationStatusType || (ReservationStatusType = {}));
-exports.default = ReservationStatusType;
-
-},{}],196:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * 予約タイプ
- */
-var ReservationType;
-(function (ReservationType) {
-    ReservationType["EventReservation"] = "EventReservation";
-})(ReservationType || (ReservationType = {}));
-exports.default = ReservationType;
-
-},{}],197:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],198:[function(require,module,exports){
-arguments[4][36][0].apply(exports,arguments)
-},{"./error/argument":163,"./error/argumentNull":164,"dup":36,"lodash":228,"validator":262}],199:[function(require,module,exports){
-arguments[4][37][0].apply(exports,arguments)
-},{"dup":37}],200:[function(require,module,exports){
-"use strict";
-/**
- * task name
- * タスク名
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-var TaskName;
-(function (TaskName) {
-    /**
-     * 座席予約承認アクション取消
-     */
-    TaskName["CancelSeatReservation"] = "cancelSeatReservation";
-    /**
-     * クレジットカード承認アクション取消
-     */
-    TaskName["CancelCreditCard"] = "cancelCreditCard";
-    /**
-     * ムビチケ承認アクション取消
-     */
-    TaskName["CancelMvtk"] = "cancelMvtk";
-    /**
-     * Pecorino口座承認アクション取消
-     */
-    TaskName["CancelPecorino"] = "cancelPecorino";
-    /**
-     * Pecorinoインセンティブ承認アクション取消
-     */
-    TaskName["CancelPecorinoAward"] = "cancelPecorinoAward";
-    /**
-     *  Eメールメッセージ送信
-     */
-    TaskName["SendEmailMessage"] = "sendEmailMessage";
-    /**
-     * ムビチケ使用
-     */
-    TaskName["UseMvtk"] = "useMvtk";
-    /**
-     * 注文受付
-     */
-    TaskName["PlaceOrder"] = "placeOrder";
-    /**
-     * 注文返品
-     */
-    TaskName["ReturnOrder"] = "returnOrder";
-    /**
-     * Pecorinoインセンティブ返却
-     */
-    TaskName["ReturnPecorinoAward"] = "returnPecorinoAward";
-    /**
-     * クレジットカード支払
-     */
-    TaskName["PayCreditCard"] = "payCreditCard";
-    /**
-     * Pecorino支払
-     */
-    TaskName["PayPecorino"] = "payPecorino";
-    /**
-     * 注文配送
-     */
-    TaskName["SendOrder"] = "sendOrder";
-    /**
-     * クレジットカード返金
-     */
-    TaskName["RefundCreditCard"] = "refundCreditCard";
-    /**
-     * Pecorino返金
-     */
-    TaskName["RefundPecorino"] = "refundPecorino";
-    /**
-     * Pecorinoインセンティブ付与
-     */
-    TaskName["GivePecorinoAward"] = "givePecorinoAward";
-    /**
-     * 会員プログラム登録
-     */
-    TaskName["RegisterProgramMembership"] = "registerProgramMembership";
-    /**
-     * 会員プログラム登録解除
-     */
-    TaskName["UnRegisterProgramMembership"] = "unRegisterProgramMembership";
-})(TaskName || (TaskName = {}));
-exports.default = TaskName;
-
-},{}],201:[function(require,module,exports){
-arguments[4][39][0].apply(exports,arguments)
-},{"dup":39}],202:[function(require,module,exports){
-"use strict";
-/**
- * クレジットカード承認解除タスクファクトリー
- * @namespace task.cancelCreditCard
- */
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var TaskFactory = require("../task");
-var taskName_1 = require("../taskName");
-function createAttributes(params) {
-    return TaskFactory.createAttributes(__assign({}, params, { name: taskName_1.default.CancelCreditCard }));
-}
-exports.createAttributes = createAttributes;
-
-},{"../task":198,"../taskName":200}],203:[function(require,module,exports){
-"use strict";
-/**
- * ムビチケ承認解除タスクファクトリー
- * @namespace task.cancelMvtk
- */
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var TaskFactory = require("../task");
-var taskName_1 = require("../taskName");
-function createAttributes(params) {
-    return TaskFactory.createAttributes(__assign({}, params, { name: taskName_1.default.CancelMvtk }));
-}
-exports.createAttributes = createAttributes;
-
-},{"../task":198,"../taskName":200}],204:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],205:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],206:[function(require,module,exports){
-"use strict";
-/**
- * 座席予約承認解除タスクファクトリー
- * @namespace task.cancelSeatReservation
- */
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var TaskFactory = require("../task");
-var taskName_1 = require("../taskName");
-function createAttributes(params) {
-    return TaskFactory.createAttributes(__assign({}, params, { name: taskName_1.default.CancelSeatReservation }));
-}
-exports.createAttributes = createAttributes;
-
-},{"../task":198,"../taskName":200}],207:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],208:[function(require,module,exports){
-"use strict";
-/**
- * クレジットカード支払タスクファクトリー
- * @namespace task.payCreditCard
- */
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var TaskFactory = require("../task");
-var taskName_1 = require("../taskName");
-function createAttributes(params) {
-    return TaskFactory.createAttributes(__assign({}, params, { name: taskName_1.default.PayCreditCard }));
-}
-exports.createAttributes = createAttributes;
-
-},{"../task":198,"../taskName":200}],209:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],210:[function(require,module,exports){
-"use strict";
-/**
- * 注文受付タスクファクトリー
- * @namespace task.placeOrder
- */
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var TaskFactory = require("../task");
-var taskName_1 = require("../taskName");
-function createAttributes(params) {
-    return TaskFactory.createAttributes(__assign({}, params, { name: taskName_1.default.PlaceOrder }));
-}
-exports.createAttributes = createAttributes;
-
-},{"../task":198,"../taskName":200}],211:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],212:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],213:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],214:[function(require,module,exports){
-"use strict";
-/**
- * 注文返品タスクファクトリー
- */
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var TaskFactory = require("../task");
-var taskName_1 = require("../taskName");
-function createAttributes(params) {
-    return TaskFactory.createAttributes(__assign({}, params, { name: taskName_1.default.ReturnOrder }));
-}
-exports.createAttributes = createAttributes;
-
-},{"../task":198,"../taskName":200}],215:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],216:[function(require,module,exports){
-"use strict";
-/**
- * Eメール送信タスクファクトリー
- * @namespace task.sendEmailMessage
- */
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var TaskFactory = require("../task");
-var taskName_1 = require("../taskName");
-function createAttributes(params) {
-    return TaskFactory.createAttributes(__assign({}, params, { name: taskName_1.default.SendEmailMessage }));
-}
-exports.createAttributes = createAttributes;
-
-},{"../task":198,"../taskName":200}],217:[function(require,module,exports){
-"use strict";
-/**
- * 注文配送タスクファクトリー
- * @namespace task.sendOrder
- */
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var TaskFactory = require("../task");
-var taskName_1 = require("../taskName");
-function createAttributes(params) {
-    return TaskFactory.createAttributes(__assign({}, params, { name: taskName_1.default.SendOrder }));
-}
-exports.createAttributes = createAttributes;
-
-},{"../task":198,"../taskName":200}],218:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],219:[function(require,module,exports){
-"use strict";
-/**
- * ムビチケ使用ファクトリー
- * @namespace task.useMvtk
- */
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var TaskFactory = require("../task");
-var taskName_1 = require("../taskName");
-function createAttributes(params) {
-    return TaskFactory.createAttributes(__assign({}, params, { name: taskName_1.default.UseMvtk }));
-}
-exports.createAttributes = createAttributes;
-
-},{"../task":198,"../taskName":200}],220:[function(require,module,exports){
-arguments[4][42][0].apply(exports,arguments)
-},{"dup":42}],221:[function(require,module,exports){
-arguments[4][43][0].apply(exports,arguments)
-},{"dup":43}],222:[function(require,module,exports){
-"use strict";
-/**
- * 取引タイプ
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-var TransactionType;
-(function (TransactionType) {
-    /**
-     * 注文取引
-     */
-    TransactionType["PlaceOrder"] = "PlaceOrder";
-    /**
-     * 注文返品取引
-     */
-    TransactionType["ReturnOrder"] = "ReturnOrder";
-})(TransactionType || (TransactionType = {}));
-exports.default = TransactionType;
-
-},{}],223:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],224:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * 返品理由
- */
-var Reason;
-(function (Reason) {
-    /**
-     * 購入者自身の都合での返品
-     */
-    Reason["Customer"] = "Customer";
-    /**
-     * 販売者都合での返品
-     */
-    Reason["Seller"] = "Seller";
-})(Reason = exports.Reason || (exports.Reason = {}));
-
-},{}],225:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * 単位符号
- */
-var UnitCode;
-(function (UnitCode) {
-    /**
-     * 秒
-     */
-    UnitCode["Sec"] = "SEC";
-})(UnitCode = exports.UnitCode || (exports.UnitCode = {}));
-
-},{}],226:[function(require,module,exports){
-arguments[4][48][0].apply(exports,arguments)
-},{"dup":48}],227:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * sskts-factory
- */
-var pecorinoFactory = require("@motionpicture/pecorino-factory");
-var PecorinoAwardAuthorizeActionFactory = require("./factory/action/authorize/award/pecorino");
-var MvtkAuthorizeActionFactory = require("./factory/action/authorize/discount/mvtk");
-var ProgramMembershipOfferAuthorizeActionFactory = require("./factory/action/authorize/offer/programMembership");
-var SeatReservationOfferAuthorizeActionFactory = require("./factory/action/authorize/offer/seatReservation");
-var CreditCardAuthorizeActionFactory = require("./factory/action/authorize/paymentMethod/creditCard");
-var PecorinoAuthorizeActionFactory = require("./factory/action/authorize/paymentMethod/pecorino");
-var UseMvtkActionFactory = require("./factory/action/consume/use/mvtk");
-var RegisterProgramMembershipActionFactory = require("./factory/action/interact/register/programMembership");
-var UnRegisterProgramMembershipActionFactory = require("./factory/action/interact/unRegister/programMembership");
-var OrderActionFactory = require("./factory/action/trade/order");
-var PayActionFactory = require("./factory/action/trade/pay");
-var RefundActionFactory = require("./factory/action/trade/refund");
-var GivePecorinoAwardActionFactory = require("./factory/action/transfer/give/pecorinoAward");
-var PrintTicketActionFactory = require("./factory/action/transfer/print/ticket");
-var ReturnOrderActionFactory = require("./factory/action/transfer/return/order");
-var ReturnPecorinoAwardActionFactory = require("./factory/action/transfer/return/pecorinoAward");
-var SendEmailMessageActionFactory = require("./factory/action/transfer/send/message/email");
-var SendOrderActionFactory = require("./factory/action/transfer/send/order");
-var actionStatusType_1 = require("./factory/actionStatusType");
-var actionType_1 = require("./factory/actionType");
-var ClientEventFactory = require("./factory/clientEvent");
-var ClientUserFactory = require("./factory/clientUser");
-var EmailMessageFactory = require("./factory/creativeWork/message/email");
-var MovieCreativeWorkFactory = require("./factory/creativeWork/movie");
-var creativeWorkType_1 = require("./factory/creativeWorkType");
-var IndividualScreeningEventFactory = require("./factory/event/individualScreeningEvent");
-var ScreeningEventFactory = require("./factory/event/screeningEvent");
-var eventStatusType_1 = require("./factory/eventStatusType");
-var eventType_1 = require("./factory/eventType");
-var SeatReservationOfferFactory = require("./factory/offer/seatReservation");
-var OrderFactory = require("./factory/order");
-var orderStatus_1 = require("./factory/orderStatus");
-var CorporationOrganizationFactory = require("./factory/organization/corporation");
-var MovieTheaterOrganizationFactory = require("./factory/organization/movieTheater");
-var corporation_1 = require("./factory/organizationIdentifier/corporation");
-var organizationType_1 = require("./factory/organizationType");
-var OwnershipInfoFactory = require("./factory/ownershipInfo");
-var CreditCardFactory = require("./factory/paymentMethod/paymentCard/creditCard");
-var paymentMethodType_1 = require("./factory/paymentMethodType");
-var PersonFactory = require("./factory/person");
-var personType_1 = require("./factory/personType");
-var MovieTheaterPlaceFactory = require("./factory/place/movieTheater");
-var placeType_1 = require("./factory/placeType");
-var priceCurrency_1 = require("./factory/priceCurrency");
-var ProgramMembershipFactory = require("./factory/programMembership");
-var QuantitativeValueFactory = require("./factory/quantitativeValue");
-var EventReservationFactory = require("./factory/reservation/event");
-var reservationStatusType_1 = require("./factory/reservationStatusType");
-var reservationType_1 = require("./factory/reservationType");
-var unitCode_1 = require("./factory/unitCode");
-var CancelCreditCardTaskFactory = require("./factory/task/cancelCreditCard");
-var CancelMvtkTaskFactory = require("./factory/task/cancelMvtk");
-var CancelPecorinoTaskFactory = require("./factory/task/cancelPecorino");
-var CancelPecorinoAwardTaskFactory = require("./factory/task/cancelPecorinoAward");
-var CancelSeatReservationTaskFactory = require("./factory/task/cancelSeatReservation");
-var GivePecorinoAwardTaskFactory = require("./factory/task/givePecorinoAward");
-var PayCreditCardTaskFactory = require("./factory/task/payCreditCard");
-var PayPecorinoTaskFactory = require("./factory/task/payPecorino");
-var PlaceOrderTaskFactory = require("./factory/task/placeOrder");
-var RefundCreditCardTaskFactory = require("./factory/task/refundCreditCard");
-var RefundPecorinoTaskFactory = require("./factory/task/refundPecorino");
-var RegisterProgramMembershipTaskFactory = require("./factory/task/registerProgramMembership");
-var ReturnOrderTaskFactory = require("./factory/task/returnOrder");
-var ReturnPecorinoAwardTaskFactory = require("./factory/task/returnPecorinoAward");
-var SendEmailMessageTaskFactory = require("./factory/task/sendEmailMessage");
-var SendOrderTaskFactory = require("./factory/task/sendOrder");
-var UnRegisterProgramMembershipTaskFactory = require("./factory/task/unRegisterProgramMembership");
-var UseMvtkTaskFactory = require("./factory/task/useMvtk");
-var TaskExecutionResultFactory = require("./factory/taskExecutionResult");
-var taskName_1 = require("./factory/taskName");
-var taskStatus_1 = require("./factory/taskStatus");
-var PlaceOrderTransactionFactory = require("./factory/transaction/placeOrder");
-var ReturnOrderTransactionFactory = require("./factory/transaction/returnOrder");
-var transactionStatusType_1 = require("./factory/transactionStatusType");
-var transactionTasksExportationStatus_1 = require("./factory/transactionTasksExportationStatus");
-var transactionType_1 = require("./factory/transactionType");
-var URLFactory = require("./factory/url");
-var errorCode_1 = require("./factory/errorCode");
-var errors = require("./factory/errors");
-exports.pecorino = pecorinoFactory;
-exports.errors = errors;
-exports.errorCode = errorCode_1.default;
-exports.actionStatusType = actionStatusType_1.default;
-exports.actionType = actionType_1.default;
-var action;
-(function (action) {
-    var authorize;
-    (function (authorize) {
-        var award;
-        (function (award) {
-            // tslint:disable-next-line:no-shadowed-variable
-            award.pecorino = PecorinoAwardAuthorizeActionFactory;
-        })(award = authorize.award || (authorize.award = {}));
-        // tslint:disable-next-line:no-shadowed-variable
-        var paymentMethod;
-        (function (paymentMethod) {
-            paymentMethod.creditCard = CreditCardAuthorizeActionFactory;
-            // tslint:disable-next-line:no-shadowed-variable
-            paymentMethod.pecorino = PecorinoAuthorizeActionFactory;
-        })(paymentMethod = authorize.paymentMethod || (authorize.paymentMethod = {}));
-        var discount;
-        (function (discount) {
-            discount.mvtk = MvtkAuthorizeActionFactory;
-        })(discount = authorize.discount || (authorize.discount = {}));
-        // tslint:disable-next-line:no-shadowed-variable
-        var offer;
-        (function (offer) {
-            // tslint:disable-next-line:no-shadowed-variable
-            offer.programMembership = ProgramMembershipOfferAuthorizeActionFactory;
-            offer.seatReservation = SeatReservationOfferAuthorizeActionFactory;
-        })(offer = authorize.offer || (authorize.offer = {}));
-    })(authorize = action.authorize || (action.authorize = {}));
-    var interact;
-    (function (interact) {
-        var register;
-        (function (register) {
-            // tslint:disable-next-line:no-shadowed-variable
-            register.programMembership = RegisterProgramMembershipActionFactory;
-        })(register = interact.register || (interact.register = {}));
-        var unRegister;
-        (function (unRegister) {
-            // tslint:disable-next-line:no-shadowed-variable
-            unRegister.programMembership = UnRegisterProgramMembershipActionFactory;
-        })(unRegister = interact.unRegister || (interact.unRegister = {}));
-    })(interact = action.interact || (action.interact = {}));
-    var trade;
-    (function (trade) {
-        // tslint:disable-next-line:no-shadowed-variable
-        trade.order = OrderActionFactory;
-        trade.pay = PayActionFactory;
-        trade.refund = RefundActionFactory;
-    })(trade = action.trade || (action.trade = {}));
-    var transfer;
-    (function (transfer) {
-        var give;
-        (function (give) {
-            // tslint:disable-next-line:no-shadowed-variable
-            give.pecorinoAward = GivePecorinoAwardActionFactory;
-        })(give = transfer.give || (transfer.give = {}));
-        var print;
-        (function (print) {
-            print.ticket = PrintTicketActionFactory;
-        })(print = transfer.print || (transfer.print = {}));
-        /**
-         * 返却アクション
-         * returnはネームスペース名に使えないのでreturnAction
-         */
-        var returnAction;
-        (function (returnAction) {
-            // tslint:disable-next-line:no-shadowed-variable
-            returnAction.order = ReturnOrderActionFactory;
-            returnAction.pecorinoAward = ReturnPecorinoAwardActionFactory;
-        })(returnAction = transfer.returnAction || (transfer.returnAction = {}));
-        var send;
-        (function (send) {
-            var message;
-            (function (message) {
-                message.email = SendEmailMessageActionFactory;
-            })(message = send.message || (send.message = {}));
-            // tslint:disable-next-line:no-shadowed-variable
-            send.order = SendOrderActionFactory;
-        })(send = transfer.send || (transfer.send = {}));
-    })(transfer = action.transfer || (action.transfer = {}));
-    var consume;
-    (function (consume) {
-        var use;
-        (function (use) {
-            use.mvtk = UseMvtkActionFactory;
-        })(use = consume.use || (consume.use = {}));
-    })(consume = action.consume || (action.consume = {}));
-})(action = exports.action || (exports.action = {}));
-var paymentMethod;
-(function (paymentMethod) {
-    var paymentCard;
-    (function (paymentCard) {
-        paymentCard.creditCard = CreditCardFactory;
-    })(paymentCard = paymentMethod.paymentCard || (paymentMethod.paymentCard = {}));
-})(paymentMethod = exports.paymentMethod || (exports.paymentMethod = {}));
-exports.clientEvent = ClientEventFactory;
-exports.clientUser = ClientUserFactory;
-var creativeWork;
-(function (creativeWork) {
-    var message;
-    (function (message) {
-        message.email = EmailMessageFactory;
-    })(message = creativeWork.message || (creativeWork.message = {}));
-    creativeWork.movie = MovieCreativeWorkFactory;
-})(creativeWork = exports.creativeWork || (exports.creativeWork = {}));
-exports.creativeWorkType = creativeWorkType_1.default;
-var event;
-(function (event) {
-    event.individualScreeningEvent = IndividualScreeningEventFactory;
-    event.screeningEvent = ScreeningEventFactory;
-})(event = exports.event || (exports.event = {}));
-exports.eventStatusType = eventStatusType_1.default;
-exports.eventType = eventType_1.default;
-var offer;
-(function (offer) {
-    offer.seatReservation = SeatReservationOfferFactory;
-})(offer = exports.offer || (exports.offer = {}));
-exports.order = OrderFactory;
-exports.orderStatus = orderStatus_1.default;
-var organization;
-(function (organization) {
-    organization.corporation = CorporationOrganizationFactory;
-    organization.movieTheater = MovieTheaterOrganizationFactory;
-})(organization = exports.organization || (exports.organization = {}));
-var organizationIdentifier;
-(function (organizationIdentifier) {
-    organizationIdentifier.corporation = corporation_1.default;
-})(organizationIdentifier = exports.organizationIdentifier || (exports.organizationIdentifier = {}));
-exports.organizationType = organizationType_1.default;
-exports.ownershipInfo = OwnershipInfoFactory;
-exports.priceCurrency = priceCurrency_1.default;
-var place;
-(function (place) {
-    place.movieTheater = MovieTheaterPlaceFactory;
-})(place = exports.place || (exports.place = {}));
-exports.paymentMethodType = paymentMethodType_1.default;
-exports.person = PersonFactory;
-exports.personType = personType_1.default;
-exports.placeType = placeType_1.default;
-exports.programMembership = ProgramMembershipFactory;
-exports.quantitativeValue = QuantitativeValueFactory;
-var reservation;
-(function (reservation) {
-    // tslint:disable-next-line:no-shadowed-variable
-    reservation.event = EventReservationFactory;
-})(reservation = exports.reservation || (exports.reservation = {}));
-exports.reservationStatusType = reservationStatusType_1.default;
-exports.reservationType = reservationType_1.default;
-var task;
-(function (task) {
-    task.cancelCreditCard = CancelCreditCardTaskFactory;
-    task.cancelMvtk = CancelMvtkTaskFactory;
-    task.cancelPecorino = CancelPecorinoTaskFactory;
-    task.cancelPecorinoAward = CancelPecorinoAwardTaskFactory;
-    task.cancelSeatReservation = CancelSeatReservationTaskFactory;
-    task.givePecorinoAward = GivePecorinoAwardTaskFactory;
-    task.placeOrder = PlaceOrderTaskFactory;
-    task.refundCreditCard = RefundCreditCardTaskFactory;
-    task.refundPecorino = RefundPecorinoTaskFactory;
-    task.registerProgramMembership = RegisterProgramMembershipTaskFactory;
-    task.returnOrder = ReturnOrderTaskFactory;
-    task.returnPecorinoAward = ReturnPecorinoAwardTaskFactory;
-    task.sendEmailMessage = SendEmailMessageTaskFactory;
-    task.sendOrder = SendOrderTaskFactory;
-    task.payCreditCard = PayCreditCardTaskFactory;
-    task.payPecorino = PayPecorinoTaskFactory;
-    task.unRegisterProgramMembership = UnRegisterProgramMembershipTaskFactory;
-    task.useMvtk = UseMvtkTaskFactory;
-})(task = exports.task || (exports.task = {}));
-exports.taskExecutionResult = TaskExecutionResultFactory;
-exports.taskName = taskName_1.default;
-exports.taskStatus = taskStatus_1.default;
-var transaction;
-(function (transaction) {
-    transaction.placeOrder = PlaceOrderTransactionFactory;
-    transaction.returnOrder = ReturnOrderTransactionFactory;
-})(transaction = exports.transaction || (exports.transaction = {}));
-exports.transactionStatusType = transactionStatusType_1.default;
-exports.transactionTasksExportationStatus = transactionTasksExportationStatus_1.default;
-exports.transactionType = transactionType_1.default;
-exports.unitCode = unitCode_1.UnitCode;
-exports.url = URLFactory;
-
-},{"./factory/action/authorize/award/pecorino":138,"./factory/action/authorize/discount/mvtk":139,"./factory/action/authorize/offer/programMembership":140,"./factory/action/authorize/offer/seatReservation":141,"./factory/action/authorize/paymentMethod/creditCard":142,"./factory/action/authorize/paymentMethod/pecorino":143,"./factory/action/consume/use/mvtk":144,"./factory/action/interact/register/programMembership":145,"./factory/action/interact/unRegister/programMembership":146,"./factory/action/trade/order":147,"./factory/action/trade/pay":148,"./factory/action/trade/refund":149,"./factory/action/transfer/give/pecorinoAward":150,"./factory/action/transfer/print/ticket":151,"./factory/action/transfer/return/order":152,"./factory/action/transfer/return/pecorinoAward":153,"./factory/action/transfer/send/message/email":154,"./factory/action/transfer/send/order":155,"./factory/actionStatusType":136,"./factory/actionType":137,"./factory/clientEvent":156,"./factory/clientUser":157,"./factory/creativeWork/message/email":159,"./factory/creativeWork/movie":160,"./factory/creativeWorkType":158,"./factory/errorCode":161,"./factory/errors":172,"./factory/event/individualScreeningEvent":176,"./factory/event/screeningEvent":177,"./factory/eventStatusType":174,"./factory/eventType":175,"./factory/offer/seatReservation":178,"./factory/order":179,"./factory/orderStatus":180,"./factory/organization/corporation":183,"./factory/organization/movieTheater":184,"./factory/organizationIdentifier/corporation":181,"./factory/organizationType":182,"./factory/ownershipInfo":185,"./factory/paymentMethod/paymentCard/creditCard":187,"./factory/paymentMethodType":186,"./factory/person":188,"./factory/personType":189,"./factory/place/movieTheater":191,"./factory/placeType":190,"./factory/priceCurrency":192,"./factory/programMembership":193,"./factory/quantitativeValue":194,"./factory/reservation/event":197,"./factory/reservationStatusType":195,"./factory/reservationType":196,"./factory/task/cancelCreditCard":202,"./factory/task/cancelMvtk":203,"./factory/task/cancelPecorino":204,"./factory/task/cancelPecorinoAward":205,"./factory/task/cancelSeatReservation":206,"./factory/task/givePecorinoAward":207,"./factory/task/payCreditCard":208,"./factory/task/payPecorino":209,"./factory/task/placeOrder":210,"./factory/task/refundCreditCard":211,"./factory/task/refundPecorino":212,"./factory/task/registerProgramMembership":213,"./factory/task/returnOrder":214,"./factory/task/returnPecorinoAward":215,"./factory/task/sendEmailMessage":216,"./factory/task/sendOrder":217,"./factory/task/unRegisterProgramMembership":218,"./factory/task/useMvtk":219,"./factory/taskExecutionResult":199,"./factory/taskName":200,"./factory/taskStatus":201,"./factory/transaction/placeOrder":223,"./factory/transaction/returnOrder":224,"./factory/transactionStatusType":220,"./factory/transactionTasksExportationStatus":221,"./factory/transactionType":222,"./factory/unitCode":225,"./factory/url":226,"@motionpicture/pecorino-factory":49}],228:[function(require,module,exports){
-arguments[4][50][0].apply(exports,arguments)
-},{"dup":50}],229:[function(require,module,exports){
+},{}],154:[function(require,module,exports){
 //! moment.js
 
 ;(function (global, factory) {
@@ -30091,7 +27012,7 @@ arguments[4][50][0].apply(exports,arguments)
 
 })));
 
-},{}],230:[function(require,module,exports){
+},{}],155:[function(require,module,exports){
 'use strict'
 
 exports.byteLength = byteLength
@@ -30207,7 +27128,7 @@ function fromByteArray (uint8) {
   return parts.join('')
 }
 
-},{}],231:[function(require,module,exports){
+},{}],156:[function(require,module,exports){
 
 /**
  * Expose `Emitter`.
@@ -30372,7 +27293,7 @@ Emitter.prototype.hasListeners = function(event){
   return !! this.listeners(event).length;
 };
 
-},{}],232:[function(require,module,exports){
+},{}],157:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -31133,7 +28054,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS;
 
 }));
-},{}],233:[function(require,module,exports){
+},{}],158:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -31269,7 +28190,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS.enc.Base64;
 
 }));
-},{"./core":232}],234:[function(require,module,exports){
+},{"./core":157}],159:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -31288,7 +28209,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS.enc.Hex;
 
 }));
-},{"./core":232}],235:[function(require,module,exports){
+},{"./core":157}],160:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -31488,7 +28409,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS.SHA256;
 
 }));
-},{"./core":232}],236:[function(require,module,exports){
+},{"./core":157}],161:[function(require,module,exports){
 (function (process){
 /**
  * This is the web browser implementation of `debug()`.
@@ -31687,7 +28608,7 @@ function localstorage() {
 }
 
 }).call(this,require('_process'))
-},{"./debug":237,"_process":249}],237:[function(require,module,exports){
+},{"./debug":162,"_process":174}],162:[function(require,module,exports){
 
 /**
  * This is the common logic for both the Node.js and web browser
@@ -31914,7 +28835,7 @@ function coerce(val) {
   return val;
 }
 
-},{"ms":248}],238:[function(require,module,exports){
+},{"ms":173}],163:[function(require,module,exports){
 // Generated by CoffeeScript 2.3.0
 // # node-http-status
 
@@ -32394,7 +29315,7 @@ module.exports = {
   }
 };
 
-},{}],239:[function(require,module,exports){
+},{}],164:[function(require,module,exports){
 (function (name, context, definition) {
   if (typeof module !== 'undefined' && module.exports) module.exports = definition();
   else if (typeof define === 'function' && define.amd) define(definition);
@@ -32434,7 +29355,7 @@ module.exports = {
 
 });
 
-},{}],240:[function(require,module,exports){
+},{}],165:[function(require,module,exports){
 var base64 = require('base64-js');
 
 function padding(str) {
@@ -32520,7 +29441,7 @@ module.exports = {
   base64ToBase64Url: base64ToBase64Url
 };
 
-},{"base64-js":230}],241:[function(require,module,exports){
+},{"base64-js":155}],166:[function(require,module,exports){
 function DummyCache() {}
 
 DummyCache.prototype.get = function () {
@@ -32536,7 +29457,7 @@ DummyCache.prototype.set = function () {
 
 module.exports = DummyCache;
 
-},{}],242:[function(require,module,exports){
+},{}],167:[function(require,module,exports){
 function ConfigurationError(message) {
   this.name = 'ConfigurationError';
   this.message = (message || '');
@@ -32554,7 +29475,7 @@ module.exports = {
   TokenValidationError: TokenValidationError
 };
 
-},{}],243:[function(require,module,exports){
+},{}],168:[function(require,module,exports){
 var urljoin = require('url-join');
 var base64 = require('./base64');
 var request = require('superagent');
@@ -32600,7 +29521,7 @@ module.exports = {
   getJWKS: getJWKS
 };
 
-},{"./base64":240,"superagent":257,"url-join":239}],244:[function(require,module,exports){
+},{"./base64":165,"superagent":182,"url-join":164}],169:[function(require,module,exports){
 /*
 Based on the work of Tom Wu
 http://www-cs-students.stanford.edu/~tjw/jsbn/
@@ -32679,7 +29600,7 @@ RSAVerifier.prototype.verify = function (msg, encsig) {
 
 module.exports = RSAVerifier;
 
-},{"crypto-js/sha256":235,"jsbn":247}],245:[function(require,module,exports){
+},{"crypto-js/sha256":160,"jsbn":172}],170:[function(require,module,exports){
 var sha256 = require('crypto-js/sha256');
 var cryptoBase64 = require('crypto-js/enc-base64');
 var cryptoHex = require('crypto-js/enc-hex');
@@ -32972,7 +29893,7 @@ IdTokenVerifier.prototype.validateAccessToken = function (accessToken, alg, atHa
 
 module.exports = IdTokenVerifier;
 
-},{"./helpers/base64":240,"./helpers/dummy-cache":241,"./helpers/error":242,"./helpers/jwks":243,"./helpers/rsa-verifier":244,"crypto-js/enc-base64":233,"crypto-js/enc-hex":234,"crypto-js/sha256":235}],246:[function(require,module,exports){
+},{"./helpers/base64":165,"./helpers/dummy-cache":166,"./helpers/error":167,"./helpers/jwks":168,"./helpers/rsa-verifier":169,"crypto-js/enc-base64":158,"crypto-js/enc-hex":159,"crypto-js/sha256":160}],171:[function(require,module,exports){
 // the whatwg-fetch polyfill installs the fetch() function
 // on the global object (window or self)
 //
@@ -32980,7 +29901,7 @@ module.exports = IdTokenVerifier;
 require('whatwg-fetch');
 module.exports = self.fetch.bind(self);
 
-},{"whatwg-fetch":335}],247:[function(require,module,exports){
+},{"whatwg-fetch":187}],172:[function(require,module,exports){
 (function(){
 
     // Copyright (c) 2005  Tom Wu
@@ -34339,7 +31260,7 @@ module.exports = self.fetch.bind(self);
 
 }).call(this);
 
-},{}],248:[function(require,module,exports){
+},{}],173:[function(require,module,exports){
 /**
  * Helpers.
  */
@@ -34493,7 +31414,7 @@ function plural(ms, n, name) {
   return Math.ceil(ms / n) + ' ' + name + 's';
 }
 
-},{}],249:[function(require,module,exports){
+},{}],174:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -34679,7 +31600,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],250:[function(require,module,exports){
+},{}],175:[function(require,module,exports){
 'use strict';
 
 var replace = String.prototype.replace;
@@ -34699,7 +31620,7 @@ module.exports = {
     RFC3986: 'RFC3986'
 };
 
-},{}],251:[function(require,module,exports){
+},{}],176:[function(require,module,exports){
 'use strict';
 
 var stringify = require('./stringify');
@@ -34712,7 +31633,7 @@ module.exports = {
     stringify: stringify
 };
 
-},{"./formats":250,"./parse":252,"./stringify":253}],252:[function(require,module,exports){
+},{"./formats":175,"./parse":177,"./stringify":178}],177:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -34888,7 +31809,7 @@ module.exports = function (str, opts) {
     return utils.compact(obj);
 };
 
-},{"./utils":254}],253:[function(require,module,exports){
+},{"./utils":179}],178:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -35100,7 +32021,7 @@ module.exports = function (object, opts) {
     return joined.length > 0 ? prefix + joined : '';
 };
 
-},{"./formats":250,"./utils":254}],254:[function(require,module,exports){
+},{"./formats":175,"./utils":179}],179:[function(require,module,exports){
 'use strict';
 
 var has = Object.prototype.hasOwnProperty;
@@ -35315,7 +32236,7 @@ module.exports = {
     merge: merge
 };
 
-},{}],255:[function(require,module,exports){
+},{}],180:[function(require,module,exports){
 module.exports = Object.setPrototypeOf || ({__proto__:[]} instanceof Array ? setProtoOf : mixinProperties);
 
 function setProtoOf(obj, proto) {
@@ -35332,7 +32253,7 @@ function mixinProperties(obj, proto) {
 	return obj;
 }
 
-},{}],256:[function(require,module,exports){
+},{}],181:[function(require,module,exports){
 function Agent() {
   this._defaults = [];
 }
@@ -35354,7 +32275,7 @@ Agent.prototype._setDefaults = function(req) {
 
 module.exports = Agent;
 
-},{}],257:[function(require,module,exports){
+},{}],182:[function(require,module,exports){
 /**
  * Root reference for iframes.
  */
@@ -36276,7 +33197,7 @@ request.put = function(url, data, fn) {
   return req;
 };
 
-},{"./agent-base":256,"./is-object":258,"./request-base":259,"./response-base":260,"component-emitter":231}],258:[function(require,module,exports){
+},{"./agent-base":181,"./is-object":183,"./request-base":184,"./response-base":185,"component-emitter":156}],183:[function(require,module,exports){
 'use strict';
 
 /**
@@ -36293,7 +33214,7 @@ function isObject(obj) {
 
 module.exports = isObject;
 
-},{}],259:[function(require,module,exports){
+},{}],184:[function(require,module,exports){
 'use strict';
 
 /**
@@ -36989,7 +33910,7 @@ RequestBase.prototype._setTimeouts = function() {
   }
 };
 
-},{"./is-object":258}],260:[function(require,module,exports){
+},{"./is-object":183}],185:[function(require,module,exports){
 'use strict';
 
 /**
@@ -37127,7 +34048,7 @@ ResponseBase.prototype._setStatusProperties = function(status){
     this.unprocessableEntity = 422 == status;
 };
 
-},{"./utils":261}],261:[function(require,module,exports){
+},{"./utils":186}],186:[function(require,module,exports){
 'use strict';
 
 /**
@@ -37200,1229 +34121,7 @@ exports.cleanHeader = function(header, changesOrigin){
   return header;
 };
 
-},{}],262:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _toDate = require('./lib/toDate');
-
-var _toDate2 = _interopRequireDefault(_toDate);
-
-var _toFloat = require('./lib/toFloat');
-
-var _toFloat2 = _interopRequireDefault(_toFloat);
-
-var _toInt = require('./lib/toInt');
-
-var _toInt2 = _interopRequireDefault(_toInt);
-
-var _toBoolean = require('./lib/toBoolean');
-
-var _toBoolean2 = _interopRequireDefault(_toBoolean);
-
-var _equals = require('./lib/equals');
-
-var _equals2 = _interopRequireDefault(_equals);
-
-var _contains = require('./lib/contains');
-
-var _contains2 = _interopRequireDefault(_contains);
-
-var _matches = require('./lib/matches');
-
-var _matches2 = _interopRequireDefault(_matches);
-
-var _isEmail = require('./lib/isEmail');
-
-var _isEmail2 = _interopRequireDefault(_isEmail);
-
-var _isURL = require('./lib/isURL');
-
-var _isURL2 = _interopRequireDefault(_isURL);
-
-var _isMACAddress = require('./lib/isMACAddress');
-
-var _isMACAddress2 = _interopRequireDefault(_isMACAddress);
-
-var _isIP = require('./lib/isIP');
-
-var _isIP2 = _interopRequireDefault(_isIP);
-
-var _isFQDN = require('./lib/isFQDN');
-
-var _isFQDN2 = _interopRequireDefault(_isFQDN);
-
-var _isBoolean = require('./lib/isBoolean');
-
-var _isBoolean2 = _interopRequireDefault(_isBoolean);
-
-var _isAlpha = require('./lib/isAlpha');
-
-var _isAlpha2 = _interopRequireDefault(_isAlpha);
-
-var _isAlphanumeric = require('./lib/isAlphanumeric');
-
-var _isAlphanumeric2 = _interopRequireDefault(_isAlphanumeric);
-
-var _isNumeric = require('./lib/isNumeric');
-
-var _isNumeric2 = _interopRequireDefault(_isNumeric);
-
-var _isPort = require('./lib/isPort');
-
-var _isPort2 = _interopRequireDefault(_isPort);
-
-var _isLowercase = require('./lib/isLowercase');
-
-var _isLowercase2 = _interopRequireDefault(_isLowercase);
-
-var _isUppercase = require('./lib/isUppercase');
-
-var _isUppercase2 = _interopRequireDefault(_isUppercase);
-
-var _isAscii = require('./lib/isAscii');
-
-var _isAscii2 = _interopRequireDefault(_isAscii);
-
-var _isFullWidth = require('./lib/isFullWidth');
-
-var _isFullWidth2 = _interopRequireDefault(_isFullWidth);
-
-var _isHalfWidth = require('./lib/isHalfWidth');
-
-var _isHalfWidth2 = _interopRequireDefault(_isHalfWidth);
-
-var _isVariableWidth = require('./lib/isVariableWidth');
-
-var _isVariableWidth2 = _interopRequireDefault(_isVariableWidth);
-
-var _isMultibyte = require('./lib/isMultibyte');
-
-var _isMultibyte2 = _interopRequireDefault(_isMultibyte);
-
-var _isSurrogatePair = require('./lib/isSurrogatePair');
-
-var _isSurrogatePair2 = _interopRequireDefault(_isSurrogatePair);
-
-var _isInt = require('./lib/isInt');
-
-var _isInt2 = _interopRequireDefault(_isInt);
-
-var _isFloat = require('./lib/isFloat');
-
-var _isFloat2 = _interopRequireDefault(_isFloat);
-
-var _isDecimal = require('./lib/isDecimal');
-
-var _isDecimal2 = _interopRequireDefault(_isDecimal);
-
-var _isHexadecimal = require('./lib/isHexadecimal');
-
-var _isHexadecimal2 = _interopRequireDefault(_isHexadecimal);
-
-var _isDivisibleBy = require('./lib/isDivisibleBy');
-
-var _isDivisibleBy2 = _interopRequireDefault(_isDivisibleBy);
-
-var _isHexColor = require('./lib/isHexColor');
-
-var _isHexColor2 = _interopRequireDefault(_isHexColor);
-
-var _isISRC = require('./lib/isISRC');
-
-var _isISRC2 = _interopRequireDefault(_isISRC);
-
-var _isMD = require('./lib/isMD5');
-
-var _isMD2 = _interopRequireDefault(_isMD);
-
-var _isHash = require('./lib/isHash');
-
-var _isHash2 = _interopRequireDefault(_isHash);
-
-var _isJSON = require('./lib/isJSON');
-
-var _isJSON2 = _interopRequireDefault(_isJSON);
-
-var _isEmpty = require('./lib/isEmpty');
-
-var _isEmpty2 = _interopRequireDefault(_isEmpty);
-
-var _isLength = require('./lib/isLength');
-
-var _isLength2 = _interopRequireDefault(_isLength);
-
-var _isByteLength = require('./lib/isByteLength');
-
-var _isByteLength2 = _interopRequireDefault(_isByteLength);
-
-var _isUUID = require('./lib/isUUID');
-
-var _isUUID2 = _interopRequireDefault(_isUUID);
-
-var _isMongoId = require('./lib/isMongoId');
-
-var _isMongoId2 = _interopRequireDefault(_isMongoId);
-
-var _isAfter = require('./lib/isAfter');
-
-var _isAfter2 = _interopRequireDefault(_isAfter);
-
-var _isBefore = require('./lib/isBefore');
-
-var _isBefore2 = _interopRequireDefault(_isBefore);
-
-var _isIn = require('./lib/isIn');
-
-var _isIn2 = _interopRequireDefault(_isIn);
-
-var _isCreditCard = require('./lib/isCreditCard');
-
-var _isCreditCard2 = _interopRequireDefault(_isCreditCard);
-
-var _isISIN = require('./lib/isISIN');
-
-var _isISIN2 = _interopRequireDefault(_isISIN);
-
-var _isISBN = require('./lib/isISBN');
-
-var _isISBN2 = _interopRequireDefault(_isISBN);
-
-var _isISSN = require('./lib/isISSN');
-
-var _isISSN2 = _interopRequireDefault(_isISSN);
-
-var _isMobilePhone = require('./lib/isMobilePhone');
-
-var _isMobilePhone2 = _interopRequireDefault(_isMobilePhone);
-
-var _isCurrency = require('./lib/isCurrency');
-
-var _isCurrency2 = _interopRequireDefault(_isCurrency);
-
-var _isISO = require('./lib/isISO8601');
-
-var _isISO2 = _interopRequireDefault(_isISO);
-
-var _isRFC = require('./lib/isRFC3339');
-
-var _isRFC2 = _interopRequireDefault(_isRFC);
-
-var _isISO31661Alpha = require('./lib/isISO31661Alpha2');
-
-var _isISO31661Alpha2 = _interopRequireDefault(_isISO31661Alpha);
-
-var _isISO31661Alpha3 = require('./lib/isISO31661Alpha3');
-
-var _isISO31661Alpha4 = _interopRequireDefault(_isISO31661Alpha3);
-
-var _isBase = require('./lib/isBase64');
-
-var _isBase2 = _interopRequireDefault(_isBase);
-
-var _isDataURI = require('./lib/isDataURI');
-
-var _isDataURI2 = _interopRequireDefault(_isDataURI);
-
-var _isMimeType = require('./lib/isMimeType');
-
-var _isMimeType2 = _interopRequireDefault(_isMimeType);
-
-var _isLatLong = require('./lib/isLatLong');
-
-var _isLatLong2 = _interopRequireDefault(_isLatLong);
-
-var _isPostalCode = require('./lib/isPostalCode');
-
-var _isPostalCode2 = _interopRequireDefault(_isPostalCode);
-
-var _ltrim = require('./lib/ltrim');
-
-var _ltrim2 = _interopRequireDefault(_ltrim);
-
-var _rtrim = require('./lib/rtrim');
-
-var _rtrim2 = _interopRequireDefault(_rtrim);
-
-var _trim = require('./lib/trim');
-
-var _trim2 = _interopRequireDefault(_trim);
-
-var _escape = require('./lib/escape');
-
-var _escape2 = _interopRequireDefault(_escape);
-
-var _unescape = require('./lib/unescape');
-
-var _unescape2 = _interopRequireDefault(_unescape);
-
-var _stripLow = require('./lib/stripLow');
-
-var _stripLow2 = _interopRequireDefault(_stripLow);
-
-var _whitelist = require('./lib/whitelist');
-
-var _whitelist2 = _interopRequireDefault(_whitelist);
-
-var _blacklist = require('./lib/blacklist');
-
-var _blacklist2 = _interopRequireDefault(_blacklist);
-
-var _isWhitelisted = require('./lib/isWhitelisted');
-
-var _isWhitelisted2 = _interopRequireDefault(_isWhitelisted);
-
-var _normalizeEmail = require('./lib/normalizeEmail');
-
-var _normalizeEmail2 = _interopRequireDefault(_normalizeEmail);
-
-var _toString = require('./lib/util/toString');
-
-var _toString2 = _interopRequireDefault(_toString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var version = '10.3.0';
-
-var validator = {
-  version: version,
-  toDate: _toDate2.default,
-  toFloat: _toFloat2.default,
-  toInt: _toInt2.default,
-  toBoolean: _toBoolean2.default,
-  equals: _equals2.default,
-  contains: _contains2.default,
-  matches: _matches2.default,
-  isEmail: _isEmail2.default,
-  isURL: _isURL2.default,
-  isMACAddress: _isMACAddress2.default,
-  isIP: _isIP2.default,
-  isFQDN: _isFQDN2.default,
-  isBoolean: _isBoolean2.default,
-  isAlpha: _isAlpha2.default,
-  isAlphanumeric: _isAlphanumeric2.default,
-  isNumeric: _isNumeric2.default,
-  isPort: _isPort2.default,
-  isLowercase: _isLowercase2.default,
-  isUppercase: _isUppercase2.default,
-  isAscii: _isAscii2.default,
-  isFullWidth: _isFullWidth2.default,
-  isHalfWidth: _isHalfWidth2.default,
-  isVariableWidth: _isVariableWidth2.default,
-  isMultibyte: _isMultibyte2.default,
-  isSurrogatePair: _isSurrogatePair2.default,
-  isInt: _isInt2.default,
-  isFloat: _isFloat2.default,
-  isDecimal: _isDecimal2.default,
-  isHexadecimal: _isHexadecimal2.default,
-  isDivisibleBy: _isDivisibleBy2.default,
-  isHexColor: _isHexColor2.default,
-  isISRC: _isISRC2.default,
-  isMD5: _isMD2.default,
-  isHash: _isHash2.default,
-  isJSON: _isJSON2.default,
-  isEmpty: _isEmpty2.default,
-  isLength: _isLength2.default,
-  isByteLength: _isByteLength2.default,
-  isUUID: _isUUID2.default,
-  isMongoId: _isMongoId2.default,
-  isAfter: _isAfter2.default,
-  isBefore: _isBefore2.default,
-  isIn: _isIn2.default,
-  isCreditCard: _isCreditCard2.default,
-  isISIN: _isISIN2.default,
-  isISBN: _isISBN2.default,
-  isISSN: _isISSN2.default,
-  isMobilePhone: _isMobilePhone2.default,
-  isPostalCode: _isPostalCode2.default,
-  isPostalCodeLocales: _isPostalCode.locales,
-  isCurrency: _isCurrency2.default,
-  isISO8601: _isISO2.default,
-  isRFC3339: _isRFC2.default,
-  isISO31661Alpha2: _isISO31661Alpha2.default,
-  isISO31661Alpha3: _isISO31661Alpha4.default,
-  isBase64: _isBase2.default,
-  isDataURI: _isDataURI2.default,
-  isMimeType: _isMimeType2.default,
-  isLatLong: _isLatLong2.default,
-  ltrim: _ltrim2.default,
-  rtrim: _rtrim2.default,
-  trim: _trim2.default,
-  escape: _escape2.default,
-  unescape: _unescape2.default,
-  stripLow: _stripLow2.default,
-  whitelist: _whitelist2.default,
-  blacklist: _blacklist2.default,
-  isWhitelisted: _isWhitelisted2.default,
-  normalizeEmail: _normalizeEmail2.default,
-  toString: _toString2.default
-};
-
-exports.default = validator;
-module.exports = exports['default'];
-},{"./lib/blacklist":264,"./lib/contains":265,"./lib/equals":266,"./lib/escape":267,"./lib/isAfter":268,"./lib/isAlpha":269,"./lib/isAlphanumeric":270,"./lib/isAscii":271,"./lib/isBase64":272,"./lib/isBefore":273,"./lib/isBoolean":274,"./lib/isByteLength":275,"./lib/isCreditCard":276,"./lib/isCurrency":277,"./lib/isDataURI":278,"./lib/isDecimal":279,"./lib/isDivisibleBy":280,"./lib/isEmail":281,"./lib/isEmpty":282,"./lib/isFQDN":283,"./lib/isFloat":284,"./lib/isFullWidth":285,"./lib/isHalfWidth":286,"./lib/isHash":287,"./lib/isHexColor":288,"./lib/isHexadecimal":289,"./lib/isIP":290,"./lib/isISBN":291,"./lib/isISIN":292,"./lib/isISO31661Alpha2":293,"./lib/isISO31661Alpha3":294,"./lib/isISO8601":295,"./lib/isISRC":296,"./lib/isISSN":297,"./lib/isIn":298,"./lib/isInt":299,"./lib/isJSON":300,"./lib/isLatLong":301,"./lib/isLength":302,"./lib/isLowercase":303,"./lib/isMACAddress":304,"./lib/isMD5":305,"./lib/isMimeType":306,"./lib/isMobilePhone":307,"./lib/isMongoId":308,"./lib/isMultibyte":309,"./lib/isNumeric":310,"./lib/isPort":311,"./lib/isPostalCode":312,"./lib/isRFC3339":313,"./lib/isSurrogatePair":314,"./lib/isURL":315,"./lib/isUUID":316,"./lib/isUppercase":317,"./lib/isVariableWidth":318,"./lib/isWhitelisted":319,"./lib/ltrim":320,"./lib/matches":321,"./lib/normalizeEmail":322,"./lib/rtrim":323,"./lib/stripLow":324,"./lib/toBoolean":325,"./lib/toDate":326,"./lib/toFloat":327,"./lib/toInt":328,"./lib/trim":329,"./lib/unescape":330,"./lib/util/toString":333,"./lib/whitelist":334}],263:[function(require,module,exports){
-arguments[4][52][0].apply(exports,arguments)
-},{"dup":52}],264:[function(require,module,exports){
-arguments[4][53][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":53}],265:[function(require,module,exports){
-arguments[4][54][0].apply(exports,arguments)
-},{"./util/assertString":331,"./util/toString":333,"dup":54}],266:[function(require,module,exports){
-arguments[4][55][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":55}],267:[function(require,module,exports){
-arguments[4][56][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":56}],268:[function(require,module,exports){
-arguments[4][57][0].apply(exports,arguments)
-},{"./toDate":326,"./util/assertString":331,"dup":57}],269:[function(require,module,exports){
-arguments[4][58][0].apply(exports,arguments)
-},{"./alpha":263,"./util/assertString":331,"dup":58}],270:[function(require,module,exports){
-arguments[4][59][0].apply(exports,arguments)
-},{"./alpha":263,"./util/assertString":331,"dup":59}],271:[function(require,module,exports){
-arguments[4][60][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":60}],272:[function(require,module,exports){
-arguments[4][61][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":61}],273:[function(require,module,exports){
-arguments[4][62][0].apply(exports,arguments)
-},{"./toDate":326,"./util/assertString":331,"dup":62}],274:[function(require,module,exports){
-arguments[4][63][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":63}],275:[function(require,module,exports){
-arguments[4][64][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":64}],276:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isCreditCard;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/* eslint-disable max-len */
-var creditCard = /^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|(222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11}|6[27][0-9]{14})$/;
-/* eslint-enable max-len */
-
-function isCreditCard(str) {
-  (0, _assertString2.default)(str);
-  var sanitized = str.replace(/[- ]+/g, '');
-  if (!creditCard.test(sanitized)) {
-    return false;
-  }
-  var sum = 0;
-  var digit = void 0;
-  var tmpNum = void 0;
-  var shouldDouble = void 0;
-  for (var i = sanitized.length - 1; i >= 0; i--) {
-    digit = sanitized.substring(i, i + 1);
-    tmpNum = parseInt(digit, 10);
-    if (shouldDouble) {
-      tmpNum *= 2;
-      if (tmpNum >= 10) {
-        sum += tmpNum % 10 + 1;
-      } else {
-        sum += tmpNum;
-      }
-    } else {
-      sum += tmpNum;
-    }
-    shouldDouble = !shouldDouble;
-  }
-  return !!(sum % 10 === 0 ? sanitized : false);
-}
-module.exports = exports['default'];
-},{"./util/assertString":331}],277:[function(require,module,exports){
-arguments[4][66][0].apply(exports,arguments)
-},{"./util/assertString":331,"./util/merge":332,"dup":66}],278:[function(require,module,exports){
-arguments[4][67][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":67}],279:[function(require,module,exports){
-arguments[4][68][0].apply(exports,arguments)
-},{"./alpha":263,"./util/assertString":331,"./util/merge":332,"dup":68}],280:[function(require,module,exports){
-arguments[4][69][0].apply(exports,arguments)
-},{"./toFloat":327,"./util/assertString":331,"dup":69}],281:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isEmail;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-var _merge = require('./util/merge');
-
-var _merge2 = _interopRequireDefault(_merge);
-
-var _isByteLength = require('./isByteLength');
-
-var _isByteLength2 = _interopRequireDefault(_isByteLength);
-
-var _isFQDN = require('./isFQDN');
-
-var _isFQDN2 = _interopRequireDefault(_isFQDN);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var default_email_options = {
-  allow_display_name: false,
-  require_display_name: false,
-  allow_utf8_local_part: true,
-  require_tld: true
-};
-
-/* eslint-disable max-len */
-/* eslint-disable no-control-regex */
-var displayName = /^[a-z\d!#\$%&'\*\+\-\/=\?\^_`{\|}~\.\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+[a-z\d!#\$%&'\*\+\-\/=\?\^_`{\|}~\,\.\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF\s]*<(.+)>$/i;
-var emailUserPart = /^[a-z\d!#\$%&'\*\+\-\/=\?\^_`{\|}~]+$/i;
-var gmailUserPart = /^[a-z\d]+$/;
-var quotedEmailUser = /^([\s\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e]|(\\[\x01-\x09\x0b\x0c\x0d-\x7f]))*$/i;
-var emailUserUtf8Part = /^[a-z\d!#\$%&'\*\+\-\/=\?\^_`{\|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+$/i;
-var quotedEmailUserUtf8 = /^([\s\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|(\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*$/i;
-/* eslint-enable max-len */
-/* eslint-enable no-control-regex */
-
-function isEmail(str, options) {
-  (0, _assertString2.default)(str);
-  options = (0, _merge2.default)(options, default_email_options);
-
-  if (options.require_display_name || options.allow_display_name) {
-    var display_email = str.match(displayName);
-    if (display_email) {
-      str = display_email[1];
-    } else if (options.require_display_name) {
-      return false;
-    }
-  }
-
-  var parts = str.split('@');
-  var domain = parts.pop();
-  var user = parts.join('@');
-
-  var lower_domain = domain.toLowerCase();
-
-  if (lower_domain === 'gmail.com' || lower_domain === 'googlemail.com') {
-    /*
-      Previously we removed dots for gmail addresses before validating.
-      This was removed because it allows `multiple..dots@gmail.com`
-      to be reported as valid, but it is not.
-      Gmail only normalizes single dots, removing them from here is pointless,
-      should be done in normalizeEmail
-    */
-    user = user.toLowerCase();
-
-    // Removing sub-address from username before gmail validation
-    var username = user.split('+')[0];
-
-    // Dots are not included in gmail length restriction
-    if (!(0, _isByteLength2.default)(username.replace('.', ''), { min: 6, max: 30 })) {
-      return false;
-    }
-
-    var _user_parts = username.split('.');
-    for (var i = 0; i < _user_parts.length; i++) {
-      if (!gmailUserPart.test(_user_parts[i])) {
-        return false;
-      }
-    }
-  }
-
-  if (!(0, _isByteLength2.default)(user, { max: 64 }) || !(0, _isByteLength2.default)(domain, { max: 254 })) {
-    return false;
-  }
-
-  if (!(0, _isFQDN2.default)(domain, { require_tld: options.require_tld })) {
-    return false;
-  }
-
-  if (user[0] === '"') {
-    user = user.slice(1, user.length - 1);
-    return options.allow_utf8_local_part ? quotedEmailUserUtf8.test(user) : quotedEmailUser.test(user);
-  }
-
-  var pattern = options.allow_utf8_local_part ? emailUserUtf8Part : emailUserPart;
-
-  var user_parts = user.split('.');
-  for (var _i = 0; _i < user_parts.length; _i++) {
-    if (!pattern.test(user_parts[_i])) {
-      return false;
-    }
-  }
-
-  return true;
-}
-module.exports = exports['default'];
-},{"./isByteLength":275,"./isFQDN":283,"./util/assertString":331,"./util/merge":332}],282:[function(require,module,exports){
-arguments[4][71][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":71}],283:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isFQDN;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-var _merge = require('./util/merge');
-
-var _merge2 = _interopRequireDefault(_merge);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var default_fqdn_options = {
-  require_tld: true,
-  allow_underscores: false,
-  allow_trailing_dot: false
-};
-
-function isFQDN(str, options) {
-  (0, _assertString2.default)(str);
-  options = (0, _merge2.default)(options, default_fqdn_options);
-
-  /* Remove the optional trailing dot before checking validity */
-  if (options.allow_trailing_dot && str[str.length - 1] === '.') {
-    str = str.substring(0, str.length - 1);
-  }
-  var parts = str.split('.');
-  for (var i = 0; i < parts.length; i++) {
-    if (parts[i].length > 63) {
-      return false;
-    }
-  }
-  if (options.require_tld) {
-    var tld = parts.pop();
-    if (!parts.length || !/^([a-z\u00a1-\uffff]{2,}|xn[a-z0-9-]{2,})$/i.test(tld)) {
-      return false;
-    }
-    // disallow spaces
-    if (/[\s\u2002-\u200B\u202F\u205F\u3000\uFEFF\uDB40\uDC20]/.test(tld)) {
-      return false;
-    }
-  }
-  for (var part, _i = 0; _i < parts.length; _i++) {
-    part = parts[_i];
-    if (options.allow_underscores) {
-      part = part.replace(/_/g, '');
-    }
-    if (!/^[a-z\u00a1-\uffff0-9-]+$/i.test(part)) {
-      return false;
-    }
-    // disallow full-width chars
-    if (/[\uff01-\uff5e]/.test(part)) {
-      return false;
-    }
-    if (part[0] === '-' || part[part.length - 1] === '-') {
-      return false;
-    }
-  }
-  return true;
-}
-module.exports = exports['default'];
-},{"./util/assertString":331,"./util/merge":332}],284:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isFloat;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-var _alpha = require('./alpha');
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function isFloat(str, options) {
-  (0, _assertString2.default)(str);
-  options = options || {};
-  var float = new RegExp('^(?:[-+])?(?:[0-9]+)?(?:\\' + (options.locale ? _alpha.decimal[options.locale] : '.') + '[0-9]*)?(?:[eE][\\+\\-]?(?:[0-9]+))?$');
-  if (str === '' || str === '.' || str === '-' || str === '+') {
-    return false;
-  }
-  var value = parseFloat(str.replace(',', '.'));
-  return float.test(str) && (!options.hasOwnProperty('min') || value >= options.min) && (!options.hasOwnProperty('max') || value <= options.max) && (!options.hasOwnProperty('lt') || value < options.lt) && (!options.hasOwnProperty('gt') || value > options.gt);
-}
-module.exports = exports['default'];
-},{"./alpha":263,"./util/assertString":331}],285:[function(require,module,exports){
-arguments[4][74][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":74}],286:[function(require,module,exports){
-arguments[4][75][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":75}],287:[function(require,module,exports){
-arguments[4][76][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":76}],288:[function(require,module,exports){
-arguments[4][77][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":77}],289:[function(require,module,exports){
-arguments[4][78][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":78}],290:[function(require,module,exports){
-arguments[4][79][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":79}],291:[function(require,module,exports){
-arguments[4][80][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":80}],292:[function(require,module,exports){
-arguments[4][81][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":81}],293:[function(require,module,exports){
-arguments[4][82][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":82}],294:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isISO31661Alpha3;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// from https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3
-var validISO31661Alpha3CountriesCodes = ['AFG', 'ALA', 'ALB', 'DZA', 'ASM', 'AND', 'AGO', 'AIA', 'ATA', 'ATG', 'ARG', 'ARM', 'ABW', 'AUS', 'AUT', 'AZE', 'BHS', 'BHR', 'BGD', 'BRB', 'BLR', 'BEL', 'BLZ', 'BEN', 'BMU', 'BTN', 'BOL', 'BES', 'BIH', 'BWA', 'BVT', 'BRA', 'IOT', 'BRN', 'BGR', 'BFA', 'BDI', 'KHM', 'CMR', 'CAN', 'CPV', 'CYM', 'CAF', 'TCD', 'CHL', 'CHN', 'CXR', 'CCK', 'COL', 'COM', 'COG', 'COD', 'COK', 'CRI', 'CIV', 'HRV', 'CUB', 'CUW', 'CYP', 'CZE', 'DNK', 'DJI', 'DMA', 'DOM', 'ECU', 'EGY', 'SLV', 'GNQ', 'ERI', 'EST', 'ETH', 'FLK', 'FRO', 'FJI', 'FIN', 'FRA', 'GUF', 'PYF', 'ATF', 'GAB', 'GMB', 'GEO', 'DEU', 'GHA', 'GIB', 'GRC', 'GRL', 'GRD', 'GLP', 'GUM', 'GTM', 'GGY', 'GIN', 'GNB', 'GUY', 'HTI', 'HMD', 'VAT', 'HND', 'HKG', 'HUN', 'ISL', 'IND', 'IDN', 'IRN', 'IRQ', 'IRL', 'IMN', 'ISR', 'ITA', 'JAM', 'JPN', 'JEY', 'JOR', 'KAZ', 'KEN', 'KIR', 'PRK', 'KOR', 'KWT', 'KGZ', 'LAO', 'LVA', 'LBN', 'LSO', 'LBR', 'LBY', 'LIE', 'LTU', 'LUX', 'MAC', 'MKD', 'MDG', 'MWI', 'MYS', 'MDV', 'MLI', 'MLT', 'MHL', 'MTQ', 'MRT', 'MUS', 'MYT', 'MEX', 'FSM', 'MDA', 'MCO', 'MNG', 'MNE', 'MSR', 'MAR', 'MOZ', 'MMR', 'NAM', 'NRU', 'NPL', 'NLD', 'NCL', 'NZL', 'NIC', 'NER', 'NGA', 'NIU', 'NFK', 'MNP', 'NOR', 'OMN', 'PAK', 'PLW', 'PSE', 'PAN', 'PNG', 'PRY', 'PER', 'PHL', 'PCN', 'POL', 'PRT', 'PRI', 'QAT', 'REU', 'ROU', 'RUS', 'RWA', 'BLM', 'SHN', 'KNA', 'LCA', 'MAF', 'SPM', 'VCT', 'WSM', 'SMR', 'STP', 'SAU', 'SEN', 'SRB', 'SYC', 'SLE', 'SGP', 'SXM', 'SVK', 'SVN', 'SLB', 'SOM', 'ZAF', 'SGS', 'SSD', 'ESP', 'LKA', 'SDN', 'SUR', 'SJM', 'SWZ', 'SWE', 'CHE', 'SYR', 'TWN', 'TJK', 'TZA', 'THA', 'TLS', 'TGO', 'TKL', 'TON', 'TTO', 'TUN', 'TUR', 'TKM', 'TCA', 'TUV', 'UGA', 'UKR', 'ARE', 'GBR', 'USA', 'UMI', 'URY', 'UZB', 'VUT', 'VEN', 'VNM', 'VGB', 'VIR', 'WLF', 'ESH', 'YEM', 'ZMB', 'ZWE'];
-
-function isISO31661Alpha3(str) {
-  (0, _assertString2.default)(str);
-  return validISO31661Alpha3CountriesCodes.includes(str.toUpperCase());
-}
-module.exports = exports['default'];
-},{"./util/assertString":331}],295:[function(require,module,exports){
-arguments[4][83][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":83}],296:[function(require,module,exports){
-arguments[4][84][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":84}],297:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isISSN;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var issn = '^\\d{4}-?\\d{3}[\\dX]$';
-
-function isISSN(str) {
-  var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-  (0, _assertString2.default)(str);
-  var testIssn = issn;
-  testIssn = options.require_hyphen ? testIssn.replace('?', '') : testIssn;
-  testIssn = options.case_sensitive ? new RegExp(testIssn) : new RegExp(testIssn, 'i');
-  if (!testIssn.test(str)) {
-    return false;
-  }
-  var digits = str.replace('-', '').toUpperCase();
-  var checksum = 0;
-  for (var i = 0; i < digits.length; i++) {
-    var digit = digits[i];
-    checksum += (digit === 'X' ? 10 : +digit) * (8 - i);
-  }
-  return checksum % 11 === 0;
-}
-module.exports = exports['default'];
-},{"./util/assertString":331}],298:[function(require,module,exports){
-arguments[4][86][0].apply(exports,arguments)
-},{"./util/assertString":331,"./util/toString":333,"dup":86}],299:[function(require,module,exports){
-arguments[4][87][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":87}],300:[function(require,module,exports){
-arguments[4][88][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":88}],301:[function(require,module,exports){
-arguments[4][89][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":89}],302:[function(require,module,exports){
-arguments[4][90][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":90}],303:[function(require,module,exports){
-arguments[4][91][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":91}],304:[function(require,module,exports){
-arguments[4][92][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":92}],305:[function(require,module,exports){
-arguments[4][93][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":93}],306:[function(require,module,exports){
-arguments[4][94][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":94}],307:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isMobilePhone;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/* eslint-disable max-len */
-var phones = {
-  'ar-AE': /^((\+?971)|0)?5[024568]\d{7}$/,
-  'ar-DZ': /^(\+?213|0)(5|6|7)\d{8}$/,
-  'ar-EG': /^((\+?20)|0)?1[012]\d{8}$/,
-  'ar-JO': /^(\+?962|0)?7[789]\d{7}$/,
-  'ar-SA': /^(!?(\+?966)|0)?5\d{8}$/,
-  'ar-SY': /^(!?(\+?963)|0)?9\d{8}$/,
-  'ar-TN': /^(\+?216)?[2459]\d{7}$/,
-  'be-BY': /^(\+?375)?(24|25|29|33|44)\d{7}$/,
-  'bg-BG': /^(\+?359|0)?8[789]\d{7}$/,
-  'cs-CZ': /^(\+?420)? ?[1-9][0-9]{2} ?[0-9]{3} ?[0-9]{3}$/,
-  'da-DK': /^(\+?45)?\s?\d{2}\s?\d{2}\s?\d{2}\s?\d{2}$/,
-  'de-DE': /^(\+?49[ \.\-]?)?([\(]{1}[0-9]{1,6}[\)])?([0-9 \.\-\/]{3,20})((x|ext|extension)[ ]?[0-9]{1,4})?$/,
-  'el-GR': /^(\+?30|0)?(69\d{8})$/,
-  'en-AU': /^(\+?61|0)4\d{8}$/,
-  'en-GB': /^(\+?44|0)7\d{9}$/,
-  'en-HK': /^(\+?852\-?)?[456789]\d{3}\-?\d{4}$/,
-  'en-IN': /^(\+?91|0)?[6789]\d{9}$/,
-  'en-KE': /^(\+?254|0)?[7]\d{8}$/,
-  'en-NG': /^(\+?234|0)?[789]\d{9}$/,
-  'en-NZ': /^(\+?64|0)2\d{7,9}$/,
-  'en-PK': /^((\+92)|(0092))-{0,1}\d{3}-{0,1}\d{7}$|^\d{11}$|^\d{4}-\d{7}$/,
-  'en-RW': /^(\+?250|0)?[7]\d{8}$/,
-  'en-SG': /^(\+65)?[89]\d{7}$/,
-  'en-TZ': /^(\+?255|0)?[67]\d{8}$/,
-  'en-UG': /^(\+?256|0)?[7]\d{8}$/,
-  'en-US': /^(\+?1)?[2-9]\d{2}[2-9](?!11)\d{6}$/,
-  'en-ZA': /^(\+?27|0)\d{9}$/,
-  'en-ZM': /^(\+?26)?09[567]\d{7}$/,
-  'es-ES': /^(\+?34)?(6\d{1}|7[1234])\d{7}$/,
-  'et-EE': /^(\+?372)?\s?(5|8[1-4])\s?([0-9]\s?){6,7}$/,
-  'fa-IR': /^(\+?98[\-\s]?|0)9[0-39]\d[\-\s]?\d{3}[\-\s]?\d{4}$/,
-  'fi-FI': /^(\+?358|0)\s?(4(0|1|2|4|5|6)?|50)\s?(\d\s?){4,8}\d$/,
-  'fo-FO': /^(\+?298)?\s?\d{2}\s?\d{2}\s?\d{2}$/,
-  'fr-FR': /^(\+?33|0)[67]\d{8}$/,
-  'he-IL': /^(\+972|0)([23489]|5[012345689]|77)[1-9]\d{6}/,
-  'hu-HU': /^(\+?36)(20|30|70)\d{7}$/,
-  'id-ID': /^(\+?62|0[1-9])[\s|\d]+$/,
-  'it-IT': /^(\+?39)?\s?3\d{2} ?\d{6,7}$/,
-  'ja-JP': /^(\+?81|0)[789]0[ \-]?[1-9]\d{2}[ \-]?\d{5}$/,
-  'kk-KZ': /^(\+?7|8)?7\d{9}$/,
-  'kl-GL': /^(\+?299)?\s?\d{2}\s?\d{2}\s?\d{2}$/,
-  'ko-KR': /^((\+?82)[ \-]?)?0?1([0|1|6|7|8|9]{1})[ \-]?\d{3,4}[ \-]?\d{4}$/,
-  'lt-LT': /^(\+370|8)\d{8}$/,
-  'ms-MY': /^(\+?6?01){1}(([145]{1}(\-|\s)?\d{7,8})|([236789]{1}(\s|\-)?\d{7}))$/,
-  'nb-NO': /^(\+?47)?[49]\d{7}$/,
-  'nl-BE': /^(\+?32|0)4?\d{8}$/,
-  'nn-NO': /^(\+?47)?[49]\d{7}$/,
-  'pl-PL': /^(\+?48)? ?[5-8]\d ?\d{3} ?\d{2} ?\d{2}$/,
-  'pt-BR': /^(\+?55|0)\-?[1-9]{2}\-?[2-9]{1}\d{3,4}\-?\d{4}$/,
-  'pt-PT': /^(\+?351)?9[1236]\d{7}$/,
-  'ro-RO': /^(\+?4?0)\s?7\d{2}(\/|\s|\.|\-)?\d{3}(\s|\.|\-)?\d{3}$/,
-  'ru-RU': /^(\+?7|8)?9\d{9}$/,
-  'sk-SK': /^(\+?421)? ?[1-9][0-9]{2} ?[0-9]{3} ?[0-9]{3}$/,
-  'sr-RS': /^(\+3816|06)[- \d]{5,9}$/,
-  'sv-SE': /^(\+?46|0)[\s\-]?7[\s\-]?[02369]([\s\-]?\d){7}$/,
-  'th-TH': /^(\+66|66|0)\d{9}$/,
-  'tr-TR': /^(\+?90|0)?5\d{9}$/,
-  'uk-UA': /^(\+?38|8)?0\d{9}$/,
-  'vi-VN': /^(\+?84|0)?((1(2([0-9])|6([2-9])|88|99))|(9((?!5)[0-9])))([0-9]{7})$/,
-  'zh-CN': /^(\+?0?86\-?)?1[3456789]\d{9}$/,
-  'zh-TW': /^(\+?886\-?|0)?9\d{8}$/
-};
-/* eslint-enable max-len */
-
-// aliases
-phones['en-CA'] = phones['en-US'];
-phones['fr-BE'] = phones['nl-BE'];
-phones['zh-HK'] = phones['en-HK'];
-
-function isMobilePhone(str, locale, options) {
-  (0, _assertString2.default)(str);
-  if (options && options.strictMode && !str.startsWith('+')) {
-    return false;
-  }
-  if (locale in phones) {
-    return phones[locale].test(str);
-  } else if (locale === 'any') {
-    for (var key in phones) {
-      if (phones.hasOwnProperty(key)) {
-        var phone = phones[key];
-        if (phone.test(str)) {
-          return true;
-        }
-      }
-    }
-    return false;
-  }
-  throw new Error('Invalid locale \'' + locale + '\'');
-}
-module.exports = exports['default'];
-},{"./util/assertString":331}],308:[function(require,module,exports){
-arguments[4][96][0].apply(exports,arguments)
-},{"./isHexadecimal":289,"./util/assertString":331,"dup":96}],309:[function(require,module,exports){
-arguments[4][97][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":97}],310:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isNumeric;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var numeric = /^[+-]?([0-9]*[.])?[0-9]+$/;
-
-function isNumeric(str) {
-  (0, _assertString2.default)(str);
-  return numeric.test(str);
-}
-module.exports = exports['default'];
-},{"./util/assertString":331}],311:[function(require,module,exports){
-arguments[4][99][0].apply(exports,arguments)
-},{"./isInt":299,"dup":99}],312:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.locales = undefined;
-
-exports.default = function (str, locale) {
-  (0, _assertString2.default)(str);
-  if (locale in patterns) {
-    return patterns[locale].test(str);
-  } else if (locale === 'any') {
-    for (var key in patterns) {
-      if (patterns.hasOwnProperty(key)) {
-        var pattern = patterns[key];
-        if (pattern.test(str)) {
-          return true;
-        }
-      }
-    }
-    return false;
-  }
-  throw new Error('Invalid locale \'' + locale + '\'');
-};
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// common patterns
-var threeDigit = /^\d{3}$/;
-var fourDigit = /^\d{4}$/;
-var fiveDigit = /^\d{5}$/;
-var sixDigit = /^\d{6}$/;
-
-var patterns = {
-  AT: fourDigit,
-  AU: fourDigit,
-  BE: fourDigit,
-  BG: fourDigit,
-  CA: /^[ABCEGHJKLMNPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][\s\-]?\d[ABCEGHJ-NPRSTV-Z]\d$/i,
-  CH: fourDigit,
-  CZ: /^\d{3}\s?\d{2}$/,
-  DE: fiveDigit,
-  DK: fourDigit,
-  DZ: fiveDigit,
-  EE: fiveDigit,
-  ES: fiveDigit,
-  FI: fiveDigit,
-  FR: /^\d{2}\s?\d{3}$/,
-  GB: /^(gir\s?0aa|[a-z]{1,2}\d[\da-z]?\s?(\d[a-z]{2})?)$/i,
-  GR: /^\d{3}\s?\d{2}$/,
-  HR: /^([1-5]\d{4}$)/,
-  HU: fourDigit,
-  IL: fiveDigit,
-  IN: sixDigit,
-  IS: threeDigit,
-  IT: fiveDigit,
-  JP: /^\d{3}\-\d{4}$/,
-  KE: fiveDigit,
-  LI: /^(948[5-9]|949[0-7])$/,
-  LT: /^LT\-\d{5}$/,
-  LU: fourDigit,
-  LV: /^LV\-\d{4}$/,
-  MX: fiveDigit,
-  NL: /^\d{4}\s?[a-z]{2}$/i,
-  NO: fourDigit,
-  PL: /^\d{2}\-\d{3}$/,
-  PT: /^\d{4}\-\d{3}?$/,
-  RO: sixDigit,
-  RU: sixDigit,
-  SA: fiveDigit,
-  SE: /^\d{3}\s?\d{2}$/,
-  SI: fourDigit,
-  SK: /^\d{3}\s?\d{2}$/,
-  TN: fourDigit,
-  TW: /^\d{3}(\d{2})?$/,
-  US: /^\d{5}(-\d{4})?$/,
-  ZA: fourDigit,
-  ZM: fiveDigit
-};
-
-var locales = exports.locales = Object.keys(patterns);
-},{"./util/assertString":331}],313:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = isRFC3339;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/* Based on https://tools.ietf.org/html/rfc3339#section-5.6 */
-
-var dateFullYear = /[0-9]{4}/;
-var dateMonth = /(0[1-9]|1[0-2])/;
-var dateMDay = /([12]\d|0[1-9]|3[01])/;
-
-var timeHour = /([01][0-9]|2[0-3])/;
-var timeMinute = /[0-5][0-9]/;
-var timeSecond = /([0-5][0-9]|60)/;
-
-var timeSecFrac = /(\.[0-9]+)?/;
-var timeNumOffset = new RegExp('[-+]' + timeHour.source + ':' + timeMinute.source);
-var timeOffset = new RegExp('([zZ]|' + timeNumOffset.source + ')');
-
-var partialTime = new RegExp(timeHour.source + ':' + timeMinute.source + ':' + timeSecond.source + timeSecFrac.source);
-
-var fullDate = new RegExp(dateFullYear.source + '-' + dateMonth.source + '-' + dateMDay.source);
-var fullTime = new RegExp('' + partialTime.source + timeOffset.source);
-
-var rfc3339 = new RegExp(fullDate.source + '[ tT]' + fullTime.source);
-
-function isRFC3339(str) {
-  (0, _assertString2.default)(str);
-  return rfc3339.test(str);
-}
-module.exports = exports['default'];
-},{"./util/assertString":331}],314:[function(require,module,exports){
-arguments[4][101][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":101}],315:[function(require,module,exports){
-arguments[4][102][0].apply(exports,arguments)
-},{"./isFQDN":283,"./isIP":290,"./util/assertString":331,"./util/merge":332,"dup":102}],316:[function(require,module,exports){
-arguments[4][103][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":103}],317:[function(require,module,exports){
-arguments[4][104][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":104}],318:[function(require,module,exports){
-arguments[4][105][0].apply(exports,arguments)
-},{"./isFullWidth":285,"./isHalfWidth":286,"./util/assertString":331,"dup":105}],319:[function(require,module,exports){
-arguments[4][106][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":106}],320:[function(require,module,exports){
-arguments[4][107][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":107}],321:[function(require,module,exports){
-arguments[4][108][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":108}],322:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = normalizeEmail;
-
-var _merge = require('./util/merge');
-
-var _merge2 = _interopRequireDefault(_merge);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var default_normalize_email_options = {
-  // The following options apply to all email addresses
-  // Lowercases the local part of the email address.
-  // Please note this may violate RFC 5321 as per http://stackoverflow.com/a/9808332/192024).
-  // The domain is always lowercased, as per RFC 1035
-  all_lowercase: true,
-
-  // The following conversions are specific to GMail
-  // Lowercases the local part of the GMail address (known to be case-insensitive)
-  gmail_lowercase: true,
-  // Removes dots from the local part of the email address, as that's ignored by GMail
-  gmail_remove_dots: true,
-  // Removes the subaddress (e.g. "+foo") from the email address
-  gmail_remove_subaddress: true,
-  // Conversts the googlemail.com domain to gmail.com
-  gmail_convert_googlemaildotcom: true,
-
-  // The following conversions are specific to Outlook.com / Windows Live / Hotmail
-  // Lowercases the local part of the Outlook.com address (known to be case-insensitive)
-  outlookdotcom_lowercase: true,
-  // Removes the subaddress (e.g. "+foo") from the email address
-  outlookdotcom_remove_subaddress: true,
-
-  // The following conversions are specific to Yahoo
-  // Lowercases the local part of the Yahoo address (known to be case-insensitive)
-  yahoo_lowercase: true,
-  // Removes the subaddress (e.g. "-foo") from the email address
-  yahoo_remove_subaddress: true,
-
-  // The following conversions are specific to Yandex
-  // Lowercases the local part of the Yandex address (known to be case-insensitive)
-  yandex_lowercase: true,
-
-  // The following conversions are specific to iCloud
-  // Lowercases the local part of the iCloud address (known to be case-insensitive)
-  icloud_lowercase: true,
-  // Removes the subaddress (e.g. "+foo") from the email address
-  icloud_remove_subaddress: true
-};
-
-// List of domains used by iCloud
-var icloud_domains = ['icloud.com', 'me.com'];
-
-// List of domains used by Outlook.com and its predecessors
-// This list is likely incomplete.
-// Partial reference:
-// https://blogs.office.com/2013/04/17/outlook-com-gets-two-step-verification-sign-in-by-alias-and-new-international-domains/
-var outlookdotcom_domains = ['hotmail.at', 'hotmail.be', 'hotmail.ca', 'hotmail.cl', 'hotmail.co.il', 'hotmail.co.nz', 'hotmail.co.th', 'hotmail.co.uk', 'hotmail.com', 'hotmail.com.ar', 'hotmail.com.au', 'hotmail.com.br', 'hotmail.com.gr', 'hotmail.com.mx', 'hotmail.com.pe', 'hotmail.com.tr', 'hotmail.com.vn', 'hotmail.cz', 'hotmail.de', 'hotmail.dk', 'hotmail.es', 'hotmail.fr', 'hotmail.hu', 'hotmail.id', 'hotmail.ie', 'hotmail.in', 'hotmail.it', 'hotmail.jp', 'hotmail.kr', 'hotmail.lv', 'hotmail.my', 'hotmail.ph', 'hotmail.pt', 'hotmail.sa', 'hotmail.sg', 'hotmail.sk', 'live.be', 'live.co.uk', 'live.com', 'live.com.ar', 'live.com.mx', 'live.de', 'live.es', 'live.eu', 'live.fr', 'live.it', 'live.nl', 'msn.com', 'outlook.at', 'outlook.be', 'outlook.cl', 'outlook.co.il', 'outlook.co.nz', 'outlook.co.th', 'outlook.com', 'outlook.com.ar', 'outlook.com.au', 'outlook.com.br', 'outlook.com.gr', 'outlook.com.pe', 'outlook.com.tr', 'outlook.com.vn', 'outlook.cz', 'outlook.de', 'outlook.dk', 'outlook.es', 'outlook.fr', 'outlook.hu', 'outlook.id', 'outlook.ie', 'outlook.in', 'outlook.it', 'outlook.jp', 'outlook.kr', 'outlook.lv', 'outlook.my', 'outlook.ph', 'outlook.pt', 'outlook.sa', 'outlook.sg', 'outlook.sk', 'passport.com'];
-
-// List of domains used by Yahoo Mail
-// This list is likely incomplete
-var yahoo_domains = ['rocketmail.com', 'yahoo.ca', 'yahoo.co.uk', 'yahoo.com', 'yahoo.de', 'yahoo.fr', 'yahoo.in', 'yahoo.it', 'ymail.com'];
-
-// List of domains used by yandex.ru
-var yandex_domains = ['yandex.ru', 'yandex.ua', 'yandex.kz', 'yandex.com', 'yandex.by', 'ya.ru'];
-
-// replace single dots, but not multiple consecutive dots
-function dotsReplacer(match) {
-  if (match.length > 1) {
-    return match;
-  }
-  return '';
-}
-
-function normalizeEmail(email, options) {
-  options = (0, _merge2.default)(options, default_normalize_email_options);
-
-  var raw_parts = email.split('@');
-  var domain = raw_parts.pop();
-  var user = raw_parts.join('@');
-  var parts = [user, domain];
-
-  // The domain is always lowercased, as it's case-insensitive per RFC 1035
-  parts[1] = parts[1].toLowerCase();
-
-  if (parts[1] === 'gmail.com' || parts[1] === 'googlemail.com') {
-    // Address is GMail
-    if (options.gmail_remove_subaddress) {
-      parts[0] = parts[0].split('+')[0];
-    }
-    if (options.gmail_remove_dots) {
-      // this does not replace consecutive dots like example..email@gmail.com
-      parts[0] = parts[0].replace(/\.+/g, dotsReplacer);
-    }
-    if (!parts[0].length) {
-      return false;
-    }
-    if (options.all_lowercase || options.gmail_lowercase) {
-      parts[0] = parts[0].toLowerCase();
-    }
-    parts[1] = options.gmail_convert_googlemaildotcom ? 'gmail.com' : parts[1];
-  } else if (icloud_domains.indexOf(parts[1]) >= 0) {
-    // Address is iCloud
-    if (options.icloud_remove_subaddress) {
-      parts[0] = parts[0].split('+')[0];
-    }
-    if (!parts[0].length) {
-      return false;
-    }
-    if (options.all_lowercase || options.icloud_lowercase) {
-      parts[0] = parts[0].toLowerCase();
-    }
-  } else if (outlookdotcom_domains.indexOf(parts[1]) >= 0) {
-    // Address is Outlook.com
-    if (options.outlookdotcom_remove_subaddress) {
-      parts[0] = parts[0].split('+')[0];
-    }
-    if (!parts[0].length) {
-      return false;
-    }
-    if (options.all_lowercase || options.outlookdotcom_lowercase) {
-      parts[0] = parts[0].toLowerCase();
-    }
-  } else if (yahoo_domains.indexOf(parts[1]) >= 0) {
-    // Address is Yahoo
-    if (options.yahoo_remove_subaddress) {
-      var components = parts[0].split('-');
-      parts[0] = components.length > 1 ? components.slice(0, -1).join('-') : components[0];
-    }
-    if (!parts[0].length) {
-      return false;
-    }
-    if (options.all_lowercase || options.yahoo_lowercase) {
-      parts[0] = parts[0].toLowerCase();
-    }
-  } else if (yandex_domains.indexOf(parts[1]) >= 0) {
-    if (options.all_lowercase || options.yandex_lowercase) {
-      parts[0] = parts[0].toLowerCase();
-    }
-    parts[1] = 'yandex.ru'; // all yandex domains are equal, 1st preffered
-  } else if (options.all_lowercase) {
-    // Any other address
-    parts[0] = parts[0].toLowerCase();
-  }
-  return parts.join('@');
-}
-module.exports = exports['default'];
-},{"./util/merge":332}],323:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = rtrim;
-
-var _assertString = require('./util/assertString');
-
-var _assertString2 = _interopRequireDefault(_assertString);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function rtrim(str, chars) {
-  (0, _assertString2.default)(str);
-  var pattern = chars ? new RegExp('[' + chars + ']') : /\s/;
-
-  var idx = str.length - 1;
-  for (; idx >= 0 && pattern.test(str[idx]); idx--) {}
-
-  return idx < str.length ? str.substr(0, idx + 1) : str;
-}
-module.exports = exports['default'];
-},{"./util/assertString":331}],324:[function(require,module,exports){
-arguments[4][111][0].apply(exports,arguments)
-},{"./blacklist":264,"./util/assertString":331,"dup":111}],325:[function(require,module,exports){
-arguments[4][112][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":112}],326:[function(require,module,exports){
-arguments[4][113][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":113}],327:[function(require,module,exports){
-arguments[4][114][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":114}],328:[function(require,module,exports){
-arguments[4][115][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":115}],329:[function(require,module,exports){
-arguments[4][116][0].apply(exports,arguments)
-},{"./ltrim":320,"./rtrim":323,"dup":116}],330:[function(require,module,exports){
-arguments[4][117][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":117}],331:[function(require,module,exports){
-arguments[4][118][0].apply(exports,arguments)
-},{"dup":118}],332:[function(require,module,exports){
-arguments[4][119][0].apply(exports,arguments)
-},{"dup":119}],333:[function(require,module,exports){
-arguments[4][120][0].apply(exports,arguments)
-},{"dup":120}],334:[function(require,module,exports){
-arguments[4][121][0].apply(exports,arguments)
-},{"./util/assertString":331,"dup":121}],335:[function(require,module,exports){
+},{}],187:[function(require,module,exports){
 (function(self) {
   'use strict';
 
