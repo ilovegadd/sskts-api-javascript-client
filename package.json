@@ -1,6 +1,6 @@
 {
   "name": "@motionpicture/sskts-api-javascript-client",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "description": "SSKTS API client library for JavaScript",
   "main": "./lib/index.js",
   "browser": "./lib/index.js",
