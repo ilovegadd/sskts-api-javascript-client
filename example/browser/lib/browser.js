@@ -4644,12 +4644,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 },{}],105:[function(require,module,exports){
 "use strict";
 /**
- * order factory
- * An order is a confirmation of a transaction (a receipt),
- * which can contain multiple line items, each represented by an Offer that has been accepted by the customer.
  * 注文ファクトリー
  * 注文は、確定した注文取引の領収証に値するものです。
- * @namespace order
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
