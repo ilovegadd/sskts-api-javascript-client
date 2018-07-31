@@ -104,7 +104,7 @@ var IframeHandler = /** @class */ (function () {
 }());
 exports.default = IframeHandler;
 
-},{"debug":161}],4:[function(require,module,exports){
+},{"debug":160}],4:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -131,8 +131,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -448,7 +448,7 @@ var ImplicitGrantClient = /** @class */ (function (_super) {
 }(oAuth2client_1.default));
 exports.ImplicitGrantClient = ImplicitGrantClient;
 
-},{"./error":2,"./oAuth2client":5,"./popupAuthenticationHandler":6,"./silentAuthenticationHandler":8,"./silentLogoutHandler":9,"debug":161,"idtoken-verifier":170,"qs":176}],5:[function(require,module,exports){
+},{"./error":2,"./oAuth2client":5,"./popupAuthenticationHandler":6,"./silentAuthenticationHandler":8,"./silentLogoutHandler":9,"debug":160,"idtoken-verifier":169,"qs":175}],5:[function(require,module,exports){
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -465,8 +465,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -640,7 +640,7 @@ var OAuth2client = /** @class */ (function () {
 }());
 exports.default = OAuth2client;
 
-},{"@motionpicture/sskts-api-abstract-client":49,"debug":161,"http-status":163,"isomorphic-fetch":171}],6:[function(require,module,exports){
+},{"@motionpicture/sskts-api-abstract-client":12,"debug":160,"http-status":162,"isomorphic-fetch":170}],6:[function(require,module,exports){
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -657,8 +657,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -824,7 +824,7 @@ var PopupHandler = /** @class */ (function () {
 }());
 exports.default = PopupHandler;
 
-},{"debug":161}],8:[function(require,module,exports){
+},{"debug":160}],8:[function(require,module,exports){
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -841,8 +841,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -946,8 +946,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -1062,784 +1062,7 @@ function createAuthInstance(options) {
 }
 exports.createAuthInstance = createAuthInstance;
 
-},{"./auth/implicitGrantClient":4,"@motionpicture/sskts-api-abstract-client":49}],11:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * 口座タイプ
- */
-var AccountType;
-(function (AccountType) {
-    /**
-     * 普通口座タイプ
-     */
-    AccountType["Account"] = "Account";
-})(AccountType = exports.AccountType || (exports.AccountType = {}));
-
-},{}],12:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * 口座ステータスタイプ
- */
-var AccountStatusType;
-(function (AccountStatusType) {
-    /**
-     * 開設済
-     */
-    AccountStatusType["Opened"] = "Opened";
-    /**
-     * 解約済
-     */
-    AccountStatusType["Closed"] = "Closed";
-})(AccountStatusType || (AccountStatusType = {}));
-exports.default = AccountStatusType;
-
-},{}],13:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * アクションステータス
- */
-var ActionStatusType;
-(function (ActionStatusType) {
-    ActionStatusType["ActiveActionStatus"] = "ActiveActionStatus";
-    ActionStatusType["CompletedActionStatus"] = "CompletedActionStatus";
-    ActionStatusType["FailedActionStatus"] = "FailedActionStatus";
-    ActionStatusType["PotentialActionStatus"] = "PotentialActionStatus";
-    ActionStatusType["CanceledActionStatus"] = "CanceledActionStatus";
-})(ActionStatusType || (ActionStatusType = {}));
-exports.default = ActionStatusType;
-
-},{}],14:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * アクションタイプ
- */
-var ActionType;
-(function (ActionType) {
-    ActionType["AuthorizeAction"] = "AuthorizeAction";
-    ActionType["MoneyTransfer"] = "MoneyTransfer";
-    ActionType["OrderAction"] = "OrderAction";
-    ActionType["PayAction"] = "PayAction";
-    ActionType["PrintAction"] = "PrintAction";
-    ActionType["RefundAction"] = "RefundAction";
-    ActionType["ReturnAction"] = "ReturnAction";
-    ActionType["SendAction"] = "SendAction";
-    ActionType["TakeAction"] = "TakeAction";
-    ActionType["UseAction"] = "UseAction";
-})(ActionType || (ActionType = {}));
-exports.default = ActionType;
-
-},{}],15:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-
-},{}],16:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],17:[function(require,module,exports){
-"use strict";
-/**
- * アプリケーションクライアントユーザーファクトリー
- * クライアントサイドでapiを利用するユーザー
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-
-},{}],18:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * 作品タイプ
- */
-var CreativeWorkType;
-(function (CreativeWorkType) {
-    CreativeWorkType["EmailMessage"] = "EmailMessage";
-})(CreativeWorkType || (CreativeWorkType = {}));
-exports.default = CreativeWorkType;
-
-},{}],19:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],20:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * エラーコード
- */
-var ErrorCode;
-(function (ErrorCode) {
-    ErrorCode["AlreadyInUse"] = "AlreadyInUse";
-    ErrorCode["Argument"] = "Argument";
-    ErrorCode["ArgumentNull"] = "ArgumentNull";
-    ErrorCode["Forbidden"] = "Forbidden";
-    ErrorCode["NotFound"] = "NotFound";
-    ErrorCode["NotImplemented"] = "NotImplemented";
-    ErrorCode["RateLimitExceeded"] = "RateLimitExceeded";
-    ErrorCode["ServiceUnavailable"] = "ServiceUnavailable";
-    ErrorCode["Unauthorized"] = "Unauthorized";
-})(ErrorCode || (ErrorCode = {}));
-exports.default = ErrorCode;
-
-},{}],21:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-// tslint:disable-next-line:no-require-imports
-var setPrototypeOf = require("setprototypeof");
-var errorCode_1 = require("../errorCode");
-var pecorino_1 = require("./pecorino");
-/**
- * AlreadyInUseError
- */
-var AlreadyInUseError = /** @class */ (function (_super) {
-    __extends(AlreadyInUseError, _super);
-    function AlreadyInUseError(entityName, fieldNames, message) {
-        var _this = this;
-        var actualMessage = message;
-        if (message === undefined || message.length === 0) {
-            actualMessage = "The specified '" + entityName + "' value is already in use for: " + fieldNames.join(', ') + ".";
-        }
-        // tslint:disable-next-line:no-single-line-block-comment
-        _this = _super.call(this, errorCode_1.default.AlreadyInUse, actualMessage) /* istanbul ignore next */ || this;
-        _this.entityName = entityName;
-        _this.fieldNames = fieldNames;
-        setPrototypeOf(_this, AlreadyInUseError.prototype);
-        return _this;
-    }
-    return AlreadyInUseError;
-}(pecorino_1.PecorinoError));
-exports.default = AlreadyInUseError;
-
-},{"../errorCode":20,"./pecorino":27,"setprototypeof":180}],22:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-// tslint:disable-next-line:no-require-imports
-var setPrototypeOf = require("setprototypeof");
-var errorCode_1 = require("../errorCode");
-var pecorino_1 = require("./pecorino");
-/**
- * ArgumentError
- */
-var ArgumentError = /** @class */ (function (_super) {
-    __extends(ArgumentError, _super);
-    function ArgumentError(argumentName, message) {
-        var _this = this;
-        var actualMessage = message;
-        if (message === undefined || message.length === 0) {
-            actualMessage = "Invalid or missing argument supplied: " + argumentName + ".";
-        }
-        // tslint:disable-next-line:no-single-line-block-comment
-        _this = _super.call(this, errorCode_1.default.Argument, actualMessage) /* istanbul ignore next */ || this;
-        _this.argumentName = argumentName;
-        setPrototypeOf(_this, ArgumentError.prototype);
-        return _this;
-    }
-    return ArgumentError;
-}(pecorino_1.PecorinoError));
-exports.default = ArgumentError;
-
-},{"../errorCode":20,"./pecorino":27,"setprototypeof":180}],23:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-// tslint:disable-next-line:no-require-imports
-var setPrototypeOf = require("setprototypeof");
-var errorCode_1 = require("../errorCode");
-var pecorino_1 = require("./pecorino");
-/**
- * ArgumentNullError
- */
-var ArgumentNullError = /** @class */ (function (_super) {
-    __extends(ArgumentNullError, _super);
-    function ArgumentNullError(argumentName, message) {
-        var _this = this;
-        var actualMessage = message;
-        if (message === undefined || message.length === 0) {
-            actualMessage = "Missing argument: " + argumentName + ".";
-        }
-        // tslint:disable-next-line:no-single-line-block-comment
-        _this = _super.call(this, errorCode_1.default.ArgumentNull, actualMessage) /* istanbul ignore next */ || this;
-        _this.argumentName = argumentName;
-        setPrototypeOf(_this, ArgumentNullError.prototype);
-        return _this;
-    }
-    return ArgumentNullError;
-}(pecorino_1.PecorinoError));
-exports.default = ArgumentNullError;
-
-},{"../errorCode":20,"./pecorino":27,"setprototypeof":180}],24:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-// tslint:disable-next-line:no-require-imports
-var setPrototypeOf = require("setprototypeof");
-var errorCode_1 = require("../errorCode");
-var pecorino_1 = require("./pecorino");
-/**
- * ForbiddenError
- */
-var ForbiddenError = /** @class */ (function (_super) {
-    __extends(ForbiddenError, _super);
-    function ForbiddenError(message) {
-        var _this = this;
-        var actualMessage = message;
-        if (message === undefined || message.length === 0) {
-            actualMessage = 'Forbidden.';
-        }
-        // tslint:disable-next-line:no-single-line-block-comment
-        _this = _super.call(this, errorCode_1.default.Forbidden, actualMessage) /* istanbul ignore next */ || this;
-        setPrototypeOf(_this, ForbiddenError.prototype);
-        return _this;
-    }
-    return ForbiddenError;
-}(pecorino_1.PecorinoError));
-exports.default = ForbiddenError;
-
-},{"../errorCode":20,"./pecorino":27,"setprototypeof":180}],25:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-// tslint:disable-next-line:no-require-imports
-var setPrototypeOf = require("setprototypeof");
-var errorCode_1 = require("../errorCode");
-var pecorino_1 = require("./pecorino");
-/**
- * NotFoundError
- */
-var NotFoundError = /** @class */ (function (_super) {
-    __extends(NotFoundError, _super);
-    function NotFoundError(entityName, message) {
-        var _this = this;
-        var actualMessage = message;
-        if (message === undefined || message.length === 0) {
-            actualMessage = "Not Found: " + entityName + ".";
-        }
-        // tslint:disable-next-line:no-single-line-block-comment
-        _this = _super.call(this, errorCode_1.default.NotFound, actualMessage) /* istanbul ignore next */ || this;
-        _this.entityName = entityName;
-        setPrototypeOf(_this, NotFoundError.prototype);
-        return _this;
-    }
-    return NotFoundError;
-}(pecorino_1.PecorinoError));
-exports.default = NotFoundError;
-
-},{"../errorCode":20,"./pecorino":27,"setprototypeof":180}],26:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-// tslint:disable-next-line:no-require-imports
-var setPrototypeOf = require("setprototypeof");
-var errorCode_1 = require("../errorCode");
-var pecorino_1 = require("./pecorino");
-/**
- * NotImplementedError
- */
-var NotImplementedError = /** @class */ (function (_super) {
-    __extends(NotImplementedError, _super);
-    function NotImplementedError(message) {
-        var _this = this;
-        var actualMessage = message;
-        if (message === undefined || message.length === 0) {
-            actualMessage = 'Method is not yet implemented.';
-        }
-        // tslint:disable-next-line:no-single-line-block-comment
-        _this = _super.call(this, errorCode_1.default.NotImplemented, actualMessage) /* istanbul ignore next */ || this;
-        setPrototypeOf(_this, NotImplementedError.prototype);
-        return _this;
-    }
-    return NotImplementedError;
-}(pecorino_1.PecorinoError));
-exports.default = NotImplementedError;
-
-},{"../errorCode":20,"./pecorino":27,"setprototypeof":180}],27:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * PecorinoError
- * @extends {Error}
- */
-var PecorinoError = /** @class */ (function (_super) {
-    __extends(PecorinoError, _super);
-    function PecorinoError(code, message) {
-        var _this = 
-        // tslint:disable-next-line:no-single-line-block-comment
-        _super.call(this, message) /* istanbul ignore next */ || this;
-        _this.name = 'PecorinoError';
-        _this.reason = code;
-        return _this;
-    }
-    return PecorinoError;
-}(Error));
-exports.PecorinoError = PecorinoError;
-
-},{}],28:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-// tslint:disable-next-line:no-require-imports
-var setPrototypeOf = require("setprototypeof");
-var errorCode_1 = require("../errorCode");
-var pecorino_1 = require("./pecorino");
-/**
- * RateLimitExceededError
- */
-var RateLimitExceededError = /** @class */ (function (_super) {
-    __extends(RateLimitExceededError, _super);
-    function RateLimitExceededError(message) {
-        var _this = this;
-        var actualMessage = message;
-        if (message === undefined || message.length === 0) {
-            actualMessage = 'Rate limit exceeded.';
-        }
-        // tslint:disable-next-line:no-single-line-block-comment
-        _this = _super.call(this, errorCode_1.default.RateLimitExceeded, actualMessage) /* istanbul ignore next */ || this;
-        setPrototypeOf(_this, RateLimitExceededError.prototype);
-        return _this;
-    }
-    return RateLimitExceededError;
-}(pecorino_1.PecorinoError));
-exports.default = RateLimitExceededError;
-
-},{"../errorCode":20,"./pecorino":27,"setprototypeof":180}],29:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-// tslint:disable-next-line:no-require-imports
-var setPrototypeOf = require("setprototypeof");
-var errorCode_1 = require("../errorCode");
-var pecorino_1 = require("./pecorino");
-/**
- * ServiceUnavailableError
- */
-var ServiceUnavailableError = /** @class */ (function (_super) {
-    __extends(ServiceUnavailableError, _super);
-    function ServiceUnavailableError(message) {
-        var _this = this;
-        var actualMessage = message;
-        if (message === undefined || message.length === 0) {
-            actualMessage = 'Service unavailable temporarily.';
-        }
-        // tslint:disable-next-line:no-single-line-block-comment
-        _this = _super.call(this, errorCode_1.default.ServiceUnavailable, actualMessage) /* istanbul ignore next */ || this;
-        setPrototypeOf(_this, ServiceUnavailableError.prototype);
-        return _this;
-    }
-    return ServiceUnavailableError;
-}(pecorino_1.PecorinoError));
-exports.default = ServiceUnavailableError;
-
-},{"../errorCode":20,"./pecorino":27,"setprototypeof":180}],30:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-// tslint:disable-next-line:no-require-imports
-var setPrototypeOf = require("setprototypeof");
-var errorCode_1 = require("../errorCode");
-var pecorino_1 = require("./pecorino");
-/**
- * UnauthorizedError
- */
-var UnauthorizedError = /** @class */ (function (_super) {
-    __extends(UnauthorizedError, _super);
-    function UnauthorizedError(message) {
-        var _this = this;
-        var actualMessage = message;
-        if (message === undefined || message.length === 0) {
-            actualMessage = 'Unauthorized.';
-        }
-        // tslint:disable-next-line:no-single-line-block-comment
-        _this = _super.call(this, errorCode_1.default.Unauthorized, actualMessage) /* istanbul ignore next */ || this;
-        setPrototypeOf(_this, UnauthorizedError.prototype);
-        return _this;
-    }
-    return UnauthorizedError;
-}(pecorino_1.PecorinoError));
-exports.default = UnauthorizedError;
-
-},{"../errorCode":20,"./pecorino":27,"setprototypeof":180}],31:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * errors
- */
-var alreadyInUse_1 = require("./error/alreadyInUse");
-exports.AlreadyInUse = alreadyInUse_1.default;
-var argument_1 = require("./error/argument");
-exports.Argument = argument_1.default;
-var argumentNull_1 = require("./error/argumentNull");
-exports.ArgumentNull = argumentNull_1.default;
-var forbidden_1 = require("./error/forbidden");
-exports.Forbidden = forbidden_1.default;
-var notFound_1 = require("./error/notFound");
-exports.NotFound = notFound_1.default;
-var notImplemented_1 = require("./error/notImplemented");
-exports.NotImplemented = notImplemented_1.default;
-var pecorino_1 = require("./error/pecorino");
-exports.PECORINO = pecorino_1.PecorinoError;
-var rateLimitExceeded_1 = require("./error/rateLimitExceeded");
-exports.RateLimitExceeded = rateLimitExceeded_1.default;
-var serviceUnavailable_1 = require("./error/serviceUnavailable");
-exports.ServiceUnavailable = serviceUnavailable_1.default;
-var unauthorized_1 = require("./error/unauthorized");
-exports.Unauthorized = unauthorized_1.default;
-
-},{"./error/alreadyInUse":21,"./error/argument":22,"./error/argumentNull":23,"./error/forbidden":24,"./error/notFound":25,"./error/notImplemented":26,"./error/pecorino":27,"./error/rateLimitExceeded":28,"./error/serviceUnavailable":29,"./error/unauthorized":30}],32:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * 組織タイプ
- */
-var OrganizationType;
-(function (OrganizationType) {
-    OrganizationType["Corporation"] = "Corporation";
-})(OrganizationType || (OrganizationType = {}));
-exports.default = OrganizationType;
-
-},{}],33:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * 人物タイプ
- */
-var PersonType;
-(function (PersonType) {
-    PersonType["Person"] = "Person";
-})(PersonType || (PersonType = {}));
-exports.default = PersonType;
-
-},{}],34:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * price currency
- * The currency (in 3-letter ISO 4217 format) of the price or a price component,
- * when attached to PriceSpecification and its subtypes.
- */
-var PriceCurrency;
-(function (PriceCurrency) {
-    PriceCurrency["JPY"] = "JPY";
-})(PriceCurrency || (PriceCurrency = {}));
-exports.default = PriceCurrency;
-
-},{}],35:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],36:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * タスク名
- */
-var TaskName;
-(function (TaskName) {
-    /**
-     * 現金転送取消
-     */
-    TaskName["CancelMoneyTransfer"] = "cancelMoneyTransfer";
-    /**
-     * 現金転送
-     */
-    TaskName["MoneyTransfer"] = "moneyTransfer";
-})(TaskName || (TaskName = {}));
-exports.default = TaskName;
-
-},{}],37:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * タスクステータス
- */
-var TaskStatus;
-(function (TaskStatus) {
-    /**
-     * 準備OK
-     */
-    TaskStatus["Ready"] = "Ready";
-    /**
-     * 実行中
-     */
-    TaskStatus["Running"] = "Running";
-    /**
-     * 実行済
-     */
-    TaskStatus["Executed"] = "Executed";
-    /**
-     * 実行中止
-     */
-    TaskStatus["Aborted"] = "Aborted";
-})(TaskStatus || (TaskStatus = {}));
-exports.default = TaskStatus;
-
-},{}],38:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],39:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],40:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * 取引ステータス
- */
-var TransactionStatusType;
-(function (TransactionStatusType) {
-    TransactionStatusType["InProgress"] = "InProgress";
-    TransactionStatusType["Canceled"] = "Canceled";
-    TransactionStatusType["Confirmed"] = "Confirmed";
-    TransactionStatusType["Expired"] = "Expired";
-})(TransactionStatusType || (TransactionStatusType = {}));
-exports.default = TransactionStatusType;
-
-},{}],41:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * 取引タスクエクスポートステータス
- */
-var TransactionTasksExportationStatus;
-(function (TransactionTasksExportationStatus) {
-    /**
-     * 未エクスポート
-     */
-    TransactionTasksExportationStatus["Unexported"] = "Unexported";
-    /**
-     * エクスポート中
-     */
-    TransactionTasksExportationStatus["Exporting"] = "Exporting";
-    /**
-     * エクスポート済
-     */
-    TransactionTasksExportationStatus["Exported"] = "Exported";
-})(TransactionTasksExportationStatus || (TransactionTasksExportationStatus = {}));
-exports.default = TransactionTasksExportationStatus;
-
-},{}],42:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * 取引タイプ
- */
-var TransactionType;
-(function (TransactionType) {
-    /**
-     * 出金取引
-     */
-    TransactionType["Withdraw"] = "Withdraw";
-    /**
-     * 入金取引
-     */
-    TransactionType["Deposit"] = "Deposit";
-    /**
-     * 転送取引
-     */
-    TransactionType["Transfer"] = "Transfer";
-})(TransactionType || (TransactionType = {}));
-exports.default = TransactionType;
-
-},{}],43:[function(require,module,exports){
-"use strict";
-/**
- * 入金取引ファクトリー
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-
-},{}],44:[function(require,module,exports){
-"use strict";
-/**
- * 転送取引ファクトリー
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-
-},{}],45:[function(require,module,exports){
-"use strict";
-/**
- * 支払取引ファクトリー
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-
-},{}],46:[function(require,module,exports){
-"use strict";
-/**
- * URLファクトリー
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-
-},{}],47:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * pecorino-factory
- * @module
- */
-var AccountFactory = require("./factory/account");
-var accountStatusType_1 = require("./factory/accountStatusType");
-var MoneyTransferActionFactory = require("./factory/action/transfer/moneyTransfer");
-var SendEmailMessageActionFactory = require("./factory/action/transfer/send/message/email");
-var actionStatusType_1 = require("./factory/actionStatusType");
-var actionType_1 = require("./factory/actionType");
-var ClientUserFactory = require("./factory/clientUser");
-var EmailMessageFactory = require("./factory/creativeWork/message/email");
-var creativeWorkType_1 = require("./factory/creativeWorkType");
-var organizationType_1 = require("./factory/organizationType");
-var personType_1 = require("./factory/personType");
-var priceCurrency_1 = require("./factory/priceCurrency");
-var CancelMoneyTransferTaskFactory = require("./factory/task/cancelMoneyTransfer");
-var MoneyTransferTaskFactory = require("./factory/task/moneyTransfer");
-var TaskExecutionResultFactory = require("./factory/taskExecutionResult");
-var taskName_1 = require("./factory/taskName");
-var taskStatus_1 = require("./factory/taskStatus");
-var DepositTransactionFactory = require("./factory/transaction/deposit");
-var TransferTransactionFactory = require("./factory/transaction/transfer");
-var WithdrawTransactionFactory = require("./factory/transaction/withdraw");
-var transactionStatusType_1 = require("./factory/transactionStatusType");
-var transactionTasksExportationStatus_1 = require("./factory/transactionTasksExportationStatus");
-var transactionType_1 = require("./factory/transactionType");
-var URLFactory = require("./factory/url");
-var errorCode_1 = require("./factory/errorCode");
-var errors = require("./factory/errors");
-exports.errors = errors;
-exports.errorCode = errorCode_1.default;
-exports.actionStatusType = actionStatusType_1.default;
-exports.actionType = actionType_1.default;
-var action;
-(function (action) {
-    var transfer;
-    (function (transfer) {
-        transfer.moneyTransfer = MoneyTransferActionFactory;
-        var send;
-        (function (send) {
-            var message;
-            (function (message) {
-                message.email = SendEmailMessageActionFactory;
-            })(message = send.message || (send.message = {}));
-        })(send = transfer.send || (transfer.send = {}));
-    })(transfer = action.transfer || (action.transfer = {}));
-})(action = exports.action || (exports.action = {}));
-exports.account = AccountFactory;
-exports.accountStatusType = accountStatusType_1.default;
-exports.clientUser = ClientUserFactory;
-var creativeWork;
-(function (creativeWork) {
-    var message;
-    (function (message) {
-        message.email = EmailMessageFactory;
-    })(message = creativeWork.message || (creativeWork.message = {}));
-})(creativeWork = exports.creativeWork || (exports.creativeWork = {}));
-exports.creativeWorkType = creativeWorkType_1.default;
-exports.organizationType = organizationType_1.default;
-exports.personType = personType_1.default;
-exports.priceCurrency = priceCurrency_1.default;
-var task;
-(function (task) {
-    task.cancelMoneyTransfer = CancelMoneyTransferTaskFactory;
-    task.moneyTransfer = MoneyTransferTaskFactory;
-})(task = exports.task || (exports.task = {}));
-exports.taskExecutionResult = TaskExecutionResultFactory;
-exports.taskName = taskName_1.default;
-exports.taskStatus = taskStatus_1.default;
-var transaction;
-(function (transaction) {
-    transaction.withdraw = WithdrawTransactionFactory;
-    transaction.deposit = DepositTransactionFactory;
-    transaction.transfer = TransferTransactionFactory;
-})(transaction = exports.transaction || (exports.transaction = {}));
-exports.transactionStatusType = transactionStatusType_1.default;
-exports.transactionTasksExportationStatus = transactionTasksExportationStatus_1.default;
-exports.transactionType = transactionType_1.default;
-exports.url = URLFactory;
-
-},{"./factory/account":11,"./factory/accountStatusType":12,"./factory/action/transfer/moneyTransfer":15,"./factory/action/transfer/send/message/email":16,"./factory/actionStatusType":13,"./factory/actionType":14,"./factory/clientUser":17,"./factory/creativeWork/message/email":19,"./factory/creativeWorkType":18,"./factory/errorCode":20,"./factory/errors":31,"./factory/organizationType":32,"./factory/personType":33,"./factory/priceCurrency":34,"./factory/task/cancelMoneyTransfer":38,"./factory/task/moneyTransfer":39,"./factory/taskExecutionResult":35,"./factory/taskName":36,"./factory/taskStatus":37,"./factory/transaction/deposit":43,"./factory/transaction/transfer":44,"./factory/transaction/withdraw":45,"./factory/transactionStatusType":40,"./factory/transactionTasksExportationStatus":41,"./factory/transactionType":42,"./factory/url":46}],48:[function(require,module,exports){
+},{"./auth/implicitGrantClient":4,"@motionpicture/sskts-api-abstract-client":12}],11:[function(require,module,exports){
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -1919,7 +1142,7 @@ var StubAuthClient = /** @class */ (function () {
 }());
 exports.StubAuthClient = StubAuthClient;
 
-},{"../transporters":61}],49:[function(require,module,exports){
+},{"../transporters":24}],12:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1934,7 +1157,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 // tslint:disable:max-classes-per-file
 /**
- * Sasaki API Service Library for Javascript
+ * API Service Library for Javascript
  * @ignore
  */
 var factory = require("@motionpicture/sskts-factory");
@@ -2082,7 +1305,7 @@ var service;
     })(transaction = service.transaction || (service.transaction = {}));
 })(service = exports.service || (exports.service = {}));
 
-},{"./auth/authClient":48,"./service/account":51,"./service/action":52,"./service/event":53,"./service/order":54,"./service/organization":55,"./service/person":56,"./service/place":57,"./service/programMembership":58,"./service/transaction/placeOrder":59,"./service/transaction/returnOrder":60,"./transporters":61,"@motionpicture/sskts-factory":152}],50:[function(require,module,exports){
+},{"./auth/authClient":11,"./service/account":14,"./service/action":15,"./service/event":16,"./service/order":17,"./service/organization":18,"./service/person":19,"./service/place":20,"./service/programMembership":21,"./service/transaction/placeOrder":22,"./service/transaction/returnOrder":23,"./transporters":24,"@motionpicture/sskts-factory":116}],13:[function(require,module,exports){
 "use strict";
 var __assign = (this && this.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -2180,7 +1403,7 @@ var Service = /** @class */ (function () {
 }());
 exports.Service = Service;
 
-},{"./transporters":61,"qs":176}],51:[function(require,module,exports){
+},{"./transporters":24,"qs":175}],14:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -2258,7 +1481,7 @@ var AccountService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.AccountService = AccountService;
 
-},{"../service":50,"http-status":163}],52:[function(require,module,exports){
+},{"../service":13,"http-status":162}],15:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -2358,7 +1581,7 @@ var ActionService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.ActionService = ActionService;
 
-},{"../service":50,"http-status":163}],53:[function(require,module,exports){
+},{"../service":13,"http-status":162}],16:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -2453,7 +1676,7 @@ var EventService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.EventService = EventService;
 
-},{"../service":50,"http-status":163}],54:[function(require,module,exports){
+},{"../service":13,"http-status":162}],17:[function(require,module,exports){
 "use strict";
 /**
  * 注文サービス
@@ -2554,7 +1777,7 @@ var OrderService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.OrderService = OrderService;
 
-},{"../service":50,"http-status":163}],55:[function(require,module,exports){
+},{"../service":13,"http-status":162}],18:[function(require,module,exports){
 "use strict";
 /**
  * 組織サービス
@@ -2655,7 +1878,7 @@ var OrganizationService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.OrganizationService = OrganizationService;
 
-},{"../service":50,"http-status":163}],56:[function(require,module,exports){
+},{"../service":13,"http-status":162}],19:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -2911,7 +2134,7 @@ var PersonService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PersonService = PersonService;
 
-},{"../service":50,"http-status":163}],57:[function(require,module,exports){
+},{"../service":13,"http-status":162}],20:[function(require,module,exports){
 "use strict";
 /**
  * 場所サービス
@@ -3012,7 +2235,7 @@ var PlaceService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PlaceService = PlaceService;
 
-},{"../service":50,"http-status":163}],58:[function(require,module,exports){
+},{"../service":13,"http-status":162}],21:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -3093,7 +2316,7 @@ var ProgramMembershipService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.ProgramMembershipService = ProgramMembershipService;
 
-},{"../service":50,"http-status":163}],59:[function(require,module,exports){
+},{"../service":13,"http-status":162}],22:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -3429,7 +2652,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PlaceOrderTransactionService = PlaceOrderTransactionService;
 
-},{"../../service":50,"http-status":163}],60:[function(require,module,exports){
+},{"../../service":13,"http-status":162}],23:[function(require,module,exports){
 "use strict";
 /**
  * 注文返品取引サービス
@@ -3529,7 +2752,7 @@ var ReturnOrderTransactionService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.ReturnOrderTransactionService = ReturnOrderTransactionService;
 
-},{"../../service":50,"http-status":163}],61:[function(require,module,exports){
+},{"../../service":13,"http-status":162}],24:[function(require,module,exports){
 "use strict";
 // tslint:disable:max-classes-per-file
 var __extends = (this && this.__extends) || (function () {
@@ -3736,7 +2959,7 @@ exports.DefaultTransporter = DefaultTransporter;
 //     /**
 //      * Default user agent.
 //      */
-//     public static readonly USER_AGENT: string = `sasaki-api-nodejs-client/${pkg.version}`;
+//     public static readonly USER_AGENT: string = `sskt-api-nodejs-client/${pkg.version}`;
 //     public expectedStatusCodes: number[];
 //     constructor(expectedStatusCodes: number[]) {
 //         this.expectedStatusCodes = expectedStatusCodes;
@@ -3795,9 +3018,36 @@ exports.DefaultTransporter = DefaultTransporter;
 //     }
 // }
 
-},{"debug":161,"http-status":163,"isomorphic-fetch":171}],62:[function(require,module,exports){
-arguments[4][13][0].apply(exports,arguments)
-},{"dup":13}],63:[function(require,module,exports){
+},{"debug":160,"http-status":162,"isomorphic-fetch":170}],25:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * 口座タイプ
+ * Pecorinoサービスに対して口座タイプを指定します。
+ */
+var AccountType;
+(function (AccountType) {
+    AccountType["Point"] = "Point";
+})(AccountType || (AccountType = {}));
+exports.default = AccountType;
+
+},{}],26:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * アクションステータス
+ */
+var ActionStatusType;
+(function (ActionStatusType) {
+    ActionStatusType["ActiveActionStatus"] = "ActiveActionStatus";
+    ActionStatusType["CompletedActionStatus"] = "CompletedActionStatus";
+    ActionStatusType["FailedActionStatus"] = "FailedActionStatus";
+    ActionStatusType["PotentialActionStatus"] = "PotentialActionStatus";
+    ActionStatusType["CanceledActionStatus"] = "CanceledActionStatus";
+})(ActionStatusType || (ActionStatusType = {}));
+exports.default = ActionStatusType;
+
+},{}],27:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -3821,7 +3071,7 @@ var ActionType;
 })(ActionType || (ActionType = {}));
 exports.default = ActionType;
 
-},{}],64:[function(require,module,exports){
+},{}],28:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var ObjectType;
@@ -3829,7 +3079,7 @@ var ObjectType;
     ObjectType["PecorinoAward"] = "PecorinoAward";
 })(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
 
-},{}],65:[function(require,module,exports){
+},{}],29:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var ObjectType;
@@ -3837,9 +3087,11 @@ var ObjectType;
     ObjectType["Mvtk"] = "Mvtk";
 })(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
 
-},{}],66:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],67:[function(require,module,exports){
+},{}],30:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+
+},{}],31:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var ObjectType;
@@ -3847,7 +3099,7 @@ var ObjectType;
     ObjectType["SeatReservation"] = "SeatReservation";
 })(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
 
-},{}],68:[function(require,module,exports){
+},{}],32:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var ObjectType;
@@ -3855,7 +3107,7 @@ var ObjectType;
     ObjectType["CreditCard"] = "CreditCard";
 })(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
 
-},{}],69:[function(require,module,exports){
+},{}],33:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var ObjectType;
@@ -3863,35 +3115,35 @@ var ObjectType;
     ObjectType["PecorinoPayment"] = "PecorinoPayment";
 })(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
 
-},{}],70:[function(require,module,exports){
-arguments[4][65][0].apply(exports,arguments)
-},{"dup":65}],71:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],72:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],73:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],74:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],75:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],76:[function(require,module,exports){
+},{}],34:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],35:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],36:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],37:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],38:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],39:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],40:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var pecorino_1 = require("../../../action/authorize/award/pecorino");
 exports.ObjectType = pecorino_1.ObjectType;
 
-},{"../../../action/authorize/award/pecorino":64}],77:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],78:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],79:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],80:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],81:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],82:[function(require,module,exports){
+},{"../../../action/authorize/award/pecorino":28}],41:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],42:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],43:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],44:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],45:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],46:[function(require,module,exports){
 "use strict";
 /**
  * アプリケーションクライアントイベントファクトリー
@@ -3901,9 +3153,15 @@ arguments[4][15][0].apply(exports,arguments)
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
-},{}],83:[function(require,module,exports){
-arguments[4][17][0].apply(exports,arguments)
-},{"dup":17}],84:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
+"use strict";
+/**
+ * アプリケーションクライアントユーザーファクトリー
+ * クライアントサイドでapiを利用するユーザー
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+
+},{}],48:[function(require,module,exports){
 "use strict";
 /**
  * 作品タイプ
@@ -3916,9 +3174,9 @@ var CreativeWorkType;
 })(CreativeWorkType || (CreativeWorkType = {}));
 exports.default = CreativeWorkType;
 
-},{}],85:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],86:[function(require,module,exports){
+},{}],49:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],50:[function(require,module,exports){
 "use strict";
 /**
  * 映画作品ファクトリー
@@ -3944,7 +3202,7 @@ function createFromCOA(filmFromCOA) {
 }
 exports.createFromCOA = createFromCOA;
 
-},{"../creativeWorkType":84,"moment":154}],87:[function(require,module,exports){
+},{"../creativeWorkType":48,"moment":118}],51:[function(require,module,exports){
 "use strict";
 /**
  * エラーコード
@@ -3964,7 +3222,7 @@ var ErrorCode;
 })(ErrorCode || (ErrorCode = {}));
 exports.default = ErrorCode;
 
-},{}],88:[function(require,module,exports){
+},{}],52:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -4004,7 +3262,7 @@ var AlreadyInUseError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = AlreadyInUseError;
 
-},{"../errorCode":87,"./sskts":96,"setprototypeof":180}],89:[function(require,module,exports){
+},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],53:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -4043,7 +3301,7 @@ var ArgumentError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = ArgumentError;
 
-},{"../errorCode":87,"./sskts":96,"setprototypeof":180}],90:[function(require,module,exports){
+},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],54:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -4082,7 +3340,7 @@ var ArgumentNullError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = ArgumentNullError;
 
-},{"../errorCode":87,"./sskts":96,"setprototypeof":180}],91:[function(require,module,exports){
+},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],55:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -4120,7 +3378,7 @@ var ForbiddenError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = ForbiddenError;
 
-},{"../errorCode":87,"./sskts":96,"setprototypeof":180}],92:[function(require,module,exports){
+},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],56:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -4159,7 +3417,7 @@ var NotFoundError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = NotFoundError;
 
-},{"../errorCode":87,"./sskts":96,"setprototypeof":180}],93:[function(require,module,exports){
+},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],57:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -4197,7 +3455,7 @@ var NotImplementedError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = NotImplementedError;
 
-},{"../errorCode":87,"./sskts":96,"setprototypeof":180}],94:[function(require,module,exports){
+},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],58:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -4235,7 +3493,7 @@ var RateLimitExceededError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = RateLimitExceededError;
 
-},{"../errorCode":87,"./sskts":96,"setprototypeof":180}],95:[function(require,module,exports){
+},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],59:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -4273,7 +3531,7 @@ var ServiceUnavailableError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = ServiceUnavailableError;
 
-},{"../errorCode":87,"./sskts":96,"setprototypeof":180}],96:[function(require,module,exports){
+},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],60:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -4304,7 +3562,7 @@ var SSKTSError = /** @class */ (function (_super) {
 }(Error));
 exports.SSKTSError = SSKTSError;
 
-},{}],97:[function(require,module,exports){
+},{}],61:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -4342,7 +3600,7 @@ var UnauthorizedError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = UnauthorizedError;
 
-},{"../errorCode":87,"./sskts":96,"setprototypeof":180}],98:[function(require,module,exports){
+},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],62:[function(require,module,exports){
 "use strict";
 /**
  * errors
@@ -4370,7 +3628,7 @@ exports.SSKTS = sskts_1.SSKTSError;
 var unauthorized_1 = require("./error/unauthorized");
 exports.Unauthorized = unauthorized_1.default;
 
-},{"./error/alreadyInUse":88,"./error/argument":89,"./error/argumentNull":90,"./error/forbidden":91,"./error/notFound":92,"./error/notImplemented":93,"./error/rateLimitExceeded":94,"./error/serviceUnavailable":95,"./error/sskts":96,"./error/unauthorized":97}],99:[function(require,module,exports){
+},{"./error/alreadyInUse":52,"./error/argument":53,"./error/argumentNull":54,"./error/forbidden":55,"./error/notFound":56,"./error/notImplemented":57,"./error/rateLimitExceeded":58,"./error/serviceUnavailable":59,"./error/sskts":60,"./error/unauthorized":61}],63:[function(require,module,exports){
 "use strict";
 /**
  * イベントファクトリー
@@ -4400,7 +3658,7 @@ function create(params) {
 }
 exports.create = create;
 
-},{}],100:[function(require,module,exports){
+},{}],64:[function(require,module,exports){
 "use strict";
 /**
  * イベントステータス
@@ -4415,7 +3673,7 @@ var EventStatusType;
 })(EventStatusType || (EventStatusType = {}));
 exports.default = EventStatusType;
 
-},{}],101:[function(require,module,exports){
+},{}],65:[function(require,module,exports){
 "use strict";
 /**
  * イベントタイプ
@@ -4428,7 +3686,7 @@ var EventType;
 })(EventType || (EventType = {}));
 exports.default = EventType;
 
-},{}],102:[function(require,module,exports){
+},{}],66:[function(require,module,exports){
 "use strict";
 /**
  * individual screening event factory
@@ -4544,7 +3802,7 @@ function createIdentifierFromCOA(params) {
 }
 exports.createIdentifierFromCOA = createIdentifierFromCOA;
 
-},{"../error/argument":89,"../event":99,"../event/screeningEvent":103,"../eventStatusType":100,"../eventType":101,"lodash":153,"moment":154}],103:[function(require,module,exports){
+},{"../error/argument":53,"../event":63,"../event/screeningEvent":67,"../eventStatusType":64,"../eventType":65,"lodash":117,"moment":118}],67:[function(require,module,exports){
 "use strict";
 /**
  * screen event factory
@@ -4633,7 +3891,7 @@ function createIdentifier(params) {
 }
 exports.createIdentifier = createIdentifier;
 
-},{"../creativeWorkType":84,"../eventStatusType":100,"../eventType":101,"../organizationType":108,"moment":154}],104:[function(require,module,exports){
+},{"../creativeWorkType":48,"../eventStatusType":64,"../eventType":65,"../organizationType":72,"moment":118}],68:[function(require,module,exports){
 "use strict";
 /**
  * 座席予約供給情報ファクトリー
@@ -4641,7 +3899,7 @@ exports.createIdentifier = createIdentifier;
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
-},{}],105:[function(require,module,exports){
+},{}],69:[function(require,module,exports){
 "use strict";
 /**
  * 注文ファクトリー
@@ -4649,7 +3907,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
-},{}],106:[function(require,module,exports){
+},{}],70:[function(require,module,exports){
 "use strict";
 /**
  * 注文ステータス
@@ -4668,7 +3926,7 @@ var OrderStatus;
 })(OrderStatus || (OrderStatus = {}));
 exports.default = OrderStatus;
 
-},{}],107:[function(require,module,exports){
+},{}],71:[function(require,module,exports){
 "use strict";
 /**
  * 企業識別子
@@ -4680,7 +3938,7 @@ var CorporationOrganizationIdentifier;
 })(CorporationOrganizationIdentifier || (CorporationOrganizationIdentifier = {}));
 exports.default = CorporationOrganizationIdentifier;
 
-},{}],108:[function(require,module,exports){
+},{}],72:[function(require,module,exports){
 "use strict";
 /**
  * 組織タイプ
@@ -4693,13 +3951,13 @@ var OrganizationType;
 })(OrganizationType || (OrganizationType = {}));
 exports.default = OrganizationType;
 
-},{}],109:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],110:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],111:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],112:[function(require,module,exports){
+},{}],73:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],74:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],75:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],76:[function(require,module,exports){
 "use strict";
 /**
  * 決済方法タイプ
@@ -4712,11 +3970,11 @@ var PaymentMethodType;
 })(PaymentMethodType || (PaymentMethodType = {}));
 exports.default = PaymentMethodType;
 
-},{}],113:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],114:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],115:[function(require,module,exports){
+},{}],77:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],78:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],79:[function(require,module,exports){
 "use strict";
 /**
  * 人物タイプ
@@ -4728,7 +3986,7 @@ var PersonType;
 })(PersonType || (PersonType = {}));
 exports.default = PersonType;
 
-},{}],116:[function(require,module,exports){
+},{}],80:[function(require,module,exports){
 "use strict";
 /**
  * 場所タイプ
@@ -4743,7 +4001,7 @@ var PlaceType;
 })(PlaceType || (PlaceType = {}));
 exports.default = PlaceType;
 
-},{}],117:[function(require,module,exports){
+},{}],81:[function(require,module,exports){
 "use strict";
 /**
  * 劇場ファクトリー
@@ -4817,9 +4075,21 @@ function createScreeningRoomFromCOA(screenFromCOA) {
 }
 exports.createScreeningRoomFromCOA = createScreeningRoomFromCOA;
 
-},{"../placeType":116}],118:[function(require,module,exports){
-arguments[4][34][0].apply(exports,arguments)
-},{"dup":34}],119:[function(require,module,exports){
+},{"../placeType":80}],82:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * price currency
+ * The currency (in 3-letter ISO 4217 format) of the price or a price component,
+ * when attached to PriceSpecification and its subtypes.
+ */
+var PriceCurrency;
+(function (PriceCurrency) {
+    PriceCurrency["JPY"] = "JPY";
+})(PriceCurrency || (PriceCurrency = {}));
+exports.default = PriceCurrency;
+
+},{}],83:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -4833,9 +4103,9 @@ var Award;
     Award["PecorinoPayment"] = "PecorinoPayment";
 })(Award = exports.Award || (exports.Award = {}));
 
-},{}],120:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],121:[function(require,module,exports){
+},{}],84:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],85:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -4862,7 +4132,7 @@ var ReservationStatusType;
 })(ReservationStatusType || (ReservationStatusType = {}));
 exports.default = ReservationStatusType;
 
-},{}],122:[function(require,module,exports){
+},{}],86:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -4874,11 +4144,11 @@ var ReservationType;
 })(ReservationType || (ReservationType = {}));
 exports.default = ReservationType;
 
-},{}],123:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],124:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],125:[function(require,module,exports){
+},{}],87:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],88:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],89:[function(require,module,exports){
 "use strict";
 /**
  * task name
@@ -4962,7 +4232,7 @@ var TaskName;
 })(TaskName || (TaskName = {}));
 exports.default = TaskName;
 
-},{}],126:[function(require,module,exports){
+},{}],90:[function(require,module,exports){
 "use strict";
 /**
  * タスクステータス
@@ -4989,43 +4259,43 @@ var TaskStatus;
 })(TaskStatus || (TaskStatus = {}));
 exports.default = TaskStatus;
 
-},{}],127:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],128:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],129:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],130:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],131:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],132:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],133:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],134:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],135:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],136:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],137:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],138:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],139:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],140:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],141:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],142:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],143:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],144:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],145:[function(require,module,exports){
+},{}],91:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],92:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],93:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],94:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],95:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],96:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],97:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],98:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],99:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],100:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],101:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],102:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],103:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],104:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],105:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],106:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],107:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],108:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],109:[function(require,module,exports){
 "use strict";
 /**
  * 取引ステータス
@@ -5040,7 +4310,7 @@ var TransactionStatusType;
 })(TransactionStatusType || (TransactionStatusType = {}));
 exports.default = TransactionStatusType;
 
-},{}],146:[function(require,module,exports){
+},{}],110:[function(require,module,exports){
 "use strict";
 /**
  * 取引タスクエクスポートステータス
@@ -5063,7 +4333,7 @@ var TransactionTasksExportationStatus;
 })(TransactionTasksExportationStatus || (TransactionTasksExportationStatus = {}));
 exports.default = TransactionTasksExportationStatus;
 
-},{}],147:[function(require,module,exports){
+},{}],111:[function(require,module,exports){
 "use strict";
 /**
  * 取引タイプ
@@ -5082,9 +4352,9 @@ var TransactionType;
 })(TransactionType || (TransactionType = {}));
 exports.default = TransactionType;
 
-},{}],148:[function(require,module,exports){
-arguments[4][15][0].apply(exports,arguments)
-},{"dup":15}],149:[function(require,module,exports){
+},{}],112:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],113:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -5102,7 +4372,7 @@ var Reason;
     Reason["Seller"] = "Seller";
 })(Reason = exports.Reason || (exports.Reason = {}));
 
-},{}],150:[function(require,module,exports){
+},{}],114:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -5116,15 +4386,20 @@ var UnitCode;
     UnitCode["Sec"] = "SEC";
 })(UnitCode = exports.UnitCode || (exports.UnitCode = {}));
 
-},{}],151:[function(require,module,exports){
-arguments[4][46][0].apply(exports,arguments)
-},{"dup":46}],152:[function(require,module,exports){
+},{}],115:[function(require,module,exports){
+"use strict";
+/**
+ * URLファクトリー
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+
+},{}],116:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
- * sskts-factory
+ * factory
  */
-var pecorinoFactory = require("@motionpicture/pecorino-factory");
+var pecorinoFactory = require("@pecorino/factory");
 var PecorinoAwardAuthorizeActionFactory = require("./factory/action/authorize/award/pecorino");
 var MvtkAuthorizeActionFactory = require("./factory/action/authorize/discount/mvtk");
 var ProgramMembershipOfferAuthorizeActionFactory = require("./factory/action/authorize/offer/programMembership");
@@ -5145,6 +4420,7 @@ var SendEmailMessageActionFactory = require("./factory/action/transfer/send/mess
 var SendOrderActionFactory = require("./factory/action/transfer/send/order");
 var actionStatusType_1 = require("./factory/actionStatusType");
 var actionType_1 = require("./factory/actionType");
+var accountType_1 = require("./factory/accountType");
 var ClientEventFactory = require("./factory/clientEvent");
 var ClientUserFactory = require("./factory/clientUser");
 var EmailMessageFactory = require("./factory/creativeWork/message/email");
@@ -5296,6 +4572,7 @@ var action;
         })(use = consume.use || (consume.use = {}));
     })(consume = action.consume || (action.consume = {}));
 })(action = exports.action || (exports.action = {}));
+exports.accountType = accountType_1.default;
 var paymentMethod;
 (function (paymentMethod) {
     var paymentCard;
@@ -5391,7 +4668,7 @@ exports.transactionType = transactionType_1.default;
 exports.unitCode = unitCode_1.UnitCode;
 exports.url = URLFactory;
 
-},{"./factory/action/authorize/award/pecorino":64,"./factory/action/authorize/discount/mvtk":65,"./factory/action/authorize/offer/programMembership":66,"./factory/action/authorize/offer/seatReservation":67,"./factory/action/authorize/paymentMethod/creditCard":68,"./factory/action/authorize/paymentMethod/pecorino":69,"./factory/action/consume/use/mvtk":70,"./factory/action/interact/register/programMembership":71,"./factory/action/interact/unRegister/programMembership":72,"./factory/action/trade/order":73,"./factory/action/trade/pay":74,"./factory/action/trade/refund":75,"./factory/action/transfer/give/pecorinoAward":76,"./factory/action/transfer/print/ticket":77,"./factory/action/transfer/return/order":78,"./factory/action/transfer/return/pecorinoAward":79,"./factory/action/transfer/send/message/email":80,"./factory/action/transfer/send/order":81,"./factory/actionStatusType":62,"./factory/actionType":63,"./factory/clientEvent":82,"./factory/clientUser":83,"./factory/creativeWork/message/email":85,"./factory/creativeWork/movie":86,"./factory/creativeWorkType":84,"./factory/errorCode":87,"./factory/errors":98,"./factory/event/individualScreeningEvent":102,"./factory/event/screeningEvent":103,"./factory/eventStatusType":100,"./factory/eventType":101,"./factory/offer/seatReservation":104,"./factory/order":105,"./factory/orderStatus":106,"./factory/organization/corporation":109,"./factory/organization/movieTheater":110,"./factory/organizationIdentifier/corporation":107,"./factory/organizationType":108,"./factory/ownershipInfo":111,"./factory/paymentMethod/paymentCard/creditCard":113,"./factory/paymentMethodType":112,"./factory/person":114,"./factory/personType":115,"./factory/place/movieTheater":117,"./factory/placeType":116,"./factory/priceCurrency":118,"./factory/programMembership":119,"./factory/quantitativeValue":120,"./factory/reservation/event":123,"./factory/reservationStatusType":121,"./factory/reservationType":122,"./factory/task/cancelCreditCard":127,"./factory/task/cancelMvtk":128,"./factory/task/cancelPecorino":129,"./factory/task/cancelPecorinoAward":130,"./factory/task/cancelSeatReservation":131,"./factory/task/givePecorinoAward":132,"./factory/task/payCreditCard":133,"./factory/task/payPecorino":134,"./factory/task/placeOrder":135,"./factory/task/refundCreditCard":136,"./factory/task/refundPecorino":137,"./factory/task/registerProgramMembership":138,"./factory/task/returnOrder":139,"./factory/task/returnPecorinoAward":140,"./factory/task/sendEmailMessage":141,"./factory/task/sendOrder":142,"./factory/task/unRegisterProgramMembership":143,"./factory/task/useMvtk":144,"./factory/taskExecutionResult":124,"./factory/taskName":125,"./factory/taskStatus":126,"./factory/transaction/placeOrder":148,"./factory/transaction/returnOrder":149,"./factory/transactionStatusType":145,"./factory/transactionTasksExportationStatus":146,"./factory/transactionType":147,"./factory/unitCode":150,"./factory/url":151,"@motionpicture/pecorino-factory":47}],153:[function(require,module,exports){
+},{"./factory/accountType":25,"./factory/action/authorize/award/pecorino":28,"./factory/action/authorize/discount/mvtk":29,"./factory/action/authorize/offer/programMembership":30,"./factory/action/authorize/offer/seatReservation":31,"./factory/action/authorize/paymentMethod/creditCard":32,"./factory/action/authorize/paymentMethod/pecorino":33,"./factory/action/consume/use/mvtk":34,"./factory/action/interact/register/programMembership":35,"./factory/action/interact/unRegister/programMembership":36,"./factory/action/trade/order":37,"./factory/action/trade/pay":38,"./factory/action/trade/refund":39,"./factory/action/transfer/give/pecorinoAward":40,"./factory/action/transfer/print/ticket":41,"./factory/action/transfer/return/order":42,"./factory/action/transfer/return/pecorinoAward":43,"./factory/action/transfer/send/message/email":44,"./factory/action/transfer/send/order":45,"./factory/actionStatusType":26,"./factory/actionType":27,"./factory/clientEvent":46,"./factory/clientUser":47,"./factory/creativeWork/message/email":49,"./factory/creativeWork/movie":50,"./factory/creativeWorkType":48,"./factory/errorCode":51,"./factory/errors":62,"./factory/event/individualScreeningEvent":66,"./factory/event/screeningEvent":67,"./factory/eventStatusType":64,"./factory/eventType":65,"./factory/offer/seatReservation":68,"./factory/order":69,"./factory/orderStatus":70,"./factory/organization/corporation":73,"./factory/organization/movieTheater":74,"./factory/organizationIdentifier/corporation":71,"./factory/organizationType":72,"./factory/ownershipInfo":75,"./factory/paymentMethod/paymentCard/creditCard":77,"./factory/paymentMethodType":76,"./factory/person":78,"./factory/personType":79,"./factory/place/movieTheater":81,"./factory/placeType":80,"./factory/priceCurrency":82,"./factory/programMembership":83,"./factory/quantitativeValue":84,"./factory/reservation/event":87,"./factory/reservationStatusType":85,"./factory/reservationType":86,"./factory/task/cancelCreditCard":91,"./factory/task/cancelMvtk":92,"./factory/task/cancelPecorino":93,"./factory/task/cancelPecorinoAward":94,"./factory/task/cancelSeatReservation":95,"./factory/task/givePecorinoAward":96,"./factory/task/payCreditCard":97,"./factory/task/payPecorino":98,"./factory/task/placeOrder":99,"./factory/task/refundCreditCard":100,"./factory/task/refundPecorino":101,"./factory/task/registerProgramMembership":102,"./factory/task/returnOrder":103,"./factory/task/returnPecorinoAward":104,"./factory/task/sendEmailMessage":105,"./factory/task/sendOrder":106,"./factory/task/unRegisterProgramMembership":107,"./factory/task/useMvtk":108,"./factory/taskExecutionResult":88,"./factory/taskName":89,"./factory/taskStatus":90,"./factory/transaction/placeOrder":112,"./factory/transaction/returnOrder":113,"./factory/transactionStatusType":109,"./factory/transactionTasksExportationStatus":110,"./factory/transactionType":111,"./factory/unitCode":114,"./factory/url":115,"@pecorino/factory":153}],117:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -22500,7 +21777,7 @@ exports.url = URLFactory;
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],154:[function(require,module,exports){
+},{}],118:[function(require,module,exports){
 //! moment.js
 
 ;(function (global, factory) {
@@ -27008,7 +26285,701 @@ exports.url = URLFactory;
 
 })));
 
-},{}],155:[function(require,module,exports){
+},{}],119:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * 口座タイプ
+ */
+var TypeOf;
+(function (TypeOf) {
+    /**
+     * 普通口座タイプ
+     */
+    TypeOf["Account"] = "Account";
+})(TypeOf = exports.TypeOf || (exports.TypeOf = {}));
+
+},{}],120:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * 口座ステータスタイプ
+ */
+var AccountStatusType;
+(function (AccountStatusType) {
+    /**
+     * 開設済
+     */
+    AccountStatusType["Opened"] = "Opened";
+    /**
+     * 解約済
+     */
+    AccountStatusType["Closed"] = "Closed";
+})(AccountStatusType || (AccountStatusType = {}));
+exports.default = AccountStatusType;
+
+},{}],121:[function(require,module,exports){
+arguments[4][26][0].apply(exports,arguments)
+},{"dup":26}],122:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * アクションタイプ
+ */
+var ActionType;
+(function (ActionType) {
+    ActionType["AuthorizeAction"] = "AuthorizeAction";
+    ActionType["MoneyTransfer"] = "MoneyTransfer";
+    ActionType["OrderAction"] = "OrderAction";
+    ActionType["PayAction"] = "PayAction";
+    ActionType["PrintAction"] = "PrintAction";
+    ActionType["RefundAction"] = "RefundAction";
+    ActionType["ReturnAction"] = "ReturnAction";
+    ActionType["SendAction"] = "SendAction";
+    ActionType["TakeAction"] = "TakeAction";
+    ActionType["UseAction"] = "UseAction";
+})(ActionType || (ActionType = {}));
+exports.default = ActionType;
+
+},{}],123:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],124:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],125:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],126:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * 作品タイプ
+ */
+var CreativeWorkType;
+(function (CreativeWorkType) {
+    CreativeWorkType["EmailMessage"] = "EmailMessage";
+})(CreativeWorkType || (CreativeWorkType = {}));
+exports.default = CreativeWorkType;
+
+},{}],127:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],128:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * エラーコード
+ */
+var ErrorCode;
+(function (ErrorCode) {
+    ErrorCode["AlreadyInUse"] = "AlreadyInUse";
+    ErrorCode["Argument"] = "Argument";
+    ErrorCode["ArgumentNull"] = "ArgumentNull";
+    ErrorCode["Forbidden"] = "Forbidden";
+    ErrorCode["NotFound"] = "NotFound";
+    ErrorCode["NotImplemented"] = "NotImplemented";
+    ErrorCode["RateLimitExceeded"] = "RateLimitExceeded";
+    ErrorCode["ServiceUnavailable"] = "ServiceUnavailable";
+    ErrorCode["Unauthorized"] = "Unauthorized";
+})(ErrorCode || (ErrorCode = {}));
+exports.default = ErrorCode;
+
+},{}],129:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable-next-line:no-require-imports
+var setPrototypeOf = require("setprototypeof");
+var errorCode_1 = require("../errorCode");
+var pecorino_1 = require("./pecorino");
+/**
+ * AlreadyInUseError
+ */
+var AlreadyInUseError = /** @class */ (function (_super) {
+    __extends(AlreadyInUseError, _super);
+    function AlreadyInUseError(entityName, fieldNames, message) {
+        var _this = this;
+        var actualMessage = message;
+        if (message === undefined || message.length === 0) {
+            actualMessage = "The specified '" + entityName + "' value is already in use for: " + fieldNames.join(', ') + ".";
+        }
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.AlreadyInUse, actualMessage) /* istanbul ignore next */ || this;
+        _this.entityName = entityName;
+        _this.fieldNames = fieldNames;
+        setPrototypeOf(_this, AlreadyInUseError.prototype);
+        return _this;
+    }
+    return AlreadyInUseError;
+}(pecorino_1.PecorinoError));
+exports.default = AlreadyInUseError;
+
+},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],130:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable-next-line:no-require-imports
+var setPrototypeOf = require("setprototypeof");
+var errorCode_1 = require("../errorCode");
+var pecorino_1 = require("./pecorino");
+/**
+ * ArgumentError
+ */
+var ArgumentError = /** @class */ (function (_super) {
+    __extends(ArgumentError, _super);
+    function ArgumentError(argumentName, message) {
+        var _this = this;
+        var actualMessage = message;
+        if (message === undefined || message.length === 0) {
+            actualMessage = "Invalid or missing argument supplied: " + argumentName + ".";
+        }
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.Argument, actualMessage) /* istanbul ignore next */ || this;
+        _this.argumentName = argumentName;
+        setPrototypeOf(_this, ArgumentError.prototype);
+        return _this;
+    }
+    return ArgumentError;
+}(pecorino_1.PecorinoError));
+exports.default = ArgumentError;
+
+},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],131:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable-next-line:no-require-imports
+var setPrototypeOf = require("setprototypeof");
+var errorCode_1 = require("../errorCode");
+var pecorino_1 = require("./pecorino");
+/**
+ * ArgumentNullError
+ */
+var ArgumentNullError = /** @class */ (function (_super) {
+    __extends(ArgumentNullError, _super);
+    function ArgumentNullError(argumentName, message) {
+        var _this = this;
+        var actualMessage = message;
+        if (message === undefined || message.length === 0) {
+            actualMessage = "Missing argument: " + argumentName + ".";
+        }
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.ArgumentNull, actualMessage) /* istanbul ignore next */ || this;
+        _this.argumentName = argumentName;
+        setPrototypeOf(_this, ArgumentNullError.prototype);
+        return _this;
+    }
+    return ArgumentNullError;
+}(pecorino_1.PecorinoError));
+exports.default = ArgumentNullError;
+
+},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],132:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable-next-line:no-require-imports
+var setPrototypeOf = require("setprototypeof");
+var errorCode_1 = require("../errorCode");
+var pecorino_1 = require("./pecorino");
+/**
+ * ForbiddenError
+ */
+var ForbiddenError = /** @class */ (function (_super) {
+    __extends(ForbiddenError, _super);
+    function ForbiddenError(message) {
+        var _this = this;
+        var actualMessage = message;
+        if (message === undefined || message.length === 0) {
+            actualMessage = 'Forbidden.';
+        }
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.Forbidden, actualMessage) /* istanbul ignore next */ || this;
+        setPrototypeOf(_this, ForbiddenError.prototype);
+        return _this;
+    }
+    return ForbiddenError;
+}(pecorino_1.PecorinoError));
+exports.default = ForbiddenError;
+
+},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],133:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable-next-line:no-require-imports
+var setPrototypeOf = require("setprototypeof");
+var errorCode_1 = require("../errorCode");
+var pecorino_1 = require("./pecorino");
+/**
+ * NotFoundError
+ */
+var NotFoundError = /** @class */ (function (_super) {
+    __extends(NotFoundError, _super);
+    function NotFoundError(entityName, message) {
+        var _this = this;
+        var actualMessage = message;
+        if (message === undefined || message.length === 0) {
+            actualMessage = "Not Found: " + entityName + ".";
+        }
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.NotFound, actualMessage) /* istanbul ignore next */ || this;
+        _this.entityName = entityName;
+        setPrototypeOf(_this, NotFoundError.prototype);
+        return _this;
+    }
+    return NotFoundError;
+}(pecorino_1.PecorinoError));
+exports.default = NotFoundError;
+
+},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],134:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable-next-line:no-require-imports
+var setPrototypeOf = require("setprototypeof");
+var errorCode_1 = require("../errorCode");
+var pecorino_1 = require("./pecorino");
+/**
+ * NotImplementedError
+ */
+var NotImplementedError = /** @class */ (function (_super) {
+    __extends(NotImplementedError, _super);
+    function NotImplementedError(message) {
+        var _this = this;
+        var actualMessage = message;
+        if (message === undefined || message.length === 0) {
+            actualMessage = 'Method is not yet implemented.';
+        }
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.NotImplemented, actualMessage) /* istanbul ignore next */ || this;
+        setPrototypeOf(_this, NotImplementedError.prototype);
+        return _this;
+    }
+    return NotImplementedError;
+}(pecorino_1.PecorinoError));
+exports.default = NotImplementedError;
+
+},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],135:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * PecorinoError
+ * @extends {Error}
+ */
+var PecorinoError = /** @class */ (function (_super) {
+    __extends(PecorinoError, _super);
+    function PecorinoError(code, message) {
+        var _this = 
+        // tslint:disable-next-line:no-single-line-block-comment
+        _super.call(this, message) /* istanbul ignore next */ || this;
+        _this.name = 'PecorinoError';
+        _this.reason = code;
+        return _this;
+    }
+    return PecorinoError;
+}(Error));
+exports.PecorinoError = PecorinoError;
+
+},{}],136:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable-next-line:no-require-imports
+var setPrototypeOf = require("setprototypeof");
+var errorCode_1 = require("../errorCode");
+var pecorino_1 = require("./pecorino");
+/**
+ * RateLimitExceededError
+ */
+var RateLimitExceededError = /** @class */ (function (_super) {
+    __extends(RateLimitExceededError, _super);
+    function RateLimitExceededError(message) {
+        var _this = this;
+        var actualMessage = message;
+        if (message === undefined || message.length === 0) {
+            actualMessage = 'Rate limit exceeded.';
+        }
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.RateLimitExceeded, actualMessage) /* istanbul ignore next */ || this;
+        setPrototypeOf(_this, RateLimitExceededError.prototype);
+        return _this;
+    }
+    return RateLimitExceededError;
+}(pecorino_1.PecorinoError));
+exports.default = RateLimitExceededError;
+
+},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],137:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable-next-line:no-require-imports
+var setPrototypeOf = require("setprototypeof");
+var errorCode_1 = require("../errorCode");
+var pecorino_1 = require("./pecorino");
+/**
+ * ServiceUnavailableError
+ */
+var ServiceUnavailableError = /** @class */ (function (_super) {
+    __extends(ServiceUnavailableError, _super);
+    function ServiceUnavailableError(message) {
+        var _this = this;
+        var actualMessage = message;
+        if (message === undefined || message.length === 0) {
+            actualMessage = 'Service unavailable temporarily.';
+        }
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.ServiceUnavailable, actualMessage) /* istanbul ignore next */ || this;
+        setPrototypeOf(_this, ServiceUnavailableError.prototype);
+        return _this;
+    }
+    return ServiceUnavailableError;
+}(pecorino_1.PecorinoError));
+exports.default = ServiceUnavailableError;
+
+},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],138:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable-next-line:no-require-imports
+var setPrototypeOf = require("setprototypeof");
+var errorCode_1 = require("../errorCode");
+var pecorino_1 = require("./pecorino");
+/**
+ * UnauthorizedError
+ */
+var UnauthorizedError = /** @class */ (function (_super) {
+    __extends(UnauthorizedError, _super);
+    function UnauthorizedError(message) {
+        var _this = this;
+        var actualMessage = message;
+        if (message === undefined || message.length === 0) {
+            actualMessage = 'Unauthorized.';
+        }
+        // tslint:disable-next-line:no-single-line-block-comment
+        _this = _super.call(this, errorCode_1.default.Unauthorized, actualMessage) /* istanbul ignore next */ || this;
+        setPrototypeOf(_this, UnauthorizedError.prototype);
+        return _this;
+    }
+    return UnauthorizedError;
+}(pecorino_1.PecorinoError));
+exports.default = UnauthorizedError;
+
+},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],139:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * errors
+ */
+var alreadyInUse_1 = require("./error/alreadyInUse");
+exports.AlreadyInUse = alreadyInUse_1.default;
+var argument_1 = require("./error/argument");
+exports.Argument = argument_1.default;
+var argumentNull_1 = require("./error/argumentNull");
+exports.ArgumentNull = argumentNull_1.default;
+var forbidden_1 = require("./error/forbidden");
+exports.Forbidden = forbidden_1.default;
+var notFound_1 = require("./error/notFound");
+exports.NotFound = notFound_1.default;
+var notImplemented_1 = require("./error/notImplemented");
+exports.NotImplemented = notImplemented_1.default;
+var pecorino_1 = require("./error/pecorino");
+exports.PECORINO = pecorino_1.PecorinoError;
+var rateLimitExceeded_1 = require("./error/rateLimitExceeded");
+exports.RateLimitExceeded = rateLimitExceeded_1.default;
+var serviceUnavailable_1 = require("./error/serviceUnavailable");
+exports.ServiceUnavailable = serviceUnavailable_1.default;
+var unauthorized_1 = require("./error/unauthorized");
+exports.Unauthorized = unauthorized_1.default;
+
+},{"./error/alreadyInUse":129,"./error/argument":130,"./error/argumentNull":131,"./error/forbidden":132,"./error/notFound":133,"./error/notImplemented":134,"./error/pecorino":135,"./error/rateLimitExceeded":136,"./error/serviceUnavailable":137,"./error/unauthorized":138}],140:[function(require,module,exports){
+arguments[4][82][0].apply(exports,arguments)
+},{"dup":82}],141:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],142:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * タスク名
+ */
+var TaskName;
+(function (TaskName) {
+    /**
+     * 現金転送取消
+     */
+    TaskName["CancelMoneyTransfer"] = "cancelMoneyTransfer";
+    /**
+     * 現金転送
+     */
+    TaskName["MoneyTransfer"] = "moneyTransfer";
+})(TaskName || (TaskName = {}));
+exports.default = TaskName;
+
+},{}],143:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * タスクステータス
+ */
+var TaskStatus;
+(function (TaskStatus) {
+    /**
+     * 準備OK
+     */
+    TaskStatus["Ready"] = "Ready";
+    /**
+     * 実行中
+     */
+    TaskStatus["Running"] = "Running";
+    /**
+     * 実行済
+     */
+    TaskStatus["Executed"] = "Executed";
+    /**
+     * 実行中止
+     */
+    TaskStatus["Aborted"] = "Aborted";
+})(TaskStatus || (TaskStatus = {}));
+exports.default = TaskStatus;
+
+},{}],144:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],145:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],146:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * 取引ステータス
+ */
+var TransactionStatusType;
+(function (TransactionStatusType) {
+    TransactionStatusType["InProgress"] = "InProgress";
+    TransactionStatusType["Canceled"] = "Canceled";
+    TransactionStatusType["Confirmed"] = "Confirmed";
+    TransactionStatusType["Expired"] = "Expired";
+})(TransactionStatusType || (TransactionStatusType = {}));
+exports.default = TransactionStatusType;
+
+},{}],147:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * 取引タスクエクスポートステータス
+ */
+var TransactionTasksExportationStatus;
+(function (TransactionTasksExportationStatus) {
+    /**
+     * 未エクスポート
+     */
+    TransactionTasksExportationStatus["Unexported"] = "Unexported";
+    /**
+     * エクスポート中
+     */
+    TransactionTasksExportationStatus["Exporting"] = "Exporting";
+    /**
+     * エクスポート済
+     */
+    TransactionTasksExportationStatus["Exported"] = "Exported";
+})(TransactionTasksExportationStatus || (TransactionTasksExportationStatus = {}));
+exports.default = TransactionTasksExportationStatus;
+
+},{}],148:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * 取引タイプ
+ */
+var TransactionType;
+(function (TransactionType) {
+    /**
+     * 出金取引
+     */
+    TransactionType["Withdraw"] = "Withdraw";
+    /**
+     * 入金取引
+     */
+    TransactionType["Deposit"] = "Deposit";
+    /**
+     * 転送取引
+     */
+    TransactionType["Transfer"] = "Transfer";
+})(TransactionType || (TransactionType = {}));
+exports.default = TransactionType;
+
+},{}],149:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],150:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],151:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],152:[function(require,module,exports){
+arguments[4][115][0].apply(exports,arguments)
+},{"dup":115}],153:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * factory
+ */
+var AccountFactory = require("./factory/account");
+var accountStatusType_1 = require("./factory/accountStatusType");
+var MoneyTransferActionFactory = require("./factory/action/transfer/moneyTransfer");
+var SendEmailMessageActionFactory = require("./factory/action/transfer/send/message/email");
+var actionStatusType_1 = require("./factory/actionStatusType");
+var actionType_1 = require("./factory/actionType");
+var ClientUserFactory = require("./factory/clientUser");
+var EmailMessageFactory = require("./factory/creativeWork/message/email");
+var creativeWorkType_1 = require("./factory/creativeWorkType");
+var priceCurrency_1 = require("./factory/priceCurrency");
+var CancelMoneyTransferTaskFactory = require("./factory/task/cancelMoneyTransfer");
+var MoneyTransferTaskFactory = require("./factory/task/moneyTransfer");
+var TaskExecutionResultFactory = require("./factory/taskExecutionResult");
+var taskName_1 = require("./factory/taskName");
+var taskStatus_1 = require("./factory/taskStatus");
+var DepositTransactionFactory = require("./factory/transaction/deposit");
+var TransferTransactionFactory = require("./factory/transaction/transfer");
+var WithdrawTransactionFactory = require("./factory/transaction/withdraw");
+var transactionStatusType_1 = require("./factory/transactionStatusType");
+var transactionTasksExportationStatus_1 = require("./factory/transactionTasksExportationStatus");
+var transactionType_1 = require("./factory/transactionType");
+var URLFactory = require("./factory/url");
+var errorCode_1 = require("./factory/errorCode");
+var errors = require("./factory/errors");
+exports.errors = errors;
+exports.errorCode = errorCode_1.default;
+exports.actionStatusType = actionStatusType_1.default;
+exports.actionType = actionType_1.default;
+var action;
+(function (action) {
+    var transfer;
+    (function (transfer) {
+        transfer.moneyTransfer = MoneyTransferActionFactory;
+        var send;
+        (function (send) {
+            var message;
+            (function (message) {
+                message.email = SendEmailMessageActionFactory;
+            })(message = send.message || (send.message = {}));
+        })(send = transfer.send || (transfer.send = {}));
+    })(transfer = action.transfer || (action.transfer = {}));
+})(action = exports.action || (exports.action = {}));
+exports.account = AccountFactory;
+exports.accountStatusType = accountStatusType_1.default;
+exports.clientUser = ClientUserFactory;
+var creativeWork;
+(function (creativeWork) {
+    var message;
+    (function (message) {
+        message.email = EmailMessageFactory;
+    })(message = creativeWork.message || (creativeWork.message = {}));
+})(creativeWork = exports.creativeWork || (exports.creativeWork = {}));
+exports.creativeWorkType = creativeWorkType_1.default;
+exports.priceCurrency = priceCurrency_1.default;
+var task;
+(function (task) {
+    task.cancelMoneyTransfer = CancelMoneyTransferTaskFactory;
+    task.moneyTransfer = MoneyTransferTaskFactory;
+})(task = exports.task || (exports.task = {}));
+exports.taskExecutionResult = TaskExecutionResultFactory;
+exports.taskName = taskName_1.default;
+exports.taskStatus = taskStatus_1.default;
+var transaction;
+(function (transaction) {
+    transaction.withdraw = WithdrawTransactionFactory;
+    transaction.deposit = DepositTransactionFactory;
+    transaction.transfer = TransferTransactionFactory;
+})(transaction = exports.transaction || (exports.transaction = {}));
+exports.transactionStatusType = transactionStatusType_1.default;
+exports.transactionTasksExportationStatus = transactionTasksExportationStatus_1.default;
+exports.transactionType = transactionType_1.default;
+exports.url = URLFactory;
+
+},{"./factory/account":119,"./factory/accountStatusType":120,"./factory/action/transfer/moneyTransfer":123,"./factory/action/transfer/send/message/email":124,"./factory/actionStatusType":121,"./factory/actionType":122,"./factory/clientUser":125,"./factory/creativeWork/message/email":127,"./factory/creativeWorkType":126,"./factory/errorCode":128,"./factory/errors":139,"./factory/priceCurrency":140,"./factory/task/cancelMoneyTransfer":144,"./factory/task/moneyTransfer":145,"./factory/taskExecutionResult":141,"./factory/taskName":142,"./factory/taskStatus":143,"./factory/transaction/deposit":149,"./factory/transaction/transfer":150,"./factory/transaction/withdraw":151,"./factory/transactionStatusType":146,"./factory/transactionTasksExportationStatus":147,"./factory/transactionType":148,"./factory/url":152}],154:[function(require,module,exports){
 'use strict'
 
 exports.byteLength = byteLength
@@ -27124,7 +27095,7 @@ function fromByteArray (uint8) {
   return parts.join('')
 }
 
-},{}],156:[function(require,module,exports){
+},{}],155:[function(require,module,exports){
 
 /**
  * Expose `Emitter`.
@@ -27289,7 +27260,7 @@ Emitter.prototype.hasListeners = function(event){
   return !! this.listeners(event).length;
 };
 
-},{}],157:[function(require,module,exports){
+},{}],156:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -28050,7 +28021,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS;
 
 }));
-},{}],158:[function(require,module,exports){
+},{}],157:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -28186,7 +28157,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS.enc.Base64;
 
 }));
-},{"./core":157}],159:[function(require,module,exports){
+},{"./core":156}],158:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -28205,7 +28176,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS.enc.Hex;
 
 }));
-},{"./core":157}],160:[function(require,module,exports){
+},{"./core":156}],159:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -28405,7 +28376,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS.SHA256;
 
 }));
-},{"./core":157}],161:[function(require,module,exports){
+},{"./core":156}],160:[function(require,module,exports){
 (function (process){
 /**
  * This is the web browser implementation of `debug()`.
@@ -28604,7 +28575,7 @@ function localstorage() {
 }
 
 }).call(this,require('_process'))
-},{"./debug":162,"_process":174}],162:[function(require,module,exports){
+},{"./debug":161,"_process":173}],161:[function(require,module,exports){
 
 /**
  * This is the common logic for both the Node.js and web browser
@@ -28831,7 +28802,7 @@ function coerce(val) {
   return val;
 }
 
-},{"ms":173}],163:[function(require,module,exports){
+},{"ms":172}],162:[function(require,module,exports){
 // Generated by CoffeeScript 2.3.0
 // # node-http-status
 
@@ -29311,7 +29282,7 @@ module.exports = {
   }
 };
 
-},{}],164:[function(require,module,exports){
+},{}],163:[function(require,module,exports){
 (function (name, context, definition) {
   if (typeof module !== 'undefined' && module.exports) module.exports = definition();
   else if (typeof define === 'function' && define.amd) define(definition);
@@ -29351,7 +29322,7 @@ module.exports = {
 
 });
 
-},{}],165:[function(require,module,exports){
+},{}],164:[function(require,module,exports){
 var base64 = require('base64-js');
 
 function padding(str) {
@@ -29437,7 +29408,7 @@ module.exports = {
   base64ToBase64Url: base64ToBase64Url
 };
 
-},{"base64-js":155}],166:[function(require,module,exports){
+},{"base64-js":154}],165:[function(require,module,exports){
 function DummyCache() {}
 
 DummyCache.prototype.get = function () {
@@ -29453,7 +29424,7 @@ DummyCache.prototype.set = function () {
 
 module.exports = DummyCache;
 
-},{}],167:[function(require,module,exports){
+},{}],166:[function(require,module,exports){
 function ConfigurationError(message) {
   this.name = 'ConfigurationError';
   this.message = (message || '');
@@ -29471,7 +29442,7 @@ module.exports = {
   TokenValidationError: TokenValidationError
 };
 
-},{}],168:[function(require,module,exports){
+},{}],167:[function(require,module,exports){
 var urljoin = require('url-join');
 var base64 = require('./base64');
 var request = require('superagent');
@@ -29517,7 +29488,7 @@ module.exports = {
   getJWKS: getJWKS
 };
 
-},{"./base64":165,"superagent":182,"url-join":164}],169:[function(require,module,exports){
+},{"./base64":164,"superagent":181,"url-join":163}],168:[function(require,module,exports){
 /*
 Based on the work of Tom Wu
 http://www-cs-students.stanford.edu/~tjw/jsbn/
@@ -29596,7 +29567,7 @@ RSAVerifier.prototype.verify = function (msg, encsig) {
 
 module.exports = RSAVerifier;
 
-},{"crypto-js/sha256":160,"jsbn":172}],170:[function(require,module,exports){
+},{"crypto-js/sha256":159,"jsbn":171}],169:[function(require,module,exports){
 var sha256 = require('crypto-js/sha256');
 var cryptoBase64 = require('crypto-js/enc-base64');
 var cryptoHex = require('crypto-js/enc-hex');
@@ -29889,7 +29860,7 @@ IdTokenVerifier.prototype.validateAccessToken = function (accessToken, alg, atHa
 
 module.exports = IdTokenVerifier;
 
-},{"./helpers/base64":165,"./helpers/dummy-cache":166,"./helpers/error":167,"./helpers/jwks":168,"./helpers/rsa-verifier":169,"crypto-js/enc-base64":158,"crypto-js/enc-hex":159,"crypto-js/sha256":160}],171:[function(require,module,exports){
+},{"./helpers/base64":164,"./helpers/dummy-cache":165,"./helpers/error":166,"./helpers/jwks":167,"./helpers/rsa-verifier":168,"crypto-js/enc-base64":157,"crypto-js/enc-hex":158,"crypto-js/sha256":159}],170:[function(require,module,exports){
 // the whatwg-fetch polyfill installs the fetch() function
 // on the global object (window or self)
 //
@@ -29897,7 +29868,7 @@ module.exports = IdTokenVerifier;
 require('whatwg-fetch');
 module.exports = self.fetch.bind(self);
 
-},{"whatwg-fetch":187}],172:[function(require,module,exports){
+},{"whatwg-fetch":186}],171:[function(require,module,exports){
 (function(){
 
     // Copyright (c) 2005  Tom Wu
@@ -31256,7 +31227,7 @@ module.exports = self.fetch.bind(self);
 
 }).call(this);
 
-},{}],173:[function(require,module,exports){
+},{}],172:[function(require,module,exports){
 /**
  * Helpers.
  */
@@ -31410,7 +31381,7 @@ function plural(ms, n, name) {
   return Math.ceil(ms / n) + ' ' + name + 's';
 }
 
-},{}],174:[function(require,module,exports){
+},{}],173:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -31596,7 +31567,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],175:[function(require,module,exports){
+},{}],174:[function(require,module,exports){
 'use strict';
 
 var replace = String.prototype.replace;
@@ -31616,7 +31587,7 @@ module.exports = {
     RFC3986: 'RFC3986'
 };
 
-},{}],176:[function(require,module,exports){
+},{}],175:[function(require,module,exports){
 'use strict';
 
 var stringify = require('./stringify');
@@ -31629,7 +31600,7 @@ module.exports = {
     stringify: stringify
 };
 
-},{"./formats":175,"./parse":177,"./stringify":178}],177:[function(require,module,exports){
+},{"./formats":174,"./parse":176,"./stringify":177}],176:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -31805,7 +31776,7 @@ module.exports = function (str, opts) {
     return utils.compact(obj);
 };
 
-},{"./utils":179}],178:[function(require,module,exports){
+},{"./utils":178}],177:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -32017,7 +31988,7 @@ module.exports = function (object, opts) {
     return joined.length > 0 ? prefix + joined : '';
 };
 
-},{"./formats":175,"./utils":179}],179:[function(require,module,exports){
+},{"./formats":174,"./utils":178}],178:[function(require,module,exports){
 'use strict';
 
 var has = Object.prototype.hasOwnProperty;
@@ -32232,7 +32203,7 @@ module.exports = {
     merge: merge
 };
 
-},{}],180:[function(require,module,exports){
+},{}],179:[function(require,module,exports){
 module.exports = Object.setPrototypeOf || ({__proto__:[]} instanceof Array ? setProtoOf : mixinProperties);
 
 function setProtoOf(obj, proto) {
@@ -32249,7 +32220,7 @@ function mixinProperties(obj, proto) {
 	return obj;
 }
 
-},{}],181:[function(require,module,exports){
+},{}],180:[function(require,module,exports){
 function Agent() {
   this._defaults = [];
 }
@@ -32271,7 +32242,7 @@ Agent.prototype._setDefaults = function(req) {
 
 module.exports = Agent;
 
-},{}],182:[function(require,module,exports){
+},{}],181:[function(require,module,exports){
 /**
  * Root reference for iframes.
  */
@@ -33193,7 +33164,7 @@ request.put = function(url, data, fn) {
   return req;
 };
 
-},{"./agent-base":181,"./is-object":183,"./request-base":184,"./response-base":185,"component-emitter":156}],183:[function(require,module,exports){
+},{"./agent-base":180,"./is-object":182,"./request-base":183,"./response-base":184,"component-emitter":155}],182:[function(require,module,exports){
 'use strict';
 
 /**
@@ -33210,7 +33181,7 @@ function isObject(obj) {
 
 module.exports = isObject;
 
-},{}],184:[function(require,module,exports){
+},{}],183:[function(require,module,exports){
 'use strict';
 
 /**
@@ -33906,7 +33877,7 @@ RequestBase.prototype._setTimeouts = function() {
   }
 };
 
-},{"./is-object":183}],185:[function(require,module,exports){
+},{"./is-object":182}],184:[function(require,module,exports){
 'use strict';
 
 /**
@@ -34044,7 +34015,7 @@ ResponseBase.prototype._setStatusProperties = function(status){
     this.unprocessableEntity = 422 == status;
 };
 
-},{"./utils":186}],186:[function(require,module,exports){
+},{"./utils":185}],185:[function(require,module,exports){
 'use strict';
 
 /**
@@ -34117,7 +34088,7 @@ exports.cleanHeader = function(header, changesOrigin){
   return header;
 };
 
-},{}],187:[function(require,module,exports){
+},{}],186:[function(require,module,exports){
 (function(self) {
   'use strict';
 
