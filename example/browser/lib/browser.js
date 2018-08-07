@@ -104,7 +104,7 @@ var IframeHandler = /** @class */ (function () {
 }());
 exports.default = IframeHandler;
 
-},{"debug":160}],4:[function(require,module,exports){
+},{"debug":161}],4:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -448,7 +448,7 @@ var ImplicitGrantClient = /** @class */ (function (_super) {
 }(oAuth2client_1.default));
 exports.ImplicitGrantClient = ImplicitGrantClient;
 
-},{"./error":2,"./oAuth2client":5,"./popupAuthenticationHandler":6,"./silentAuthenticationHandler":8,"./silentLogoutHandler":9,"debug":160,"idtoken-verifier":169,"qs":175}],5:[function(require,module,exports){
+},{"./error":2,"./oAuth2client":5,"./popupAuthenticationHandler":6,"./silentAuthenticationHandler":8,"./silentLogoutHandler":9,"debug":161,"idtoken-verifier":170,"qs":176}],5:[function(require,module,exports){
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -640,7 +640,7 @@ var OAuth2client = /** @class */ (function () {
 }());
 exports.default = OAuth2client;
 
-},{"@motionpicture/sskts-api-abstract-client":12,"debug":160,"http-status":162,"isomorphic-fetch":170}],6:[function(require,module,exports){
+},{"@motionpicture/sskts-api-abstract-client":12,"debug":161,"http-status":163,"isomorphic-fetch":171}],6:[function(require,module,exports){
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -824,7 +824,7 @@ var PopupHandler = /** @class */ (function () {
 }());
 exports.default = PopupHandler;
 
-},{"debug":160}],8:[function(require,module,exports){
+},{"debug":161}],8:[function(require,module,exports){
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -1142,7 +1142,7 @@ var StubAuthClient = /** @class */ (function () {
 }());
 exports.StubAuthClient = StubAuthClient;
 
-},{"../transporters":24}],12:[function(require,module,exports){
+},{"../transporters":25}],12:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1167,6 +1167,7 @@ var action_1 = require("./service/action");
 var event_1 = require("./service/event");
 var order_1 = require("./service/order");
 var organization_1 = require("./service/organization");
+var ownershipInfo_1 = require("./service/ownershipInfo");
 var person_1 = require("./service/person");
 var place_1 = require("./service/place");
 var programMembership_1 = require("./service/programMembership");
@@ -1246,6 +1247,17 @@ var service;
     }(organization_1.OrganizationService));
     service.Organization = Organization;
     /**
+     * 所有権サービス
+     */
+    var OwnershipInfo = /** @class */ (function (_super) {
+        __extends(OwnershipInfo, _super);
+        function OwnershipInfo() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return OwnershipInfo;
+    }(ownershipInfo_1.OwnershipInfoService));
+    service.OwnershipInfo = OwnershipInfo;
+    /**
      * ユーザーサービス
      */
     var Person = /** @class */ (function (_super) {
@@ -1305,7 +1317,7 @@ var service;
     })(transaction = service.transaction || (service.transaction = {}));
 })(service = exports.service || (exports.service = {}));
 
-},{"./auth/authClient":11,"./service/account":14,"./service/action":15,"./service/event":16,"./service/order":17,"./service/organization":18,"./service/person":19,"./service/place":20,"./service/programMembership":21,"./service/transaction/placeOrder":22,"./service/transaction/returnOrder":23,"./transporters":24,"@motionpicture/sskts-factory":116}],13:[function(require,module,exports){
+},{"./auth/authClient":11,"./service/account":14,"./service/action":15,"./service/event":16,"./service/order":17,"./service/organization":18,"./service/ownershipInfo":19,"./service/person":20,"./service/place":21,"./service/programMembership":22,"./service/transaction/placeOrder":23,"./service/transaction/returnOrder":24,"./transporters":25,"@motionpicture/sskts-factory":117}],13:[function(require,module,exports){
 "use strict";
 var __assign = (this && this.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -1403,7 +1415,7 @@ var Service = /** @class */ (function () {
 }());
 exports.Service = Service;
 
-},{"./transporters":24,"qs":175}],14:[function(require,module,exports){
+},{"./transporters":25,"qs":176}],14:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1481,7 +1493,7 @@ var AccountService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.AccountService = AccountService;
 
-},{"../service":13,"http-status":162}],15:[function(require,module,exports){
+},{"../service":13,"http-status":163}],15:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1581,7 +1593,7 @@ var ActionService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.ActionService = ActionService;
 
-},{"../service":13,"http-status":162}],16:[function(require,module,exports){
+},{"../service":13,"http-status":163}],16:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1676,7 +1688,7 @@ var EventService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.EventService = EventService;
 
-},{"../service":13,"http-status":162}],17:[function(require,module,exports){
+},{"../service":13,"http-status":163}],17:[function(require,module,exports){
 "use strict";
 /**
  * 注文サービス
@@ -1777,7 +1789,7 @@ var OrderService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.OrderService = OrderService;
 
-},{"../service":13,"http-status":162}],18:[function(require,module,exports){
+},{"../service":13,"http-status":163}],18:[function(require,module,exports){
 "use strict";
 /**
  * 組織サービス
@@ -1878,7 +1890,94 @@ var OrganizationService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.OrganizationService = OrganizationService;
 
-},{"../service":13,"http-status":162}],19:[function(require,module,exports){
+},{"../service":13,"http-status":163}],19:[function(require,module,exports){
+"use strict";
+/**
+ * 所有権サービス
+ *
+ * @namespace service.ownershipInfo
+ */
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../service");
+/**
+ * organization service
+ */
+var OwnershipInfoService = /** @class */ (function (_super) {
+    __extends(OwnershipInfoService, _super);
+    function OwnershipInfoService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * 登録日と劇場で会員数をカウント
+     */
+    OwnershipInfoService.prototype.countByRegisterDateAndTheater = function (
+    /**
+     * 検索条件
+     * fromDateとtoDateの時間を注意して
+     */
+    params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/ownershipInfos/countByRegisterDateAndTheater',
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })];
+            });
+        });
+    };
+    return OwnershipInfoService;
+}(service_1.Service));
+exports.OwnershipInfoService = OwnershipInfoService;
+
+},{"../service":13,"http-status":163}],20:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -2134,7 +2233,7 @@ var PersonService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PersonService = PersonService;
 
-},{"../service":13,"http-status":162}],20:[function(require,module,exports){
+},{"../service":13,"http-status":163}],21:[function(require,module,exports){
 "use strict";
 /**
  * 場所サービス
@@ -2235,7 +2334,7 @@ var PlaceService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PlaceService = PlaceService;
 
-},{"../service":13,"http-status":162}],21:[function(require,module,exports){
+},{"../service":13,"http-status":163}],22:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -2316,7 +2415,7 @@ var ProgramMembershipService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.ProgramMembershipService = ProgramMembershipService;
 
-},{"../service":13,"http-status":162}],22:[function(require,module,exports){
+},{"../service":13,"http-status":163}],23:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -2652,7 +2751,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PlaceOrderTransactionService = PlaceOrderTransactionService;
 
-},{"../../service":13,"http-status":162}],23:[function(require,module,exports){
+},{"../../service":13,"http-status":163}],24:[function(require,module,exports){
 "use strict";
 /**
  * 注文返品取引サービス
@@ -2752,7 +2851,7 @@ var ReturnOrderTransactionService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.ReturnOrderTransactionService = ReturnOrderTransactionService;
 
-},{"../../service":13,"http-status":162}],24:[function(require,module,exports){
+},{"../../service":13,"http-status":163}],25:[function(require,module,exports){
 "use strict";
 // tslint:disable:max-classes-per-file
 var __extends = (this && this.__extends) || (function () {
@@ -3018,7 +3117,7 @@ exports.DefaultTransporter = DefaultTransporter;
 //     }
 // }
 
-},{"debug":160,"http-status":162,"isomorphic-fetch":170}],25:[function(require,module,exports){
+},{"debug":161,"http-status":163,"isomorphic-fetch":171}],26:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -3031,7 +3130,79 @@ var AccountType;
 })(AccountType || (AccountType = {}));
 exports.default = AccountType;
 
-},{}],26:[function(require,module,exports){
+},{}],27:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var ObjectType;
+(function (ObjectType) {
+    ObjectType["PecorinoAward"] = "PecorinoAward";
+})(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
+
+},{}],28:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var ObjectType;
+(function (ObjectType) {
+    ObjectType["Mvtk"] = "Mvtk";
+})(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
+
+},{}],29:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+
+},{}],30:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var ObjectType;
+(function (ObjectType) {
+    ObjectType["SeatReservation"] = "SeatReservation";
+})(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
+
+},{}],31:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var ObjectType;
+(function (ObjectType) {
+    ObjectType["CreditCard"] = "CreditCard";
+})(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
+
+},{}],32:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var ObjectType;
+(function (ObjectType) {
+    ObjectType["PecorinoPayment"] = "PecorinoPayment";
+})(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
+
+},{}],33:[function(require,module,exports){
+arguments[4][28][0].apply(exports,arguments)
+},{"dup":28}],34:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],35:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],36:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],37:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],38:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],39:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var pecorino_1 = require("../../../action/authorize/award/pecorino");
+exports.ObjectType = pecorino_1.ObjectType;
+
+},{"../../../action/authorize/award/pecorino":27}],40:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],41:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],42:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],43:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],44:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],45:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -3047,7 +3218,7 @@ var ActionStatusType;
 })(ActionStatusType || (ActionStatusType = {}));
 exports.default = ActionStatusType;
 
-},{}],27:[function(require,module,exports){
+},{}],46:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -3071,79 +3242,7 @@ var ActionType;
 })(ActionType || (ActionType = {}));
 exports.default = ActionType;
 
-},{}],28:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var ObjectType;
-(function (ObjectType) {
-    ObjectType["PecorinoAward"] = "PecorinoAward";
-})(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
-
-},{}],29:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var ObjectType;
-(function (ObjectType) {
-    ObjectType["Mvtk"] = "Mvtk";
-})(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
-
-},{}],30:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-
-},{}],31:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var ObjectType;
-(function (ObjectType) {
-    ObjectType["SeatReservation"] = "SeatReservation";
-})(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
-
-},{}],32:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var ObjectType;
-(function (ObjectType) {
-    ObjectType["CreditCard"] = "CreditCard";
-})(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
-
-},{}],33:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var ObjectType;
-(function (ObjectType) {
-    ObjectType["PecorinoPayment"] = "PecorinoPayment";
-})(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
-
-},{}],34:[function(require,module,exports){
-arguments[4][29][0].apply(exports,arguments)
-},{"dup":29}],35:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],36:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],37:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],38:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],39:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],40:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var pecorino_1 = require("../../../action/authorize/award/pecorino");
-exports.ObjectType = pecorino_1.ObjectType;
-
-},{"../../../action/authorize/award/pecorino":28}],41:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],42:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],43:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],44:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],45:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],46:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
 "use strict";
 /**
  * アプリケーションクライアントイベントファクトリー
@@ -3153,7 +3252,7 @@ arguments[4][30][0].apply(exports,arguments)
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
-},{}],47:[function(require,module,exports){
+},{}],48:[function(require,module,exports){
 "use strict";
 /**
  * アプリケーションクライアントユーザーファクトリー
@@ -3161,22 +3260,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
-},{}],48:[function(require,module,exports){
-"use strict";
-/**
- * 作品タイプ
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-var CreativeWorkType;
-(function (CreativeWorkType) {
-    CreativeWorkType["EmailMessage"] = "EmailMessage";
-    CreativeWorkType["Movie"] = "Movie";
-})(CreativeWorkType || (CreativeWorkType = {}));
-exports.default = CreativeWorkType;
-
 },{}],49:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],50:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],50:[function(require,module,exports){
 "use strict";
 /**
  * 映画作品ファクトリー
@@ -3202,25 +3288,18 @@ function createFromCOA(filmFromCOA) {
 }
 exports.createFromCOA = createFromCOA;
 
-},{"../creativeWorkType":48,"moment":118}],51:[function(require,module,exports){
+},{"../creativeWorkType":51,"moment":119}],51:[function(require,module,exports){
 "use strict";
 /**
- * エラーコード
+ * 作品タイプ
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-var ErrorCode;
-(function (ErrorCode) {
-    ErrorCode["AlreadyInUse"] = "AlreadyInUse";
-    ErrorCode["Argument"] = "Argument";
-    ErrorCode["ArgumentNull"] = "ArgumentNull";
-    ErrorCode["Forbidden"] = "Forbidden";
-    ErrorCode["NotFound"] = "NotFound";
-    ErrorCode["NotImplemented"] = "NotImplemented";
-    ErrorCode["RateLimitExceeded"] = "RateLimitExceeded";
-    ErrorCode["ServiceUnavailable"] = "ServiceUnavailable";
-    ErrorCode["Unauthorized"] = "Unauthorized";
-})(ErrorCode || (ErrorCode = {}));
-exports.default = ErrorCode;
+var CreativeWorkType;
+(function (CreativeWorkType) {
+    CreativeWorkType["EmailMessage"] = "EmailMessage";
+    CreativeWorkType["Movie"] = "Movie";
+})(CreativeWorkType || (CreativeWorkType = {}));
+exports.default = CreativeWorkType;
 
 },{}],52:[function(require,module,exports){
 "use strict";
@@ -3262,7 +3341,7 @@ var AlreadyInUseError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = AlreadyInUseError;
 
-},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],53:[function(require,module,exports){
+},{"../errorCode":62,"./sskts":60,"setprototypeof":180}],53:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -3301,7 +3380,7 @@ var ArgumentError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = ArgumentError;
 
-},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],54:[function(require,module,exports){
+},{"../errorCode":62,"./sskts":60,"setprototypeof":180}],54:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -3340,7 +3419,7 @@ var ArgumentNullError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = ArgumentNullError;
 
-},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],55:[function(require,module,exports){
+},{"../errorCode":62,"./sskts":60,"setprototypeof":180}],55:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -3378,7 +3457,7 @@ var ForbiddenError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = ForbiddenError;
 
-},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],56:[function(require,module,exports){
+},{"../errorCode":62,"./sskts":60,"setprototypeof":180}],56:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -3417,7 +3496,7 @@ var NotFoundError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = NotFoundError;
 
-},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],57:[function(require,module,exports){
+},{"../errorCode":62,"./sskts":60,"setprototypeof":180}],57:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -3455,7 +3534,7 @@ var NotImplementedError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = NotImplementedError;
 
-},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],58:[function(require,module,exports){
+},{"../errorCode":62,"./sskts":60,"setprototypeof":180}],58:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -3493,7 +3572,7 @@ var RateLimitExceededError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = RateLimitExceededError;
 
-},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],59:[function(require,module,exports){
+},{"../errorCode":62,"./sskts":60,"setprototypeof":180}],59:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -3531,7 +3610,7 @@ var ServiceUnavailableError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = ServiceUnavailableError;
 
-},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],60:[function(require,module,exports){
+},{"../errorCode":62,"./sskts":60,"setprototypeof":180}],60:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -3600,7 +3679,27 @@ var UnauthorizedError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = UnauthorizedError;
 
-},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],62:[function(require,module,exports){
+},{"../errorCode":62,"./sskts":60,"setprototypeof":180}],62:[function(require,module,exports){
+"use strict";
+/**
+ * エラーコード
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var ErrorCode;
+(function (ErrorCode) {
+    ErrorCode["AlreadyInUse"] = "AlreadyInUse";
+    ErrorCode["Argument"] = "Argument";
+    ErrorCode["ArgumentNull"] = "ArgumentNull";
+    ErrorCode["Forbidden"] = "Forbidden";
+    ErrorCode["NotFound"] = "NotFound";
+    ErrorCode["NotImplemented"] = "NotImplemented";
+    ErrorCode["RateLimitExceeded"] = "RateLimitExceeded";
+    ErrorCode["ServiceUnavailable"] = "ServiceUnavailable";
+    ErrorCode["Unauthorized"] = "Unauthorized";
+})(ErrorCode || (ErrorCode = {}));
+exports.default = ErrorCode;
+
+},{}],63:[function(require,module,exports){
 "use strict";
 /**
  * errors
@@ -3628,7 +3727,7 @@ exports.SSKTS = sskts_1.SSKTSError;
 var unauthorized_1 = require("./error/unauthorized");
 exports.Unauthorized = unauthorized_1.default;
 
-},{"./error/alreadyInUse":52,"./error/argument":53,"./error/argumentNull":54,"./error/forbidden":55,"./error/notFound":56,"./error/notImplemented":57,"./error/rateLimitExceeded":58,"./error/serviceUnavailable":59,"./error/sskts":60,"./error/unauthorized":61}],63:[function(require,module,exports){
+},{"./error/alreadyInUse":52,"./error/argument":53,"./error/argumentNull":54,"./error/forbidden":55,"./error/notFound":56,"./error/notImplemented":57,"./error/rateLimitExceeded":58,"./error/serviceUnavailable":59,"./error/sskts":60,"./error/unauthorized":61}],64:[function(require,module,exports){
 "use strict";
 /**
  * イベントファクトリー
@@ -3658,35 +3757,7 @@ function create(params) {
 }
 exports.create = create;
 
-},{}],64:[function(require,module,exports){
-"use strict";
-/**
- * イベントステータス
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-var EventStatusType;
-(function (EventStatusType) {
-    EventStatusType["EventCancelled"] = "EventCancelled";
-    EventStatusType["EventPostponed"] = "EventPostponed";
-    EventStatusType["EventRescheduled"] = "EventRescheduled";
-    EventStatusType["EventScheduled"] = "EventScheduled";
-})(EventStatusType || (EventStatusType = {}));
-exports.default = EventStatusType;
-
 },{}],65:[function(require,module,exports){
-"use strict";
-/**
- * イベントタイプ
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-var EventType;
-(function (EventType) {
-    EventType["ScreeningEvent"] = "ScreeningEvent";
-    EventType["IndividualScreeningEvent"] = "IndividualScreeningEvent";
-})(EventType || (EventType = {}));
-exports.default = EventType;
-
-},{}],66:[function(require,module,exports){
 "use strict";
 /**
  * individual screening event factory
@@ -3802,7 +3873,7 @@ function createIdentifierFromCOA(params) {
 }
 exports.createIdentifierFromCOA = createIdentifierFromCOA;
 
-},{"../error/argument":53,"../event":63,"../event/screeningEvent":67,"../eventStatusType":64,"../eventType":65,"lodash":117,"moment":118}],67:[function(require,module,exports){
+},{"../error/argument":53,"../event":64,"../event/screeningEvent":66,"../eventStatusType":67,"../eventType":68,"lodash":118,"moment":119}],66:[function(require,module,exports){
 "use strict";
 /**
  * screen event factory
@@ -3891,7 +3962,35 @@ function createIdentifier(params) {
 }
 exports.createIdentifier = createIdentifier;
 
-},{"../creativeWorkType":48,"../eventStatusType":64,"../eventType":65,"../organizationType":72,"moment":118}],68:[function(require,module,exports){
+},{"../creativeWorkType":51,"../eventStatusType":67,"../eventType":68,"../organizationType":75,"moment":119}],67:[function(require,module,exports){
+"use strict";
+/**
+ * イベントステータス
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var EventStatusType;
+(function (EventStatusType) {
+    EventStatusType["EventCancelled"] = "EventCancelled";
+    EventStatusType["EventPostponed"] = "EventPostponed";
+    EventStatusType["EventRescheduled"] = "EventRescheduled";
+    EventStatusType["EventScheduled"] = "EventScheduled";
+})(EventStatusType || (EventStatusType = {}));
+exports.default = EventStatusType;
+
+},{}],68:[function(require,module,exports){
+"use strict";
+/**
+ * イベントタイプ
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var EventType;
+(function (EventType) {
+    EventType["ScreeningEvent"] = "ScreeningEvent";
+    EventType["IndividualScreeningEvent"] = "IndividualScreeningEvent";
+})(EventType || (EventType = {}));
+exports.default = EventType;
+
+},{}],69:[function(require,module,exports){
 "use strict";
 /**
  * 座席予約供給情報ファクトリー
@@ -3899,7 +3998,7 @@ exports.createIdentifier = createIdentifier;
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
-},{}],69:[function(require,module,exports){
+},{}],70:[function(require,module,exports){
 "use strict";
 /**
  * 注文ファクトリー
@@ -3907,7 +4006,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
-},{}],70:[function(require,module,exports){
+},{}],71:[function(require,module,exports){
 "use strict";
 /**
  * 注文ステータス
@@ -3926,7 +4025,11 @@ var OrderStatus;
 })(OrderStatus || (OrderStatus = {}));
 exports.default = OrderStatus;
 
-},{}],71:[function(require,module,exports){
+},{}],72:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],73:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],74:[function(require,module,exports){
 "use strict";
 /**
  * 企業識別子
@@ -3938,7 +4041,7 @@ var CorporationOrganizationIdentifier;
 })(CorporationOrganizationIdentifier || (CorporationOrganizationIdentifier = {}));
 exports.default = CorporationOrganizationIdentifier;
 
-},{}],72:[function(require,module,exports){
+},{}],75:[function(require,module,exports){
 "use strict";
 /**
  * 組織タイプ
@@ -3951,13 +4054,11 @@ var OrganizationType;
 })(OrganizationType || (OrganizationType = {}));
 exports.default = OrganizationType;
 
-},{}],73:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],74:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],75:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],76:[function(require,module,exports){
+},{}],76:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],77:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],78:[function(require,module,exports){
 "use strict";
 /**
  * 決済方法タイプ
@@ -3970,11 +4071,9 @@ var PaymentMethodType;
 })(PaymentMethodType || (PaymentMethodType = {}));
 exports.default = PaymentMethodType;
 
-},{}],77:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],78:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],79:[function(require,module,exports){
+},{}],79:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],80:[function(require,module,exports){
 "use strict";
 /**
  * 人物タイプ
@@ -3985,21 +4084,6 @@ var PersonType;
     PersonType["Person"] = "Person";
 })(PersonType || (PersonType = {}));
 exports.default = PersonType;
-
-},{}],80:[function(require,module,exports){
-"use strict";
-/**
- * 場所タイプ
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-var PlaceType;
-(function (PlaceType) {
-    PlaceType["MovieTheater"] = "MovieTheater";
-    PlaceType["ScreeningRoom"] = "ScreeningRoom";
-    PlaceType["ScreeningRoomSection"] = "ScreeningRoomSection";
-    PlaceType["Seat"] = "Seat";
-})(PlaceType || (PlaceType = {}));
-exports.default = PlaceType;
 
 },{}],81:[function(require,module,exports){
 "use strict";
@@ -4075,7 +4159,22 @@ function createScreeningRoomFromCOA(screenFromCOA) {
 }
 exports.createScreeningRoomFromCOA = createScreeningRoomFromCOA;
 
-},{"../placeType":80}],82:[function(require,module,exports){
+},{"../placeType":82}],82:[function(require,module,exports){
+"use strict";
+/**
+ * 場所タイプ
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var PlaceType;
+(function (PlaceType) {
+    PlaceType["MovieTheater"] = "MovieTheater";
+    PlaceType["ScreeningRoom"] = "ScreeningRoom";
+    PlaceType["ScreeningRoomSection"] = "ScreeningRoomSection";
+    PlaceType["Seat"] = "Seat";
+})(PlaceType || (PlaceType = {}));
+exports.default = PlaceType;
+
+},{}],83:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -4089,7 +4188,7 @@ var PriceCurrency;
 })(PriceCurrency || (PriceCurrency = {}));
 exports.default = PriceCurrency;
 
-},{}],83:[function(require,module,exports){
+},{}],84:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -4103,9 +4202,11 @@ var Award;
     Award["PecorinoPayment"] = "PecorinoPayment";
 })(Award = exports.Award || (exports.Award = {}));
 
-},{}],84:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],85:[function(require,module,exports){
+},{}],85:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],86:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],87:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -4132,7 +4233,7 @@ var ReservationStatusType;
 })(ReservationStatusType || (ReservationStatusType = {}));
 exports.default = ReservationStatusType;
 
-},{}],86:[function(require,module,exports){
+},{}],88:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -4144,11 +4245,45 @@ var ReservationType;
 })(ReservationType || (ReservationType = {}));
 exports.default = ReservationType;
 
-},{}],87:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],88:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],89:[function(require,module,exports){
+},{}],89:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],90:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],91:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],92:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],93:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],94:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],95:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],96:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],97:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],98:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],99:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],100:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],101:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],102:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],103:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],104:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],105:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],106:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],107:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],108:[function(require,module,exports){
 "use strict";
 /**
  * task name
@@ -4232,7 +4367,7 @@ var TaskName;
 })(TaskName || (TaskName = {}));
 exports.default = TaskName;
 
-},{}],90:[function(require,module,exports){
+},{}],109:[function(require,module,exports){
 "use strict";
 /**
  * タスクステータス
@@ -4259,43 +4394,27 @@ var TaskStatus;
 })(TaskStatus || (TaskStatus = {}));
 exports.default = TaskStatus;
 
-},{}],91:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],92:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],93:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],94:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],95:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],96:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],97:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],98:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],99:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],100:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],101:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],102:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],103:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],104:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],105:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],106:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],107:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],108:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],109:[function(require,module,exports){
+},{}],110:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],111:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * 返品理由
+ */
+var Reason;
+(function (Reason) {
+    /**
+     * 購入者自身の都合での返品
+     */
+    Reason["Customer"] = "Customer";
+    /**
+     * 販売者都合での返品
+     */
+    Reason["Seller"] = "Seller";
+})(Reason = exports.Reason || (exports.Reason = {}));
+
+},{}],112:[function(require,module,exports){
 "use strict";
 /**
  * 取引ステータス
@@ -4310,7 +4429,7 @@ var TransactionStatusType;
 })(TransactionStatusType || (TransactionStatusType = {}));
 exports.default = TransactionStatusType;
 
-},{}],110:[function(require,module,exports){
+},{}],113:[function(require,module,exports){
 "use strict";
 /**
  * 取引タスクエクスポートステータス
@@ -4333,7 +4452,7 @@ var TransactionTasksExportationStatus;
 })(TransactionTasksExportationStatus || (TransactionTasksExportationStatus = {}));
 exports.default = TransactionTasksExportationStatus;
 
-},{}],111:[function(require,module,exports){
+},{}],114:[function(require,module,exports){
 "use strict";
 /**
  * 取引タイプ
@@ -4352,27 +4471,7 @@ var TransactionType;
 })(TransactionType || (TransactionType = {}));
 exports.default = TransactionType;
 
-},{}],112:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],113:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * 返品理由
- */
-var Reason;
-(function (Reason) {
-    /**
-     * 購入者自身の都合での返品
-     */
-    Reason["Customer"] = "Customer";
-    /**
-     * 販売者都合での返品
-     */
-    Reason["Seller"] = "Seller";
-})(Reason = exports.Reason || (exports.Reason = {}));
-
-},{}],114:[function(require,module,exports){
+},{}],115:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -4386,14 +4485,14 @@ var UnitCode;
     UnitCode["Sec"] = "SEC";
 })(UnitCode = exports.UnitCode || (exports.UnitCode = {}));
 
-},{}],115:[function(require,module,exports){
+},{}],116:[function(require,module,exports){
 "use strict";
 /**
  * URLファクトリー
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
-},{}],116:[function(require,module,exports){
+},{}],117:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -4668,7 +4767,7 @@ exports.transactionType = transactionType_1.default;
 exports.unitCode = unitCode_1.UnitCode;
 exports.url = URLFactory;
 
-},{"./factory/accountType":25,"./factory/action/authorize/award/pecorino":28,"./factory/action/authorize/discount/mvtk":29,"./factory/action/authorize/offer/programMembership":30,"./factory/action/authorize/offer/seatReservation":31,"./factory/action/authorize/paymentMethod/creditCard":32,"./factory/action/authorize/paymentMethod/pecorino":33,"./factory/action/consume/use/mvtk":34,"./factory/action/interact/register/programMembership":35,"./factory/action/interact/unRegister/programMembership":36,"./factory/action/trade/order":37,"./factory/action/trade/pay":38,"./factory/action/trade/refund":39,"./factory/action/transfer/give/pecorinoAward":40,"./factory/action/transfer/print/ticket":41,"./factory/action/transfer/return/order":42,"./factory/action/transfer/return/pecorinoAward":43,"./factory/action/transfer/send/message/email":44,"./factory/action/transfer/send/order":45,"./factory/actionStatusType":26,"./factory/actionType":27,"./factory/clientEvent":46,"./factory/clientUser":47,"./factory/creativeWork/message/email":49,"./factory/creativeWork/movie":50,"./factory/creativeWorkType":48,"./factory/errorCode":51,"./factory/errors":62,"./factory/event/individualScreeningEvent":66,"./factory/event/screeningEvent":67,"./factory/eventStatusType":64,"./factory/eventType":65,"./factory/offer/seatReservation":68,"./factory/order":69,"./factory/orderStatus":70,"./factory/organization/corporation":73,"./factory/organization/movieTheater":74,"./factory/organizationIdentifier/corporation":71,"./factory/organizationType":72,"./factory/ownershipInfo":75,"./factory/paymentMethod/paymentCard/creditCard":77,"./factory/paymentMethodType":76,"./factory/person":78,"./factory/personType":79,"./factory/place/movieTheater":81,"./factory/placeType":80,"./factory/priceCurrency":82,"./factory/programMembership":83,"./factory/quantitativeValue":84,"./factory/reservation/event":87,"./factory/reservationStatusType":85,"./factory/reservationType":86,"./factory/task/cancelCreditCard":91,"./factory/task/cancelMvtk":92,"./factory/task/cancelPecorino":93,"./factory/task/cancelPecorinoAward":94,"./factory/task/cancelSeatReservation":95,"./factory/task/givePecorinoAward":96,"./factory/task/payCreditCard":97,"./factory/task/payPecorino":98,"./factory/task/placeOrder":99,"./factory/task/refundCreditCard":100,"./factory/task/refundPecorino":101,"./factory/task/registerProgramMembership":102,"./factory/task/returnOrder":103,"./factory/task/returnPecorinoAward":104,"./factory/task/sendEmailMessage":105,"./factory/task/sendOrder":106,"./factory/task/unRegisterProgramMembership":107,"./factory/task/useMvtk":108,"./factory/taskExecutionResult":88,"./factory/taskName":89,"./factory/taskStatus":90,"./factory/transaction/placeOrder":112,"./factory/transaction/returnOrder":113,"./factory/transactionStatusType":109,"./factory/transactionTasksExportationStatus":110,"./factory/transactionType":111,"./factory/unitCode":114,"./factory/url":115,"@pecorino/factory":153}],117:[function(require,module,exports){
+},{"./factory/accountType":26,"./factory/action/authorize/award/pecorino":27,"./factory/action/authorize/discount/mvtk":28,"./factory/action/authorize/offer/programMembership":29,"./factory/action/authorize/offer/seatReservation":30,"./factory/action/authorize/paymentMethod/creditCard":31,"./factory/action/authorize/paymentMethod/pecorino":32,"./factory/action/consume/use/mvtk":33,"./factory/action/interact/register/programMembership":34,"./factory/action/interact/unRegister/programMembership":35,"./factory/action/trade/order":36,"./factory/action/trade/pay":37,"./factory/action/trade/refund":38,"./factory/action/transfer/give/pecorinoAward":39,"./factory/action/transfer/print/ticket":40,"./factory/action/transfer/return/order":41,"./factory/action/transfer/return/pecorinoAward":42,"./factory/action/transfer/send/message/email":43,"./factory/action/transfer/send/order":44,"./factory/actionStatusType":45,"./factory/actionType":46,"./factory/clientEvent":47,"./factory/clientUser":48,"./factory/creativeWork/message/email":49,"./factory/creativeWork/movie":50,"./factory/creativeWorkType":51,"./factory/errorCode":62,"./factory/errors":63,"./factory/event/individualScreeningEvent":65,"./factory/event/screeningEvent":66,"./factory/eventStatusType":67,"./factory/eventType":68,"./factory/offer/seatReservation":69,"./factory/order":70,"./factory/orderStatus":71,"./factory/organization/corporation":72,"./factory/organization/movieTheater":73,"./factory/organizationIdentifier/corporation":74,"./factory/organizationType":75,"./factory/ownershipInfo":76,"./factory/paymentMethod/paymentCard/creditCard":77,"./factory/paymentMethodType":78,"./factory/person":79,"./factory/personType":80,"./factory/place/movieTheater":81,"./factory/placeType":82,"./factory/priceCurrency":83,"./factory/programMembership":84,"./factory/quantitativeValue":85,"./factory/reservation/event":86,"./factory/reservationStatusType":87,"./factory/reservationType":88,"./factory/task/cancelCreditCard":89,"./factory/task/cancelMvtk":90,"./factory/task/cancelPecorino":91,"./factory/task/cancelPecorinoAward":92,"./factory/task/cancelSeatReservation":93,"./factory/task/givePecorinoAward":94,"./factory/task/payCreditCard":95,"./factory/task/payPecorino":96,"./factory/task/placeOrder":97,"./factory/task/refundCreditCard":98,"./factory/task/refundPecorino":99,"./factory/task/registerProgramMembership":100,"./factory/task/returnOrder":101,"./factory/task/returnPecorinoAward":102,"./factory/task/sendEmailMessage":103,"./factory/task/sendOrder":104,"./factory/task/unRegisterProgramMembership":105,"./factory/task/useMvtk":106,"./factory/taskExecutionResult":107,"./factory/taskName":108,"./factory/taskStatus":109,"./factory/transaction/placeOrder":110,"./factory/transaction/returnOrder":111,"./factory/transactionStatusType":112,"./factory/transactionTasksExportationStatus":113,"./factory/transactionType":114,"./factory/unitCode":115,"./factory/url":116,"@pecorino/factory":154}],118:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -21777,7 +21876,7 @@ exports.url = URLFactory;
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],118:[function(require,module,exports){
+},{}],119:[function(require,module,exports){
 //! moment.js
 
 ;(function (global, factory) {
@@ -26285,7 +26384,7 @@ exports.url = URLFactory;
 
 })));
 
-},{}],119:[function(require,module,exports){
+},{}],120:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -26299,7 +26398,7 @@ var TypeOf;
     TypeOf["Account"] = "Account";
 })(TypeOf = exports.TypeOf || (exports.TypeOf = {}));
 
-},{}],120:[function(require,module,exports){
+},{}],121:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -26318,9 +26417,13 @@ var AccountStatusType;
 })(AccountStatusType || (AccountStatusType = {}));
 exports.default = AccountStatusType;
 
-},{}],121:[function(require,module,exports){
-arguments[4][26][0].apply(exports,arguments)
-},{"dup":26}],122:[function(require,module,exports){
+},{}],122:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],123:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],124:[function(require,module,exports){
+arguments[4][45][0].apply(exports,arguments)
+},{"dup":45}],125:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -26341,13 +26444,11 @@ var ActionType;
 })(ActionType || (ActionType = {}));
 exports.default = ActionType;
 
-},{}],123:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],124:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],125:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],126:[function(require,module,exports){
+},{}],126:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],127:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],128:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -26358,28 +26459,6 @@ var CreativeWorkType;
     CreativeWorkType["EmailMessage"] = "EmailMessage";
 })(CreativeWorkType || (CreativeWorkType = {}));
 exports.default = CreativeWorkType;
-
-},{}],127:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],128:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * エラーコード
- */
-var ErrorCode;
-(function (ErrorCode) {
-    ErrorCode["AlreadyInUse"] = "AlreadyInUse";
-    ErrorCode["Argument"] = "Argument";
-    ErrorCode["ArgumentNull"] = "ArgumentNull";
-    ErrorCode["Forbidden"] = "Forbidden";
-    ErrorCode["NotFound"] = "NotFound";
-    ErrorCode["NotImplemented"] = "NotImplemented";
-    ErrorCode["RateLimitExceeded"] = "RateLimitExceeded";
-    ErrorCode["ServiceUnavailable"] = "ServiceUnavailable";
-    ErrorCode["Unauthorized"] = "Unauthorized";
-})(ErrorCode || (ErrorCode = {}));
-exports.default = ErrorCode;
 
 },{}],129:[function(require,module,exports){
 "use strict";
@@ -26420,7 +26499,7 @@ var AlreadyInUseError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = AlreadyInUseError;
 
-},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],130:[function(require,module,exports){
+},{"../errorCode":139,"./pecorino":135,"setprototypeof":180}],130:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -26458,7 +26537,7 @@ var ArgumentError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = ArgumentError;
 
-},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],131:[function(require,module,exports){
+},{"../errorCode":139,"./pecorino":135,"setprototypeof":180}],131:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -26496,7 +26575,7 @@ var ArgumentNullError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = ArgumentNullError;
 
-},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],132:[function(require,module,exports){
+},{"../errorCode":139,"./pecorino":135,"setprototypeof":180}],132:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -26533,7 +26612,7 @@ var ForbiddenError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = ForbiddenError;
 
-},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],133:[function(require,module,exports){
+},{"../errorCode":139,"./pecorino":135,"setprototypeof":180}],133:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -26571,7 +26650,7 @@ var NotFoundError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = NotFoundError;
 
-},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],134:[function(require,module,exports){
+},{"../errorCode":139,"./pecorino":135,"setprototypeof":180}],134:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -26608,7 +26687,7 @@ var NotImplementedError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = NotImplementedError;
 
-},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],135:[function(require,module,exports){
+},{"../errorCode":139,"./pecorino":135,"setprototypeof":180}],135:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -26676,7 +26755,7 @@ var RateLimitExceededError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = RateLimitExceededError;
 
-},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],137:[function(require,module,exports){
+},{"../errorCode":139,"./pecorino":135,"setprototypeof":180}],137:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -26713,7 +26792,7 @@ var ServiceUnavailableError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = ServiceUnavailableError;
 
-},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],138:[function(require,module,exports){
+},{"../errorCode":139,"./pecorino":135,"setprototypeof":180}],138:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -26750,7 +26829,27 @@ var UnauthorizedError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = UnauthorizedError;
 
-},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],139:[function(require,module,exports){
+},{"../errorCode":139,"./pecorino":135,"setprototypeof":180}],139:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * エラーコード
+ */
+var ErrorCode;
+(function (ErrorCode) {
+    ErrorCode["AlreadyInUse"] = "AlreadyInUse";
+    ErrorCode["Argument"] = "Argument";
+    ErrorCode["ArgumentNull"] = "ArgumentNull";
+    ErrorCode["Forbidden"] = "Forbidden";
+    ErrorCode["NotFound"] = "NotFound";
+    ErrorCode["NotImplemented"] = "NotImplemented";
+    ErrorCode["RateLimitExceeded"] = "RateLimitExceeded";
+    ErrorCode["ServiceUnavailable"] = "ServiceUnavailable";
+    ErrorCode["Unauthorized"] = "Unauthorized";
+})(ErrorCode || (ErrorCode = {}));
+exports.default = ErrorCode;
+
+},{}],140:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -26777,11 +26876,15 @@ exports.ServiceUnavailable = serviceUnavailable_1.default;
 var unauthorized_1 = require("./error/unauthorized");
 exports.Unauthorized = unauthorized_1.default;
 
-},{"./error/alreadyInUse":129,"./error/argument":130,"./error/argumentNull":131,"./error/forbidden":132,"./error/notFound":133,"./error/notImplemented":134,"./error/pecorino":135,"./error/rateLimitExceeded":136,"./error/serviceUnavailable":137,"./error/unauthorized":138}],140:[function(require,module,exports){
-arguments[4][82][0].apply(exports,arguments)
-},{"dup":82}],141:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],142:[function(require,module,exports){
+},{"./error/alreadyInUse":129,"./error/argument":130,"./error/argumentNull":131,"./error/forbidden":132,"./error/notFound":133,"./error/notImplemented":134,"./error/pecorino":135,"./error/rateLimitExceeded":136,"./error/serviceUnavailable":137,"./error/unauthorized":138}],141:[function(require,module,exports){
+arguments[4][83][0].apply(exports,arguments)
+},{"dup":83}],142:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],143:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],144:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],145:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -26800,7 +26903,7 @@ var TaskName;
 })(TaskName || (TaskName = {}));
 exports.default = TaskName;
 
-},{}],143:[function(require,module,exports){
+},{}],146:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -26827,11 +26930,13 @@ var TaskStatus;
 })(TaskStatus || (TaskStatus = {}));
 exports.default = TaskStatus;
 
-},{}],144:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],145:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],146:[function(require,module,exports){
+},{}],147:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],148:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],149:[function(require,module,exports){
+arguments[4][29][0].apply(exports,arguments)
+},{"dup":29}],150:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -26846,7 +26951,7 @@ var TransactionStatusType;
 })(TransactionStatusType || (TransactionStatusType = {}));
 exports.default = TransactionStatusType;
 
-},{}],147:[function(require,module,exports){
+},{}],151:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -26869,7 +26974,7 @@ var TransactionTasksExportationStatus;
 })(TransactionTasksExportationStatus || (TransactionTasksExportationStatus = {}));
 exports.default = TransactionTasksExportationStatus;
 
-},{}],148:[function(require,module,exports){
+},{}],152:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -26892,15 +26997,9 @@ var TransactionType;
 })(TransactionType || (TransactionType = {}));
 exports.default = TransactionType;
 
-},{}],149:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],150:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],151:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],152:[function(require,module,exports){
-arguments[4][115][0].apply(exports,arguments)
-},{"dup":115}],153:[function(require,module,exports){
+},{}],153:[function(require,module,exports){
+arguments[4][116][0].apply(exports,arguments)
+},{"dup":116}],154:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -26979,7 +27078,7 @@ exports.transactionTasksExportationStatus = transactionTasksExportationStatus_1.
 exports.transactionType = transactionType_1.default;
 exports.url = URLFactory;
 
-},{"./factory/account":119,"./factory/accountStatusType":120,"./factory/action/transfer/moneyTransfer":123,"./factory/action/transfer/send/message/email":124,"./factory/actionStatusType":121,"./factory/actionType":122,"./factory/clientUser":125,"./factory/creativeWork/message/email":127,"./factory/creativeWorkType":126,"./factory/errorCode":128,"./factory/errors":139,"./factory/priceCurrency":140,"./factory/task/cancelMoneyTransfer":144,"./factory/task/moneyTransfer":145,"./factory/taskExecutionResult":141,"./factory/taskName":142,"./factory/taskStatus":143,"./factory/transaction/deposit":149,"./factory/transaction/transfer":150,"./factory/transaction/withdraw":151,"./factory/transactionStatusType":146,"./factory/transactionTasksExportationStatus":147,"./factory/transactionType":148,"./factory/url":152}],154:[function(require,module,exports){
+},{"./factory/account":120,"./factory/accountStatusType":121,"./factory/action/transfer/moneyTransfer":122,"./factory/action/transfer/send/message/email":123,"./factory/actionStatusType":124,"./factory/actionType":125,"./factory/clientUser":126,"./factory/creativeWork/message/email":127,"./factory/creativeWorkType":128,"./factory/errorCode":139,"./factory/errors":140,"./factory/priceCurrency":141,"./factory/task/cancelMoneyTransfer":142,"./factory/task/moneyTransfer":143,"./factory/taskExecutionResult":144,"./factory/taskName":145,"./factory/taskStatus":146,"./factory/transaction/deposit":147,"./factory/transaction/transfer":148,"./factory/transaction/withdraw":149,"./factory/transactionStatusType":150,"./factory/transactionTasksExportationStatus":151,"./factory/transactionType":152,"./factory/url":153}],155:[function(require,module,exports){
 'use strict'
 
 exports.byteLength = byteLength
@@ -27095,7 +27194,7 @@ function fromByteArray (uint8) {
   return parts.join('')
 }
 
-},{}],155:[function(require,module,exports){
+},{}],156:[function(require,module,exports){
 
 /**
  * Expose `Emitter`.
@@ -27260,7 +27359,7 @@ Emitter.prototype.hasListeners = function(event){
   return !! this.listeners(event).length;
 };
 
-},{}],156:[function(require,module,exports){
+},{}],157:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -28021,7 +28120,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS;
 
 }));
-},{}],157:[function(require,module,exports){
+},{}],158:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -28157,7 +28256,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS.enc.Base64;
 
 }));
-},{"./core":156}],158:[function(require,module,exports){
+},{"./core":157}],159:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -28176,7 +28275,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS.enc.Hex;
 
 }));
-},{"./core":156}],159:[function(require,module,exports){
+},{"./core":157}],160:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -28376,7 +28475,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS.SHA256;
 
 }));
-},{"./core":156}],160:[function(require,module,exports){
+},{"./core":157}],161:[function(require,module,exports){
 (function (process){
 /**
  * This is the web browser implementation of `debug()`.
@@ -28575,7 +28674,7 @@ function localstorage() {
 }
 
 }).call(this,require('_process'))
-},{"./debug":161,"_process":173}],161:[function(require,module,exports){
+},{"./debug":162,"_process":174}],162:[function(require,module,exports){
 
 /**
  * This is the common logic for both the Node.js and web browser
@@ -28802,7 +28901,7 @@ function coerce(val) {
   return val;
 }
 
-},{"ms":172}],162:[function(require,module,exports){
+},{"ms":173}],163:[function(require,module,exports){
 // Generated by CoffeeScript 2.3.0
 // # node-http-status
 
@@ -29282,7 +29381,7 @@ module.exports = {
   }
 };
 
-},{}],163:[function(require,module,exports){
+},{}],164:[function(require,module,exports){
 (function (name, context, definition) {
   if (typeof module !== 'undefined' && module.exports) module.exports = definition();
   else if (typeof define === 'function' && define.amd) define(definition);
@@ -29322,7 +29421,7 @@ module.exports = {
 
 });
 
-},{}],164:[function(require,module,exports){
+},{}],165:[function(require,module,exports){
 var base64 = require('base64-js');
 
 function padding(str) {
@@ -29408,7 +29507,7 @@ module.exports = {
   base64ToBase64Url: base64ToBase64Url
 };
 
-},{"base64-js":154}],165:[function(require,module,exports){
+},{"base64-js":155}],166:[function(require,module,exports){
 function DummyCache() {}
 
 DummyCache.prototype.get = function () {
@@ -29424,7 +29523,7 @@ DummyCache.prototype.set = function () {
 
 module.exports = DummyCache;
 
-},{}],166:[function(require,module,exports){
+},{}],167:[function(require,module,exports){
 function ConfigurationError(message) {
   this.name = 'ConfigurationError';
   this.message = (message || '');
@@ -29442,7 +29541,7 @@ module.exports = {
   TokenValidationError: TokenValidationError
 };
 
-},{}],167:[function(require,module,exports){
+},{}],168:[function(require,module,exports){
 var urljoin = require('url-join');
 var base64 = require('./base64');
 var request = require('superagent');
@@ -29488,7 +29587,7 @@ module.exports = {
   getJWKS: getJWKS
 };
 
-},{"./base64":164,"superagent":181,"url-join":163}],168:[function(require,module,exports){
+},{"./base64":165,"superagent":182,"url-join":164}],169:[function(require,module,exports){
 /*
 Based on the work of Tom Wu
 http://www-cs-students.stanford.edu/~tjw/jsbn/
@@ -29567,7 +29666,7 @@ RSAVerifier.prototype.verify = function (msg, encsig) {
 
 module.exports = RSAVerifier;
 
-},{"crypto-js/sha256":159,"jsbn":171}],169:[function(require,module,exports){
+},{"crypto-js/sha256":160,"jsbn":172}],170:[function(require,module,exports){
 var sha256 = require('crypto-js/sha256');
 var cryptoBase64 = require('crypto-js/enc-base64');
 var cryptoHex = require('crypto-js/enc-hex');
@@ -29860,7 +29959,7 @@ IdTokenVerifier.prototype.validateAccessToken = function (accessToken, alg, atHa
 
 module.exports = IdTokenVerifier;
 
-},{"./helpers/base64":164,"./helpers/dummy-cache":165,"./helpers/error":166,"./helpers/jwks":167,"./helpers/rsa-verifier":168,"crypto-js/enc-base64":157,"crypto-js/enc-hex":158,"crypto-js/sha256":159}],170:[function(require,module,exports){
+},{"./helpers/base64":165,"./helpers/dummy-cache":166,"./helpers/error":167,"./helpers/jwks":168,"./helpers/rsa-verifier":169,"crypto-js/enc-base64":158,"crypto-js/enc-hex":159,"crypto-js/sha256":160}],171:[function(require,module,exports){
 // the whatwg-fetch polyfill installs the fetch() function
 // on the global object (window or self)
 //
@@ -29868,7 +29967,7 @@ module.exports = IdTokenVerifier;
 require('whatwg-fetch');
 module.exports = self.fetch.bind(self);
 
-},{"whatwg-fetch":186}],171:[function(require,module,exports){
+},{"whatwg-fetch":187}],172:[function(require,module,exports){
 (function(){
 
     // Copyright (c) 2005  Tom Wu
@@ -31227,7 +31326,7 @@ module.exports = self.fetch.bind(self);
 
 }).call(this);
 
-},{}],172:[function(require,module,exports){
+},{}],173:[function(require,module,exports){
 /**
  * Helpers.
  */
@@ -31381,7 +31480,7 @@ function plural(ms, n, name) {
   return Math.ceil(ms / n) + ' ' + name + 's';
 }
 
-},{}],173:[function(require,module,exports){
+},{}],174:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -31567,7 +31666,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],174:[function(require,module,exports){
+},{}],175:[function(require,module,exports){
 'use strict';
 
 var replace = String.prototype.replace;
@@ -31587,7 +31686,7 @@ module.exports = {
     RFC3986: 'RFC3986'
 };
 
-},{}],175:[function(require,module,exports){
+},{}],176:[function(require,module,exports){
 'use strict';
 
 var stringify = require('./stringify');
@@ -31600,7 +31699,7 @@ module.exports = {
     stringify: stringify
 };
 
-},{"./formats":174,"./parse":176,"./stringify":177}],176:[function(require,module,exports){
+},{"./formats":175,"./parse":177,"./stringify":178}],177:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -31776,7 +31875,7 @@ module.exports = function (str, opts) {
     return utils.compact(obj);
 };
 
-},{"./utils":178}],177:[function(require,module,exports){
+},{"./utils":179}],178:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -31988,7 +32087,7 @@ module.exports = function (object, opts) {
     return joined.length > 0 ? prefix + joined : '';
 };
 
-},{"./formats":174,"./utils":178}],178:[function(require,module,exports){
+},{"./formats":175,"./utils":179}],179:[function(require,module,exports){
 'use strict';
 
 var has = Object.prototype.hasOwnProperty;
@@ -32203,7 +32302,7 @@ module.exports = {
     merge: merge
 };
 
-},{}],179:[function(require,module,exports){
+},{}],180:[function(require,module,exports){
 module.exports = Object.setPrototypeOf || ({__proto__:[]} instanceof Array ? setProtoOf : mixinProperties);
 
 function setProtoOf(obj, proto) {
@@ -32220,7 +32319,7 @@ function mixinProperties(obj, proto) {
 	return obj;
 }
 
-},{}],180:[function(require,module,exports){
+},{}],181:[function(require,module,exports){
 function Agent() {
   this._defaults = [];
 }
@@ -32242,7 +32341,7 @@ Agent.prototype._setDefaults = function(req) {
 
 module.exports = Agent;
 
-},{}],181:[function(require,module,exports){
+},{}],182:[function(require,module,exports){
 /**
  * Root reference for iframes.
  */
@@ -33164,7 +33263,7 @@ request.put = function(url, data, fn) {
   return req;
 };
 
-},{"./agent-base":180,"./is-object":182,"./request-base":183,"./response-base":184,"component-emitter":155}],182:[function(require,module,exports){
+},{"./agent-base":181,"./is-object":183,"./request-base":184,"./response-base":185,"component-emitter":156}],183:[function(require,module,exports){
 'use strict';
 
 /**
@@ -33181,7 +33280,7 @@ function isObject(obj) {
 
 module.exports = isObject;
 
-},{}],183:[function(require,module,exports){
+},{}],184:[function(require,module,exports){
 'use strict';
 
 /**
@@ -33877,7 +33976,7 @@ RequestBase.prototype._setTimeouts = function() {
   }
 };
 
-},{"./is-object":182}],184:[function(require,module,exports){
+},{"./is-object":183}],185:[function(require,module,exports){
 'use strict';
 
 /**
@@ -34015,7 +34114,7 @@ ResponseBase.prototype._setStatusProperties = function(status){
     this.unprocessableEntity = 422 == status;
 };
 
-},{"./utils":185}],185:[function(require,module,exports){
+},{"./utils":186}],186:[function(require,module,exports){
 'use strict';
 
 /**
@@ -34088,7 +34187,7 @@ exports.cleanHeader = function(header, changesOrigin){
   return header;
 };
 
-},{}],186:[function(require,module,exports){
+},{}],187:[function(require,module,exports){
 (function(self) {
   'use strict';
 
