@@ -1,6 +1,6 @@
 {
   "name": "@motionpicture/sskts-api-javascript-client",
-  "version": "4.0.0",
+  "version": "4.0.0-alpha.1",
   "description": "SSKTS API client library for JavaScript",
   "main": "./lib/index.js",
   "browser": "./lib/index.js",
@@ -74,7 +74,7 @@
     "watchify": "^3.11.0"
   },
   "dependencies": {
-    "@motionpicture/sskts-api-abstract-client": "^4.0.0",
+    "@motionpicture/sskts-api-abstract-client": "4.0.0-alpha.1",
     "debug": "^3.1.0",
     "http-status": "^1.2.0",
     "idtoken-verifier": "^1.2.0",
