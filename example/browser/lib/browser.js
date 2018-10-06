@@ -104,7 +104,7 @@ var IframeHandler = /** @class */ (function () {
 }());
 exports.default = IframeHandler;
 
-},{"debug":160}],4:[function(require,module,exports){
+},{"debug":164}],4:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -448,7 +448,7 @@ var ImplicitGrantClient = /** @class */ (function (_super) {
 }(oAuth2client_1.default));
 exports.ImplicitGrantClient = ImplicitGrantClient;
 
-},{"./error":2,"./oAuth2client":5,"./popupAuthenticationHandler":6,"./silentAuthenticationHandler":8,"./silentLogoutHandler":9,"debug":160,"idtoken-verifier":169,"qs":175}],5:[function(require,module,exports){
+},{"./error":2,"./oAuth2client":5,"./popupAuthenticationHandler":6,"./silentAuthenticationHandler":8,"./silentLogoutHandler":9,"debug":164,"idtoken-verifier":173,"qs":179}],5:[function(require,module,exports){
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -640,7 +640,7 @@ var OAuth2client = /** @class */ (function () {
 }());
 exports.default = OAuth2client;
 
-},{"@motionpicture/sskts-api-abstract-client":12,"debug":160,"http-status":162,"isomorphic-fetch":170}],6:[function(require,module,exports){
+},{"@motionpicture/sskts-api-abstract-client":12,"debug":164,"http-status":166,"isomorphic-fetch":174}],6:[function(require,module,exports){
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -824,7 +824,7 @@ var PopupHandler = /** @class */ (function () {
 }());
 exports.default = PopupHandler;
 
-},{"debug":160}],8:[function(require,module,exports){
+},{"debug":164}],8:[function(require,module,exports){
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -1102,9 +1102,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var transporters_1 = require("../transporters");
 /**
- * AuthClient abstract class
  * 抽象認証クライアント
- * @export
  */
 var AuthClient = /** @class */ (function () {
     function AuthClient() {
@@ -1113,9 +1111,7 @@ var AuthClient = /** @class */ (function () {
 }());
 exports.AuthClient = AuthClient;
 /**
- * test auth client
  * テスト認証クライアント
- * @export
  */
 // tslint:disable-next-line:no-single-line-block-comment
 /* istanbul ignore next */
@@ -1142,7 +1138,7 @@ var StubAuthClient = /** @class */ (function () {
 }());
 exports.StubAuthClient = StubAuthClient;
 
-},{"../transporters":24}],12:[function(require,module,exports){
+},{"../transporters":25}],12:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1167,6 +1163,7 @@ var action_1 = require("./service/action");
 var event_1 = require("./service/event");
 var order_1 = require("./service/order");
 var organization_1 = require("./service/organization");
+var ownershipInfo_1 = require("./service/ownershipInfo");
 var person_1 = require("./service/person");
 var place_1 = require("./service/place");
 var programMembership_1 = require("./service/programMembership");
@@ -1246,6 +1243,17 @@ var service;
     }(organization_1.OrganizationService));
     service.Organization = Organization;
     /**
+     * 所有権サービス
+     */
+    var OwnershipInfo = /** @class */ (function (_super) {
+        __extends(OwnershipInfo, _super);
+        function OwnershipInfo() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return OwnershipInfo;
+    }(ownershipInfo_1.OwnershipInfoService));
+    service.OwnershipInfo = OwnershipInfo;
+    /**
      * ユーザーサービス
      */
     var Person = /** @class */ (function (_super) {
@@ -1305,7 +1313,7 @@ var service;
     })(transaction = service.transaction || (service.transaction = {}));
 })(service = exports.service || (exports.service = {}));
 
-},{"./auth/authClient":11,"./service/account":14,"./service/action":15,"./service/event":16,"./service/order":17,"./service/organization":18,"./service/person":19,"./service/place":20,"./service/programMembership":21,"./service/transaction/placeOrder":22,"./service/transaction/returnOrder":23,"./transporters":24,"@motionpicture/sskts-factory":116}],13:[function(require,module,exports){
+},{"./auth/authClient":11,"./service/account":14,"./service/action":15,"./service/event":16,"./service/order":17,"./service/organization":18,"./service/ownershipInfo":19,"./service/person":20,"./service/place":21,"./service/programMembership":22,"./service/transaction/placeOrder":23,"./service/transaction/returnOrder":24,"./transporters":25,"@motionpicture/sskts-factory":119}],13:[function(require,module,exports){
 "use strict";
 var __assign = (this && this.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -1355,7 +1363,6 @@ var qs = require("qs");
 var transporters_1 = require("./transporters");
 /**
  * base service class
- * @export
  */
 var Service = /** @class */ (function () {
     function Service(options) {
@@ -1403,7 +1410,7 @@ var Service = /** @class */ (function () {
 }());
 exports.Service = Service;
 
-},{"./transporters":24,"qs":175}],14:[function(require,module,exports){
+},{"./transporters":25,"qs":179}],14:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1468,12 +1475,17 @@ var AccountService = /** @class */ (function (_super) {
     AccountService.prototype.deposit = function (params) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: '/accounts/transactions/deposit',
-                        method: 'POST',
-                        body: params,
-                        expectedStatusCodes: [http_status_1.NO_CONTENT]
-                    })];
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.fetch({
+                            uri: '/accounts/transactions/deposit',
+                            method: 'POST',
+                            body: params,
+                            expectedStatusCodes: [http_status_1.NO_CONTENT]
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
             });
         });
     };
@@ -1481,7 +1493,7 @@ var AccountService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.AccountService = AccountService;
 
-},{"../service":13,"http-status":162}],15:[function(require,module,exports){
+},{"../service":13,"http-status":166}],15:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1548,13 +1560,16 @@ var ActionService = /** @class */ (function (_super) {
      */
     params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: '/actions/print/ticket',
                         method: 'POST',
                         body: params,
                         expectedStatusCodes: [http_status_1.CREATED]
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -1567,13 +1582,16 @@ var ActionService = /** @class */ (function (_super) {
      */
     params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: '/actions/print/ticket',
                         method: 'GET',
                         qs: params,
                         expectedStatusCodes: [http_status_1.OK]
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -1581,7 +1599,7 @@ var ActionService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.ActionService = ActionService;
 
-},{"../service":13,"http-status":162}],16:[function(require,module,exports){
+},{"../service":13,"http-status":166}],16:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1648,13 +1666,16 @@ var EventService = /** @class */ (function (_super) {
      */
     params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: '/events/individualScreeningEvent',
                         method: 'GET',
                         qs: params,
                         expectedStatusCodes: [http_status_1.OK]
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -1663,12 +1684,15 @@ var EventService = /** @class */ (function (_super) {
      */
     EventService.prototype.findIndividualScreeningEvent = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: "/events/individualScreeningEvent/" + params.identifier,
                         method: 'GET',
                         expectedStatusCodes: [http_status_1.OK]
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -1676,13 +1700,8 @@ var EventService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.EventService = EventService;
 
-},{"../service":13,"http-status":162}],17:[function(require,module,exports){
+},{"../service":13,"http-status":166}],17:[function(require,module,exports){
 "use strict";
-/**
- * 注文サービス
- *
- * @namespace service.order
- */
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -1732,7 +1751,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var http_status_1 = require("http-status");
 var service_1 = require("../service");
 /**
- * order service
+ * 注文サービス
  */
 var OrderService = /** @class */ (function (_super) {
     __extends(OrderService, _super);
@@ -1748,13 +1767,16 @@ var OrderService = /** @class */ (function (_super) {
      */
     params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: '/orders/findByOrderInquiryKey',
                         method: 'POST',
                         body: params,
                         expectedStatusCodes: [http_status_1.OK]
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -1763,13 +1785,27 @@ var OrderService = /** @class */ (function (_super) {
      */
     OrderService.prototype.search = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: '/orders',
                         method: 'GET',
                         qs: params,
                         expectedStatusCodes: [http_status_1.OK]
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () {
+                        var _a;
+                        return __generator(this, function (_b) {
+                            switch (_b.label) {
+                                case 0:
+                                    _a = {
+                                        totalCount: Number(response.headers.get('X-Total-Count'))
+                                    };
+                                    return [4 /*yield*/, response.json()];
+                                case 1: return [2 /*return*/, (_a.data = _b.sent(),
+                                        _a)];
+                            }
+                        });
+                    }); })];
             });
         });
     };
@@ -1777,7 +1813,7 @@ var OrderService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.OrderService = OrderService;
 
-},{"../service":13,"http-status":162}],18:[function(require,module,exports){
+},{"../service":13,"http-status":166}],18:[function(require,module,exports){
 "use strict";
 /**
  * 組織サービス
@@ -1849,13 +1885,16 @@ var OrganizationService = /** @class */ (function (_super) {
      */
     params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: '/organizations/movieTheater',
                         method: 'GET',
                         qs: params,
                         expectedStatusCodes: [http_status_1.OK]
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -1864,13 +1903,16 @@ var OrganizationService = /** @class */ (function (_super) {
      */
     OrganizationService.prototype.findMovieTheaterByBranchCode = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: "/organizations/movieTheater/" + params.branchCode,
                         method: 'GET',
                         qs: {},
                         expectedStatusCodes: [http_status_1.OK]
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -1878,7 +1920,97 @@ var OrganizationService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.OrganizationService = OrganizationService;
 
-},{"../service":13,"http-status":162}],19:[function(require,module,exports){
+},{"../service":13,"http-status":166}],19:[function(require,module,exports){
+"use strict";
+/**
+ * 所有権サービス
+ *
+ * @namespace service.ownershipInfo
+ */
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../service");
+/**
+ * organization service
+ */
+var OwnershipInfoService = /** @class */ (function (_super) {
+    __extends(OwnershipInfoService, _super);
+    function OwnershipInfoService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * 登録日と劇場で会員数をカウント
+     */
+    OwnershipInfoService.prototype.countByRegisterDateAndTheater = function (
+    /**
+     * 検索条件
+     * fromDateとtoDateの時間を注意して
+     */
+    params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/ownershipInfos/countByRegisterDateAndTheater',
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    return OwnershipInfoService;
+}(service_1.Service));
+exports.OwnershipInfoService = OwnershipInfoService;
+
+},{"../service":13,"http-status":166}],20:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -1941,13 +2073,16 @@ var PersonService = /** @class */ (function (_super) {
      */
     PersonService.prototype.getContacts = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: "/people/" + params.personId + "/contacts",
                         method: 'GET',
                         qs: {},
                         expectedStatusCodes: [http_status_1.OK]
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -1957,12 +2092,17 @@ var PersonService = /** @class */ (function (_super) {
     PersonService.prototype.updateContacts = function (params) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/people/" + params.personId + "/contacts",
-                        method: 'PUT',
-                        body: params.contacts,
-                        expectedStatusCodes: [http_status_1.NO_CONTENT]
-                    })];
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.fetch({
+                            uri: "/people/" + params.personId + "/contacts",
+                            method: 'PUT',
+                            body: params.contacts,
+                            expectedStatusCodes: [http_status_1.NO_CONTENT]
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
             });
         });
     };
@@ -1972,13 +2112,16 @@ var PersonService = /** @class */ (function (_super) {
      */
     PersonService.prototype.findCreditCards = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: "/people/" + params.personId + "/creditCards",
                         method: 'GET',
                         qs: {},
                         expectedStatusCodes: [http_status_1.OK]
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -1989,13 +2132,16 @@ var PersonService = /** @class */ (function (_super) {
      */
     PersonService.prototype.addCreditCard = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: "/people/" + params.personId + "/creditCards",
                         method: 'POST',
                         body: params.creditCard,
                         expectedStatusCodes: [http_status_1.CREATED]
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -2006,11 +2152,16 @@ var PersonService = /** @class */ (function (_super) {
     PersonService.prototype.deleteCreditCard = function (params) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/people/" + params.personId + "/creditCards/" + params.cardSeq,
-                        method: 'DELETE',
-                        expectedStatusCodes: [http_status_1.NO_CONTENT]
-                    })];
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.fetch({
+                            uri: "/people/" + params.personId + "/creditCards/" + params.cardSeq,
+                            method: 'DELETE',
+                            expectedStatusCodes: [http_status_1.NO_CONTENT]
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
             });
         });
     };
@@ -2019,6 +2170,7 @@ var PersonService = /** @class */ (function (_super) {
      */
     PersonService.prototype.openAccount = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: "/people/" + params.personId + "/accounts",
@@ -2027,7 +2179,9 @@ var PersonService = /** @class */ (function (_super) {
                             name: params.name
                         },
                         expectedStatusCodes: [http_status_1.CREATED]
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -2039,11 +2193,16 @@ var PersonService = /** @class */ (function (_super) {
     PersonService.prototype.closeAccount = function (params) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/people/" + params.personId + "/accounts/" + params.accountNumber + "/close",
-                        method: 'PUT',
-                        expectedStatusCodes: [http_status_1.NO_CONTENT]
-                    })];
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.fetch({
+                            uri: "/people/" + params.personId + "/accounts/" + params.accountNumber + "/close",
+                            method: 'PUT',
+                            expectedStatusCodes: [http_status_1.NO_CONTENT]
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
             });
         });
     };
@@ -2052,13 +2211,16 @@ var PersonService = /** @class */ (function (_super) {
      */
     PersonService.prototype.findAccounts = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: "/people/" + params.personId + "/accounts",
                         method: 'GET',
                         qs: {},
                         expectedStatusCodes: [http_status_1.OK]
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -2067,13 +2229,16 @@ var PersonService = /** @class */ (function (_super) {
      */
     PersonService.prototype.searchAccountMoneyTransferActions = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: "/people/" + params.personId + "/accounts/" + params.accountNumber + "/actions/moneyTransfer",
                         method: 'GET',
                         qs: {},
                         expectedStatusCodes: [http_status_1.OK]
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -2083,6 +2248,7 @@ var PersonService = /** @class */ (function (_super) {
      */
     PersonService.prototype.searchOwnershipInfos = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: "/people/" + params.ownedBy + "/ownershipInfos/" + params.goodType,
@@ -2091,7 +2257,9 @@ var PersonService = /** @class */ (function (_super) {
                             ownedAt: params.ownedAt
                         },
                         expectedStatusCodes: [http_status_1.OK]
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -2100,6 +2268,7 @@ var PersonService = /** @class */ (function (_super) {
      */
     PersonService.prototype.registerProgramMembership = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: "/people/" + params.personId + "/ownershipInfos/programMembership/register",
@@ -2111,7 +2280,9 @@ var PersonService = /** @class */ (function (_super) {
                             sellerId: params.sellerId
                         },
                         expectedStatusCodes: [http_status_1.ACCEPTED]
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -2120,13 +2291,16 @@ var PersonService = /** @class */ (function (_super) {
      */
     PersonService.prototype.unRegisterProgramMembership = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: "/people/" + params.personId + "/ownershipInfos/programMembership/" + params.ownershipInfoIdentifier + "/unRegister",
                         method: 'PUT',
                         body: {},
                         expectedStatusCodes: [http_status_1.ACCEPTED]
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -2134,7 +2308,7 @@ var PersonService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PersonService = PersonService;
 
-},{"../service":13,"http-status":162}],20:[function(require,module,exports){
+},{"../service":13,"http-status":166}],21:[function(require,module,exports){
 "use strict";
 /**
  * 場所サービス
@@ -2206,13 +2380,16 @@ var PlaceService = /** @class */ (function (_super) {
      */
     params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: '/places/movieTheater',
                         method: 'GET',
                         qs: params,
                         expectedStatusCodes: [http_status_1.OK]
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -2221,13 +2398,16 @@ var PlaceService = /** @class */ (function (_super) {
      */
     PlaceService.prototype.findMovieTheater = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: "/places/movieTheater/" + params.branchCode,
                         method: 'GET',
                         qs: {},
                         expectedStatusCodes: [http_status_1.OK]
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -2235,7 +2415,7 @@ var PlaceService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PlaceService = PlaceService;
 
-},{"../service":13,"http-status":162}],21:[function(require,module,exports){
+},{"../service":13,"http-status":166}],22:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -2302,13 +2482,16 @@ var ProgramMembershipService = /** @class */ (function (_super) {
      */
     params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: '/programMemberships',
                         method: 'GET',
                         qs: params,
                         expectedStatusCodes: [http_status_1.OK]
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -2316,7 +2499,7 @@ var ProgramMembershipService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.ProgramMembershipService = ProgramMembershipService;
 
-},{"../service":13,"http-status":162}],22:[function(require,module,exports){
+},{"../service":13,"http-status":166}],23:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -2381,6 +2564,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
      */
     PlaceOrderTransactionService.prototype.start = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: '/transactions/placeOrder/start',
@@ -2391,7 +2575,9 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
                             passportToken: params.passportToken
                         },
                         expectedStatusCodes: [http_status_1.OK]
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -2401,6 +2587,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
      */
     PlaceOrderTransactionService.prototype.createSeatReservationAuthorization = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/seatReservation",
@@ -2410,7 +2597,9 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
                             eventIdentifier: params.eventIdentifier,
                             offers: params.offers
                         }
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -2420,11 +2609,16 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
     PlaceOrderTransactionService.prototype.cancelSeatReservationAuthorization = function (params) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/seatReservation/" + params.actionId,
-                        method: 'DELETE',
-                        expectedStatusCodes: [http_status_1.NO_CONTENT]
-                    })];
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.fetch({
+                            uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/seatReservation/" + params.actionId,
+                            method: 'DELETE',
+                            expectedStatusCodes: [http_status_1.NO_CONTENT]
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
             });
         });
     };
@@ -2435,6 +2629,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
      */
     PlaceOrderTransactionService.prototype.changeSeatReservationOffers = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/seatReservation/" + params.actionId,
@@ -2444,7 +2639,9 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
                             eventIdentifier: params.eventIdentifier,
                             offers: params.offers
                         }
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -2454,6 +2651,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
      */
     PlaceOrderTransactionService.prototype.createCreditCardAuthorization = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/creditCard",
@@ -2465,7 +2663,9 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
                             method: params.method,
                             creditCard: params.creditCard
                         }
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -2475,11 +2675,16 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
     PlaceOrderTransactionService.prototype.cancelCreditCardAuthorization = function (params) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/creditCard/" + params.actionId,
-                        method: 'DELETE',
-                        expectedStatusCodes: [http_status_1.NO_CONTENT]
-                    })];
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.fetch({
+                            uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/creditCard/" + params.actionId,
+                            method: 'DELETE',
+                            expectedStatusCodes: [http_status_1.NO_CONTENT]
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
             });
         });
     };
@@ -2489,13 +2694,16 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
      */
     PlaceOrderTransactionService.prototype.createMvtkAuthorization = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/mvtk",
                         method: 'POST',
                         expectedStatusCodes: [http_status_1.CREATED],
                         body: params.mvtk
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -2505,11 +2713,16 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
     PlaceOrderTransactionService.prototype.cancelMvtkAuthorization = function (params) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/mvtk/" + params.actionId,
-                        method: 'DELETE',
-                        expectedStatusCodes: [http_status_1.NO_CONTENT]
-                    })];
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.fetch({
+                            uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/mvtk/" + params.actionId,
+                            method: 'DELETE',
+                            expectedStatusCodes: [http_status_1.NO_CONTENT]
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
             });
         });
     };
@@ -2519,6 +2732,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
      */
     PlaceOrderTransactionService.prototype.createPecorinoPaymentAuthorization = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/paymentMethod/pecorino",
@@ -2529,7 +2743,9 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
                             fromAccountNumber: params.fromAccountNumber,
                             notes: params.notes
                         }
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -2539,11 +2755,16 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
     PlaceOrderTransactionService.prototype.cancelPecorinoPaymentAuthorization = function (params) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/paymentMethod/pecorino/" + params.actionId,
-                        method: 'DELETE',
-                        expectedStatusCodes: [http_status_1.NO_CONTENT]
-                    })];
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.fetch({
+                            uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/paymentMethod/pecorino/" + params.actionId,
+                            method: 'DELETE',
+                            expectedStatusCodes: [http_status_1.NO_CONTENT]
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
             });
         });
     };
@@ -2553,6 +2774,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
      */
     PlaceOrderTransactionService.prototype.createPecorinoAwardAuthorization = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/award/pecorino",
@@ -2563,7 +2785,9 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
                             toAccountNumber: params.toAccountNumber,
                             notes: params.notes
                         }
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -2573,11 +2797,16 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
     PlaceOrderTransactionService.prototype.cancelPecorinoAwardAuthorization = function (params) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/award/pecorino/" + params.actionId,
-                        method: 'DELETE',
-                        expectedStatusCodes: [http_status_1.NO_CONTENT]
-                    })];
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.fetch({
+                            uri: "/transactions/placeOrder/" + params.transactionId + "/actions/authorize/award/pecorino/" + params.actionId,
+                            method: 'DELETE',
+                            expectedStatusCodes: [http_status_1.NO_CONTENT]
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
             });
         });
     };
@@ -2587,13 +2816,16 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
      */
     PlaceOrderTransactionService.prototype.setCustomerContact = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: "/transactions/placeOrder/" + params.transactionId + "/customerContact",
                         method: 'PUT',
                         expectedStatusCodes: [http_status_1.CREATED],
                         body: params.contact
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -2603,6 +2835,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
      */
     PlaceOrderTransactionService.prototype.confirm = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: "/transactions/placeOrder/" + params.transactionId + "/confirm",
@@ -2612,7 +2845,9 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
                             sendEmailMessage: params.sendEmailMessage,
                             incentives: params.incentives
                         }
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -2622,13 +2857,16 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
      */
     PlaceOrderTransactionService.prototype.sendEmailNotification = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: "/transactions/placeOrder/" + params.transactionId + "/tasks/sendEmailNotification",
                         method: 'POST',
                         expectedStatusCodes: [http_status_1.CREATED],
                         body: params.emailMessageAttributes
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -2640,11 +2878,16 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
     PlaceOrderTransactionService.prototype.cancel = function (params) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/transactions/placeOrder/" + params.transactionId + "/cancel",
-                        method: 'POST',
-                        expectedStatusCodes: [http_status_1.NO_CONTENT]
-                    })];
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.fetch({
+                            uri: "/transactions/placeOrder/" + params.transactionId + "/cancel",
+                            method: 'POST',
+                            expectedStatusCodes: [http_status_1.NO_CONTENT]
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
             });
         });
     };
@@ -2652,7 +2895,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PlaceOrderTransactionService = PlaceOrderTransactionService;
 
-},{"../../service":13,"http-status":162}],23:[function(require,module,exports){
+},{"../../service":13,"http-status":166}],24:[function(require,module,exports){
 "use strict";
 /**
  * 注文返品取引サービス
@@ -2720,6 +2963,7 @@ var ReturnOrderTransactionService = /** @class */ (function (_super) {
      */
     ReturnOrderTransactionService.prototype.start = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: '/transactions/returnOrder/start',
@@ -2729,7 +2973,9 @@ var ReturnOrderTransactionService = /** @class */ (function (_super) {
                             transactionId: params.transactionId
                         },
                         expectedStatusCodes: [http_status_1.OK]
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -2739,12 +2985,15 @@ var ReturnOrderTransactionService = /** @class */ (function (_super) {
      */
     ReturnOrderTransactionService.prototype.confirm = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
                         uri: "/transactions/returnOrder/" + params.transactionId + "/confirm",
                         method: 'POST',
                         expectedStatusCodes: [http_status_1.CREATED]
-                    })];
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
             });
         });
     };
@@ -2752,9 +3001,8 @@ var ReturnOrderTransactionService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.ReturnOrderTransactionService = ReturnOrderTransactionService;
 
-},{"../../service":13,"http-status":162}],24:[function(require,module,exports){
+},{"../../service":13,"http-status":166}],25:[function(require,module,exports){
 "use strict";
-// tslint:disable:max-classes-per-file
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -2801,20 +3049,17 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable:max-classes-per-file
 /**
  * transporters
- * @ignore
  */
 var createDebug = require("debug");
-var http_status_1 = require("http-status");
 var fetch = require("isomorphic-fetch");
 var debug = createDebug('sskts-api-abstract-client:transporters');
 // tslint:disable-next-line
 // const pkg = require('../package.json');
 /**
- * transporter abstract class
  * トランスポーター抽象クラス
- * @export
  */
 var Transporter = /** @class */ (function () {
     function Transporter() {
@@ -2824,39 +3069,21 @@ var Transporter = /** @class */ (function () {
 exports.Transporter = Transporter;
 /**
  * RequestError
- * @export
  */
 var RequestError = /** @class */ (function (_super) {
     __extends(RequestError, _super);
-    function RequestError() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function RequestError(message) {
+        var _this = 
+        // tslint:disable-next-line:no-single-line-block-comment
+        _super.call(this, message) /* istanbul ignore next */ || this;
+        _this.name = 'SSKTSRequestError';
+        return _this;
     }
     return RequestError;
 }(Error));
 exports.RequestError = RequestError;
 /**
- * stub transporter
- * スタブトランポーター
- * @export
- */
-var StubTransporter = /** @class */ (function () {
-    function StubTransporter(body) {
-        this.body = body;
-    }
-    StubTransporter.prototype.fetch = function (url, options) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                debug('fetching...', url, options);
-                return [2 /*return*/, this.body];
-            });
-        });
-    };
-    return StubTransporter;
-}());
-exports.StubTransporter = StubTransporter;
-/**
  * DefaultTransporter
- * @export
  */
 var DefaultTransporter = /** @class */ (function () {
     function DefaultTransporter(expectedStatusCodes) {
@@ -2867,13 +3094,13 @@ var DefaultTransporter = /** @class */ (function () {
      */
     DefaultTransporter.CONFIGURE = function (options) {
         // set transporter user agent
-        options.headers = (options.headers !== undefined) ? options.headers : {};
+        // options.headers = (options.headers !== undefined) ? options.headers : {};
         // tslint:disable-next-line:no-single-line-block-comment
         /* istanbul ignore else */
-        // if (!options.headers['User-Agent']) {
-        //     options.headers['User-Agent'] = DefaultTransporter.USER_AGENT;
-        // } else if (options.headers['User-Agent'].indexOf(DefaultTransporter.USER_AGENT) === -1) {
-        //     options.headers['User-Agent'] = `${options.headers['User-Agent']} ${DefaultTransporter.USER_AGENT}`;
+        // if (!(<any>options.headers)['User-Agent']) {
+        //     (<any>options.headers)['User-Agent'] = DefaultTransporter.USER_AGENT;
+        // } else if ((<any>options.headers)['User-Agent'].indexOf(DefaultTransporter.USER_AGENT) === -1) {
+        //     (<any>options.headers)['User-Agent'] = `${(<any>options.headers)['User-Agent']} ${DefaultTransporter.USER_AGENT}`;
         // }
         return options;
     };
@@ -2934,16 +3161,7 @@ var DefaultTransporter = /** @class */ (function () {
                             err.errors = [];
                         }
                         return [3 /*break*/, 7];
-                    case 6:
-                        if (response.status === http_status_1.NO_CONTENT) {
-                            // consider 204
-                            return [2 /*return*/];
-                        }
-                        else {
-                            // consider 200,201
-                            return [2 /*return*/, response.json()];
-                        }
-                        _a.label = 7;
+                    case 6: return [2 /*return*/, response];
                     case 7: throw err;
                 }
             });
@@ -2952,73 +3170,8 @@ var DefaultTransporter = /** @class */ (function () {
     return DefaultTransporter;
 }());
 exports.DefaultTransporter = DefaultTransporter;
-/**
- * TransporterWithRequestPromise
- */
-// export class TransporterWithRequestPromise {
-//     /**
-//      * Default user agent.
-//      */
-//     public static readonly USER_AGENT: string = `sskt-api-nodejs-client/${pkg.version}`;
-//     public expectedStatusCodes: number[];
-//     constructor(expectedStatusCodes: number[]) {
-//         this.expectedStatusCodes = expectedStatusCodes;
-//     }
-//     /**
-//      * Configures request options before making a request.
-//      */
-//     public static CONFIGURE(options: request.OptionsWithUri): request.OptionsWithUri {
-//         // set transporter user agent
-//         options.headers = (options.headers !== undefined) ? options.headers : {};
-//         if (!options.headers['User-Agent']) {
-//             options.headers['User-Agent'] = DefaultTransporter.USER_AGENT;
-//         } else if (options.headers['User-Agent'].indexOf(DefaultTransporter.USER_AGENT) === -1) {
-//             options.headers['User-Agent'] = `${options.headers['User-Agent']} ${DefaultTransporter.USER_AGENT}`;
-//         }
-//         return options;
-//     }
-//     /**
-//      * Makes a request with given options and invokes callback.
-//      */
-//     public async request(options: request.OptionsWithUri) {
-//         const requestOptions = DefaultTransporter.CONFIGURE(options);
-//         return await request(requestOptions)
-//             .then((res) => this.wrapCallback(res));
-//     }
-//     /**
-//      * Wraps the response callback.
-//      */
-//     private wrapCallback(res: request.FullResponse): any {
-//         let err: RequestError = new RequestError('An unexpected error occurred');
-//         debug('request processed', res.statusCode, res.body);
-//         if (res.statusCode !== undefined) {
-//             if (this.expectedStatusCodes.indexOf(res.statusCode) < 0) {
-//                 if (typeof res.body === 'string') {
-//                     // Consider all 4xx and 5xx responses errors.
-//                     err = new RequestError(res.body);
-//                     err.code = res.statusCode;
-//                 }
-//                 if (typeof res.body === 'object' && res.body.errors !== undefined) {
-//                     // consider 400
-//                     err = new RequestError((<any[]>res.body.errors).map((error) => `${error.title}:${error.detail}`).join('\n'));
-//                     err.code = res.statusCode;
-//                     err.errors = res.body.errors;
-//                 }
-//             } else {
-//                 if (res.body !== undefined) {
-//                     // consider 200,201,404
-//                     return res.body;
-//                 } else {
-//                     // consider 204
-//                     return;
-//                 }
-//             }
-//         }
-//         throw err;
-//     }
-// }
 
-},{"debug":160,"http-status":162,"isomorphic-fetch":170}],25:[function(require,module,exports){
+},{"debug":164,"isomorphic-fetch":174}],26:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -3031,7 +3184,7 @@ var AccountType;
 })(AccountType || (AccountType = {}));
 exports.default = AccountType;
 
-},{}],26:[function(require,module,exports){
+},{}],27:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -3047,7 +3200,7 @@ var ActionStatusType;
 })(ActionStatusType || (ActionStatusType = {}));
 exports.default = ActionStatusType;
 
-},{}],27:[function(require,module,exports){
+},{}],28:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -3071,7 +3224,7 @@ var ActionType;
 })(ActionType || (ActionType = {}));
 exports.default = ActionType;
 
-},{}],28:[function(require,module,exports){
+},{}],29:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var ObjectType;
@@ -3079,7 +3232,7 @@ var ObjectType;
     ObjectType["PecorinoAward"] = "PecorinoAward";
 })(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
 
-},{}],29:[function(require,module,exports){
+},{}],30:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var ObjectType;
@@ -3087,11 +3240,11 @@ var ObjectType;
     ObjectType["Mvtk"] = "Mvtk";
 })(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
 
-},{}],30:[function(require,module,exports){
+},{}],31:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 
-},{}],31:[function(require,module,exports){
+},{}],32:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var ObjectType;
@@ -3099,7 +3252,7 @@ var ObjectType;
     ObjectType["SeatReservation"] = "SeatReservation";
 })(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
 
-},{}],32:[function(require,module,exports){
+},{}],33:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var ObjectType;
@@ -3107,7 +3260,7 @@ var ObjectType;
     ObjectType["CreditCard"] = "CreditCard";
 })(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
 
-},{}],33:[function(require,module,exports){
+},{}],34:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var ObjectType;
@@ -3115,35 +3268,35 @@ var ObjectType;
     ObjectType["PecorinoPayment"] = "PecorinoPayment";
 })(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
 
-},{}],34:[function(require,module,exports){
-arguments[4][29][0].apply(exports,arguments)
-},{"dup":29}],35:[function(require,module,exports){
+},{}],35:[function(require,module,exports){
 arguments[4][30][0].apply(exports,arguments)
 },{"dup":30}],36:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],37:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],38:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],39:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],40:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],37:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],38:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],39:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],40:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],41:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var pecorino_1 = require("../../../action/authorize/award/pecorino");
 exports.ObjectType = pecorino_1.ObjectType;
 
-},{"../../../action/authorize/award/pecorino":28}],41:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],42:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],43:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],44:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],45:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],46:[function(require,module,exports){
+},{"../../../action/authorize/award/pecorino":29}],42:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],43:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],44:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],45:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],46:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],47:[function(require,module,exports){
 "use strict";
 /**
  * アプリケーションクライアントイベントファクトリー
@@ -3153,7 +3306,7 @@ arguments[4][30][0].apply(exports,arguments)
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
-},{}],47:[function(require,module,exports){
+},{}],48:[function(require,module,exports){
 "use strict";
 /**
  * アプリケーションクライアントユーザーファクトリー
@@ -3161,7 +3314,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
-},{}],48:[function(require,module,exports){
+},{}],49:[function(require,module,exports){
 "use strict";
 /**
  * 作品タイプ
@@ -3174,9 +3327,9 @@ var CreativeWorkType;
 })(CreativeWorkType || (CreativeWorkType = {}));
 exports.default = CreativeWorkType;
 
-},{}],49:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],50:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],51:[function(require,module,exports){
 "use strict";
 /**
  * 映画作品ファクトリー
@@ -3202,7 +3355,7 @@ function createFromCOA(filmFromCOA) {
 }
 exports.createFromCOA = createFromCOA;
 
-},{"../creativeWorkType":48,"moment":118}],51:[function(require,module,exports){
+},{"../creativeWorkType":49,"moment":121}],52:[function(require,module,exports){
 "use strict";
 /**
  * エラーコード
@@ -3222,7 +3375,7 @@ var ErrorCode;
 })(ErrorCode || (ErrorCode = {}));
 exports.default = ErrorCode;
 
-},{}],52:[function(require,module,exports){
+},{}],53:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -3262,7 +3415,7 @@ var AlreadyInUseError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = AlreadyInUseError;
 
-},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],53:[function(require,module,exports){
+},{"../errorCode":52,"./sskts":61,"setprototypeof":183}],54:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -3301,7 +3454,7 @@ var ArgumentError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = ArgumentError;
 
-},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],54:[function(require,module,exports){
+},{"../errorCode":52,"./sskts":61,"setprototypeof":183}],55:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -3340,7 +3493,7 @@ var ArgumentNullError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = ArgumentNullError;
 
-},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],55:[function(require,module,exports){
+},{"../errorCode":52,"./sskts":61,"setprototypeof":183}],56:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -3378,7 +3531,7 @@ var ForbiddenError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = ForbiddenError;
 
-},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],56:[function(require,module,exports){
+},{"../errorCode":52,"./sskts":61,"setprototypeof":183}],57:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -3417,7 +3570,7 @@ var NotFoundError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = NotFoundError;
 
-},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],57:[function(require,module,exports){
+},{"../errorCode":52,"./sskts":61,"setprototypeof":183}],58:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -3455,7 +3608,7 @@ var NotImplementedError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = NotImplementedError;
 
-},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],58:[function(require,module,exports){
+},{"../errorCode":52,"./sskts":61,"setprototypeof":183}],59:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -3493,7 +3646,7 @@ var RateLimitExceededError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = RateLimitExceededError;
 
-},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],59:[function(require,module,exports){
+},{"../errorCode":52,"./sskts":61,"setprototypeof":183}],60:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -3531,7 +3684,7 @@ var ServiceUnavailableError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = ServiceUnavailableError;
 
-},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],60:[function(require,module,exports){
+},{"../errorCode":52,"./sskts":61,"setprototypeof":183}],61:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -3562,7 +3715,7 @@ var SSKTSError = /** @class */ (function (_super) {
 }(Error));
 exports.SSKTSError = SSKTSError;
 
-},{}],61:[function(require,module,exports){
+},{}],62:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -3600,7 +3753,7 @@ var UnauthorizedError = /** @class */ (function (_super) {
 }(sskts_1.SSKTSError));
 exports.default = UnauthorizedError;
 
-},{"../errorCode":51,"./sskts":60,"setprototypeof":179}],62:[function(require,module,exports){
+},{"../errorCode":52,"./sskts":61,"setprototypeof":183}],63:[function(require,module,exports){
 "use strict";
 /**
  * errors
@@ -3628,7 +3781,7 @@ exports.SSKTS = sskts_1.SSKTSError;
 var unauthorized_1 = require("./error/unauthorized");
 exports.Unauthorized = unauthorized_1.default;
 
-},{"./error/alreadyInUse":52,"./error/argument":53,"./error/argumentNull":54,"./error/forbidden":55,"./error/notFound":56,"./error/notImplemented":57,"./error/rateLimitExceeded":58,"./error/serviceUnavailable":59,"./error/sskts":60,"./error/unauthorized":61}],63:[function(require,module,exports){
+},{"./error/alreadyInUse":53,"./error/argument":54,"./error/argumentNull":55,"./error/forbidden":56,"./error/notFound":57,"./error/notImplemented":58,"./error/rateLimitExceeded":59,"./error/serviceUnavailable":60,"./error/sskts":61,"./error/unauthorized":62}],64:[function(require,module,exports){
 "use strict";
 /**
  * イベントファクトリー
@@ -3658,7 +3811,7 @@ function create(params) {
 }
 exports.create = create;
 
-},{}],64:[function(require,module,exports){
+},{}],65:[function(require,module,exports){
 "use strict";
 /**
  * イベントステータス
@@ -3673,7 +3826,7 @@ var EventStatusType;
 })(EventStatusType || (EventStatusType = {}));
 exports.default = EventStatusType;
 
-},{}],65:[function(require,module,exports){
+},{}],66:[function(require,module,exports){
 "use strict";
 /**
  * イベントタイプ
@@ -3686,7 +3839,7 @@ var EventType;
 })(EventType || (EventType = {}));
 exports.default = EventType;
 
-},{}],66:[function(require,module,exports){
+},{}],67:[function(require,module,exports){
 "use strict";
 /**
  * individual screening event factory
@@ -3802,7 +3955,7 @@ function createIdentifierFromCOA(params) {
 }
 exports.createIdentifierFromCOA = createIdentifierFromCOA;
 
-},{"../error/argument":53,"../event":63,"../event/screeningEvent":67,"../eventStatusType":64,"../eventType":65,"lodash":117,"moment":118}],67:[function(require,module,exports){
+},{"../error/argument":54,"../event":64,"../event/screeningEvent":68,"../eventStatusType":65,"../eventType":66,"lodash":120,"moment":121}],68:[function(require,module,exports){
 "use strict";
 /**
  * screen event factory
@@ -3891,7 +4044,7 @@ function createIdentifier(params) {
 }
 exports.createIdentifier = createIdentifier;
 
-},{"../creativeWorkType":48,"../eventStatusType":64,"../eventType":65,"../organizationType":72,"moment":118}],68:[function(require,module,exports){
+},{"../creativeWorkType":49,"../eventStatusType":65,"../eventType":66,"../organizationType":73,"moment":121}],69:[function(require,module,exports){
 "use strict";
 /**
  * 座席予約供給情報ファクトリー
@@ -3899,15 +4052,9 @@ exports.createIdentifier = createIdentifier;
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
-},{}],69:[function(require,module,exports){
-"use strict";
-/**
- * 注文ファクトリー
- * 注文は、確定した注文取引の領収証に値するものです。
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-
 },{}],70:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],71:[function(require,module,exports){
 "use strict";
 /**
  * 注文ステータス
@@ -3926,7 +4073,7 @@ var OrderStatus;
 })(OrderStatus || (OrderStatus = {}));
 exports.default = OrderStatus;
 
-},{}],71:[function(require,module,exports){
+},{}],72:[function(require,module,exports){
 "use strict";
 /**
  * 企業識別子
@@ -3938,7 +4085,7 @@ var CorporationOrganizationIdentifier;
 })(CorporationOrganizationIdentifier || (CorporationOrganizationIdentifier = {}));
 exports.default = CorporationOrganizationIdentifier;
 
-},{}],72:[function(require,module,exports){
+},{}],73:[function(require,module,exports){
 "use strict";
 /**
  * 組織タイプ
@@ -3951,13 +4098,13 @@ var OrganizationType;
 })(OrganizationType || (OrganizationType = {}));
 exports.default = OrganizationType;
 
-},{}],73:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],74:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],75:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],76:[function(require,module,exports){
+},{}],74:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],75:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],76:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],77:[function(require,module,exports){
 "use strict";
 /**
  * 決済方法タイプ
@@ -3970,11 +4117,11 @@ var PaymentMethodType;
 })(PaymentMethodType || (PaymentMethodType = {}));
 exports.default = PaymentMethodType;
 
-},{}],77:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],78:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],79:[function(require,module,exports){
+},{}],78:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],79:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],80:[function(require,module,exports){
 "use strict";
 /**
  * 人物タイプ
@@ -3986,7 +4133,7 @@ var PersonType;
 })(PersonType || (PersonType = {}));
 exports.default = PersonType;
 
-},{}],80:[function(require,module,exports){
+},{}],81:[function(require,module,exports){
 "use strict";
 /**
  * 場所タイプ
@@ -4001,7 +4148,7 @@ var PlaceType;
 })(PlaceType || (PlaceType = {}));
 exports.default = PlaceType;
 
-},{}],81:[function(require,module,exports){
+},{}],82:[function(require,module,exports){
 "use strict";
 /**
  * 劇場ファクトリー
@@ -4075,7 +4222,7 @@ function createScreeningRoomFromCOA(screenFromCOA) {
 }
 exports.createScreeningRoomFromCOA = createScreeningRoomFromCOA;
 
-},{"../placeType":80}],82:[function(require,module,exports){
+},{"../placeType":81}],83:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -4089,7 +4236,7 @@ var PriceCurrency;
 })(PriceCurrency || (PriceCurrency = {}));
 exports.default = PriceCurrency;
 
-},{}],83:[function(require,module,exports){
+},{}],84:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -4103,9 +4250,11 @@ var Award;
     Award["PecorinoPayment"] = "PecorinoPayment";
 })(Award = exports.Award || (exports.Award = {}));
 
-},{}],84:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],85:[function(require,module,exports){
+},{}],85:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],86:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],87:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -4132,7 +4281,7 @@ var ReservationStatusType;
 })(ReservationStatusType || (ReservationStatusType = {}));
 exports.default = ReservationStatusType;
 
-},{}],86:[function(require,module,exports){
+},{}],88:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -4144,11 +4293,24 @@ var ReservationType;
 })(ReservationType || (ReservationType = {}));
 exports.default = ReservationType;
 
-},{}],87:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],88:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],89:[function(require,module,exports){
+},{}],89:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],90:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * ソートタイプ
+ */
+var SortType;
+(function (SortType) {
+    SortType[SortType["Ascending"] = 1] = "Ascending";
+    SortType[SortType["Descending"] = -1] = "Descending";
+})(SortType || (SortType = {}));
+exports.default = SortType;
+
+},{}],91:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],92:[function(require,module,exports){
 "use strict";
 /**
  * task name
@@ -4232,7 +4394,7 @@ var TaskName;
 })(TaskName || (TaskName = {}));
 exports.default = TaskName;
 
-},{}],90:[function(require,module,exports){
+},{}],93:[function(require,module,exports){
 "use strict";
 /**
  * タスクステータス
@@ -4259,43 +4421,43 @@ var TaskStatus;
 })(TaskStatus || (TaskStatus = {}));
 exports.default = TaskStatus;
 
-},{}],91:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],92:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],93:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],94:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],95:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],96:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],97:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],98:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],99:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],100:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],101:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],102:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],103:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],104:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],105:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],106:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],107:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],108:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],109:[function(require,module,exports){
+},{}],94:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],95:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],96:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],97:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],98:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],99:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],100:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],101:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],102:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],103:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],104:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],105:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],106:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],107:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],108:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],109:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],110:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],111:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],112:[function(require,module,exports){
 "use strict";
 /**
  * 取引ステータス
@@ -4310,7 +4472,7 @@ var TransactionStatusType;
 })(TransactionStatusType || (TransactionStatusType = {}));
 exports.default = TransactionStatusType;
 
-},{}],110:[function(require,module,exports){
+},{}],113:[function(require,module,exports){
 "use strict";
 /**
  * 取引タスクエクスポートステータス
@@ -4333,7 +4495,7 @@ var TransactionTasksExportationStatus;
 })(TransactionTasksExportationStatus || (TransactionTasksExportationStatus = {}));
 exports.default = TransactionTasksExportationStatus;
 
-},{}],111:[function(require,module,exports){
+},{}],114:[function(require,module,exports){
 "use strict";
 /**
  * 取引タイプ
@@ -4352,9 +4514,9 @@ var TransactionType;
 })(TransactionType || (TransactionType = {}));
 exports.default = TransactionType;
 
-},{}],112:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],113:[function(require,module,exports){
+},{}],115:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],116:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -4372,7 +4534,7 @@ var Reason;
     Reason["Seller"] = "Seller";
 })(Reason = exports.Reason || (exports.Reason = {}));
 
-},{}],114:[function(require,module,exports){
+},{}],117:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -4386,14 +4548,14 @@ var UnitCode;
     UnitCode["Sec"] = "SEC";
 })(UnitCode = exports.UnitCode || (exports.UnitCode = {}));
 
-},{}],115:[function(require,module,exports){
+},{}],118:[function(require,module,exports){
 "use strict";
 /**
  * URLファクトリー
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
-},{}],116:[function(require,module,exports){
+},{}],119:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -4446,10 +4608,12 @@ var MovieTheaterPlaceFactory = require("./factory/place/movieTheater");
 var placeType_1 = require("./factory/placeType");
 var priceCurrency_1 = require("./factory/priceCurrency");
 var ProgramMembershipFactory = require("./factory/programMembership");
+var PropertyValueFactory = require("./factory/propertyValue");
 var QuantitativeValueFactory = require("./factory/quantitativeValue");
 var EventReservationFactory = require("./factory/reservation/event");
 var reservationStatusType_1 = require("./factory/reservationStatusType");
 var reservationType_1 = require("./factory/reservationType");
+var sortType_1 = require("./factory/sortType");
 var unitCode_1 = require("./factory/unitCode");
 var CancelCreditCardTaskFactory = require("./factory/task/cancelCreditCard");
 var CancelMvtkTaskFactory = require("./factory/task/cancelMvtk");
@@ -4625,6 +4789,7 @@ exports.person = PersonFactory;
 exports.personType = personType_1.default;
 exports.placeType = placeType_1.default;
 exports.programMembership = ProgramMembershipFactory;
+exports.propertyValue = PropertyValueFactory;
 exports.quantitativeValue = QuantitativeValueFactory;
 var reservation;
 (function (reservation) {
@@ -4654,6 +4819,7 @@ var task;
     task.unRegisterProgramMembership = UnRegisterProgramMembershipTaskFactory;
     task.useMvtk = UseMvtkTaskFactory;
 })(task = exports.task || (exports.task = {}));
+exports.sortType = sortType_1.default;
 exports.taskExecutionResult = TaskExecutionResultFactory;
 exports.taskName = taskName_1.default;
 exports.taskStatus = taskStatus_1.default;
@@ -4668,7 +4834,7 @@ exports.transactionType = transactionType_1.default;
 exports.unitCode = unitCode_1.UnitCode;
 exports.url = URLFactory;
 
-},{"./factory/accountType":25,"./factory/action/authorize/award/pecorino":28,"./factory/action/authorize/discount/mvtk":29,"./factory/action/authorize/offer/programMembership":30,"./factory/action/authorize/offer/seatReservation":31,"./factory/action/authorize/paymentMethod/creditCard":32,"./factory/action/authorize/paymentMethod/pecorino":33,"./factory/action/consume/use/mvtk":34,"./factory/action/interact/register/programMembership":35,"./factory/action/interact/unRegister/programMembership":36,"./factory/action/trade/order":37,"./factory/action/trade/pay":38,"./factory/action/trade/refund":39,"./factory/action/transfer/give/pecorinoAward":40,"./factory/action/transfer/print/ticket":41,"./factory/action/transfer/return/order":42,"./factory/action/transfer/return/pecorinoAward":43,"./factory/action/transfer/send/message/email":44,"./factory/action/transfer/send/order":45,"./factory/actionStatusType":26,"./factory/actionType":27,"./factory/clientEvent":46,"./factory/clientUser":47,"./factory/creativeWork/message/email":49,"./factory/creativeWork/movie":50,"./factory/creativeWorkType":48,"./factory/errorCode":51,"./factory/errors":62,"./factory/event/individualScreeningEvent":66,"./factory/event/screeningEvent":67,"./factory/eventStatusType":64,"./factory/eventType":65,"./factory/offer/seatReservation":68,"./factory/order":69,"./factory/orderStatus":70,"./factory/organization/corporation":73,"./factory/organization/movieTheater":74,"./factory/organizationIdentifier/corporation":71,"./factory/organizationType":72,"./factory/ownershipInfo":75,"./factory/paymentMethod/paymentCard/creditCard":77,"./factory/paymentMethodType":76,"./factory/person":78,"./factory/personType":79,"./factory/place/movieTheater":81,"./factory/placeType":80,"./factory/priceCurrency":82,"./factory/programMembership":83,"./factory/quantitativeValue":84,"./factory/reservation/event":87,"./factory/reservationStatusType":85,"./factory/reservationType":86,"./factory/task/cancelCreditCard":91,"./factory/task/cancelMvtk":92,"./factory/task/cancelPecorino":93,"./factory/task/cancelPecorinoAward":94,"./factory/task/cancelSeatReservation":95,"./factory/task/givePecorinoAward":96,"./factory/task/payCreditCard":97,"./factory/task/payPecorino":98,"./factory/task/placeOrder":99,"./factory/task/refundCreditCard":100,"./factory/task/refundPecorino":101,"./factory/task/registerProgramMembership":102,"./factory/task/returnOrder":103,"./factory/task/returnPecorinoAward":104,"./factory/task/sendEmailMessage":105,"./factory/task/sendOrder":106,"./factory/task/unRegisterProgramMembership":107,"./factory/task/useMvtk":108,"./factory/taskExecutionResult":88,"./factory/taskName":89,"./factory/taskStatus":90,"./factory/transaction/placeOrder":112,"./factory/transaction/returnOrder":113,"./factory/transactionStatusType":109,"./factory/transactionTasksExportationStatus":110,"./factory/transactionType":111,"./factory/unitCode":114,"./factory/url":115,"@pecorino/factory":153}],117:[function(require,module,exports){
+},{"./factory/accountType":26,"./factory/action/authorize/award/pecorino":29,"./factory/action/authorize/discount/mvtk":30,"./factory/action/authorize/offer/programMembership":31,"./factory/action/authorize/offer/seatReservation":32,"./factory/action/authorize/paymentMethod/creditCard":33,"./factory/action/authorize/paymentMethod/pecorino":34,"./factory/action/consume/use/mvtk":35,"./factory/action/interact/register/programMembership":36,"./factory/action/interact/unRegister/programMembership":37,"./factory/action/trade/order":38,"./factory/action/trade/pay":39,"./factory/action/trade/refund":40,"./factory/action/transfer/give/pecorinoAward":41,"./factory/action/transfer/print/ticket":42,"./factory/action/transfer/return/order":43,"./factory/action/transfer/return/pecorinoAward":44,"./factory/action/transfer/send/message/email":45,"./factory/action/transfer/send/order":46,"./factory/actionStatusType":27,"./factory/actionType":28,"./factory/clientEvent":47,"./factory/clientUser":48,"./factory/creativeWork/message/email":50,"./factory/creativeWork/movie":51,"./factory/creativeWorkType":49,"./factory/errorCode":52,"./factory/errors":63,"./factory/event/individualScreeningEvent":67,"./factory/event/screeningEvent":68,"./factory/eventStatusType":65,"./factory/eventType":66,"./factory/offer/seatReservation":69,"./factory/order":70,"./factory/orderStatus":71,"./factory/organization/corporation":74,"./factory/organization/movieTheater":75,"./factory/organizationIdentifier/corporation":72,"./factory/organizationType":73,"./factory/ownershipInfo":76,"./factory/paymentMethod/paymentCard/creditCard":78,"./factory/paymentMethodType":77,"./factory/person":79,"./factory/personType":80,"./factory/place/movieTheater":82,"./factory/placeType":81,"./factory/priceCurrency":83,"./factory/programMembership":84,"./factory/propertyValue":85,"./factory/quantitativeValue":86,"./factory/reservation/event":89,"./factory/reservationStatusType":87,"./factory/reservationType":88,"./factory/sortType":90,"./factory/task/cancelCreditCard":94,"./factory/task/cancelMvtk":95,"./factory/task/cancelPecorino":96,"./factory/task/cancelPecorinoAward":97,"./factory/task/cancelSeatReservation":98,"./factory/task/givePecorinoAward":99,"./factory/task/payCreditCard":100,"./factory/task/payPecorino":101,"./factory/task/placeOrder":102,"./factory/task/refundCreditCard":103,"./factory/task/refundPecorino":104,"./factory/task/registerProgramMembership":105,"./factory/task/returnOrder":106,"./factory/task/returnPecorinoAward":107,"./factory/task/sendEmailMessage":108,"./factory/task/sendOrder":109,"./factory/task/unRegisterProgramMembership":110,"./factory/task/useMvtk":111,"./factory/taskExecutionResult":91,"./factory/taskName":92,"./factory/taskStatus":93,"./factory/transaction/placeOrder":115,"./factory/transaction/returnOrder":116,"./factory/transactionStatusType":112,"./factory/transactionTasksExportationStatus":113,"./factory/transactionType":114,"./factory/unitCode":117,"./factory/url":118,"@pecorino/factory":157}],120:[function(require,module,exports){
 (function (global){
 /**
  * @license
@@ -4684,7 +4850,7 @@ exports.url = URLFactory;
   var undefined;
 
   /** Used as the semantic version number. */
-  var VERSION = '4.17.10';
+  var VERSION = '4.17.11';
 
   /** Used as the size to enable large array optimizations. */
   var LARGE_ARRAY_SIZE = 200;
@@ -4948,7 +5114,7 @@ exports.url = URLFactory;
   var reHasUnicode = RegExp('[' + rsZWJ + rsAstralRange  + rsComboRange + rsVarRange + ']');
 
   /** Used to detect strings that need a more robust regexp to match words. */
-  var reHasUnicodeWord = /[a-z][A-Z]|[A-Z]{2,}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
+  var reHasUnicodeWord = /[a-z][A-Z]|[A-Z]{2}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
 
   /** Used to assign default `context` object properties. */
   var contextProps = [
@@ -5894,20 +6060,6 @@ exports.url = URLFactory;
       }
     }
     return result;
-  }
-
-  /**
-   * Gets the value at `key`, unless `key` is "__proto__".
-   *
-   * @private
-   * @param {Object} object The object to query.
-   * @param {string} key The key of the property to get.
-   * @returns {*} Returns the property value.
-   */
-  function safeGet(object, key) {
-    return key == '__proto__'
-      ? undefined
-      : object[key];
   }
 
   /**
@@ -8367,7 +8519,7 @@ exports.url = URLFactory;
           if (isArguments(objValue)) {
             newValue = toPlainObject(objValue);
           }
-          else if (!isObject(objValue) || (srcIndex && isFunction(objValue))) {
+          else if (!isObject(objValue) || isFunction(objValue)) {
             newValue = initCloneObject(srcValue);
           }
         }
@@ -11288,6 +11440,22 @@ exports.url = URLFactory;
         array[length] = isIndex(index, arrLength) ? oldArray[index] : undefined;
       }
       return array;
+    }
+
+    /**
+     * Gets the value at `key`, unless `key` is "__proto__".
+     *
+     * @private
+     * @param {Object} object The object to query.
+     * @param {string} key The key of the property to get.
+     * @returns {*} Returns the property value.
+     */
+    function safeGet(object, key) {
+      if (key == '__proto__') {
+        return;
+      }
+
+      return object[key];
     }
 
     /**
@@ -21777,7 +21945,7 @@ exports.url = URLFactory;
 }.call(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],118:[function(require,module,exports){
+},{}],121:[function(require,module,exports){
 //! moment.js
 
 ;(function (global, factory) {
@@ -26285,7 +26453,7 @@ exports.url = URLFactory;
 
 })));
 
-},{}],119:[function(require,module,exports){
+},{}],122:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -26299,7 +26467,7 @@ var TypeOf;
     TypeOf["Account"] = "Account";
 })(TypeOf = exports.TypeOf || (exports.TypeOf = {}));
 
-},{}],120:[function(require,module,exports){
+},{}],123:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -26318,9 +26486,9 @@ var AccountStatusType;
 })(AccountStatusType || (AccountStatusType = {}));
 exports.default = AccountStatusType;
 
-},{}],121:[function(require,module,exports){
-arguments[4][26][0].apply(exports,arguments)
-},{"dup":26}],122:[function(require,module,exports){
+},{}],124:[function(require,module,exports){
+arguments[4][27][0].apply(exports,arguments)
+},{"dup":27}],125:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -26341,13 +26509,13 @@ var ActionType;
 })(ActionType || (ActionType = {}));
 exports.default = ActionType;
 
-},{}],123:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],124:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],125:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],126:[function(require,module,exports){
+},{}],126:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],127:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],128:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],129:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -26359,9 +26527,9 @@ var CreativeWorkType;
 })(CreativeWorkType || (CreativeWorkType = {}));
 exports.default = CreativeWorkType;
 
-},{}],127:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],128:[function(require,module,exports){
+},{}],130:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],131:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -26381,12 +26549,15 @@ var ErrorCode;
 })(ErrorCode || (ErrorCode = {}));
 exports.default = ErrorCode;
 
-},{}],129:[function(require,module,exports){
+},{}],132:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -26420,12 +26591,15 @@ var AlreadyInUseError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = AlreadyInUseError;
 
-},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],130:[function(require,module,exports){
+},{"../errorCode":131,"./pecorino":138,"setprototypeof":183}],133:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -26458,12 +26632,15 @@ var ArgumentError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = ArgumentError;
 
-},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],131:[function(require,module,exports){
+},{"../errorCode":131,"./pecorino":138,"setprototypeof":183}],134:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -26496,12 +26673,15 @@ var ArgumentNullError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = ArgumentNullError;
 
-},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],132:[function(require,module,exports){
+},{"../errorCode":131,"./pecorino":138,"setprototypeof":183}],135:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -26533,12 +26713,15 @@ var ForbiddenError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = ForbiddenError;
 
-},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],133:[function(require,module,exports){
+},{"../errorCode":131,"./pecorino":138,"setprototypeof":183}],136:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -26571,12 +26754,15 @@ var NotFoundError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = NotFoundError;
 
-},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],134:[function(require,module,exports){
+},{"../errorCode":131,"./pecorino":138,"setprototypeof":183}],137:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -26608,12 +26794,15 @@ var NotImplementedError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = NotImplementedError;
 
-},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],135:[function(require,module,exports){
+},{"../errorCode":131,"./pecorino":138,"setprototypeof":183}],138:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -26639,12 +26828,15 @@ var PecorinoError = /** @class */ (function (_super) {
 }(Error));
 exports.PecorinoError = PecorinoError;
 
-},{}],136:[function(require,module,exports){
+},{}],139:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -26676,12 +26868,15 @@ var RateLimitExceededError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = RateLimitExceededError;
 
-},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],137:[function(require,module,exports){
+},{"../errorCode":131,"./pecorino":138,"setprototypeof":183}],140:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -26713,12 +26908,15 @@ var ServiceUnavailableError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = ServiceUnavailableError;
 
-},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],138:[function(require,module,exports){
+},{"../errorCode":131,"./pecorino":138,"setprototypeof":183}],141:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -26750,7 +26948,7 @@ var UnauthorizedError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = UnauthorizedError;
 
-},{"../errorCode":128,"./pecorino":135,"setprototypeof":179}],139:[function(require,module,exports){
+},{"../errorCode":131,"./pecorino":138,"setprototypeof":183}],142:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -26777,11 +26975,13 @@ exports.ServiceUnavailable = serviceUnavailable_1.default;
 var unauthorized_1 = require("./error/unauthorized");
 exports.Unauthorized = unauthorized_1.default;
 
-},{"./error/alreadyInUse":129,"./error/argument":130,"./error/argumentNull":131,"./error/forbidden":132,"./error/notFound":133,"./error/notImplemented":134,"./error/pecorino":135,"./error/rateLimitExceeded":136,"./error/serviceUnavailable":137,"./error/unauthorized":138}],140:[function(require,module,exports){
-arguments[4][82][0].apply(exports,arguments)
-},{"dup":82}],141:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],142:[function(require,module,exports){
+},{"./error/alreadyInUse":132,"./error/argument":133,"./error/argumentNull":134,"./error/forbidden":135,"./error/notFound":136,"./error/notImplemented":137,"./error/pecorino":138,"./error/rateLimitExceeded":139,"./error/serviceUnavailable":140,"./error/unauthorized":141}],143:[function(require,module,exports){
+arguments[4][83][0].apply(exports,arguments)
+},{"dup":83}],144:[function(require,module,exports){
+arguments[4][90][0].apply(exports,arguments)
+},{"dup":90}],145:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],146:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -26800,7 +27000,7 @@ var TaskName;
 })(TaskName || (TaskName = {}));
 exports.default = TaskName;
 
-},{}],143:[function(require,module,exports){
+},{}],147:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -26827,11 +27027,11 @@ var TaskStatus;
 })(TaskStatus || (TaskStatus = {}));
 exports.default = TaskStatus;
 
-},{}],144:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],145:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],146:[function(require,module,exports){
+},{}],148:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],149:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],150:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -26846,7 +27046,7 @@ var TransactionStatusType;
 })(TransactionStatusType || (TransactionStatusType = {}));
 exports.default = TransactionStatusType;
 
-},{}],147:[function(require,module,exports){
+},{}],151:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -26869,7 +27069,7 @@ var TransactionTasksExportationStatus;
 })(TransactionTasksExportationStatus || (TransactionTasksExportationStatus = {}));
 exports.default = TransactionTasksExportationStatus;
 
-},{}],148:[function(require,module,exports){
+},{}],152:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -26892,15 +27092,15 @@ var TransactionType;
 })(TransactionType || (TransactionType = {}));
 exports.default = TransactionType;
 
-},{}],149:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],150:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],151:[function(require,module,exports){
-arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],152:[function(require,module,exports){
-arguments[4][115][0].apply(exports,arguments)
-},{"dup":115}],153:[function(require,module,exports){
+},{}],153:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],154:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],155:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],156:[function(require,module,exports){
+arguments[4][118][0].apply(exports,arguments)
+},{"dup":118}],157:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -26927,6 +27127,7 @@ var WithdrawTransactionFactory = require("./factory/transaction/withdraw");
 var transactionStatusType_1 = require("./factory/transactionStatusType");
 var transactionTasksExportationStatus_1 = require("./factory/transactionTasksExportationStatus");
 var transactionType_1 = require("./factory/transactionType");
+var sortType_1 = require("./factory/sortType");
 var URLFactory = require("./factory/url");
 var errorCode_1 = require("./factory/errorCode");
 var errors = require("./factory/errors");
@@ -26965,6 +27166,7 @@ var task;
     task.cancelMoneyTransfer = CancelMoneyTransferTaskFactory;
     task.moneyTransfer = MoneyTransferTaskFactory;
 })(task = exports.task || (exports.task = {}));
+exports.sortType = sortType_1.default;
 exports.taskExecutionResult = TaskExecutionResultFactory;
 exports.taskName = taskName_1.default;
 exports.taskStatus = taskStatus_1.default;
@@ -26979,7 +27181,7 @@ exports.transactionTasksExportationStatus = transactionTasksExportationStatus_1.
 exports.transactionType = transactionType_1.default;
 exports.url = URLFactory;
 
-},{"./factory/account":119,"./factory/accountStatusType":120,"./factory/action/transfer/moneyTransfer":123,"./factory/action/transfer/send/message/email":124,"./factory/actionStatusType":121,"./factory/actionType":122,"./factory/clientUser":125,"./factory/creativeWork/message/email":127,"./factory/creativeWorkType":126,"./factory/errorCode":128,"./factory/errors":139,"./factory/priceCurrency":140,"./factory/task/cancelMoneyTransfer":144,"./factory/task/moneyTransfer":145,"./factory/taskExecutionResult":141,"./factory/taskName":142,"./factory/taskStatus":143,"./factory/transaction/deposit":149,"./factory/transaction/transfer":150,"./factory/transaction/withdraw":151,"./factory/transactionStatusType":146,"./factory/transactionTasksExportationStatus":147,"./factory/transactionType":148,"./factory/url":152}],154:[function(require,module,exports){
+},{"./factory/account":122,"./factory/accountStatusType":123,"./factory/action/transfer/moneyTransfer":126,"./factory/action/transfer/send/message/email":127,"./factory/actionStatusType":124,"./factory/actionType":125,"./factory/clientUser":128,"./factory/creativeWork/message/email":130,"./factory/creativeWorkType":129,"./factory/errorCode":131,"./factory/errors":142,"./factory/priceCurrency":143,"./factory/sortType":144,"./factory/task/cancelMoneyTransfer":148,"./factory/task/moneyTransfer":149,"./factory/taskExecutionResult":145,"./factory/taskName":146,"./factory/taskStatus":147,"./factory/transaction/deposit":153,"./factory/transaction/transfer":154,"./factory/transaction/withdraw":155,"./factory/transactionStatusType":150,"./factory/transactionTasksExportationStatus":151,"./factory/transactionType":152,"./factory/url":156}],158:[function(require,module,exports){
 'use strict'
 
 exports.byteLength = byteLength
@@ -27095,7 +27297,7 @@ function fromByteArray (uint8) {
   return parts.join('')
 }
 
-},{}],155:[function(require,module,exports){
+},{}],159:[function(require,module,exports){
 
 /**
  * Expose `Emitter`.
@@ -27260,7 +27462,7 @@ Emitter.prototype.hasListeners = function(event){
   return !! this.listeners(event).length;
 };
 
-},{}],156:[function(require,module,exports){
+},{}],160:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -28021,7 +28223,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS;
 
 }));
-},{}],157:[function(require,module,exports){
+},{}],161:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -28157,7 +28359,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS.enc.Base64;
 
 }));
-},{"./core":156}],158:[function(require,module,exports){
+},{"./core":160}],162:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -28176,7 +28378,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS.enc.Hex;
 
 }));
-},{"./core":156}],159:[function(require,module,exports){
+},{"./core":160}],163:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -28376,7 +28578,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS.SHA256;
 
 }));
-},{"./core":156}],160:[function(require,module,exports){
+},{"./core":160}],164:[function(require,module,exports){
 (function (process){
 /**
  * This is the web browser implementation of `debug()`.
@@ -28575,7 +28777,7 @@ function localstorage() {
 }
 
 }).call(this,require('_process'))
-},{"./debug":161,"_process":173}],161:[function(require,module,exports){
+},{"./debug":165,"_process":177}],165:[function(require,module,exports){
 
 /**
  * This is the common logic for both the Node.js and web browser
@@ -28802,7 +29004,7 @@ function coerce(val) {
   return val;
 }
 
-},{"ms":172}],162:[function(require,module,exports){
+},{"ms":176}],166:[function(require,module,exports){
 // Generated by CoffeeScript 2.3.0
 // # node-http-status
 
@@ -29282,7 +29484,7 @@ module.exports = {
   }
 };
 
-},{}],163:[function(require,module,exports){
+},{}],167:[function(require,module,exports){
 (function (name, context, definition) {
   if (typeof module !== 'undefined' && module.exports) module.exports = definition();
   else if (typeof define === 'function' && define.amd) define(definition);
@@ -29322,7 +29524,7 @@ module.exports = {
 
 });
 
-},{}],164:[function(require,module,exports){
+},{}],168:[function(require,module,exports){
 var base64 = require('base64-js');
 
 function padding(str) {
@@ -29408,7 +29610,7 @@ module.exports = {
   base64ToBase64Url: base64ToBase64Url
 };
 
-},{"base64-js":154}],165:[function(require,module,exports){
+},{"base64-js":158}],169:[function(require,module,exports){
 function DummyCache() {}
 
 DummyCache.prototype.get = function () {
@@ -29424,7 +29626,7 @@ DummyCache.prototype.set = function () {
 
 module.exports = DummyCache;
 
-},{}],166:[function(require,module,exports){
+},{}],170:[function(require,module,exports){
 function ConfigurationError(message) {
   this.name = 'ConfigurationError';
   this.message = (message || '');
@@ -29442,7 +29644,7 @@ module.exports = {
   TokenValidationError: TokenValidationError
 };
 
-},{}],167:[function(require,module,exports){
+},{}],171:[function(require,module,exports){
 var urljoin = require('url-join');
 var base64 = require('./base64');
 var request = require('superagent');
@@ -29488,7 +29690,7 @@ module.exports = {
   getJWKS: getJWKS
 };
 
-},{"./base64":164,"superagent":181,"url-join":163}],168:[function(require,module,exports){
+},{"./base64":168,"superagent":185,"url-join":167}],172:[function(require,module,exports){
 /*
 Based on the work of Tom Wu
 http://www-cs-students.stanford.edu/~tjw/jsbn/
@@ -29567,7 +29769,7 @@ RSAVerifier.prototype.verify = function (msg, encsig) {
 
 module.exports = RSAVerifier;
 
-},{"crypto-js/sha256":159,"jsbn":171}],169:[function(require,module,exports){
+},{"crypto-js/sha256":163,"jsbn":175}],173:[function(require,module,exports){
 var sha256 = require('crypto-js/sha256');
 var cryptoBase64 = require('crypto-js/enc-base64');
 var cryptoHex = require('crypto-js/enc-hex');
@@ -29860,7 +30062,7 @@ IdTokenVerifier.prototype.validateAccessToken = function (accessToken, alg, atHa
 
 module.exports = IdTokenVerifier;
 
-},{"./helpers/base64":164,"./helpers/dummy-cache":165,"./helpers/error":166,"./helpers/jwks":167,"./helpers/rsa-verifier":168,"crypto-js/enc-base64":157,"crypto-js/enc-hex":158,"crypto-js/sha256":159}],170:[function(require,module,exports){
+},{"./helpers/base64":168,"./helpers/dummy-cache":169,"./helpers/error":170,"./helpers/jwks":171,"./helpers/rsa-verifier":172,"crypto-js/enc-base64":161,"crypto-js/enc-hex":162,"crypto-js/sha256":163}],174:[function(require,module,exports){
 // the whatwg-fetch polyfill installs the fetch() function
 // on the global object (window or self)
 //
@@ -29868,7 +30070,7 @@ module.exports = IdTokenVerifier;
 require('whatwg-fetch');
 module.exports = self.fetch.bind(self);
 
-},{"whatwg-fetch":186}],171:[function(require,module,exports){
+},{"whatwg-fetch":190}],175:[function(require,module,exports){
 (function(){
 
     // Copyright (c) 2005  Tom Wu
@@ -31227,7 +31429,7 @@ module.exports = self.fetch.bind(self);
 
 }).call(this);
 
-},{}],172:[function(require,module,exports){
+},{}],176:[function(require,module,exports){
 /**
  * Helpers.
  */
@@ -31381,7 +31583,7 @@ function plural(ms, n, name) {
   return Math.ceil(ms / n) + ' ' + name + 's';
 }
 
-},{}],173:[function(require,module,exports){
+},{}],177:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -31567,7 +31769,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],174:[function(require,module,exports){
+},{}],178:[function(require,module,exports){
 'use strict';
 
 var replace = String.prototype.replace;
@@ -31587,7 +31789,7 @@ module.exports = {
     RFC3986: 'RFC3986'
 };
 
-},{}],175:[function(require,module,exports){
+},{}],179:[function(require,module,exports){
 'use strict';
 
 var stringify = require('./stringify');
@@ -31600,7 +31802,7 @@ module.exports = {
     stringify: stringify
 };
 
-},{"./formats":174,"./parse":176,"./stringify":177}],176:[function(require,module,exports){
+},{"./formats":178,"./parse":180,"./stringify":181}],180:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -31776,7 +31978,7 @@ module.exports = function (str, opts) {
     return utils.compact(obj);
 };
 
-},{"./utils":178}],177:[function(require,module,exports){
+},{"./utils":182}],181:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -31988,7 +32190,7 @@ module.exports = function (object, opts) {
     return joined.length > 0 ? prefix + joined : '';
 };
 
-},{"./formats":174,"./utils":178}],178:[function(require,module,exports){
+},{"./formats":178,"./utils":182}],182:[function(require,module,exports){
 'use strict';
 
 var has = Object.prototype.hasOwnProperty;
@@ -32203,7 +32405,7 @@ module.exports = {
     merge: merge
 };
 
-},{}],179:[function(require,module,exports){
+},{}],183:[function(require,module,exports){
 module.exports = Object.setPrototypeOf || ({__proto__:[]} instanceof Array ? setProtoOf : mixinProperties);
 
 function setProtoOf(obj, proto) {
@@ -32220,7 +32422,7 @@ function mixinProperties(obj, proto) {
 	return obj;
 }
 
-},{}],180:[function(require,module,exports){
+},{}],184:[function(require,module,exports){
 function Agent() {
   this._defaults = [];
 }
@@ -32242,7 +32444,7 @@ Agent.prototype._setDefaults = function(req) {
 
 module.exports = Agent;
 
-},{}],181:[function(require,module,exports){
+},{}],185:[function(require,module,exports){
 /**
  * Root reference for iframes.
  */
@@ -33164,7 +33366,7 @@ request.put = function(url, data, fn) {
   return req;
 };
 
-},{"./agent-base":180,"./is-object":182,"./request-base":183,"./response-base":184,"component-emitter":155}],182:[function(require,module,exports){
+},{"./agent-base":184,"./is-object":186,"./request-base":187,"./response-base":188,"component-emitter":159}],186:[function(require,module,exports){
 'use strict';
 
 /**
@@ -33181,7 +33383,7 @@ function isObject(obj) {
 
 module.exports = isObject;
 
-},{}],183:[function(require,module,exports){
+},{}],187:[function(require,module,exports){
 'use strict';
 
 /**
@@ -33877,7 +34079,7 @@ RequestBase.prototype._setTimeouts = function() {
   }
 };
 
-},{"./is-object":182}],184:[function(require,module,exports){
+},{"./is-object":186}],188:[function(require,module,exports){
 'use strict';
 
 /**
@@ -34015,7 +34217,7 @@ ResponseBase.prototype._setStatusProperties = function(status){
     this.unprocessableEntity = 422 == status;
 };
 
-},{"./utils":185}],185:[function(require,module,exports){
+},{"./utils":189}],189:[function(require,module,exports){
 'use strict';
 
 /**
@@ -34088,7 +34290,7 @@ exports.cleanHeader = function(header, changesOrigin){
   return header;
 };
 
-},{}],186:[function(require,module,exports){
+},{}],190:[function(require,module,exports){
 (function(self) {
   'use strict';
 
