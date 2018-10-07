@@ -2333,6 +2333,23 @@ var PersonService = /** @class */ (function (_super) {
             });
         });
     };
+    /**
+     * IDで検索
+     */
+    PersonService.prototype.findById = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/people/" + params.id,
+                        method: 'GET',
+                        expectedStatusCodes: [http_status_1.OK]
+                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
     return PersonService;
 }(service_1.Service));
 exports.PersonService = PersonService;
