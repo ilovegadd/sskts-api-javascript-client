@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.7.1
+version: v1.13.1
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:superagent:20170807':
@@ -10,4 +10,8 @@ ignore:
     - idtoken-verifier > superagent > mime:
         reason: waiting update
         expires: '2017-10-28T04:07:53.609Z'
-patch: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:lodash:20180130':
+    - '@motionpicture/sskts-api-abstract-client > @motionpicture/sskts-factory > @cinerino/factory > @movieticket/reserve-api-nodejs-client > @movieticket/reserve-api-abstract-client > @motionpicture/mvtk-reserve-service > soap > lodash':
+        patched: '2018-12-11T05:27:49.203Z'
