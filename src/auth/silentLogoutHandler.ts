@@ -36,6 +36,7 @@ export default class SilentLogoutHandler {
                 }
 
             } catch (error) {
+                // tslint:disable-next-line:no-console
                 console.error('SilentLogoutHandler.GET_CALLBACK_HANDLER:', error);
             }
 
