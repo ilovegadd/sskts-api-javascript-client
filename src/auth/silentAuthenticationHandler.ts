@@ -41,6 +41,7 @@ export default class SilentAuthenticationHandler {
                 }
 
             } catch (error) {
+                // tslint:disable-next-line:no-console
                 console.error('SilentAuthenticationHandler.GET_CALLBACK_HANDLER:', error);
             }
 

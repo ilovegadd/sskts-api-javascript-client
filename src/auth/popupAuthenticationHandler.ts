@@ -41,6 +41,7 @@ export default class PopupAuthenticationHandler {
                 }
 
             } catch (error) {
+                // tslint:disable-next-line:no-console
                 console.error('PopupAuthenticationHandler.GET_CALLBACK_HANDLER:', error);
             }
 

@@ -18,6 +18,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ### Security
 
+## v4.3.0 - 2018-12-11
+
+### Changed
+
+- update sskts-api-abstract-client
+
 ## v4.2.0 - 2018-10-08
 
 ### Added
