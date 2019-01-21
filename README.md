@@ -11,14 +11,18 @@
 
 ## Table of Contents
 
-* [Installation](#installation)
-* [Usage](#usage)
-  * [Authorizing and authenticating](#authorizing-and-authenticating)
-    * [OAuth2 client](#oauth2-client)
-      * [Generating an OAuth2 client](#generating-an-oauth2-client)
-      * [Authorize](#authorize)
-      * [Setting service-level auth](#setting-service-level-auth)
-* [License](#license)
+- [SSKTS API Client Library for Javascript](#sskts-api-client-library-for-javascript)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+    - [CommonJS](#commonjs)
+    - [Browser](#browser)
+  - [Usage](#usage)
+    - [Authorizing and authenticating](#authorizing-and-authenticating)
+      - [OAuth2 client](#oauth2-client)
+        - [Generating an OAuth2 client](#generating-an-oauth2-client)
+        - [Authorize](#authorize)
+        - [Setting service-level auth](#setting-service-level-auth)
+  - [License](#license)
 
 ## Installation
 
