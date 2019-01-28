@@ -1,30 +1,20 @@
 /**
- * Sasaki API client for javascript
- *
- * @ignore
+ * API client for javascript
  */
-
+import * as cinerino from '@cinerino/api-javascript-client';
 import * as sasaki from '@motionpicture/sskts-api-abstract-client';
-
-import { ImplicitGrantClient, IOptions as IImplicitGrantClientOptions } from './auth/implicitGrantClient';
 
 /**
  * factory
- * All object interfaces are here.
- * 全てのオブジェクトのインターフェースはここに含まれます。
- * @export
  */
 export import factory = sasaki.factory;
-
 export import service = sasaki.service;
 export import transporters = sasaki.transporters;
 
-export type IImplicitGrantClient = ImplicitGrantClient;
+export import IImplicitGrantClient = cinerino.IImplicitGrantClient;
 
 /**
  * create OAuth2 client instance using implicit grant
  * @param options implicit grant configurations
  */
-export function createAuthInstance(options: IImplicitGrantClientOptions) {
-    return new ImplicitGrantClient(options);
-}
+export import createAuthInstance = cinerino.createAuthInstance;

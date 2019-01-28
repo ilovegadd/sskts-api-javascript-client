@@ -1,23 +1,12 @@
 /**
- * index spec
- * @ignore
+ * indexテスト
  */
+import * as assert from 'assert';
 
-// import * as assert from 'assert';
-import * as sinon from 'sinon';
+import * as client from './index';
 
-let sandbox: sinon.SinonSandbox;
-
-describe('サンプルテスト', () => {
-    beforeEach(() => {
-        sandbox = sinon.sandbox.create();
-    });
-
-    afterEach(() => {
-        sandbox.restore();
-    });
-
-    it('サンプルテスト', async () => {
-        sandbox.verify();
+describe('import client', () => {
+    it('クライアントをオブジェクトとしてインポートできるはず', () => {
+        assert.equal(typeof client, 'object');
     });
 });
