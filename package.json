@@ -1,7 +1,7 @@
 {
   "name": "@motionpicture/sskts-api-javascript-client",
   "version": "4.3.0",
-  "description": "SSKTS API client library for JavaScript",
+  "description": "Cinemasunshine API client library for JavaScript",
   "main": "./lib/index.js",
   "browser": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -27,7 +27,6 @@
     "nyc": "nyc mocha \"src/**/*.spec.ts\"",
     "coverage": "npm run nyc | coveralls",
     "test": "npm run check && npm run coverage",
-    "snyk": "snyk wizard",
     "doc": "jsdoc -c jsdoc.json",
     "example": "copyfiles ./lib/browser.js ./example/browser && http-server ./example/browser",
     "tslint": "tslint --project tsconfig.json -c tslint.json --exclude \"**/*.spec.ts\" \"src/**/*.ts\"",
@@ -56,7 +55,6 @@
     "mocha": "^3.5.3",
     "nyc": "^12.0.2",
     "rimraf": "^2.6.2",
-    "snyk": "^1.116.4",
     "ts-node": "^6.2.0",
     "tslint": "^5.11.0",
     "tslint-microsoft-contrib": "^5.2.1",
@@ -65,7 +63,7 @@
   },
   "dependencies": {
     "@cinerino/api-javascript-client": "^1.0.0-alpha.28",
-    "@motionpicture/sskts-api-abstract-client": "^4.5.0-alpha.2"
+    "@motionpicture/sskts-api-abstract-client": "^5.0.0"
   },
   "repository": {
     "type": "git",

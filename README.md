@@ -1,4 +1,4 @@
-# SSKTS API Client Library for Javascript
+# Cinemasunshine API Client Library for Javascript
 
 [![npm (scoped)](https://img.shields.io/npm/v/@motionpicture/sskts-api-javascript-client.svg)](https://www.npmjs.com/package/@motionpicture/sskts-api-javascript-client)
 [![CircleCI](https://circleci.com/gh/motionpicture/sskts-api-javascript-client.svg?style=svg)](https://circleci.com/gh/motionpicture/sskts-api-javascript-client)
@@ -11,7 +11,7 @@
 
 ## Table of Contents
 
-- [SSKTS API Client Library for Javascript](#sskts-api-client-library-for-javascript)
+- [Cinemasunshine API Client Library for Javascript](#cinemasunshine-api-client-library-for-javascript)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
     - [CommonJS](#commonjs)
