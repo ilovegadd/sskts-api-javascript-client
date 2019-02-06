@@ -24,8 +24,9 @@
     "build:browser": "browserify ./browser.js -o ./lib/browser.js",
     "build:watch": "tsc && concurrently \"tsc -w\" \"npm run watchify\"",
     "watchify": "watchify ./browser.js -o ./lib/browser.js",
+    "mocha": "mocha",
     "nyc": "nyc mocha \"src/**/*.spec.ts\"",
-    "coverage": "npm run nyc | coveralls",
+    "coverage": "npm run nyc && nyc report --reporter=text-lcov | coveralls",
     "test": "npm run check && npm run coverage",
     "doc": "jsdoc -c jsdoc.json",
     "example": "copyfiles ./lib/browser.js ./example/browser && http-server ./example/browser",
@@ -41,7 +42,7 @@
   ],
   "license": "ISC",
   "devDependencies": {
-    "@types/mocha": "^2.2.48",
+    "@types/mocha": "^5.2.5",
     "browserify": "^14.5.0",
     "concurrently": "^3.6.1",
     "copyfiles": "^1.2.0",
@@ -52,7 +53,7 @@
     "jsdoc": "^3.5.5",
     "jsonwebtoken": "^7.4.3",
     "jwk-to-pem": "^1.2.6",
-    "mocha": "^3.5.3",
+    "mocha": "^5.2.0",
     "nyc": "^12.0.2",
     "rimraf": "^2.6.2",
     "ts-node": "^6.2.0",
@@ -63,7 +64,7 @@
   },
   "dependencies": {
     "@cinerino/api-javascript-client": "^1.0.0-alpha.28",
-    "@motionpicture/sskts-api-abstract-client": "^5.0.0"
+    "@motionpicture/sskts-api-abstract-client": "^6.0.0-alpha.0"
   },
   "repository": {
     "type": "git",

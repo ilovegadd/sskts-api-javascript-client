@@ -210,13 +210,12 @@
             });
         }
 
-        function getContacts() {
+        function getProfile() {
             var people = new sasaki.service.Person({
                 endpoint: API_ENDPOINT,
                 auth: auth
             });
-            people.getContacts({
-                personId: 'me'
+            people.getProfile({
             }).then(function (contacts) {
                 console.log('contacts:', contacts);
                 document.getElementById('results').innerText = format(contacts);
@@ -232,7 +231,6 @@
                 auth: auth
             });
             people.findCreditCards({
-                personId: 'me'
             }).then(function (creditCards) {
                 console.log('creditCards:', creditCards);
                 document.getElementById('results').innerText = format(creditCards);
@@ -248,7 +246,6 @@
                 auth: auth
             });
             people.addCreditCard({
-                personId: 'me',
                 creditCard: {
                     cardNo: '4111111111111111',
                     expire: '2412',

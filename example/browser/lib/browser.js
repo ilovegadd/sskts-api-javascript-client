@@ -148,7 +148,7 @@ var AlreadyInUseError = /** @class */ (function (_super) {
 }(chevre_1.ChevreError));
 exports.default = AlreadyInUseError;
 
-},{"../errorCode":12,"./chevre":16,"setprototypeof":467}],14:[function(require,module,exports){
+},{"../errorCode":12,"./chevre":16,"setprototypeof":592}],14:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -189,7 +189,7 @@ var ArgumentError = /** @class */ (function (_super) {
 }(chevre_1.ChevreError));
 exports.default = ArgumentError;
 
-},{"../errorCode":12,"./chevre":16,"setprototypeof":467}],15:[function(require,module,exports){
+},{"../errorCode":12,"./chevre":16,"setprototypeof":592}],15:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -230,7 +230,7 @@ var ArgumentNullError = /** @class */ (function (_super) {
 }(chevre_1.ChevreError));
 exports.default = ArgumentNullError;
 
-},{"../errorCode":12,"./chevre":16,"setprototypeof":467}],16:[function(require,module,exports){
+},{"../errorCode":12,"./chevre":16,"setprototypeof":592}],16:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -303,7 +303,7 @@ var ForbiddenError = /** @class */ (function (_super) {
 }(chevre_1.ChevreError));
 exports.default = ForbiddenError;
 
-},{"../errorCode":12,"./chevre":16,"setprototypeof":467}],18:[function(require,module,exports){
+},{"../errorCode":12,"./chevre":16,"setprototypeof":592}],18:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -344,7 +344,7 @@ var NotFoundError = /** @class */ (function (_super) {
 }(chevre_1.ChevreError));
 exports.default = NotFoundError;
 
-},{"../errorCode":12,"./chevre":16,"setprototypeof":467}],19:[function(require,module,exports){
+},{"../errorCode":12,"./chevre":16,"setprototypeof":592}],19:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -384,7 +384,7 @@ var NotImplementedError = /** @class */ (function (_super) {
 }(chevre_1.ChevreError));
 exports.default = NotImplementedError;
 
-},{"../errorCode":12,"./chevre":16,"setprototypeof":467}],20:[function(require,module,exports){
+},{"../errorCode":12,"./chevre":16,"setprototypeof":592}],20:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -424,7 +424,7 @@ var RateLimitExceededError = /** @class */ (function (_super) {
 }(chevre_1.ChevreError));
 exports.default = RateLimitExceededError;
 
-},{"../errorCode":12,"./chevre":16,"setprototypeof":467}],21:[function(require,module,exports){
+},{"../errorCode":12,"./chevre":16,"setprototypeof":592}],21:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -464,7 +464,7 @@ var ServiceUnavailableError = /** @class */ (function (_super) {
 }(chevre_1.ChevreError));
 exports.default = ServiceUnavailableError;
 
-},{"../errorCode":12,"./chevre":16,"setprototypeof":467}],22:[function(require,module,exports){
+},{"../errorCode":12,"./chevre":16,"setprototypeof":592}],22:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -504,7 +504,7 @@ var UnauthorizedError = /** @class */ (function (_super) {
 }(chevre_1.ChevreError));
 exports.default = UnauthorizedError;
 
-},{"../errorCode":12,"./chevre":16,"setprototypeof":467}],23:[function(require,module,exports){
+},{"../errorCode":12,"./chevre":16,"setprototypeof":592}],23:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -1545,7 +1545,7 @@ var Service = /** @class */ (function () {
 }());
 exports.Service = Service;
 
-},{"./transporters":81,"qs":463}],65:[function(require,module,exports){
+},{"./transporters":81,"qs":588}],65:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -1639,7 +1639,7 @@ var CreativeWorkService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.CreativeWorkService = CreativeWorkService;
 
-},{"../service":64,"http-status":451}],66:[function(require,module,exports){
+},{"../service":64,"http-status":576}],66:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -1723,7 +1723,7 @@ var DeliveryService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.DeliveryService = DeliveryService;
 
-},{"../service":64,"http-status":451}],67:[function(require,module,exports){
+},{"../service":64,"http-status":576}],67:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -1869,7 +1869,7 @@ var EventService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.EventService = EventService;
 
-},{"../service":64,"http-status":451}],68:[function(require,module,exports){
+},{"../service":64,"http-status":576}],68:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -2036,7 +2036,7 @@ var OrderService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.OrderService = OrderService;
 
-},{"../service":64,"http-status":451}],69:[function(require,module,exports){
+},{"../service":64,"http-status":576}],69:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -2204,7 +2204,7 @@ var OrganizationService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.OrganizationService = OrganizationService;
 
-},{"../service":64,"http-status":451}],70:[function(require,module,exports){
+},{"../service":64,"http-status":576}],70:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -2315,7 +2315,7 @@ var OwnershipInfoService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.OwnershipInfoService = OwnershipInfoService;
 
-},{"../service":64,"http-status":451}],71:[function(require,module,exports){
+},{"../service":64,"http-status":576}],71:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -2398,7 +2398,7 @@ var PaymentService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PaymentService = PaymentService;
 
-},{"../service":64,"http-status":451}],72:[function(require,module,exports){
+},{"../service":64,"http-status":576}],72:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -2492,7 +2492,7 @@ var PaymentMethodService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PaymentMethodService = PaymentMethodService;
 
-},{"../service":64,"http-status":451}],73:[function(require,module,exports){
+},{"../service":64,"http-status":576}],73:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -2676,7 +2676,7 @@ var PersonService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PersonService = PersonService;
 
-},{"../service":64,"http-status":451}],74:[function(require,module,exports){
+},{"../service":64,"http-status":576}],74:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -2914,7 +2914,7 @@ var PersonOwnershipInfoService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PersonOwnershipInfoService = PersonOwnershipInfoService;
 
-},{"../../service":64,"http-status":451}],75:[function(require,module,exports){
+},{"../../service":64,"http-status":576}],75:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -3026,7 +3026,7 @@ var ReservationService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.ReservationService = ReservationService;
 
-},{"../service":64,"http-status":451}],76:[function(require,module,exports){
+},{"../service":64,"http-status":576}],76:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -3194,7 +3194,7 @@ var SellerService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.SellerService = SellerService;
 
-},{"../service":64,"http-status":451}],77:[function(require,module,exports){
+},{"../service":64,"http-status":576}],77:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -3323,7 +3323,7 @@ var TaskService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.TaskService = TaskService;
 
-},{"../service":64,"http-status":451}],78:[function(require,module,exports){
+},{"../service":64,"http-status":576}],78:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -3715,7 +3715,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PlaceOrderTransactionService = PlaceOrderTransactionService;
 
-},{"../../factory":62,"../../service":64,"http-status":451}],79:[function(require,module,exports){
+},{"../../factory":62,"../../service":64,"http-status":576}],79:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -3849,7 +3849,7 @@ var ReturnOrderTransactionService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.ReturnOrderTransactionService = ReturnOrderTransactionService;
 
-},{"../../factory":62,"../../service":64,"http-status":451}],80:[function(require,module,exports){
+},{"../../factory":62,"../../service":64,"http-status":576}],80:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -3977,7 +3977,7 @@ var UserPoolService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.UserPoolService = UserPoolService;
 
-},{"../service":64,"http-status":451}],81:[function(require,module,exports){
+},{"../service":64,"http-status":576}],81:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -4167,7 +4167,7 @@ var StubTransporter = /** @class */ (function () {
 }());
 exports.StubTransporter = StubTransporter;
 
-},{"debug":449,"isomorphic-fetch":459}],82:[function(require,module,exports){
+},{"debug":574,"isomorphic-fetch":584}],82:[function(require,module,exports){
 "use strict";
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
@@ -4285,7 +4285,7 @@ var IframeHandler = /** @class */ (function () {
 }());
 exports.default = IframeHandler;
 
-},{"debug":449}],85:[function(require,module,exports){
+},{"debug":574}],85:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -4632,7 +4632,7 @@ var ImplicitGrantClient = /** @class */ (function (_super) {
 }(oAuth2client_1.default));
 exports.ImplicitGrantClient = ImplicitGrantClient;
 
-},{"./error":83,"./oAuth2client":86,"./popupAuthenticationHandler":87,"./silentAuthenticationHandler":89,"./silentLogoutHandler":90,"debug":449,"idtoken-verifier":458,"qs":463}],86:[function(require,module,exports){
+},{"./error":83,"./oAuth2client":86,"./popupAuthenticationHandler":87,"./silentAuthenticationHandler":89,"./silentLogoutHandler":90,"debug":574,"idtoken-verifier":583,"qs":588}],86:[function(require,module,exports){
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -4824,7 +4824,7 @@ var OAuth2client = /** @class */ (function () {
 }());
 exports.default = OAuth2client;
 
-},{"../abstract":82,"debug":449,"http-status":451,"isomorphic-fetch":459}],87:[function(require,module,exports){
+},{"../abstract":82,"debug":574,"http-status":576,"isomorphic-fetch":584}],87:[function(require,module,exports){
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -5009,7 +5009,7 @@ var PopupHandler = /** @class */ (function () {
 }());
 exports.default = PopupHandler;
 
-},{"debug":449}],89:[function(require,module,exports){
+},{"debug":574}],89:[function(require,module,exports){
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -6355,7 +6355,7 @@ exports.transactionTasksExportationStatus = transactionTasksExportationStatus_1.
 exports.transactionType = transactionType_1.default;
 exports.unitCode = unitCode_1.UnitCode;
 
-},{"./chevre":92,"./cognito":93,"./factory/accountType":94,"./factory/action/authorize/award/point":97,"./factory/action/authorize/offer/seatReservation":98,"./factory/action/authorize/paymentMethod/account":99,"./factory/action/authorize/paymentMethod/any":100,"./factory/action/authorize/paymentMethod/creditCard":101,"./factory/action/authorize/paymentMethod/movieTicket":102,"./factory/action/check/paymentMethod/movieTicket":103,"./factory/action/check/token":104,"./factory/action/interact/confirm/reservation":105,"./factory/action/trade/order":106,"./factory/action/trade/pay":107,"./factory/action/trade/refund":108,"./factory/action/transfer/give/pointAward":109,"./factory/action/transfer/print/ticket":110,"./factory/action/transfer/return/order":111,"./factory/action/transfer/return/pointAward":112,"./factory/action/transfer/send/message/email":113,"./factory/action/transfer/send/order":114,"./factory/actionStatusType":95,"./factory/actionType":96,"./factory/clientUser":115,"./factory/creativeWork/message/email":117,"./factory/creativeWorkType":116,"./factory/encodingFormat":118,"./factory/errorCode":119,"./factory/errors":130,"./factory/event/screeningEvent":131,"./factory/event/screeningEventSeries":132,"./factory/invoice":133,"./factory/monetaryAmount":134,"./factory/order":135,"./factory/orderStatus":136,"./factory/organizationType":137,"./factory/ownershipInfo":138,"./factory/paymentMethod/paymentCard/creditCard":140,"./factory/paymentMethod/paymentCard/movieTicket":141,"./factory/paymentMethodType":139,"./factory/paymentStatusType":142,"./factory/person":143,"./factory/personType":144,"./factory/placeType":145,"./factory/priceCurrency":146,"./factory/programMembership":147,"./factory/propertyValue":148,"./factory/quantitativeValue":149,"./factory/service/webAPI":150,"./factory/sortType":151,"./factory/taskExecutionResult":152,"./factory/taskName":153,"./factory/taskStatus":154,"./factory/transaction/placeOrder":158,"./factory/transaction/returnOrder":159,"./factory/transactionStatusType":155,"./factory/transactionTasksExportationStatus":156,"./factory/transactionType":157,"./factory/unitCode":160,"@pecorino/factory":427,"@waiter/factory":441}],162:[function(require,module,exports){
+},{"./chevre":92,"./cognito":93,"./factory/accountType":94,"./factory/action/authorize/award/point":97,"./factory/action/authorize/offer/seatReservation":98,"./factory/action/authorize/paymentMethod/account":99,"./factory/action/authorize/paymentMethod/any":100,"./factory/action/authorize/paymentMethod/creditCard":101,"./factory/action/authorize/paymentMethod/movieTicket":102,"./factory/action/check/paymentMethod/movieTicket":103,"./factory/action/check/token":104,"./factory/action/interact/confirm/reservation":105,"./factory/action/trade/order":106,"./factory/action/trade/pay":107,"./factory/action/trade/refund":108,"./factory/action/transfer/give/pointAward":109,"./factory/action/transfer/print/ticket":110,"./factory/action/transfer/return/order":111,"./factory/action/transfer/return/pointAward":112,"./factory/action/transfer/send/message/email":113,"./factory/action/transfer/send/order":114,"./factory/actionStatusType":95,"./factory/actionType":96,"./factory/clientUser":115,"./factory/creativeWork/message/email":117,"./factory/creativeWorkType":116,"./factory/encodingFormat":118,"./factory/errorCode":119,"./factory/errors":130,"./factory/event/screeningEvent":131,"./factory/event/screeningEventSeries":132,"./factory/invoice":133,"./factory/monetaryAmount":134,"./factory/order":135,"./factory/orderStatus":136,"./factory/organizationType":137,"./factory/ownershipInfo":138,"./factory/paymentMethod/paymentCard/creditCard":140,"./factory/paymentMethod/paymentCard/movieTicket":141,"./factory/paymentMethodType":139,"./factory/paymentStatusType":142,"./factory/person":143,"./factory/personType":144,"./factory/placeType":145,"./factory/priceCurrency":146,"./factory/programMembership":147,"./factory/propertyValue":148,"./factory/quantitativeValue":149,"./factory/service/webAPI":150,"./factory/sortType":151,"./factory/taskExecutionResult":152,"./factory/taskName":153,"./factory/taskStatus":154,"./factory/transaction/placeOrder":158,"./factory/transaction/returnOrder":159,"./factory/transactionStatusType":155,"./factory/transactionTasksExportationStatus":156,"./factory/transactionType":157,"./factory/unitCode":160,"@pecorino/factory":552,"@waiter/factory":566}],162:[function(require,module,exports){
 'use strict'
 /* eslint no-proto: 0 */
 module.exports = Object.setPrototypeOf || ({ __proto__: [] } instanceof Array ? setProtoOf : mixinProperties)
@@ -6385,7 +6385,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 __export(require("@motionpicture/sskts-factory"));
 
-},{"@motionpicture/sskts-factory":261}],164:[function(require,module,exports){
+},{"@motionpicture/sskts-factory":386}],164:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -6409,17 +6409,11 @@ var cinerino = require("@cinerino/api-abstract-client");
 var factory = require("./factory");
 var account_1 = require("./service/account");
 var action_1 = require("./service/action");
-var event_1 = require("./service/event");
 var order_1 = require("./service/order");
-var organization_1 = require("./service/organization");
 var ownershipInfo_1 = require("./service/ownershipInfo");
 var person_1 = require("./service/person");
-var place_1 = require("./service/place");
 var programMembership_1 = require("./service/programMembership");
-var task_1 = require("./service/task");
 var placeOrder_1 = require("./service/transaction/placeOrder");
-var returnOrder_1 = require("./service/transaction/returnOrder");
-var userPool_1 = require("./service/userPool");
 exports.factory = factory;
 exports.transporters = cinerino.transporters;
 exports.auth = cinerino.auth;
@@ -6437,7 +6431,7 @@ exports.Auth = Auth;
 var service;
 (function (service) {
     /**
-     * Pecorino口座サービス
+     * 口座サービス
      */
     var Account = /** @class */ (function (_super) {
         __extends(Account, _super);
@@ -6467,7 +6461,7 @@ var service;
             return _super !== null && _super.apply(this, arguments) || this;
         }
         return Event;
-    }(event_1.EventService));
+    }(cinerino.service.Event));
     service.Event = Event;
     /**
      * 注文サービス
@@ -6480,17 +6474,6 @@ var service;
         return Order;
     }(order_1.OrderService));
     service.Order = Order;
-    /**
-     * 組織サービス
-     */
-    var Organization = /** @class */ (function (_super) {
-        __extends(Organization, _super);
-        function Organization() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        return Organization;
-    }(organization_1.OrganizationService));
-    service.Organization = Organization;
     /**
      * 所有権サービス
      */
@@ -6514,17 +6497,6 @@ var service;
     }(person_1.PersonService));
     service.Person = Person;
     /**
-     * 場所サービス
-     */
-    var Place = /** @class */ (function (_super) {
-        __extends(Place, _super);
-        function Place() {
-            return _super !== null && _super.apply(this, arguments) || this;
-        }
-        return Place;
-    }(place_1.PlaceService));
-    service.Place = Place;
-    /**
      * 会員プログラムサービス
      */
     var ProgramMembership = /** @class */ (function (_super) {
@@ -6536,6 +6508,17 @@ var service;
     }(programMembership_1.ProgramMembershipService));
     service.ProgramMembership = ProgramMembership;
     /**
+     * 販売者サービス
+     */
+    var Seller = /** @class */ (function (_super) {
+        __extends(Seller, _super);
+        function Seller() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Seller;
+    }(cinerino.service.Seller));
+    service.Seller = Seller;
+    /**
      * タスクサービス
      */
     var Task = /** @class */ (function (_super) {
@@ -6544,7 +6527,7 @@ var service;
             return _super !== null && _super.apply(this, arguments) || this;
         }
         return Task;
-    }(task_1.TaskService));
+    }(cinerino.service.Task));
     service.Task = Task;
     var transaction;
     (function (transaction) {
@@ -6568,7 +6551,7 @@ var service;
                 return _super !== null && _super.apply(this, arguments) || this;
             }
             return ReturnOrder;
-        }(returnOrder_1.ReturnOrderTransactionService));
+        }(cinerino.service.transaction.ReturnOrder));
         transaction.ReturnOrder = ReturnOrder;
     })(transaction = service.transaction || (service.transaction = {}));
     /**
@@ -6587,11 +6570,11 @@ var service;
             return _super !== null && _super.apply(this, arguments) || this;
         }
         return UserPool;
-    }(userPool_1.UserPoolService));
+    }(cinerino.service.UserPool));
     service.UserPool = UserPool;
 })(service = exports.service || (exports.service = {}));
 
-},{"./factory":163,"./service/account":166,"./service/action":167,"./service/event":168,"./service/order":169,"./service/organization":170,"./service/ownershipInfo":171,"./service/person":172,"./service/place":173,"./service/programMembership":174,"./service/task":175,"./service/transaction/placeOrder":176,"./service/transaction/returnOrder":177,"./service/userPool":178,"@cinerino/api-abstract-client":63}],165:[function(require,module,exports){
+},{"./factory":163,"./service/account":166,"./service/action":167,"./service/order":168,"./service/ownershipInfo":169,"./service/person":170,"./service/programMembership":171,"./service/transaction/placeOrder":172,"@cinerino/api-abstract-client":233}],165:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -6623,7 +6606,7 @@ var Service = /** @class */ (function (_super) {
 }(cinerino.service.Service));
 exports.Service = Service;
 
-},{"@cinerino/api-abstract-client":63}],166:[function(require,module,exports){
+},{"@cinerino/api-abstract-client":233}],166:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -6677,7 +6660,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var http_status_1 = require("http-status");
 var service_1 = require("../service");
 /**
- * Pecorino口座サービス
+ * 口座サービス
  */
 var AccountService = /** @class */ (function (_super) {
     __extends(AccountService, _super);
@@ -6685,7 +6668,7 @@ var AccountService = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     /**
-     * Pecorinoポイントを入金する
+     * ポイントを入金する
      * 管理者権限が必要です。
      */
     AccountService.prototype.deposit = function (params) {
@@ -6709,7 +6692,7 @@ var AccountService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.AccountService = AccountService;
 
-},{"../service":165,"http-status":451}],167:[function(require,module,exports){
+},{"../service":165,"http-status":576}],167:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -6763,7 +6746,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var http_status_1 = require("http-status");
 var service_1 = require("../service");
 /**
- * action service
+ * アクションサービス
  */
 var ActionService = /** @class */ (function (_super) {
     __extends(ActionService, _super);
@@ -6818,7 +6801,7 @@ var ActionService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.ActionService = ActionService;
 
-},{"../service":165,"http-status":451}],168:[function(require,module,exports){
+},{"../service":165,"http-status":576}],168:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -6869,142 +6852,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var api_abstract_client_1 = require("@cinerino/api-abstract-client");
 var http_status_1 = require("http-status");
-var service_1 = require("../service");
-/**
- * event service
- */
-var EventService = /** @class */ (function (_super) {
-    __extends(EventService, _super);
-    function EventService() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    /**
-     * 上映イベント検索(ページング機能付き)
-     */
-    EventService.prototype.searchIndividualScreeningEventWithPagination = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: '/events/individualScreeningEvent',
-                        method: 'GET',
-                        qs: params,
-                        expectedStatusCodes: [http_status_1.OK]
-                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () {
-                        var _a;
-                        return __generator(this, function (_b) {
-                            switch (_b.label) {
-                                case 0:
-                                    _a = {
-                                        totalCount: Number(response.headers.get('X-Total-Count'))
-                                    };
-                                    return [4 /*yield*/, response.json()];
-                                case 1: return [2 /*return*/, (_a.data = _b.sent(),
-                                        _a)];
-                            }
-                        });
-                    }); })];
-            });
-        });
-    };
-    /**
-     * 上映イベント検索
-     * @deprecated Use searchIndividualScreeningEventWithPagination
-     */
-    EventService.prototype.searchIndividualScreeningEvent = function (
-    /**
-     * 検索条件
-     */
-    params) {
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: '/events/individualScreeningEvent',
-                        method: 'GET',
-                        qs: params,
-                        expectedStatusCodes: [http_status_1.OK]
-                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
-                        return [2 /*return*/, response.json()];
-                    }); }); })];
-            });
-        });
-    };
-    /**
-     * 上映イベント情報取得
-     */
-    EventService.prototype.findIndividualScreeningEvent = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/events/individualScreeningEvent/" + params.identifier,
-                        method: 'GET',
-                        expectedStatusCodes: [http_status_1.OK]
-                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
-                        return [2 /*return*/, response.json()];
-                    }); }); })];
-            });
-        });
-    };
-    return EventService;
-}(service_1.Service));
-exports.EventService = EventService;
-
-},{"../service":165,"http-status":451}],169:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var http_status_1 = require("http-status");
-var service_1 = require("../service");
 /**
  * 注文サービス
  */
@@ -7014,13 +6863,9 @@ var OrderService = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     /**
-     * 照会キーで注文情報を取得する
+     * 予約番号と電話番号で注文情報を取得する
      */
-    OrderService.prototype.findByOrderInquiryKey = function (
-    /**
-     * 注文照会キー
-     */
-    params) {
+    OrderService.prototype.findByOrderInquiryKey = function (params) {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
             return __generator(this, function (_a) {
@@ -7035,40 +6880,11 @@ var OrderService = /** @class */ (function (_super) {
             });
         });
     };
-    /**
-     * 注文を検索する
-     */
-    OrderService.prototype.search = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: '/orders',
-                        method: 'GET',
-                        qs: params,
-                        expectedStatusCodes: [http_status_1.OK]
-                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () {
-                        var _a;
-                        return __generator(this, function (_b) {
-                            switch (_b.label) {
-                                case 0:
-                                    _a = {
-                                        totalCount: Number(response.headers.get('X-Total-Count'))
-                                    };
-                                    return [4 /*yield*/, response.json()];
-                                case 1: return [2 /*return*/, (_a.data = _b.sent(),
-                                        _a)];
-                            }
-                        });
-                    }); })];
-            });
-        });
-    };
     return OrderService;
-}(service_1.Service));
+}(api_abstract_client_1.service.Order));
 exports.OrderService = OrderService;
 
-},{"../service":165,"http-status":451}],170:[function(require,module,exports){
+},{"@cinerino/api-abstract-client":233,"http-status":576}],169:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -7119,123 +6935,10 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * 組織サービス
- */
 var http_status_1 = require("http-status");
 var service_1 = require("../service");
-/**
- * organization service
- */
-var OrganizationService = /** @class */ (function (_super) {
-    __extends(OrganizationService, _super);
-    function OrganizationService() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    /**
-     * 劇場組織検索
-     */
-    OrganizationService.prototype.searchMovieTheaters = function (
-    /**
-     * 検索条件
-     */
-    params) {
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: '/organizations/movieTheater',
-                        method: 'GET',
-                        qs: params,
-                        expectedStatusCodes: [http_status_1.OK]
-                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
-                        return [2 /*return*/, response.json()];
-                    }); }); })];
-            });
-        });
-    };
-    /**
-     * 枝番号で劇場組織検索
-     */
-    OrganizationService.prototype.findMovieTheaterByBranchCode = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/organizations/movieTheater/" + params.branchCode,
-                        method: 'GET',
-                        qs: {},
-                        expectedStatusCodes: [http_status_1.OK]
-                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
-                        return [2 /*return*/, response.json()];
-                    }); }); })];
-            });
-        });
-    };
-    return OrganizationService;
-}(service_1.Service));
-exports.OrganizationService = OrganizationService;
-
-},{"../service":165,"http-status":451}],171:[function(require,module,exports){
-"use strict";
 /**
  * 所有権サービス
- *
- * @namespace service.ownershipInfo
- */
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var http_status_1 = require("http-status");
-var service_1 = require("../service");
-/**
- * organization service
  */
 var OwnershipInfoService = /** @class */ (function (_super) {
     __extends(OwnershipInfoService, _super);
@@ -7269,7 +6972,7 @@ var OwnershipInfoService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.OwnershipInfoService = OwnershipInfoService;
 
-},{"../service":165,"http-status":451}],172:[function(require,module,exports){
+},{"../service":165,"http-status":576}],170:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -7331,55 +7034,18 @@ var PersonService = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     /**
-     * ユーザーの連絡先を検索する
-     * @deprecated Use getProfile()
-     */
-    PersonService.prototype.getContacts = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/people/" + params.personId + "/contacts",
-                        method: 'GET',
-                        qs: {},
-                        expectedStatusCodes: [http_status_1.OK]
-                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
-                        return [2 /*return*/, response.json()];
-                    }); }); })];
-            });
-        });
-    };
-    /**
-     * ユーザーの連絡先を更新する
-     * @deprecated Use updateProfile()
-     */
-    PersonService.prototype.updateContacts = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.fetch({
-                            uri: "/people/" + params.personId + "/contacts",
-                            method: 'PUT',
-                            body: params.contacts,
-                            expectedStatusCodes: [http_status_1.NO_CONTENT]
-                        })];
-                    case 1:
-                        _a.sent();
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    /**
      * クレジットカード検索
-     * @see example /example/person/handleCreditCards
      */
     PersonService.prototype.findCreditCards = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var id;
             var _this = this;
             return __generator(this, function (_a) {
+                id = (params.personId !== undefined)
+                    ? /* istanbul ignore next */ params.personId
+                    : (params.id !== undefined) ? params.id : /* istanbul ignore next */ 'me';
                 return [2 /*return*/, this.fetch({
-                        uri: "/people/" + params.personId + "/creditCards",
+                        uri: "/people/" + id + "/creditCards",
                         method: 'GET',
                         qs: {},
                         expectedStatusCodes: [http_status_1.OK]
@@ -7391,15 +7057,17 @@ var PersonService = /** @class */ (function (_super) {
     };
     /**
      * クレジットカード追加
-     * @return successfully created credit card info
-     * @see example /example/person/handleCreditCards
      */
     PersonService.prototype.addCreditCard = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var id;
             var _this = this;
             return __generator(this, function (_a) {
+                id = (params.personId !== undefined)
+                    ? /* istanbul ignore next */ params.personId
+                    : (params.id !== undefined) ? params.id : /* istanbul ignore next */ 'me';
                 return [2 /*return*/, this.fetch({
-                        uri: "/people/" + params.personId + "/creditCards",
+                        uri: "/people/" + id + "/creditCards",
                         method: 'POST',
                         body: params.creditCard,
                         expectedStatusCodes: [http_status_1.CREATED]
@@ -7411,17 +7079,21 @@ var PersonService = /** @class */ (function (_super) {
     };
     /**
      * クレジットカード削除
-     * @see /example/person/handleCreditCards
      */
     PersonService.prototype.deleteCreditCard = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var id;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.fetch({
-                            uri: "/people/" + params.personId + "/creditCards/" + params.cardSeq,
-                            method: 'DELETE',
-                            expectedStatusCodes: [http_status_1.NO_CONTENT]
-                        })];
+                    case 0:
+                        id = (params.personId !== undefined)
+                            ? /* istanbul ignore next */ params.personId
+                            : (params.id !== undefined) ? params.id : /* istanbul ignore next */ 'me';
+                        return [4 /*yield*/, this.fetch({
+                                uri: "/people/" + id + "/creditCards/" + params.cardSeq,
+                                method: 'DELETE',
+                                expectedStatusCodes: [http_status_1.NO_CONTENT]
+                            })];
                     case 1:
                         _a.sent();
                         return [2 /*return*/];
@@ -7434,10 +7106,14 @@ var PersonService = /** @class */ (function (_super) {
      */
     PersonService.prototype.openAccount = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var id;
             var _this = this;
             return __generator(this, function (_a) {
+                id = (params.personId !== undefined)
+                    ? /* istanbul ignore next */ params.personId
+                    : (params.id !== undefined) ? params.id : /* istanbul ignore next */ 'me';
                 return [2 /*return*/, this.fetch({
-                        uri: "/people/" + params.personId + "/accounts",
+                        uri: "/people/" + id + "/accounts",
                         method: 'POST',
                         body: {
                             name: params.name
@@ -7456,13 +7132,18 @@ var PersonService = /** @class */ (function (_super) {
      */
     PersonService.prototype.closeAccount = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var id;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.fetch({
-                            uri: "/people/" + params.personId + "/accounts/" + params.accountNumber + "/close",
-                            method: 'PUT',
-                            expectedStatusCodes: [http_status_1.NO_CONTENT]
-                        })];
+                    case 0:
+                        id = (params.personId !== undefined)
+                            ? /* istanbul ignore next */ params.personId
+                            : (params.id !== undefined) ? params.id : /* istanbul ignore next */ 'me';
+                        return [4 /*yield*/, this.fetch({
+                                uri: "/people/" + id + "/accounts/" + params.accountNumber + "/close",
+                                method: 'PUT',
+                                expectedStatusCodes: [http_status_1.NO_CONTENT]
+                            })];
                     case 1:
                         _a.sent();
                         return [2 /*return*/];
@@ -7475,10 +7156,14 @@ var PersonService = /** @class */ (function (_super) {
      */
     PersonService.prototype.findAccounts = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var id;
             var _this = this;
             return __generator(this, function (_a) {
+                id = (params.personId !== undefined)
+                    ? /* istanbul ignore next */ params.personId
+                    : (params.id !== undefined) ? params.id : /* istanbul ignore next */ 'me';
                 return [2 /*return*/, this.fetch({
-                        uri: "/people/" + params.personId + "/accounts",
+                        uri: "/people/" + id + "/accounts",
                         method: 'GET',
                         qs: {},
                         expectedStatusCodes: [http_status_1.OK]
@@ -7493,10 +7178,14 @@ var PersonService = /** @class */ (function (_super) {
      */
     PersonService.prototype.searchAccountMoneyTransferActions = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var id;
             var _this = this;
             return __generator(this, function (_a) {
+                id = (params.personId !== undefined)
+                    ? /* istanbul ignore next */ params.personId
+                    : (params.id !== undefined) ? params.id : /* istanbul ignore next */ 'me';
                 return [2 /*return*/, this.fetch({
-                        uri: "/people/" + params.personId + "/accounts/" + params.accountNumber + "/actions/moneyTransfer",
+                        uri: "/people/" + id + "/accounts/" + params.accountNumber + "/actions/moneyTransfer",
                         method: 'GET',
                         qs: {},
                         expectedStatusCodes: [http_status_1.OK]
@@ -7532,10 +7221,14 @@ var PersonService = /** @class */ (function (_super) {
      */
     PersonService.prototype.registerProgramMembership = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var id;
             var _this = this;
             return __generator(this, function (_a) {
+                id = (params.personId !== undefined)
+                    ? /* istanbul ignore next */ params.personId
+                    : (params.id !== undefined) ? params.id : /* istanbul ignore next */ 'me';
                 return [2 /*return*/, this.fetch({
-                        uri: "/people/" + params.personId + "/ownershipInfos/programMembership/register",
+                        uri: "/people/" + id + "/ownershipInfos/programMembership/register",
                         method: 'PUT',
                         body: {
                             programMembershipId: params.programMembershipId,
@@ -7555,10 +7248,14 @@ var PersonService = /** @class */ (function (_super) {
      */
     PersonService.prototype.unRegisterProgramMembership = function (params) {
         return __awaiter(this, void 0, void 0, function () {
+            var id;
             var _this = this;
             return __generator(this, function (_a) {
+                id = (params.personId !== undefined)
+                    ? /* istanbul ignore next */ params.personId
+                    : (params.id !== undefined) ? params.id : /* istanbul ignore next */ 'me';
                 return [2 /*return*/, this.fetch({
-                        uri: "/people/" + params.personId + "/ownershipInfos/programMembership/" + params.ownershipInfoIdentifier + "/unRegister",
+                        uri: "/people/" + id + "/ownershipInfos/programMembership/" + params.ownershipInfoIdentifier + "/unRegister",
                         method: 'PUT',
                         body: {},
                         expectedStatusCodes: [http_status_1.ACCEPTED]
@@ -7572,115 +7269,7 @@ var PersonService = /** @class */ (function (_super) {
 }(cinerino.service.Person));
 exports.PersonService = PersonService;
 
-},{"@cinerino/api-abstract-client":63,"http-status":451}],173:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * 場所サービス
- */
-var http_status_1 = require("http-status");
-var service_1 = require("../service");
-/**
- * place service
- */
-var PlaceService = /** @class */ (function (_super) {
-    __extends(PlaceService, _super);
-    function PlaceService() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    /**
-     * 劇場検索
-     */
-    PlaceService.prototype.searchMovieTheaters = function (
-    /**
-     * 検索条件
-     */
-    params) {
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: '/places/movieTheater',
-                        method: 'GET',
-                        qs: params,
-                        expectedStatusCodes: [http_status_1.OK]
-                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
-                        return [2 /*return*/, response.json()];
-                    }); }); })];
-            });
-        });
-    };
-    /**
-     * 劇場情報取得
-     */
-    PlaceService.prototype.findMovieTheater = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/places/movieTheater/" + params.branchCode,
-                        method: 'GET',
-                        qs: {},
-                        expectedStatusCodes: [http_status_1.OK]
-                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
-                        return [2 /*return*/, response.json()];
-                    }); }); })];
-            });
-        });
-    };
-    return PlaceService;
-}(service_1.Service));
-exports.PlaceService = PlaceService;
-
-},{"../service":165,"http-status":451}],174:[function(require,module,exports){
+},{"@cinerino/api-abstract-client":233,"http-status":576}],171:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -7767,36 +7356,7 @@ var ProgramMembershipService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.ProgramMembershipService = ProgramMembershipService;
 
-},{"../service":165,"http-status":451}],175:[function(require,module,exports){
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-var cinerino = require("@cinerino/api-abstract-client");
-/**
- * タスクサービス
- */
-var TaskService = /** @class */ (function (_super) {
-    __extends(TaskService, _super);
-    function TaskService() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    return TaskService;
-}(cinerino.service.Task));
-exports.TaskService = TaskService;
-
-},{"@cinerino/api-abstract-client":63}],176:[function(require,module,exports){
+},{"../service":165,"http-status":576}],172:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -7866,7 +7426,6 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
     /**
      * 取引を開始する
      * 開始できない場合(混雑中など)、nullが返されます。
-     * @returns 取引オブジェクト
      */
     PlaceOrderTransactionService.prototype.start = function (params) {
         return __awaiter(this, void 0, void 0, function () {
@@ -7889,7 +7448,6 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
     };
     /**
      * 取引に座席予約を追加する
-     * @returns 座席予約承認アクション
      */
     PlaceOrderTransactionService.prototype.createSeatReservationAuthorization = function (params) {
         return __awaiter(this, void 0, void 0, function () {
@@ -7931,7 +7489,6 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
     /**
      * 座席予約承認アクションの供給情報を変更する
      * 完了ステータスの座席仮予約に対して券種変更する際に使用
-     * @returns 座席予約承認アクション
      */
     PlaceOrderTransactionService.prototype.changeSeatReservationOffers = function (params) {
         return __awaiter(this, void 0, void 0, function () {
@@ -7953,7 +7510,6 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
     };
     /**
      * クレジットカードのオーソリを取得する
-     * @returns 承認アクション
      */
     PlaceOrderTransactionService.prototype.createCreditCardAuthorization = function (params) {
         return __awaiter(this, void 0, void 0, function () {
@@ -7996,7 +7552,6 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
     };
     /**
      * 決済方法として、ムビチケを追加する
-     * @returns 承認アクション
      */
     PlaceOrderTransactionService.prototype.createMvtkAuthorization = function (params) {
         return __awaiter(this, void 0, void 0, function () {
@@ -8033,8 +7588,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
         });
     };
     /**
-     * Pecorino口座決済のオーソリを取得する
-     * @returns 承認アクション
+     * ポイント口座決済のオーソリを取得する
      */
     PlaceOrderTransactionService.prototype.createPecorinoPaymentAuthorization = function (params) {
         return __awaiter(this, void 0, void 0, function () {
@@ -8056,7 +7610,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
         });
     };
     /**
-     * Pecorino口座決済オーソリ取消
+     * ポイント口座決済オーソリ取消
      */
     PlaceOrderTransactionService.prototype.cancelPecorinoPaymentAuthorization = function (params) {
         return __awaiter(this, void 0, void 0, function () {
@@ -8075,8 +7629,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
         });
     };
     /**
-     * Pecorinoポイントインセンティブのオーソリを取得する
-     * @returns 承認アクション
+     * ポイントポイントインセンティブのオーソリを取得する
      */
     PlaceOrderTransactionService.prototype.createPecorinoAwardAuthorization = function (params) {
         return __awaiter(this, void 0, void 0, function () {
@@ -8098,7 +7651,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
         });
     };
     /**
-     * Pecorinoポイントインセンティブオーソリ取消
+     * ポイントポイントインセンティブオーソリ取消
      */
     PlaceOrderTransactionService.prototype.cancelPecorinoAwardAuthorization = function (params) {
         return __awaiter(this, void 0, void 0, function () {
@@ -8118,7 +7671,6 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
     };
     /**
      * register a customer contact
-     * @returns 登録された購入者情報
      */
     PlaceOrderTransactionService.prototype.setCustomerContact = function (params) {
         return __awaiter(this, void 0, void 0, function () {
@@ -8137,7 +7689,6 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
     };
     /**
      * 取引確定
-     * @returns 作成された注文
      */
     PlaceOrderTransactionService.prototype.confirm = function (params) {
         return __awaiter(this, void 0, void 0, function () {
@@ -8159,7 +7710,6 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
     };
     /**
      * 確定した取引に関して、購入者にメール通知を送信する
-     * @returns メール送信タスク
      */
     PlaceOrderTransactionService.prototype.sendEmailNotification = function (params) {
         return __awaiter(this, void 0, void 0, function () {
@@ -8248,7 +7798,2536 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PlaceOrderTransactionService = PlaceOrderTransactionService;
 
-},{"../../factory":163,"../../service":165,"http-status":451}],177:[function(require,module,exports){
+},{"../../factory":163,"../../service":165,"http-status":576}],173:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],174:[function(require,module,exports){
+arguments[4][4][0].apply(exports,arguments)
+},{"dup":4}],175:[function(require,module,exports){
+arguments[4][5][0].apply(exports,arguments)
+},{"dup":5}],176:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],177:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],178:[function(require,module,exports){
+arguments[4][8][0].apply(exports,arguments)
+},{"dup":8}],179:[function(require,module,exports){
+arguments[4][9][0].apply(exports,arguments)
+},{"dup":9}],180:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],181:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],182:[function(require,module,exports){
+arguments[4][12][0].apply(exports,arguments)
+},{"dup":12}],183:[function(require,module,exports){
+arguments[4][13][0].apply(exports,arguments)
+},{"../errorCode":182,"./chevre":186,"dup":13,"setprototypeof":322}],184:[function(require,module,exports){
+arguments[4][14][0].apply(exports,arguments)
+},{"../errorCode":182,"./chevre":186,"dup":14,"setprototypeof":322}],185:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"../errorCode":182,"./chevre":186,"dup":15,"setprototypeof":322}],186:[function(require,module,exports){
+arguments[4][16][0].apply(exports,arguments)
+},{"dup":16}],187:[function(require,module,exports){
+arguments[4][17][0].apply(exports,arguments)
+},{"../errorCode":182,"./chevre":186,"dup":17,"setprototypeof":322}],188:[function(require,module,exports){
+arguments[4][18][0].apply(exports,arguments)
+},{"../errorCode":182,"./chevre":186,"dup":18,"setprototypeof":322}],189:[function(require,module,exports){
+arguments[4][19][0].apply(exports,arguments)
+},{"../errorCode":182,"./chevre":186,"dup":19,"setprototypeof":322}],190:[function(require,module,exports){
+arguments[4][20][0].apply(exports,arguments)
+},{"../errorCode":182,"./chevre":186,"dup":20,"setprototypeof":322}],191:[function(require,module,exports){
+arguments[4][21][0].apply(exports,arguments)
+},{"../errorCode":182,"./chevre":186,"dup":21,"setprototypeof":322}],192:[function(require,module,exports){
+arguments[4][22][0].apply(exports,arguments)
+},{"../errorCode":182,"./chevre":186,"dup":22,"setprototypeof":322}],193:[function(require,module,exports){
+arguments[4][23][0].apply(exports,arguments)
+},{"./error/alreadyInUse":183,"./error/argument":184,"./error/argumentNull":185,"./error/chevre":186,"./error/forbidden":187,"./error/notFound":188,"./error/notImplemented":189,"./error/rateLimitExceeded":190,"./error/serviceUnavailable":191,"./error/unauthorized":192,"dup":23}],194:[function(require,module,exports){
+arguments[4][24][0].apply(exports,arguments)
+},{"dup":24}],195:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * イベントタイプ
+ */
+var EventType;
+(function (EventType) {
+    /**
+     * @deprecated Use ScreeningEvent
+     */
+    EventType["IndividualScreeningEvent"] = "IndividualScreeningEvent";
+    EventType["ScreeningEvent"] = "ScreeningEvent";
+    EventType["ScreeningEventSeries"] = "ScreeningEventSeries";
+})(EventType || (EventType = {}));
+exports.default = EventType;
+
+},{}],196:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],197:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],198:[function(require,module,exports){
+arguments[4][28][0].apply(exports,arguments)
+},{"dup":28}],199:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],200:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],201:[function(require,module,exports){
+arguments[4][31][0].apply(exports,arguments)
+},{"dup":31}],202:[function(require,module,exports){
+arguments[4][32][0].apply(exports,arguments)
+},{"dup":32}],203:[function(require,module,exports){
+arguments[4][33][0].apply(exports,arguments)
+},{"dup":33}],204:[function(require,module,exports){
+arguments[4][34][0].apply(exports,arguments)
+},{"dup":34}],205:[function(require,module,exports){
+arguments[4][35][0].apply(exports,arguments)
+},{"dup":35}],206:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],207:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],208:[function(require,module,exports){
+arguments[4][38][0].apply(exports,arguments)
+},{"dup":38}],209:[function(require,module,exports){
+arguments[4][39][0].apply(exports,arguments)
+},{"dup":39}],210:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],211:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],212:[function(require,module,exports){
+arguments[4][42][0].apply(exports,arguments)
+},{"dup":42}],213:[function(require,module,exports){
+arguments[4][43][0].apply(exports,arguments)
+},{"dup":43}],214:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],215:[function(require,module,exports){
+arguments[4][45][0].apply(exports,arguments)
+},{"dup":45}],216:[function(require,module,exports){
+arguments[4][46][0].apply(exports,arguments)
+},{"dup":46}],217:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],218:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],219:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],220:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],221:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],222:[function(require,module,exports){
+arguments[4][52][0].apply(exports,arguments)
+},{"dup":52}],223:[function(require,module,exports){
+arguments[4][53][0].apply(exports,arguments)
+},{"dup":53}],224:[function(require,module,exports){
+arguments[4][54][0].apply(exports,arguments)
+},{"dup":54}],225:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],226:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],227:[function(require,module,exports){
+arguments[4][57][0].apply(exports,arguments)
+},{"dup":57}],228:[function(require,module,exports){
+arguments[4][58][0].apply(exports,arguments)
+},{"dup":58}],229:[function(require,module,exports){
+arguments[4][59][0].apply(exports,arguments)
+},{"dup":59}],230:[function(require,module,exports){
+arguments[4][60][0].apply(exports,arguments)
+},{"./factory/accountTitle":173,"./factory/action/cancel/reservation":176,"./factory/action/reserve":177,"./factory/actionStatusType":174,"./factory/actionType":175,"./factory/clientUser":178,"./factory/creativeWork/message/email":180,"./factory/creativeWork/movie":181,"./factory/creativeWorkType":179,"./factory/errorCode":182,"./factory/errors":193,"./factory/event/screeningEvent":196,"./factory/event/screeningEventSeries":197,"./factory/eventStatusType":194,"./factory/eventType":195,"./factory/itemAvailability":198,"./factory/language":199,"./factory/organizationType":200,"./factory/paymentMethodType":201,"./factory/place/movieTheater":203,"./factory/placeType":202,"./factory/priceCurrency":204,"./factory/priceSpecificationType":205,"./factory/propertyValue":206,"./factory/quantitativeValue":207,"./factory/reservation/event":210,"./factory/reservationStatusType":208,"./factory/reservationType":209,"./factory/serviceType":211,"./factory/sortType":212,"./factory/soundFormatType":213,"./factory/task/aggregateScreeningEvent":217,"./factory/task/cancelPendingReservation":218,"./factory/task/cancelReservation":219,"./factory/task/reserve":220,"./factory/taskExecutionResult":214,"./factory/taskName":215,"./factory/taskStatus":216,"./factory/ticketType":221,"./factory/transaction/cancelReservation":225,"./factory/transaction/reserve":226,"./factory/transactionStatusType":222,"./factory/transactionTasksExportationStatus":223,"./factory/transactionType":224,"./factory/unitCode":227,"./factory/url":228,"./factory/videoFormatType":229,"dup":60}],231:[function(require,module,exports){
+arguments[4][61][0].apply(exports,arguments)
+},{"../transporters":251,"dup":61}],232:[function(require,module,exports){
+arguments[4][62][0].apply(exports,arguments)
+},{"@cinerino/factory":321,"dup":62}],233:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable:max-classes-per-file
+/**
+ * API Service Library for Javascript
+ */
+var factory = require("./factory");
+var ServiceFactory = require("./service");
+var authClient_1 = require("./auth/authClient");
+var creativeWork_1 = require("./service/creativeWork");
+var delivery_1 = require("./service/delivery");
+var event_1 = require("./service/event");
+var order_1 = require("./service/order");
+var organization_1 = require("./service/organization");
+var ownershipInfo_1 = require("./service/ownershipInfo");
+var payment_1 = require("./service/payment");
+var paymentMethod_1 = require("./service/paymentMethod");
+var person_1 = require("./service/person");
+var ownershipInfo_2 = require("./service/person/ownershipInfo");
+var reservation_1 = require("./service/reservation");
+var seller_1 = require("./service/seller");
+var task_1 = require("./service/task");
+var placeOrder_1 = require("./service/transaction/placeOrder");
+var returnOrder_1 = require("./service/transaction/returnOrder");
+var userPool_1 = require("./service/userPool");
+var transporters = require("./transporters");
+exports.factory = factory;
+exports.transporters = transporters;
+/**
+ * 認証クライアント抽象クラス
+ */
+var Auth = /** @class */ (function (_super) {
+    __extends(Auth, _super);
+    function Auth() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return Auth;
+}(authClient_1.AuthClient));
+exports.Auth = Auth;
+var auth;
+(function (auth) {
+    /**
+     * 抽象認証クライアント
+     */
+    // tslint:disable-next-line:no-shadowed-variable
+    var Auth = /** @class */ (function (_super) {
+        __extends(Auth, _super);
+        function Auth() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Auth;
+    }(authClient_1.AuthClient));
+    auth.Auth = Auth;
+    /**
+     * スタブ認証クライアント
+     */
+    var StubAuth = /** @class */ (function (_super) {
+        __extends(StubAuth, _super);
+        function StubAuth() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return StubAuth;
+    }(authClient_1.StubAuthClient));
+    auth.StubAuth = StubAuth;
+})(auth = exports.auth || (exports.auth = {}));
+/**
+ * サービスモジュール
+ */
+var service;
+(function (service) {
+    /**
+     * Baseサービス
+     */
+    var Service = /** @class */ (function (_super) {
+        __extends(Service, _super);
+        function Service() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Service;
+    }(ServiceFactory.Service));
+    service.Service = Service;
+    /**
+     * 作品サービス
+     */
+    var CreativeWork = /** @class */ (function (_super) {
+        __extends(CreativeWork, _super);
+        function CreativeWork() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return CreativeWork;
+    }(creativeWork_1.CreativeWorkService));
+    service.CreativeWork = CreativeWork;
+    /**
+     * 配送サービス
+     */
+    var Delivery = /** @class */ (function (_super) {
+        __extends(Delivery, _super);
+        function Delivery() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Delivery;
+    }(delivery_1.DeliveryService));
+    service.Delivery = Delivery;
+    /**
+     * イベントサービス
+     */
+    var Event = /** @class */ (function (_super) {
+        __extends(Event, _super);
+        function Event() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Event;
+    }(event_1.EventService));
+    service.Event = Event;
+    /**
+     * 注文サービス
+     */
+    var Order = /** @class */ (function (_super) {
+        __extends(Order, _super);
+        function Order() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Order;
+    }(order_1.OrderService));
+    service.Order = Order;
+    /**
+     * 組織サービス
+     * @deprecated Use service.Seller. 販売者サービスを使用してください
+     */
+    var Organization = /** @class */ (function (_super) {
+        __extends(Organization, _super);
+        function Organization() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Organization;
+    }(organization_1.OrganizationService));
+    service.Organization = Organization;
+    /**
+     * 所有権サービス
+     */
+    var OwnershipInfo = /** @class */ (function (_super) {
+        __extends(OwnershipInfo, _super);
+        function OwnershipInfo() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return OwnershipInfo;
+    }(ownershipInfo_1.OwnershipInfoService));
+    service.OwnershipInfo = OwnershipInfo;
+    /**
+     * 決済サービス
+     */
+    var Payment = /** @class */ (function (_super) {
+        __extends(Payment, _super);
+        function Payment() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Payment;
+    }(payment_1.PaymentService));
+    service.Payment = Payment;
+    /**
+     * 決済方法サービス
+     */
+    var PaymentMethod = /** @class */ (function (_super) {
+        __extends(PaymentMethod, _super);
+        function PaymentMethod() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return PaymentMethod;
+    }(paymentMethod_1.PaymentMethodService));
+    service.PaymentMethod = PaymentMethod;
+    /**
+     * ユーザーサービス
+     */
+    var Person = /** @class */ (function (_super) {
+        __extends(Person, _super);
+        function Person() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Person;
+    }(person_1.PersonService));
+    service.Person = Person;
+    var person;
+    (function (person) {
+        /**
+         * ユーザー所有権サービス
+         */
+        // tslint:disable-next-line:no-shadowed-variable
+        var OwnershipInfo = /** @class */ (function (_super) {
+            __extends(OwnershipInfo, _super);
+            function OwnershipInfo() {
+                return _super !== null && _super.apply(this, arguments) || this;
+            }
+            return OwnershipInfo;
+        }(ownershipInfo_2.PersonOwnershipInfoService));
+        person.OwnershipInfo = OwnershipInfo;
+    })(person = service.person || (service.person = {}));
+    /**
+     * 予約サービス
+     */
+    var Reservation = /** @class */ (function (_super) {
+        __extends(Reservation, _super);
+        function Reservation() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Reservation;
+    }(reservation_1.ReservationService));
+    service.Reservation = Reservation;
+    /**
+     * 販売者サービス
+     */
+    var Seller = /** @class */ (function (_super) {
+        __extends(Seller, _super);
+        function Seller() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Seller;
+    }(seller_1.SellerService));
+    service.Seller = Seller;
+    /**
+     * タスクサービス
+     */
+    var Task = /** @class */ (function (_super) {
+        __extends(Task, _super);
+        function Task() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Task;
+    }(task_1.TaskService));
+    service.Task = Task;
+    /**
+     * 取引サービス
+     */
+    var transaction;
+    (function (transaction) {
+        /**
+         * 注文取引サービス
+         */
+        var PlaceOrder = /** @class */ (function (_super) {
+            __extends(PlaceOrder, _super);
+            function PlaceOrder() {
+                return _super !== null && _super.apply(this, arguments) || this;
+            }
+            return PlaceOrder;
+        }(placeOrder_1.PlaceOrderTransactionService));
+        transaction.PlaceOrder = PlaceOrder;
+        /**
+         * 注文返品取引サービス
+         */
+        var ReturnOrder = /** @class */ (function (_super) {
+            __extends(ReturnOrder, _super);
+            function ReturnOrder() {
+                return _super !== null && _super.apply(this, arguments) || this;
+            }
+            return ReturnOrder;
+        }(returnOrder_1.ReturnOrderTransactionService));
+        transaction.ReturnOrder = ReturnOrder;
+    })(transaction = service.transaction || (service.transaction = {}));
+    /**
+     * 取引サービス
+     * @alias service.transaction
+     */
+    service.txn = transaction;
+    /**
+     * Cognitoユーザープールサービス
+     */
+    var UserPool = /** @class */ (function (_super) {
+        __extends(UserPool, _super);
+        function UserPool() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return UserPool;
+    }(userPool_1.UserPoolService));
+    service.UserPool = UserPool;
+})(service = exports.service || (exports.service = {}));
+
+},{"./auth/authClient":231,"./factory":232,"./service":234,"./service/creativeWork":235,"./service/delivery":236,"./service/event":237,"./service/order":238,"./service/organization":239,"./service/ownershipInfo":240,"./service/payment":241,"./service/paymentMethod":242,"./service/person":243,"./service/person/ownershipInfo":244,"./service/reservation":245,"./service/seller":246,"./service/task":247,"./service/transaction/placeOrder":248,"./service/transaction/returnOrder":249,"./service/userPool":250,"./transporters":251}],234:[function(require,module,exports){
+arguments[4][64][0].apply(exports,arguments)
+},{"./transporters":251,"dup":64,"qs":588}],235:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../service");
+/**
+ * 作品サービス
+ */
+var CreativeWorkService = /** @class */ (function (_super) {
+    __extends(CreativeWorkService, _super);
+    function CreativeWorkService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * 映画作品検索
+     */
+    CreativeWorkService.prototype.searchMovies = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/creativeWorks/movie',
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () {
+                        var _a;
+                        return __generator(this, function (_b) {
+                            switch (_b.label) {
+                                case 0:
+                                    _a = {
+                                        totalCount: Number(response.headers.get('X-Total-Count'))
+                                    };
+                                    return [4 /*yield*/, response.json()];
+                                case 1: return [2 /*return*/, (_a.data = _b.sent(),
+                                        _a)];
+                            }
+                        });
+                    }); })];
+            });
+        });
+    };
+    return CreativeWorkService;
+}(service_1.Service));
+exports.CreativeWorkService = CreativeWorkService;
+
+},{"../service":234,"http-status":576}],236:[function(require,module,exports){
+arguments[4][66][0].apply(exports,arguments)
+},{"../service":234,"dup":66,"http-status":576}],237:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../service");
+/**
+ * イベントサービス
+ */
+var EventService = /** @class */ (function (_super) {
+    __extends(EventService, _super);
+    function EventService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * 上映イベント検索
+     */
+    EventService.prototype.searchScreeningEvents = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/events/screeningEvent',
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () {
+                        var _a;
+                        return __generator(this, function (_b) {
+                            switch (_b.label) {
+                                case 0:
+                                    _a = {
+                                        totalCount: Number(response.headers.get('X-Total-Count'))
+                                    };
+                                    return [4 /*yield*/, response.json()];
+                                case 1: return [2 /*return*/, (_a.data = _b.sent(),
+                                        _a)];
+                            }
+                        });
+                    }); })];
+            });
+        });
+    };
+    /**
+     * 上映イベント取得
+     */
+    EventService.prototype.findScreeningEventById = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/events/screeningEvent/" + params.id,
+                        method: 'GET',
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 上映イベントに対する座席オファー検索
+     */
+    EventService.prototype.searchScreeningEventOffers = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/events/screeningEvent/" + params.eventId + "/offers",
+                        method: 'GET',
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 上映イベントに対する券種オファー検索
+     */
+    EventService.prototype.searchScreeningEventTicketOffers = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/events/screeningEvent/" + params.event.id + "/offers/ticket",
+                        method: 'GET',
+                        expectedStatusCodes: [http_status_1.OK],
+                        qs: params
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    return EventService;
+}(service_1.Service));
+exports.EventService = EventService;
+
+},{"../service":234,"http-status":576}],238:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../service");
+/**
+ * 注文サービス
+ */
+var OrderService = /** @class */ (function (_super) {
+    __extends(OrderService, _super);
+    function OrderService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * 注文を作成する
+     */
+    OrderService.prototype.placeOrder = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/orders',
+                        method: 'POST',
+                        body: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 確認番号で検索
+     * 確認番号と購入者情報より、最新の注文を検索します
+     */
+    OrderService.prototype.findByConfirmationNumber = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/orders/findByConfirmationNumber',
+                        method: 'POST',
+                        body: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 所有権コードを発行する
+     */
+    OrderService.prototype.authorizeOwnershipInfos = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/orders/" + params.orderNumber + "/ownershipInfos/authorize",
+                        method: 'POST',
+                        body: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 注文に対するアクションを検索する
+     */
+    OrderService.prototype.searchActionsByOrderNumber = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/orders/" + params.orderNumber + "/actions",
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 注文を検索する
+     */
+    OrderService.prototype.search = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/orders',
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () {
+                        var _a;
+                        return __generator(this, function (_b) {
+                            switch (_b.label) {
+                                case 0:
+                                    _a = {
+                                        totalCount: Number(response.headers.get('X-Total-Count'))
+                                    };
+                                    return [4 /*yield*/, response.json()];
+                                case 1: return [2 /*return*/, (_a.data = _b.sent(),
+                                        _a)];
+                            }
+                        });
+                    }); })];
+            });
+        });
+    };
+    return OrderService;
+}(service_1.Service));
+exports.OrderService = OrderService;
+
+},{"../service":234,"http-status":576}],239:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../service");
+/**
+ * 組織サービス
+ * @deprecated Use SellerService. 販売者サービスを使用してください
+ */
+var OrganizationService = /** @class */ (function (_super) {
+    __extends(OrganizationService, _super);
+    function OrganizationService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * 劇場組織取得
+     * @deprecated Use SellerService.findById()
+     */
+    OrganizationService.prototype.findMovieTheaterById = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/organizations/movieTheater/" + params.id,
+                        method: 'GET',
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 劇場組織検索
+     * @deprecated Use SellerService.search()
+     */
+    OrganizationService.prototype.searchMovieTheaters = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/organizations/movieTheater',
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () {
+                        var _a;
+                        return __generator(this, function (_b) {
+                            switch (_b.label) {
+                                case 0:
+                                    _a = {
+                                        totalCount: Number(response.headers.get('X-Total-Count'))
+                                    };
+                                    return [4 /*yield*/, response.json()];
+                                case 1: return [2 /*return*/, (_a.data = _b.sent(),
+                                        _a)];
+                            }
+                        });
+                    }); })];
+            });
+        });
+    };
+    return OrganizationService;
+}(service_1.Service));
+exports.OrganizationService = OrganizationService;
+
+},{"../service":234,"http-status":576}],240:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../service");
+/**
+ * 所有権サービス
+ */
+var OwnershipInfoService = /** @class */ (function (_super) {
+    __extends(OwnershipInfoService, _super);
+    function OwnershipInfoService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * 所有権トークンを取得する
+     * 所有権コードを、jsonwebtokenに変換します
+     * 変換されたトークンを使用して、認証、決済等を実行することができます
+     * jsonwebtokenはローカル環境で検証することも可能です
+     * @see https://jwt.io/
+     */
+    OwnershipInfoService.prototype.getToken = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/ownershipInfos/tokens',
+                        method: 'POST',
+                        body: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 所有権検証アクションを検索する
+     * 所有権に対して発行されたトークンを認証しようとしたアクションを検索します
+     */
+    OwnershipInfoService.prototype.searchCheckTokenActions = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/ownershipInfos/" + params.id + "/actions/checkToken",
+                        method: 'GET',
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () {
+                        var _a;
+                        return __generator(this, function (_b) {
+                            switch (_b.label) {
+                                case 0:
+                                    _a = {
+                                        totalCount: Number(response.headers.get('X-Total-Count'))
+                                    };
+                                    return [4 /*yield*/, response.json()];
+                                case 1: return [2 /*return*/, (_a.data = _b.sent(),
+                                        _a)];
+                            }
+                        });
+                    }); })];
+            });
+        });
+    };
+    return OwnershipInfoService;
+}(service_1.Service));
+exports.OwnershipInfoService = OwnershipInfoService;
+
+},{"../service":234,"http-status":576}],241:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../service");
+/**
+ * 決済サービス
+ */
+var PaymentService = /** @class */ (function (_super) {
+    __extends(PaymentService, _super);
+    function PaymentService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * ムビチケ購入番号確認
+     */
+    PaymentService.prototype.checkMovieTicket = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/payment/movieTicket/actions/check",
+                        method: 'POST',
+                        expectedStatusCodes: [http_status_1.CREATED],
+                        body: params
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    return PaymentService;
+}(service_1.Service));
+exports.PaymentService = PaymentService;
+
+},{"../service":234,"http-status":576}],242:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../service");
+/**
+ * 決済方法サービス
+ */
+var PaymentMethodService = /** @class */ (function (_super) {
+    __extends(PaymentMethodService, _super);
+    function PaymentMethodService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * ムビチケを検索する
+     */
+    PaymentMethodService.prototype.searchMovieTickets = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/paymentMethods/movieTicket',
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () {
+                        var _a;
+                        return __generator(this, function (_b) {
+                            switch (_b.label) {
+                                case 0:
+                                    _a = {
+                                        totalCount: Number(response.headers.get('X-Total-Count'))
+                                    };
+                                    return [4 /*yield*/, response.json()];
+                                case 1: return [2 /*return*/, (_a.data = _b.sent(),
+                                        _a)];
+                            }
+                        });
+                    }); })];
+            });
+        });
+    };
+    return PaymentMethodService;
+}(service_1.Service));
+exports.PaymentMethodService = PaymentMethodService;
+
+},{"../service":234,"http-status":576}],243:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../service");
+/**
+ * ユーザーサービス
+ */
+var PersonService = /** @class */ (function (_super) {
+    __extends(PersonService, _super);
+    function PersonService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * プロフィール検索
+     */
+    PersonService.prototype.getProfile = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var id;
+            var _this = this;
+            return __generator(this, function (_a) {
+                id = (params.personId !== undefined) ? params.personId : (params.id !== undefined) ? params.id : 'me';
+                return [2 /*return*/, this.fetch({
+                        uri: "/people/" + id + "/profile",
+                        method: 'GET',
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * プロフィール更新
+     */
+    PersonService.prototype.updateProfile = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var id;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        id = (params.personId !== undefined) ? params.personId : (params.id !== undefined) ? params.id : 'me';
+                        return [4 /*yield*/, this.fetch({
+                                uri: "/people/" + id + "/profile",
+                                method: 'PATCH',
+                                body: params,
+                                expectedStatusCodes: [http_status_1.NO_CONTENT]
+                            })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * 注文を検索する
+     */
+    PersonService.prototype.searchOrders = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var id;
+            var _this = this;
+            return __generator(this, function (_a) {
+                id = (params.personId !== undefined) ? params.personId : (params.id !== undefined) ? params.id : 'me';
+                return [2 /*return*/, this.fetch({
+                        uri: "/people/" + id + "/orders",
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () {
+                        var _a;
+                        return __generator(this, function (_b) {
+                            switch (_b.label) {
+                                case 0:
+                                    _a = {
+                                        totalCount: Number(response.headers.get('X-Total-Count'))
+                                    };
+                                    return [4 /*yield*/, response.json()];
+                                case 1: return [2 /*return*/, (_a.data = _b.sent(),
+                                        _a)];
+                            }
+                        });
+                    }); })];
+            });
+        });
+    };
+    /**
+     * 会員検索
+     */
+    PersonService.prototype.search = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/people',
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () {
+                        var _a;
+                        return __generator(this, function (_b) {
+                            switch (_b.label) {
+                                case 0:
+                                    _a = {
+                                        totalCount: Number(response.headers.get('X-Total-Count'))
+                                    };
+                                    return [4 /*yield*/, response.json()];
+                                case 1: return [2 /*return*/, (_a.data = _b.sent(),
+                                        _a)];
+                            }
+                        });
+                    }); })];
+            });
+        });
+    };
+    /**
+     * ユーザー取得
+     */
+    PersonService.prototype.findById = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/people/" + params.id,
+                        method: 'GET',
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    return PersonService;
+}(service_1.Service));
+exports.PersonService = PersonService;
+
+},{"../service":234,"http-status":576}],244:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../../service");
+/**
+ * ユーザー所有権サービス
+ */
+var PersonOwnershipInfoService = /** @class */ (function (_super) {
+    __extends(PersonOwnershipInfoService, _super);
+    function PersonOwnershipInfoService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * クレジットカード追加
+     */
+    PersonOwnershipInfoService.prototype.addCreditCard = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var id;
+            var _this = this;
+            return __generator(this, function (_a) {
+                id = (params.personId !== undefined) ? params.personId : (params.id !== undefined) ? params.id : 'me';
+                return [2 /*return*/, this.fetch({
+                        uri: "/people/" + id + "/ownershipInfos/creditCards",
+                        method: 'POST',
+                        body: params.creditCard,
+                        expectedStatusCodes: [http_status_1.CREATED]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * クレジットカード検索
+     */
+    PersonOwnershipInfoService.prototype.searchCreditCards = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var id;
+            var _this = this;
+            return __generator(this, function (_a) {
+                id = (params.personId !== undefined) ? params.personId : (params.id !== undefined) ? params.id : 'me';
+                return [2 /*return*/, this.fetch({
+                        uri: "/people/" + id + "/ownershipInfos/creditCards",
+                        method: 'GET',
+                        qs: {},
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * クレジットカード削除
+     */
+    PersonOwnershipInfoService.prototype.deleteCreditCard = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var id;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        id = (params.personId !== undefined) ? params.personId : (params.id !== undefined) ? params.id : 'me';
+                        return [4 /*yield*/, this.fetch({
+                                uri: "/people/" + id + "/ownershipInfos/creditCards/" + params.cardSeq,
+                                method: 'DELETE',
+                                expectedStatusCodes: [http_status_1.NO_CONTENT]
+                            })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * 口座開設
+     */
+    PersonOwnershipInfoService.prototype.openAccount = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var id;
+            var _this = this;
+            return __generator(this, function (_a) {
+                id = (params.personId !== undefined) ? params.personId : (params.id !== undefined) ? params.id : 'me';
+                return [2 /*return*/, this.fetch({
+                        uri: "/people/" + id + "/ownershipInfos/accounts/" + params.accountType,
+                        method: 'POST',
+                        body: {
+                            name: params.name
+                        },
+                        expectedStatusCodes: [http_status_1.CREATED]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 口座解約
+     * 口座の状態を変更するだけで、ユーザーの所有する口座リストから削除はされません。
+     * 解約された口座で取引を進行しようとすると400エラーとなります。
+     */
+    PersonOwnershipInfoService.prototype.closeAccount = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var id;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        id = (params.personId !== undefined) ? params.personId : (params.id !== undefined) ? params.id : 'me';
+                        return [4 /*yield*/, this.fetch({
+                                uri: "/people/" + id + "/ownershipInfos/accounts/" + params.accountType + "/" + params.accountNumber + "/close",
+                                method: 'PUT',
+                                expectedStatusCodes: [http_status_1.NO_CONTENT]
+                            })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * 口座取引履歴検索
+     */
+    PersonOwnershipInfoService.prototype.searchAccountMoneyTransferActions = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var id;
+            var _this = this;
+            return __generator(this, function (_a) {
+                id = (params.personId !== undefined) ? params.personId : (params.id !== undefined) ? params.id : 'me';
+                return [2 /*return*/, this.fetch({
+                        // tslint:disable-next-line:max-line-length
+                        uri: "/people/" + id + "/ownershipInfos/accounts/actions/moneyTransfer",
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () {
+                        var _a;
+                        return __generator(this, function (_b) {
+                            switch (_b.label) {
+                                case 0:
+                                    _a = {
+                                        totalCount: Number(response.headers.get('X-Total-Count'))
+                                    };
+                                    return [4 /*yield*/, response.json()];
+                                case 1: return [2 /*return*/, (_a.data = _b.sent(),
+                                        _a)];
+                            }
+                        });
+                    }); })];
+            });
+        });
+    };
+    /**
+     * 所有権検索
+     */
+    PersonOwnershipInfoService.prototype.search = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var id;
+            var _this = this;
+            return __generator(this, function (_a) {
+                id = (params.personId !== undefined) ? params.personId : (params.id !== undefined) ? params.id : 'me';
+                return [2 /*return*/, this.fetch({
+                        uri: "/people/" + id + "/ownershipInfos",
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () {
+                        var _a;
+                        return __generator(this, function (_b) {
+                            switch (_b.label) {
+                                case 0:
+                                    _a = {
+                                        totalCount: Number(response.headers.get('X-Total-Count'))
+                                    };
+                                    return [4 /*yield*/, response.json()];
+                                case 1: return [2 /*return*/, (_a.data = _b.sent(),
+                                        _a)];
+                            }
+                        });
+                    }); })];
+            });
+        });
+    };
+    /**
+     * 所有権に対して認可コードを発行する
+     */
+    PersonOwnershipInfoService.prototype.authorize = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var id;
+            var _this = this;
+            return __generator(this, function (_a) {
+                id = (params.personId !== undefined) ? params.personId : (params.id !== undefined) ? params.id : 'me';
+                return [2 /*return*/, this.fetch({
+                        uri: "/people/" + id + "/ownershipInfos/" + params.ownershipInfoId + "/authorize",
+                        method: 'POST',
+                        expectedStatusCodes: [http_status_1.OK],
+                        body: params
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    return PersonOwnershipInfoService;
+}(service_1.Service));
+exports.PersonOwnershipInfoService = PersonOwnershipInfoService;
+
+},{"../../service":234,"http-status":576}],245:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../service");
+/**
+ * 予約サービス
+ */
+var ReservationService = /** @class */ (function (_super) {
+    __extends(ReservationService, _super);
+    function ReservationService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * 上映イベント予約検索
+     */
+    ReservationService.prototype.searchScreeningEventReservations = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/reservations/eventReservation/screeningEvent',
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () {
+                        var _a;
+                        return __generator(this, function (_b) {
+                            switch (_b.label) {
+                                case 0:
+                                    _a = {
+                                        totalCount: Number(response.headers.get('X-Total-Count'))
+                                    };
+                                    return [4 /*yield*/, response.json()];
+                                case 1: return [2 /*return*/, (_a.data = _b.sent(),
+                                        _a)];
+                            }
+                        });
+                    }); })];
+            });
+        });
+    };
+    /**
+     * トークンで上映イベント予約照会
+     */
+    ReservationService.prototype.findScreeningEventReservationByToken = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/reservations/eventReservation/screeningEvent/findByToken",
+                        method: 'POST',
+                        body: { token: params.token },
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    return ReservationService;
+}(service_1.Service));
+exports.ReservationService = ReservationService;
+
+},{"../service":234,"http-status":576}],246:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../service");
+/**
+ * 販売者サービス
+ */
+var SellerService = /** @class */ (function (_super) {
+    __extends(SellerService, _super);
+    function SellerService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * 販売者作成
+     */
+    SellerService.prototype.create = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/sellers',
+                        method: 'POST',
+                        body: params,
+                        expectedStatusCodes: [http_status_1.CREATED]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 販売者取得
+     */
+    SellerService.prototype.findById = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/sellers/" + params.id,
+                        method: 'GET',
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 販売者検索
+     */
+    SellerService.prototype.search = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/sellers',
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () {
+                        var _a;
+                        return __generator(this, function (_b) {
+                            switch (_b.label) {
+                                case 0:
+                                    _a = {
+                                        totalCount: Number(response.headers.get('X-Total-Count'))
+                                    };
+                                    return [4 /*yield*/, response.json()];
+                                case 1: return [2 /*return*/, (_a.data = _b.sent(),
+                                        _a)];
+                            }
+                        });
+                    }); })];
+            });
+        });
+    };
+    /**
+     * 販売者編集
+     */
+    SellerService.prototype.update = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.fetch({
+                            uri: "/sellers/" + params.id,
+                            method: 'PUT',
+                            body: params.attributes,
+                            expectedStatusCodes: [http_status_1.NO_CONTENT]
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * 販売者削除
+     */
+    SellerService.prototype.deleteById = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.fetch({
+                            uri: "/sellers/" + params.id,
+                            method: 'DELETE',
+                            expectedStatusCodes: [http_status_1.NO_CONTENT]
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    return SellerService;
+}(service_1.Service));
+exports.SellerService = SellerService;
+
+},{"../service":234,"http-status":576}],247:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../service");
+/**
+ * タスクサービス
+ */
+var TaskService = /** @class */ (function (_super) {
+    __extends(TaskService, _super);
+    function TaskService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * タスク作成
+     */
+    TaskService.prototype.create = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/tasks/" + params.name,
+                        method: 'POST',
+                        body: params,
+                        expectedStatusCodes: [http_status_1.CREATED]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * タスク取得
+     */
+    TaskService.prototype.findById = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/tasks/" + params.name + "/" + params.id,
+                        method: 'GET',
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * タスク検索
+     */
+    TaskService.prototype.search = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/tasks',
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () {
+                        var _a;
+                        return __generator(this, function (_b) {
+                            switch (_b.label) {
+                                case 0:
+                                    _a = {
+                                        totalCount: Number(response.headers.get('X-Total-Count'))
+                                    };
+                                    return [4 /*yield*/, response.json()];
+                                case 1: return [2 /*return*/, (_a.data = _b.sent(),
+                                        _a)];
+                            }
+                        });
+                    }); })];
+            });
+        });
+    };
+    return TaskService;
+}(service_1.Service));
+exports.TaskService = TaskService;
+
+},{"../service":234,"http-status":576}],248:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var factory = require("../../factory");
+var service_1 = require("../../service");
+/**
+ * 注文取引サービス
+ */
+var PlaceOrderTransactionService = /** @class */ (function (_super) {
+    __extends(PlaceOrderTransactionService, _super);
+    function PlaceOrderTransactionService() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.typeOf = factory.transactionType.PlaceOrder;
+        return _this;
+    }
+    /**
+     * 取引を開始する
+     */
+    PlaceOrderTransactionService.prototype.start = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/" + this.typeOf + "/start",
+                        method: 'POST',
+                        body: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 座席予約承認作成
+     */
+    PlaceOrderTransactionService.prototype.authorizeSeatReservation = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/" + this.typeOf + "/" + params.purpose.id + "/actions/authorize/offer/seatReservation",
+                        method: 'POST',
+                        expectedStatusCodes: [http_status_1.CREATED],
+                        body: params.object
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 座席予約承認取消
+     */
+    PlaceOrderTransactionService.prototype.voidSeatReservation = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.fetch({
+                            uri: "/transactions/" + this.typeOf + "/" + params.purpose.id + "/actions/authorize/offer/seatReservation/" + params.id + "/cancel",
+                            method: 'PUT',
+                            expectedStatusCodes: [http_status_1.NO_CONTENT]
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * 汎用決済承認
+     */
+    PlaceOrderTransactionService.prototype.authorizeAnyPayment = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/" + this.typeOf + "/" + params.purpose.id + "/actions/authorize/paymentMethod/any",
+                        method: 'POST',
+                        expectedStatusCodes: [http_status_1.CREATED],
+                        body: params.object
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 汎用決済承認取消
+     */
+    PlaceOrderTransactionService.prototype.voidAnyPayment = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.fetch({
+                            uri: "/transactions/" + this.typeOf + "/" + params.purpose.id + "/actions/authorize/paymentMethod/any/" + params.id + "/cancel",
+                            method: 'PUT',
+                            expectedStatusCodes: [http_status_1.NO_CONTENT]
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * クレジットカードのオーソリを取得する
+     */
+    PlaceOrderTransactionService.prototype.authorizeCreditCardPayment = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/" + this.typeOf + "/" + params.purpose.id + "/actions/authorize/paymentMethod/creditCard",
+                        method: 'POST',
+                        expectedStatusCodes: [http_status_1.CREATED],
+                        body: params.object
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 口座決済のオーソリを取得する
+     */
+    PlaceOrderTransactionService.prototype.authorizeAccountPayment = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/" + this.typeOf + "/" + params.purpose.id + "/actions/authorize/paymentMethod/account",
+                        method: 'POST',
+                        expectedStatusCodes: [http_status_1.CREATED],
+                        body: params.object
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * ムビチケ承認
+     */
+    PlaceOrderTransactionService.prototype.authorizeMovieTicketPayment = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/" + this.typeOf + "/" + params.purpose.id + "/actions/authorize/paymentMethod/movieTicket",
+                        method: 'POST',
+                        expectedStatusCodes: [http_status_1.CREATED],
+                        body: params.object
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 決済承認取消
+     */
+    PlaceOrderTransactionService.prototype.voidPayment = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.fetch({
+                            // tslint:disable-next-line:max-line-length
+                            uri: "/transactions/" + this.typeOf + "/" + params.purpose.id + "/actions/authorize/paymentMethod/" + params.object.typeOf + "/" + params.id + "/cancel",
+                            method: 'PUT',
+                            expectedStatusCodes: [http_status_1.NO_CONTENT]
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * ポイントインセンティブのオーソリを取得する
+     */
+    PlaceOrderTransactionService.prototype.authorizePointAward = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/" + this.typeOf + "/" + params.purpose.id + "/actions/authorize/award/accounts/point",
+                        method: 'POST',
+                        expectedStatusCodes: [http_status_1.CREATED],
+                        body: params.object
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * ポイントインセンティブオーソリ取消
+     */
+    PlaceOrderTransactionService.prototype.voidPointAward = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.fetch({
+                            uri: "/transactions/" + this.typeOf + "/" + params.purpose.id + "/actions/authorize/award/accounts/point/" + params.id + "/cancel",
+                            method: 'PUT',
+                            expectedStatusCodes: [http_status_1.NO_CONTENT]
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * 購入者連絡先登録
+     */
+    PlaceOrderTransactionService.prototype.setCustomerContact = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/" + this.typeOf + "/" + params.id + "/customerContact",
+                        method: 'PUT',
+                        expectedStatusCodes: [http_status_1.OK],
+                        body: params.object.customerContact
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 取引確定
+     */
+    PlaceOrderTransactionService.prototype.confirm = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/" + this.typeOf + "/" + params.id + "/confirm",
+                        method: 'PUT',
+                        expectedStatusCodes: [http_status_1.OK],
+                        body: params.options
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 明示的に取引を中止する
+     * 既に確定済、あるいは、期限切れの取引に対して実行するとArgumentエラーが返されます。
+     */
+    PlaceOrderTransactionService.prototype.cancel = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.fetch({
+                            uri: "/transactions/" + this.typeOf + "/" + params.id + "/cancel",
+                            method: 'PUT',
+                            expectedStatusCodes: [http_status_1.NO_CONTENT]
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * 取引検索
+     */
+    PlaceOrderTransactionService.prototype.search = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/" + this.typeOf,
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () {
+                        var _a;
+                        return __generator(this, function (_b) {
+                            switch (_b.label) {
+                                case 0:
+                                    _a = {
+                                        totalCount: Number(response.headers.get('X-Total-Count'))
+                                    };
+                                    return [4 /*yield*/, response.json()];
+                                case 1: return [2 /*return*/, (_a.data = _b.sent(),
+                                        _a)];
+                            }
+                        });
+                    }); })];
+            });
+        });
+    };
+    /**
+     * 取引に対するアクションを検索する
+     */
+    PlaceOrderTransactionService.prototype.searchActionsByTransactionId = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/" + this.typeOf + "/" + params.id + "/actions",
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * レポートダウンロード
+     */
+    PlaceOrderTransactionService.prototype.downloadReport = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/" + this.typeOf + "/report",
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.body];
+                    }); }); })];
+            });
+        });
+    };
+    return PlaceOrderTransactionService;
+}(service_1.Service));
+exports.PlaceOrderTransactionService = PlaceOrderTransactionService;
+
+},{"../../factory":232,"../../service":234,"http-status":576}],249:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -8307,8 +10386,8 @@ var service_1 = require("../../service");
  */
 var ReturnOrderTransactionService = /** @class */ (function (_super) {
     __extends(ReturnOrderTransactionService, _super);
-    function ReturnOrderTransactionService(options) {
-        var _this = _super.call(this, options) /* istanbul ignore next */ || this;
+    function ReturnOrderTransactionService() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.typeOf = factory.transactionType.ReturnOrder;
         return _this;
     }
@@ -8320,11 +10399,12 @@ var ReturnOrderTransactionService = /** @class */ (function (_super) {
             var _this = this;
             return __generator(this, function (_a) {
                 return [2 /*return*/, this.fetch({
-                        uri: '/transactions/returnOrder/start',
+                        uri: "/transactions/" + this.typeOf + "/start",
                         method: 'POST',
                         body: params,
                         expectedStatusCodes: [http_status_1.OK]
-                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
                         return [2 /*return*/, response.json()];
                     }); }); })];
             });
@@ -8338,7 +10418,7 @@ var ReturnOrderTransactionService = /** @class */ (function (_super) {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.fetch({
-                            uri: "/transactions/returnOrder/" + params.id + "/confirm",
+                            uri: "/transactions/" + this.typeOf + "/" + params.id + "/confirm",
                             method: 'PUT',
                             expectedStatusCodes: [http_status_1.NO_CONTENT]
                         })];
@@ -8361,7 +10441,8 @@ var ReturnOrderTransactionService = /** @class */ (function (_super) {
                         method: 'GET',
                         qs: params,
                         expectedStatusCodes: [http_status_1.OK]
-                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () {
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () {
                         var _a;
                         return __generator(this, function (_b) {
                             switch (_b.label) {
@@ -8382,7 +10463,7 @@ var ReturnOrderTransactionService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.ReturnOrderTransactionService = ReturnOrderTransactionService;
 
-},{"../../factory":163,"../../service":165,"http-status":451}],178:[function(require,module,exports){
+},{"../../factory":232,"../../service":234,"http-status":576}],250:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -8397,8 +10478,44 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var cinerino = require("@cinerino/api-abstract-client");
+var http_status_1 = require("http-status");
+var service_1 = require("../service");
 /**
  * Cognitoユーザープールサービス
  */
@@ -8407,26 +10524,662 @@ var UserPoolService = /** @class */ (function (_super) {
     function UserPoolService() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
+    /**
+     * ユーザープール取得
+     */
+    UserPoolService.prototype.findById = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/userPools/" + params.userPoolId,
+                        method: 'GET',
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * クライアント検索
+     */
+    UserPoolService.prototype.searchClients = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/userPools/" + params.userPoolId + "/clients",
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () {
+                        var _a;
+                        return __generator(this, function (_b) {
+                            switch (_b.label) {
+                                case 0:
+                                    _a = {
+                                        totalCount: Number(response.headers.get('X-Total-Count'))
+                                    };
+                                    return [4 /*yield*/, response.json()];
+                                case 1: return [2 /*return*/, (_a.data = _b.sent(),
+                                        _a)];
+                            }
+                        });
+                    }); })];
+            });
+        });
+    };
+    /**
+     * クライアント取得
+     */
+    UserPoolService.prototype.findClientById = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/userPools/" + params.userPoolId + "/clients/" + params.clientId,
+                        method: 'GET',
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
     return UserPoolService;
-}(cinerino.service.UserPool));
+}(service_1.Service));
 exports.UserPoolService = UserPoolService;
 
-},{"@cinerino/api-abstract-client":63}],179:[function(require,module,exports){
+},{"../service":234,"http-status":576}],251:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable:max-classes-per-file
+/**
+ * transporters
+ */
+var createDebug = require("debug");
+var fetch = require("isomorphic-fetch");
+var debug = createDebug('cinerino-api-abstract-client:transporters');
+// tslint:disable-next-line
+// const pkg = require('../package.json');
+/**
+ * トランスポーター抽象クラス
+ */
+var Transporter = /** @class */ (function () {
+    function Transporter() {
+    }
+    return Transporter;
+}());
+exports.Transporter = Transporter;
+/**
+ * RequestError
+ */
+var RequestError = /** @class */ (function (_super) {
+    __extends(RequestError, _super);
+    function RequestError(message) {
+        var _this = 
+        // tslint:disable-next-line:no-single-line-block-comment
+        _super.call(this, message) /* istanbul ignore next */ || this;
+        _this.name = 'CinerinoRequestError';
+        return _this;
+    }
+    return RequestError;
+}(Error));
+exports.RequestError = RequestError;
+/**
+ * DefaultTransporter
+ */
+var DefaultTransporter = /** @class */ (function () {
+    function DefaultTransporter(expectedStatusCodes) {
+        this.expectedStatusCodes = expectedStatusCodes;
+    }
+    /**
+     * Configures request options before making a request.
+     */
+    DefaultTransporter.CONFIGURE = function (options) {
+        // set transporter user agent
+        // options.headers = (options.headers !== undefined) ? options.headers : {};
+        // tslint:disable-next-line:no-single-line-block-comment
+        /* istanbul ignore else */
+        // if (!(<any>options.headers)['User-Agent']) {
+        //     (<any>options.headers)['User-Agent'] = DefaultTransporter.USER_AGENT;
+        // } else if ((<any>options.headers)['User-Agent'].indexOf(DefaultTransporter.USER_AGENT) === -1) {
+        //     (<any>options.headers)['User-Agent'] = `${(<any>options.headers)['User-Agent']} ${DefaultTransporter.USER_AGENT}`;
+        // }
+        return options;
+    };
+    /**
+     * Makes a request with given options and invokes callback.
+     */
+    DefaultTransporter.prototype.fetch = function (url, options) {
+        return __awaiter(this, void 0, void 0, function () {
+            var fetchOptions;
+            var _this = this;
+            return __generator(this, function (_a) {
+                fetchOptions = DefaultTransporter.CONFIGURE(options);
+                debug('fetching...', url, fetchOptions);
+                return [2 /*return*/, fetch(url, fetchOptions)
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, this.wrapCallback(response)];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * Wraps the response callback.
+     */
+    DefaultTransporter.prototype.wrapCallback = function (response) {
+        return __awaiter(this, void 0, void 0, function () {
+            var err, body, error_1;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        err = new RequestError('An unexpected error occurred');
+                        debug('request processed', response.status);
+                        if (!(this.expectedStatusCodes.indexOf(response.status) < 0)) return [3 /*break*/, 6];
+                        body = void 0;
+                        _a.label = 1;
+                    case 1:
+                        _a.trys.push([1, 3, , 5]);
+                        return [4 /*yield*/, response.clone()
+                                .json()];
+                    case 2:
+                        // Only and only application/json responses should
+                        // be decoded back to JSON, but there are cases API back-ends
+                        // responds without proper content-type.
+                        body = _a.sent();
+                        return [3 /*break*/, 5];
+                    case 3:
+                        error_1 = _a.sent();
+                        return [4 /*yield*/, response.clone()
+                                .text()];
+                    case 4:
+                        body = _a.sent();
+                        return [3 /*break*/, 5];
+                    case 5:
+                        if (typeof body === 'object' && body.error !== undefined) {
+                            err = new RequestError(body.error.message);
+                            err.code = response.status;
+                            err.errors = body.error.errors;
+                        }
+                        else {
+                            err = new RequestError(body);
+                            err.code = response.status;
+                            err.errors = [];
+                        }
+                        return [3 /*break*/, 7];
+                    case 6: return [2 /*return*/, response];
+                    case 7: throw err;
+                }
+            });
+        });
+    };
+    return DefaultTransporter;
+}());
+exports.DefaultTransporter = DefaultTransporter;
+/**
+ * スタブトランポーター
+ */
+var StubTransporter = /** @class */ (function () {
+    function StubTransporter(body) {
+        this.body = body;
+    }
+    StubTransporter.prototype.fetch = function (_, options) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                return [2 /*return*/, new Response(this.body, options)];
+            });
+        });
+    };
+    return StubTransporter;
+}());
+exports.StubTransporter = StubTransporter;
+
+},{"debug":574,"isomorphic-fetch":584}],252:[function(require,module,exports){
+arguments[4][92][0].apply(exports,arguments)
+},{"@chevre/factory":230,"dup":92}],253:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],180:[function(require,module,exports){
+},{"dup":3}],254:[function(require,module,exports){
+arguments[4][94][0].apply(exports,arguments)
+},{"dup":94}],255:[function(require,module,exports){
+arguments[4][4][0].apply(exports,arguments)
+},{"dup":4}],256:[function(require,module,exports){
+arguments[4][96][0].apply(exports,arguments)
+},{"dup":96}],257:[function(require,module,exports){
+arguments[4][97][0].apply(exports,arguments)
+},{"dup":97}],258:[function(require,module,exports){
+arguments[4][98][0].apply(exports,arguments)
+},{"dup":98}],259:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],260:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],261:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],262:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],263:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],264:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],265:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],266:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],267:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],268:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],269:[function(require,module,exports){
+arguments[4][109][0].apply(exports,arguments)
+},{"../../authorize/award/point":257,"dup":109}],270:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],271:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],272:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],273:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],274:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],275:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],276:[function(require,module,exports){
+arguments[4][9][0].apply(exports,arguments)
+},{"dup":9}],277:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],278:[function(require,module,exports){
+arguments[4][118][0].apply(exports,arguments)
+},{"dup":118}],279:[function(require,module,exports){
+arguments[4][12][0].apply(exports,arguments)
+},{"dup":12}],280:[function(require,module,exports){
+arguments[4][120][0].apply(exports,arguments)
+},{"../errorCode":279,"./common":283,"dup":120,"setprototypeof":322}],281:[function(require,module,exports){
+arguments[4][121][0].apply(exports,arguments)
+},{"../errorCode":279,"./common":283,"dup":121,"setprototypeof":322}],282:[function(require,module,exports){
+arguments[4][122][0].apply(exports,arguments)
+},{"../errorCode":279,"./common":283,"dup":122,"setprototypeof":322}],283:[function(require,module,exports){
+arguments[4][123][0].apply(exports,arguments)
+},{"dup":123}],284:[function(require,module,exports){
+arguments[4][124][0].apply(exports,arguments)
+},{"../errorCode":279,"./common":283,"dup":124,"setprototypeof":322}],285:[function(require,module,exports){
+arguments[4][125][0].apply(exports,arguments)
+},{"../errorCode":279,"./common":283,"dup":125,"setprototypeof":322}],286:[function(require,module,exports){
+arguments[4][126][0].apply(exports,arguments)
+},{"../errorCode":279,"./common":283,"dup":126,"setprototypeof":322}],287:[function(require,module,exports){
+arguments[4][127][0].apply(exports,arguments)
+},{"../errorCode":279,"./common":283,"dup":127,"setprototypeof":322}],288:[function(require,module,exports){
+arguments[4][128][0].apply(exports,arguments)
+},{"../errorCode":279,"./common":283,"dup":128,"setprototypeof":322}],289:[function(require,module,exports){
+arguments[4][129][0].apply(exports,arguments)
+},{"../errorCode":279,"./common":283,"dup":129,"setprototypeof":322}],290:[function(require,module,exports){
+arguments[4][130][0].apply(exports,arguments)
+},{"./error/alreadyInUse":280,"./error/argument":281,"./error/argumentNull":282,"./error/common":283,"./error/forbidden":284,"./error/notFound":285,"./error/notImplemented":286,"./error/rateLimitExceeded":287,"./error/serviceUnavailable":288,"./error/unauthorized":289,"dup":130}],291:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],292:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],293:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],294:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],295:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],296:[function(require,module,exports){
+arguments[4][136][0].apply(exports,arguments)
+},{"dup":136}],297:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],298:[function(require,module,exports){
+arguments[4][137][0].apply(exports,arguments)
+},{"dup":137}],299:[function(require,module,exports){
+arguments[4][138][0].apply(exports,arguments)
+},{"dup":138}],300:[function(require,module,exports){
+arguments[4][139][0].apply(exports,arguments)
+},{"../chevre":252,"dup":139}],301:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],302:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],303:[function(require,module,exports){
+arguments[4][142][0].apply(exports,arguments)
+},{"dup":142}],304:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],305:[function(require,module,exports){
+arguments[4][144][0].apply(exports,arguments)
+},{"dup":144}],306:[function(require,module,exports){
+arguments[4][145][0].apply(exports,arguments)
+},{"dup":145}],307:[function(require,module,exports){
+arguments[4][34][0].apply(exports,arguments)
+},{"dup":34}],308:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],309:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],310:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],311:[function(require,module,exports){
+arguments[4][150][0].apply(exports,arguments)
+},{"dup":150}],312:[function(require,module,exports){
+arguments[4][42][0].apply(exports,arguments)
+},{"dup":42}],313:[function(require,module,exports){
+arguments[4][153][0].apply(exports,arguments)
+},{"dup":153}],314:[function(require,module,exports){
+arguments[4][154][0].apply(exports,arguments)
+},{"dup":154}],315:[function(require,module,exports){
+arguments[4][52][0].apply(exports,arguments)
+},{"dup":52}],316:[function(require,module,exports){
+arguments[4][53][0].apply(exports,arguments)
+},{"dup":53}],317:[function(require,module,exports){
+arguments[4][157][0].apply(exports,arguments)
+},{"dup":157}],318:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],319:[function(require,module,exports){
+arguments[4][159][0].apply(exports,arguments)
+},{"dup":159}],320:[function(require,module,exports){
+arguments[4][57][0].apply(exports,arguments)
+},{"dup":57}],321:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
- * 口座タイプ
- * Pecorinoサービスに対して口座タイプを指定します。
+ * factory
  */
-var AccountType;
-(function (AccountType) {
-    AccountType["Point"] = "Point";
-})(AccountType || (AccountType = {}));
-exports.default = AccountType;
+var pecorino = require("@pecorino/factory");
+var waiter = require("@waiter/factory");
+var chevre = require("./chevre");
+var cognito = require("./cognito");
+var PointAwardAuthorizeActionFactory = require("./factory/action/authorize/award/point");
+var SeatReservationOfferAuthorizeActionFactory = require("./factory/action/authorize/offer/seatReservation");
+var AuthorizeAccountPaymentActionFactory = require("./factory/action/authorize/paymentMethod/account");
+var AuthorizeAnyPaymentActionFactory = require("./factory/action/authorize/paymentMethod/any");
+var AuthorizeCreditCardPaymentActionFactory = require("./factory/action/authorize/paymentMethod/creditCard");
+var AuthorizeMovieTicketPaymentActionFactory = require("./factory/action/authorize/paymentMethod/movieTicket");
+var CheckMovieTicketActionFactory = require("./factory/action/check/paymentMethod/movieTicket");
+var CheckTokenActionFactory = require("./factory/action/check/token");
+var ConfirmReservationActionFactory = require("./factory/action/interact/confirm/reservation");
+var OrderActionFactory = require("./factory/action/trade/order");
+var PayActionFactory = require("./factory/action/trade/pay");
+var RefundActionFactory = require("./factory/action/trade/refund");
+var GivePointAwardActionFactory = require("./factory/action/transfer/give/pointAward");
+var PrintTicketActionFactory = require("./factory/action/transfer/print/ticket");
+var ReturnOrderActionFactory = require("./factory/action/transfer/return/order");
+var ReturnPointAwardActionFactory = require("./factory/action/transfer/return/pointAward");
+var SendEmailMessageActionFactory = require("./factory/action/transfer/send/message/email");
+var SendOrderActionFactory = require("./factory/action/transfer/send/order");
+var actionStatusType_1 = require("./factory/actionStatusType");
+var actionType_1 = require("./factory/actionType");
+var accountType_1 = require("./factory/accountType");
+var ClientUserFactory = require("./factory/clientUser");
+var EmailMessageFactory = require("./factory/creativeWork/message/email");
+var creativeWorkType_1 = require("./factory/creativeWorkType");
+var EncodingFormat = require("./factory/encodingFormat");
+var ScreeningEventFactory = require("./factory/event/screeningEvent");
+var ScreeningEventSeriesFactory = require("./factory/event/screeningEventSeries");
+var InvoiceFactory = require("./factory/invoice");
+var MonetaryAmountFactory = require("./factory/monetaryAmount");
+var OrderFactory = require("./factory/order");
+var orderStatus_1 = require("./factory/orderStatus");
+var OrganizationFactory = require("./factory/organization");
+var organizationType_1 = require("./factory/organizationType");
+var OwnershipInfoFactory = require("./factory/ownershipInfo");
+var CreditCardFactory = require("./factory/paymentMethod/paymentCard/creditCard");
+var MovieTicketFactory = require("./factory/paymentMethod/paymentCard/movieTicket");
+var paymentMethodType_1 = require("./factory/paymentMethodType");
+var paymentStatusType_1 = require("./factory/paymentStatusType");
+var PersonFactory = require("./factory/person");
+var personType_1 = require("./factory/personType");
+var placeType_1 = require("./factory/placeType");
+var priceCurrency_1 = require("./factory/priceCurrency");
+var ProgramMembershipFactory = require("./factory/programMembership");
+var PropertyValueFactory = require("./factory/propertyValue");
+var QuantitativeValueFactory = require("./factory/quantitativeValue");
+var WebAPIServiceFactory = require("./factory/service/webAPI");
+var unitCode_1 = require("./factory/unitCode");
+var sortType_1 = require("./factory/sortType");
+var taskName_1 = require("./factory/taskName");
+var taskStatus_1 = require("./factory/taskStatus");
+var PlaceOrderTransactionFactory = require("./factory/transaction/placeOrder");
+var ReturnOrderTransactionFactory = require("./factory/transaction/returnOrder");
+var transactionStatusType_1 = require("./factory/transactionStatusType");
+var transactionTasksExportationStatus_1 = require("./factory/transactionTasksExportationStatus");
+var transactionType_1 = require("./factory/transactionType");
+var errorCode_1 = require("./factory/errorCode");
+var errors = require("./factory/errors");
+exports.cognito = cognito;
+exports.chevre = chevre;
+exports.pecorino = pecorino;
+exports.waiter = waiter;
+exports.errors = errors;
+exports.errorCode = errorCode_1.default;
+exports.actionStatusType = actionStatusType_1.default;
+exports.actionType = actionType_1.default;
+var action;
+(function (action) {
+    var authorize;
+    (function (authorize) {
+        var award;
+        (function (award) {
+            // tslint:disable-next-line:no-shadowed-variable
+            award.point = PointAwardAuthorizeActionFactory;
+        })(award = authorize.award || (authorize.award = {}));
+        // tslint:disable-next-line:no-shadowed-variable
+        var paymentMethod;
+        (function (paymentMethod) {
+            paymentMethod.account = AuthorizeAccountPaymentActionFactory;
+            paymentMethod.any = AuthorizeAnyPaymentActionFactory;
+            paymentMethod.creditCard = AuthorizeCreditCardPaymentActionFactory;
+            paymentMethod.movieTicket = AuthorizeMovieTicketPaymentActionFactory;
+        })(paymentMethod = authorize.paymentMethod || (authorize.paymentMethod = {}));
+        // tslint:disable-next-line:no-shadowed-variable
+        var offer;
+        (function (offer) {
+            // tslint:disable-next-line:no-shadowed-variable
+            offer.seatReservation = SeatReservationOfferAuthorizeActionFactory;
+        })(offer = authorize.offer || (authorize.offer = {}));
+    })(authorize = action.authorize || (action.authorize = {}));
+    var check;
+    (function (check) {
+        // tslint:disable-next-line:no-shadowed-variable
+        var paymentMethod;
+        (function (paymentMethod) {
+            paymentMethod.movieTicket = CheckMovieTicketActionFactory;
+        })(paymentMethod = check.paymentMethod || (check.paymentMethod = {}));
+        check.token = CheckTokenActionFactory;
+    })(check = action.check || (action.check = {}));
+    var interact;
+    (function (interact) {
+        var confirm;
+        (function (confirm) {
+            confirm.reservation = ConfirmReservationActionFactory;
+        })(confirm = interact.confirm || (interact.confirm = {}));
+        var register;
+        (function (register) {
+        })(register = interact.register || (interact.register = {}));
+        var unRegister;
+        (function (unRegister) {
+        })(unRegister = interact.unRegister || (interact.unRegister = {}));
+    })(interact = action.interact || (action.interact = {}));
+    var trade;
+    (function (trade) {
+        // tslint:disable-next-line:no-shadowed-variable
+        trade.order = OrderActionFactory;
+        trade.pay = PayActionFactory;
+        trade.refund = RefundActionFactory;
+    })(trade = action.trade || (action.trade = {}));
+    var transfer;
+    (function (transfer) {
+        var give;
+        (function (give) {
+            // tslint:disable-next-line:no-shadowed-variable
+            give.pointAward = GivePointAwardActionFactory;
+        })(give = transfer.give || (transfer.give = {}));
+        var print;
+        (function (print) {
+            print.ticket = PrintTicketActionFactory;
+        })(print = transfer.print || (transfer.print = {}));
+        /**
+         * 返却アクション
+         * returnはネームスペース名に使えないのでreturnAction
+         */
+        var returnAction;
+        (function (returnAction) {
+            // tslint:disable-next-line:no-shadowed-variable
+            returnAction.order = ReturnOrderActionFactory;
+            returnAction.pointAward = ReturnPointAwardActionFactory;
+        })(returnAction = transfer.returnAction || (transfer.returnAction = {}));
+        var send;
+        (function (send) {
+            var message;
+            (function (message) {
+                message.email = SendEmailMessageActionFactory;
+            })(message = send.message || (send.message = {}));
+            // tslint:disable-next-line:no-shadowed-variable
+            send.order = SendOrderActionFactory;
+        })(send = transfer.send || (transfer.send = {}));
+    })(transfer = action.transfer || (action.transfer = {}));
+})(action = exports.action || (exports.action = {}));
+exports.accountType = accountType_1.default;
+exports.encodingFormat = EncodingFormat;
+var paymentMethod;
+(function (paymentMethod) {
+    var paymentCard;
+    (function (paymentCard) {
+        paymentCard.creditCard = CreditCardFactory;
+        paymentCard.movieTicket = MovieTicketFactory;
+    })(paymentCard = paymentMethod.paymentCard || (paymentMethod.paymentCard = {}));
+})(paymentMethod = exports.paymentMethod || (exports.paymentMethod = {}));
+exports.clientUser = ClientUserFactory;
+var creativeWork;
+(function (creativeWork) {
+    var message;
+    (function (message) {
+        message.email = EmailMessageFactory;
+    })(message = creativeWork.message || (creativeWork.message = {}));
+})(creativeWork = exports.creativeWork || (exports.creativeWork = {}));
+exports.creativeWorkType = creativeWorkType_1.default;
+var event;
+(function (event) {
+    event.screeningEvent = ScreeningEventFactory;
+    event.screeningEventSeries = ScreeningEventSeriesFactory;
+})(event = exports.event || (exports.event = {}));
+exports.invoice = InvoiceFactory;
+exports.monetaryAmount = MonetaryAmountFactory;
+var offer;
+(function (offer) {
+})(offer = exports.offer || (exports.offer = {}));
+exports.order = OrderFactory;
+exports.orderStatus = orderStatus_1.default;
+// export namespace organization {
+//     export type ISearchConditions<T extends OrganizationType> =
+//         T extends OrganizationType.Corporation ? CorporationOrganizationFactory.ISearchConditions :
+//         T extends OrganizationType.MovieTheater ? MovieTheaterOrganizationFactory.ISearchConditions :
+//         OrganizationFactory.ISearchConditions;
+//     export type IAttributes<T extends OrganizationType> =
+//         T extends OrganizationType.Corporation ? CorporationOrganizationFactory.IAttributes :
+//         T extends OrganizationType.MovieTheater ? MovieTheaterOrganizationFactory.IAttributes :
+//         OrganizationFactory.IAttributes<T>;
+//     export type IOrganization<T extends OrganizationType> =
+//         T extends OrganizationType.Corporation ? CorporationOrganizationFactory.IOrganization :
+//         T extends OrganizationType.MovieTheater ? MovieTheaterOrganizationFactory.IOrganization :
+//         OrganizationFactory.IOrganization<OrganizationFactory.IAttributes<T>>;
+//     export type IAreaServed<T extends OrganizationType> =
+//         T extends OrganizationType.MovieTheater ? MovieTheaterOrganizationFactory.IAreaServed :
+//         OrganizationFactory.IAreaServed;
+//     export import IPaymentAccepted = OrganizationFactory.IPaymentAccepted;
+//     export import IPOS = OrganizationFactory.IPOS;
+//     export import IAcceptedPaymentMethodType = OrganizationFactory.IAcceptedPaymentMethodType;
+//     export import IMakesOffer = OrganizationFactory.IMakesOffer;
+// }
+exports.organizationType = organizationType_1.default;
+exports.ownershipInfo = OwnershipInfoFactory;
+exports.priceCurrency = priceCurrency_1.default;
+exports.paymentMethodType = paymentMethodType_1.default;
+exports.paymentStatusType = paymentStatusType_1.default;
+exports.person = PersonFactory;
+exports.personType = personType_1.default;
+exports.placeType = placeType_1.default;
+exports.programMembership = ProgramMembershipFactory;
+exports.propertyValue = PropertyValueFactory;
+exports.quantitativeValue = QuantitativeValueFactory;
+var service;
+(function (service) {
+    service.webAPI = WebAPIServiceFactory;
+})(service = exports.service || (exports.service = {}));
+exports.seller = OrganizationFactory;
+exports.sortType = sortType_1.default;
+exports.taskName = taskName_1.default;
+exports.taskStatus = taskStatus_1.default;
+var transaction;
+(function (transaction) {
+    transaction.placeOrder = PlaceOrderTransactionFactory;
+    transaction.returnOrder = ReturnOrderTransactionFactory;
+})(transaction = exports.transaction || (exports.transaction = {}));
+exports.transactionStatusType = transactionStatusType_1.default;
+exports.transactionTasksExportationStatus = transactionTasksExportationStatus_1.default;
+exports.transactionType = transactionType_1.default;
+exports.unitCode = unitCode_1.UnitCode;
 
-},{}],181:[function(require,module,exports){
+},{"./chevre":252,"./cognito":253,"./factory/accountType":254,"./factory/action/authorize/award/point":257,"./factory/action/authorize/offer/seatReservation":258,"./factory/action/authorize/paymentMethod/account":259,"./factory/action/authorize/paymentMethod/any":260,"./factory/action/authorize/paymentMethod/creditCard":261,"./factory/action/authorize/paymentMethod/movieTicket":262,"./factory/action/check/paymentMethod/movieTicket":263,"./factory/action/check/token":264,"./factory/action/interact/confirm/reservation":265,"./factory/action/trade/order":266,"./factory/action/trade/pay":267,"./factory/action/trade/refund":268,"./factory/action/transfer/give/pointAward":269,"./factory/action/transfer/print/ticket":270,"./factory/action/transfer/return/order":271,"./factory/action/transfer/return/pointAward":272,"./factory/action/transfer/send/message/email":273,"./factory/action/transfer/send/order":274,"./factory/actionStatusType":255,"./factory/actionType":256,"./factory/clientUser":275,"./factory/creativeWork/message/email":277,"./factory/creativeWorkType":276,"./factory/encodingFormat":278,"./factory/errorCode":279,"./factory/errors":290,"./factory/event/screeningEvent":291,"./factory/event/screeningEventSeries":292,"./factory/invoice":293,"./factory/monetaryAmount":294,"./factory/order":295,"./factory/orderStatus":296,"./factory/organization":297,"./factory/organizationType":298,"./factory/ownershipInfo":299,"./factory/paymentMethod/paymentCard/creditCard":301,"./factory/paymentMethod/paymentCard/movieTicket":302,"./factory/paymentMethodType":300,"./factory/paymentStatusType":303,"./factory/person":304,"./factory/personType":305,"./factory/placeType":306,"./factory/priceCurrency":307,"./factory/programMembership":308,"./factory/propertyValue":309,"./factory/quantitativeValue":310,"./factory/service/webAPI":311,"./factory/sortType":312,"./factory/taskName":313,"./factory/taskStatus":314,"./factory/transaction/placeOrder":318,"./factory/transaction/returnOrder":319,"./factory/transactionStatusType":315,"./factory/transactionTasksExportationStatus":316,"./factory/transactionType":317,"./factory/unitCode":320,"@pecorino/factory":552,"@waiter/factory":566}],322:[function(require,module,exports){
+arguments[4][162][0].apply(exports,arguments)
+},{"dup":162}],323:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],324:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var factory_1 = require("@cinerino/factory");
+/**
+ * 口座タイプ
+ */
+exports.default = factory_1.accountType;
+
+},{"@cinerino/factory":514}],325:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var factory_1 = require("@cinerino/factory");
@@ -8435,7 +11188,7 @@ var factory_1 = require("@cinerino/factory");
  */
 exports.default = factory_1.actionStatusType;
 
-},{"@cinerino/factory":389}],182:[function(require,module,exports){
+},{"@cinerino/factory":514}],326:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var factory_1 = require("@cinerino/factory");
@@ -8444,15 +11197,9 @@ var factory_1 = require("@cinerino/factory");
  */
 exports.default = factory_1.actionType;
 
-},{"@cinerino/factory":389}],183:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var ObjectType;
-(function (ObjectType) {
-    ObjectType["PecorinoAward"] = "PecorinoAward";
-})(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
-
-},{}],184:[function(require,module,exports){
+},{"@cinerino/factory":514}],327:[function(require,module,exports){
+arguments[4][97][0].apply(exports,arguments)
+},{"dup":97}],328:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var ObjectType;
@@ -8460,47 +11207,49 @@ var ObjectType;
     ObjectType["Mvtk"] = "Mvtk";
 })(ObjectType = exports.ObjectType || (exports.ObjectType = {}));
 
-},{}],185:[function(require,module,exports){
+},{}],329:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],186:[function(require,module,exports){
+},{"dup":3}],330:[function(require,module,exports){
 arguments[4][98][0].apply(exports,arguments)
-},{"dup":98}],187:[function(require,module,exports){
+},{"dup":98}],331:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],188:[function(require,module,exports){
+},{"dup":3}],332:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],189:[function(require,module,exports){
+},{"dup":3}],333:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],190:[function(require,module,exports){
-arguments[4][184][0].apply(exports,arguments)
-},{"dup":184}],191:[function(require,module,exports){
+},{"dup":3}],334:[function(require,module,exports){
+arguments[4][328][0].apply(exports,arguments)
+},{"dup":328}],335:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],192:[function(require,module,exports){
+},{"dup":3}],336:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],193:[function(require,module,exports){
+},{"dup":3}],337:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],194:[function(require,module,exports){
+},{"dup":3}],338:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],195:[function(require,module,exports){
+},{"dup":3}],339:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],196:[function(require,module,exports){
+},{"dup":3}],340:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],341:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var pecorino_1 = require("../../../action/authorize/award/pecorino");
-exports.ObjectType = pecorino_1.ObjectType;
+var point_1 = require("../../../action/authorize/award/point");
+exports.ObjectType = point_1.ObjectType;
 
-},{"../../../action/authorize/award/pecorino":183}],197:[function(require,module,exports){
+},{"../../../action/authorize/award/point":327}],342:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],198:[function(require,module,exports){
+},{"dup":3}],343:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],199:[function(require,module,exports){
+},{"dup":3}],344:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],200:[function(require,module,exports){
+},{"dup":3}],345:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],201:[function(require,module,exports){
+},{"dup":3}],346:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],202:[function(require,module,exports){
+},{"dup":3}],347:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],203:[function(require,module,exports){
+},{"dup":3}],348:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var factory_1 = require("@cinerino/factory");
@@ -8509,55 +11258,11 @@ var factory_1 = require("@cinerino/factory");
  */
 exports.default = factory_1.creativeWorkType;
 
-},{"@cinerino/factory":389}],204:[function(require,module,exports){
+},{"@cinerino/factory":514}],349:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],205:[function(require,module,exports){
+},{"dup":3}],350:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],206:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var factory_1 = require("@cinerino/factory");
-/**
- * エラーコード
- */
-exports.default = factory_1.errorCode;
-
-},{"@cinerino/factory":389}],207:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * errors
- */
-var factory_1 = require("@cinerino/factory");
-exports.errors = factory_1.errors;
-
-},{"@cinerino/factory":389}],208:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-// tslint:disable-next-line:no-single-line-block-comment
-/* istanbul ignore next */
-function create(params) {
-    return {
-        id: params.id,
-        identifier: params.identifier,
-        name: (params.name === undefined) ? { ja: '', en: '' } : params.name,
-        description: params.description,
-        doorTime: params.doorTime,
-        duration: (params.duration === undefined) ? undefined : params.duration.toString(),
-        endDate: params.endDate,
-        eventStatus: params.eventStatus,
-        location: params.location,
-        startDate: params.startDate,
-        workPerformed: params.workPerformed,
-        maximumAttendeeCapacity: params.maximumAttendeeCapacity,
-        // offers: params.offers,
-        remainingAttendeeCapacity: params.remainingAttendeeCapacity,
-        typeOf: params.typeOf
-    };
-}
-exports.create = create;
-
-},{}],209:[function(require,module,exports){
+},{"dup":3}],351:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var cinerino = require("@cinerino/factory");
@@ -8566,7 +11271,7 @@ var cinerino = require("@cinerino/factory");
  */
 exports.EventStatusType = cinerino.chevre.eventStatusType;
 
-},{"@cinerino/factory":389}],210:[function(require,module,exports){
+},{"@cinerino/factory":514}],352:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var cinerino = require("@cinerino/factory");
@@ -8575,22 +11280,10 @@ var cinerino = require("@cinerino/factory");
  */
 exports.EventType = cinerino.chevre.eventType;
 
-},{"@cinerino/factory":389}],211:[function(require,module,exports){
+},{"@cinerino/factory":514}],353:[function(require,module,exports){
 "use strict";
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 var moment = require("moment");
-var EventFactory = require("../event");
 var ScreeningEventSeriesFactory = require("../event/screeningEventSeries");
 var eventStatusType_1 = require("../eventStatusType");
 var eventType_1 = require("../eventType");
@@ -8603,7 +11296,7 @@ function createFromCOA(params) {
     var identifier = createIdentifierFromCOA({
         theaterCode: params.superEvent.location.branchCode,
         titleCode: params.superEvent.workPerformed.identifier,
-        titleBranchNum: params.superEvent.coaInfo.titleBranchNum,
+        titleBranchNum: params.performanceFromCOA.titleBranchNum,
         dateJouei: params.performanceFromCOA.dateJouei,
         screenCode: params.performanceFromCOA.screenCode,
         timeBegin: params.performanceFromCOA.timeBegin
@@ -8624,13 +11317,12 @@ function createFromCOA(params) {
         .toDate();
     var startDate = moment(params.performanceFromCOA.dateJouei + " " + params.performanceFromCOA.timeBegin + " +09:00", 'YYYYMMDD HHmm Z')
         .toDate();
-    return __assign({}, EventFactory.create({
-        eventStatus: eventStatusType_1.EventStatusType.EventScheduled,
+    return {
         typeOf: eventType_1.EventType.ScreeningEvent,
         id: identifier,
         identifier: identifier,
-        name: params.superEvent.name
-    }), {
+        name: params.superEvent.name,
+        eventStatus: eventStatusType_1.EventStatusType.EventScheduled,
         workPerformed: params.superEvent.workPerformed,
         location: {
             typeOf: params.screenRoom.typeOf,
@@ -8656,8 +11348,11 @@ function createFromCOA(params) {
             rsvStartDate: params.performanceFromCOA.rsvStartDate,
             rsvEndDate: params.performanceFromCOA.rsvEndDate,
             flgEarlyBooking: params.performanceFromCOA.flgEarlyBooking
-        }
-    });
+        },
+        offers: {},
+        checkInCount: 0,
+        attendeeCount: 0
+    };
 }
 exports.createFromCOA = createFromCOA;
 /**
@@ -8673,7 +11368,7 @@ function createIdentifierFromCOA(params) {
 }
 exports.createIdentifierFromCOA = createIdentifierFromCOA;
 
-},{"../event":208,"../event/screeningEventSeries":212,"../eventStatusType":209,"../eventType":210,"moment":390}],212:[function(require,module,exports){
+},{"../event/screeningEventSeries":354,"../eventStatusType":351,"../eventType":352,"moment":515}],354:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var moment = require("moment");
@@ -8709,7 +11404,7 @@ function createFromCOA(params) {
         kanaName: params.filmFromCOA.titleNameKana,
         alternativeHeadline: params.filmFromCOA.titleNameShort,
         location: {
-            identifier: params.movieTheater.identifier,
+            id: (params.movieTheater.id !== undefined) ? params.movieTheater.id : '',
             branchCode: params.movieTheater.branchCode,
             name: params.movieTheater.name,
             kanaName: params.movieTheater.kanaName,
@@ -8721,6 +11416,7 @@ function createFromCOA(params) {
             name: params.movieTheater.name
         },
         videoFormat: params.eizouKubuns.filter(function (kubun) { return kubun.kubunCode === params.filmFromCOA.kbnEizou; })[0],
+        soundFormat: [],
         workPerformed: {
             identifier: params.filmFromCOA.titleCode,
             name: params.filmFromCOA.titleNameOrig,
@@ -8757,7 +11453,7 @@ function createIdentifier(params) {
 }
 exports.createIdentifier = createIdentifier;
 
-},{"../creativeWorkType":203,"../eventStatusType":209,"../eventType":210,"../organizationType":217,"moment":390}],213:[function(require,module,exports){
+},{"../creativeWorkType":348,"../eventStatusType":351,"../eventType":352,"../organizationType":360,"moment":515}],355:[function(require,module,exports){
 "use strict";
 /**
  * 座席予約供給情報ファクトリー
@@ -8765,9 +11461,9 @@ exports.createIdentifier = createIdentifier;
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 
-},{}],214:[function(require,module,exports){
+},{}],356:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],215:[function(require,module,exports){
+},{"dup":3}],357:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var factory_1 = require("@cinerino/factory");
@@ -8776,7 +11472,9 @@ var factory_1 = require("@cinerino/factory");
  */
 exports.default = factory_1.orderStatus;
 
-},{"@cinerino/factory":389}],216:[function(require,module,exports){
+},{"@cinerino/factory":514}],358:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],359:[function(require,module,exports){
 "use strict";
 /**
  * 企業識別子
@@ -8788,7 +11486,7 @@ var CorporationOrganizationIdentifier;
 })(CorporationOrganizationIdentifier || (CorporationOrganizationIdentifier = {}));
 exports.default = CorporationOrganizationIdentifier;
 
-},{}],217:[function(require,module,exports){
+},{}],360:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var factory_1 = require("@cinerino/factory");
@@ -8797,13 +11495,9 @@ var factory_1 = require("@cinerino/factory");
  */
 exports.default = factory_1.organizationType;
 
-},{"@cinerino/factory":389}],218:[function(require,module,exports){
+},{"@cinerino/factory":514}],361:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],219:[function(require,module,exports){
-arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],220:[function(require,module,exports){
-arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],221:[function(require,module,exports){
+},{"dup":3}],362:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var factory_1 = require("@cinerino/factory");
@@ -8812,9 +11506,9 @@ var factory_1 = require("@cinerino/factory");
  */
 exports.default = factory_1.paymentMethodType;
 
-},{"@cinerino/factory":389}],222:[function(require,module,exports){
+},{"@cinerino/factory":514}],363:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],223:[function(require,module,exports){
+},{"dup":3}],364:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var factory_1 = require("@cinerino/factory");
@@ -8823,9 +11517,9 @@ var factory_1 = require("@cinerino/factory");
  */
 exports.default = factory_1.paymentStatusType;
 
-},{"@cinerino/factory":389}],224:[function(require,module,exports){
+},{"@cinerino/factory":514}],365:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],225:[function(require,module,exports){
+},{"dup":3}],366:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var factory_1 = require("@cinerino/factory");
@@ -8834,15 +11528,10 @@ var factory_1 = require("@cinerino/factory");
  */
 exports.default = factory_1.personType;
 
-},{"@cinerino/factory":389}],226:[function(require,module,exports){
+},{"@cinerino/factory":514}],367:[function(require,module,exports){
 arguments[4][32][0].apply(exports,arguments)
-},{"dup":32}],227:[function(require,module,exports){
+},{"dup":32}],368:[function(require,module,exports){
 "use strict";
-/**
- * 劇場ファクトリー
- *
- * @namespace place.movieTheater
- */
 Object.defineProperty(exports, "__esModule", { value: true });
 var placeType_1 = require("../placeType");
 /**
@@ -8910,7 +11599,7 @@ function createScreeningRoomFromCOA(screenFromCOA) {
 }
 exports.createScreeningRoomFromCOA = createScreeningRoomFromCOA;
 
-},{"../placeType":226}],228:[function(require,module,exports){
+},{"../placeType":367}],369:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var factory_1 = require("@cinerino/factory");
@@ -8921,7 +11610,7 @@ var factory_1 = require("@cinerino/factory");
  */
 exports.default = factory_1.priceCurrency;
 
-},{"@cinerino/factory":389}],229:[function(require,module,exports){
+},{"@cinerino/factory":514}],370:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -8930,16 +11619,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var Award;
 (function (Award) {
     /**
-     * 口座決済
+     * ポイント口座決済
      */
     Award["PecorinoPayment"] = "PecorinoPayment";
 })(Award = exports.Award || (exports.Award = {}));
 
-},{}],230:[function(require,module,exports){
+},{}],371:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],231:[function(require,module,exports){
+},{"dup":3}],372:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],232:[function(require,module,exports){
+},{"dup":3}],373:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var factory_1 = require("@cinerino/factory");
@@ -8948,7 +11637,7 @@ var factory_1 = require("@cinerino/factory");
  */
 exports.ReservationStatusType = factory_1.chevre.reservationStatusType;
 
-},{"@cinerino/factory":389}],233:[function(require,module,exports){
+},{"@cinerino/factory":514}],374:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var cinerino = require("@cinerino/factory");
@@ -8957,9 +11646,11 @@ var cinerino = require("@cinerino/factory");
  */
 exports.ReservationType = cinerino.chevre.reservationType;
 
-},{"@cinerino/factory":389}],234:[function(require,module,exports){
+},{"@cinerino/factory":514}],375:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],235:[function(require,module,exports){
+},{"dup":3}],376:[function(require,module,exports){
+arguments[4][150][0].apply(exports,arguments)
+},{"dup":150}],377:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var factory_1 = require("@cinerino/factory");
@@ -8968,101 +11659,16 @@ var factory_1 = require("@cinerino/factory");
  */
 exports.default = factory_1.sortType;
 
-},{"@cinerino/factory":389}],236:[function(require,module,exports){
-arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],237:[function(require,module,exports){
+},{"@cinerino/factory":514}],378:[function(require,module,exports){
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var factory_1 = require("@cinerino/factory");
 /**
- * task name
  * タスク名
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-var TaskName;
-(function (TaskName) {
-    /**
-     * 座席予約承認アクション取消
-     */
-    TaskName["CancelSeatReservation"] = "cancelSeatReservation";
-    /**
-     * クレジットカード承認アクション取消
-     */
-    TaskName["CancelCreditCard"] = "cancelCreditCard";
-    /**
-     * ムビチケ承認アクション取消
-     */
-    TaskName["CancelMvtk"] = "cancelMvtk";
-    /**
-     * 口座承認アクション取消
-     */
-    TaskName["CancelAccount"] = "cancelAccount";
-    /**
-     * ポイントインセンティブ承認アクション取消
-     */
-    TaskName["CancelPecorinoAward"] = "cancelPecorinoAward";
-    /**
-     * 上映イベント在庫仕入れ
-     */
-    TaskName["ImportScreeningEvents"] = "importScreeningEvents";
-    /**
-     *  Eメールメッセージ送信
-     */
-    TaskName["SendEmailMessage"] = "sendEmailMessage";
-    /**
-     * ムビチケ使用
-     */
-    TaskName["UseMvtk"] = "useMvtk";
-    /**
-     * 注文受付
-     */
-    TaskName["PlaceOrder"] = "placeOrder";
-    /**
-     * 注文返品
-     */
-    TaskName["ReturnOrder"] = "returnOrder";
-    /**
-     * ポイントインセンティブ返却
-     */
-    TaskName["ReturnPecorinoAward"] = "returnPecorinoAward";
-    /**
-     * 口座支払
-     */
-    TaskName["PayAccount"] = "payAccount";
-    /**
-     * クレジットカード支払
-     */
-    TaskName["PayCreditCard"] = "payCreditCard";
-    /**
-     * 注文配送
-     */
-    TaskName["SendOrder"] = "sendOrder";
-    /**
-     * 口座返金
-     */
-    TaskName["RefundAccount"] = "refundAccount";
-    /**
-     * クレジットカード返金
-     */
-    TaskName["RefundCreditCard"] = "refundCreditCard";
-    /**
-     * ポイントインセンティブ付与
-     */
-    TaskName["GivePecorinoAward"] = "givePecorinoAward";
-    /**
-     * 会員プログラム登録
-     */
-    TaskName["RegisterProgramMembership"] = "registerProgramMembership";
-    /**
-     * 会員プログラム登録解除
-     */
-    TaskName["UnRegisterProgramMembership"] = "unRegisterProgramMembership";
-    /**
-     * ウェブフックをたたく
-     */
-    TaskName["TriggerWebhook"] = "triggerWebhook";
-})(TaskName || (TaskName = {}));
-exports.default = TaskName;
+exports.default = factory_1.taskName;
 
-},{}],238:[function(require,module,exports){
+},{"@cinerino/factory":514}],379:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var factory_1 = require("@cinerino/factory");
@@ -9071,39 +11677,7 @@ var factory_1 = require("@cinerino/factory");
  */
 exports.default = factory_1.taskStatus;
 
-},{"@cinerino/factory":389}],239:[function(require,module,exports){
-arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],240:[function(require,module,exports){
-arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],241:[function(require,module,exports){
-arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],242:[function(require,module,exports){
-arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],243:[function(require,module,exports){
-arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],244:[function(require,module,exports){
-arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],245:[function(require,module,exports){
-arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],246:[function(require,module,exports){
-arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],247:[function(require,module,exports){
-arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],248:[function(require,module,exports){
-arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],249:[function(require,module,exports){
-arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],250:[function(require,module,exports){
-arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],251:[function(require,module,exports){
-arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],252:[function(require,module,exports){
-arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],253:[function(require,module,exports){
-arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],254:[function(require,module,exports){
-arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],255:[function(require,module,exports){
+},{"@cinerino/factory":514}],380:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var factory_1 = require("@cinerino/factory");
@@ -9112,7 +11686,7 @@ var factory_1 = require("@cinerino/factory");
  */
 exports.default = factory_1.transactionStatusType;
 
-},{"@cinerino/factory":389}],256:[function(require,module,exports){
+},{"@cinerino/factory":514}],381:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var factory_1 = require("@cinerino/factory");
@@ -9121,7 +11695,7 @@ var factory_1 = require("@cinerino/factory");
  */
 exports.default = factory_1.transactionTasksExportationStatus;
 
-},{"@cinerino/factory":389}],257:[function(require,module,exports){
+},{"@cinerino/factory":514}],382:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var factory_1 = require("@cinerino/factory");
@@ -9130,11 +11704,11 @@ var factory_1 = require("@cinerino/factory");
  */
 exports.default = factory_1.transactionType;
 
-},{"@cinerino/factory":389}],258:[function(require,module,exports){
+},{"@cinerino/factory":514}],383:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],259:[function(require,module,exports){
+},{"dup":3}],384:[function(require,module,exports){
 arguments[4][159][0].apply(exports,arguments)
-},{"dup":159}],260:[function(require,module,exports){
+},{"dup":159}],385:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var factory_1 = require("@cinerino/factory");
@@ -9143,7 +11717,7 @@ var factory_1 = require("@cinerino/factory");
  */
 exports.UnitCode = factory_1.unitCode;
 
-},{"@cinerino/factory":389}],261:[function(require,module,exports){
+},{"@cinerino/factory":514}],386:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -9151,7 +11725,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 var factory_1 = require("@cinerino/factory");
 var cognito = require("./cognito");
-var PecorinoAwardAuthorizeActionFactory = require("./factory/action/authorize/award/pecorino");
+var AuthorizePointAwardActionFactory = require("./factory/action/authorize/award/point");
 var MvtkAuthorizeActionFactory = require("./factory/action/authorize/discount/mvtk");
 var ProgramMembershipOfferAuthorizeActionFactory = require("./factory/action/authorize/offer/programMembership");
 var SeatReservationOfferAuthorizeActionFactory = require("./factory/action/authorize/offer/seatReservation");
@@ -9159,15 +11733,16 @@ var AuthorizeAccountPaymentActionFactory = require("./factory/action/authorize/p
 var AuthorizeAnyPaymentActionFactory = require("./factory/action/authorize/paymentMethod/any");
 var CreditCardAuthorizeActionFactory = require("./factory/action/authorize/paymentMethod/creditCard");
 var UseMvtkActionFactory = require("./factory/action/consume/use/mvtk");
+var ConfirmReservationActionFactory = require("./factory/action/interact/confirm/reservation");
 var RegisterProgramMembershipActionFactory = require("./factory/action/interact/register/programMembership");
 var UnRegisterProgramMembershipActionFactory = require("./factory/action/interact/unRegister/programMembership");
 var OrderActionFactory = require("./factory/action/trade/order");
 var PayActionFactory = require("./factory/action/trade/pay");
 var RefundActionFactory = require("./factory/action/trade/refund");
-var GivePecorinoAwardActionFactory = require("./factory/action/transfer/give/pecorinoAward");
+var GivePointAwardActionFactory = require("./factory/action/transfer/give/pointAward");
 var PrintTicketActionFactory = require("./factory/action/transfer/print/ticket");
 var ReturnOrderActionFactory = require("./factory/action/transfer/return/order");
-var ReturnPecorinoAwardActionFactory = require("./factory/action/transfer/return/pecorinoAward");
+var ReturnPointAwardActionFactory = require("./factory/action/transfer/return/pointAward");
 var SendEmailMessageActionFactory = require("./factory/action/transfer/send/message/email");
 var SendOrderActionFactory = require("./factory/action/transfer/send/order");
 var actionStatusType_1 = require("./factory/actionStatusType");
@@ -9184,8 +11759,7 @@ var eventType_1 = require("./factory/eventType");
 var SeatReservationOfferFactory = require("./factory/offer/seatReservation");
 var OrderFactory = require("./factory/order");
 var orderStatus_1 = require("./factory/orderStatus");
-var CorporationOrganizationFactory = require("./factory/organization/corporation");
-var MovieTheaterOrganizationFactory = require("./factory/organization/movieTheater");
+var OrganizationFactory = require("./factory/organization");
 var corporation_1 = require("./factory/organizationIdentifier/corporation");
 var organizationType_1 = require("./factory/organizationType");
 var OwnershipInfoFactory = require("./factory/ownershipInfo");
@@ -9203,25 +11777,9 @@ var QuantitativeValueFactory = require("./factory/quantitativeValue");
 var EventReservationFactory = require("./factory/reservation/event");
 var reservationStatusType_1 = require("./factory/reservationStatusType");
 var reservationType_1 = require("./factory/reservationType");
+var WebAPIServiceFactory = require("./factory/service/webAPI");
 var sortType_1 = require("./factory/sortType");
 var unitCode_1 = require("./factory/unitCode");
-var CancelCreditCardTaskFactory = require("./factory/task/cancelCreditCard");
-var CancelMvtkTaskFactory = require("./factory/task/cancelMvtk");
-var CancelPecorinoAwardTaskFactory = require("./factory/task/cancelPecorinoAward");
-var CancelSeatReservationTaskFactory = require("./factory/task/cancelSeatReservation");
-var GivePecorinoAwardTaskFactory = require("./factory/task/givePecorinoAward");
-var PayCreditCardTaskFactory = require("./factory/task/payCreditCard");
-var PlaceOrderTaskFactory = require("./factory/task/placeOrder");
-var RefundCreditCardTaskFactory = require("./factory/task/refundCreditCard");
-var RegisterProgramMembershipTaskFactory = require("./factory/task/registerProgramMembership");
-var ReturnOrderTaskFactory = require("./factory/task/returnOrder");
-var ReturnPecorinoAwardTaskFactory = require("./factory/task/returnPecorinoAward");
-var SendEmailMessageTaskFactory = require("./factory/task/sendEmailMessage");
-var SendOrderTaskFactory = require("./factory/task/sendOrder");
-var TriggerWebhookTaskFactory = require("./factory/task/triggerWebhook");
-var UnRegisterProgramMembershipTaskFactory = require("./factory/task/unRegisterProgramMembership");
-var UseMvtkTaskFactory = require("./factory/task/useMvtk");
-var TaskExecutionResultFactory = require("./factory/taskExecutionResult");
 var taskName_1 = require("./factory/taskName");
 var taskStatus_1 = require("./factory/taskStatus");
 var PlaceOrderTransactionFactory = require("./factory/transaction/placeOrder");
@@ -9229,14 +11787,12 @@ var ReturnOrderTransactionFactory = require("./factory/transaction/returnOrder")
 var transactionStatusType_1 = require("./factory/transactionStatusType");
 var transactionTasksExportationStatus_1 = require("./factory/transactionTasksExportationStatus");
 var transactionType_1 = require("./factory/transactionType");
-var errorCode_1 = require("./factory/errorCode");
-var errors_1 = require("./factory/errors");
 exports.chevre = factory_1.chevre;
 exports.cognito = cognito;
 exports.pecorino = factory_1.pecorino;
 exports.waiter = factory_1.waiter;
-exports.errors = errors_1.errors;
-exports.errorCode = errorCode_1.default;
+exports.errors = factory_1.errors;
+exports.errorCode = factory_1.errorCode;
 exports.actionStatusType = actionStatusType_1.default;
 exports.actionType = actionType_1.default;
 var action;
@@ -9246,7 +11802,7 @@ var action;
         var award;
         (function (award) {
             // tslint:disable-next-line:no-shadowed-variable
-            award.pecorino = PecorinoAwardAuthorizeActionFactory;
+            award.point = AuthorizePointAwardActionFactory;
         })(award = authorize.award || (authorize.award = {}));
         // tslint:disable-next-line:no-shadowed-variable
         var paymentMethod;
@@ -9275,6 +11831,11 @@ var action;
     })(authorize = action.authorize || (action.authorize = {}));
     var interact;
     (function (interact) {
+        var confirm;
+        (function (confirm) {
+            // tslint:disable-next-line:no-shadowed-variable
+            confirm.reservation = ConfirmReservationActionFactory;
+        })(confirm = interact.confirm || (interact.confirm = {}));
         var register;
         (function (register) {
             // tslint:disable-next-line:no-shadowed-variable
@@ -9298,7 +11859,7 @@ var action;
         var give;
         (function (give) {
             // tslint:disable-next-line:no-shadowed-variable
-            give.pecorinoAward = GivePecorinoAwardActionFactory;
+            give.pointAward = GivePointAwardActionFactory;
         })(give = transfer.give || (transfer.give = {}));
         var print;
         (function (print) {
@@ -9312,7 +11873,7 @@ var action;
         (function (returnAction) {
             // tslint:disable-next-line:no-shadowed-variable
             returnAction.order = ReturnOrderActionFactory;
-            returnAction.pecorinoAward = ReturnPecorinoAwardActionFactory;
+            returnAction.pointAward = ReturnPointAwardActionFactory;
         })(returnAction = transfer.returnAction || (transfer.returnAction = {}));
         var send;
         (function (send) {
@@ -9359,17 +11920,35 @@ var event;
 })(event = exports.event || (exports.event = {}));
 exports.eventStatusType = eventStatusType_1.EventStatusType;
 exports.eventType = eventType_1.EventType;
+exports.invoice = factory_1.invoice;
+exports.monetaryAmount = factory_1.monetaryAmount;
 var offer;
 (function (offer) {
     offer.seatReservation = SeatReservationOfferFactory;
 })(offer = exports.offer || (exports.offer = {}));
 exports.order = OrderFactory;
 exports.orderStatus = orderStatus_1.default;
-var organization;
-(function (organization) {
-    organization.corporation = CorporationOrganizationFactory;
-    organization.movieTheater = MovieTheaterOrganizationFactory;
-})(organization = exports.organization || (exports.organization = {}));
+// export namespace organization {
+//     export type ISearchConditions<T extends OrganizationType> =
+//         T extends OrganizationType.Corporation ? CorporationOrganizationFactory.ISearchConditions :
+//         T extends OrganizationType.MovieTheater ? MovieTheaterOrganizationFactory.ISearchConditions :
+//         OrganizationFactory.ISearchConditions<T>;
+//     export type IAttributes<T extends OrganizationType> =
+//         T extends OrganizationType.Corporation ? CorporationOrganizationFactory.IAttributes :
+//         T extends OrganizationType.MovieTheater ? MovieTheaterOrganizationFactory.IAttributes :
+//         OrganizationFactory.IAttributes<T>;
+//     export type IOrganization<T extends OrganizationType> =
+//         T extends OrganizationType.Corporation ? CorporationOrganizationFactory.IOrganization :
+//         T extends OrganizationType.MovieTheater ? MovieTheaterOrganizationFactory.IOrganization :
+//         OrganizationFactory.IOrganization<OrganizationFactory.IAttributes<T>>;
+//     export type IAreaServed<T extends OrganizationType> =
+//         T extends OrganizationType.MovieTheater ? MovieTheaterOrganizationFactory.IAreaServed :
+//         OrganizationFactory.IAreaServed;
+//     export import IPaymentAccepted = OrganizationFactory.IPaymentAccepted;
+//     export import IPOS = OrganizationFactory.IPOS;
+//     export import corporation = CorporationOrganizationFactory;
+//     export import movieTheater = MovieTheaterOrganizationFactory;
+// }
 var organizationIdentifier;
 (function (organizationIdentifier) {
     organizationIdentifier.corporation = corporation_1.default;
@@ -9396,27 +11975,12 @@ var reservation;
 })(reservation = exports.reservation || (exports.reservation = {}));
 exports.reservationStatusType = reservationStatusType_1.ReservationStatusType;
 exports.reservationType = reservationType_1.ReservationType;
-var task;
-(function (task) {
-    task.cancelCreditCard = CancelCreditCardTaskFactory;
-    task.cancelMvtk = CancelMvtkTaskFactory;
-    task.cancelPecorinoAward = CancelPecorinoAwardTaskFactory;
-    task.cancelSeatReservation = CancelSeatReservationTaskFactory;
-    task.givePecorinoAward = GivePecorinoAwardTaskFactory;
-    task.placeOrder = PlaceOrderTaskFactory;
-    task.refundCreditCard = RefundCreditCardTaskFactory;
-    task.registerProgramMembership = RegisterProgramMembershipTaskFactory;
-    task.returnOrder = ReturnOrderTaskFactory;
-    task.returnPecorinoAward = ReturnPecorinoAwardTaskFactory;
-    task.sendEmailMessage = SendEmailMessageTaskFactory;
-    task.sendOrder = SendOrderTaskFactory;
-    task.payCreditCard = PayCreditCardTaskFactory;
-    task.triggerWebhook = TriggerWebhookTaskFactory;
-    task.unRegisterProgramMembership = UnRegisterProgramMembershipTaskFactory;
-    task.useMvtk = UseMvtkTaskFactory;
-})(task = exports.task || (exports.task = {}));
+var service;
+(function (service) {
+    service.webAPI = WebAPIServiceFactory;
+})(service = exports.service || (exports.service = {}));
+exports.seller = OrganizationFactory;
 exports.sortType = sortType_1.default;
-exports.taskExecutionResult = TaskExecutionResultFactory;
 exports.taskName = taskName_1.default;
 exports.taskStatus = taskStatus_1.default;
 var transaction;
@@ -9429,278 +11993,263 @@ exports.transactionTasksExportationStatus = transactionTasksExportationStatus_1.
 exports.transactionType = transactionType_1.default;
 exports.unitCode = unitCode_1.UnitCode;
 
-},{"./cognito":179,"./factory/accountType":180,"./factory/action/authorize/award/pecorino":183,"./factory/action/authorize/discount/mvtk":184,"./factory/action/authorize/offer/programMembership":185,"./factory/action/authorize/offer/seatReservation":186,"./factory/action/authorize/paymentMethod/account":187,"./factory/action/authorize/paymentMethod/any":188,"./factory/action/authorize/paymentMethod/creditCard":189,"./factory/action/consume/use/mvtk":190,"./factory/action/interact/register/programMembership":191,"./factory/action/interact/unRegister/programMembership":192,"./factory/action/trade/order":193,"./factory/action/trade/pay":194,"./factory/action/trade/refund":195,"./factory/action/transfer/give/pecorinoAward":196,"./factory/action/transfer/print/ticket":197,"./factory/action/transfer/return/order":198,"./factory/action/transfer/return/pecorinoAward":199,"./factory/action/transfer/send/message/email":200,"./factory/action/transfer/send/order":201,"./factory/actionStatusType":181,"./factory/actionType":182,"./factory/clientUser":202,"./factory/creativeWork/message/email":204,"./factory/creativeWork/movie":205,"./factory/creativeWorkType":203,"./factory/errorCode":206,"./factory/errors":207,"./factory/event/screeningEvent":211,"./factory/event/screeningEventSeries":212,"./factory/eventStatusType":209,"./factory/eventType":210,"./factory/offer/seatReservation":213,"./factory/order":214,"./factory/orderStatus":215,"./factory/organization/corporation":218,"./factory/organization/movieTheater":219,"./factory/organizationIdentifier/corporation":216,"./factory/organizationType":217,"./factory/ownershipInfo":220,"./factory/paymentMethod/paymentCard/creditCard":222,"./factory/paymentMethodType":221,"./factory/paymentStatusType":223,"./factory/person":224,"./factory/personType":225,"./factory/place/movieTheater":227,"./factory/placeType":226,"./factory/priceCurrency":228,"./factory/programMembership":229,"./factory/propertyValue":230,"./factory/quantitativeValue":231,"./factory/reservation/event":234,"./factory/reservationStatusType":232,"./factory/reservationType":233,"./factory/sortType":235,"./factory/task/cancelCreditCard":239,"./factory/task/cancelMvtk":240,"./factory/task/cancelPecorinoAward":241,"./factory/task/cancelSeatReservation":242,"./factory/task/givePecorinoAward":243,"./factory/task/payCreditCard":244,"./factory/task/placeOrder":245,"./factory/task/refundCreditCard":246,"./factory/task/registerProgramMembership":247,"./factory/task/returnOrder":248,"./factory/task/returnPecorinoAward":249,"./factory/task/sendEmailMessage":250,"./factory/task/sendOrder":251,"./factory/task/triggerWebhook":252,"./factory/task/unRegisterProgramMembership":253,"./factory/task/useMvtk":254,"./factory/taskExecutionResult":236,"./factory/taskName":237,"./factory/taskStatus":238,"./factory/transaction/placeOrder":258,"./factory/transaction/returnOrder":259,"./factory/transactionStatusType":255,"./factory/transactionTasksExportationStatus":256,"./factory/transactionType":257,"./factory/unitCode":260,"@cinerino/factory":389}],262:[function(require,module,exports){
+},{"./cognito":323,"./factory/accountType":324,"./factory/action/authorize/award/point":327,"./factory/action/authorize/discount/mvtk":328,"./factory/action/authorize/offer/programMembership":329,"./factory/action/authorize/offer/seatReservation":330,"./factory/action/authorize/paymentMethod/account":331,"./factory/action/authorize/paymentMethod/any":332,"./factory/action/authorize/paymentMethod/creditCard":333,"./factory/action/consume/use/mvtk":334,"./factory/action/interact/confirm/reservation":335,"./factory/action/interact/register/programMembership":336,"./factory/action/interact/unRegister/programMembership":337,"./factory/action/trade/order":338,"./factory/action/trade/pay":339,"./factory/action/trade/refund":340,"./factory/action/transfer/give/pointAward":341,"./factory/action/transfer/print/ticket":342,"./factory/action/transfer/return/order":343,"./factory/action/transfer/return/pointAward":344,"./factory/action/transfer/send/message/email":345,"./factory/action/transfer/send/order":346,"./factory/actionStatusType":325,"./factory/actionType":326,"./factory/clientUser":347,"./factory/creativeWork/message/email":349,"./factory/creativeWork/movie":350,"./factory/creativeWorkType":348,"./factory/event/screeningEvent":353,"./factory/event/screeningEventSeries":354,"./factory/eventStatusType":351,"./factory/eventType":352,"./factory/offer/seatReservation":355,"./factory/order":356,"./factory/orderStatus":357,"./factory/organization":358,"./factory/organizationIdentifier/corporation":359,"./factory/organizationType":360,"./factory/ownershipInfo":361,"./factory/paymentMethod/paymentCard/creditCard":363,"./factory/paymentMethodType":362,"./factory/paymentStatusType":364,"./factory/person":365,"./factory/personType":366,"./factory/place/movieTheater":368,"./factory/placeType":367,"./factory/priceCurrency":369,"./factory/programMembership":370,"./factory/propertyValue":371,"./factory/quantitativeValue":372,"./factory/reservation/event":375,"./factory/reservationStatusType":373,"./factory/reservationType":374,"./factory/service/webAPI":376,"./factory/sortType":377,"./factory/taskName":378,"./factory/taskStatus":379,"./factory/transaction/placeOrder":383,"./factory/transaction/returnOrder":384,"./factory/transactionStatusType":380,"./factory/transactionTasksExportationStatus":381,"./factory/transactionType":382,"./factory/unitCode":385,"@cinerino/factory":514}],387:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],263:[function(require,module,exports){
+},{"dup":3}],388:[function(require,module,exports){
 arguments[4][4][0].apply(exports,arguments)
-},{"dup":4}],264:[function(require,module,exports){
+},{"dup":4}],389:[function(require,module,exports){
 arguments[4][5][0].apply(exports,arguments)
-},{"dup":5}],265:[function(require,module,exports){
+},{"dup":5}],390:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],266:[function(require,module,exports){
+},{"dup":3}],391:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],267:[function(require,module,exports){
+},{"dup":3}],392:[function(require,module,exports){
 arguments[4][8][0].apply(exports,arguments)
-},{"dup":8}],268:[function(require,module,exports){
+},{"dup":8}],393:[function(require,module,exports){
 arguments[4][9][0].apply(exports,arguments)
-},{"dup":9}],269:[function(require,module,exports){
+},{"dup":9}],394:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],270:[function(require,module,exports){
+},{"dup":3}],395:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],271:[function(require,module,exports){
+},{"dup":3}],396:[function(require,module,exports){
 arguments[4][12][0].apply(exports,arguments)
-},{"dup":12}],272:[function(require,module,exports){
+},{"dup":12}],397:[function(require,module,exports){
 arguments[4][13][0].apply(exports,arguments)
-},{"../errorCode":271,"./chevre":275,"dup":13,"setprototypeof":391}],273:[function(require,module,exports){
+},{"../errorCode":396,"./chevre":400,"dup":13,"setprototypeof":516}],398:[function(require,module,exports){
 arguments[4][14][0].apply(exports,arguments)
-},{"../errorCode":271,"./chevre":275,"dup":14,"setprototypeof":391}],274:[function(require,module,exports){
+},{"../errorCode":396,"./chevre":400,"dup":14,"setprototypeof":516}],399:[function(require,module,exports){
 arguments[4][15][0].apply(exports,arguments)
-},{"../errorCode":271,"./chevre":275,"dup":15,"setprototypeof":391}],275:[function(require,module,exports){
+},{"../errorCode":396,"./chevre":400,"dup":15,"setprototypeof":516}],400:[function(require,module,exports){
 arguments[4][16][0].apply(exports,arguments)
-},{"dup":16}],276:[function(require,module,exports){
+},{"dup":16}],401:[function(require,module,exports){
 arguments[4][17][0].apply(exports,arguments)
-},{"../errorCode":271,"./chevre":275,"dup":17,"setprototypeof":391}],277:[function(require,module,exports){
+},{"../errorCode":396,"./chevre":400,"dup":17,"setprototypeof":516}],402:[function(require,module,exports){
 arguments[4][18][0].apply(exports,arguments)
-},{"../errorCode":271,"./chevre":275,"dup":18,"setprototypeof":391}],278:[function(require,module,exports){
+},{"../errorCode":396,"./chevre":400,"dup":18,"setprototypeof":516}],403:[function(require,module,exports){
 arguments[4][19][0].apply(exports,arguments)
-},{"../errorCode":271,"./chevre":275,"dup":19,"setprototypeof":391}],279:[function(require,module,exports){
+},{"../errorCode":396,"./chevre":400,"dup":19,"setprototypeof":516}],404:[function(require,module,exports){
 arguments[4][20][0].apply(exports,arguments)
-},{"../errorCode":271,"./chevre":275,"dup":20,"setprototypeof":391}],280:[function(require,module,exports){
+},{"../errorCode":396,"./chevre":400,"dup":20,"setprototypeof":516}],405:[function(require,module,exports){
 arguments[4][21][0].apply(exports,arguments)
-},{"../errorCode":271,"./chevre":275,"dup":21,"setprototypeof":391}],281:[function(require,module,exports){
+},{"../errorCode":396,"./chevre":400,"dup":21,"setprototypeof":516}],406:[function(require,module,exports){
 arguments[4][22][0].apply(exports,arguments)
-},{"../errorCode":271,"./chevre":275,"dup":22,"setprototypeof":391}],282:[function(require,module,exports){
+},{"../errorCode":396,"./chevre":400,"dup":22,"setprototypeof":516}],407:[function(require,module,exports){
 arguments[4][23][0].apply(exports,arguments)
-},{"./error/alreadyInUse":272,"./error/argument":273,"./error/argumentNull":274,"./error/chevre":275,"./error/forbidden":276,"./error/notFound":277,"./error/notImplemented":278,"./error/rateLimitExceeded":279,"./error/serviceUnavailable":280,"./error/unauthorized":281,"dup":23}],283:[function(require,module,exports){
+},{"./error/alreadyInUse":397,"./error/argument":398,"./error/argumentNull":399,"./error/chevre":400,"./error/forbidden":401,"./error/notFound":402,"./error/notImplemented":403,"./error/rateLimitExceeded":404,"./error/serviceUnavailable":405,"./error/unauthorized":406,"dup":23}],408:[function(require,module,exports){
 arguments[4][24][0].apply(exports,arguments)
-},{"dup":24}],284:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * イベントタイプ
- */
-var EventType;
-(function (EventType) {
-    /**
-     * @deprecated Use ScreeningEvent
-     */
-    EventType["IndividualScreeningEvent"] = "IndividualScreeningEvent";
-    EventType["ScreeningEvent"] = "ScreeningEvent";
-    EventType["ScreeningEventSeries"] = "ScreeningEventSeries";
-})(EventType || (EventType = {}));
-exports.default = EventType;
-
-},{}],285:[function(require,module,exports){
+},{"dup":24}],409:[function(require,module,exports){
+arguments[4][195][0].apply(exports,arguments)
+},{"dup":195}],410:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],286:[function(require,module,exports){
+},{"dup":3}],411:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],287:[function(require,module,exports){
+},{"dup":3}],412:[function(require,module,exports){
 arguments[4][28][0].apply(exports,arguments)
-},{"dup":28}],288:[function(require,module,exports){
+},{"dup":28}],413:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],289:[function(require,module,exports){
+},{"dup":3}],414:[function(require,module,exports){
 arguments[4][30][0].apply(exports,arguments)
-},{"dup":30}],290:[function(require,module,exports){
+},{"dup":30}],415:[function(require,module,exports){
 arguments[4][31][0].apply(exports,arguments)
-},{"dup":31}],291:[function(require,module,exports){
+},{"dup":31}],416:[function(require,module,exports){
 arguments[4][32][0].apply(exports,arguments)
-},{"dup":32}],292:[function(require,module,exports){
+},{"dup":32}],417:[function(require,module,exports){
 arguments[4][33][0].apply(exports,arguments)
-},{"dup":33}],293:[function(require,module,exports){
+},{"dup":33}],418:[function(require,module,exports){
 arguments[4][34][0].apply(exports,arguments)
-},{"dup":34}],294:[function(require,module,exports){
+},{"dup":34}],419:[function(require,module,exports){
 arguments[4][35][0].apply(exports,arguments)
-},{"dup":35}],295:[function(require,module,exports){
+},{"dup":35}],420:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],296:[function(require,module,exports){
+},{"dup":3}],421:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],297:[function(require,module,exports){
+},{"dup":3}],422:[function(require,module,exports){
 arguments[4][38][0].apply(exports,arguments)
-},{"dup":38}],298:[function(require,module,exports){
+},{"dup":38}],423:[function(require,module,exports){
 arguments[4][39][0].apply(exports,arguments)
-},{"dup":39}],299:[function(require,module,exports){
+},{"dup":39}],424:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],300:[function(require,module,exports){
+},{"dup":3}],425:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],301:[function(require,module,exports){
+},{"dup":3}],426:[function(require,module,exports){
 arguments[4][42][0].apply(exports,arguments)
-},{"dup":42}],302:[function(require,module,exports){
+},{"dup":42}],427:[function(require,module,exports){
 arguments[4][43][0].apply(exports,arguments)
-},{"dup":43}],303:[function(require,module,exports){
+},{"dup":43}],428:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],304:[function(require,module,exports){
+},{"dup":3}],429:[function(require,module,exports){
 arguments[4][45][0].apply(exports,arguments)
-},{"dup":45}],305:[function(require,module,exports){
+},{"dup":45}],430:[function(require,module,exports){
 arguments[4][46][0].apply(exports,arguments)
-},{"dup":46}],306:[function(require,module,exports){
+},{"dup":46}],431:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],307:[function(require,module,exports){
+},{"dup":3}],432:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],308:[function(require,module,exports){
+},{"dup":3}],433:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],309:[function(require,module,exports){
+},{"dup":3}],434:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],310:[function(require,module,exports){
+},{"dup":3}],435:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],311:[function(require,module,exports){
+},{"dup":3}],436:[function(require,module,exports){
 arguments[4][52][0].apply(exports,arguments)
-},{"dup":52}],312:[function(require,module,exports){
+},{"dup":52}],437:[function(require,module,exports){
 arguments[4][53][0].apply(exports,arguments)
-},{"dup":53}],313:[function(require,module,exports){
+},{"dup":53}],438:[function(require,module,exports){
 arguments[4][54][0].apply(exports,arguments)
-},{"dup":54}],314:[function(require,module,exports){
+},{"dup":54}],439:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],315:[function(require,module,exports){
+},{"dup":3}],440:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],316:[function(require,module,exports){
+},{"dup":3}],441:[function(require,module,exports){
 arguments[4][57][0].apply(exports,arguments)
-},{"dup":57}],317:[function(require,module,exports){
+},{"dup":57}],442:[function(require,module,exports){
 arguments[4][58][0].apply(exports,arguments)
-},{"dup":58}],318:[function(require,module,exports){
+},{"dup":58}],443:[function(require,module,exports){
 arguments[4][59][0].apply(exports,arguments)
-},{"dup":59}],319:[function(require,module,exports){
+},{"dup":59}],444:[function(require,module,exports){
 arguments[4][60][0].apply(exports,arguments)
-},{"./factory/accountTitle":262,"./factory/action/cancel/reservation":265,"./factory/action/reserve":266,"./factory/actionStatusType":263,"./factory/actionType":264,"./factory/clientUser":267,"./factory/creativeWork/message/email":269,"./factory/creativeWork/movie":270,"./factory/creativeWorkType":268,"./factory/errorCode":271,"./factory/errors":282,"./factory/event/screeningEvent":285,"./factory/event/screeningEventSeries":286,"./factory/eventStatusType":283,"./factory/eventType":284,"./factory/itemAvailability":287,"./factory/language":288,"./factory/organizationType":289,"./factory/paymentMethodType":290,"./factory/place/movieTheater":292,"./factory/placeType":291,"./factory/priceCurrency":293,"./factory/priceSpecificationType":294,"./factory/propertyValue":295,"./factory/quantitativeValue":296,"./factory/reservation/event":299,"./factory/reservationStatusType":297,"./factory/reservationType":298,"./factory/serviceType":300,"./factory/sortType":301,"./factory/soundFormatType":302,"./factory/task/aggregateScreeningEvent":306,"./factory/task/cancelPendingReservation":307,"./factory/task/cancelReservation":308,"./factory/task/reserve":309,"./factory/taskExecutionResult":303,"./factory/taskName":304,"./factory/taskStatus":305,"./factory/ticketType":310,"./factory/transaction/cancelReservation":314,"./factory/transaction/reserve":315,"./factory/transactionStatusType":311,"./factory/transactionTasksExportationStatus":312,"./factory/transactionType":313,"./factory/unitCode":316,"./factory/url":317,"./factory/videoFormatType":318,"dup":60}],320:[function(require,module,exports){
+},{"./factory/accountTitle":387,"./factory/action/cancel/reservation":390,"./factory/action/reserve":391,"./factory/actionStatusType":388,"./factory/actionType":389,"./factory/clientUser":392,"./factory/creativeWork/message/email":394,"./factory/creativeWork/movie":395,"./factory/creativeWorkType":393,"./factory/errorCode":396,"./factory/errors":407,"./factory/event/screeningEvent":410,"./factory/event/screeningEventSeries":411,"./factory/eventStatusType":408,"./factory/eventType":409,"./factory/itemAvailability":412,"./factory/language":413,"./factory/organizationType":414,"./factory/paymentMethodType":415,"./factory/place/movieTheater":417,"./factory/placeType":416,"./factory/priceCurrency":418,"./factory/priceSpecificationType":419,"./factory/propertyValue":420,"./factory/quantitativeValue":421,"./factory/reservation/event":424,"./factory/reservationStatusType":422,"./factory/reservationType":423,"./factory/serviceType":425,"./factory/sortType":426,"./factory/soundFormatType":427,"./factory/task/aggregateScreeningEvent":431,"./factory/task/cancelPendingReservation":432,"./factory/task/cancelReservation":433,"./factory/task/reserve":434,"./factory/taskExecutionResult":428,"./factory/taskName":429,"./factory/taskStatus":430,"./factory/ticketType":435,"./factory/transaction/cancelReservation":439,"./factory/transaction/reserve":440,"./factory/transactionStatusType":436,"./factory/transactionTasksExportationStatus":437,"./factory/transactionType":438,"./factory/unitCode":441,"./factory/url":442,"./factory/videoFormatType":443,"dup":60}],445:[function(require,module,exports){
 arguments[4][92][0].apply(exports,arguments)
-},{"@chevre/factory":319,"dup":92}],321:[function(require,module,exports){
+},{"@chevre/factory":444,"dup":92}],446:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],322:[function(require,module,exports){
+},{"dup":3}],447:[function(require,module,exports){
 arguments[4][94][0].apply(exports,arguments)
-},{"dup":94}],323:[function(require,module,exports){
+},{"dup":94}],448:[function(require,module,exports){
 arguments[4][4][0].apply(exports,arguments)
-},{"dup":4}],324:[function(require,module,exports){
+},{"dup":4}],449:[function(require,module,exports){
 arguments[4][96][0].apply(exports,arguments)
-},{"dup":96}],325:[function(require,module,exports){
+},{"dup":96}],450:[function(require,module,exports){
 arguments[4][97][0].apply(exports,arguments)
-},{"dup":97}],326:[function(require,module,exports){
+},{"dup":97}],451:[function(require,module,exports){
 arguments[4][98][0].apply(exports,arguments)
-},{"dup":98}],327:[function(require,module,exports){
+},{"dup":98}],452:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],328:[function(require,module,exports){
+},{"dup":3}],453:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],329:[function(require,module,exports){
+},{"dup":3}],454:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],330:[function(require,module,exports){
+},{"dup":3}],455:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],331:[function(require,module,exports){
+},{"dup":3}],456:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],332:[function(require,module,exports){
+},{"dup":3}],457:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],333:[function(require,module,exports){
+},{"dup":3}],458:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],334:[function(require,module,exports){
+},{"dup":3}],459:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],335:[function(require,module,exports){
+},{"dup":3}],460:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],336:[function(require,module,exports){
+},{"dup":3}],461:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],337:[function(require,module,exports){
+},{"dup":3}],462:[function(require,module,exports){
 arguments[4][109][0].apply(exports,arguments)
-},{"../../authorize/award/point":325,"dup":109}],338:[function(require,module,exports){
+},{"../../authorize/award/point":450,"dup":109}],463:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],339:[function(require,module,exports){
+},{"dup":3}],464:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],340:[function(require,module,exports){
+},{"dup":3}],465:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],341:[function(require,module,exports){
+},{"dup":3}],466:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],342:[function(require,module,exports){
+},{"dup":3}],467:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],343:[function(require,module,exports){
+},{"dup":3}],468:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],344:[function(require,module,exports){
+},{"dup":3}],469:[function(require,module,exports){
 arguments[4][9][0].apply(exports,arguments)
-},{"dup":9}],345:[function(require,module,exports){
+},{"dup":9}],470:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],346:[function(require,module,exports){
+},{"dup":3}],471:[function(require,module,exports){
 arguments[4][118][0].apply(exports,arguments)
-},{"dup":118}],347:[function(require,module,exports){
+},{"dup":118}],472:[function(require,module,exports){
 arguments[4][12][0].apply(exports,arguments)
-},{"dup":12}],348:[function(require,module,exports){
+},{"dup":12}],473:[function(require,module,exports){
 arguments[4][120][0].apply(exports,arguments)
-},{"../errorCode":347,"./common":351,"dup":120,"setprototypeof":391}],349:[function(require,module,exports){
+},{"../errorCode":472,"./common":476,"dup":120,"setprototypeof":516}],474:[function(require,module,exports){
 arguments[4][121][0].apply(exports,arguments)
-},{"../errorCode":347,"./common":351,"dup":121,"setprototypeof":391}],350:[function(require,module,exports){
+},{"../errorCode":472,"./common":476,"dup":121,"setprototypeof":516}],475:[function(require,module,exports){
 arguments[4][122][0].apply(exports,arguments)
-},{"../errorCode":347,"./common":351,"dup":122,"setprototypeof":391}],351:[function(require,module,exports){
+},{"../errorCode":472,"./common":476,"dup":122,"setprototypeof":516}],476:[function(require,module,exports){
 arguments[4][123][0].apply(exports,arguments)
-},{"dup":123}],352:[function(require,module,exports){
+},{"dup":123}],477:[function(require,module,exports){
 arguments[4][124][0].apply(exports,arguments)
-},{"../errorCode":347,"./common":351,"dup":124,"setprototypeof":391}],353:[function(require,module,exports){
+},{"../errorCode":472,"./common":476,"dup":124,"setprototypeof":516}],478:[function(require,module,exports){
 arguments[4][125][0].apply(exports,arguments)
-},{"../errorCode":347,"./common":351,"dup":125,"setprototypeof":391}],354:[function(require,module,exports){
+},{"../errorCode":472,"./common":476,"dup":125,"setprototypeof":516}],479:[function(require,module,exports){
 arguments[4][126][0].apply(exports,arguments)
-},{"../errorCode":347,"./common":351,"dup":126,"setprototypeof":391}],355:[function(require,module,exports){
+},{"../errorCode":472,"./common":476,"dup":126,"setprototypeof":516}],480:[function(require,module,exports){
 arguments[4][127][0].apply(exports,arguments)
-},{"../errorCode":347,"./common":351,"dup":127,"setprototypeof":391}],356:[function(require,module,exports){
+},{"../errorCode":472,"./common":476,"dup":127,"setprototypeof":516}],481:[function(require,module,exports){
 arguments[4][128][0].apply(exports,arguments)
-},{"../errorCode":347,"./common":351,"dup":128,"setprototypeof":391}],357:[function(require,module,exports){
+},{"../errorCode":472,"./common":476,"dup":128,"setprototypeof":516}],482:[function(require,module,exports){
 arguments[4][129][0].apply(exports,arguments)
-},{"../errorCode":347,"./common":351,"dup":129,"setprototypeof":391}],358:[function(require,module,exports){
+},{"../errorCode":472,"./common":476,"dup":129,"setprototypeof":516}],483:[function(require,module,exports){
 arguments[4][130][0].apply(exports,arguments)
-},{"./error/alreadyInUse":348,"./error/argument":349,"./error/argumentNull":350,"./error/common":351,"./error/forbidden":352,"./error/notFound":353,"./error/notImplemented":354,"./error/rateLimitExceeded":355,"./error/serviceUnavailable":356,"./error/unauthorized":357,"dup":130}],359:[function(require,module,exports){
+},{"./error/alreadyInUse":473,"./error/argument":474,"./error/argumentNull":475,"./error/common":476,"./error/forbidden":477,"./error/notFound":478,"./error/notImplemented":479,"./error/rateLimitExceeded":480,"./error/serviceUnavailable":481,"./error/unauthorized":482,"dup":130}],484:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],360:[function(require,module,exports){
+},{"dup":3}],485:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],361:[function(require,module,exports){
+},{"dup":3}],486:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],362:[function(require,module,exports){
+},{"dup":3}],487:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],363:[function(require,module,exports){
+},{"dup":3}],488:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],364:[function(require,module,exports){
+},{"dup":3}],489:[function(require,module,exports){
 arguments[4][136][0].apply(exports,arguments)
-},{"dup":136}],365:[function(require,module,exports){
+},{"dup":136}],490:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],491:[function(require,module,exports){
 arguments[4][137][0].apply(exports,arguments)
-},{"dup":137}],366:[function(require,module,exports){
+},{"dup":137}],492:[function(require,module,exports){
 arguments[4][138][0].apply(exports,arguments)
-},{"dup":138}],367:[function(require,module,exports){
+},{"dup":138}],493:[function(require,module,exports){
 arguments[4][139][0].apply(exports,arguments)
-},{"../chevre":320,"dup":139}],368:[function(require,module,exports){
+},{"../chevre":445,"dup":139}],494:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],369:[function(require,module,exports){
+},{"dup":3}],495:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],370:[function(require,module,exports){
+},{"dup":3}],496:[function(require,module,exports){
 arguments[4][142][0].apply(exports,arguments)
-},{"dup":142}],371:[function(require,module,exports){
+},{"dup":142}],497:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],372:[function(require,module,exports){
+},{"dup":3}],498:[function(require,module,exports){
 arguments[4][144][0].apply(exports,arguments)
-},{"dup":144}],373:[function(require,module,exports){
+},{"dup":144}],499:[function(require,module,exports){
 arguments[4][145][0].apply(exports,arguments)
-},{"dup":145}],374:[function(require,module,exports){
+},{"dup":145}],500:[function(require,module,exports){
 arguments[4][34][0].apply(exports,arguments)
-},{"dup":34}],375:[function(require,module,exports){
+},{"dup":34}],501:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],376:[function(require,module,exports){
+},{"dup":3}],502:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],377:[function(require,module,exports){
+},{"dup":3}],503:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],378:[function(require,module,exports){
+},{"dup":3}],504:[function(require,module,exports){
 arguments[4][150][0].apply(exports,arguments)
-},{"dup":150}],379:[function(require,module,exports){
+},{"dup":150}],505:[function(require,module,exports){
 arguments[4][42][0].apply(exports,arguments)
-},{"dup":42}],380:[function(require,module,exports){
-arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],381:[function(require,module,exports){
+},{"dup":42}],506:[function(require,module,exports){
 arguments[4][153][0].apply(exports,arguments)
-},{"dup":153}],382:[function(require,module,exports){
+},{"dup":153}],507:[function(require,module,exports){
 arguments[4][154][0].apply(exports,arguments)
-},{"dup":154}],383:[function(require,module,exports){
+},{"dup":154}],508:[function(require,module,exports){
 arguments[4][52][0].apply(exports,arguments)
-},{"dup":52}],384:[function(require,module,exports){
+},{"dup":52}],509:[function(require,module,exports){
 arguments[4][53][0].apply(exports,arguments)
-},{"dup":53}],385:[function(require,module,exports){
+},{"dup":53}],510:[function(require,module,exports){
 arguments[4][157][0].apply(exports,arguments)
-},{"dup":157}],386:[function(require,module,exports){
+},{"dup":157}],511:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],387:[function(require,module,exports){
+},{"dup":3}],512:[function(require,module,exports){
 arguments[4][159][0].apply(exports,arguments)
-},{"dup":159}],388:[function(require,module,exports){
+},{"dup":159}],513:[function(require,module,exports){
 arguments[4][57][0].apply(exports,arguments)
-},{"dup":57}],389:[function(require,module,exports){
-arguments[4][161][0].apply(exports,arguments)
-},{"./chevre":320,"./cognito":321,"./factory/accountType":322,"./factory/action/authorize/award/point":325,"./factory/action/authorize/offer/seatReservation":326,"./factory/action/authorize/paymentMethod/account":327,"./factory/action/authorize/paymentMethod/any":328,"./factory/action/authorize/paymentMethod/creditCard":329,"./factory/action/authorize/paymentMethod/movieTicket":330,"./factory/action/check/paymentMethod/movieTicket":331,"./factory/action/check/token":332,"./factory/action/interact/confirm/reservation":333,"./factory/action/trade/order":334,"./factory/action/trade/pay":335,"./factory/action/trade/refund":336,"./factory/action/transfer/give/pointAward":337,"./factory/action/transfer/print/ticket":338,"./factory/action/transfer/return/order":339,"./factory/action/transfer/return/pointAward":340,"./factory/action/transfer/send/message/email":341,"./factory/action/transfer/send/order":342,"./factory/actionStatusType":323,"./factory/actionType":324,"./factory/clientUser":343,"./factory/creativeWork/message/email":345,"./factory/creativeWorkType":344,"./factory/encodingFormat":346,"./factory/errorCode":347,"./factory/errors":358,"./factory/event/screeningEvent":359,"./factory/event/screeningEventSeries":360,"./factory/invoice":361,"./factory/monetaryAmount":362,"./factory/order":363,"./factory/orderStatus":364,"./factory/organizationType":365,"./factory/ownershipInfo":366,"./factory/paymentMethod/paymentCard/creditCard":368,"./factory/paymentMethod/paymentCard/movieTicket":369,"./factory/paymentMethodType":367,"./factory/paymentStatusType":370,"./factory/person":371,"./factory/personType":372,"./factory/placeType":373,"./factory/priceCurrency":374,"./factory/programMembership":375,"./factory/propertyValue":376,"./factory/quantitativeValue":377,"./factory/service/webAPI":378,"./factory/sortType":379,"./factory/taskExecutionResult":380,"./factory/taskName":381,"./factory/taskStatus":382,"./factory/transaction/placeOrder":386,"./factory/transaction/returnOrder":387,"./factory/transactionStatusType":383,"./factory/transactionTasksExportationStatus":384,"./factory/transactionType":385,"./factory/unitCode":388,"@pecorino/factory":427,"@waiter/factory":441,"dup":161}],390:[function(require,module,exports){
+},{"dup":57}],514:[function(require,module,exports){
+arguments[4][321][0].apply(exports,arguments)
+},{"./chevre":445,"./cognito":446,"./factory/accountType":447,"./factory/action/authorize/award/point":450,"./factory/action/authorize/offer/seatReservation":451,"./factory/action/authorize/paymentMethod/account":452,"./factory/action/authorize/paymentMethod/any":453,"./factory/action/authorize/paymentMethod/creditCard":454,"./factory/action/authorize/paymentMethod/movieTicket":455,"./factory/action/check/paymentMethod/movieTicket":456,"./factory/action/check/token":457,"./factory/action/interact/confirm/reservation":458,"./factory/action/trade/order":459,"./factory/action/trade/pay":460,"./factory/action/trade/refund":461,"./factory/action/transfer/give/pointAward":462,"./factory/action/transfer/print/ticket":463,"./factory/action/transfer/return/order":464,"./factory/action/transfer/return/pointAward":465,"./factory/action/transfer/send/message/email":466,"./factory/action/transfer/send/order":467,"./factory/actionStatusType":448,"./factory/actionType":449,"./factory/clientUser":468,"./factory/creativeWork/message/email":470,"./factory/creativeWorkType":469,"./factory/encodingFormat":471,"./factory/errorCode":472,"./factory/errors":483,"./factory/event/screeningEvent":484,"./factory/event/screeningEventSeries":485,"./factory/invoice":486,"./factory/monetaryAmount":487,"./factory/order":488,"./factory/orderStatus":489,"./factory/organization":490,"./factory/organizationType":491,"./factory/ownershipInfo":492,"./factory/paymentMethod/paymentCard/creditCard":494,"./factory/paymentMethod/paymentCard/movieTicket":495,"./factory/paymentMethodType":493,"./factory/paymentStatusType":496,"./factory/person":497,"./factory/personType":498,"./factory/placeType":499,"./factory/priceCurrency":500,"./factory/programMembership":501,"./factory/propertyValue":502,"./factory/quantitativeValue":503,"./factory/service/webAPI":504,"./factory/sortType":505,"./factory/taskName":506,"./factory/taskStatus":507,"./factory/transaction/placeOrder":511,"./factory/transaction/returnOrder":512,"./factory/transactionStatusType":508,"./factory/transactionTasksExportationStatus":509,"./factory/transactionType":510,"./factory/unitCode":513,"@pecorino/factory":552,"@waiter/factory":566,"dup":321}],515:[function(require,module,exports){
 //! moment.js
 
 ;(function (global, factory) {
@@ -14304,9 +16853,9 @@ arguments[4][161][0].apply(exports,arguments)
 
 })));
 
-},{}],391:[function(require,module,exports){
+},{}],516:[function(require,module,exports){
 arguments[4][162][0].apply(exports,arguments)
-},{"dup":162}],392:[function(require,module,exports){
+},{"dup":162}],517:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -14320,7 +16869,7 @@ var TypeOf;
     TypeOf["Account"] = "Account";
 })(TypeOf = exports.TypeOf || (exports.TypeOf = {}));
 
-},{}],393:[function(require,module,exports){
+},{}],518:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -14339,9 +16888,9 @@ var AccountStatusType;
 })(AccountStatusType || (AccountStatusType = {}));
 exports.default = AccountStatusType;
 
-},{}],394:[function(require,module,exports){
+},{}],519:[function(require,module,exports){
 arguments[4][4][0].apply(exports,arguments)
-},{"dup":4}],395:[function(require,module,exports){
+},{"dup":4}],520:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -14362,13 +16911,13 @@ var ActionType;
 })(ActionType || (ActionType = {}));
 exports.default = ActionType;
 
-},{}],396:[function(require,module,exports){
+},{}],521:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],397:[function(require,module,exports){
+},{"dup":3}],522:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],398:[function(require,module,exports){
+},{"dup":3}],523:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],399:[function(require,module,exports){
+},{"dup":3}],524:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -14380,9 +16929,9 @@ var CreativeWorkType;
 })(CreativeWorkType || (CreativeWorkType = {}));
 exports.default = CreativeWorkType;
 
-},{}],400:[function(require,module,exports){
+},{}],525:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],401:[function(require,module,exports){
+},{"dup":3}],526:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -14402,7 +16951,7 @@ var ErrorCode;
 })(ErrorCode || (ErrorCode = {}));
 exports.default = ErrorCode;
 
-},{}],402:[function(require,module,exports){
+},{}],527:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -14444,7 +16993,7 @@ var AlreadyInUseError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = AlreadyInUseError;
 
-},{"../errorCode":401,"./pecorino":408,"setprototypeof":467}],403:[function(require,module,exports){
+},{"../errorCode":526,"./pecorino":533,"setprototypeof":592}],528:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -14485,7 +17034,7 @@ var ArgumentError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = ArgumentError;
 
-},{"../errorCode":401,"./pecorino":408,"setprototypeof":467}],404:[function(require,module,exports){
+},{"../errorCode":526,"./pecorino":533,"setprototypeof":592}],529:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -14526,7 +17075,7 @@ var ArgumentNullError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = ArgumentNullError;
 
-},{"../errorCode":401,"./pecorino":408,"setprototypeof":467}],405:[function(require,module,exports){
+},{"../errorCode":526,"./pecorino":533,"setprototypeof":592}],530:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -14566,7 +17115,7 @@ var ForbiddenError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = ForbiddenError;
 
-},{"../errorCode":401,"./pecorino":408,"setprototypeof":467}],406:[function(require,module,exports){
+},{"../errorCode":526,"./pecorino":533,"setprototypeof":592}],531:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -14607,7 +17156,7 @@ var NotFoundError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = NotFoundError;
 
-},{"../errorCode":401,"./pecorino":408,"setprototypeof":467}],407:[function(require,module,exports){
+},{"../errorCode":526,"./pecorino":533,"setprototypeof":592}],532:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -14647,7 +17196,7 @@ var NotImplementedError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = NotImplementedError;
 
-},{"../errorCode":401,"./pecorino":408,"setprototypeof":467}],408:[function(require,module,exports){
+},{"../errorCode":526,"./pecorino":533,"setprototypeof":592}],533:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -14681,7 +17230,7 @@ var PecorinoError = /** @class */ (function (_super) {
 }(Error));
 exports.PecorinoError = PecorinoError;
 
-},{}],409:[function(require,module,exports){
+},{}],534:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -14721,7 +17270,7 @@ var RateLimitExceededError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = RateLimitExceededError;
 
-},{"../errorCode":401,"./pecorino":408,"setprototypeof":467}],410:[function(require,module,exports){
+},{"../errorCode":526,"./pecorino":533,"setprototypeof":592}],535:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -14761,7 +17310,7 @@ var ServiceUnavailableError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = ServiceUnavailableError;
 
-},{"../errorCode":401,"./pecorino":408,"setprototypeof":467}],411:[function(require,module,exports){
+},{"../errorCode":526,"./pecorino":533,"setprototypeof":592}],536:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -14801,7 +17350,7 @@ var UnauthorizedError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = UnauthorizedError;
 
-},{"../errorCode":401,"./pecorino":408,"setprototypeof":467}],412:[function(require,module,exports){
+},{"../errorCode":526,"./pecorino":533,"setprototypeof":592}],537:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -14828,13 +17377,13 @@ exports.ServiceUnavailable = serviceUnavailable_1.default;
 var unauthorized_1 = require("./error/unauthorized");
 exports.Unauthorized = unauthorized_1.default;
 
-},{"./error/alreadyInUse":402,"./error/argument":403,"./error/argumentNull":404,"./error/forbidden":405,"./error/notFound":406,"./error/notImplemented":407,"./error/pecorino":408,"./error/rateLimitExceeded":409,"./error/serviceUnavailable":410,"./error/unauthorized":411}],413:[function(require,module,exports){
+},{"./error/alreadyInUse":527,"./error/argument":528,"./error/argumentNull":529,"./error/forbidden":530,"./error/notFound":531,"./error/notImplemented":532,"./error/pecorino":533,"./error/rateLimitExceeded":534,"./error/serviceUnavailable":535,"./error/unauthorized":536}],538:[function(require,module,exports){
 arguments[4][34][0].apply(exports,arguments)
-},{"dup":34}],414:[function(require,module,exports){
+},{"dup":34}],539:[function(require,module,exports){
 arguments[4][42][0].apply(exports,arguments)
-},{"dup":42}],415:[function(require,module,exports){
+},{"dup":42}],540:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],416:[function(require,module,exports){
+},{"dup":3}],541:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -14853,13 +17402,13 @@ var TaskName;
 })(TaskName || (TaskName = {}));
 exports.default = TaskName;
 
-},{}],417:[function(require,module,exports){
+},{}],542:[function(require,module,exports){
 arguments[4][46][0].apply(exports,arguments)
-},{"dup":46}],418:[function(require,module,exports){
+},{"dup":46}],543:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],419:[function(require,module,exports){
+},{"dup":3}],544:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],420:[function(require,module,exports){
+},{"dup":3}],545:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -14874,7 +17423,7 @@ var TransactionStatusType;
 })(TransactionStatusType || (TransactionStatusType = {}));
 exports.default = TransactionStatusType;
 
-},{}],421:[function(require,module,exports){
+},{}],546:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -14897,7 +17446,7 @@ var TransactionTasksExportationStatus;
 })(TransactionTasksExportationStatus || (TransactionTasksExportationStatus = {}));
 exports.default = TransactionTasksExportationStatus;
 
-},{}],422:[function(require,module,exports){
+},{}],547:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -14920,15 +17469,15 @@ var TransactionType;
 })(TransactionType || (TransactionType = {}));
 exports.default = TransactionType;
 
-},{}],423:[function(require,module,exports){
+},{}],548:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],424:[function(require,module,exports){
+},{"dup":3}],549:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],425:[function(require,module,exports){
+},{"dup":3}],550:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],426:[function(require,module,exports){
+},{"dup":3}],551:[function(require,module,exports){
 arguments[4][58][0].apply(exports,arguments)
-},{"dup":58}],427:[function(require,module,exports){
+},{"dup":58}],552:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -15009,9 +17558,9 @@ exports.transactionTasksExportationStatus = transactionTasksExportationStatus_1.
 exports.transactionType = transactionType_1.default;
 exports.url = URLFactory;
 
-},{"./factory/account":392,"./factory/accountStatusType":393,"./factory/action/transfer/moneyTransfer":396,"./factory/action/transfer/send/message/email":397,"./factory/actionStatusType":394,"./factory/actionType":395,"./factory/clientUser":398,"./factory/creativeWork/message/email":400,"./factory/creativeWorkType":399,"./factory/errorCode":401,"./factory/errors":412,"./factory/priceCurrency":413,"./factory/sortType":414,"./factory/task/cancelMoneyTransfer":418,"./factory/task/moneyTransfer":419,"./factory/taskExecutionResult":415,"./factory/taskName":416,"./factory/taskStatus":417,"./factory/transaction/deposit":423,"./factory/transaction/transfer":424,"./factory/transaction/withdraw":425,"./factory/transactionStatusType":420,"./factory/transactionTasksExportationStatus":421,"./factory/transactionType":422,"./factory/url":426}],428:[function(require,module,exports){
+},{"./factory/account":517,"./factory/accountStatusType":518,"./factory/action/transfer/moneyTransfer":521,"./factory/action/transfer/send/message/email":522,"./factory/actionStatusType":519,"./factory/actionType":520,"./factory/clientUser":523,"./factory/creativeWork/message/email":525,"./factory/creativeWorkType":524,"./factory/errorCode":526,"./factory/errors":537,"./factory/priceCurrency":538,"./factory/sortType":539,"./factory/task/cancelMoneyTransfer":543,"./factory/task/moneyTransfer":544,"./factory/taskExecutionResult":540,"./factory/taskName":541,"./factory/taskStatus":542,"./factory/transaction/deposit":548,"./factory/transaction/transfer":549,"./factory/transaction/withdraw":550,"./factory/transactionStatusType":545,"./factory/transactionTasksExportationStatus":546,"./factory/transactionType":547,"./factory/url":551}],553:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],429:[function(require,module,exports){
+},{"dup":3}],554:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -15030,7 +17579,7 @@ var ErrorCode;
 })(ErrorCode || (ErrorCode = {}));
 exports.default = ErrorCode;
 
-},{}],430:[function(require,module,exports){
+},{}],555:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -15071,7 +17620,7 @@ var ArgumentError = /** @class */ (function (_super) {
 }(waiter_1.WaiterError));
 exports.default = ArgumentError;
 
-},{"../errorCode":429,"./waiter":436,"setprototypeof":467}],431:[function(require,module,exports){
+},{"../errorCode":554,"./waiter":561,"setprototypeof":592}],556:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -15112,7 +17661,7 @@ var ArgumentNullError = /** @class */ (function (_super) {
 }(waiter_1.WaiterError));
 exports.default = ArgumentNullError;
 
-},{"../errorCode":429,"./waiter":436,"setprototypeof":467}],432:[function(require,module,exports){
+},{"../errorCode":554,"./waiter":561,"setprototypeof":592}],557:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -15152,7 +17701,7 @@ var ForbiddenError = /** @class */ (function (_super) {
 }(waiter_1.WaiterError));
 exports.default = ForbiddenError;
 
-},{"../errorCode":429,"./waiter":436,"setprototypeof":467}],433:[function(require,module,exports){
+},{"../errorCode":554,"./waiter":561,"setprototypeof":592}],558:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -15193,7 +17742,7 @@ var NotFoundError = /** @class */ (function (_super) {
 }(waiter_1.WaiterError));
 exports.default = NotFoundError;
 
-},{"../errorCode":429,"./waiter":436,"setprototypeof":467}],434:[function(require,module,exports){
+},{"../errorCode":554,"./waiter":561,"setprototypeof":592}],559:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -15233,7 +17782,7 @@ var RateLimitExceededError = /** @class */ (function (_super) {
 }(waiter_1.WaiterError));
 exports.default = RateLimitExceededError;
 
-},{"../errorCode":429,"./waiter":436,"setprototypeof":467}],435:[function(require,module,exports){
+},{"../errorCode":554,"./waiter":561,"setprototypeof":592}],560:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -15273,7 +17822,7 @@ var ServiceUnavailableError = /** @class */ (function (_super) {
 }(waiter_1.WaiterError));
 exports.default = ServiceUnavailableError;
 
-},{"../errorCode":429,"./waiter":436,"setprototypeof":467}],436:[function(require,module,exports){
+},{"../errorCode":554,"./waiter":561,"setprototypeof":592}],561:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -15306,7 +17855,7 @@ var WaiterError = /** @class */ (function (_super) {
 }(Error));
 exports.WaiterError = WaiterError;
 
-},{}],437:[function(require,module,exports){
+},{}],562:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -15327,13 +17876,13 @@ exports.ServiceUnavailable = serviceUnavailable_1.default;
 var waiter_1 = require("./error/waiter");
 exports.Waiter = waiter_1.WaiterError;
 
-},{"./error/argument":430,"./error/argumentNull":431,"./error/forbidden":432,"./error/notFound":433,"./error/rateLimitExceeded":434,"./error/serviceUnavailable":435,"./error/waiter":436}],438:[function(require,module,exports){
+},{"./error/argument":555,"./error/argumentNull":556,"./error/forbidden":557,"./error/notFound":558,"./error/rateLimitExceeded":559,"./error/serviceUnavailable":560,"./error/waiter":561}],563:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],439:[function(require,module,exports){
+},{"dup":3}],564:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],440:[function(require,module,exports){
+},{"dup":3}],565:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],441:[function(require,module,exports){
+},{"dup":3}],566:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -15352,7 +17901,7 @@ exports.passport = passport;
 exports.project = project;
 exports.rule = rule;
 
-},{"./factory/client":428,"./factory/errorCode":429,"./factory/errors":437,"./factory/passport":438,"./factory/project":439,"./factory/rule":440}],442:[function(require,module,exports){
+},{"./factory/client":553,"./factory/errorCode":554,"./factory/errors":562,"./factory/passport":563,"./factory/project":564,"./factory/rule":565}],567:[function(require,module,exports){
 'use strict'
 
 exports.byteLength = byteLength
@@ -15468,7 +18017,7 @@ function fromByteArray (uint8) {
   return parts.join('')
 }
 
-},{}],443:[function(require,module,exports){
+},{}],568:[function(require,module,exports){
 
 /**
  * Expose `Emitter`.
@@ -15633,7 +18182,7 @@ Emitter.prototype.hasListeners = function(event){
   return !! this.listeners(event).length;
 };
 
-},{}],444:[function(require,module,exports){
+},{}],569:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -16394,7 +18943,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS;
 
 }));
-},{}],445:[function(require,module,exports){
+},{}],570:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -16530,7 +19079,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS.enc.Base64;
 
 }));
-},{"./core":444}],446:[function(require,module,exports){
+},{"./core":569}],571:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -16549,7 +19098,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS.enc.Hex;
 
 }));
-},{"./core":444}],447:[function(require,module,exports){
+},{"./core":569}],572:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -16749,7 +19298,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS.SHA256;
 
 }));
-},{"./core":444}],448:[function(require,module,exports){
+},{"./core":569}],573:[function(require,module,exports){
 /**
  * Helpers.
  */
@@ -16913,7 +19462,7 @@ function plural(ms, msAbs, n, name) {
   return Math.round(ms / n) + ' ' + name + (isPlural ? 's' : '');
 }
 
-},{}],449:[function(require,module,exports){
+},{}],574:[function(require,module,exports){
 (function (process){
 "use strict";
 
@@ -17097,7 +19646,7 @@ formatters.j = function (v) {
 
 
 }).call(this,require('_process'))
-},{"./common":450,"_process":461}],450:[function(require,module,exports){
+},{"./common":575,"_process":586}],575:[function(require,module,exports){
 "use strict";
 
 /**
@@ -17348,7 +19897,7 @@ function setup(env) {
 module.exports = setup;
 
 
-},{"ms":448}],451:[function(require,module,exports){
+},{"ms":573}],576:[function(require,module,exports){
 // Generated by CoffeeScript 2.3.0
 // # node-http-status
 
@@ -17848,7 +20397,7 @@ module.exports = {
   }
 };
 
-},{}],452:[function(require,module,exports){
+},{}],577:[function(require,module,exports){
 (function (name, context, definition) {
   if (typeof module !== 'undefined' && module.exports) module.exports = definition();
   else if (typeof define === 'function' && define.amd) define(definition);
@@ -17888,7 +20437,7 @@ module.exports = {
 
 });
 
-},{}],453:[function(require,module,exports){
+},{}],578:[function(require,module,exports){
 var base64 = require('base64-js');
 
 function padding(str) {
@@ -17974,7 +20523,7 @@ module.exports = {
   base64ToBase64Url: base64ToBase64Url
 };
 
-},{"base64-js":442}],454:[function(require,module,exports){
+},{"base64-js":567}],579:[function(require,module,exports){
 function DummyCache() {}
 
 DummyCache.prototype.get = function () {
@@ -17990,7 +20539,7 @@ DummyCache.prototype.set = function () {
 
 module.exports = DummyCache;
 
-},{}],455:[function(require,module,exports){
+},{}],580:[function(require,module,exports){
 function ConfigurationError(message) {
   this.name = 'ConfigurationError';
   this.message = (message || '');
@@ -18008,7 +20557,7 @@ module.exports = {
   TokenValidationError: TokenValidationError
 };
 
-},{}],456:[function(require,module,exports){
+},{}],581:[function(require,module,exports){
 var urljoin = require('url-join');
 var base64 = require('./base64');
 var request = require('superagent');
@@ -18054,7 +20603,7 @@ module.exports = {
   getJWKS: getJWKS
 };
 
-},{"./base64":453,"superagent":469,"url-join":452}],457:[function(require,module,exports){
+},{"./base64":578,"superagent":594,"url-join":577}],582:[function(require,module,exports){
 /*
 Based on the work of Tom Wu
 http://www-cs-students.stanford.edu/~tjw/jsbn/
@@ -18133,7 +20682,7 @@ RSAVerifier.prototype.verify = function (msg, encsig) {
 
 module.exports = RSAVerifier;
 
-},{"crypto-js/sha256":447,"jsbn":460}],458:[function(require,module,exports){
+},{"crypto-js/sha256":572,"jsbn":585}],583:[function(require,module,exports){
 var sha256 = require('crypto-js/sha256');
 var cryptoBase64 = require('crypto-js/enc-base64');
 var cryptoHex = require('crypto-js/enc-hex');
@@ -18426,7 +20975,7 @@ IdTokenVerifier.prototype.validateAccessToken = function (accessToken, alg, atHa
 
 module.exports = IdTokenVerifier;
 
-},{"./helpers/base64":453,"./helpers/dummy-cache":454,"./helpers/error":455,"./helpers/jwks":456,"./helpers/rsa-verifier":457,"crypto-js/enc-base64":445,"crypto-js/enc-hex":446,"crypto-js/sha256":447}],459:[function(require,module,exports){
+},{"./helpers/base64":578,"./helpers/dummy-cache":579,"./helpers/error":580,"./helpers/jwks":581,"./helpers/rsa-verifier":582,"crypto-js/enc-base64":570,"crypto-js/enc-hex":571,"crypto-js/sha256":572}],584:[function(require,module,exports){
 // the whatwg-fetch polyfill installs the fetch() function
 // on the global object (window or self)
 //
@@ -18434,7 +20983,7 @@ module.exports = IdTokenVerifier;
 require('whatwg-fetch');
 module.exports = self.fetch.bind(self);
 
-},{"whatwg-fetch":474}],460:[function(require,module,exports){
+},{"whatwg-fetch":599}],585:[function(require,module,exports){
 (function(){
 
     // Copyright (c) 2005  Tom Wu
@@ -19793,7 +22342,7 @@ module.exports = self.fetch.bind(self);
 
 }).call(this);
 
-},{}],461:[function(require,module,exports){
+},{}],586:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -19979,7 +22528,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],462:[function(require,module,exports){
+},{}],587:[function(require,module,exports){
 'use strict';
 
 var replace = String.prototype.replace;
@@ -19999,7 +22548,7 @@ module.exports = {
     RFC3986: 'RFC3986'
 };
 
-},{}],463:[function(require,module,exports){
+},{}],588:[function(require,module,exports){
 'use strict';
 
 var stringify = require('./stringify');
@@ -20012,7 +22561,7 @@ module.exports = {
     stringify: stringify
 };
 
-},{"./formats":462,"./parse":464,"./stringify":465}],464:[function(require,module,exports){
+},{"./formats":587,"./parse":589,"./stringify":590}],589:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -20240,7 +22789,7 @@ module.exports = function (str, opts) {
     return utils.compact(obj);
 };
 
-},{"./utils":466}],465:[function(require,module,exports){
+},{"./utils":591}],590:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -20484,7 +23033,7 @@ module.exports = function (object, opts) {
     return joined.length > 0 ? prefix + joined : '';
 };
 
-},{"./formats":462,"./utils":466}],466:[function(require,module,exports){
+},{"./formats":587,"./utils":591}],591:[function(require,module,exports){
 'use strict';
 
 var has = Object.prototype.hasOwnProperty;
@@ -20714,7 +23263,7 @@ module.exports = {
     merge: merge
 };
 
-},{}],467:[function(require,module,exports){
+},{}],592:[function(require,module,exports){
 module.exports = Object.setPrototypeOf || ({__proto__:[]} instanceof Array ? setProtoOf : mixinProperties);
 
 function setProtoOf(obj, proto) {
@@ -20731,7 +23280,7 @@ function mixinProperties(obj, proto) {
 	return obj;
 }
 
-},{}],468:[function(require,module,exports){
+},{}],593:[function(require,module,exports){
 function Agent() {
   this._defaults = [];
 }
@@ -20753,7 +23302,7 @@ Agent.prototype._setDefaults = function(req) {
 
 module.exports = Agent;
 
-},{}],469:[function(require,module,exports){
+},{}],594:[function(require,module,exports){
 /**
  * Root reference for iframes.
  */
@@ -21675,7 +24224,7 @@ request.put = function(url, data, fn) {
   return req;
 };
 
-},{"./agent-base":468,"./is-object":470,"./request-base":471,"./response-base":472,"component-emitter":443}],470:[function(require,module,exports){
+},{"./agent-base":593,"./is-object":595,"./request-base":596,"./response-base":597,"component-emitter":568}],595:[function(require,module,exports){
 'use strict';
 
 /**
@@ -21692,7 +24241,7 @@ function isObject(obj) {
 
 module.exports = isObject;
 
-},{}],471:[function(require,module,exports){
+},{}],596:[function(require,module,exports){
 'use strict';
 
 /**
@@ -22388,7 +24937,7 @@ RequestBase.prototype._setTimeouts = function() {
   }
 };
 
-},{"./is-object":470}],472:[function(require,module,exports){
+},{"./is-object":595}],597:[function(require,module,exports){
 'use strict';
 
 /**
@@ -22526,7 +25075,7 @@ ResponseBase.prototype._setStatusProperties = function(status){
     this.unprocessableEntity = 422 == status;
 };
 
-},{"./utils":473}],473:[function(require,module,exports){
+},{"./utils":598}],598:[function(require,module,exports){
 'use strict';
 
 /**
@@ -22599,7 +25148,7 @@ exports.cleanHeader = function(header, changesOrigin){
   return header;
 };
 
-},{}],474:[function(require,module,exports){
+},{}],599:[function(require,module,exports){
 (function(self) {
   'use strict';
 
