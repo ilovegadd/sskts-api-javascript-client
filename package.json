@@ -63,8 +63,8 @@
     "watchify": "^3.11.0"
   },
   "dependencies": {
-    "@cinerino/api-javascript-client": "1.0.0-alpha.31",
-    "@motionpicture/sskts-api-abstract-client": "^6.0.1"
+    "@cinerino/api-javascript-client": "1.0.0-alpha.32",
+    "@motionpicture/sskts-api-abstract-client": "^6.0.2"
   },
   "repository": {
     "type": "git",
