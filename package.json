@@ -34,7 +34,9 @@
     "preversion": "npm run clean && npm run build && npm test",
     "version": "git add -A",
     "postversion": "git push origin --tags",
-    "prepublishOnly": "npm run clean && npm run build && npm test && npm run doc"
+    "prepublishOnly": "npm run clean && npm run build && npm test && npm run doc",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "Motionpicture co.,ltd.",
   "contributors": [
@@ -64,10 +66,12 @@
   },
   "dependencies": {
     "@cinerino/api-javascript-client": "1.0.0-alpha.32",
-    "@motionpicture/sskts-api-abstract-client": "^6.0.2"
+    "@motionpicture/sskts-api-abstract-client": "^6.0.2",
+    "snyk": "^1.136.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/motionpicture/sskts-api-javascript-client.git"
-  }
+  },
+  "snyk": true
 }
