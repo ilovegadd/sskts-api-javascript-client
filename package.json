@@ -1,6 +1,6 @@
 {
   "name": "@motionpicture/sskts-api-javascript-client",
-  "version": "6.0.1",
+  "version": "6.1.0",
   "description": "Cinemasunshine API client library for JavaScript",
   "main": "./lib/index.js",
   "browser": "./lib/index.js",
@@ -64,7 +64,7 @@
   },
   "dependencies": {
     "@cinerino/api-javascript-client": "1.0.0-alpha.32",
-    "@motionpicture/sskts-api-abstract-client": "^6.0.2"
+    "@motionpicture/sskts-api-abstract-client": "^6.1.0"
   },
   "repository": {
     "type": "git",
