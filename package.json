@@ -1,6 +1,6 @@
 {
   "name": "@motionpicture/sskts-api-javascript-client",
-  "version": "6.1.0",
+  "version": "7.0.0-alpha.1",
   "description": "Cinemasunshine API client library for JavaScript",
   "main": "./lib/index.js",
   "browser": "./lib/index.js",
