@@ -152,7 +152,7 @@ var AlreadyInUseError = /** @class */ (function (_super) {
 }(chevre_1.ChevreError));
 exports.default = AlreadyInUseError;
 
-},{"../errorCode":14,"./chevre":18,"setprototypeof":256}],16:[function(require,module,exports){
+},{"../errorCode":14,"./chevre":18,"setprototypeof":423}],16:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -193,7 +193,7 @@ var ArgumentError = /** @class */ (function (_super) {
 }(chevre_1.ChevreError));
 exports.default = ArgumentError;
 
-},{"../errorCode":14,"./chevre":18,"setprototypeof":256}],17:[function(require,module,exports){
+},{"../errorCode":14,"./chevre":18,"setprototypeof":423}],17:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -234,7 +234,7 @@ var ArgumentNullError = /** @class */ (function (_super) {
 }(chevre_1.ChevreError));
 exports.default = ArgumentNullError;
 
-},{"../errorCode":14,"./chevre":18,"setprototypeof":256}],18:[function(require,module,exports){
+},{"../errorCode":14,"./chevre":18,"setprototypeof":423}],18:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -307,7 +307,7 @@ var ForbiddenError = /** @class */ (function (_super) {
 }(chevre_1.ChevreError));
 exports.default = ForbiddenError;
 
-},{"../errorCode":14,"./chevre":18,"setprototypeof":256}],20:[function(require,module,exports){
+},{"../errorCode":14,"./chevre":18,"setprototypeof":423}],20:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -348,7 +348,7 @@ var NotFoundError = /** @class */ (function (_super) {
 }(chevre_1.ChevreError));
 exports.default = NotFoundError;
 
-},{"../errorCode":14,"./chevre":18,"setprototypeof":256}],21:[function(require,module,exports){
+},{"../errorCode":14,"./chevre":18,"setprototypeof":423}],21:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -388,7 +388,7 @@ var NotImplementedError = /** @class */ (function (_super) {
 }(chevre_1.ChevreError));
 exports.default = NotImplementedError;
 
-},{"../errorCode":14,"./chevre":18,"setprototypeof":256}],22:[function(require,module,exports){
+},{"../errorCode":14,"./chevre":18,"setprototypeof":423}],22:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -428,7 +428,7 @@ var RateLimitExceededError = /** @class */ (function (_super) {
 }(chevre_1.ChevreError));
 exports.default = RateLimitExceededError;
 
-},{"../errorCode":14,"./chevre":18,"setprototypeof":256}],23:[function(require,module,exports){
+},{"../errorCode":14,"./chevre":18,"setprototypeof":423}],23:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -468,7 +468,7 @@ var ServiceUnavailableError = /** @class */ (function (_super) {
 }(chevre_1.ChevreError));
 exports.default = ServiceUnavailableError;
 
-},{"../errorCode":14,"./chevre":18,"setprototypeof":256}],24:[function(require,module,exports){
+},{"../errorCode":14,"./chevre":18,"setprototypeof":423}],24:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -508,7 +508,7 @@ var UnauthorizedError = /** @class */ (function (_super) {
 }(chevre_1.ChevreError));
 exports.default = UnauthorizedError;
 
-},{"../errorCode":14,"./chevre":18,"setprototypeof":256}],25:[function(require,module,exports){
+},{"../errorCode":14,"./chevre":18,"setprototypeof":423}],25:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -1595,7 +1595,7 @@ var Service = /** @class */ (function () {
 }());
 exports.Service = Service;
 
-},{"./transporters":85,"qs":252}],67:[function(require,module,exports){
+},{"./transporters":85,"qs":419}],67:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -1690,7 +1690,7 @@ var CreativeWorkService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.CreativeWorkService = CreativeWorkService;
 
-},{"../service":66,"http-status":240}],68:[function(require,module,exports){
+},{"../service":66,"http-status":407}],68:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -1774,7 +1774,7 @@ var DeliveryService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.DeliveryService = DeliveryService;
 
-},{"../service":66,"http-status":240}],69:[function(require,module,exports){
+},{"../service":66,"http-status":407}],69:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -1924,7 +1924,7 @@ var EventService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.EventService = EventService;
 
-},{"../service":66,"http-status":240}],70:[function(require,module,exports){
+},{"../service":66,"http-status":407}],70:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -2019,7 +2019,7 @@ var InvoiceService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.InvoiceService = InvoiceService;
 
-},{"../service":66,"http-status":240}],71:[function(require,module,exports){
+},{"../service":66,"http-status":407}],71:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -2191,7 +2191,7 @@ var OrderService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.OrderService = OrderService;
 
-},{"../service":66,"http-status":240}],72:[function(require,module,exports){
+},{"../service":66,"http-status":407}],72:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -2307,7 +2307,7 @@ var OrganizationService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.OrganizationService = OrganizationService;
 
-},{"../service":66,"http-status":240}],73:[function(require,module,exports){
+},{"../service":66,"http-status":407}],73:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -2425,7 +2425,7 @@ var OwnershipInfoService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.OwnershipInfoService = OwnershipInfoService;
 
-},{"../service":66,"http-status":240}],74:[function(require,module,exports){
+},{"../service":66,"http-status":407}],74:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -2625,7 +2625,7 @@ var PaymentService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PaymentService = PaymentService;
 
-},{"../factory":64,"../service":66,"http-status":240}],75:[function(require,module,exports){
+},{"../factory":64,"../service":66,"http-status":407}],75:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -2720,7 +2720,7 @@ var PaymentMethodService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PaymentMethodService = PaymentMethodService;
 
-},{"../service":66,"http-status":240}],76:[function(require,module,exports){
+},{"../service":66,"http-status":407}],76:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -2908,7 +2908,7 @@ var PersonService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PersonService = PersonService;
 
-},{"../service":66,"http-status":240}],77:[function(require,module,exports){
+},{"../service":66,"http-status":407}],77:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -3170,7 +3170,7 @@ var PersonOwnershipInfoService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PersonOwnershipInfoService = PersonOwnershipInfoService;
 
-},{"../../service":66,"http-status":240}],78:[function(require,module,exports){
+},{"../../service":66,"http-status":407}],78:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -3284,7 +3284,7 @@ var ReservationService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.ReservationService = ReservationService;
 
-},{"../service":66,"http-status":240}],79:[function(require,module,exports){
+},{"../service":66,"http-status":407}],79:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -3455,7 +3455,7 @@ var SellerService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.SellerService = SellerService;
 
-},{"../service":66,"http-status":240}],80:[function(require,module,exports){
+},{"../service":66,"http-status":407}],80:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -3587,7 +3587,7 @@ var TaskService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.TaskService = TaskService;
 
-},{"../service":66,"http-status":240}],81:[function(require,module,exports){
+},{"../service":66,"http-status":407}],81:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -3763,7 +3763,7 @@ var MoneyTransferTransactionService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.MoneyTransferTransactionService = MoneyTransferTransactionService;
 
-},{"../../factory":64,"../../service":66,"http-status":240}],82:[function(require,module,exports){
+},{"../../factory":64,"../../service":66,"http-status":407}],82:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -4173,7 +4173,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PlaceOrderTransactionService = PlaceOrderTransactionService;
 
-},{"../../factory":64,"../../service":66,"http-status":240}],83:[function(require,module,exports){
+},{"../../factory":64,"../../service":66,"http-status":407}],83:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -4309,7 +4309,7 @@ var ReturnOrderTransactionService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.ReturnOrderTransactionService = ReturnOrderTransactionService;
 
-},{"../../factory":64,"../../service":66,"http-status":240}],84:[function(require,module,exports){
+},{"../../factory":64,"../../service":66,"http-status":407}],84:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -4440,7 +4440,7 @@ var UserPoolService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.UserPoolService = UserPoolService;
 
-},{"../service":66,"http-status":240}],85:[function(require,module,exports){
+},{"../service":66,"http-status":407}],85:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -4633,7 +4633,7 @@ var StubTransporter = /** @class */ (function () {
 }());
 exports.StubTransporter = StubTransporter;
 
-},{"debug":238,"isomorphic-fetch":248}],86:[function(require,module,exports){
+},{"debug":405,"isomorphic-fetch":415}],86:[function(require,module,exports){
 "use strict";
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
@@ -4751,7 +4751,7 @@ var IframeHandler = /** @class */ (function () {
 }());
 exports.default = IframeHandler;
 
-},{"debug":238}],89:[function(require,module,exports){
+},{"debug":405}],89:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -5098,7 +5098,7 @@ var ImplicitGrantClient = /** @class */ (function (_super) {
 }(oAuth2client_1.default));
 exports.ImplicitGrantClient = ImplicitGrantClient;
 
-},{"./error":87,"./oAuth2client":90,"./popupAuthenticationHandler":91,"./silentAuthenticationHandler":93,"./silentLogoutHandler":94,"debug":238,"idtoken-verifier":247,"qs":252}],90:[function(require,module,exports){
+},{"./error":87,"./oAuth2client":90,"./popupAuthenticationHandler":91,"./silentAuthenticationHandler":93,"./silentLogoutHandler":94,"debug":405,"idtoken-verifier":414,"qs":419}],90:[function(require,module,exports){
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -5290,7 +5290,7 @@ var OAuth2client = /** @class */ (function () {
 }());
 exports.default = OAuth2client;
 
-},{"../abstract":86,"debug":238,"http-status":240,"isomorphic-fetch":248}],91:[function(require,module,exports){
+},{"../abstract":86,"debug":405,"http-status":407,"isomorphic-fetch":415}],91:[function(require,module,exports){
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -5475,7 +5475,7 @@ var PopupHandler = /** @class */ (function () {
 }());
 exports.default = PopupHandler;
 
-},{"debug":238}],93:[function(require,module,exports){
+},{"debug":405}],93:[function(require,module,exports){
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -5932,7 +5932,7 @@ var AlreadyInUseError = /** @class */ (function (_super) {
 }(common_1.CinerinoError));
 exports.default = AlreadyInUseError;
 
-},{"../errorCode":128,"./common":132,"setprototypeof":256}],130:[function(require,module,exports){
+},{"../errorCode":128,"./common":132,"setprototypeof":423}],130:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -5973,7 +5973,7 @@ var ArgumentError = /** @class */ (function (_super) {
 }(common_1.CinerinoError));
 exports.default = ArgumentError;
 
-},{"../errorCode":128,"./common":132,"setprototypeof":256}],131:[function(require,module,exports){
+},{"../errorCode":128,"./common":132,"setprototypeof":423}],131:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -6014,7 +6014,7 @@ var ArgumentNullError = /** @class */ (function (_super) {
 }(common_1.CinerinoError));
 exports.default = ArgumentNullError;
 
-},{"../errorCode":128,"./common":132,"setprototypeof":256}],132:[function(require,module,exports){
+},{"../errorCode":128,"./common":132,"setprototypeof":423}],132:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -6087,7 +6087,7 @@ var ForbiddenError = /** @class */ (function (_super) {
 }(common_1.CinerinoError));
 exports.default = ForbiddenError;
 
-},{"../errorCode":128,"./common":132,"setprototypeof":256}],134:[function(require,module,exports){
+},{"../errorCode":128,"./common":132,"setprototypeof":423}],134:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -6128,7 +6128,7 @@ var NotFoundError = /** @class */ (function (_super) {
 }(common_1.CinerinoError));
 exports.default = NotFoundError;
 
-},{"../errorCode":128,"./common":132,"setprototypeof":256}],135:[function(require,module,exports){
+},{"../errorCode":128,"./common":132,"setprototypeof":423}],135:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -6168,7 +6168,7 @@ var NotImplementedError = /** @class */ (function (_super) {
 }(common_1.CinerinoError));
 exports.default = NotImplementedError;
 
-},{"../errorCode":128,"./common":132,"setprototypeof":256}],136:[function(require,module,exports){
+},{"../errorCode":128,"./common":132,"setprototypeof":423}],136:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -6208,7 +6208,7 @@ var RateLimitExceededError = /** @class */ (function (_super) {
 }(common_1.CinerinoError));
 exports.default = RateLimitExceededError;
 
-},{"../errorCode":128,"./common":132,"setprototypeof":256}],137:[function(require,module,exports){
+},{"../errorCode":128,"./common":132,"setprototypeof":423}],137:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -6248,7 +6248,7 @@ var ServiceUnavailableError = /** @class */ (function (_super) {
 }(common_1.CinerinoError));
 exports.default = ServiceUnavailableError;
 
-},{"../errorCode":128,"./common":132,"setprototypeof":256}],138:[function(require,module,exports){
+},{"../errorCode":128,"./common":132,"setprototypeof":423}],138:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -6288,7 +6288,7 @@ var UnauthorizedError = /** @class */ (function (_super) {
 }(common_1.CinerinoError));
 exports.default = UnauthorizedError;
 
-},{"../errorCode":128,"./common":132,"setprototypeof":256}],139:[function(require,module,exports){
+},{"../errorCode":128,"./common":132,"setprototypeof":423}],139:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -6877,7 +6877,7 @@ exports.transactionTasksExportationStatus = transactionTasksExportationStatus_1.
 exports.transactionType = transactionType_1.default;
 exports.unitCode = unitCode_1.UnitCode;
 
-},{"./chevre":96,"./cognito":97,"./factory/accountType":98,"./factory/action/authorize/award/point":101,"./factory/action/authorize/discount/mvtk":102,"./factory/action/authorize/offer/programMembership":103,"./factory/action/authorize/offer/seatReservation":104,"./factory/action/authorize/paymentMethod/account":105,"./factory/action/authorize/paymentMethod/any":106,"./factory/action/authorize/paymentMethod/creditCard":107,"./factory/action/authorize/paymentMethod/movieTicket":108,"./factory/action/check/paymentMethod/movieTicket":109,"./factory/action/check/token":110,"./factory/action/interact/confirm/reservation":111,"./factory/action/interact/register/programMembership":112,"./factory/action/interact/unRegister/programMembership":113,"./factory/action/trade/order":114,"./factory/action/trade/pay":115,"./factory/action/trade/refund":116,"./factory/action/transfer/give/pointAward":117,"./factory/action/transfer/moneyTransfer":118,"./factory/action/transfer/print/ticket":119,"./factory/action/transfer/return/order":120,"./factory/action/transfer/return/pointAward":121,"./factory/action/transfer/send/message/email":122,"./factory/action/transfer/send/order":123,"./factory/actionStatusType":99,"./factory/actionType":100,"./factory/clientUser":124,"./factory/creativeWork/message/email":126,"./factory/creativeWorkType":125,"./factory/encodingFormat":127,"./factory/errorCode":128,"./factory/errors":139,"./factory/event/screeningEvent":140,"./factory/event/screeningEventSeries":141,"./factory/invoice":142,"./factory/monetaryAmount":143,"./factory/offer":144,"./factory/order":146,"./factory/orderStatus":147,"./factory/organization":148,"./factory/organizationType":149,"./factory/ownershipInfo":150,"./factory/paymentMethod/paymentCard/creditCard":152,"./factory/paymentMethod/paymentCard/movieTicket":153,"./factory/paymentMethodType":151,"./factory/paymentStatusType":154,"./factory/person":155,"./factory/personType":156,"./factory/placeType":157,"./factory/priceCurrency":158,"./factory/programMembership":159,"./factory/propertyValue":160,"./factory/quantitativeValue":161,"./factory/service/webAPI":162,"./factory/sortType":163,"./factory/taskName":164,"./factory/taskStatus":165,"./factory/transaction/moneyTransfer":169,"./factory/transaction/placeOrder":170,"./factory/transaction/returnOrder":171,"./factory/transactionStatusType":166,"./factory/transactionTasksExportationStatus":167,"./factory/transactionType":168,"./factory/unitCode":172,"@pecorino/factory":216,"@waiter/factory":230}],174:[function(require,module,exports){
+},{"./chevre":96,"./cognito":97,"./factory/accountType":98,"./factory/action/authorize/award/point":101,"./factory/action/authorize/discount/mvtk":102,"./factory/action/authorize/offer/programMembership":103,"./factory/action/authorize/offer/seatReservation":104,"./factory/action/authorize/paymentMethod/account":105,"./factory/action/authorize/paymentMethod/any":106,"./factory/action/authorize/paymentMethod/creditCard":107,"./factory/action/authorize/paymentMethod/movieTicket":108,"./factory/action/check/paymentMethod/movieTicket":109,"./factory/action/check/token":110,"./factory/action/interact/confirm/reservation":111,"./factory/action/interact/register/programMembership":112,"./factory/action/interact/unRegister/programMembership":113,"./factory/action/trade/order":114,"./factory/action/trade/pay":115,"./factory/action/trade/refund":116,"./factory/action/transfer/give/pointAward":117,"./factory/action/transfer/moneyTransfer":118,"./factory/action/transfer/print/ticket":119,"./factory/action/transfer/return/order":120,"./factory/action/transfer/return/pointAward":121,"./factory/action/transfer/send/message/email":122,"./factory/action/transfer/send/order":123,"./factory/actionStatusType":99,"./factory/actionType":100,"./factory/clientUser":124,"./factory/creativeWork/message/email":126,"./factory/creativeWorkType":125,"./factory/encodingFormat":127,"./factory/errorCode":128,"./factory/errors":139,"./factory/event/screeningEvent":140,"./factory/event/screeningEventSeries":141,"./factory/invoice":142,"./factory/monetaryAmount":143,"./factory/offer":144,"./factory/order":146,"./factory/orderStatus":147,"./factory/organization":148,"./factory/organizationType":149,"./factory/ownershipInfo":150,"./factory/paymentMethod/paymentCard/creditCard":152,"./factory/paymentMethod/paymentCard/movieTicket":153,"./factory/paymentMethodType":151,"./factory/paymentStatusType":154,"./factory/person":155,"./factory/personType":156,"./factory/placeType":157,"./factory/priceCurrency":158,"./factory/programMembership":159,"./factory/propertyValue":160,"./factory/quantitativeValue":161,"./factory/service/webAPI":162,"./factory/sortType":163,"./factory/taskName":164,"./factory/taskStatus":165,"./factory/transaction/moneyTransfer":169,"./factory/transaction/placeOrder":170,"./factory/transaction/returnOrder":171,"./factory/transactionStatusType":166,"./factory/transactionTasksExportationStatus":167,"./factory/transactionType":168,"./factory/unitCode":172,"@pecorino/factory":383,"@waiter/factory":397}],174:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -6978,6 +6978,17 @@ var service;
     service.OwnershipInfo = OwnershipInfo;
     service.person = cinerino.service.person;
     /**
+     * 決済サービス
+     */
+    var Payment = /** @class */ (function (_super) {
+        __extends(Payment, _super);
+        function Payment() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Payment;
+    }(cinerino.service.Payment));
+    service.Payment = Payment;
+    /**
      * ユーザーサービス
      */
     var Person = /** @class */ (function (_super) {
@@ -7066,7 +7077,7 @@ var service;
     service.UserPool = UserPool;
 })(service = exports.service || (exports.service = {}));
 
-},{"./service/account":176,"./service/action":177,"./service/order":178,"./service/ownershipInfo":179,"./service/person":180,"./service/programMembership":181,"./service/transaction/placeOrder":182,"@cinerino/api-abstract-client":65}],175:[function(require,module,exports){
+},{"./service/account":176,"./service/action":177,"./service/order":178,"./service/ownershipInfo":179,"./service/person":180,"./service/programMembership":181,"./service/transaction/placeOrder":182,"@cinerino/api-abstract-client":249}],175:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -7098,7 +7109,7 @@ var Service = /** @class */ (function (_super) {
 }(cinerino.service.Service));
 exports.Service = Service;
 
-},{"@cinerino/api-abstract-client":65}],176:[function(require,module,exports){
+},{"@cinerino/api-abstract-client":249}],176:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -7184,7 +7195,7 @@ var AccountService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.AccountService = AccountService;
 
-},{"../service":175,"http-status":240}],177:[function(require,module,exports){
+},{"../service":175,"http-status":407}],177:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -7293,7 +7304,7 @@ var ActionService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.ActionService = ActionService;
 
-},{"../service":175,"http-status":240}],178:[function(require,module,exports){
+},{"../service":175,"http-status":407}],178:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -7376,7 +7387,7 @@ var OrderService = /** @class */ (function (_super) {
 }(api_abstract_client_1.service.Order));
 exports.OrderService = OrderService;
 
-},{"@cinerino/api-abstract-client":65,"http-status":240}],179:[function(require,module,exports){
+},{"@cinerino/api-abstract-client":249,"http-status":407}],179:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -7464,7 +7475,7 @@ var OwnershipInfoService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.OwnershipInfoService = OwnershipInfoService;
 
-},{"../service":175,"http-status":240}],180:[function(require,module,exports){
+},{"../service":175,"http-status":407}],180:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -7574,7 +7585,7 @@ var PersonService = /** @class */ (function (_super) {
 }(api_abstract_client_1.service.Person));
 exports.PersonService = PersonService;
 
-},{"@cinerino/api-abstract-client":65,"http-status":240}],181:[function(require,module,exports){
+},{"@cinerino/api-abstract-client":249,"http-status":407}],181:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -7661,7 +7672,7 @@ var ProgramMembershipService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.ProgramMembershipService = ProgramMembershipService;
 
-},{"../service":175,"http-status":240}],182:[function(require,module,exports){
+},{"../service":175,"http-status":407}],182:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -7676,17 +7687,6 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -7817,70 +7817,6 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
         });
     };
     /**
-     * クレジットカードのオーソリを取得する
-     */
-    // tslint:disable-next-line:no-single-line-block-comment
-    /* istanbul ignore next */
-    PlaceOrderTransactionService.prototype.authorizeCreditCardPayment = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/payment/" + api_abstract_client_1.factory.paymentMethodType.CreditCard + "/authorize",
-                        method: 'POST',
-                        expectedStatusCodes: [http_status_1.CREATED],
-                        body: params
-                    })
-                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
-                        return [2 /*return*/, response.json()];
-                    }); }); })];
-            });
-        });
-    };
-    /**
-     * 口座決済のオーソリを取得する
-     */
-    // tslint:disable-next-line:no-single-line-block-comment
-    /* istanbul ignore next */
-    PlaceOrderTransactionService.prototype.authorizeAccountPayment = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/payment/" + api_abstract_client_1.factory.paymentMethodType.Account + "/authorize",
-                        method: 'POST',
-                        expectedStatusCodes: [http_status_1.CREATED],
-                        body: params
-                    })
-                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
-                        return [2 /*return*/, response.json()];
-                    }); }); })];
-            });
-        });
-    };
-    /**
-     * 決済承認取消
-     */
-    // tslint:disable-next-line:no-single-line-block-comment
-    /* istanbul ignore next */
-    PlaceOrderTransactionService.prototype.voidPayment = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.fetch({
-                            uri: "/payment/" + params.object.typeOf + "/authorize/" + params.id + "/void",
-                            method: 'PUT',
-                            expectedStatusCodes: [http_status_1.NO_CONTENT],
-                            body: params
-                        })];
-                    case 1:
-                        _a.sent();
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    /**
      * ムビチケ決済承認
      */
     PlaceOrderTransactionService.prototype.createMvtkAuthorization = function (params) {
@@ -7988,25 +7924,7 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
                         uri: "/transactions/" + this.typeOf + "/" + params.id + "/confirm",
                         method: 'POST',
                         expectedStatusCodes: [http_status_1.CREATED],
-                        body: __assign({}, params.options)
-                    }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
-                        return [2 /*return*/, response.json()];
-                    }); }); })];
-            });
-        });
-    };
-    /**
-     * 確定した取引に関して、購入者にメール通知を送信する
-     */
-    PlaceOrderTransactionService.prototype.sendEmailNotification = function (params) {
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.fetch({
-                        uri: "/transactions/" + this.typeOf + "/" + params.id + "/tasks/sendEmailNotification",
-                        method: 'POST',
-                        expectedStatusCodes: [http_status_1.CREATED],
-                        body: params.emailMessageAttributes
+                        body: params.options
                     }).then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
                         return [2 /*return*/, response.json()];
                     }); }); })];
@@ -8037,7 +7955,1894 @@ var PlaceOrderTransactionService = /** @class */ (function (_super) {
 }(service_1.Service));
 exports.PlaceOrderTransactionService = PlaceOrderTransactionService;
 
-},{"../../service":175,"@cinerino/api-abstract-client":65,"http-status":240}],183:[function(require,module,exports){
+},{"../../service":175,"@cinerino/api-abstract-client":249,"http-status":407}],183:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],184:[function(require,module,exports){
+arguments[4][4][0].apply(exports,arguments)
+},{"dup":4}],185:[function(require,module,exports){
+arguments[4][5][0].apply(exports,arguments)
+},{"dup":5}],186:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],187:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],188:[function(require,module,exports){
+arguments[4][9][0].apply(exports,arguments)
+},{"dup":9}],189:[function(require,module,exports){
+arguments[4][10][0].apply(exports,arguments)
+},{"dup":10}],190:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],191:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],192:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],193:[function(require,module,exports){
+arguments[4][14][0].apply(exports,arguments)
+},{"dup":14}],194:[function(require,module,exports){
+arguments[4][15][0].apply(exports,arguments)
+},{"../errorCode":193,"./chevre":197,"dup":15,"setprototypeof":423}],195:[function(require,module,exports){
+arguments[4][16][0].apply(exports,arguments)
+},{"../errorCode":193,"./chevre":197,"dup":16,"setprototypeof":423}],196:[function(require,module,exports){
+arguments[4][17][0].apply(exports,arguments)
+},{"../errorCode":193,"./chevre":197,"dup":17,"setprototypeof":423}],197:[function(require,module,exports){
+arguments[4][18][0].apply(exports,arguments)
+},{"dup":18}],198:[function(require,module,exports){
+arguments[4][19][0].apply(exports,arguments)
+},{"../errorCode":193,"./chevre":197,"dup":19,"setprototypeof":423}],199:[function(require,module,exports){
+arguments[4][20][0].apply(exports,arguments)
+},{"../errorCode":193,"./chevre":197,"dup":20,"setprototypeof":423}],200:[function(require,module,exports){
+arguments[4][21][0].apply(exports,arguments)
+},{"../errorCode":193,"./chevre":197,"dup":21,"setprototypeof":423}],201:[function(require,module,exports){
+arguments[4][22][0].apply(exports,arguments)
+},{"../errorCode":193,"./chevre":197,"dup":22,"setprototypeof":423}],202:[function(require,module,exports){
+arguments[4][23][0].apply(exports,arguments)
+},{"../errorCode":193,"./chevre":197,"dup":23,"setprototypeof":423}],203:[function(require,module,exports){
+arguments[4][24][0].apply(exports,arguments)
+},{"../errorCode":193,"./chevre":197,"dup":24,"setprototypeof":423}],204:[function(require,module,exports){
+arguments[4][25][0].apply(exports,arguments)
+},{"./error/alreadyInUse":194,"./error/argument":195,"./error/argumentNull":196,"./error/chevre":197,"./error/forbidden":198,"./error/notFound":199,"./error/notImplemented":200,"./error/rateLimitExceeded":201,"./error/serviceUnavailable":202,"./error/unauthorized":203,"dup":25}],205:[function(require,module,exports){
+arguments[4][26][0].apply(exports,arguments)
+},{"dup":26}],206:[function(require,module,exports){
+arguments[4][27][0].apply(exports,arguments)
+},{"dup":27}],207:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],208:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],209:[function(require,module,exports){
+arguments[4][30][0].apply(exports,arguments)
+},{"dup":30}],210:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],211:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],212:[function(require,module,exports){
+arguments[4][32][0].apply(exports,arguments)
+},{"dup":32}],213:[function(require,module,exports){
+arguments[4][33][0].apply(exports,arguments)
+},{"dup":33}],214:[function(require,module,exports){
+arguments[4][34][0].apply(exports,arguments)
+},{"dup":34}],215:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],216:[function(require,module,exports){
+arguments[4][36][0].apply(exports,arguments)
+},{"dup":36}],217:[function(require,module,exports){
+arguments[4][37][0].apply(exports,arguments)
+},{"dup":37}],218:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],219:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],220:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],221:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],222:[function(require,module,exports){
+arguments[4][40][0].apply(exports,arguments)
+},{"dup":40}],223:[function(require,module,exports){
+arguments[4][41][0].apply(exports,arguments)
+},{"dup":41}],224:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],225:[function(require,module,exports){
+arguments[4][43][0].apply(exports,arguments)
+},{"dup":43}],226:[function(require,module,exports){
+arguments[4][44][0].apply(exports,arguments)
+},{"dup":44}],227:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],228:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],229:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * タスク名
+ */
+var TaskName;
+(function (TaskName) {
+    TaskName["Reserve"] = "reserve";
+    TaskName["CancelReservation"] = "cancelReservation";
+    TaskName["CancelPendingReservation"] = "cancelPendingReservation";
+    TaskName["AggregateScreeningEvent"] = "aggregateScreeningEvent";
+    TaskName["ImportEventsFromCOA"] = "importEventsFromCOA";
+    TaskName["ImportOffersFromCOA"] = "importOffersFromCOA";
+})(TaskName || (TaskName = {}));
+exports.default = TaskName;
+
+},{}],230:[function(require,module,exports){
+arguments[4][48][0].apply(exports,arguments)
+},{"dup":48}],231:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],232:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],233:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],234:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],235:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],236:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],237:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],238:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * 券種カテゴリー
+ */
+var TicketTypeCategory;
+(function (TicketTypeCategory) {
+    /**
+     * 有料券
+     */
+    TicketTypeCategory["Default"] = "1";
+    /**
+     * 前売券
+     */
+    TicketTypeCategory["Advance"] = "2";
+    /**
+     * 無料券
+     */
+    TicketTypeCategory["Free"] = "3";
+})(TicketTypeCategory || (TicketTypeCategory = {}));
+exports.default = TicketTypeCategory;
+
+},{}],239:[function(require,module,exports){
+arguments[4][54][0].apply(exports,arguments)
+},{"dup":54}],240:[function(require,module,exports){
+arguments[4][55][0].apply(exports,arguments)
+},{"dup":55}],241:[function(require,module,exports){
+arguments[4][56][0].apply(exports,arguments)
+},{"dup":56}],242:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],243:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],244:[function(require,module,exports){
+arguments[4][59][0].apply(exports,arguments)
+},{"dup":59}],245:[function(require,module,exports){
+arguments[4][61][0].apply(exports,arguments)
+},{"dup":61}],246:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var CancelReservationActionFactory = require("./factory/action/cancel/reservation");
+var ReserveActionFactory = require("./factory/action/reserve");
+var actionStatusType_1 = require("./factory/actionStatusType");
+var actionType_1 = require("./factory/actionType");
+var AccountTitleFactory = require("./factory/accountTitle");
+var ClientUserFactory = require("./factory/clientUser");
+var EmailMessageFactory = require("./factory/creativeWork/message/email");
+var MovieCreativeWorkFactory = require("./factory/creativeWork/movie");
+var creativeWorkType_1 = require("./factory/creativeWorkType");
+var ScreeningEventFactory = require("./factory/event/screeningEvent");
+var ScreeningEventSeriesFactory = require("./factory/event/screeningEventSeries");
+var eventStatusType_1 = require("./factory/eventStatusType");
+var eventType_1 = require("./factory/eventType");
+var itemAvailability_1 = require("./factory/itemAvailability");
+var LanguageFactory = require("./factory/language");
+var ProductOfferFactory = require("./factory/offer/product");
+var organizationType_1 = require("./factory/organizationType");
+var paymentMethodType_1 = require("./factory/paymentMethodType");
+var MovieTheaterPlaceFactory = require("./factory/place/movieTheater");
+var placeType_1 = require("./factory/placeType");
+var priceCurrency_1 = require("./factory/priceCurrency");
+var priceSpecificationType_1 = require("./factory/priceSpecificationType");
+var project = require("./factory/project");
+var PropertyValueFactory = require("./factory/propertyValue");
+var SeatingTypeFactory = require("./factory/qualitativeValue/seatingType");
+var QuantitativeValueFactory = require("./factory/quantitativeValue");
+var reservationStatusType_1 = require("./factory/reservationStatusType");
+var reservationType_1 = require("./factory/reservationType");
+var ServiceTypeFactory = require("./factory/serviceType");
+var sortType_1 = require("./factory/sortType");
+var soundFormatType_1 = require("./factory/soundFormatType");
+var TicketTypeFactory = require("./factory/ticketType");
+var ticketTypeCategory_1 = require("./factory/ticketTypeCategory");
+var unitCode_1 = require("./factory/unitCode");
+var videoFormatType_1 = require("./factory/videoFormatType");
+var AggregateScreeningEventTaskFactory = require("./factory/task/aggregateScreeningEvent");
+var CancelPendingReservationTaskFactory = require("./factory/task/cancelPendingReservation");
+var CancelReservationTaskFactory = require("./factory/task/cancelReservation");
+var ImportEventsFromCOATaskFactory = require("./factory/task/importEventsFromCOA");
+var ImportOffersFromCOATaskFactory = require("./factory/task/importOffersFromCOA");
+var ReserveTaskFactory = require("./factory/task/reserve");
+var TaskExecutionResultFactory = require("./factory/taskExecutionResult");
+var taskName_1 = require("./factory/taskName");
+var taskStatus_1 = require("./factory/taskStatus");
+var CancelReservationTransactionFactory = require("./factory/transaction/cancelReservation");
+var ReserveTransactionFactory = require("./factory/transaction/reserve");
+var transactionStatusType_1 = require("./factory/transactionStatusType");
+var transactionTasksExportationStatus_1 = require("./factory/transactionTasksExportationStatus");
+var transactionType_1 = require("./factory/transactionType");
+var errorCode_1 = require("./factory/errorCode");
+var errors = require("./factory/errors");
+exports.errors = errors;
+exports.errorCode = errorCode_1.default;
+exports.actionStatusType = actionStatusType_1.default;
+exports.actionType = actionType_1.default;
+var action;
+(function (action) {
+    var authorize;
+    (function (authorize) {
+    })(authorize = action.authorize || (action.authorize = {}));
+    var cancel;
+    (function (cancel) {
+        // tslint:disable-next-line:no-shadowed-variable
+        cancel.reservation = CancelReservationActionFactory;
+    })(cancel = action.cancel || (action.cancel = {}));
+    action.reserve = ReserveActionFactory;
+})(action = exports.action || (exports.action = {}));
+exports.accountTitle = AccountTitleFactory;
+exports.clientUser = ClientUserFactory;
+var creativeWork;
+(function (creativeWork) {
+    var message;
+    (function (message) {
+        message.email = EmailMessageFactory;
+    })(message = creativeWork.message || (creativeWork.message = {}));
+    creativeWork.movie = MovieCreativeWorkFactory;
+})(creativeWork = exports.creativeWork || (exports.creativeWork = {}));
+exports.creativeWorkType = creativeWorkType_1.default;
+var event;
+(function (event) {
+    event.screeningEvent = ScreeningEventFactory;
+    event.screeningEventSeries = ScreeningEventSeriesFactory;
+})(event = exports.event || (exports.event = {}));
+exports.eventStatusType = eventStatusType_1.default;
+exports.eventType = eventType_1.default;
+exports.itemAvailability = itemAvailability_1.default;
+exports.language = LanguageFactory;
+var offer;
+(function (offer) {
+    offer.product = ProductOfferFactory;
+})(offer = exports.offer || (exports.offer = {}));
+exports.organizationType = organizationType_1.default;
+exports.paymentMethodType = paymentMethodType_1.default;
+exports.priceCurrency = priceCurrency_1.default;
+var place;
+(function (place) {
+    place.movieTheater = MovieTheaterPlaceFactory;
+})(place = exports.place || (exports.place = {}));
+exports.placeType = placeType_1.default;
+exports.priceSpecificationType = priceSpecificationType_1.default;
+exports.project = project;
+exports.propertyValue = PropertyValueFactory;
+var qualitativeValue;
+(function (qualitativeValue) {
+    qualitativeValue.seatingType = SeatingTypeFactory;
+})(qualitativeValue = exports.qualitativeValue || (exports.qualitativeValue = {}));
+exports.quantitativeValue = QuantitativeValueFactory;
+exports.reservationStatusType = reservationStatusType_1.default;
+exports.reservationType = reservationType_1.default;
+var task;
+(function (task) {
+    task.aggregateScreeningEvent = AggregateScreeningEventTaskFactory;
+    task.cancelPendingReservation = CancelPendingReservationTaskFactory;
+    task.cancelReservation = CancelReservationTaskFactory;
+    task.importEventsFromCOA = ImportEventsFromCOATaskFactory;
+    task.importOffersFromCOA = ImportOffersFromCOATaskFactory;
+    task.reserve = ReserveTaskFactory;
+})(task = exports.task || (exports.task = {}));
+exports.serviceType = ServiceTypeFactory;
+exports.sortType = sortType_1.default;
+exports.soundFormatType = soundFormatType_1.default;
+exports.taskExecutionResult = TaskExecutionResultFactory;
+exports.taskName = taskName_1.default;
+exports.taskStatus = taskStatus_1.default;
+var transaction;
+(function (transaction) {
+    transaction.cancelReservation = CancelReservationTransactionFactory;
+    transaction.reserve = ReserveTransactionFactory;
+})(transaction = exports.transaction || (exports.transaction = {}));
+exports.ticketType = TicketTypeFactory;
+exports.ticketTypeCategory = ticketTypeCategory_1.default;
+exports.transactionStatusType = transactionStatusType_1.default;
+exports.transactionTasksExportationStatus = transactionTasksExportationStatus_1.default;
+exports.transactionType = transactionType_1.default;
+exports.unitCode = unitCode_1.UnitCode;
+exports.videoFormatType = videoFormatType_1.default;
+var DistributorFactory = require("./factory/distributor");
+var SubjectFactory = require("./factory/subject");
+/**
+ * @deprecated 東映ローカライズなのでそのうち廃止
+ */
+exports.distributor = DistributorFactory;
+/**
+ * @deprecated 東映ローカライズなのでそのうち廃止
+ */
+exports.subject = SubjectFactory;
+
+},{"./factory/accountTitle":183,"./factory/action/cancel/reservation":186,"./factory/action/reserve":187,"./factory/actionStatusType":184,"./factory/actionType":185,"./factory/clientUser":188,"./factory/creativeWork/message/email":190,"./factory/creativeWork/movie":191,"./factory/creativeWorkType":189,"./factory/distributor":192,"./factory/errorCode":193,"./factory/errors":204,"./factory/event/screeningEvent":207,"./factory/event/screeningEventSeries":208,"./factory/eventStatusType":205,"./factory/eventType":206,"./factory/itemAvailability":209,"./factory/language":210,"./factory/offer/product":211,"./factory/organizationType":212,"./factory/paymentMethodType":213,"./factory/place/movieTheater":215,"./factory/placeType":214,"./factory/priceCurrency":216,"./factory/priceSpecificationType":217,"./factory/project":218,"./factory/propertyValue":219,"./factory/qualitativeValue/seatingType":220,"./factory/quantitativeValue":221,"./factory/reservationStatusType":222,"./factory/reservationType":223,"./factory/serviceType":224,"./factory/sortType":225,"./factory/soundFormatType":226,"./factory/subject":227,"./factory/task/aggregateScreeningEvent":231,"./factory/task/cancelPendingReservation":232,"./factory/task/cancelReservation":233,"./factory/task/importEventsFromCOA":234,"./factory/task/importOffersFromCOA":235,"./factory/task/reserve":236,"./factory/taskExecutionResult":228,"./factory/taskName":229,"./factory/taskStatus":230,"./factory/ticketType":237,"./factory/ticketTypeCategory":238,"./factory/transaction/cancelReservation":242,"./factory/transaction/reserve":243,"./factory/transactionStatusType":239,"./factory/transactionTasksExportationStatus":240,"./factory/transactionType":241,"./factory/unitCode":244,"./factory/videoFormatType":245}],247:[function(require,module,exports){
+arguments[4][63][0].apply(exports,arguments)
+},{"../transporters":270,"dup":63}],248:[function(require,module,exports){
+arguments[4][64][0].apply(exports,arguments)
+},{"@cinerino/factory":349,"dup":64}],249:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable:max-classes-per-file
+/**
+ * API Service Library for Javascript
+ */
+var factory = require("./factory");
+var ServiceFactory = require("./service");
+var authClient_1 = require("./auth/authClient");
+var creativeWork_1 = require("./service/creativeWork");
+var delivery_1 = require("./service/delivery");
+var event_1 = require("./service/event");
+var iam_1 = require("./service/iam");
+var invoice_1 = require("./service/invoice");
+var order_1 = require("./service/order");
+var organization_1 = require("./service/organization");
+var ownershipInfo_1 = require("./service/ownershipInfo");
+var payment_1 = require("./service/payment");
+var paymentMethod_1 = require("./service/paymentMethod");
+var person_1 = require("./service/person");
+var ownershipInfo_2 = require("./service/person/ownershipInfo");
+var reservation_1 = require("./service/reservation");
+var seller_1 = require("./service/seller");
+var task_1 = require("./service/task");
+var moneyTransfer_1 = require("./service/transaction/moneyTransfer");
+var placeOrder_1 = require("./service/transaction/placeOrder");
+var returnOrder_1 = require("./service/transaction/returnOrder");
+var userPool_1 = require("./service/userPool");
+var transporters = require("./transporters");
+exports.factory = factory;
+exports.transporters = transporters;
+/**
+ * 認証クライアント抽象クラス
+ */
+var Auth = /** @class */ (function (_super) {
+    __extends(Auth, _super);
+    function Auth() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return Auth;
+}(authClient_1.AuthClient));
+exports.Auth = Auth;
+var auth;
+(function (auth) {
+    /**
+     * 抽象認証クライアント
+     */
+    // tslint:disable-next-line:no-shadowed-variable
+    var Auth = /** @class */ (function (_super) {
+        __extends(Auth, _super);
+        function Auth() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Auth;
+    }(authClient_1.AuthClient));
+    auth.Auth = Auth;
+    /**
+     * スタブ認証クライアント
+     */
+    var StubAuth = /** @class */ (function (_super) {
+        __extends(StubAuth, _super);
+        function StubAuth() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return StubAuth;
+    }(authClient_1.StubAuthClient));
+    auth.StubAuth = StubAuth;
+})(auth = exports.auth || (exports.auth = {}));
+/**
+ * サービスモジュール
+ */
+var service;
+(function (service) {
+    /**
+     * Baseサービス
+     */
+    var Service = /** @class */ (function (_super) {
+        __extends(Service, _super);
+        function Service() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Service;
+    }(ServiceFactory.Service));
+    service.Service = Service;
+    /**
+     * 作品サービス
+     */
+    var CreativeWork = /** @class */ (function (_super) {
+        __extends(CreativeWork, _super);
+        function CreativeWork() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return CreativeWork;
+    }(creativeWork_1.CreativeWorkService));
+    service.CreativeWork = CreativeWork;
+    /**
+     * 配送サービス
+     */
+    var Delivery = /** @class */ (function (_super) {
+        __extends(Delivery, _super);
+        function Delivery() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Delivery;
+    }(delivery_1.DeliveryService));
+    service.Delivery = Delivery;
+    /**
+     * イベントサービス
+     */
+    var Event = /** @class */ (function (_super) {
+        __extends(Event, _super);
+        function Event() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Event;
+    }(event_1.EventService));
+    service.Event = Event;
+    /**
+     * IAMサービス
+     */
+    var IAM = /** @class */ (function (_super) {
+        __extends(IAM, _super);
+        function IAM() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return IAM;
+    }(iam_1.IAMService));
+    service.IAM = IAM;
+    /**
+     * インボイスサービス
+     */
+    var Invoice = /** @class */ (function (_super) {
+        __extends(Invoice, _super);
+        function Invoice() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Invoice;
+    }(invoice_1.InvoiceService));
+    service.Invoice = Invoice;
+    /**
+     * 注文サービス
+     */
+    var Order = /** @class */ (function (_super) {
+        __extends(Order, _super);
+        function Order() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Order;
+    }(order_1.OrderService));
+    service.Order = Order;
+    /**
+     * 組織サービス
+     * @deprecated Use service.Seller. 販売者サービスを使用してください
+     */
+    var Organization = /** @class */ (function (_super) {
+        __extends(Organization, _super);
+        function Organization() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Organization;
+    }(organization_1.OrganizationService));
+    service.Organization = Organization;
+    /**
+     * 所有権サービス
+     */
+    var OwnershipInfo = /** @class */ (function (_super) {
+        __extends(OwnershipInfo, _super);
+        function OwnershipInfo() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return OwnershipInfo;
+    }(ownershipInfo_1.OwnershipInfoService));
+    service.OwnershipInfo = OwnershipInfo;
+    /**
+     * 決済サービス
+     */
+    var Payment = /** @class */ (function (_super) {
+        __extends(Payment, _super);
+        function Payment() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Payment;
+    }(payment_1.PaymentService));
+    service.Payment = Payment;
+    /**
+     * 決済方法サービス
+     */
+    var PaymentMethod = /** @class */ (function (_super) {
+        __extends(PaymentMethod, _super);
+        function PaymentMethod() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return PaymentMethod;
+    }(paymentMethod_1.PaymentMethodService));
+    service.PaymentMethod = PaymentMethod;
+    /**
+     * ユーザーサービス
+     */
+    var Person = /** @class */ (function (_super) {
+        __extends(Person, _super);
+        function Person() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Person;
+    }(person_1.PersonService));
+    service.Person = Person;
+    var person;
+    (function (person) {
+        /**
+         * ユーザー所有権サービス
+         */
+        // tslint:disable-next-line:no-shadowed-variable
+        var OwnershipInfo = /** @class */ (function (_super) {
+            __extends(OwnershipInfo, _super);
+            function OwnershipInfo() {
+                return _super !== null && _super.apply(this, arguments) || this;
+            }
+            return OwnershipInfo;
+        }(ownershipInfo_2.PersonOwnershipInfoService));
+        person.OwnershipInfo = OwnershipInfo;
+    })(person = service.person || (service.person = {}));
+    /**
+     * 予約サービス
+     */
+    var Reservation = /** @class */ (function (_super) {
+        __extends(Reservation, _super);
+        function Reservation() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Reservation;
+    }(reservation_1.ReservationService));
+    service.Reservation = Reservation;
+    /**
+     * 販売者サービス
+     */
+    var Seller = /** @class */ (function (_super) {
+        __extends(Seller, _super);
+        function Seller() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Seller;
+    }(seller_1.SellerService));
+    service.Seller = Seller;
+    /**
+     * タスクサービス
+     */
+    var Task = /** @class */ (function (_super) {
+        __extends(Task, _super);
+        function Task() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Task;
+    }(task_1.TaskService));
+    service.Task = Task;
+    /**
+     * 取引サービス
+     */
+    var transaction;
+    (function (transaction) {
+        /**
+         * 通貨転送取引サービス
+         */
+        var MoneyTransfer = /** @class */ (function (_super) {
+            __extends(MoneyTransfer, _super);
+            function MoneyTransfer() {
+                return _super !== null && _super.apply(this, arguments) || this;
+            }
+            return MoneyTransfer;
+        }(moneyTransfer_1.MoneyTransferTransactionService));
+        transaction.MoneyTransfer = MoneyTransfer;
+        /**
+         * 注文取引サービス
+         */
+        var PlaceOrder = /** @class */ (function (_super) {
+            __extends(PlaceOrder, _super);
+            function PlaceOrder() {
+                return _super !== null && _super.apply(this, arguments) || this;
+            }
+            return PlaceOrder;
+        }(placeOrder_1.PlaceOrderTransactionService));
+        transaction.PlaceOrder = PlaceOrder;
+        /**
+         * 注文返品取引サービス
+         */
+        var ReturnOrder = /** @class */ (function (_super) {
+            __extends(ReturnOrder, _super);
+            function ReturnOrder() {
+                return _super !== null && _super.apply(this, arguments) || this;
+            }
+            return ReturnOrder;
+        }(returnOrder_1.ReturnOrderTransactionService));
+        transaction.ReturnOrder = ReturnOrder;
+    })(transaction = service.transaction || (service.transaction = {}));
+    /**
+     * 取引サービス
+     * @alias service.transaction
+     */
+    service.txn = transaction;
+    /**
+     * Cognitoユーザープールサービス
+     */
+    var UserPool = /** @class */ (function (_super) {
+        __extends(UserPool, _super);
+        function UserPool() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return UserPool;
+    }(userPool_1.UserPoolService));
+    service.UserPool = UserPool;
+})(service = exports.service || (exports.service = {}));
+
+},{"./auth/authClient":247,"./factory":248,"./service":250,"./service/creativeWork":251,"./service/delivery":252,"./service/event":253,"./service/iam":254,"./service/invoice":255,"./service/order":256,"./service/organization":257,"./service/ownershipInfo":258,"./service/payment":259,"./service/paymentMethod":260,"./service/person":261,"./service/person/ownershipInfo":262,"./service/reservation":263,"./service/seller":264,"./service/task":265,"./service/transaction/moneyTransfer":266,"./service/transaction/placeOrder":267,"./service/transaction/returnOrder":268,"./service/userPool":269,"./transporters":270}],250:[function(require,module,exports){
+arguments[4][66][0].apply(exports,arguments)
+},{"./transporters":270,"dup":66,"qs":419}],251:[function(require,module,exports){
+arguments[4][67][0].apply(exports,arguments)
+},{"../service":250,"dup":67,"http-status":407}],252:[function(require,module,exports){
+arguments[4][68][0].apply(exports,arguments)
+},{"../service":250,"dup":68,"http-status":407}],253:[function(require,module,exports){
+arguments[4][69][0].apply(exports,arguments)
+},{"../service":250,"dup":69,"http-status":407}],254:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../service");
+/**
+ * IAMサービス
+ */
+var IAMService = /** @class */ (function (_super) {
+    __extends(IAMService, _super);
+    function IAMService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * ユーザー検索
+     */
+    IAMService.prototype.searchUsers = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/iam/users',
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () {
+                        var _a;
+                        return __generator(this, function (_b) {
+                            switch (_b.label) {
+                                case 0:
+                                    _a = {
+                                        totalCount: Number(response.headers.get('X-Total-Count'))
+                                    };
+                                    return [4 /*yield*/, response.json()];
+                                case 1: return [2 /*return*/, (_a.data = _b.sent(),
+                                        _a)];
+                            }
+                        });
+                    }); })];
+            });
+        });
+    };
+    /**
+     * ユーザー取得
+     */
+    IAMService.prototype.findUserById = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/iam/users/" + params.id,
+                        method: 'GET',
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    return IAMService;
+}(service_1.Service));
+exports.IAMService = IAMService;
+
+},{"../service":250,"http-status":407}],255:[function(require,module,exports){
+arguments[4][70][0].apply(exports,arguments)
+},{"../service":250,"dup":70,"http-status":407}],256:[function(require,module,exports){
+arguments[4][71][0].apply(exports,arguments)
+},{"../service":250,"dup":71,"http-status":407}],257:[function(require,module,exports){
+arguments[4][72][0].apply(exports,arguments)
+},{"../service":250,"dup":72,"http-status":407}],258:[function(require,module,exports){
+arguments[4][73][0].apply(exports,arguments)
+},{"../service":250,"dup":73,"http-status":407}],259:[function(require,module,exports){
+arguments[4][74][0].apply(exports,arguments)
+},{"../factory":248,"../service":250,"dup":74,"http-status":407}],260:[function(require,module,exports){
+arguments[4][75][0].apply(exports,arguments)
+},{"../service":250,"dup":75,"http-status":407}],261:[function(require,module,exports){
+arguments[4][76][0].apply(exports,arguments)
+},{"../service":250,"dup":76,"http-status":407}],262:[function(require,module,exports){
+arguments[4][77][0].apply(exports,arguments)
+},{"../../service":250,"dup":77,"http-status":407}],263:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var service_1 = require("../service");
+/**
+ * 予約サービス
+ */
+var ReservationService = /** @class */ (function (_super) {
+    __extends(ReservationService, _super);
+    function ReservationService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    /**
+     * 予約検索
+     */
+    ReservationService.prototype.search = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/reservations',
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () {
+                        var _a;
+                        return __generator(this, function (_b) {
+                            switch (_b.label) {
+                                case 0:
+                                    _a = {
+                                        totalCount: Number(response.headers.get('X-Total-Count'))
+                                    };
+                                    return [4 /*yield*/, response.json()];
+                                case 1: return [2 /*return*/, (_a.data = _b.sent(),
+                                        _a)];
+                            }
+                        });
+                    }); })];
+            });
+        });
+    };
+    /**
+     * トークンで予約照会
+     */
+    ReservationService.prototype.findScreeningEventReservationByToken = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/reservations/eventReservation/screeningEvent/findByToken",
+                        method: 'POST',
+                        body: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    return ReservationService;
+}(service_1.Service));
+exports.ReservationService = ReservationService;
+
+},{"../service":250,"http-status":407}],264:[function(require,module,exports){
+arguments[4][79][0].apply(exports,arguments)
+},{"../service":250,"dup":79,"http-status":407}],265:[function(require,module,exports){
+arguments[4][80][0].apply(exports,arguments)
+},{"../service":250,"dup":80,"http-status":407}],266:[function(require,module,exports){
+arguments[4][81][0].apply(exports,arguments)
+},{"../../factory":248,"../../service":250,"dup":81,"http-status":407}],267:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var factory = require("../../factory");
+var service_1 = require("../../service");
+/**
+ * 注文取引サービス
+ */
+var PlaceOrderTransactionService = /** @class */ (function (_super) {
+    __extends(PlaceOrderTransactionService, _super);
+    function PlaceOrderTransactionService() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.typeOf = factory.transactionType.PlaceOrder;
+        return _this;
+    }
+    /**
+     * 取引を開始する
+     */
+    PlaceOrderTransactionService.prototype.start = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/" + this.typeOf + "/start",
+                        method: 'POST',
+                        body: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 座席予約承認作成
+     */
+    PlaceOrderTransactionService.prototype.authorizeSeatReservation = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/" + this.typeOf + "/" + params.purpose.id + "/actions/authorize/offer/seatReservation",
+                        method: 'POST',
+                        expectedStatusCodes: [http_status_1.CREATED],
+                        body: params.object
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 座席予約承認取消
+     */
+    PlaceOrderTransactionService.prototype.voidSeatReservation = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.fetch({
+                            uri: "/transactions/" + this.typeOf + "/" + params.purpose.id + "/actions/authorize/offer/seatReservation/" + params.id + "/cancel",
+                            method: 'PUT',
+                            expectedStatusCodes: [http_status_1.NO_CONTENT]
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * 汎用決済承認
+     * @deprecated Use service.Payment
+     */
+    PlaceOrderTransactionService.prototype.authorizeAnyPayment = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/" + this.typeOf + "/" + params.purpose.id + "/actions/authorize/paymentMethod/any",
+                        method: 'POST',
+                        expectedStatusCodes: [http_status_1.CREATED],
+                        body: params.object
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 汎用決済承認取消
+     * @deprecated Use service.Payment
+     */
+    PlaceOrderTransactionService.prototype.voidAnyPayment = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.fetch({
+                            uri: "/transactions/" + this.typeOf + "/" + params.purpose.id + "/actions/authorize/paymentMethod/any/" + params.id + "/cancel",
+                            method: 'PUT',
+                            expectedStatusCodes: [http_status_1.NO_CONTENT]
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * クレジットカードのオーソリを取得する
+     * @deprecated Use service.Payment
+     */
+    PlaceOrderTransactionService.prototype.authorizeCreditCardPayment = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/" + this.typeOf + "/" + params.purpose.id + "/actions/authorize/paymentMethod/creditCard",
+                        method: 'POST',
+                        expectedStatusCodes: [http_status_1.CREATED],
+                        body: params.object
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 口座決済のオーソリを取得する
+     * @deprecated Use service.Payment
+     */
+    PlaceOrderTransactionService.prototype.authorizeAccountPayment = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/" + this.typeOf + "/" + params.purpose.id + "/actions/authorize/paymentMethod/account",
+                        method: 'POST',
+                        expectedStatusCodes: [http_status_1.CREATED],
+                        body: params.object
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * ムビチケ承認
+     * @deprecated Use service.Payment
+     */
+    PlaceOrderTransactionService.prototype.authorizeMovieTicketPayment = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/" + this.typeOf + "/" + params.purpose.id + "/actions/authorize/paymentMethod/movieTicket",
+                        method: 'POST',
+                        expectedStatusCodes: [http_status_1.CREATED],
+                        body: params.object
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 決済承認取消
+     * @deprecated Use service.Payment
+     */
+    PlaceOrderTransactionService.prototype.voidPayment = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.fetch({
+                            // tslint:disable-next-line:max-line-length
+                            uri: "/transactions/" + this.typeOf + "/" + params.purpose.id + "/actions/authorize/paymentMethod/" + params.object.typeOf + "/" + params.id + "/cancel",
+                            method: 'PUT',
+                            expectedStatusCodes: [http_status_1.NO_CONTENT]
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * ポイントインセンティブのオーソリを取得する
+     */
+    PlaceOrderTransactionService.prototype.authorizePointAward = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/" + this.typeOf + "/" + params.purpose.id + "/actions/authorize/award/accounts/point",
+                        method: 'POST',
+                        expectedStatusCodes: [http_status_1.CREATED],
+                        body: params.object
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * ポイントインセンティブオーソリ取消
+     */
+    PlaceOrderTransactionService.prototype.voidPointAward = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.fetch({
+                            uri: "/transactions/" + this.typeOf + "/" + params.purpose.id + "/actions/authorize/award/accounts/point/" + params.id + "/cancel",
+                            method: 'PUT',
+                            expectedStatusCodes: [http_status_1.NO_CONTENT]
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * 購入者連絡先登録
+     */
+    PlaceOrderTransactionService.prototype.setCustomerContact = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/" + this.typeOf + "/" + params.id + "/customerContact",
+                        method: 'PUT',
+                        expectedStatusCodes: [http_status_1.OK],
+                        body: params.object.customerContact
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 取引確定
+     */
+    PlaceOrderTransactionService.prototype.confirm = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/" + this.typeOf + "/" + params.id + "/confirm",
+                        method: 'PUT',
+                        expectedStatusCodes: [http_status_1.OK],
+                        body: params.options
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 明示的に取引を中止する
+     * 既に確定済、あるいは、期限切れの取引に対して実行するとArgumentエラーが返されます。
+     */
+    PlaceOrderTransactionService.prototype.cancel = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.fetch({
+                            uri: "/transactions/" + this.typeOf + "/" + params.id + "/cancel",
+                            method: 'PUT',
+                            expectedStatusCodes: [http_status_1.NO_CONTENT]
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * 取引検索
+     */
+    PlaceOrderTransactionService.prototype.search = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/" + this.typeOf,
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () {
+                        var _a;
+                        return __generator(this, function (_b) {
+                            switch (_b.label) {
+                                case 0:
+                                    _a = {
+                                        totalCount: Number(response.headers.get('X-Total-Count'))
+                                    };
+                                    return [4 /*yield*/, response.json()];
+                                case 1: return [2 /*return*/, (_a.data = _b.sent(),
+                                        _a)];
+                            }
+                        });
+                    }); })];
+            });
+        });
+    };
+    /**
+     * 取引に対するアクションを検索する
+     */
+    PlaceOrderTransactionService.prototype.searchActionsByTransactionId = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/" + this.typeOf + "/" + params.id + "/actions",
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * ストリーミングダウンロード
+     */
+    PlaceOrderTransactionService.prototype.stream = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/" + this.typeOf + "/report",
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.body];
+                    }); }); })];
+            });
+        });
+    };
+    return PlaceOrderTransactionService;
+}(service_1.Service));
+exports.PlaceOrderTransactionService = PlaceOrderTransactionService;
+
+},{"../../factory":248,"../../service":250,"http-status":407}],268:[function(require,module,exports){
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var http_status_1 = require("http-status");
+var factory = require("../../factory");
+var service_1 = require("../../service");
+/**
+ * 注文返品取引サービス
+ */
+var ReturnOrderTransactionService = /** @class */ (function (_super) {
+    __extends(ReturnOrderTransactionService, _super);
+    function ReturnOrderTransactionService() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.typeOf = factory.transactionType.ReturnOrder;
+        return _this;
+    }
+    /**
+     * 取引を開始する
+     */
+    ReturnOrderTransactionService.prototype.start = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: "/transactions/" + this.typeOf + "/start",
+                        method: 'POST',
+                        body: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () { return __generator(this, function (_a) {
+                        return [2 /*return*/, response.json()];
+                    }); }); })];
+            });
+        });
+    };
+    /**
+     * 取引確定
+     */
+    ReturnOrderTransactionService.prototype.confirm = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.fetch({
+                            uri: "/transactions/" + this.typeOf + "/" + params.id + "/confirm",
+                            method: 'PUT',
+                            body: params,
+                            expectedStatusCodes: [http_status_1.NO_CONTENT]
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * 取引検索
+     */
+    ReturnOrderTransactionService.prototype.search = function (params) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                return [2 /*return*/, this.fetch({
+                        uri: '/transactions/returnOrder',
+                        method: 'GET',
+                        qs: params,
+                        expectedStatusCodes: [http_status_1.OK]
+                    })
+                        .then(function (response) { return __awaiter(_this, void 0, void 0, function () {
+                        var _a;
+                        return __generator(this, function (_b) {
+                            switch (_b.label) {
+                                case 0:
+                                    _a = {
+                                        totalCount: Number(response.headers.get('X-Total-Count'))
+                                    };
+                                    return [4 /*yield*/, response.json()];
+                                case 1: return [2 /*return*/, (_a.data = _b.sent(),
+                                        _a)];
+                            }
+                        });
+                    }); })];
+            });
+        });
+    };
+    return ReturnOrderTransactionService;
+}(service_1.Service));
+exports.ReturnOrderTransactionService = ReturnOrderTransactionService;
+
+},{"../../factory":248,"../../service":250,"http-status":407}],269:[function(require,module,exports){
+arguments[4][84][0].apply(exports,arguments)
+},{"../service":250,"dup":84,"http-status":407}],270:[function(require,module,exports){
+arguments[4][85][0].apply(exports,arguments)
+},{"debug":405,"dup":85,"isomorphic-fetch":415}],271:[function(require,module,exports){
+arguments[4][96][0].apply(exports,arguments)
+},{"@chevre/factory":246,"dup":96}],272:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],273:[function(require,module,exports){
+arguments[4][98][0].apply(exports,arguments)
+},{"dup":98}],274:[function(require,module,exports){
+arguments[4][4][0].apply(exports,arguments)
+},{"dup":4}],275:[function(require,module,exports){
+arguments[4][100][0].apply(exports,arguments)
+},{"dup":100}],276:[function(require,module,exports){
+arguments[4][101][0].apply(exports,arguments)
+},{"dup":101}],277:[function(require,module,exports){
+arguments[4][102][0].apply(exports,arguments)
+},{"dup":102}],278:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],279:[function(require,module,exports){
+arguments[4][104][0].apply(exports,arguments)
+},{"dup":104}],280:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],281:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],282:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],283:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],284:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],285:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],286:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],287:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],288:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],289:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],290:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],291:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],292:[function(require,module,exports){
+arguments[4][117][0].apply(exports,arguments)
+},{"../../authorize/award/point":276,"dup":117}],293:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],294:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],295:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],296:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],297:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],298:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],299:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],300:[function(require,module,exports){
+arguments[4][10][0].apply(exports,arguments)
+},{"dup":10}],301:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],302:[function(require,module,exports){
+"use strict";
+/**
+ * Media type typically expressed using a MIME format
+ * @see http://www.iana.org/assignments/media-types/media-types.xhtml
+ * @see https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+var Application;
+(function (Application) {
+    Application["pdf"] = "application/pdf";
+    Application["json"] = "application/json";
+})(Application = exports.Application || (exports.Application = {}));
+var Audio;
+(function (Audio) {
+})(Audio = exports.Audio || (exports.Audio = {}));
+var Font;
+(function (Font) {
+})(Font = exports.Font || (exports.Font = {}));
+var Example;
+(function (Example) {
+})(Example = exports.Example || (exports.Example = {}));
+var Image;
+(function (Image) {
+})(Image = exports.Image || (exports.Image = {}));
+var Message;
+(function (Message) {
+})(Message = exports.Message || (exports.Message = {}));
+var Model;
+(function (Model) {
+})(Model = exports.Model || (exports.Model = {}));
+var Multipart;
+(function (Multipart) {
+})(Multipart = exports.Multipart || (exports.Multipart = {}));
+var Text;
+(function (Text) {
+    Text["csv"] = "text/csv";
+})(Text = exports.Text || (exports.Text = {}));
+var Video;
+(function (Video) {
+})(Video = exports.Video || (exports.Video = {}));
+
+},{}],303:[function(require,module,exports){
+arguments[4][14][0].apply(exports,arguments)
+},{"dup":14}],304:[function(require,module,exports){
+arguments[4][129][0].apply(exports,arguments)
+},{"../errorCode":303,"./common":307,"dup":129,"setprototypeof":423}],305:[function(require,module,exports){
+arguments[4][130][0].apply(exports,arguments)
+},{"../errorCode":303,"./common":307,"dup":130,"setprototypeof":423}],306:[function(require,module,exports){
+arguments[4][131][0].apply(exports,arguments)
+},{"../errorCode":303,"./common":307,"dup":131,"setprototypeof":423}],307:[function(require,module,exports){
+arguments[4][132][0].apply(exports,arguments)
+},{"dup":132}],308:[function(require,module,exports){
+arguments[4][133][0].apply(exports,arguments)
+},{"../errorCode":303,"./common":307,"dup":133,"setprototypeof":423}],309:[function(require,module,exports){
+arguments[4][134][0].apply(exports,arguments)
+},{"../errorCode":303,"./common":307,"dup":134,"setprototypeof":423}],310:[function(require,module,exports){
+arguments[4][135][0].apply(exports,arguments)
+},{"../errorCode":303,"./common":307,"dup":135,"setprototypeof":423}],311:[function(require,module,exports){
+arguments[4][136][0].apply(exports,arguments)
+},{"../errorCode":303,"./common":307,"dup":136,"setprototypeof":423}],312:[function(require,module,exports){
+arguments[4][137][0].apply(exports,arguments)
+},{"../errorCode":303,"./common":307,"dup":137,"setprototypeof":423}],313:[function(require,module,exports){
+arguments[4][138][0].apply(exports,arguments)
+},{"../errorCode":303,"./common":307,"dup":138,"setprototypeof":423}],314:[function(require,module,exports){
+arguments[4][139][0].apply(exports,arguments)
+},{"./error/alreadyInUse":304,"./error/argument":305,"./error/argumentNull":306,"./error/common":307,"./error/forbidden":308,"./error/notFound":309,"./error/notImplemented":310,"./error/rateLimitExceeded":311,"./error/serviceUnavailable":312,"./error/unauthorized":313,"dup":139}],315:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],316:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],317:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],318:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],319:[function(require,module,exports){
+arguments[4][144][0].apply(exports,arguments)
+},{"./offer/seatReservation":320,"dup":144}],320:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],321:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],322:[function(require,module,exports){
+arguments[4][147][0].apply(exports,arguments)
+},{"dup":147}],323:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],324:[function(require,module,exports){
+arguments[4][149][0].apply(exports,arguments)
+},{"dup":149}],325:[function(require,module,exports){
+arguments[4][150][0].apply(exports,arguments)
+},{"dup":150}],326:[function(require,module,exports){
+arguments[4][151][0].apply(exports,arguments)
+},{"../chevre":271,"dup":151}],327:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],328:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],329:[function(require,module,exports){
+arguments[4][154][0].apply(exports,arguments)
+},{"dup":154}],330:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],331:[function(require,module,exports){
+arguments[4][156][0].apply(exports,arguments)
+},{"dup":156}],332:[function(require,module,exports){
+arguments[4][157][0].apply(exports,arguments)
+},{"dup":157}],333:[function(require,module,exports){
+arguments[4][36][0].apply(exports,arguments)
+},{"dup":36}],334:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],335:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],336:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],337:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],338:[function(require,module,exports){
+arguments[4][162][0].apply(exports,arguments)
+},{"dup":162}],339:[function(require,module,exports){
+arguments[4][43][0].apply(exports,arguments)
+},{"dup":43}],340:[function(require,module,exports){
+arguments[4][164][0].apply(exports,arguments)
+},{"dup":164}],341:[function(require,module,exports){
+arguments[4][165][0].apply(exports,arguments)
+},{"dup":165}],342:[function(require,module,exports){
+arguments[4][54][0].apply(exports,arguments)
+},{"dup":54}],343:[function(require,module,exports){
+arguments[4][55][0].apply(exports,arguments)
+},{"dup":55}],344:[function(require,module,exports){
+arguments[4][168][0].apply(exports,arguments)
+},{"dup":168}],345:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],346:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],347:[function(require,module,exports){
+arguments[4][171][0].apply(exports,arguments)
+},{"dup":171}],348:[function(require,module,exports){
+arguments[4][59][0].apply(exports,arguments)
+},{"dup":59}],349:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/**
+ * factory
+ */
+var pecorino = require("@pecorino/factory");
+var waiter = require("@waiter/factory");
+var chevre = require("./chevre");
+var cognito = require("./cognito");
+var PointAwardAuthorizeActionFactory = require("./factory/action/authorize/award/point");
+var AuthorizeMvtkDiscountActionFactory = require("./factory/action/authorize/discount/mvtk");
+var AuthorizeProgramMembershipOfferActionFactory = require("./factory/action/authorize/offer/programMembership");
+var AuthorizeSeatReservationOfferActionFactory = require("./factory/action/authorize/offer/seatReservation");
+var AuthorizeAccountPaymentActionFactory = require("./factory/action/authorize/paymentMethod/account");
+var AuthorizeAnyPaymentActionFactory = require("./factory/action/authorize/paymentMethod/any");
+var AuthorizeCreditCardPaymentActionFactory = require("./factory/action/authorize/paymentMethod/creditCard");
+var AuthorizeMovieTicketPaymentActionFactory = require("./factory/action/authorize/paymentMethod/movieTicket");
+var CheckMovieTicketActionFactory = require("./factory/action/check/paymentMethod/movieTicket");
+var CheckTokenActionFactory = require("./factory/action/check/token");
+var ConfirmReservationActionFactory = require("./factory/action/interact/confirm/reservation");
+var RegisterProgramMembershipActionFactory = require("./factory/action/interact/register/programMembership");
+var UnRegisterProgramMembershipActionFactory = require("./factory/action/interact/unRegister/programMembership");
+var OrderActionFactory = require("./factory/action/trade/order");
+var PayActionFactory = require("./factory/action/trade/pay");
+var RefundActionFactory = require("./factory/action/trade/refund");
+var GivePointAwardActionFactory = require("./factory/action/transfer/give/pointAward");
+var MoneyTransferActionFactory = require("./factory/action/transfer/moneyTransfer");
+var PrintTicketActionFactory = require("./factory/action/transfer/print/ticket");
+var ReturnOrderActionFactory = require("./factory/action/transfer/return/order");
+var ReturnPointAwardActionFactory = require("./factory/action/transfer/return/pointAward");
+var SendEmailMessageActionFactory = require("./factory/action/transfer/send/message/email");
+var SendOrderActionFactory = require("./factory/action/transfer/send/order");
+var actionStatusType_1 = require("./factory/actionStatusType");
+var actionType_1 = require("./factory/actionType");
+var accountType_1 = require("./factory/accountType");
+var ClientUserFactory = require("./factory/clientUser");
+var EmailMessageFactory = require("./factory/creativeWork/message/email");
+var creativeWorkType_1 = require("./factory/creativeWorkType");
+var EncodingFormat = require("./factory/encodingFormat");
+var ScreeningEventFactory = require("./factory/event/screeningEvent");
+var ScreeningEventSeriesFactory = require("./factory/event/screeningEventSeries");
+var InvoiceFactory = require("./factory/invoice");
+var MonetaryAmountFactory = require("./factory/monetaryAmount");
+var OfferFactory = require("./factory/offer");
+var OrderFactory = require("./factory/order");
+var orderStatus_1 = require("./factory/orderStatus");
+var OrganizationFactory = require("./factory/organization");
+var organizationType_1 = require("./factory/organizationType");
+var OwnershipInfoFactory = require("./factory/ownershipInfo");
+var CreditCardFactory = require("./factory/paymentMethod/paymentCard/creditCard");
+var MovieTicketFactory = require("./factory/paymentMethod/paymentCard/movieTicket");
+var paymentMethodType_1 = require("./factory/paymentMethodType");
+var paymentStatusType_1 = require("./factory/paymentStatusType");
+var PersonFactory = require("./factory/person");
+var personType_1 = require("./factory/personType");
+var placeType_1 = require("./factory/placeType");
+var priceCurrency_1 = require("./factory/priceCurrency");
+var ProgramMembershipFactory = require("./factory/programMembership");
+var project = require("./factory/project");
+var PropertyValueFactory = require("./factory/propertyValue");
+var QuantitativeValueFactory = require("./factory/quantitativeValue");
+var WebAPIServiceFactory = require("./factory/service/webAPI");
+var unitCode_1 = require("./factory/unitCode");
+var sortType_1 = require("./factory/sortType");
+var taskName_1 = require("./factory/taskName");
+var taskStatus_1 = require("./factory/taskStatus");
+var MoneyTransferTransactionFactory = require("./factory/transaction/moneyTransfer");
+var PlaceOrderTransactionFactory = require("./factory/transaction/placeOrder");
+var ReturnOrderTransactionFactory = require("./factory/transaction/returnOrder");
+var transactionStatusType_1 = require("./factory/transactionStatusType");
+var transactionTasksExportationStatus_1 = require("./factory/transactionTasksExportationStatus");
+var transactionType_1 = require("./factory/transactionType");
+var errorCode_1 = require("./factory/errorCode");
+var errors = require("./factory/errors");
+exports.cognito = cognito;
+exports.chevre = chevre;
+exports.pecorino = pecorino;
+exports.waiter = waiter;
+exports.errors = errors;
+exports.errorCode = errorCode_1.default;
+exports.actionStatusType = actionStatusType_1.default;
+exports.actionType = actionType_1.default;
+var action;
+(function (action) {
+    var authorize;
+    (function (authorize) {
+        var award;
+        (function (award) {
+            // tslint:disable-next-line:no-shadowed-variable
+            award.point = PointAwardAuthorizeActionFactory;
+        })(award = authorize.award || (authorize.award = {}));
+        // tslint:disable-next-line:no-shadowed-variable
+        var paymentMethod;
+        (function (paymentMethod) {
+            paymentMethod.account = AuthorizeAccountPaymentActionFactory;
+            paymentMethod.any = AuthorizeAnyPaymentActionFactory;
+            paymentMethod.creditCard = AuthorizeCreditCardPaymentActionFactory;
+            paymentMethod.movieTicket = AuthorizeMovieTicketPaymentActionFactory;
+        })(paymentMethod = authorize.paymentMethod || (authorize.paymentMethod = {}));
+        var discount;
+        (function (discount) {
+            discount.mvtk = AuthorizeMvtkDiscountActionFactory;
+        })(discount = authorize.discount || (authorize.discount = {}));
+        // tslint:disable-next-line:no-shadowed-variable
+        var offer;
+        (function (offer) {
+            // tslint:disable-next-line:no-shadowed-variable
+            offer.programMembership = AuthorizeProgramMembershipOfferActionFactory;
+            // tslint:disable-next-line:no-shadowed-variable
+            offer.seatReservation = AuthorizeSeatReservationOfferActionFactory;
+        })(offer = authorize.offer || (authorize.offer = {}));
+    })(authorize = action.authorize || (action.authorize = {}));
+    var check;
+    (function (check) {
+        // tslint:disable-next-line:no-shadowed-variable
+        var paymentMethod;
+        (function (paymentMethod) {
+            paymentMethod.movieTicket = CheckMovieTicketActionFactory;
+        })(paymentMethod = check.paymentMethod || (check.paymentMethod = {}));
+        check.token = CheckTokenActionFactory;
+    })(check = action.check || (action.check = {}));
+    var interact;
+    (function (interact) {
+        var confirm;
+        (function (confirm) {
+            confirm.reservation = ConfirmReservationActionFactory;
+        })(confirm = interact.confirm || (interact.confirm = {}));
+        var register;
+        (function (register) {
+            // tslint:disable-next-line:no-shadowed-variable
+            register.programMembership = RegisterProgramMembershipActionFactory;
+        })(register = interact.register || (interact.register = {}));
+        var unRegister;
+        (function (unRegister) {
+            // tslint:disable-next-line:no-shadowed-variable
+            unRegister.programMembership = UnRegisterProgramMembershipActionFactory;
+        })(unRegister = interact.unRegister || (interact.unRegister = {}));
+    })(interact = action.interact || (action.interact = {}));
+    var trade;
+    (function (trade) {
+        // tslint:disable-next-line:no-shadowed-variable
+        trade.order = OrderActionFactory;
+        trade.pay = PayActionFactory;
+        trade.refund = RefundActionFactory;
+    })(trade = action.trade || (action.trade = {}));
+    var transfer;
+    (function (transfer) {
+        var give;
+        (function (give) {
+            // tslint:disable-next-line:no-shadowed-variable
+            give.pointAward = GivePointAwardActionFactory;
+        })(give = transfer.give || (transfer.give = {}));
+        transfer.moneyTransfer = MoneyTransferActionFactory;
+        var print;
+        (function (print) {
+            print.ticket = PrintTicketActionFactory;
+        })(print = transfer.print || (transfer.print = {}));
+        /**
+         * 返却アクション
+         * returnはネームスペース名に使えないのでreturnAction
+         */
+        var returnAction;
+        (function (returnAction) {
+            // tslint:disable-next-line:no-shadowed-variable
+            returnAction.order = ReturnOrderActionFactory;
+            returnAction.pointAward = ReturnPointAwardActionFactory;
+        })(returnAction = transfer.returnAction || (transfer.returnAction = {}));
+        var send;
+        (function (send) {
+            var message;
+            (function (message) {
+                message.email = SendEmailMessageActionFactory;
+            })(message = send.message || (send.message = {}));
+            // tslint:disable-next-line:no-shadowed-variable
+            send.order = SendOrderActionFactory;
+        })(send = transfer.send || (transfer.send = {}));
+    })(transfer = action.transfer || (action.transfer = {}));
+})(action = exports.action || (exports.action = {}));
+exports.accountType = accountType_1.default;
+exports.encodingFormat = EncodingFormat;
+var paymentMethod;
+(function (paymentMethod) {
+    var paymentCard;
+    (function (paymentCard) {
+        paymentCard.creditCard = CreditCardFactory;
+        paymentCard.movieTicket = MovieTicketFactory;
+    })(paymentCard = paymentMethod.paymentCard || (paymentMethod.paymentCard = {}));
+})(paymentMethod = exports.paymentMethod || (exports.paymentMethod = {}));
+exports.clientUser = ClientUserFactory;
+var creativeWork;
+(function (creativeWork) {
+    var message;
+    (function (message) {
+        message.email = EmailMessageFactory;
+    })(message = creativeWork.message || (creativeWork.message = {}));
+})(creativeWork = exports.creativeWork || (exports.creativeWork = {}));
+exports.creativeWorkType = creativeWorkType_1.default;
+var event;
+(function (event) {
+    event.screeningEvent = ScreeningEventFactory;
+    event.screeningEventSeries = ScreeningEventSeriesFactory;
+})(event = exports.event || (exports.event = {}));
+exports.invoice = InvoiceFactory;
+exports.monetaryAmount = MonetaryAmountFactory;
+exports.offer = OfferFactory;
+exports.order = OrderFactory;
+exports.orderStatus = orderStatus_1.default;
+exports.organizationType = organizationType_1.default;
+exports.ownershipInfo = OwnershipInfoFactory;
+exports.priceCurrency = priceCurrency_1.default;
+exports.paymentMethodType = paymentMethodType_1.default;
+exports.paymentStatusType = paymentStatusType_1.default;
+exports.person = PersonFactory;
+exports.personType = personType_1.default;
+exports.placeType = placeType_1.default;
+exports.programMembership = ProgramMembershipFactory;
+exports.project = project;
+exports.propertyValue = PropertyValueFactory;
+exports.quantitativeValue = QuantitativeValueFactory;
+var service;
+(function (service) {
+    service.webAPI = WebAPIServiceFactory;
+})(service = exports.service || (exports.service = {}));
+exports.seller = OrganizationFactory;
+exports.sortType = sortType_1.default;
+var task;
+(function (task) {
+})(task = exports.task || (exports.task = {}));
+exports.taskName = taskName_1.default;
+exports.taskStatus = taskStatus_1.default;
+var transaction;
+(function (transaction) {
+    transaction.moneyTransfer = MoneyTransferTransactionFactory;
+    transaction.placeOrder = PlaceOrderTransactionFactory;
+    transaction.returnOrder = ReturnOrderTransactionFactory;
+})(transaction = exports.transaction || (exports.transaction = {}));
+exports.transactionStatusType = transactionStatusType_1.default;
+exports.transactionTasksExportationStatus = transactionTasksExportationStatus_1.default;
+exports.transactionType = transactionType_1.default;
+exports.unitCode = unitCode_1.UnitCode;
+
+},{"./chevre":271,"./cognito":272,"./factory/accountType":273,"./factory/action/authorize/award/point":276,"./factory/action/authorize/discount/mvtk":277,"./factory/action/authorize/offer/programMembership":278,"./factory/action/authorize/offer/seatReservation":279,"./factory/action/authorize/paymentMethod/account":280,"./factory/action/authorize/paymentMethod/any":281,"./factory/action/authorize/paymentMethod/creditCard":282,"./factory/action/authorize/paymentMethod/movieTicket":283,"./factory/action/check/paymentMethod/movieTicket":284,"./factory/action/check/token":285,"./factory/action/interact/confirm/reservation":286,"./factory/action/interact/register/programMembership":287,"./factory/action/interact/unRegister/programMembership":288,"./factory/action/trade/order":289,"./factory/action/trade/pay":290,"./factory/action/trade/refund":291,"./factory/action/transfer/give/pointAward":292,"./factory/action/transfer/moneyTransfer":293,"./factory/action/transfer/print/ticket":294,"./factory/action/transfer/return/order":295,"./factory/action/transfer/return/pointAward":296,"./factory/action/transfer/send/message/email":297,"./factory/action/transfer/send/order":298,"./factory/actionStatusType":274,"./factory/actionType":275,"./factory/clientUser":299,"./factory/creativeWork/message/email":301,"./factory/creativeWorkType":300,"./factory/encodingFormat":302,"./factory/errorCode":303,"./factory/errors":314,"./factory/event/screeningEvent":315,"./factory/event/screeningEventSeries":316,"./factory/invoice":317,"./factory/monetaryAmount":318,"./factory/offer":319,"./factory/order":321,"./factory/orderStatus":322,"./factory/organization":323,"./factory/organizationType":324,"./factory/ownershipInfo":325,"./factory/paymentMethod/paymentCard/creditCard":327,"./factory/paymentMethod/paymentCard/movieTicket":328,"./factory/paymentMethodType":326,"./factory/paymentStatusType":329,"./factory/person":330,"./factory/personType":331,"./factory/placeType":332,"./factory/priceCurrency":333,"./factory/programMembership":334,"./factory/project":335,"./factory/propertyValue":336,"./factory/quantitativeValue":337,"./factory/service/webAPI":338,"./factory/sortType":339,"./factory/taskName":340,"./factory/taskStatus":341,"./factory/transaction/moneyTransfer":345,"./factory/transaction/placeOrder":346,"./factory/transaction/returnOrder":347,"./factory/transactionStatusType":342,"./factory/transactionTasksExportationStatus":343,"./factory/transactionType":344,"./factory/unitCode":348,"@pecorino/factory":383,"@waiter/factory":397}],350:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -8051,7 +9856,7 @@ var TypeOf;
     TypeOf["Account"] = "Account";
 })(TypeOf = exports.TypeOf || (exports.TypeOf = {}));
 
-},{}],184:[function(require,module,exports){
+},{}],351:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -8070,9 +9875,9 @@ var AccountStatusType;
 })(AccountStatusType || (AccountStatusType = {}));
 exports.default = AccountStatusType;
 
-},{}],185:[function(require,module,exports){
+},{}],352:[function(require,module,exports){
 arguments[4][4][0].apply(exports,arguments)
-},{"dup":4}],186:[function(require,module,exports){
+},{"dup":4}],353:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -8093,13 +9898,13 @@ var ActionType;
 })(ActionType || (ActionType = {}));
 exports.default = ActionType;
 
-},{}],187:[function(require,module,exports){
+},{}],354:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],188:[function(require,module,exports){
+},{"dup":3}],355:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],189:[function(require,module,exports){
+},{"dup":3}],356:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],190:[function(require,module,exports){
+},{"dup":3}],357:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -8111,9 +9916,9 @@ var CreativeWorkType;
 })(CreativeWorkType || (CreativeWorkType = {}));
 exports.default = CreativeWorkType;
 
-},{}],191:[function(require,module,exports){
+},{}],358:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],192:[function(require,module,exports){
+},{"dup":3}],359:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -8133,7 +9938,7 @@ var ErrorCode;
 })(ErrorCode || (ErrorCode = {}));
 exports.default = ErrorCode;
 
-},{}],193:[function(require,module,exports){
+},{}],360:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -8175,7 +9980,7 @@ var AlreadyInUseError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = AlreadyInUseError;
 
-},{"../errorCode":192,"./pecorino":199,"setprototypeof":256}],194:[function(require,module,exports){
+},{"../errorCode":359,"./pecorino":366,"setprototypeof":423}],361:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -8216,7 +10021,7 @@ var ArgumentError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = ArgumentError;
 
-},{"../errorCode":192,"./pecorino":199,"setprototypeof":256}],195:[function(require,module,exports){
+},{"../errorCode":359,"./pecorino":366,"setprototypeof":423}],362:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -8257,7 +10062,7 @@ var ArgumentNullError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = ArgumentNullError;
 
-},{"../errorCode":192,"./pecorino":199,"setprototypeof":256}],196:[function(require,module,exports){
+},{"../errorCode":359,"./pecorino":366,"setprototypeof":423}],363:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -8297,7 +10102,7 @@ var ForbiddenError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = ForbiddenError;
 
-},{"../errorCode":192,"./pecorino":199,"setprototypeof":256}],197:[function(require,module,exports){
+},{"../errorCode":359,"./pecorino":366,"setprototypeof":423}],364:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -8338,7 +10143,7 @@ var NotFoundError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = NotFoundError;
 
-},{"../errorCode":192,"./pecorino":199,"setprototypeof":256}],198:[function(require,module,exports){
+},{"../errorCode":359,"./pecorino":366,"setprototypeof":423}],365:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -8378,7 +10183,7 @@ var NotImplementedError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = NotImplementedError;
 
-},{"../errorCode":192,"./pecorino":199,"setprototypeof":256}],199:[function(require,module,exports){
+},{"../errorCode":359,"./pecorino":366,"setprototypeof":423}],366:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -8412,7 +10217,7 @@ var PecorinoError = /** @class */ (function (_super) {
 }(Error));
 exports.PecorinoError = PecorinoError;
 
-},{}],200:[function(require,module,exports){
+},{}],367:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -8452,7 +10257,7 @@ var RateLimitExceededError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = RateLimitExceededError;
 
-},{"../errorCode":192,"./pecorino":199,"setprototypeof":256}],201:[function(require,module,exports){
+},{"../errorCode":359,"./pecorino":366,"setprototypeof":423}],368:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -8492,7 +10297,7 @@ var ServiceUnavailableError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = ServiceUnavailableError;
 
-},{"../errorCode":192,"./pecorino":199,"setprototypeof":256}],202:[function(require,module,exports){
+},{"../errorCode":359,"./pecorino":366,"setprototypeof":423}],369:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -8532,7 +10337,7 @@ var UnauthorizedError = /** @class */ (function (_super) {
 }(pecorino_1.PecorinoError));
 exports.default = UnauthorizedError;
 
-},{"../errorCode":192,"./pecorino":199,"setprototypeof":256}],203:[function(require,module,exports){
+},{"../errorCode":359,"./pecorino":366,"setprototypeof":423}],370:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -8559,11 +10364,11 @@ exports.ServiceUnavailable = serviceUnavailable_1.default;
 var unauthorized_1 = require("./error/unauthorized");
 exports.Unauthorized = unauthorized_1.default;
 
-},{"./error/alreadyInUse":193,"./error/argument":194,"./error/argumentNull":195,"./error/forbidden":196,"./error/notFound":197,"./error/notImplemented":198,"./error/pecorino":199,"./error/rateLimitExceeded":200,"./error/serviceUnavailable":201,"./error/unauthorized":202}],204:[function(require,module,exports){
+},{"./error/alreadyInUse":360,"./error/argument":361,"./error/argumentNull":362,"./error/forbidden":363,"./error/notFound":364,"./error/notImplemented":365,"./error/pecorino":366,"./error/rateLimitExceeded":367,"./error/serviceUnavailable":368,"./error/unauthorized":369}],371:[function(require,module,exports){
 arguments[4][36][0].apply(exports,arguments)
-},{"dup":36}],205:[function(require,module,exports){
+},{"dup":36}],372:[function(require,module,exports){
 arguments[4][43][0].apply(exports,arguments)
-},{"dup":43}],206:[function(require,module,exports){
+},{"dup":43}],373:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -8582,13 +10387,13 @@ var TaskName;
 })(TaskName || (TaskName = {}));
 exports.default = TaskName;
 
-},{}],207:[function(require,module,exports){
+},{}],374:[function(require,module,exports){
 arguments[4][48][0].apply(exports,arguments)
-},{"dup":48}],208:[function(require,module,exports){
+},{"dup":48}],375:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],209:[function(require,module,exports){
+},{"dup":3}],376:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],210:[function(require,module,exports){
+},{"dup":3}],377:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -8603,7 +10408,7 @@ var TransactionStatusType;
 })(TransactionStatusType || (TransactionStatusType = {}));
 exports.default = TransactionStatusType;
 
-},{}],211:[function(require,module,exports){
+},{}],378:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -8626,7 +10431,7 @@ var TransactionTasksExportationStatus;
 })(TransactionTasksExportationStatus || (TransactionTasksExportationStatus = {}));
 exports.default = TransactionTasksExportationStatus;
 
-},{}],212:[function(require,module,exports){
+},{}],379:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -8649,13 +10454,13 @@ var TransactionType;
 })(TransactionType || (TransactionType = {}));
 exports.default = TransactionType;
 
-},{}],213:[function(require,module,exports){
+},{}],380:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],214:[function(require,module,exports){
+},{"dup":3}],381:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],215:[function(require,module,exports){
+},{"dup":3}],382:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],216:[function(require,module,exports){
+},{"dup":3}],383:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -8732,9 +10537,9 @@ exports.transactionStatusType = transactionStatusType_1.default;
 exports.transactionTasksExportationStatus = transactionTasksExportationStatus_1.default;
 exports.transactionType = transactionType_1.default;
 
-},{"./factory/account":183,"./factory/accountStatusType":184,"./factory/action/transfer/moneyTransfer":187,"./factory/action/transfer/send/message/email":188,"./factory/actionStatusType":185,"./factory/actionType":186,"./factory/clientUser":189,"./factory/creativeWork/message/email":191,"./factory/creativeWorkType":190,"./factory/errorCode":192,"./factory/errors":203,"./factory/priceCurrency":204,"./factory/sortType":205,"./factory/task/cancelMoneyTransfer":208,"./factory/task/moneyTransfer":209,"./factory/taskName":206,"./factory/taskStatus":207,"./factory/transaction/deposit":213,"./factory/transaction/transfer":214,"./factory/transaction/withdraw":215,"./factory/transactionStatusType":210,"./factory/transactionTasksExportationStatus":211,"./factory/transactionType":212}],217:[function(require,module,exports){
+},{"./factory/account":350,"./factory/accountStatusType":351,"./factory/action/transfer/moneyTransfer":354,"./factory/action/transfer/send/message/email":355,"./factory/actionStatusType":352,"./factory/actionType":353,"./factory/clientUser":356,"./factory/creativeWork/message/email":358,"./factory/creativeWorkType":357,"./factory/errorCode":359,"./factory/errors":370,"./factory/priceCurrency":371,"./factory/sortType":372,"./factory/task/cancelMoneyTransfer":375,"./factory/task/moneyTransfer":376,"./factory/taskName":373,"./factory/taskStatus":374,"./factory/transaction/deposit":380,"./factory/transaction/transfer":381,"./factory/transaction/withdraw":382,"./factory/transactionStatusType":377,"./factory/transactionTasksExportationStatus":378,"./factory/transactionType":379}],384:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],218:[function(require,module,exports){
+},{"dup":3}],385:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -8753,7 +10558,7 @@ var ErrorCode;
 })(ErrorCode || (ErrorCode = {}));
 exports.default = ErrorCode;
 
-},{}],219:[function(require,module,exports){
+},{}],386:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -8794,7 +10599,7 @@ var ArgumentError = /** @class */ (function (_super) {
 }(waiter_1.WaiterError));
 exports.default = ArgumentError;
 
-},{"../errorCode":218,"./waiter":225,"setprototypeof":256}],220:[function(require,module,exports){
+},{"../errorCode":385,"./waiter":392,"setprototypeof":423}],387:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -8835,7 +10640,7 @@ var ArgumentNullError = /** @class */ (function (_super) {
 }(waiter_1.WaiterError));
 exports.default = ArgumentNullError;
 
-},{"../errorCode":218,"./waiter":225,"setprototypeof":256}],221:[function(require,module,exports){
+},{"../errorCode":385,"./waiter":392,"setprototypeof":423}],388:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -8875,7 +10680,7 @@ var ForbiddenError = /** @class */ (function (_super) {
 }(waiter_1.WaiterError));
 exports.default = ForbiddenError;
 
-},{"../errorCode":218,"./waiter":225,"setprototypeof":256}],222:[function(require,module,exports){
+},{"../errorCode":385,"./waiter":392,"setprototypeof":423}],389:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -8916,7 +10721,7 @@ var NotFoundError = /** @class */ (function (_super) {
 }(waiter_1.WaiterError));
 exports.default = NotFoundError;
 
-},{"../errorCode":218,"./waiter":225,"setprototypeof":256}],223:[function(require,module,exports){
+},{"../errorCode":385,"./waiter":392,"setprototypeof":423}],390:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -8956,7 +10761,7 @@ var RateLimitExceededError = /** @class */ (function (_super) {
 }(waiter_1.WaiterError));
 exports.default = RateLimitExceededError;
 
-},{"../errorCode":218,"./waiter":225,"setprototypeof":256}],224:[function(require,module,exports){
+},{"../errorCode":385,"./waiter":392,"setprototypeof":423}],391:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -8996,7 +10801,7 @@ var ServiceUnavailableError = /** @class */ (function (_super) {
 }(waiter_1.WaiterError));
 exports.default = ServiceUnavailableError;
 
-},{"../errorCode":218,"./waiter":225,"setprototypeof":256}],225:[function(require,module,exports){
+},{"../errorCode":385,"./waiter":392,"setprototypeof":423}],392:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -9029,7 +10834,7 @@ var WaiterError = /** @class */ (function (_super) {
 }(Error));
 exports.WaiterError = WaiterError;
 
-},{}],226:[function(require,module,exports){
+},{}],393:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -9050,13 +10855,13 @@ exports.ServiceUnavailable = serviceUnavailable_1.default;
 var waiter_1 = require("./error/waiter");
 exports.Waiter = waiter_1.WaiterError;
 
-},{"./error/argument":219,"./error/argumentNull":220,"./error/forbidden":221,"./error/notFound":222,"./error/rateLimitExceeded":223,"./error/serviceUnavailable":224,"./error/waiter":225}],227:[function(require,module,exports){
+},{"./error/argument":386,"./error/argumentNull":387,"./error/forbidden":388,"./error/notFound":389,"./error/rateLimitExceeded":390,"./error/serviceUnavailable":391,"./error/waiter":392}],394:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],228:[function(require,module,exports){
+},{"dup":3}],395:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],229:[function(require,module,exports){
+},{"dup":3}],396:[function(require,module,exports){
 arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],230:[function(require,module,exports){
+},{"dup":3}],397:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 /**
@@ -9075,7 +10880,7 @@ exports.passport = passport;
 exports.project = project;
 exports.rule = rule;
 
-},{"./factory/client":217,"./factory/errorCode":218,"./factory/errors":226,"./factory/passport":227,"./factory/project":228,"./factory/rule":229}],231:[function(require,module,exports){
+},{"./factory/client":384,"./factory/errorCode":385,"./factory/errors":393,"./factory/passport":394,"./factory/project":395,"./factory/rule":396}],398:[function(require,module,exports){
 'use strict'
 
 exports.byteLength = byteLength
@@ -9191,7 +10996,7 @@ function fromByteArray (uint8) {
   return parts.join('')
 }
 
-},{}],232:[function(require,module,exports){
+},{}],399:[function(require,module,exports){
 
 /**
  * Expose `Emitter`.
@@ -9356,7 +11161,7 @@ Emitter.prototype.hasListeners = function(event){
   return !! this.listeners(event).length;
 };
 
-},{}],233:[function(require,module,exports){
+},{}],400:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -10117,7 +11922,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS;
 
 }));
-},{}],234:[function(require,module,exports){
+},{}],401:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -10253,7 +12058,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS.enc.Base64;
 
 }));
-},{"./core":233}],235:[function(require,module,exports){
+},{"./core":400}],402:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -10272,7 +12077,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS.enc.Hex;
 
 }));
-},{"./core":233}],236:[function(require,module,exports){
+},{"./core":400}],403:[function(require,module,exports){
 ;(function (root, factory) {
 	if (typeof exports === "object") {
 		// CommonJS
@@ -10472,7 +12277,7 @@ Emitter.prototype.hasListeners = function(event){
 	return CryptoJS.SHA256;
 
 }));
-},{"./core":233}],237:[function(require,module,exports){
+},{"./core":400}],404:[function(require,module,exports){
 /**
  * Helpers.
  */
@@ -10636,7 +12441,7 @@ function plural(ms, msAbs, n, name) {
   return Math.round(ms / n) + ' ' + name + (isPlural ? 's' : '');
 }
 
-},{}],238:[function(require,module,exports){
+},{}],405:[function(require,module,exports){
 (function (process){
 "use strict";
 
@@ -10820,7 +12625,7 @@ formatters.j = function (v) {
 
 
 }).call(this,require('_process'))
-},{"./common":239,"_process":250}],239:[function(require,module,exports){
+},{"./common":406,"_process":417}],406:[function(require,module,exports){
 "use strict";
 
 /**
@@ -11071,7 +12876,7 @@ function setup(env) {
 module.exports = setup;
 
 
-},{"ms":237}],240:[function(require,module,exports){
+},{"ms":404}],407:[function(require,module,exports){
 // Generated by CoffeeScript 2.3.0
 // # node-http-status
 
@@ -11571,7 +13376,7 @@ module.exports = {
   }
 };
 
-},{}],241:[function(require,module,exports){
+},{}],408:[function(require,module,exports){
 (function (name, context, definition) {
   if (typeof module !== 'undefined' && module.exports) module.exports = definition();
   else if (typeof define === 'function' && define.amd) define(definition);
@@ -11611,7 +13416,7 @@ module.exports = {
 
 });
 
-},{}],242:[function(require,module,exports){
+},{}],409:[function(require,module,exports){
 var base64 = require('base64-js');
 
 function padding(str) {
@@ -11697,7 +13502,7 @@ module.exports = {
   base64ToBase64Url: base64ToBase64Url
 };
 
-},{"base64-js":231}],243:[function(require,module,exports){
+},{"base64-js":398}],410:[function(require,module,exports){
 function DummyCache() {}
 
 DummyCache.prototype.get = function () {
@@ -11713,7 +13518,7 @@ DummyCache.prototype.set = function () {
 
 module.exports = DummyCache;
 
-},{}],244:[function(require,module,exports){
+},{}],411:[function(require,module,exports){
 function ConfigurationError(message) {
   this.name = 'ConfigurationError';
   this.message = (message || '');
@@ -11731,7 +13536,7 @@ module.exports = {
   TokenValidationError: TokenValidationError
 };
 
-},{}],245:[function(require,module,exports){
+},{}],412:[function(require,module,exports){
 var urljoin = require('url-join');
 var base64 = require('./base64');
 var request = require('superagent');
@@ -11777,7 +13582,7 @@ module.exports = {
   getJWKS: getJWKS
 };
 
-},{"./base64":242,"superagent":258,"url-join":241}],246:[function(require,module,exports){
+},{"./base64":409,"superagent":425,"url-join":408}],413:[function(require,module,exports){
 /*
 Based on the work of Tom Wu
 http://www-cs-students.stanford.edu/~tjw/jsbn/
@@ -11856,7 +13661,7 @@ RSAVerifier.prototype.verify = function (msg, encsig) {
 
 module.exports = RSAVerifier;
 
-},{"crypto-js/sha256":236,"jsbn":249}],247:[function(require,module,exports){
+},{"crypto-js/sha256":403,"jsbn":416}],414:[function(require,module,exports){
 var sha256 = require('crypto-js/sha256');
 var cryptoBase64 = require('crypto-js/enc-base64');
 var cryptoHex = require('crypto-js/enc-hex');
@@ -12149,7 +13954,7 @@ IdTokenVerifier.prototype.validateAccessToken = function (accessToken, alg, atHa
 
 module.exports = IdTokenVerifier;
 
-},{"./helpers/base64":242,"./helpers/dummy-cache":243,"./helpers/error":244,"./helpers/jwks":245,"./helpers/rsa-verifier":246,"crypto-js/enc-base64":234,"crypto-js/enc-hex":235,"crypto-js/sha256":236}],248:[function(require,module,exports){
+},{"./helpers/base64":409,"./helpers/dummy-cache":410,"./helpers/error":411,"./helpers/jwks":412,"./helpers/rsa-verifier":413,"crypto-js/enc-base64":401,"crypto-js/enc-hex":402,"crypto-js/sha256":403}],415:[function(require,module,exports){
 // the whatwg-fetch polyfill installs the fetch() function
 // on the global object (window or self)
 //
@@ -12157,7 +13962,7 @@ module.exports = IdTokenVerifier;
 require('whatwg-fetch');
 module.exports = self.fetch.bind(self);
 
-},{"whatwg-fetch":263}],249:[function(require,module,exports){
+},{"whatwg-fetch":430}],416:[function(require,module,exports){
 (function(){
 
     // Copyright (c) 2005  Tom Wu
@@ -13516,7 +15321,7 @@ module.exports = self.fetch.bind(self);
 
 }).call(this);
 
-},{}],250:[function(require,module,exports){
+},{}],417:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -13702,7 +15507,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],251:[function(require,module,exports){
+},{}],418:[function(require,module,exports){
 'use strict';
 
 var replace = String.prototype.replace;
@@ -13722,7 +15527,7 @@ module.exports = {
     RFC3986: 'RFC3986'
 };
 
-},{}],252:[function(require,module,exports){
+},{}],419:[function(require,module,exports){
 'use strict';
 
 var stringify = require('./stringify');
@@ -13735,7 +15540,7 @@ module.exports = {
     stringify: stringify
 };
 
-},{"./formats":251,"./parse":253,"./stringify":254}],253:[function(require,module,exports){
+},{"./formats":418,"./parse":420,"./stringify":421}],420:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -13979,7 +15784,7 @@ module.exports = function (str, opts) {
     return utils.compact(obj);
 };
 
-},{"./utils":255}],254:[function(require,module,exports){
+},{"./utils":422}],421:[function(require,module,exports){
 'use strict';
 
 var utils = require('./utils');
@@ -14250,7 +16055,7 @@ module.exports = function (object, opts) {
     return joined.length > 0 ? prefix + joined : '';
 };
 
-},{"./formats":251,"./utils":255}],255:[function(require,module,exports){
+},{"./formats":418,"./utils":422}],422:[function(require,module,exports){
 'use strict';
 
 var has = Object.prototype.hasOwnProperty;
@@ -14482,7 +16287,7 @@ module.exports = {
     merge: merge
 };
 
-},{}],256:[function(require,module,exports){
+},{}],423:[function(require,module,exports){
 'use strict'
 /* eslint no-proto: 0 */
 module.exports = Object.setPrototypeOf || ({ __proto__: [] } instanceof Array ? setProtoOf : mixinProperties)
@@ -14501,7 +16306,7 @@ function mixinProperties (obj, proto) {
   return obj
 }
 
-},{}],257:[function(require,module,exports){
+},{}],424:[function(require,module,exports){
 function Agent() {
   this._defaults = [];
 }
@@ -14523,7 +16328,7 @@ Agent.prototype._setDefaults = function(req) {
 
 module.exports = Agent;
 
-},{}],258:[function(require,module,exports){
+},{}],425:[function(require,module,exports){
 /**
  * Root reference for iframes.
  */
@@ -15445,7 +17250,7 @@ request.put = function(url, data, fn) {
   return req;
 };
 
-},{"./agent-base":257,"./is-object":259,"./request-base":260,"./response-base":261,"component-emitter":232}],259:[function(require,module,exports){
+},{"./agent-base":424,"./is-object":426,"./request-base":427,"./response-base":428,"component-emitter":399}],426:[function(require,module,exports){
 'use strict';
 
 /**
@@ -15462,7 +17267,7 @@ function isObject(obj) {
 
 module.exports = isObject;
 
-},{}],260:[function(require,module,exports){
+},{}],427:[function(require,module,exports){
 'use strict';
 
 /**
@@ -16158,7 +17963,7 @@ RequestBase.prototype._setTimeouts = function() {
   }
 };
 
-},{"./is-object":259}],261:[function(require,module,exports){
+},{"./is-object":426}],428:[function(require,module,exports){
 'use strict';
 
 /**
@@ -16296,7 +18101,7 @@ ResponseBase.prototype._setStatusProperties = function(status){
     this.unprocessableEntity = 422 == status;
 };
 
-},{"./utils":262}],262:[function(require,module,exports){
+},{"./utils":429}],429:[function(require,module,exports){
 'use strict';
 
 /**
@@ -16369,7 +18174,7 @@ exports.cleanHeader = function(header, changesOrigin){
   return header;
 };
 
-},{}],263:[function(require,module,exports){
+},{}],430:[function(require,module,exports){
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
